@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(leetcode23 VERSION 0.1.0 LANGUAGES C)
 # GoogleTest requires at least C++14
+set(CMAKE_CXX_COMPILER /usr/bin/g++)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 

@@ -60,15 +60,15 @@ include _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: _deps/googletest-src/googlemock/src/gmock_main.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
-	cd /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-build/googlemock && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/src/gmock_main.cc
+	cd /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-build/googlemock && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/src/gmock_main.cc
 
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock_main.dir/src/gmock_main.cc.i"
-	cd /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-build/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/src/gmock_main.cc > CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
+	cd /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-build/googlemock && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/src/gmock_main.cc > CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
 
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock_main.dir/src/gmock_main.cc.s"
-	cd /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-build/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/src/gmock_main.cc -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
+	cd /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-build/googlemock && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/src/gmock_main.cc -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
 
 # Object files for target gmock_main
 gmock_main_OBJECTS = \
