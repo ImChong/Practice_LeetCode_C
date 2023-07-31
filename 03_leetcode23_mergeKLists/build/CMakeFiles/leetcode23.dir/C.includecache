@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/main.c
+stdio.h
+-
+stdlib.h
+-
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-gcc-8"
+	BuildStamp="20230731-1502-Experimental"
+	Name="chong-wkStation"
+	Generator="ctest-3.16.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="chong-wkStation"
+	OSRelease="5.15.0-78-generic"
+	OSVersion="#85~20.04.1-Ubuntu SMP Mon Jul 17 09:42:39 UTC 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="141"
+	ProcessorCacheSize="24576"
+	NumberOfLogicalCPU="16"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="15624"
+	TotalPhysicalMemory="31833"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2500"
+	>
+	<Testing>
+		<StartDateTime>Jul 31 23:05 CST</StartDateTime>
+		<StartTestTime>1690815935</StartTestTime>
+		<TestList/>
+		<EndDateTime>Jul 31 23:05 CST</EndDateTime>
+		<EndTestTime>1690815935</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

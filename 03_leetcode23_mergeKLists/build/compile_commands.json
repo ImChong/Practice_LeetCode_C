@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build",
+  "command": "/usr/bin/gcc-8   -g   -o CMakeFiles/leetcode23.dir/main.c.o   -c /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/main.c",
+  "file": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/main.c"
+}
+]

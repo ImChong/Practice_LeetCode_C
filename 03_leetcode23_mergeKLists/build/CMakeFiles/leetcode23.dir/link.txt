@@ -1,0 +1,1 @@
+/usr/bin/gcc-8 -g  -rdynamic CMakeFiles/leetcode23.dir/main.c.o  -o ../bin/leetcode23 
