@@ -14,8 +14,9 @@
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
-            "preLaunchTask": "Build",
             "MIMode": "gdb",
+            "preLaunchTask": "Build",
+            "miDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
