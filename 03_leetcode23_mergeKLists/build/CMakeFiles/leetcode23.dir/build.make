@@ -57,27 +57,27 @@ include CMakeFiles/leetcode23.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/leetcode23.dir/flags.make
 
-CMakeFiles/leetcode23.dir/main.c.o: CMakeFiles/leetcode23.dir/flags.make
-CMakeFiles/leetcode23.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/leetcode23.dir/main.c.o"
-	/usr/bin/gcc-8 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leetcode23.dir/main.c.o   -c /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/main.c
+CMakeFiles/leetcode23.dir/src/main.c.o: CMakeFiles/leetcode23.dir/flags.make
+CMakeFiles/leetcode23.dir/src/main.c.o: ../src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/leetcode23.dir/src/main.c.o"
+	/usr/bin/gcc-8 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leetcode23.dir/src/main.c.o   -c /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/src/main.c
 
-CMakeFiles/leetcode23.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/leetcode23.dir/main.c.i"
-	/usr/bin/gcc-8 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/main.c > CMakeFiles/leetcode23.dir/main.c.i
+CMakeFiles/leetcode23.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/leetcode23.dir/src/main.c.i"
+	/usr/bin/gcc-8 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/src/main.c > CMakeFiles/leetcode23.dir/src/main.c.i
 
-CMakeFiles/leetcode23.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/leetcode23.dir/main.c.s"
-	/usr/bin/gcc-8 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/main.c -o CMakeFiles/leetcode23.dir/main.c.s
+CMakeFiles/leetcode23.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/leetcode23.dir/src/main.c.s"
+	/usr/bin/gcc-8 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/src/main.c -o CMakeFiles/leetcode23.dir/src/main.c.s
 
 # Object files for target leetcode23
 leetcode23_OBJECTS = \
-"CMakeFiles/leetcode23.dir/main.c.o"
+"CMakeFiles/leetcode23.dir/src/main.c.o"
 
 # External object files for target leetcode23
 leetcode23_EXTERNAL_OBJECTS =
 
-../bin/leetcode23: CMakeFiles/leetcode23.dir/main.c.o
+../bin/leetcode23: CMakeFiles/leetcode23.dir/src/main.c.o
 ../bin/leetcode23: CMakeFiles/leetcode23.dir/build.make
 ../bin/leetcode23: CMakeFiles/leetcode23.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ../bin/leetcode23"

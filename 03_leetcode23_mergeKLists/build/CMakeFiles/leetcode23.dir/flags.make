@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/include 
 

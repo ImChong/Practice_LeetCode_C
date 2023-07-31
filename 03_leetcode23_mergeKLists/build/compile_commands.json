@@ -1,7 +1,27 @@
 [
 {
   "directory": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build",
-  "command": "/usr/bin/gcc-8   -g   -o CMakeFiles/leetcode23.dir/main.c.o   -c /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/main.c",
-  "file": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/main.c"
+  "command": "/usr/bin/gcc-8  -I/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/include  -g   -o CMakeFiles/leetcode23.dir/src/main.c.o   -c /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/src/main.c",
+  "file": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/src/main.c"
+},
+{
+  "directory": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++   -isystem /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/include -isystem /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock -isystem /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest/include -isystem /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++   -I/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/include -I/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock -isystem /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest/include -isystem /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++   -isystem /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest/include -isystem /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++   -I/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest/include -I/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/_deps/googletest-src/googletest/src/gtest-all.cc"
 }
 ]

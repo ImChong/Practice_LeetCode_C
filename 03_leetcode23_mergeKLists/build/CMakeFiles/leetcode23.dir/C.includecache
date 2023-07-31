@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/main.c
+../include/leetcode23.h
+
+/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/src/main.c
 stdio.h
 -
 stdlib.h
 -
+leetcode23.h
+/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/src/leetcode23.h
 
