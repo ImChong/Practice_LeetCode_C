@@ -1,10 +1,12 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(leetcode23 VERSION 0.1.0 LANGUAGES C)
+include(CTest)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+
 # GoogleTest requires at least C++14
 set(CMAKE_CXX_COMPILER /usr/bin/g++)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 include(FetchContent)
 FetchContent_Declare(
     googletest
@@ -12,13 +14,10 @@ FetchContent_Declare(
 )
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
-# 设置可执行文件的输出路径为build/bin
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 include_directories(include)
 
+add_subdirectory(src)
+# add_executable(leetcode23 ${CMAKE_CURRENT_SOURCE_DIR}/src/main.c)
 enable_testing()
-
-add_executable(leetcode23 ${CMAKE_CURRENT_SOURCE_DIR}/src/main.c)
-
 # add_subdirectory(test)
