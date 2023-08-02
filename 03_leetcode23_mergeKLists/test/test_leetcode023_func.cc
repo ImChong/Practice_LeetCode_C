@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
 extern "C" {
-
+    #include "leetcode023_func.h"
 }
 
 // Demonstrate some basic assertions.
