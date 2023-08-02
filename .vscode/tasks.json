@@ -1,6 +1,7 @@
 {
 	"version": "2.0.0",
 	"tasks": [
+		// linux System Tasks
 		{
 			"type": "cppbuild",
 			"label": "(linux) Build",
@@ -37,6 +38,43 @@
 				"kind": "build",
 				"isDefault": true
 			},
+            "detail": "执行构建并运行目标程序"
+        },
+		// Windows System Tasks
+		{
+			"label": "(Windows) Build",
+			"command": "D:\\MinGW\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "构建目标程序"
+		},
+		{
+			"label": "(Windows) Run",
+			"command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+			"detail": "运行目标程序"
+		},
+		{
+            "label": "(Windows) Build & Run",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Build",
+                "Run"
+            ],
+			// "group": {
+			// 	"kind": "build",
+			// 	"isDefault": true
+			// },
             "detail": "执行构建并运行目标程序"
         },
 	]
