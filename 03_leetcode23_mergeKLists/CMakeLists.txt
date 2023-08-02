@@ -20,3 +20,17 @@ include_directories(include)
 add_subdirectory(src)
 enable_testing()
 add_subdirectory(test)
+
+
+
+# project(gTestTemplate)
+# cmake_minimum_required(VERSION 3.16)
+# include(CTest)
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+
+# add_subdirectory(src)
+# enable_testing()#如果要使用ctest，必须在source root directory中调用该函数
+# add_subdirectory(test)
+
+# TODO 如果有更多的和 src 并列的子目录中，并且其中存在源代码，请把他们也加入进来，否则这些文件不会参与编译
+# add_subdirectory( your_new_folder )
