@@ -43,13 +43,13 @@
 		// Windows System Tasks
 		{
 			"label": "(Windows) Build",
-			"command": "D:\\MinGW\\bin\\gcc.exe",
+			"command": "D:/Developments/MinGW/bin/gcc.exe",
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
 				"${file}",
 				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}/${fileBasenameNoExtension}.exe"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -61,7 +61,7 @@
 		},
 		{
 			"label": "(Windows) Run",
-			"command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+			"command": "${fileDirname}/${fileBasenameNoExtension}.exe",
 			"detail": "运行目标程序"
 		},
 		{

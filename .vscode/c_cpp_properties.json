@@ -21,11 +21,11 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "D:\\MinGW\\bin\\gcc.exe",
+            "compilerPath": "D:/Developments/MinGW/bin/gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++20",
             "intelliSenseMode": "windows-gcc-x64"
-        },
+        }
     ],
     "version": 4
 }
