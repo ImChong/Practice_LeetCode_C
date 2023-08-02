@@ -43,9 +43,8 @@
 		// Windows System Tasks
 		{
 			"label": "(Windows) Build",
-			"command": "D:/Developments/MinGW/bin/gcc.exe",
+			"command": "D:/Developments/msys64/mingw64/bin/gcc.exe",
 			"args": [
-				"-fdiagnostics-color=always",
 				"-g",
 				"${file}",
 				"-o",

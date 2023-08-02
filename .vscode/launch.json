@@ -29,7 +29,7 @@
             "name": "(windows)(gdb) source code",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
@@ -37,7 +37,7 @@
             "externalConsole": false,
             "MIMode": "gdb",
             "preLaunchTask": "(Windows) Build",
-            "miDebuggerPath": "D:/Developments/MinGW/bin/gdb.exe",
+            "miDebuggerPath": "D:/Developments/msys64/mingw64/bin/gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
