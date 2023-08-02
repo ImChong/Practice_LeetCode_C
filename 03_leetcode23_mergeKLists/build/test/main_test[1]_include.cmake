@@ -1,5 +1,0 @@
-if(EXISTS "/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/test/main_test[1]_tests.cmake")
-  include("/home/chong/Desktop/LeetCode_ws/03_leetcode23_mergeKLists/build/test/main_test[1]_tests.cmake")
-else()
-  add_test(main_test_NOT_BUILT main_test_NOT_BUILT)
-endif()
