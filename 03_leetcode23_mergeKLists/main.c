@@ -6,11 +6,35 @@ struct ListNode {
     struct ListNode *next;
 };
 
+struct ListNode* mergeTwoLists(struct ListNode *l1, struct ListNode *l2) {
+    struct ListNode *head = malloc(sizeof(struct ListNode));
+    struct ListNode *tail = head;
+    head->next = NULL;
+    while (l1 && l2) {
+        if (l1->val <= l2->val) {
+            tail->next = l1;
+            l1 = l1->next;
+        } else {
+            tail->next = l2;
+            l2 = l2->next;
+        }
+        tail = tail->next;
+    }
+    tail->next = l1 ? l1 : l2;
+    return head->next;
+}
+
 struct ListNode* mergeKLists(struct ListNode** lists, int listsSize){
-    printf("%d\n", lists[0]->val);
-    printf("%d\n", lists[1]->val);
-    printf("%d\n", lists[2]->val);
-    return NULL;
+    if (listsSize == 0) {
+        return NULL;
+    }
+    struct ListNode* l1, *l2;
+    l1 = lists[0];
+    for (int i = 1; i < listsSize; i++) {
+        l2 = lists[i];
+        l1 = mergeTwoLists(l1, l2);
+    }
+    return l1;
 }
 
 int main() {
