@@ -4,7 +4,7 @@
 		// linux System Tasks
 		{
 			"type": "cppbuild",
-			"label": "(linux) Build",
+			"label": "(Linux) Build",
 			"command": "/usr/bin/gcc",
 			"args": [
 				"-fdiagnostics-color=always",
@@ -23,16 +23,16 @@
 			"detail": "构建目标程序"
 		},
 		{
-			"label": "(linux) Run",
+			"label": "(Linux) Run",
 			"command": "${fileDirname}/${fileBasenameNoExtension}",
 			"detail": "运行目标程序"
 		},
 		{
-            "label": "(linux) Build & Run",
+            "label": "(Linux) Build & Run",
             "dependsOrder": "sequence",
             "dependsOn": [
-                "(linux)Build",
-                "(linux)Run"
+                "(Linux)Build",
+                "(Linux)Run"
             ],
 			"group": {
 				"kind": "build",
@@ -68,8 +68,8 @@
             "label": "(Windows) Build & Run",
             "dependsOrder": "sequence",
             "dependsOn": [
-                "Build",
-                "Run"
+                "(Windows) Build",
+                "(Windows) Run"
             ],
 			// "group": {
 			// 	"kind": "build",
