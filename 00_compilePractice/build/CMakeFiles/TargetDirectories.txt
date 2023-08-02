@@ -1,3 +1,0 @@
-/home/chong/Desktop/LeetCode_ws/compilePractice/build/CMakeFiles/rebuild_cache.dir
-/home/chong/Desktop/LeetCode_ws/compilePractice/build/CMakeFiles/edit_cache.dir
-/home/chong/Desktop/LeetCode_ws/compilePractice/build/CMakeFiles/my_app.dir
