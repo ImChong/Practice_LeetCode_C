@@ -1,7 +1,4 @@
-add_executable(
-    main_test
-    main_test.cc
-)
+add_executable(test_leetcode023 test_leetcode023.cc)
 
 target_link_libraries(
     main_test
