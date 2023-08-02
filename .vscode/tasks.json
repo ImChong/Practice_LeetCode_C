@@ -31,8 +31,8 @@
             "label": "(Linux) Build & Run",
             "dependsOrder": "sequence",
             "dependsOn": [
-                "(Linux)Build",
-                "(Linux)Run"
+                "(Linux) Build",
+                "(Linux) Run"
             ],
 			"group": {
 				"kind": "build",
