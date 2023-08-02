@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "Build",
+			"label": "(linux)Build",
 			"command": "/usr/bin/gcc",
 			"args": [
 				"-fdiagnostics-color=always",
@@ -22,16 +22,16 @@
 			"detail": "构建目标程序"
 		},
 		{
-			"label": "Run",
+			"label": "(linux)Run",
 			"command": "${fileDirname}/${fileBasenameNoExtension}",
 			"detail": "运行目标程序"
 		},
 		{
-            "label": "Build & Run",
+            "label": "(linux)Build & Run",
             "dependsOrder": "sequence",
             "dependsOn": [
-                "Build",
-                "Run"
+                "(linux)Build",
+                "(linux)Run"
             ],
 			"group": {
 				"kind": "build",
