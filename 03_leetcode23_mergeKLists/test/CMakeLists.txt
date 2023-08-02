@@ -1,5 +1,5 @@
-set(gtest_headers "D:/wecode_build_tools/googletest/include")
-set(gtest_libs "D:/wecode_build_tools/googletest/lib")
+set(gtest_headers "D:/wecode_build_tools/googletest/include")    # 将 googleTest 相关头文件放入 include 文件夹
+set(gtest_libs "D:/wecode_build_tools/googletest/lib")           # 将编译后 googleTest 静态链接库文件放入 lib 文件夹
 
 add_executable(test_leetcode023 test_leetcode023.cc)
 target_include_directories(test_leetcode023 PUBLIC "${gtest_headers}" ${CMAKE_SOURCE_DIR}/include)
