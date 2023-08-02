@@ -1,7 +1,7 @@
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # 单独编译成一个 lib 库
-add_library(lib_leetcode023 OBJECT leetcode023.c)
+add_library(lib_leetcode023 OBJECT leetcode023_func.c)
 # main.c 编译成一个可执行文件，因为里面包含 main 函数
 add_executable(leetcode023 main.c)
 
