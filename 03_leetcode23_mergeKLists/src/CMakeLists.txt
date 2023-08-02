@@ -1,12 +1,12 @@
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # 单独编译成一个 lib 库
-add_library(lib_leetcode023 OBJECT leetcode023_func.c)
+add_library(leetcode023_lib OBJECT leetcode023_func.c)
 # main.c 编译成一个可执行文件，因为里面包含 main 函数
-add_executable(main_leetcode023 main.c)
+add_executable(leetcode023_main main.c)
 
 # 最后的可执行文件必须和上面的lib进行链接
-target_link_libraries(main_leetcode023 lib_leetcode023)
+target_link_libraries(leetcode023_main leetcode023_lib)
 
 # TODO 如何在上面已有的 exe 中增加一个新的源文件，参与编译？
 # 1: 新建一个文件，比如 newfile.cpp
