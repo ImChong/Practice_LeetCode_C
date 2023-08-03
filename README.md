@@ -1,5 +1,6 @@
 # LeetCode_C_Practice
-C language leetcode practice: [labuladong](https://labuladong.github.io/algo/home/)
+
+C language leetcode practice: [labuladong 的算法小抄](https://labuladong.github.io/algo/home/), [代码随想录](https://programmercarl.com/)
 
 # Versions
 
