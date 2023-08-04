@@ -2,8 +2,8 @@
 
 C language leetcode practice:
 
-- [labuladong 的算法小抄](https://labuladong.github.io/algo/home/)
-- [代码随想录](https://programmercarl.com/)
+- [labuladong 的算法小抄](https://labuladong.github.io/algo/home/) - labuladong_practice
+- [代码随想录](https://programmercarl.com/) - programmercarl_practice
 
 # Versions
 
