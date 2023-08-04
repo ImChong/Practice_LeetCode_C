@@ -9,8 +9,8 @@ struct ListNode {
 
 // 创建链表
 struct ListNode *create_list(int *array, int size) {
-    struct ListNode *head = NULL;
-    struct ListNode *current = NULL;
+    struct ListNode *head = NULL;    // 头节点指针
+    struct ListNode *current = NULL;    // 当前节点指针
 
     for (int i = 0; i < size; i++) {
         // 创建新结点
