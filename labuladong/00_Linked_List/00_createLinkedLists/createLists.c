@@ -29,16 +29,20 @@ struct ListNode *create_list(int *array, int size) {
     return head;
 }
 
+// 打印链表
+void printList(struct ListNode *list) {
+    while (list != NULL) {
+        printf("%d ", list->val);
+        list = list->next;
+    }
+    printf("\n");
+}
+
 int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
     struct ListNode *ansList = create_list(arr, 5);
 
-    while (ansList != NULL) {
-        printf("%d ", ansList->val);
-        ansList = ansList->next;
-    }
-    printf("\n");
-
+    printList(ansList);
     return 0;
 }
