@@ -1,21 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node {
-  int data;
-  struct node *next;
+struct ListNode {
+    int val;
+    struct ListNode *next;
 };
 
 
 // 创建链表
-struct node *create_list(int *array, int size) {
-    struct node *head = NULL;
-    struct node *current = NULL;
+struct ListNode *create_list(int *array, int size) {
+    struct ListNode *head = NULL;
+    struct ListNode *current = NULL;
 
     for (int i = 0; i < size; i++) {
         // 创建新结点
-        struct node *new_node = (struct node *)malloc(sizeof(struct node));
-        new_node->data = array[i];
+        struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));
+        new_node->val = array[i];
         new_node->next = NULL;
 
         // 如果链表为空，则将新结点设置为头结点
@@ -32,17 +32,13 @@ struct node *create_list(int *array, int size) {
     return head;
 }
 
-struct ListNode* removeNthFromEnd(struct ListNode* head, int n){
-    return 0;
-}
-
 int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
-    struct node *ansList = create_list(arr, 5);
-    
+    struct ListNode *ansList = create_list(arr, 5);
+
     while (ansList != NULL) {
-        printf("%d ", ansList->data);
+        printf("%d ", ansList->val);
         ansList = ansList->next;
     }
     printf("\n");
