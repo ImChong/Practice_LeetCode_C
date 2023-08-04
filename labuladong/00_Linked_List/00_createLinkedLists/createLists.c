@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// 节点定义
 struct ListNode {
     int val;
     struct ListNode *next;
@@ -38,11 +39,11 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
+// 主函数
 int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
     struct ListNode *ansList = createList(arr, 5);
-
     printList(ansList);
     return 0;
 }
