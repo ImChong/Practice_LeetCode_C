@@ -7,7 +7,7 @@ struct ListNode {
 };
 
 // 创建链表
-struct ListNode *create_list(int *array, int size) {
+struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;    // 头节点指针
     struct ListNode *current = NULL;    // 当前节点指针
 
@@ -30,10 +30,10 @@ struct ListNode *create_list(int *array, int size) {
 }
 
 // 打印链表
-void printList(struct ListNode *list) {
-    while (list != NULL) {
-        printf("%d ", list->val);
-        list = list->next;
+void printList(struct ListNode *listPtr) {
+    while (listPtr != NULL) {
+        printf("%d ", listPtr->val);
+        listPtr = listPtr->next;
     }
     printf("\n");
 }
@@ -41,7 +41,7 @@ void printList(struct ListNode *list) {
 int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
-    struct ListNode *ansList = create_list(arr, 5);
+    struct ListNode *ansList = createList(arr, 5);
 
     printList(ansList);
     return 0;
