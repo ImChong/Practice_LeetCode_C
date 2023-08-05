@@ -1,8 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int *sortedSquares(int *nums, int numsSize, int *returnSize) {
+    int *result = (int *)malloc(numsSize * sizeof(int));
+    *returnSize = numsSize;
 
-    return 0;
+    int left = 0;
+    int right = numsSize - 1;
+    int index = numsSize - 1;
+
+    while (left <= right) {
+        int leftSquare = nums[left] * nums[left];
+        int rightSquare = nums[right] * nums[right];
+
+        if (leftSquare > rightSquare) {
+            result[index] = leftSquare;
+            left++;
+        } else {
+            result[index] = rightSquare;
+            right--;
+        }
+        index--;
+    }
+    return result;
 }
 
 int main(int argc, char const *argv[]) {
@@ -20,6 +40,5 @@ int main(int argc, char const *argv[]) {
 
     free(result);
 
-    printf("Hello World");
     return 0;
 }
