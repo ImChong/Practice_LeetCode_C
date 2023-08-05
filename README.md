@@ -14,7 +14,7 @@ C language leetcode practice:
 # Progess
 
 - [x] .
-- [ ] ├── labuladong_practice
+- [x] ├── labuladong_practice
 - [x] │   ├── 01_Linked_List
 - [ ] │   ├── 02_Array
 - [ ] │   ├── 03_Binary_Tree
