@@ -1,4 +1,4 @@
-# LeetCode_C_Practice
+# Practice_LeetCode_C
 
 C language leetcode practice:
 
