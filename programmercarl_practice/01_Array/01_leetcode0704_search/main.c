@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/* 二分查找 */
 int search(int *nums, int numsSize, int target) {
     int left = 0;
     int right = numsSize - 1;

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* 长度最小的子数组 */
 int minSubArrayLen(int target, int *nums, int numsSize) {
     int minLen = INT_MAX;
     int sum = 0;

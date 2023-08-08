@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* 有序数组的平方 */
 int *sortedSquares(int *nums, int numsSize, int *returnSize) {
     int *result = (int *)malloc(numsSize * sizeof(int));
     *returnSize = numsSize;
