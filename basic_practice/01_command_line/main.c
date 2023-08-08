@@ -12,3 +12,10 @@ int main(int argc, char *argv[])
 
     return 0;
 }
+
+// $ ./program arg1 arg2 arg3
+// Number of command-line arguments: 4
+// ./program
+// arg1
+// arg2
+// arg3
