@@ -15,3 +15,9 @@ https://leetcode.cn/problems/4sum-ii/
 
 ### 06 - 383. 赎金信
 https://leetcode.cn/problems/ransom-note/
+
+### 07 - 15. 三数之和
+https://leetcode.cn/problems/3sum/
+
+### 08 - 18. 四数之和
+https://leetcode.cn/problems/4sum/
