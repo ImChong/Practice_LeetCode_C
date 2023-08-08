@@ -1,17 +1,36 @@
-### 01 - 242. 有效的字母异位词
-https://leetcode.cn/problems/valid-anagram/
+### 01 - 21. 合并两个有序链表
+https://leetcode.cn/problems/merge-two-sorted-lists/
 
-### 02 - 349. 两个数组的交集
-https://leetcode.cn/problems/intersection-of-two-arrays/
+https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
 
-### 03 - 202. 快乐数
-https://leetcode.cn/problems/happy-number/
+### 02 - 86. 分隔链表
+https://leetcode.cn/problems/partition-list/
 
-### 04 - 1. 两数之和
-https://leetcode.cn/problems/two-sum/
+### 03 - 23. 合并 K 个升序链表
+https://leetcode.cn/problems/merge-k-sorted-lists/
 
-### 04 - 454. 四数相加 II
-https://leetcode.cn/problems/4sum-ii/
+https://leetcode.cn/problems/vvXgSW/
 
-### 06 - 383. 赎金信
-https://leetcode.cn/problems/ransom-note/
+### 04 - 19. 删除链表的倒数第 N 个结点
+https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
+
+https://leetcode.cn/problems/SLwz0R/
+
+https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
+
+### 04 - 876. 链表的中间结点
+https://leetcode.cn/problems/middle-of-the-linked-list/
+
+### 06 - 142. 环形链表 II
+https://leetcode.cn/problems/linked-list-cycle-ii/
+
+https://leetcode.cn/problems/c32eOV/
+
+### 06 - 160. 相交链表
+https://leetcode.cn/problems/intersection-of-two-linked-lists/
+
+https://leetcode.cn/problems/3u1WK4/
+
+### 07 - 141. 环形链表
+https://leetcode.cn/problems/linked-list-cycle/
+
