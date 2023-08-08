@@ -18,7 +18,7 @@ https://leetcode.cn/problems/SLwz0R/
 
 https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
 
-### 04 - 876. 链表的中间结点
+### 05 - 876. 链表的中间结点
 https://leetcode.cn/problems/middle-of-the-linked-list/
 
 ### 06 - 142. 环形链表 II
@@ -26,11 +26,11 @@ https://leetcode.cn/problems/linked-list-cycle-ii/
 
 https://leetcode.cn/problems/c32eOV/
 
-### 06 - 160. 相交链表
+### 07 - 160. 相交链表
 https://leetcode.cn/problems/intersection-of-two-linked-lists/
 
 https://leetcode.cn/problems/3u1WK4/
 
-### 07 - 141. 环形链表
+### 08 - 141. 环形链表
 https://leetcode.cn/problems/linked-list-cycle/
 
