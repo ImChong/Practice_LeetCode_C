@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 /* 长度最小的子数组 */
 int minSubArrayLen(int target, int *nums, int numsSize) {
