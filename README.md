@@ -2,8 +2,8 @@
 
 C language leetcode practice:
 
-- labuladong_practice - [labuladong 的算法小抄](https://labuladong.github.io/algo/home/)
-- programmercarl_practice - [代码随想录](https://programmercarl.com/)
+- labuladong_算法小抄 - [labuladong 的算法小抄](https://labuladong.github.io/algo/home/)
+- programmercarl_代码随想录 - [代码随想录](https://programmercarl.com/)
 
 # Versions
 
@@ -11,7 +11,7 @@ C language leetcode practice:
 - g++.exe (Rev7, Built by MSYS2 project) 13.1.0
 - GNU gdb (GDB) 13.2
 
-# Progess
+# Progress
 
 - [x] .
 - [x] ├── labuladong_practice
