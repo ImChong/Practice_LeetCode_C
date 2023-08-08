@@ -1,14 +1,18 @@
-### 01 - 242. 有效的字母异位词
-https://leetcode.cn/problems/valid-anagram/
+### 01 - 167. 两数之和 II - 输入有序数组
+https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/
 
-### 02 - 349. 两个数组的交集
-https://leetcode.cn/problems/intersection-of-two-arrays/
+https://leetcode.cn/problems/he-wei-sde-liang-ge-shu-zi-lcof/
 
-### 03 - 202. 快乐数
-https://leetcode.cn/problems/happy-number/
+https://leetcode.cn/problems/kLl5u1/
 
-### 04 - 1. 两数之和
-https://leetcode.cn/problems/two-sum/
+### 02 - 26. 删除有序数组中的重复项
+https://leetcode.cn/problems/remove-duplicates-from-sorted-array/
+
+### 03 - 27. 移除元素
+https://leetcode.cn/problems/remove-element/
+
+### 04 - 283. 移动零
+https://leetcode.cn/problems/move-zeroes/
 
 ### 04 - 454. 四数相加 II
 https://leetcode.cn/problems/4sum-ii/
