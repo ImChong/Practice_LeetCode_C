@@ -6,15 +6,15 @@ int search(int *nums, int numsSize, int target) {
     int left = 0;
     int right = numsSize - 1;
 
-    while (left <= right) {
+    while (left <= right) {                 /* 闭区间：当左指针 <= 右指针时持续运行 */
         int mid = left + (right - left) / 2;
 
-        if (nums[mid] == target) {
+        if (nums[mid] == target) {          /* 如果中间值等于目标：返回index */
             return mid;
         } else if (nums[mid] < target) {    /* 如果中间数小于目标值 */
-            left = mid + 1;
-        } else {        /* 如果中间数大于目标值 */
-            right = mid - 1;
+            left = mid + 1;                 /* 左指针 + 1位 */
+        } else {                            /* 如果中间数大于目标值 */
+            right = mid - 1;                /* 右指针 - 1位 */
         }
     }
     return -1;
