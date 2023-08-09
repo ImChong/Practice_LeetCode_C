@@ -11,9 +11,9 @@ int search(int *nums, int numsSize, int target) {
 
         if (nums[mid] == target) {
             return mid;
-        } else if (nums[mid] < target) {
+        } else if (nums[mid] < target) {    /* 如果中间数小于目标值 */
             left = mid + 1;
-        } else {
+        } else {        /* 如果中间数大于目标值 */
             right = mid - 1;
         }
     }
@@ -21,7 +21,7 @@ int search(int *nums, int numsSize, int target) {
 }
 
 int main() {
-    int nums[] = {-1, 0, 3, 5, 9, 12};
+    int nums[] = {-1, 0, 3, 5, 9, 12};      /* 有序数组 */
     int numsSize = sizeof(nums) / sizeof(nums[0]);
     int target = 0;
 
