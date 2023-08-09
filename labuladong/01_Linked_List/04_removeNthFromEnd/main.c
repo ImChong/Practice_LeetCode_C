@@ -1,3 +1,9 @@
+/* 19. 删除链表的倒数第 N 个结点：https://leetcode.cn/problems/remove-nth-node-from-end-of-list/ */
+/* https://leetcode.cn/problems/SLwz0R/ */
+/* https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/ */
+
+/* https://labuladong.github.io/algo/di-ling-zh-bfe1b/shuang-zhi-0f7cc/ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,7 +23,7 @@ struct ListNode *createList(int *array, int size) {
         struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));
         new_node->val = array[i];
         new_node->next = NULL;
-        
+
         // 如果链表为空，则将新结点设置为头结点
         if (head == NULL) {
             head = new_node;
