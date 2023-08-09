@@ -1,20 +1,21 @@
+/* 209.长度最小的子数组：https://leetcode.cn/problems/minimum-size-subarray-sum/ */
+/* https://programmercarl.com/0209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.html */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
 
-/* 209.长度最小的子数组：https://leetcode.cn/problems/minimum-size-subarray-sum/ */
-/* https://programmercarl.com/0209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.html */
 int minSubArrayLen(int target, int *nums, int numsSize) {
     int minLen = INT_MAX;
     int sum = 0;
 
     int left = 0, right = 0;
     for (; right < numsSize; right++) {
-        sum += nums[right]; /* 添加右侧数字 */
-        while (sum >= target) { /* 当sum大于target时 */
-            int subLen = right - left + 1;  /* 计算子长度*/
+        sum += nums[right];                             /* 添加右侧数字 */
+        while (sum >= target) {                         /* 当sum大于target时 */
+            int subLen = right - left + 1;              /* 计算子长度*/
             minLen = minLen < subLen ? minLen : subLen; /* 更新最小子长度 */
-            sum -= nums[left++];    /* 去除左侧数字*/
+            sum -= nums[left++];                        /* 去除左侧数字*/
         }
     }
     return minLen == INT_MAX ? 0 : minLen;  /* 返回最小长度 */
