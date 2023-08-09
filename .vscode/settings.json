@@ -1,4 +1,7 @@
 {
     "C_Cpp.default.compilerPath": "D:\\Developments\\msys64\\mingw64\\bin\\gcc.exe",
-    "ros.distro": "noetic"
+    "ros.distro": "noetic",
+    "files.associations": {
+        "stdio.h": "c"
+    }
 }
