@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <limits.h>
 
-/* 长度最小的子数组 */
+/* 长度最小的子数组：https://leetcode.cn/problems/minimum-size-subarray-sum/ */
 int minSubArrayLen(int target, int *nums, int numsSize) {
     int minLen = INT_MAX;
     int sum = 0;

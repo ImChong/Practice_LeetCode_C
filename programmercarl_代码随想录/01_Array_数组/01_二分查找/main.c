@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* 二分查找 */
+/* 二分查找：https://leetcode.cn/problems/binary-search/ */
 int search(int *nums, int numsSize, int target) {
     int left = 0;
     int right = numsSize - 1;

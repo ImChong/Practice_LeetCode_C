@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* 有序数组的平方 */
+/* 有序数组的平方：https://leetcode.cn/problems/squares-of-a-sorted-array/ */
 int *sortedSquares(int *nums, int numsSize, int *returnSize) {
     int *result = (int *)malloc(numsSize * sizeof(int));
     *returnSize = numsSize;
