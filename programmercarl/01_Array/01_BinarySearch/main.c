@@ -16,7 +16,7 @@ int search(int *nums, int numsSize, int target) {
         } else if (nums[mid] < target) {    /* 如果中间数小于目标值 */
             left = mid + 1;                 /* 左指针 + 1位 */
         } else {                            /* 如果中间数大于目标值 */
-            right = mid - 1;                /* 右指针 - 1位 */
+            right = mid - 1;                /* 右指针 - 1位  */
         }
     }
     return -1;

@@ -11,7 +11,7 @@ int removeElement(int *nums, int numsSize, int val) {
             slow++;                     /* 慢指针位置 + 1 */
         }
     }
-    return slow;    /* 返回慢指针 */
+    return slow;    /* 返回慢指针  */
 }
 
 int main() {
