@@ -1,3 +1,7 @@
+/* 21. 合并两个有序链表: https://leetcode.cn/problems/merge-two-sorted-lists/ */
+/* https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/ */
+/* https://labuladong.github.io/algo/di-ling-zh-bfe1b/shuang-zhi-0f7cc/ */
+
 #include <stdio.h>
 #include <stdlib.h>
 

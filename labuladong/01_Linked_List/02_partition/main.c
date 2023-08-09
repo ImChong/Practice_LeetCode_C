@@ -1,3 +1,6 @@
+/* 86. 分隔链表：https://leetcode.cn/problems/partition-list/ */
+/* https://leetcode.cn/problems/partition-list/ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
