@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/* 移除元素：https://leetcode.cn/problems/remove-element/ */
+/* 27. 移除元素：https://leetcode.cn/problems/remove-element/ */
+/* https://programmercarl.com/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.html */
 int removeElement(int *nums, int numsSize, int val) {
     int i, j;
     for (i = 0, j = 0; i < numsSize; i++) {
