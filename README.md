@@ -2,8 +2,9 @@
 
 C language leetcode practice:
 
-- labuladong_算法小抄 - [labuladong 的算法小抄](https://labuladong.github.io/algo/home/)
-- programmercarl_代码随想录 - [代码随想录](https://programmercarl.com/)
+- basics - commond c functions
+- labuladong - [labuladong 的算法小抄](https://labuladong.github.io/algo/home/)
+- programmercarl - [代码随想录](https://programmercarl.com/)
 
 # Versions
 
