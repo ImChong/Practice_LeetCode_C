@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 
+/* DONE: 目标函数 */
 int search(int *nums, int numsSize, int target) {
     int left = 0;
     int right = numsSize - 1;

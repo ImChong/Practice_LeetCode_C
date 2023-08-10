@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+/* DONE: 目标函数 */
 int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
 
     return 0;

@@ -2,6 +2,7 @@
 /* https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 /* 节点定义 */
 struct ListNode {
@@ -41,16 +42,32 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
-/* TODO: 题目函数 */
+/* DONE: 目标函数 */
 struct ListNode* removeElements(struct ListNode* head, int val){
     struct ListNode dummy;
     dummy.next = head;
-    return 0;
+
+    struct ListNode *curr = &dummy;
+    while (curr->next != NULL) {
+        if (curr->next->val == val) {
+            struct ListNode *tmp = curr->next;
+            curr->next = curr->next->next;
+            free(tmp);
+        } else {
+            curr = curr->next;
+        }
+    }
+    return dummy.next;
 }
 
+/* 主函数 */
 int main(int argc, const char* argv[]) {
-    int arr[5] = {1, 2, 3, 4, 5};
-    struct ListNode *ansList = createList(arr, 5);
+    int arr[7] = {1, 2, 6, 3, 4, 5, 6};
+    struct ListNode *head = createList(arr, 7);
+
+    struct ListNode *ansList = removeElements(head, 6);
     printList(ansList);
+
+    free(head);
     return 0;
 }

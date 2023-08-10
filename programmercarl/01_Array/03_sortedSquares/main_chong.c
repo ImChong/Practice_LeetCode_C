@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* DONE: 目标函数 */
 int *sortedSquares(int *nums, int numsSize, int *returnSize) {
     int *result = (int *)malloc(numsSize * sizeof(int));    /* 创建返回数组 */
     *returnSize = numsSize;     /* 确定返回大小 */
