@@ -1,6 +1,9 @@
 {
 	"version": "2.0.0",
 	"tasks": [
+
+		/* 运行前请确保当前活跃文件为所期望运行的.c文件 */
+		
 		/* linux System Tasks */
 		{
 			"type": "cppbuild",
