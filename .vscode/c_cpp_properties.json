@@ -21,7 +21,7 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "D:/Developments/msys64/mingw64/bin/gcc.exe",
+            "compilerPath": "D:/Developments/msys64/mingw64/bin/gcc.exe",    /* 将此处修改为本地 gcc.exe 地址*/
             "cStandard": "c11",
             "cppStandard": "c++20",
             "intelliSenseMode": "windows-gcc-x64"
