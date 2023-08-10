@@ -43,21 +43,22 @@ void printList(struct ListNode *listPtr) {
 }
 
 /* DONE: 目标函数 */
+/* TODO: 运行时长和内存占用可提升*/
 struct ListNode* removeElements(struct ListNode* head, int val){
-    struct ListNode dummy;
-    dummy.next = head;
+    struct ListNode dummy;      /* 创建虚拟头节点 */
+    dummy.next = head;          /* 将传入链表接在虚拟头节点后面 */
 
-    struct ListNode *curr = &dummy;
-    while (curr->next != NULL) {
-        if (curr->next->val == val) {
-            struct ListNode *tmp = curr->next;
-            curr->next = curr->next->next;
-            free(tmp);
-        } else {
-            curr = curr->next;
+    struct ListNode *curr = &dummy;     /* 创建指针：用于遍历列表 */
+    while (curr->next != NULL) {        /* 当指针下一节点不为空时循环 */
+        if (curr->next->val == val) {           /* 当当前指针下一节点的值等于目标值时 */
+            struct ListNode *tmp = curr->next;      /* 创建临时节点储存当前指针下一节点 */
+            curr->next = curr->next->next;          /* 将当前指针节点的下一节点挂载为下下个节点 */
+            free(tmp);                              /* 释放之前储存的临时节点 */
+        } else {                                /* 当当前指针下一节点的值不等于目标值时 */
+            curr = curr->next;                      /* 当前指针的位置 + 1 */
         }
     }
-    return dummy.next;
+    return dummy.next;          /* 返回虚拟头节点后挂载的结果链表 */
 }
 
 /* 主函数 */
