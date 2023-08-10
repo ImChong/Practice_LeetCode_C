@@ -1,4 +1,4 @@
 {
-    "C_Cpp.default.compilerPath": "D:/Developments/msys64/mingw64/bin/gcc.exe",
+    "C_Cpp.default.compilerPath": "D:/Developments/msys64/mingw64/bin/gcc.exe",    /* 将此处修改为本地 gcc.exe 地址*/
     "ros.distro": "noetic",
 }
