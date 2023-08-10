@@ -1,7 +1,7 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-		// linux System Tasks
+		/* linux System Tasks */
 		{
 			"type": "cppbuild",
 			"label": "(Linux) Build",
@@ -40,10 +40,10 @@
 			},
             "detail": "执行构建并运行目标程序"
         },
-		// Windows System Tasks
+		/* Windows System Tasks */
 		{
 			"label": "(Windows) Build",
-			"command": "D:/Developments/msys64/mingw64/bin/gcc.exe",
+			"command": "D:/Developments/msys64/mingw64/bin/gcc.exe",	/* 将此处修改为本地 gcc.exe 地址*/
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
@@ -71,7 +71,7 @@
                 "(Windows) Build",
                 "(Windows) Run"
             ],
-			// "group": {
+			// "group": {	/* 取消该处注释将次任务组设置为默认F5任务 */
 			// 	"kind": "build",
 			// 	"isDefault": true
 			// },
