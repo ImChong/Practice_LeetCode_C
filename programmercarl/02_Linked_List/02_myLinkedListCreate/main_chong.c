@@ -36,7 +36,11 @@ int myLinkedListGet(MyLinkedList* obj, int index) {
 
 /* TODO: 目标函数 */
 void myLinkedListAddAtHead(MyLinkedList* obj, int val) {
-
+    ListNode *newHead = (ListNode*)malloc(sizeof(ListNode));    /* 为新头节点*/
+    newHead->val = val;
+    newHead->next = obj->head;
+    obj->head = newHead;
+    obj->size++;
 }
 
 /* TODO: 目标函数 */
