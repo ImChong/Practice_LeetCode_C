@@ -7,16 +7,16 @@
 
 /* DONE: 目标函数 */
 int minSubArrayLen(int target, int *nums, int numsSize) {
-    int minLen = INT_MAX;
-    int sum = 0;
+    int minLen = INT_MAX;       /* 记录最小长度 */
+    int sum = 0;                /* 记录子数组的合 */
 
     int left = 0, right = 0;
-    for (; right < numsSize; right++) {
+    for (; right < numsSize; right++) {             /* 遍历数组 */
         sum += nums[right];                             /* 添加右侧数字 */
         while (sum >= target) {                         /* 当sum大于target时 */
-            int subLen = right - left + 1;              /* 计算子长度*/
-            minLen = minLen < subLen ? minLen : subLen; /* 更新最小子长度 */
-            sum -= nums[left++];                        /* 去除左侧数字*/
+            int subLen = right - left + 1;                  /* 计算子长度*/
+            minLen = minLen < subLen ? minLen : subLen;     /* 更新最小子长度 */
+            sum -= nums[left++];                            /* 去除左侧数字*/
         }
     }
     return minLen == INT_MAX ? 0 : minLen;  /* 返回最小长度 */
