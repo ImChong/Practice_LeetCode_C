@@ -28,7 +28,7 @@ int myLinkedListGet(MyLinkedList* obj, int index) {
         return -1;
     }
     ListNode *curr = obj->head;     /* 指针指向链表头节点 */
-    while (index-- > 0) {           /* 移动链表至指定索引 */
+    while (index-- > 0) {           /* 移动链表至指定索引，index > 0 因为初始的指针已经指向0索引 */
         curr = curr->next;
     }
     return curr->val;               /* 返回对应节点数值 */
