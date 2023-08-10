@@ -45,13 +45,13 @@ struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {
 
 int main() {
 
-    // Test case 1
+    /* Test case 1 */
     struct ListNode* l1 = NULL;
     struct ListNode* l2 = NULL;
 
     struct ListNode* merged = mergeTwoLists(l1, l2);
 
-    // Print merged list
+    /* Print merged list */
     while (merged != NULL) {
         printf("%d ", merged->val);
         merged = merged->next;
@@ -59,7 +59,7 @@ int main() {
 
     printf("\n");
 
-    // Test case 2
+    /* Test case 2 */
     l1 = (struct ListNode*)malloc(sizeof(struct ListNode));
     l1->val = 1;
     l1->next = (struct ListNode*)malloc(sizeof(struct ListNode));
@@ -78,7 +78,7 @@ int main() {
 
     merged = mergeTwoLists(l1, l2);
 
-    // Print merged list
+    /* Print merged list */
     while (merged != NULL) {
         printf("%d ", merged->val);
         merged = merged->next;

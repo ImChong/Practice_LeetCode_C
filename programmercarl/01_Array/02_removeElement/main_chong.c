@@ -22,7 +22,7 @@ int main() {
     int newSize = removeElement(nums, numsSize, val);
     printf("New size of the array after removing %d: %d\n", val, newSize);
 
-    // Print the modified array
+    /* Print the modified array */
     printf("Modified array: ");
     for (int i = 0; i < newSize; i++)
     {
