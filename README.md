@@ -29,7 +29,7 @@ C language leetcode practice:
 - [ ] │   └── 11_N_Sum
 - [x] ├── programmercarl_practice
 - [x] │   ├── 01_Array
-- [ ] │   ├── 02_Linked_List
+- [x] │   ├── 02_Linked_List
 - [ ] │   ├── 03_Hash_Table
 - [ ] │   ├── 04_String
 - [ ] │   ├── 05_Double_Pointer
