@@ -16,16 +16,22 @@ typedef struct {
 
 /* DONE: 目标函数 */
 MyLinkedList* myLinkedListCreate() {
-    MyLinkedList *obj = (MyLinkedList*)malloc(sizeof(MyLinkedList));
-    obj->head = NULL;
-    obj->size = 0;
-    return obj;
+    MyLinkedList *obj = (MyLinkedList*)malloc(sizeof(MyLinkedList));    /* 为虚拟头节点分配空间 */
+    obj->head = NULL;       /* 初始化链表头 */
+    obj->size = 0;          /* 初始化链表长度 */
+    return obj;             /* 返回虚拟头节点 */
 }
 
-/* TODO: 目标函数 */
+/* DONE: 目标函数 */
 int myLinkedListGet(MyLinkedList* obj, int index) {
-    
-    return 0;
+    if (index < 0 || index >= obj->size) {      /* 输入校验 */
+        return -1;
+    }
+    ListNode *curr = obj->head;     /* 指针指向链表头节点 */
+    while (index-- > 0) {           /* 移动链表至指定索引 */
+        curr = curr->next;
+    }
+    return curr->val;               /* 返回对应节点数值 */
 }
 
 /* TODO: 目标函数 */
