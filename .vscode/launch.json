@@ -1,7 +1,7 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    /* Use IntelliSense to learn about possible attributes. */
+    /* Hover to view descriptions of existing attributes. */
+    /* For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387 */
     "version": "0.2.0",
     "configurations": [
         {
@@ -37,7 +37,7 @@
             "externalConsole": false,
             "MIMode": "gdb",
             "preLaunchTask": "(Windows) Build",
-            "miDebuggerPath": "D:/Developments/msys64/mingw64/bin/gdb.exe",
+            "miDebuggerPath": "D:/Developments/msys64/mingw64/bin/gdb.exe",    /* 将此处修改为本地 gdb.exe 地址*/
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
