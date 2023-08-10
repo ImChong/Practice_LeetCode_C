@@ -18,11 +18,11 @@ int *sortedSquares(int *nums, int numsSize, int *returnSize) {
         int rightSquare = nums[right] * nums[right];    /* 计算右指针所指值的平方：右平方 */
 
         if (leftSquare > rightSquare) {     /* 如果左平方 > 右平方 */
-            result[index] = leftSquare;     /* 返回数组当前索引的值设置为左平方 */
-            left++;                         /* 左指针位置 + 1 */
+            result[index] = leftSquare;         /* 返回数组当前索引的值设置为左平方 */
+            left++;                             /* 左指针位置 + 1 */
         } else {                            /* 如果左平方 < 右平方 */
-            result[index] = rightSquare;    /* 返回数组当前索引的值设置为右平方 */
-            right--;                        /* 右指针位置 - 1 */
+            result[index] = rightSquare;        /* 返回数组当前索引的值设置为右平方 */
+            right--;                            /* 右指针位置 - 1 */
         }
         index--;                            /* 索引值位置 - 1：从小到大排列 */
     }
