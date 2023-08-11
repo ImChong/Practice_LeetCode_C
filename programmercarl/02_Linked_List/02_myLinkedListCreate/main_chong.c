@@ -93,13 +93,13 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
 
     ListNode *curr = obj->head;                 /* 获取当前链表头节点的指针 */
     if (index == 0) {                           /* 如果删除头节点 */
-        obj->head == curr->next;                    /* 将虚拟头节点所指向的链表头节点指向当前指针的下一节点 */
+        obj->head = curr->next;                    /* 将虚拟头节点所指向的链表头节点指向当前指针的下一节点 */
     } else {                                    /* 如果删除中间节点 */
         for (int i = 0; i < index - 1; i++) {       /* 因为目标节点自己本身要占据一个节点位置，所以循环索引 - 1 次 */
             curr = curr->next;                          /* 指针向后移动一位 */
         }
         ListNode* tmp = curr->next;             /* 获取待删除节点的指针 */
-        curr->next = curr->next->next;          /* 将待删除节点上一节点的下一节点改为待删除节点的下一节点*/
+        curr->next = curr->next->next;          /* 将待删除节点上一节点的下一节点改为待删除节点的下一节点*/ /* BUG: curr->next->next 越界 */
         free(tmp);                              /* 释放待删除节点内存空间 */
     }
     obj->size--;                                /* 链表长度 - 1 */
@@ -121,8 +121,20 @@ int main(int argc, const char* argv[]) {
     MyLinkedList *list = myLinkedListCreate();
 
     myLinkedListAddAtHead(list, 1);
-    myLinkedListAddAtTail(list, 2);
-    myLinkedListAddAtIndex(list, 1, 3);
+    myLinkedListAddAtTail(list, 3);
+    myLinkedListAddAtIndex(list, 1, 2);
+
+    printf("linked list: ");
+    for (int i = 0; i < list->size; i++) {
+        printf("%d ", myLinkedListGet(list, i));
+    }
+    printf("\n");
+
+    printf("%d ", myLinkedListGet(list, 1));
+    myLinkedListDeleteAtIndex(list, 0);
+    printf("%d ", myLinkedListGet(list, 0));
+
+    printf("\n");
 
     printf("linked list: ");
     for (int i = 0; i < list->size; i++) {
@@ -131,5 +143,10 @@ int main(int argc, const char* argv[]) {
     printf("\n");
 
     myLinkedListFree(list);
+
+    /* TODO: 用例报错 */
+    /* BUG: 详情见上方FIXME */
+    /* ["MyLinkedList","addAtHead","deleteAtIndex","addAtHead","addAtHead","addAtHead","addAtHead","addAtHead","addAtTail","get","deleteAtIndex","deleteAtIndex"] */
+    /* [[],[2],[1],[2],[7],[3],[2],[5],[5],[5],[6],[4]] */
     return 0;
 }
