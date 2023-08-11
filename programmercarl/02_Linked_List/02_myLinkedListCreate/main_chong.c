@@ -4,14 +4,14 @@
 #include <stdlib.h>
 
 typedef struct ListNode {
-    int val;
-    struct ListNode *next;
+    int val;                /* 节点数值 */
+    struct ListNode *next;  /* 下一节点地址 */
 } ListNode;
 
 /* DONE: 目标函数 */
 typedef struct {
-    ListNode *head;
-    int size;
+    ListNode *head;     /* 链表虚拟头节点 */
+    int size;           /* 链表尺寸 */
 } MyLinkedList;
 
 /* DONE: 目标函数 */
@@ -34,13 +34,13 @@ int myLinkedListGet(MyLinkedList* obj, int index) {
     return curr->val;               /* 返回对应节点数值 */
 }
 
-/* TODO: 目标函数 */
+/* DONE: 目标函数 */
 void myLinkedListAddAtHead(MyLinkedList* obj, int val) {
-    ListNode *newHead = (ListNode*)malloc(sizeof(ListNode));    /* 为新头节点*/
-    newHead->val = val;
-    newHead->next = obj->head;
-    obj->head = newHead;
-    obj->size++;
+    ListNode *newHead = (ListNode*)malloc(sizeof(ListNode));    /* 为链表新头节点分配空间*/
+    newHead->val = val;             /* 为链表新头节点赋值 */
+    newHead->next = obj->head;      /* 将链表新头节点的下一节点设置为链表旧头节点 */
+    obj->head = newHead;            /* 将虚拟头节点指向的链表头节点设置为链表新头节点 */
+    obj->size++;                    /* 链表大小 + 1 */
 }
 
 /* TODO: 目标函数 */
