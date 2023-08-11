@@ -46,7 +46,7 @@ C language leetcode practice:
 - [x]     │  ├─02_removeElement
 - [x]     │  ├─03_sortedSquares
 - [x]     │  ├─04_minSubArrayLen
-- [x]     │  └─05_generateMatrix
+- [ ]     │  └─05_generateMatrix
 - [x]     ├─02_Linked_List
 - [x]     │  ├─00_common
 - [x]     │  ├─01_removeElements
