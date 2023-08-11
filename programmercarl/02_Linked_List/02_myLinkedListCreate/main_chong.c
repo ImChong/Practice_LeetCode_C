@@ -85,7 +85,7 @@ void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
     obj->size++;                                                /* 链表长度 + 1 */
 }
 
-/* TODO: 目标函数 */
+/* DONE: 目标函数 */
 void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
     if (index < 0 || index > obj->size) {       /* 输入校验 */
         return;
@@ -107,13 +107,13 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
 
 /* DONE: 目标函数 */
 void myLinkedListFree(MyLinkedList* obj) {
-    ListNode *curr = obj->head;
-    while (curr != NULL) {
-        ListNode *tmp = curr;
-        curr = curr->next;
-        free(tmp);
+    ListNode *curr = obj->head;     /* 获取当前链表头节点的指针 */
+    while (curr != NULL) {          /* 当指针所指的节点不为NULL时 */
+        ListNode *tmp = curr;           /* 获取当前节点的指针 */
+        curr = curr->next;              /* 指针向后移动一位 */
+        free(tmp);                      /* 释放当前指针所指节点的内存空间 */
     }
-    free(obj);
+    free(obj);                      /* 释放虚拟头节点的内存空间 */
 }
 
 /* 主函数 */
