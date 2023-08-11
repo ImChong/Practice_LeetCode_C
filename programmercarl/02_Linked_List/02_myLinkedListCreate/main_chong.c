@@ -43,9 +43,22 @@ void myLinkedListAddAtHead(MyLinkedList* obj, int val) {
     obj->size++;                    /* 链表大小 + 1 */
 }
 
-/* TODO: 目标函数 */
+/* DONE: 目标函数 */
 void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
+    ListNode *newTail = (ListNode*)malloc(sizeof(ListNode));    /* 为链表新尾节点分配空间*/
+    newTail->val = val;             /* 为链表新尾节点赋值 */
+    newTail->next = NULL;           /* 尾节点的下一节点为 NULL*/
 
+    if (obj->head == NULL) {            /* 如果虚拟头节点指向的头节点为 NULL*/
+        obj->head = newTail;                /* 设置当前链表新尾节点为链表头节点 */
+    } else {                            /* 反之 */
+        ListNode *curr = obj->head;         /* 获取当前链表头节点的指针 */
+        while (curr->next != NULL) {        /* 当当前指针所指节点的下一节点不为 NULL 时 */
+            curr = curr->next;                  /* 指针向后移动一位 */
+        }
+        curr->next = newTail;               /* 当当前指针所指节点的下一节点为 NULL 时，将当前指针的下一节点设置为链表新尾节点 */
+    }
+    obj->size++;                        /* 链表大小 + 1 */
 }
 
 /* TODO: 目标函数 */
