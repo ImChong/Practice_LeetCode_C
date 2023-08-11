@@ -11,7 +11,7 @@ typedef struct ListNode {
 /* DONE: 目标函数 */
 typedef struct {
     ListNode *head;     /* 链表虚拟头节点 */
-    int size;           /* 链表尺寸 */
+    int size;           /* 链表长度 */
 } MyLinkedList;
 
 /* DONE: 目标函数 */
@@ -40,7 +40,7 @@ void myLinkedListAddAtHead(MyLinkedList* obj, int val) {
     newHead->val = val;             /* 为链表新头节点赋值 */
     newHead->next = obj->head;      /* 将链表新头节点的下一节点设置为链表旧头节点 */
     obj->head = newHead;            /* 将虚拟头节点指向的链表头节点设置为链表新头节点 */
-    obj->size++;                    /* 链表大小 + 1 */
+    obj->size++;                    /* 链表长度 + 1 */
 }
 
 /* DONE: 目标函数 */
@@ -58,17 +58,51 @@ void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
         }
         curr->next = newTail;               /* 当当前指针所指节点的下一节点为 NULL 时，将当前指针的下一节点设置为链表新尾节点 */
     }
-    obj->size++;                        /* 链表大小 + 1 */
+    obj->size++;                        /* 链表长度 + 1 */
 }
 
-/* TODO: 目标函数 */
+/* DONE: 目标函数 */
 void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
+    if (index < 0 || index > obj->size) {       /* 输入校验 */
+        return;
+    }
 
+    if (index == 0) {                           /* 插入新头节点 */
+        myLinkedListAddAtHead(obj, val);
+        return;
+    }
+
+    ListNode *newNode = (ListNode*)malloc(sizeof(ListNode));    /* 为链表新节点分配空间 */
+    newNode->val = val;                                         /* 为链表新节点赋值 */
+
+    ListNode *curr = obj->head;                                 /* 获取当前链表头节点的指针 */
+    for (int i = 0; i < index - 1; i++) {                       /* 因为新节点自己本身要占据一个节点位置，所以循环索引 - 1 次 */
+        curr = curr->next;                                          /* 指针向后移动一位 */
+    }
+
+    newNode->next = curr->next;                                 /* 将新节点的下一节点指向当前指针所指节点的下一节点*/
+    curr->next = newNode;                                       /* 将当前指针所指节点的下一节点指向新节点 */
+    obj->size++;                                                /* 链表长度 + 1 */
 }
 
 /* TODO: 目标函数 */
 void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
+    if (index < 0 || index > obj->size) {       /* 输入校验 */
+        return;
+    }
 
+    ListNode *curr = obj->head;                 /* 获取当前链表头节点的指针 */
+    if (index == 0) {                           /* 如果删除头节点 */
+        obj->head == curr->next;                    /* 将虚拟头节点所指向的链表头节点指向当前指针的下一节点 */
+    } else {                                    /* 如果删除中间节点 */
+        for (int i = 0; i < index - 1; i++) {       /* 因为目标节点自己本身要占据一个节点位置，所以循环索引 - 1 次 */
+            curr = curr->next;                          /* 指针向后移动一位 */
+        }
+        ListNode* tmp = curr->next;             /* 获取待删除节点的指针 */
+        curr->next = curr->next->next;          /* 将待删除节点上一节点的下一节点改为待删除节点的下一节点*/
+        free(tmp);                              /* 释放待删除节点内存空间 */
+    }
+    obj->size--;                                /* 链表长度 - 1 */
 }
 
 /* DONE: 目标函数 */
