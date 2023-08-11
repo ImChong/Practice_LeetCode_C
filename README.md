@@ -14,18 +14,18 @@ C language leetcode practice:
 
 # Progress
 
-- [ ] .
-- [ ] ├─.vscode
-- [ ] ├─basics
-- [ ] │  ├─01_Command_Line
+- [x] .
+- [x] ├─.vscode
+- [x] ├─basics
+- [x] │  ├─01_Command_Line
 - [ ] │  └─02_Common_Func
-- [ ] ├─labuladong
-- [ ] │  ├─01_Linked_List
-- [ ] │  │  ├─00_common
-- [ ] │  │  ├─01_mergeTwoLists
-- [ ] │  │  ├─02_partition
-- [ ] │  │  ├─03_mergeKLists
-- [ ] │  │  ├─04_removeNthFromEnd
+- [x] ├─labuladong
+- [x] │  ├─01_Linked_List
+- [x] │  │  ├─00_common
+- [x] │  │  ├─01_mergeTwoLists
+- [x] │  │  ├─02_partition
+- [x] │  │  ├─03_mergeKLists
+- [x] │  │  ├─04_removeNthFromEnd
 - [ ] │  │  ├─05_middleNode
 - [ ] │  │  ├─06_detectCycle
 - [ ] │  │  ├─07_getIntersectionNode
@@ -40,17 +40,17 @@ C language leetcode practice:
 - [ ] │  ├─09_Buy_And_Sell
 - [ ] │  ├─10_House_Robber
 - [ ] │  └─11_N_Sum
-- [ ] └─programmercarl
-- [ ]     ├─01_Array
-- [ ]     │  ├─01_binarySearch
-- [ ]     │  ├─02_removeElement
-- [ ]     │  ├─03_sortedSquares
-- [ ]     │  ├─04_minSubArrayLen
-- [ ]     │  └─05_generateMatrix
-- [ ]     ├─02_Linked_List
-- [ ]     │  ├─00_common
-- [ ]     │  ├─01_removeElements
-- [ ]     │  ├─02_myLinkedListCreate <<--【Ongoing】
+- [x] └─programmercarl
+- [x]     ├─01_Array
+- [x]     │  ├─01_binarySearch
+- [x]     │  ├─02_removeElement
+- [x]     │  ├─03_sortedSquares
+- [x]     │  ├─04_minSubArrayLen
+- [x]     │  └─05_generateMatrix
+- [x]     ├─02_Linked_List
+- [x]     │  ├─00_common
+- [x]     │  ├─01_removeElements
+- [x]     │  ├─02_myLinkedListCreate <--【进行中】
 - [ ]     │  ├─03_reverseList
 - [ ]     │  ├─04_swapPairs
 - [ ]     │  ├─05_removeNthFromEnd
