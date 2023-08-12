@@ -73,6 +73,11 @@ void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
         return;
     }
 
+    if (index == obj->size) {                   /* 插入新尾节点 */
+        myLinkedListAddAtTail(obj, val);
+        return;
+    }
+
     ListNode *newNode = (ListNode*)malloc(sizeof(ListNode));    /* 为链表新节点分配空间 */
     newNode->val = val;                                         /* 为链表新节点赋值 */
 
@@ -88,7 +93,7 @@ void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
 
 /* DONE: 目标函数 */
 void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
-    if (index < 0 || index > obj->size) {       /* 输入校验 */
+    if (index < 0 || index >= obj->size) {       /* 输入校验 */
         return;
     }
 
@@ -99,9 +104,11 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
         for (int i = 0; i < index - 1; i++) {       /* 因为目标节点自己本身要占据一个节点位置，所以循环索引 - 1 次 */
             curr = curr->next;                          /* 指针向后移动一位 */
         }
-        ListNode* tmp = curr->next;             /* 获取待删除节点的指针 */
-        curr->next = curr->next->next;          /* 将待删除节点上一节点的下一节点改为待删除节点的下一节点*/ /* BUG: curr->next->next 越界 */
-        free(tmp);                              /* 释放待删除节点内存空间 */
+        if (curr->next) {
+            ListNode* tmp = curr->next;             /* 获取待删除节点的指针 */
+            curr->next = curr->next->next;          /* 将待删除节点上一节点的下一节点改为待删除节点的下一节点*/ /* BUG: curr->next->next 越界 */
+            free(tmp);                              /* 释放待删除节点内存空间 */
+        }
     }
     obj->size--;                                /* 链表长度 - 1 */
 }
@@ -119,35 +126,76 @@ void myLinkedListFree(MyLinkedList* obj) {
 
 /* 主函数 */
 int main(int argc, const char* argv[]) {
-    MyLinkedList *list = myLinkedListCreate();
+    /* NOTE: Case1 */
+    // MyLinkedList *list = myLinkedListCreate();
 
-    myLinkedListAddAtHead(list, 1);
-    myLinkedListAddAtTail(list, 3);
-    myLinkedListAddAtIndex(list, 1, 2);
+    // myLinkedListAddAtHead(list, 1);
+    // myLinkedListAddAtTail(list, 3);
+    // myLinkedListAddAtIndex(list, 1, 2);
 
-    printf("linked list: ");
-    for (int i = 0; i < list->size; i++) {
-        printf("%d ", myLinkedListGet(list, i));
-    }
-    printf("\n");
+    // printf("linked list: ");
+    // for (int i = 0; i < list->size; i++) {
+    //     printf("%d ", myLinkedListGet(list, i));
+    // }
+    // printf("\n");
 
-    printf("%d ", myLinkedListGet(list, 1));
-    myLinkedListDeleteAtIndex(list, 0);
-    printf("%d ", myLinkedListGet(list, 0));
+    // printf("%d ", myLinkedListGet(list, 1));
+    // myLinkedListDeleteAtIndex(list, 0);
+    // printf("%d ", myLinkedListGet(list, 0));
 
-    printf("\n");
+    // printf("\n");
 
-    printf("linked list: ");
-    for (int i = 0; i < list->size; i++) {
-        printf("%d ", myLinkedListGet(list, i));
-    }
-    printf("\n");
+    // printf("linked list: ");
+    // for (int i = 0; i < list->size; i++) {
+    //     printf("%d ", myLinkedListGet(list, i));
+    // }
+    // printf("\n");
 
-    myLinkedListFree(list);
+    // myLinkedListFree(list);
 
-    /* TODO: 用例报错 */
-    /* BUG: 详情见上方FIXME */
-    /* ["MyLinkedList","addAtHead","deleteAtIndex","addAtHead","addAtHead","addAtHead","addAtHead","addAtHead","addAtTail","get","deleteAtIndex","deleteAtIndex"] */
-    /* [[],[2],[1],[2],[7],[3],[2],[5],[5],[5],[6],[4]] */
+    /* NOTE: Case2 */
+    // /* ["MyLinkedList","addAtHead","deleteAtIndex","addAtHead","addAtHead","addAtHead","addAtHead","addAtHead","addAtTail","get","deleteAtIndex","deleteAtIndex"] */
+    // /* [[],[2],[1],[2],[7],[3],[2],[5],[5],[5],[6],[4]] */
+
+    // MyLinkedList *list = myLinkedListCreate();      /* MyLinkedList     [] */
+    // myLinkedListAddAtHead(list, 2);                 /* addAtHead        [2] */
+    // myLinkedListDeleteAtIndex(list, 1);             /* deleteAtIndex    [1] */
+    // myLinkedListAddAtHead(list, 2);                 /* addAtHead        [2] */
+    // myLinkedListAddAtHead(list, 7);                 /* addAtHead        [7] */
+    // myLinkedListAddAtHead(list, 3);                 /* addAtHead        [3] */
+    // myLinkedListAddAtHead(list, 2);                 /* addAtHead        [2] */
+    // myLinkedListAddAtHead(list, 5);                 /* addAtHead        [5] */
+    // myLinkedListAddAtTail(list, 5);                 /* addAtTail        [5] */
+    // myLinkedListGet(list, 5);                       /* get          [5] */
+    // myLinkedListDeleteAtIndex(list, 6);             /* deleteAtIndex    [6] */
+    // myLinkedListDeleteAtIndex(list, 4);             /* deleteAtIndex    [4] */
+
+    // printf("linked list: ");
+    // for (int i = 0; i < list->size; i++) {
+    //     printf("%d ", myLinkedListGet(list, i));
+    // }
+    // printf("\n");
+
+    // myLinkedListFree(list);
+
+    /* NOTE: Case3 */
+    /* ["MyLinkedList","addAtHead","get","addAtHead","addAtHead","deleteAtIndex","addAtHead","get","get","get","addAtHead","deleteAtIndex"] */
+    /* [[],[4],[1],[1],[5],[3],[7],[3],[3],[3],[1],[4]] */
+    /* [null,null,-1,null,null,null,null,4,4,4,null,null] */
+
+    /* MyLinkedList     [ ] */
+    /* addAtHead        [4] */
+    /* get              [1] */
+    /* addAtHead        [1] */
+    /* addAtHead        [5] */
+    /* deleteAtIndex    [3] */
+    /* addAtHead        [7] */
+    /* get              [3] */
+    /* get              [3] */
+    /* get              [3] */
+    /* addAtHead        [1] */
+    /* deleteAtIndex    [4] */
+
+
     return 0;
 }
