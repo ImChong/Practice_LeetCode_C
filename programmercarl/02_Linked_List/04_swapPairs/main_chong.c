@@ -45,9 +45,31 @@ void printList(struct ListNode *listPtr) {
 
 /* TODO: 目标函数 */
 struct ListNode* swapPairs(struct ListNode* head){
-    return 0;
+    if (head == NULL || head->next == NULL) {   /* 如果当前头节点和头节点的下一节点不存在的话，返回当前头节点*/
+        return head;
+    }
+
+    struct ListNode* newHead = head->next;
+    struct ListNode* prev = NULL;
+
+    while (head && head->next) {
+        struct ListNode *first = head;
+        struct ListNode *second = head->next;
+
+        first->next = second->next;
+        second->next = first;
+
+        if (prev) {
+            prev->next = second;
+        }
+
+        prev = first;
+        head = first->next;
+    }
+    return newHead;
 }
 
+/* NOTE: 主函数 */
 int main(int argc, char const *argv[]) {
     int arr[5] = {1, 2, 3, 4, 5};
     struct ListNode *newList = createList(arr, 5);
