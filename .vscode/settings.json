@@ -1,4 +1,75 @@
 {
     "C_Cpp.default.compilerPath": "D:/Developments/msys64/mingw64/bin/gcc.exe",    /* 将此处修改为本地 gcc.exe 地址*/
     "ros.distro": "noetic",
+    // "todo-tree.highlights.defaultHighlight": {
+    //     "icon": "alert",
+    //     "type": "text-and-comment",
+    //     "foreground": "black",
+    //     "background": "white",
+    //     "opacity": 50,
+    //     "iconColour": "blue",
+    //     "gutterIcon": true,
+    // },
+    // "todo-tree.highlights.customHighlight": {
+    //     "TODO": {
+    //         "icon": "check",
+    //         "foreground": "black",
+    //         "background": "white",
+    //         "iconColour": "white",
+    //     },
+    //     "NOTE": {
+    //         "icon": "note",
+    //         "foreground": "white",
+    //         "background": "gray",
+    //         "iconColour": "gray",
+    //     },
+    //     "COMMENT": {
+    //         "icon": "note",
+    //         "foreground": "white",
+    //         "background": "gray",
+    //         "iconColour": "gray",
+    //     },
+    //     "FIXME": {
+    //         "foreground": "black",
+    //         "background": "yellow",
+    //         "iconColour": "yellow",
+    //     },
+    //     "BUG": {
+    //         "foreground": "black",
+    //         "background": "red",
+    //         "iconColour": "red",
+    //     },
+    //     "[ ]": {
+    //         "icon": "check",
+    //         "foreground": "black",
+    //         "background": "white",
+    //         "iconColour": "yellow",
+    //     },
+    //     "[x]": {
+    //         "icon": "check",
+    //         "foreground": "white",
+    //         "background": "green",
+    //         "iconColour": "green",
+    //     },
+    //     "DONE": {
+    //         "icon": "check",
+    //         "foreground": "white",
+    //         "background": "green",
+    //         "iconColour": "green",
+    //     }
+    // },
+    // "todo-tree.general.tags": [
+    //     "BUG",
+    //     "HACK",
+    //     "FIXME",
+    //     "TODO",
+    //     "NOTE",
+    //     "COMMENT",
+    //     "[ ]",
+    //     "[x]",
+    //     "DONE"
+    // ],
+    // "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
 }
+
+
