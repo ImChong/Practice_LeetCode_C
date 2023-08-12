@@ -45,17 +45,17 @@ void printList(struct ListNode *listPtr) {
 
 /* TODO: 目标函数 */
 struct ListNode* reverseList(struct ListNode* head){
-    struct ListNode *prev = NULL;
-    struct ListNode *curr = head;
-    struct ListNode *next = NULL;
+    struct ListNode *prev = NULL;   /* 初始化前一节点指针为NULL */
+    struct ListNode *curr = head;   /* 初始化现节点指针头结点 */
+    struct ListNode *next = NULL;   /* 初始化下一节点指针为NULL */
 
-    while (curr != NULL) {
-        next = curr->next;
-        curr->next = prev;
-        prev = curr;
-        curr = next;
+    while (curr != NULL) {      /* 如果当前指针指向的节点不为 NULL */
+        next = curr->next;          /* 配置下一节点*/
+        curr->next = prev;          /* 将现节点的下一节点指针指向前一节点 */
+        prev = curr;                /* 将现节点指针设置为前节点指针*/
+        curr = next;                /* 将下一节点指针设置为现节点指针 */
     }
-    return prev;
+    return prev;                /* 返回前一节点指针 */
 }
 
 /* NOTE: 主函数 */
