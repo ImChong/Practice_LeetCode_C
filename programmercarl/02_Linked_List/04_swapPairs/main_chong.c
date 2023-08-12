@@ -1,3 +1,6 @@
+/* 24. 两两交换链表中的节点：https://leetcode.cn/problems/swap-nodes-in-pairs/ */
+/* https://programmercarl.com/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -7,7 +10,7 @@ struct ListNode {
     struct ListNode *next;
 };
 
-/* NOTE: 创建链表，未使用虚拟头结点 */
+/* NOTE: 创建链表 */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
@@ -30,26 +33,9 @@ struct ListNode *createList(int *array, int size) {
     return head;
 }
 
-/* NOTE: 添加元素至链表 */
-struct ListNode *appendToList(struct ListNode *head, int val) {
-    struct ListNode *newNode = (struct ListNode *)malloc(sizeof(struct ListNode));
-    newNode->val = val;
-    newNode->next = NULL;
-
-    if (head == NULL) {
-        return newNode;
-    }
-
-    struct ListNode *tmp = head;
-    while (tmp->next != NULL) {
-        tmp = tmp->next;
-    }
-    tmp->next = newNode;
-    return head;
-}
-
 /* NOTE: 打印链表 */
 void printList(struct ListNode *listPtr) {
+    printf("linked list: ");
     while (listPtr != NULL) {
         printf("%d ", listPtr->val);
         listPtr = listPtr->next;
@@ -57,12 +43,16 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
-/* NOTE: 主函数 */
-int main()
-{
+/* TODO: 目标函数 */
+struct ListNode* swapPairs(struct ListNode* head){
+    return 0;
+}
+
+int main(int argc, char const *argv[]) {
     int arr[5] = {1, 2, 3, 4, 5};
-    struct ListNode *ansList = createList(arr, 5);
-    ansList = appendToList(ansList, 6);
+    struct ListNode *newList = createList(arr, 5);
+    printList(newList);
+    struct ListNode *ansList = swapPairs(newList);
     printList(ansList);
     return 0;
 }
