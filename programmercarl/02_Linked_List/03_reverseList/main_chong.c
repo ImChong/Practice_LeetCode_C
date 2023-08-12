@@ -43,7 +43,7 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
-/* TODO: 目标函数 */
+/* DONE: 目标函数 */
 struct ListNode* reverseList(struct ListNode* head){
     struct ListNode *prev = NULL;   /* 初始化前一节点指针为NULL */
     struct ListNode *curr = head;   /* 初始化现节点指针头结点 */
