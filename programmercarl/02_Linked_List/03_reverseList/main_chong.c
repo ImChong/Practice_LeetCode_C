@@ -37,6 +37,7 @@ struct ListNode* reverseList(struct ListNode* head){
 
 }
 
+/* NOTE: 主函数 */
 int main(int argc, char const *argv[]) {
 
 
