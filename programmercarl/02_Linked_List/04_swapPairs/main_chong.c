@@ -49,24 +49,24 @@ struct ListNode* swapPairs(struct ListNode* head){
         return head;
     }
 
-    struct ListNode* newHead = head->next;
-    struct ListNode* prev = NULL;
+    struct ListNode* newHead = head->next;      /* 新头节点为现头节点的下一节点 */
+    struct ListNode* prev = NULL;               /* 前节点初始化为NULL */
 
-    while (head && head->next) {
-        struct ListNode *first = head;
-        struct ListNode *second = head->next;
+    while (head && head->next) {                /* 当当前节点和下一节点存在的时候 */
+        struct ListNode *first = head;              /* 第一节点为现头节点 */
+        struct ListNode *second = head->next;       /* 第二节点为现头节点的下一节点 */
 
-        first->next = second->next;
-        second->next = first;
+        first->next = second->next;                 /* 改变链表指向：第一节点的下一节点指向第二节点的下一节点 */
+        second->next = first;                       /* 改变链表指向：第二节点的下一节点指向第一节点 */
 
-        if (prev) {
-            prev->next = second;
+        if (prev) {                                 /* 如果前节点存在 */
+            prev->next = second;                        /* 前节点的下一节点指向第二节点 */
         }
 
-        prev = first;
-        head = first->next;
+        prev = first;                               /* 将第一节点设置为前节点 */
+        head = first->next;                         /* 将第一节点的下一节点设置为头节点 */
     }
-    return newHead;
+    return newHead;                             /* 返回新头节点 */
 }
 
 /* NOTE: 主函数 */
