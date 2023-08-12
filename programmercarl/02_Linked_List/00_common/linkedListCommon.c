@@ -39,7 +39,6 @@ struct ListNode *appendToList(struct ListNode *head, int val) {
     if (head == NULL) {
         return newNode;
     }
-
     struct ListNode *tmp = head;
     while (tmp->next != NULL) {
         tmp = tmp->next;
