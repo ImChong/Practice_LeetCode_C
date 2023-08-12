@@ -43,7 +43,7 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
-/* TODO: 目标函数 */
+/* DONE: 目标函数 */
 struct ListNode* swapPairs(struct ListNode* head){
     if (head == NULL || head->next == NULL) {   /* 如果当前头节点和头节点的下一节点不存在的话，返回当前头节点*/
         return head;
