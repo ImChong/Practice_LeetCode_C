@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* 节点定义 */
+/* NOTE: 节点定义 */
 struct ListNode {
     int val;
     struct ListNode *next;
 };
 
-/* 创建链表 */
+/* NOTE: 创建链表 */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
@@ -30,7 +30,7 @@ struct ListNode *createList(int *array, int size) {
     return head;
 }
 
-/* 打印链表 */
+/* NOTE: 打印链表 */
 void printList(struct ListNode *listPtr) {
     while (listPtr != NULL) {
         printf("%d ", listPtr->val);
@@ -39,7 +39,7 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
-/* 主函数 */
+/* NOTE: 主函数 */
 int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
