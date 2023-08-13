@@ -33,15 +33,57 @@ struct ListNode *createList(int *array, int size) {
     return head;
 }
 
+/* NOTE: 打印链表 */
+void printList(struct ListNode *listPtr) {
+    printf("linked list: ");
+    while (listPtr != NULL) {
+        printf("%d ", listPtr->val);
+        listPtr = listPtr->next;
+    }
+    printf("\n");
+}
+
 /* TODO: 目标函数 */
 struct ListNode* removeNthFromEnd(struct ListNode* head, int n){
+    if (!head || n <= 0) {
+        return head;
+    }
 
+    struct ListNode *dummy = (struct ListNode*)malloc(sizeof(struct ListNode));
+    dummy->val = 0;
+    dummy->next = head;
+
+    struct ListNode *first = dummy;
+    struct ListNode *second = dummy;
+
+    for (int i = 0; i <= n; i++) {
+        if (first != NULL) {
+            first = first->next;
+        } else {
+            return head;
+        }
+    }
+
+    while (first != NULL) {
+        first = first->next;
+        second = second->next;
+    }
+
+    struct ListNode *tmp = second->next;
+    second->next = second->next->next;
+    free(tmp);
+
+    struct ListNode *newHead = dummy->next;
+    free(dummy);
+    return newHead;
 }
 
 /* NOTE: 主函数 */
 int main(int argc, char const *argv[]) {
-
-
-
+    int arr[5] = {1, 2, 3, 4, 5};
+    struct ListNode *newList = createList(arr, 5);
+    printList(newList);
+    struct ListNode *ansList = removeNthFromEnd(newList, 2);
+    printList(ansList);
     return 0;
 }
