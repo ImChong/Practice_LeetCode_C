@@ -50,10 +50,10 @@ C language leetcode practice:
 - [x]     ├─02_Linked_List
 - [x]     │  ├─00_common
 - [x]     │  ├─01_removeElements
-- [x]     │  ├─02_myLinkedListCreate <--【进行中】
-- [ ]     │  ├─03_reverseList
-- [ ]     │  ├─04_swapPairs
-- [ ]     │  ├─05_removeNthFromEnd
+- [x]     │  ├─02_myLinkedListCreate
+- [x]     │  ├─03_reverseList
+- [x]     │  ├─04_swapPairs
+- [x]     │  ├─05_removeNthFromEnd <--【进行中】
 - [ ]     │  ├─06_getIntersectionNode
 - [ ]     │  └─07_detectCycle
 - [ ]     ├─03_Hash_Table
