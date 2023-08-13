@@ -14,34 +14,34 @@ C language leetcode practice:
 
 # Progress
 
-.
-├── basics
-│   ├── 01_Command_Line
-│   └── 02_Common_Func
-├── labuladong
-│   ├── 01_Linked_List
-│   ├── 02_Array
-│   ├── 03_Binary_Tree
-│   ├── 04_Dynamic_Programming
-│   ├── 05_Backtracking
-│   ├── 06_Breadth_First_Search
-│   ├── 07_Binary_Search
-│   ├── 08_Sliding_Window
-│   ├── 09_Buy_And_Sell
-│   ├── 10_House_Robber
-│   └── 11_N_Sum
-├── LICENSE
-├── programmercarl
-│   ├── 01_Array
-│   ├── 02_Linked_List
-│   ├── 03_Hash_Table
-│   ├── 04_String
-│   ├── 05_Double_Pointer
-│   ├── 06_Stack_Queue
-│   ├── 07_Binary_Tree
-│   ├── 08_Backtracking
-│   ├── 09_Greedy
-│   ├── 10_Dynamic_Programming
-│   └── 11_Monotone_Stack
-└── README.md
+- [x] .
+- [x] ├── basics
+- [x] │   ├── 01_Command_Line
+- [ ] │   └── 02_Common_Func
+- [x] ├── labuladong
+- [x] │   ├── 01_Linked_List
+- [ ] │   ├── 02_Array
+- [ ] │   ├── 03_Binary_Tree
+- [ ] │   ├── 04_Dynamic_Programming
+- [ ] │   ├── 05_Backtracking
+- [ ] │   ├── 06_Breadth_First_Search
+- [ ] │   ├── 07_Binary_Search
+- [ ] │   ├── 08_Sliding_Window
+- [ ] │   ├── 09_Buy_And_Sell
+- [ ] │   ├── 10_House_Robber
+- [ ] │   └── 11_N_Sum
+- [x] ├── LICENSE
+- [x] ├── programmercarl
+- [x] │   ├── 01_Array
+- [x] │   ├── 02_Linked_List【Ongoing】
+- [ ] │   ├── 03_Hash_Table
+- [ ] │   ├── 04_String
+- [ ] │   ├── 05_Double_Pointer
+- [ ] │   ├── 06_Stack_Queue
+- [ ] │   ├── 07_Binary_Tree
+- [ ] │   ├── 08_Backtracking
+- [ ] │   ├── 09_Greedy
+- [ ] │   ├── 10_Dynamic_Programming
+- [ ] │   └── 11_Monotone_Stack
+- [ ] └── README.md
 
