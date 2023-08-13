@@ -7,7 +7,7 @@ struct ListNode {
     struct ListNode *next;
 };
 
-/* NOTE: 创建链表，未使用虚拟头结点 */
+/* NOTE: 创建链表，不使用虚拟头结点 */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
