@@ -1,10 +1,10 @@
 # Practice_LeetCode_C
 
-C language leetcode practice:
+C language leetcode practice guide:
 
 - basics - common c functions
-- labuladong - [labuladong 的算法小抄](https://labuladong.github.io/algo/home/)
-- programmercarl - [代码随想录](https://programmercarl.com/)
+- labuladong - [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
+- programmercarl - [代码随想录系列](https://programmercarl.com/)
 
 # Build & Run Code
 In order to run source code in VSCode, select the .c file that wish to run. Then click:
