@@ -15,7 +15,9 @@ Terminal -> Run Task... -> (Windows) Build & Run    /* Windows System */
 
 # Debug Code
 In order to debug source code in VSCode, select the .c file that wish to run.
+
 First Build & Run source code as the above section.
+
 Then click:
 ```
 Run and Debug (Ctil+Shift+D) -> (Linux)(gdb) source code        /* Ubuntu System */
