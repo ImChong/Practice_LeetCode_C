@@ -6,6 +6,12 @@ C language leetcode practice guide:
 - labuladong - [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
 - programmercarl - [代码随想录系列](https://programmercarl.com/)
 
+# Versions
+
+- gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
+- g++.exe (Rev7, Built by MSYS2 project) 13.1.0
+- GNU gdb (GDB) 13.2
+
 # Build & Run Code
 In order to run source code in VSCode, select the .c file that wish to run. Then click:
 ```
@@ -21,12 +27,6 @@ Then click:
 Run and Debug (Ctil+Shift+D) -> (Linux)(gdb) source code        /* Ubuntu System */
 Run and Debug (Ctil+Shift+D) -> (Windows)(gdb) source code      /* Windows System */
 ```
-
-# Versions
-
-- gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
-- g++.exe (Rev7, Built by MSYS2 project) 13.1.0
-- GNU gdb (GDB) 13.2
 
 # Progress
 
