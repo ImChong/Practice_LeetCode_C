@@ -6,6 +6,22 @@ C language leetcode practice:
 - labuladong - [labuladong 的算法小抄](https://labuladong.github.io/algo/home/)
 - programmercarl - [代码随想录](https://programmercarl.com/)
 
+# Build & Run Code
+In order to run source code in VSCode, select the .c file that wish to run. Then click:
+```
+Terminal -> Run Task... -> (Linux) Build & Run      /* Ubuntu System */
+Terminal -> Run Task... -> (Windows) Build & Run    /* Windows System */
+```
+
+# Debug Code
+In order to debug source code in VSCode, select the .c file that wish to run.
+First Build & Run source code as the above section.
+Then click:
+```
+Run and Debug (Ctil+Shift+D) -> (Linux)(gdb) source code        /* Ubuntu System */
+Run and Debug (Ctil+Shift+D) -> (Windows)(gdb) source code      /* Windows System */
+```
+
 # Versions
 
 - gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
