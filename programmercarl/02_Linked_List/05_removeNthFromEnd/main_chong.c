@@ -43,7 +43,7 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
-/* TODO: 目标函数 */
+/* DONE: 目标函数 */
 struct ListNode* removeNthFromEnd(struct ListNode* head, int n){
     if (!head || n <= 0) {      /* 如果头节点不存在 或 n <= 0 时 */
         return head;                /* 返回头节点 */
@@ -85,14 +85,17 @@ int main(int argc, char const *argv[]) {
     printList(newList);
 
     /* NOTE: Case 1 */
+    printf("Case 1: \n");
     struct ListNode *ansList = removeNthFromEnd(newList, 2);
     printList(ansList);
 
     /* NOTE: Case 2 */
+    printf("Case 2: \n");
     ansList = removeNthFromEnd(newList, 3);
     printList(ansList);
 
     /* NOTE: Case 3 */
+    printf("Case 3: \n");
     ansList = removeNthFromEnd(newList, 5);
     printList(ansList);
 
