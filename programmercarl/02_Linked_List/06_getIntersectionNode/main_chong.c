@@ -43,6 +43,8 @@ void printList(struct ListNode *listPtr, char listChar) {
     printf("\n");
 }
 
+/* ==================================================================================================== */
+/* ==================================================================================================== */
 /* TODO: 目标函数 */
 struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) {
     struct ListNode *pA = headA;
@@ -53,6 +55,8 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
     }
     return pA;
 }
+/* ==================================================================================================== */
+/* ==================================================================================================== */
 
 /* NOTE: 主函数 */
 int main(int argc, const char* argv[]) {
