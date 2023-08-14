@@ -68,6 +68,7 @@ struct ListNode *detectCycle(struct ListNode *head) {
 /* ==================================================================================================== */
 
 /* NOTE: 主函数 */
+/* BUG: 答案index多了1 */
 int main(int argc, const char* argv[]) {
     /* NOTE: Case 1 */
     printf("======== Case 1 ======== \n");
@@ -83,6 +84,14 @@ int main(int argc, const char* argv[]) {
     }
     pTail->next = pPos;
     printList(ansList);
+    printf("Pos: %d\n", detectCycle(ansList)->val);
+
+    /* NOTE: Case 2 */
+    printf("======== Case 2 ======== \n");
+    struct ListNode b1 = {1, NULL}, b2 = {2, NULL};
+    b1.next = &b2; b2.next = &b1;
+    printList(&b1);
+    printf("Pos: %d\n", detectCycle(&b1)->val);
 
     return 0;
 }
