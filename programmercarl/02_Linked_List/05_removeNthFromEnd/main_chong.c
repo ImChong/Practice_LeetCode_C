@@ -85,17 +85,17 @@ int main(int argc, char const *argv[]) {
     printList(newList);
 
     /* NOTE: Case 1 */
-    printf("Case 1: \n");
+    printf("======== Case 1 ======== \n");
     struct ListNode *ansList = removeNthFromEnd(newList, 2);
     printList(ansList);
 
     /* NOTE: Case 2 */
-    printf("Case 2: \n");
+    printf("======== Case 2 ======== \n");
     ansList = removeNthFromEnd(newList, 3);
     printList(ansList);
 
     /* NOTE: Case 3 */
-    printf("Case 3: \n");
+    printf("======== Case 3 ======== \n");
     ansList = removeNthFromEnd(newList, 5);
     printList(ansList);
 

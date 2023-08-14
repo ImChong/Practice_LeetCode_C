@@ -45,13 +45,19 @@ void printList(struct ListNode *listPtr, char listChar) {
 
 /* TODO: 目标函数 */
 struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) {
-    
+    struct ListNode *pA = headA;
+    struct ListNode *pB = headB;
+    while (pA != pB) {
+        pA = pA != NULL ? pA->next : headB;
+        pB = pB != NULL ? pB->next : headA;
+    }
+    return pA;
 }
 
 /* NOTE: 主函数 */
 int main(int argc, const char* argv[]) {
     /* NOTE: Case 1 */
-    printf("Case 1: \n");
+    printf("======== Case 1 ======== \n");
     int arrA1[] = {4, 1, 8, 4, 5};
     struct ListNode *listA = createList(arrA1, 5);
     printList(listA, 'A');
@@ -66,8 +72,15 @@ int main(int argc, const char* argv[]) {
     current->next = listA->next->next;
     printList(listB, 'B');
 
+    struct ListNode *intersectNode = getIntersectionNode(listA, listB);
+    if (intersectNode != NULL) {
+        printf("Intersction: %d\n", intersectNode->val);
+    } else {
+        printf("Intersction: NULL\n");
+    }
+
     /* NOTE: Case 2 */
-    printf("Case 2: \n");
+    printf("======== Case 2 ======== \n");
     int arrA2[] = {2, 6, 4};
     listA = createList(arrA2, 3);
     printList(listA, 'A');
@@ -75,5 +88,13 @@ int main(int argc, const char* argv[]) {
     int arrB2[] = {1, 5};
     listB = createList(arrB2, 2);
     printList(listB, 'B');
+
+    intersectNode = getIntersectionNode(listA, listB);
+    if (intersectNode != NULL) {
+        printf("Intersction: %d\n", intersectNode->val);
+    } else {
+        printf("Intersction: NULL\n");
+    }
+    
     return 0;
 }
