@@ -67,10 +67,10 @@ int main(int argc, const char* argv[]) {
     struct ListNode *ansList = createList(arr1, 4);
     struct ListNode *pPos = ansList;
     struct ListNode *pTail = ansList;
-    while (pTail->next != NULL) {
+    while (pTail->next != NULL) {   /* 获取链表尾部节点 */
         pTail = pTail->next;
     }
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < 1; i++) {   /* 获取链表指定节点 */
         pPos = pPos->next;
     }
     pTail->next = pPos;
