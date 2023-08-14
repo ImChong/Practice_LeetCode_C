@@ -46,13 +46,23 @@ void printList(struct ListNode *listPtr) {
 /* ==================================================================================================== */
 /* TODO: 目标函数 */
 struct ListNode *detectCycle(struct ListNode *head) {
-    
+    struct ListNode *slow = head;
+    struct ListNode *fast = head;
+
+    while (fast && fast->next) {
+        
+    }
+    return NULL;
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
 /* NOTE: 主函数 */
 int main(int argc, const char* argv[]) {
+    /* NOTE: Case 1 */
+    printf("======== Case 1 ======== \n");
+    int arr1[] = {3, 2, 0, -4};
+    struct ListNode *ansList = createList(arr1, 4);
 
     return 0;
 }

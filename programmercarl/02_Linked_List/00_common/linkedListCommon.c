@@ -59,7 +59,7 @@ void printList(struct ListNode *listPtr) {
 /* NOTE: 主函数 */
 int main()
 {
-    int arr[5] = {1, 2, 3, 4, 5};
+    int arr[] = {1, 2, 3, 4, 5};
     struct ListNode *ansList = createList(arr, 5);
     ansList = appendToList(ansList, 6);
     printList(ansList);
