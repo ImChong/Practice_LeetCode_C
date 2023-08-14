@@ -35,9 +35,11 @@ struct ListNode *createList(int *array, int size) {
 
 /* NOTE: 打印链表 */
 void printList(struct ListNode *listPtr) {
-    while (listPtr != NULL) {
+    int i = 0;  /* 防止无限循环 */
+    while (listPtr != NULL && i < 20) {
         printf("%d ", listPtr->val);
         listPtr = listPtr->next;
+        i++;
     }
     printf("\n");
 }
@@ -50,7 +52,7 @@ struct ListNode *detectCycle(struct ListNode *head) {
     struct ListNode *fast = head;
 
     while (fast && fast->next) {
-        
+        break;
     }
     return NULL;
 }
@@ -63,6 +65,16 @@ int main(int argc, const char* argv[]) {
     printf("======== Case 1 ======== \n");
     int arr1[] = {3, 2, 0, -4};
     struct ListNode *ansList = createList(arr1, 4);
+    struct ListNode *pPos = ansList;
+    struct ListNode *pTail = ansList;
+    while (pTail->next != NULL) {
+        pTail = pTail->next;
+    }
+    for (int i = 0; i < 1; i++) {
+        pPos = pPos->next;
+    }
+    pTail->next = pPos;
+    printList(ansList);
 
     return 0;
 }
