@@ -46,28 +46,30 @@ void printList(struct ListNode *listPtr) {
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
-/* TODO: 目标函数 */
+/* DONE: 目标函数 */
+/* TODO: 固定的套路能找到环，但是为什么会找到开始入环的第一个节点需要探索一下。 */
 struct ListNode *detectCycle(struct ListNode *head) {
-    struct ListNode *slow = head, *fast = head;
-    while (fast && fast->next) {
-        slow = slow->next;
-        fast = fast->next->next;
-        if (slow == fast) {
-            slow = head;
-            while (slow != fast) {
-                slow = slow->next;
-                fast = fast->next;
+    struct ListNode *fast = head;   /* 创建快指针，将指针指向头节点 */
+    struct ListNode *slow = head;   /* 创建慢指针，将指针指向头节点 */
+
+    while (fast && fast->next) {    /* 当快指针节点和快指针节点的下一位节点存在时 */
+        slow = slow->next;              /* 慢指针向后移动一位 */
+        fast = fast->next->next;        /* 快指针向后移动两位 */
+        if (slow == fast) {             /* 如果快指针和慢指针相遇 */
+            slow = head;                    /* 慢指针指向头节点 */
+            while (slow != fast) {          /* 如果慢指针不等于快指针 */
+                slow = slow->next;              /* 慢指针向后移动一位 */
+                fast = fast->next;              /* 快指针向后移动一位 */
             }
-            return slow;
+            return slow;                    /* 返回慢指针 */
         }
     }
-    return NULL;
+    return NULL;                    /* 如果无环则返回NULL */
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
 /* NOTE: 主函数 */
-/* BUG: 答案index多了1 */
 int main(int argc, const char* argv[]) {
     /* NOTE: Case 1 */
     printf("======== Case 1 ======== \n");
@@ -78,10 +80,8 @@ int main(int argc, const char* argv[]) {
     while (pTail->next != NULL) {   /* 获取链表尾部节点 */
         pTail = pTail->next;
     }
-    for (int i = 0; i < 1; i++) {   /* 获取链表指定节点 */
-        pPos = pPos->next;
-    }
-    pTail->next = pPos;
+    pPos = pPos->next;          /* 获取链表指定节点 */
+    pTail->next = pPos;         /* 将尾节点指向指定节点 */
     printList(ansList);
     printf("Pos: %d\n", detectCycle(ansList)->val);
 
@@ -91,6 +91,20 @@ int main(int argc, const char* argv[]) {
     b1.next = &b2; b2.next = &b1;
     printList(&b1);
     printf("Pos: %d\n", detectCycle(&b1)->val);
+
+    /* NOTE: Case 3 */
+    printf("======== Case 3 ======== \n");
+    int arr3[] = {3, 2, 0, -4, -5, -6};
+    ansList = createList(arr3, 6);
+    pPos = ansList;
+    pTail = ansList;
+    while (pTail->next != NULL) {   /* 获取链表尾部节点 */
+        pTail = pTail->next;
+    }
+    pPos = pPos->next->next;          /* 获取链表指定节点 */
+    pTail->next = pPos;         /* 将尾节点指向指定节点 */
+    printList(ansList);
+    printf("Pos: %d\n", detectCycle(ansList)->val);
 
     return 0;
 }
