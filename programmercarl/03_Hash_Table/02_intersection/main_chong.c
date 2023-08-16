@@ -36,6 +36,7 @@ int* intersection(int* nums1, int nums1Size, int* nums2, int nums2Size, int* ret
 /* ==================================================================================================== */
 
 /* NOTE:主函数 */
+/* FIXME: 用chatgpt生成更合适的答案 */
 int main(int argc, char const *argv[]) {
     int nums1[] = {1, 2, 2, 1};
     int nums2[] = {2, 2}; 
