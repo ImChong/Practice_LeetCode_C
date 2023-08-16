@@ -11,21 +11,21 @@
 bool isAnagram(char *s, char *t) {
     int sLen = strlen(s);               /* 获得s的长度 */
     int tLen = strlen(t);               /* 获得t的长度 */
-    if (sLen != tLen) {
+    if (sLen != tLen) {                 /* 如果s和t的长度不相等则返回false */
         return false;
     }
 
-    int count[26] = {0};
-    for (int i = 0; i < sLen; i++) {
-        count[s[i] - 'a']++;
-        count[t[i] - 'a']--;
+    int count[26] = {0};                /* 初始化计数列表 */
+    for (int i = 0; i < sLen; i++) {    /* 遍历字符串 */
+        count[s[i] - 'a']++;                /* 给s对应字符的值 + 1 */
+        count[t[i] - 'a']--;                /* 给t对应字符的值 - 1 */
     }
-    for (int i = 0; i < 26; i++) {
-        if (count[i] != 0) {
-            return false;
+    for (int i = 0; i < 26; i++) {      /* 遍历计数列表 */
+        if (count[i] != 0) {                /* 如果计数不为0 */
+            return false;                       /* 返回false */
         }
     }
-    return true;
+    return true;                        /* 计数都为0则返回true */
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
