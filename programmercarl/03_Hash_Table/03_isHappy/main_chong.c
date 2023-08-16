@@ -4,11 +4,36 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/* TODO: 目标函数 */
 bool isHappy(int n) {
-    return 0;
-}
 
+    return false;
+}
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+
+/* NOTE: 主函数 */
 int main(int argc, char const *argv[]) {
+    // NOTE: Test case 1
+    printf("======== Case 1 ======== \n");
+    int n = 19;
+    if (isHappy(n)) {
+        printf("%d is happy number!\n", n);
+    } else {
+        printf("%d is not happy number!\n", n);
+    }
+
+    // NOTE: Test case 2
+    printf("======== Case 2 ======== \n");
+    n = 2;
+    if (isHappy(n)) {
+        printf("%d is happy number!\n", n);
+    } else {
+        printf("%d is not happy number!\n", n);
+    }
+
 
     return 0;
 }
