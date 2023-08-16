@@ -20,7 +20,7 @@ int cmp(const void *a, const void *b) {
     return *(int *)a - *(int *)b;
 }
 
-/* TODO: 目标函数 */
+/* DONE: 目标函数 */
 int* intersection(int* numsA, int numsASize, int* numsB, int numsBSize, int* returnSize){
     qsort(numsA, numsASize, sizeof(int), cmp);          /* 将数组1排序 */
     qsort(numsB, numsBSize, sizeof(int), cmp);          /* 将数组2排序 */
@@ -61,6 +61,7 @@ int main(int argc, char const *argv[]) {
     printf("======== Case 2 ======== \n");
     int nums3[] = {4, 9, 5};
     int nums4[] = {9, 4, 9, 8, 4}; 
+    printArray(nums4, 5);
     ans = intersection(nums3, 3, nums4, 5, &returnSize);
     printArray(ans, returnSize);
 
