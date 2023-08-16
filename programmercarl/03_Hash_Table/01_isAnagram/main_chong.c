@@ -9,8 +9,8 @@
 /* ==================================================================================================== */
 /* TODO: 目标函数 */
 bool isAnagram(char *s, char *t) {
-    int sLen = strlen(s);
-    int tLen = strlen(t);
+    int sLen = strlen(s);               /* 获得s的长度 */
+    int tLen = strlen(t);               /* 获得t的长度 */
     if (sLen != tLen) {
         return false;
     }
