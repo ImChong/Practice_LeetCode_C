@@ -19,8 +19,28 @@ int getNext(int n) {
 
 /* TODO: 目标函数 */
 bool isHappy(int n) {
-    
-    return false;
+    int slow = n;
+    int fast = getNext(n);
+    while (fast != 1 && slow != fast) {
+        slow = getNext(slow);
+        fast = getNext(getNext(fast));
+    }
+
+    if (fast == 1) {
+        return true;
+    }
+
+    int seen[1000] = {0};
+    while (1) {
+        if (seen[slow]) {
+            return false;
+        }
+        seen[slow] = 1;
+        slow = getNext(slow);
+        if (slow == 1) {
+            return true;
+        }
+    }
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
