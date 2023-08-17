@@ -19,12 +19,7 @@ int getNext(int n) {
 
 /* TODO: 目标函数 */
 bool isHappy(int n) {
-    int slow = n;
-    int fast = getNext(n);
-    while (fast != 1 && slow != fast) {
-        slow = getNext(slow);
-        fast = getNext(getNext(fast));
-    }
+    
     return false;
 }
 /* ==================================================================================================== */
