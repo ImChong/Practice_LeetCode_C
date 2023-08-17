@@ -32,9 +32,9 @@ bool isHappy(int n) {
     // fourth round:
     // 1 <= sum <= 81 * 2 = 162
 
-    int visited[163] = { 0 };               
-    int sum = getNext(getNext(n));
-    int next_n = sum;
+    int visited[163] = { 0 };               /* 初始化访问数组 */
+    int sum = getNext(getNext(n));          /* sum指向后两位指针 */
+    int next_n = sum;                       /* 下一位设置为sum */
 
     while (next_n != 1) {
         sum = getNext(next_n);
