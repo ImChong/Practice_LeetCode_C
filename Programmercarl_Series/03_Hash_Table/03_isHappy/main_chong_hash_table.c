@@ -19,7 +19,7 @@ int getNext(int n) {
 }
 
 /* TODO: 目标函数 */
-bool isHappy(int n) {
+bool isHappy_v00(int n) {
     int slow = n;
     int fast = getNext(n);
     while (fast != 1 && slow != fast) {
@@ -43,6 +43,35 @@ bool isHappy(int n) {
         }
     }
 }
+
+bool isHappy_v01(int n) {
+    // sum = a1^2 + a2^2 + ... ak^2
+    // first round:
+    // 1 <= k <= 10
+    // 1 <= sum <= 1 + 81 * 9 = 730
+    // second round:
+    // 1 <= k <= 3
+    // 1 <= sum <= 36 + 81 * 2 = 198
+    // third round:
+    // 1 <= sum <= 81 * 2 = 162
+    // fourth round:
+    // 1 <= sum <= 81 * 2 = 162
+
+    int visited[163] = { 0 };
+    int sum = getNext(getNext(n));
+    int next_n = sum;
+
+    while (next_n != 1) {
+        sum = getNext(next_n);
+
+        if (visited[sum]) return false;
+
+        visited[sum] = 1;
+        next_n = sum;
+    };
+
+    return true;
+}
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
@@ -51,7 +80,7 @@ int main(int argc, char const *argv[]) {
     // NOTE: Test case 1
     printf("======== Case 1 ======== \n");
     int n = 19;
-    if (isHappy(n)) {
+    if (isHappy_v00(n)) {
         printf("%d is happy number!\n", n);
     } else {
         printf("%d is not happy number!\n", n);
@@ -60,7 +89,7 @@ int main(int argc, char const *argv[]) {
     // NOTE: Test case 2
     printf("======== Case 2 ======== \n");
     n = 2;
-    if (isHappy(n)) {
+    if (isHappy_v00(n)) {
         printf("%d is happy number!\n", n);
     } else {
         printf("%d is not happy number!\n", n);

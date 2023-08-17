@@ -1,6 +1,6 @@
 /* 202. 快乐数：https://leetcode.cn/problems/happy-number/ */
 /* https://programmercarl.com/0202.%E5%BF%AB%E4%B9%90%E6%95%B0.html */
-/* https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0202.%E5%BF%AB%E4%B9%90%E6%95%B0.md */
+/* https://github.com/youngyangyang04/leetcode-master/blob/master/problems/02c02.%E5%BF%AB%E4%B9%90%E6%95%B0.md */
 
 #include <stdio.h>
 #include <stdbool.h>
