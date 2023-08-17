@@ -2,9 +2,9 @@
 
 C language leetcode practice guide:
 
-- basics - common c functions
-- labuladong - [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
-- programmercarl - [代码随想录系列](https://programmercarl.com/)
+- Basics - common c functions
+- Labuladong_Series - [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
+- Programmercarl_Series - [代码随想录系列](https://programmercarl.com/)
 
 # Versions
 
@@ -31,10 +31,11 @@ Run and Debug (Ctil+Shift+D) -> (Windows)(gdb) source code      /* Windows Syste
 # Progress
 
 - [x] .
-- [x] ├── basics
+- [x] ├── Basics
+- [x] │   ├── 00_VScode_Settings
 - [x] │   ├── 01_Command_Line
 - [ ] │   └── 02_Common_Func
-- [x] ├── labuladong
+- [x] ├── Labuladong_Series
 - [x] │   ├── 01_Linked_List
 - [ ] │   ├── 02_Array
 - [ ] │   ├── 03_Binary_Tree
@@ -47,7 +48,7 @@ Run and Debug (Ctil+Shift+D) -> (Windows)(gdb) source code      /* Windows Syste
 - [ ] │   ├── 10_House_Robber
 - [ ] │   └── 11_N_Sum
 - [x] ├── LICENSE
-- [x] ├── programmercarl
+- [x] ├── Programmercarl_Series
 - [x] │   ├── 01_Array
 - [x] │   ├── 02_Linked_List
 - [x] │   ├── 03_Hash_Table【Ongoing】
