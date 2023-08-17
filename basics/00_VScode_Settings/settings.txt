@@ -1,0 +1,167 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "highlightwords.box": {
+
+        "light": true,
+        "dark": false
+    },
+    "highlightwords.defaultMode": 1,
+    "highlightwords.showSidebar": true,
+    "highlightwords.colors": [
+
+        {
+            "light": "#b3d9ff",
+            "dark": "cyan"
+        },
+        {
+            "light": "#e6ffb3",
+            "dark": "pink"
+        },
+        {
+            "light": "#b3b3ff",
+            "dark": "lightgreen"
+        },
+        {
+            "light": "#ffd9b3",
+            "dark": "magenta"
+        },
+        {
+            "light": "#ffb3ff",
+            "dark": "cornflowerblue"
+        },
+        {
+            "light": "#b3ffb3",
+            "dark": "orange"
+        },
+        {
+            "light": "#ffff80",
+            "dark": "green"
+        },
+        {
+            "light": "#d1e0e0",
+            "dark": "red"
+        }
+    ],
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "alert",
+        "type": "text-and-comment",
+        "foreground": "#000000",
+        "background": "#ffffff",
+        "opacity": 50,
+        "iconColour": "blue",
+        "gutterIcon": true,
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "check",
+            "foreground": "black",
+            "background": "yellow",
+            "iconColour": "yellow",
+        },
+        "NOTE": {
+            "icon": "note",
+            "foreground": "white",
+            "background": "gray",
+            "iconColour": "gray",
+        },
+        "COMMENT": {
+            "icon": "note",
+            "foreground": "white",
+            "background": "gray",
+            "iconColour": "gray",
+        },
+        "FIXME": {
+            "foreground": "black",
+            "background": "yellow",
+            "iconColour": "yellow",
+        },
+        "BUG": {
+            "foreground": "black",
+            "background": "red",
+            "iconColour": "red",
+        },
+        "[ ]": {
+            "icon": "check",
+            "foreground": "black",
+            "background": "white",
+            "iconColour": "yellow",
+        },
+        "[x]": {
+            "icon": "check",
+            "foreground": "white",
+            "background": "green",
+            "iconColour": "green",
+        },
+        "DONE": {
+            "icon": "check",
+            "foreground": "white",
+            "background": "green",
+            "iconColour": "green",
+        }
+    },
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "NOTE",
+        "COMMENT",
+        "[ ]",
+        "[x]",
+        "DONE"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
+    "cmake.configureOnOpen": false,
+    "workbench.editor.wrapTabs": true,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "afterDelay",
+    "editor.rulers": [
+        120
+    ],
+    "explorer.confirmDelete": false,
+    "cSpell.userWords": [
+        "centroidal",
+        "cheshirekow",
+        "Chong",
+        "Colour",
+        "cornflowerblue",
+        "cpptools",
+        "Ctil",
+        "Eigen",
+        "Farbod",
+        "Farshidian",
+        "GOOGLETEST",
+        "Gtest",
+        "highlightwords",
+        "labuladong",
+        "leetcode",
+        "lightgreen",
+        "loginfo",
+        "MSYS",
+        "Nomentum",
+        "programmercarl",
+        "rospkg",
+        "rospy",
+        "STRNE",
+        "subarray",
+        "urdf",
+        "waitflags",
+        "waitstatus"
+    ],
+    "git.confirmSync": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.fontSize": 11,
+    "window.zoomLevel": -1,
+    "[cmake]": {
+        "editor.defaultFormatter": "cheshirekow.cmake-format"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "editor.formatOnSave": false,
+    "workbench.startupEditor": "none",
+    "prettier.bracketSameLine": true,
+    "prettier.useTabs": true,
+    "workbench.colorTheme": "Visual Studio Dark - C++",
+    "code-runner.clearPreviousOutput": true,
+}
