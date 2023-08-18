@@ -7,11 +7,24 @@
 
 int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
 
-    return 0;
+    return NULL;
 }
 
 /* NOTE: 主函数 */
 int main(int argc, char const *argv[]) {
+    // NOTE: Test case 1
+    printf("======== Case 1 ======== \n");
+    int nums[] = {2, 7, 11, 15};
+    int target = 9;
+    int returnSize;
+
+    int *indices = twoSum(nums, sizeof(nums)/sizeof(nums[0]), target, &returnSize);
+    if (indices) {
+        printf("Indices: [%d, %d]\n", indices[0], indices[1]);
+        free(indices);
+    } else {
+        printf("No solution found.\n");
+    }
 
     return 0;
 }
