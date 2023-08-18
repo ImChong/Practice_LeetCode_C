@@ -25,21 +25,42 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-/* NOTE: 主函数 */
-int main(int argc, char const *argv[]) {
-    // NOTE: Test case 1
-    printf("======== Case 1 ======== \n");
-    int nums[] = {2, 7, 11, 15};
-    int target = 9;
-    int returnSize;
-
-    int *indices = twoSum(nums, sizeof(nums)/sizeof(nums[0]), target, &returnSize);
+/* 打印索引值 */
+void printIndices(int *indices) {
     if (indices) {
         printf("Indices: [%d, %d]\n", indices[0], indices[1]);
         free(indices);
     } else {
         printf("No solution found.\n");
     }
+}
+
+/* NOTE: 主函数 */
+int main(int argc, char const *argv[]) {
+    // NOTE: Test case 1
+    printf("======== Case 1 ======== \n");
+    int nums1[] = {2, 7, 11, 15};
+    int target = 9;
+    int returnSize;
+
+    int *indices = twoSum(nums1, sizeof(nums1)/sizeof(nums1[0]), target, &returnSize);
+    printIndices(indices);
+
+    // NOTE: Test case 2
+    printf("======== Case 2 ======== \n");
+    int nums2[] = {3, 2, 4};
+    target = 6;
+
+    indices = twoSum(nums2, sizeof(nums2)/sizeof(nums2[0]), target, &returnSize);
+    printIndices(indices);
+
+    // NOTE: Test case 3
+    printf("======== Case 3 ======== \n");
+    int nums3[] = {3, 3};
+    target = 6;
+
+    indices = twoSum(nums3, sizeof(nums3)/sizeof(nums3[0]), target, &returnSize);
+    printIndices(indices);
 
     return 0;
 }
