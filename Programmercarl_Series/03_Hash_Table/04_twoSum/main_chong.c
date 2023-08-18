@@ -3,12 +3,14 @@
 /* https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0001.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.md */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
 
     return 0;
 }
 
+/* NOTE: 主函数 */
 int main(int argc, char const *argv[]) {
 
     return 0;
