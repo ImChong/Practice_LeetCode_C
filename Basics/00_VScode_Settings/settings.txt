@@ -72,8 +72,8 @@
         },
         "FIXME": {
             "foreground": "black",
-            "background": "yellow",
-            "iconColour": "yellow",
+            "background": "orange",
+            "iconColour": "orange",
         },
         "BUG": {
             "foreground": "black",

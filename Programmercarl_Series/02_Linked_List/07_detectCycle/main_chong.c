@@ -56,7 +56,7 @@ struct ListNode *detectCycle(struct ListNode *head) {
         slow = slow->next;              /* 慢指针向后移动一位 */
         fast = fast->next->next;        /* 快指针向后移动两位 */
         if (slow == fast) {             /* 如果快指针和慢指针相遇 */
-            slow = head;                    /* 慢指针指向头节点 */
+            slow = head;                    /* 慢指针指向头节点 */  /* FIXME: 为什么慢指针回到头节点再遍历后相遇的值是环的起始点？ */
             while (slow != fast) {          /* 如果慢指针不等于快指针 */
                 slow = slow->next;              /* 慢指针向后移动一位 */
                 fast = fast->next;              /* 快指针向后移动一位 */
