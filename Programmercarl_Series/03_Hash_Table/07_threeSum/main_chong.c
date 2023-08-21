@@ -4,10 +4,12 @@
 
 #include <stdio.h>
 
+/* TODO：目标函数 */
 int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes){
 
 }
 
+/* 主函数 */
 int main(int argc, const char* argv[]) {
 
     return 0;
