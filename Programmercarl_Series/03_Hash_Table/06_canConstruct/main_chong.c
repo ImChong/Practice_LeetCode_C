@@ -13,9 +13,20 @@ bool canConstruct(char * ransomNote, char * magazine){
 int main(int argc, char const *argv[]) {
     // NOTE: Test case 1
     printf("======== Case 1 ======== \n");
-    char ransomNote[] = "a";
-    char magazine[] = "b";
+    char r1[] = "a";
+    char m1[] = "b";
+    printf("Can be constructed: %s\r\n", canConstruct(r1, m1) ? "true" : "false");
 
-    printf("Can be constructed: %s\r\n", canConstruct(ransomNote, magazine) ? "true" : "false");
+    // NOTE: Test case 2
+    printf("======== Case 2 ======== \n");
+    char r2[] = "aa";
+    char m2[] = "ab";
+    printf("Can be constructed: %s\r\n", canConstruct(r2, m2) ? "true" : "false");
+
+    // NOTE: Test case 3
+    printf("======== Case 3 ======== \n");
+    char r3[] = "aa";
+    char r4[] = "aab";
+    printf("Can be constructed: %s\r\n", canConstruct(r3, r4) ? "true" : "false");
     return 0;
 }
