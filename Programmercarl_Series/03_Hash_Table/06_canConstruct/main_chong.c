@@ -7,9 +7,15 @@
 
 bool canConstruct(char * ransomNote, char * magazine){
     int counter[26] = {0};
+    return true;
 }
 
 int main(int argc, char const *argv[]) {
+    // NOTE: Test case 1
+    printf("======== Case 1 ======== \n");
+    char ransomNote[] = "a";
+    char magazine[] = "b";
 
+    printf("Can be constructed: %s\r\n", canConstruct(ransomNote, magazine) ? "true" : "false");
     return 0;
 }
