@@ -8,7 +8,7 @@
 
 /* TODO：目标函数 */
 int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums3, int nums3Size, int* nums4, int nums4Size) {
-    
+
     return 0;
 }
 
@@ -16,11 +16,11 @@ int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums
 int main(int argc, char const *argv[]) {
     // NOTE: Test case 1
     printf("======== Case 1 ======== \n");
-    int nums1[] = {1, 2};
-    int nums2[] = {-2, -1};
-    int nums3[] = {-1, 2};
-    int nums4[] = {0, 2};
-    int result = fourSumCount(nums1, ARRAY_SIZE(nums1), nums2, ARRAY_SIZE(nums2), nums3, ARRAY_SIZE(nums3), nums4, ARRAY_SIZE(nums4));
+    int A[] = {1, 2};
+    int B[] = {-2, -1};
+    int C[] = {-1, 2};
+    int D[] = {0, 2};
+    int result = fourSumCount(A, ARRAY_SIZE(A), B, ARRAY_SIZE(B), C, ARRAY_SIZE(C), D, ARRAY_SIZE(D));
     printf("result: %d\n", result);
 
     return 0;
