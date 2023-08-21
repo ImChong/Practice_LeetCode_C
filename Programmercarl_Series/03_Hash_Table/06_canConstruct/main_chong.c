@@ -6,7 +6,7 @@
 #include <stdbool.h>
 
 bool canConstruct(char * ransomNote, char * magazine){
-
+    int counter[26] = {0};
 }
 
 int main(int argc, char const *argv[]) {
