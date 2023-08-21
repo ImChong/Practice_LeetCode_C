@@ -60,7 +60,7 @@ int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes
 }
 
 /* 打印结果 */
-void printAns(int **result, int returnSize, int* returnColumnSizes) {
+void printAns(int **result, int returnSize, int *returnColumnSizes) {
     for (int i = 0; i < returnSize; i++) {
         printf("Ans[%d]: ", i);
         for (int j = 0; j < returnColumnSizes[0]; j++) {
@@ -71,12 +71,12 @@ void printAns(int **result, int returnSize, int* returnColumnSizes) {
 }
 
 /* 释放结果空间 */
-void freeAns(int **result, int returnSize, int* returnColumnSizes) {
-    for (int i = 0; i < returnSize; i++) {
-        free(result[i]);
+void freeAns(int ***result, int *returnSize, int **returnColumnSizes) {
+    for (int i = 0; i < *returnSize; i++) {
+        free((*result)[i]);
     }
-    free(result);
-    free(returnColumnSizes);
+    free(*result);
+    free(*returnColumnSizes);
 }
 
 /* 主函数 */
@@ -88,6 +88,6 @@ int main(int argc, const char* argv[]) {
 
     int **result = threeSum(nums, ARRAY_SIZE(nums), &returnSize, &returnColumnSizes);
     printAns(result, returnSize, returnColumnSizes);
-    freeAns(result, returnSize, returnColumnSizes);
+    freeAns(&result, &returnSize, &returnColumnSizes);
     return 0;
 }
