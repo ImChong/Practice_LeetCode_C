@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+/* TODO：目标函数 */
 bool canConstruct(char * ransomNote, char * magazine){
     int counter[26] = {0};
 
@@ -22,6 +23,7 @@ bool canConstruct(char * ransomNote, char * magazine){
     return true;
 }
 
+/* NOTE: 主函数 */
 int main(int argc, char const *argv[]) {
     // NOTE: Test case 1
     printf("======== Case 1 ======== \n");
