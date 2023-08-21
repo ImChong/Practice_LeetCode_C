@@ -1,5 +1,6 @@
 /* 383. 赎金信：https://leetcode.cn/problems/ransom-note/ */
 /* https://programmercarl.com/0383.%E8%B5%8E%E9%87%91%E4%BF%A1.html */
+/* https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0383.%E8%B5%8E%E9%87%91%E4%BF%A1.md */
 
 #include <stdio.h>
 #include <stdbool.h>
