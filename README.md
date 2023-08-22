@@ -54,8 +54,8 @@ Run and Debug (Ctil+Shift+D) -> (Windows)(gdb) source code      /* Windows Syste
 - [x] │   ├── 03_Hash_Table【Ongoing】
 - [ ] │   ├── 04_String
 - [ ] │   ├── 05_Double_Pointer
-- [ ] │   ├── 06_Stack_Queue
-- [ ] │   ├── 07_Binary_Tree
+- [x] │   ├── 06_Stack_Queue
+- [x] │   ├── 07_Binary_Tree
 - [ ] │   ├── 08_Backtracking
 - [ ] │   ├── 09_Greedy
 - [ ] │   ├── 10_Dynamic_Programming
