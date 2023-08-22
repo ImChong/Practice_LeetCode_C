@@ -13,6 +13,25 @@ struct HashNode {
     int key;
     int val;
     struct HashNode *next;
+};
+
+struct HashTable {
+    int size;
+    struct HashNode **table;
+};
+
+struct HashTable *createHashTable(int size) {
+    struct HashTable *newTable = (struct HashTable *)malloc(sizeof(struct HashTable));
+    newTable->size = size;
+    newTable->table = (struct HashNode **)malloc(sizeof(struct HashNode *) * size);
+    for (int i = 0; i < size; i++) {
+        newTable->table[i] = NULL;
+    }
+    return newTable;
+}
+
+int hashCode(struct HashTable *table, int key) {
+    return (key & 0x7fffffff) % table->size;
 }
 
 /* TODO：目标函数 */
