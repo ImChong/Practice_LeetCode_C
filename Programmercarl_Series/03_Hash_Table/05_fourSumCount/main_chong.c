@@ -34,6 +34,23 @@ int hashCode(struct HashTable *table, int key) {
     return (key & 0x7fffffff) % table->size;
 }
 
+void insert(struct HashTable *table, int key) {
+    int slot = hashCode(table, key);
+    struct HashNode *currentNode = table->table[slot];
+    while (currentNode) {
+        if (currentNode->key == key) {
+            currentNode->val++;
+            return;
+        }
+        currentNode = currentNode->next;
+    }
+    struct HashNode *newNode = (struct HashNode *)malloc(sizeof(struct HashNode));
+    newNode->key = key;
+    newNode->val = 1;
+    newNode->next = table->table[slot];
+    table->table[slot] = newNode;
+}
+
 /* TODO：目标函数 */
 int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums3, int nums3Size, int* nums4, int nums4Size) {
 
