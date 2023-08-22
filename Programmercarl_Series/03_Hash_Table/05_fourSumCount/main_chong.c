@@ -9,17 +9,20 @@
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
+/* NOTE：哈希节点 */
 struct HashNode {
     int key;
     int val;
     struct HashNode *next;
 };
 
+/* NOTE：哈希表 */
 struct HashTable {
     int size;
     struct HashNode **table;
 };
 
+/* NOTE：创建哈希表 */
 struct HashTable *createHashTable(int size) {
     struct HashTable *newTable = (struct HashTable *)malloc(sizeof(struct HashTable));
     newTable->size = size;
@@ -30,10 +33,12 @@ struct HashTable *createHashTable(int size) {
     return newTable;
 }
 
+/* TODO：哈希码，理解这个是什么意思 */
 int hashCode(struct HashTable *table, int key) {
     return (key & 0x7fffffff) % table->size;
 }
 
+/* NOTE：插入哈希元素 */
 void insert(struct HashTable *table, int key) {
     int slot = hashCode(table, key);
     struct HashNode *currentNode = table->table[slot];
