@@ -34,7 +34,7 @@ Run and Debug (Ctil+Shift+D) -> (Windows)(gdb) source code      /* Windows Syste
 - [x] ├── Basics
 - [x] │   ├── 00_VScode_Settings
 - [x] │   ├── 01_Command_Line
-- [ ] │   └── 02_Common_Func
+- [x] │   └── 02_Common_Func
 - [x] ├── Labuladong_Series
 - [x] │   ├── 01_Linked_List
 - [ ] │   ├── 02_Array
