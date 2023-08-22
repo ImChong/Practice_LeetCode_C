@@ -56,6 +56,33 @@ void insert(struct HashTable *table, int key) {
     table->table[slot] = newNode;
 }
 
+/* NOTE：查找哈希元素 */
+int find(struct HashTable *table, int key) {
+    int slot = hashCode(table, key);
+    struct HashNode *currentNode = table->table[slot];
+    while (currentNode) {
+        if (currentNode->key == key) {
+            return currentNode->val;
+        }
+        currentNode = currentNode->next;
+    }
+    return 0;
+}
+
+/* NOTE：释放哈希表 */
+void freeHashTable(struct HashTable *table) {
+    for (int i = 0; i < table->size; i++) {
+        struct HashNode *currentNode = table->table[i];
+        while (currentNode) {
+            struct HashNode *tmp = currentNode;
+            currentNode = currentNode->next;
+            free(tmp);
+        }
+    }
+    free(table->table);
+    free(table);
+}
+
 /* TODO：目标函数 */
 int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums3, int nums3Size, int* nums4, int nums4Size) {
 
