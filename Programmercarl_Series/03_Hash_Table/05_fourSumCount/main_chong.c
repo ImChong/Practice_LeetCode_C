@@ -85,7 +85,21 @@ void freeHashTable(struct HashTable *table) {
 
 /* TODO：目标函数 */
 int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums3, int nums3Size, int* nums4, int nums4Size) {
+    struct HashTable *hashTable = createHashTable(2 * nums1Size * nums2Size);
+    for (int i = 0; i < nums1Size; i++) {
+        for (int j = 0; j < nums2Size; j++) {
+            insert(hashTable, nums1[i] + nums2[j]);
+        }
+    }
 
+    int count = 0;
+    for (int i = 0; i < nums3Size; i++) {
+        for (int j = 0; j < nums4Size; j++) {
+            count += find(hashTable, -1 * (nums3[i] + nums4[j]));
+        }
+    }
+
+    freeHashTable(hashTable);
     return 0;
 }
 /* ==================================================================================================== */
