@@ -20,19 +20,36 @@ struct TreeNode {
 };
 
 /* NOTE: 前序遍历 */
-void preOrder(struct TreeNode *root, int *ret, int *returnSize) {
-    if (root == NULL) {
+void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
+    if (node == NULL) {
         return;
     }
-    ret[(*returnSize)++] = root->val;
-    preOrder(root->left, ret, returnSize);
-    preOrder(root->right, ret, returnSize);
+    ret[(*returnSize)++] = node->val;
+    preOrder(node->left, ret, returnSize);
+    preOrder(node->right, ret, returnSize);
 }
 
 int *preorderTraversal(struct TreeNode *root, int *returnSize) {
     int *ret = (int *)malloc(sizeof(int) * 100);
     *returnSize = 0;
     preOrder(root, ret, returnSize);
+    return ret;
+}
+
+/* NOTE: 中序遍历 */
+void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
+    if (!node) {
+        return;
+    }
+    inOrder(node->left, ret, returnSize);
+    ret[(*returnSize)++] = node->val;
+    inOrder(node->right, ret, returnSize);
+}
+
+int *inorderTraversal(struct TreeNode *root, int *returnSize) {
+    int *ret = (int *)malloc(sizeof(int) * 100);
+    *returnSize = 0;
+    inOrder(root, ret, returnSize);
     return ret;
 }
 
