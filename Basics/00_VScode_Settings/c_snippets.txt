@@ -44,4 +44,12 @@
 		],
 		"description": "acm structure for leetcode questions."
 	},
+	"case_head": {
+		"prefix": "case",
+		"body": [
+			"/* NOTE: Test case ${1:label} */",
+			"printf(\"======== Case ${1:label} ======== \\n\");"
+		],
+		"description": "case head."
+	},
 }
