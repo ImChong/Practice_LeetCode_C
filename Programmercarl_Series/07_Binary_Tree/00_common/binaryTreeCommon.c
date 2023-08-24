@@ -53,6 +53,23 @@ int *inorderTraversal(struct TreeNode *root, int *returnSize) {
     return ret;
 }
 
+/* NOTE: 后序遍历 */
+void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
+    if (!node) {
+        return;
+    }
+    postOrder(node->left, ret, returnSize);
+    postOrder(node->right, ret, returnSize);
+    ret[(*returnSize)++] = node->val;
+}
+
+int *postorderTraversal(struct TreeNode *root, int *returnSize) {
+    int *ret = (int *)malloc(sizeof(int) * 100);
+    *returnSize = 0;
+    postOrder(root, ret, returnSize);
+    return ret;
+}
+
 /* NOTE: 主函数 */
 int main(int argc, const char* argv[]) {
 
