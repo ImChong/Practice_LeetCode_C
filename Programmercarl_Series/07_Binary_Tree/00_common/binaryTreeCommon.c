@@ -19,7 +19,7 @@ struct TreeNode {
     struct TreeNode *right;
 };
 
-/* NOTE: 前序遍历 */
+/* NOTE: 前序遍历: 递归 */
 void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {
         return;
@@ -36,7 +36,7 @@ int *preorderTraversal(struct TreeNode *root, int *returnSize) {
     return ret;
 }
 
-/* NOTE: 中序遍历 */
+/* NOTE: 中序遍历: 递归 */
 void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (!node) {
         return;
@@ -53,7 +53,7 @@ int *inorderTraversal(struct TreeNode *root, int *returnSize) {
     return ret;
 }
 
-/* NOTE: 后序遍历 */
+/* NOTE: 后序遍历: 递归 */
 void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (!node) {
         return;
@@ -69,6 +69,12 @@ int *postorderTraversal(struct TreeNode *root, int *returnSize) {
     postOrder(root, ret, returnSize);
     return ret;
 }
+
+/* TODO: 前序遍历: 迭代 */
+
+/* TODO: 前序遍历: 迭代 */
+
+/* TODO: 前序遍历: 迭代 */
 
 /* NOTE: 主函数 */
 int main(int argc, const char* argv[]) {
