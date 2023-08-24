@@ -22,7 +22,7 @@ void preorder(struct TreeNode *root, int *res, int *resSize) {
     preorder(root->right, res, resSize);
 }
 
-int* preorderTraversal_recursion(struct TreeNode* root, int* returnSize) {
+int* preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     int *res = (int *)malloc(sizeof(int) * 2000);
     *returnSize = 0;
     preorder(root, res, returnSize);
@@ -30,8 +30,26 @@ int* preorderTraversal_recursion(struct TreeNode* root, int* returnSize) {
 }
 
 /* TODO: 目标函数：迭代遍历  */
-int* preorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
-    return NULL;
+int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
+    int *res = (int *)malloc(sizeof(int) * 2000);
+    *returnSize = 0;
+    if (!root) {
+        return res;
+    }
+
+    struct TreeNode *stk[2000];
+    struct TreeNode *node = root;
+    int stk_top = 0;
+    while (stk_top > 0 || node != NULL) {
+        while (node != NULL) {
+            res[(*returnSize)++] = node->val;
+            stk[stk_top++] = node;
+            node = node->left;
+        }
+        node = stk[--stk_top];
+        node = node->right;
+    }
+    return res;
 }
 
 /* ==================================================================================================== */
