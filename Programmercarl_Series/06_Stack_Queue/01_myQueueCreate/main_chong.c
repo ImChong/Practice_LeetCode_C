@@ -9,6 +9,13 @@
 /* ==================================================================================================== */
 /* TODO: 目标函数 */
 typedef struct {
+    int *stk;
+    int stkSize;
+    int stkCapacity;
+} Stack;
+
+
+typedef struct {
 
 } MyQueue;
 
