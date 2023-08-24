@@ -14,9 +14,34 @@ typedef struct {
     int stkCapacity;
 } Stack;
 
+Stack* stackCreate(int capacity) {
+
+}
+
+void stackPush(Stack* obj, int x) {
+
+}
+
+void stackPop(Stack* obj) {
+
+}
+
+int stackTop(Stack* obj) {
+
+}
+
+bool stackEmpty(Stack* obj) {
+
+}
+
+void stackFree(Stack* obj) {
+
+}
+
 
 typedef struct {
-
+    Stack *inStack;
+    Stack *outStack;
 } MyQueue;
 
 
