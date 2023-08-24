@@ -41,6 +41,14 @@ void myQueueFree(MyQueue* obj) {
 
 /* NOTE：主函数 */
 int main(int argc, const char* argv[]) {
-
+    /* NOTE: Test case 1 */
+    printf("======== Case 1 ======== \n");
+    MyQueue *myQueue = myQueueCreate();
+    myQueuePush(myQueue, 1);
+    myQueuePush(myQueue, 2);
+    printf("peek val: %d \r\n", myQueuePeek(myQueue));
+    printf("pop val: %d \r\n", myQueuePop(myQueue));
+    printf("myQueue empty: %d \r\n", myQueueEmpty(myQueue));
+    myQueueFree(myQueue);
     return 0;
 }
