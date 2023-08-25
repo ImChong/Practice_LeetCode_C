@@ -64,11 +64,16 @@ void in2out(MyQueue *obj) {
 }
 
 void myQueuePush(MyQueue* obj, int x) {
-
+    stackPush(obj->inStack, x);
 }
 
 int myQueuePop(MyQueue* obj) {
-    return 0;
+    if (stackEmpty(obj->outStack)) {
+        in2out(obj);
+    }
+    int x = stackTop(obj->outStack);
+    stackPop(obj->outStack);
+    return x;
 }
 
 int myQueuePeek(MyQueue* obj) {
