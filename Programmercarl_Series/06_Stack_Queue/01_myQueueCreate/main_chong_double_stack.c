@@ -11,17 +11,17 @@
 /* TODO: 目标函数 */
 /* TODO: 添加注释 */
 typedef struct {
-    int *stk;
-    int stkSize;
-    int stkCapacity;
+    int *stk;           /* 栈数组：用于存储数据 */
+    int stkSize;        /* 栈大小：记录当前栈的大小 */
+    int stkCapacity;    /* 栈容量：记录栈大小的最大值 */
 } Stack;
 
 Stack* stackCreate(int capacity) {
-    Stack *ret = (Stack *)malloc(sizeof(Stack));
-    ret->stk = (int *)malloc(sizeof(int) * capacity);
-    ret->stkSize = 0;
-    ret->stkCapacity = capacity;
-    return ret;
+    Stack *ret = (Stack *)malloc(sizeof(Stack));        /* 为栈结构体分配空间 */
+    ret->stk = (int *)malloc(sizeof(int) * capacity);   /* 为栈数组分配空间，大小为最大容量 */
+    ret->stkSize = 0;                                   /* 当前栈大小为0 */
+    ret->stkCapacity = capacity;                        /* 记录栈容量 */
+    return ret;                                         /* 返回创建的栈结构体 */
 }
 
 void stackPush(Stack* obj, int x) {
