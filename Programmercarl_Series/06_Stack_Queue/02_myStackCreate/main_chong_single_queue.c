@@ -10,10 +10,14 @@
 /* 方法二：一个队列 */
 /* ==================================================================================================== */
 /* TODO: 目标函数 */
+typedef struct tagListNode {
+    struct tagListNode *next;
+    int val;
+} ListNode;
+
 typedef struct {
-
+    ListNode *top;
 } MyStack;
-
 
 MyStack* myStackCreate() {
 
