@@ -47,8 +47,8 @@ int main(int argc, const char* argv[]) {
     MyStack *myStack = myStackCreate();
     myStackPush(myStack, 1);
     myStackPush(myStack, 2);
-    printf("myStackTop val: %d \n", myStackTop(myStack));
-    printf("myStackPop val: %d \n", myStackPop(myStack));
+    printf("myStackTop: %d \n", myStackTop(myStack));
+    printf("myStackPop: %d \n", myStackPop(myStack));
     printf("myStackEmpty: %d \n", myStackEmpty(myStack));
     myStackFree(myStack);
     return 0;

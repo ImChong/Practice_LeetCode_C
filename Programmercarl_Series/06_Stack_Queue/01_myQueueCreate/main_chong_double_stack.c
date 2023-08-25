@@ -101,8 +101,8 @@ int main(int argc, const char* argv[]) {
     MyQueue *myQueue = myQueueCreate();
     myQueuePush(myQueue, 1);
     myQueuePush(myQueue, 2);
-    printf("myQueuePeek val: %d \n", myQueuePeek(myQueue));
-    printf("myQueuePop val: %d \n", myQueuePop(myQueue));
+    printf("myQueuePeek: %d \n", myQueuePeek(myQueue));
+    printf("myQueuePop: %d \n", myQueuePop(myQueue));
     printf("myQueueEmpty: %d \n", myQueueEmpty(myQueue));
     myQueueFree(myQueue);
     return 0;
