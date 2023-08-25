@@ -20,27 +20,40 @@ typedef struct {
 } MyStack;
 
 MyStack* myStackCreate() {
-
+    MyStack *stk = (MyStack *)calloc(1, sizeof(MyStack));
+    return stk;
 }
 
 void myStackPush(MyStack* obj, int x) {
-
+    ListNode *node = (ListNode *)malloc(sizeof(ListNode));
+    node->val = x;
+    node->next = obj->top;
+    obj->top = node;
 }
 
 int myStackPop(MyStack* obj) {
-    return 0;
+    ListNode *node = obj->top;
+    int val = node->val;
+    obj->top = node->next;
+    free(node);
+    return val;
 }
 
 int myStackTop(MyStack* obj) {
-    return 0;
+    return obj->top->val;
 }
 
 bool myStackEmpty(MyStack* obj) {
-    return false;
+    return (obj->top == NULL);
 }
 
 void myStackFree(MyStack* obj) {
-
+    while (obj->top != NULL) {
+        ListNode *node = obj->top;
+        obj->top = obj->top->next;
+        free(node);
+    }
+    free(obj);
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
