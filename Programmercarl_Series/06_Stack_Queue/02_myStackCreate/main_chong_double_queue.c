@@ -50,7 +50,7 @@ int deQueue(Queue *obj) {
     return a;
 }
 
-int isEmpty(Queue *obj) {
+int isQueueEmpty(Queue *obj) {
     return obj->head == -1;
 }
 
@@ -62,7 +62,7 @@ MyStack* myStackCreate() {
 }
 
 void myStackPush(MyStack* obj, int x) {
-    if (isEmpty(obj->queue1)) {
+    if (isQueueEmpty(obj->queue1)) {
         enQueue(obj->queue2, x);
     } else {
         enQueue(obj->queue1, x);
@@ -70,7 +70,7 @@ void myStackPush(MyStack* obj, int x) {
 }
 
 int myStackPop(MyStack* obj) {
-    if (isEmpty(obj->queue1)) {
+    if (isQueueEmpty(obj->queue1)) {
         while (obj->queue2->head != obj->queue2->tail) {
             enQueue(obj->queue1, deQueue(obj->queue2));
         }
@@ -83,10 +83,16 @@ int myStackPop(MyStack* obj) {
 }
 
 int myStackTop(MyStack* obj) {
-    return 0;
+    if (isQueueEmpty(obj->queue1)) {
+        return obj->queue2->data[obj->queue2->tail];
+    }
+    return obj->queue1->data[obj->queue1->tail];
 }
 
 bool myStackEmpty(MyStack* obj) {
+    if (obj->queue1->head == -1 && obj->queue2->head == -1) {
+        return true;
+    }
     return false;
 }
 
