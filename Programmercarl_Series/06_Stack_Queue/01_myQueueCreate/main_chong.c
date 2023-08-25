@@ -77,15 +77,19 @@ int myQueuePop(MyQueue* obj) {
 }
 
 int myQueuePeek(MyQueue* obj) {
-    return 0;
+    if (stackEmpty(obj->outStack)) {
+        in2out(obj);
+    }
+    return stackTop(obj->outStack);
 }
 
 bool myQueueEmpty(MyQueue* obj) {
-    return false;
+    return (stackEmpty(obj->inStack) && stackEmpty(obj->outStack));
 }
 
 void myQueueFree(MyQueue* obj) {
-
+    stackFree(obj->inStack);
+    stackFree(obj->outStack);
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
