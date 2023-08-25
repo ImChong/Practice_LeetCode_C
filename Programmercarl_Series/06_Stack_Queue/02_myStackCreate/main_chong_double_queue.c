@@ -50,6 +50,10 @@ int deQueue(Queue *obj) {
     return a;
 }
 
+int isEmpty(Queue *obj) {
+    return obj->head == -1;
+}
+
 MyStack* myStackCreate() {
 
 }
