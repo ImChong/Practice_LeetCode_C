@@ -18,8 +18,8 @@ typedef struct {
 } Queue;
 
 typedef struct {
-    Queue *Queue1;
-    Queue *Queue2;
+    Queue *queue1;
+    Queue *queue2;
 } MyStack;
 
 Queue *initQueue(int k) {
@@ -55,11 +55,18 @@ int isEmpty(Queue *obj) {
 }
 
 MyStack* myStackCreate() {
-
+    MyStack *obj = (MyStack *)malloc(sizeof(MyStack));
+    obj->queue1 = initQueue(LEN);
+    obj->queue2 = initQueue(LEN);
+    return obj;
 }
 
 void myStackPush(MyStack* obj, int x) {
-
+    if (isEmpty(obj->queue1)) {
+        enQueue(obj->queue2, x);
+    } else {
+        enQueue(obj->queue1, x);
+    }
 }
 
 int myStackPop(MyStack* obj) {
