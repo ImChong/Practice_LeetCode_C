@@ -15,7 +15,11 @@ typedef struct {
 } Stack;
 
 Stack* stackCreate(int capacity) {
-
+    Stack *ret = (Stack *)malloc(sizeof(Stack));
+    ret->stk = (int *)malloc(sizeof(int) * capacity)
+    ret->stkSize = 0;
+    ret->stkCapacity = capacity;
+    return ret;
 }
 
 void stackPush(Stack* obj, int x) {
