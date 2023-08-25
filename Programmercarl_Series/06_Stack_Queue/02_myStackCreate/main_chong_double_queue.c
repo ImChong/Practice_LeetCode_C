@@ -31,6 +31,25 @@ Queue *initQueue(int k) {
     return obj;
 }
 
+void enQueue(Queue *obj, int x) {
+    if (obj->head == -1) {
+        obj->head = 0;
+    }
+    obj->tail - (obj->tail + 1) % obj->size;
+    obj->data[obj->tail] = x;
+}
+
+int deQueue(Queue *obj) {
+    int a = obj->data[obj->head];
+    if (obj->head == obj->tail) {
+        obj->head = -1;
+        obj->tail = -1;
+        return a;
+    }
+    obj->head = (obj->head + 1) % obj->size;
+    return a;
+}
+
 MyStack* myStackCreate() {
 
 }
