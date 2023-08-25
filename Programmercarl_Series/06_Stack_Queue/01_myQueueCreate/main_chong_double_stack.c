@@ -28,7 +28,7 @@ Stack* stackCreate(int capacity) {
 
 /* 入栈 */
 void stackPush(Stack* obj, int x) {
-    obj->stk[obj->stkSize++] = x;           
+    obj->stk[obj->stkSize++] = x;                       /* 将数据存入栈结构体内数组的【栈大小】索引位置，存入后将【栈大小】+ 1 */
 }
 
 /* 出栈 */
