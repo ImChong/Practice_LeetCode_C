@@ -6,13 +6,30 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
+#define LEN 20
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* TODO: 目标函数 */
 typedef struct {
+    int *data;
+    int head;
+    int tail;
+    int size;
+} Queue;
 
+typedef struct {
+    Queue *Queue1;
+    Queue *Queue2;
 } MyStack;
 
+Queue *initQueue(int k) {
+    Queue *obj = (Queue *)malloc(sizeof(Queue));
+    obj->data = (int *)malloc(sizeof(int) * k);
+    obj->head = -1;
+    obj->tail = -1;
+    obj->size = k;
+    return obj;
+}
 
 MyStack* myStackCreate() {
 
