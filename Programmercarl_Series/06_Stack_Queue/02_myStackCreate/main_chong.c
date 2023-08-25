@@ -23,15 +23,15 @@ void myStackPush(MyStack* obj, int x) {
 }
 
 int myStackPop(MyStack* obj) {
-
+    return 0;
 }
 
 int myStackTop(MyStack* obj) {
-
+    return 0;
 }
 
 bool myStackEmpty(MyStack* obj) {
-
+    return false;
 }
 
 void myStackFree(MyStack* obj) {
@@ -42,6 +42,14 @@ void myStackFree(MyStack* obj) {
 
 /* NOTE：主函数 */
 int main(int argc, const char* argv[]) {
-
+    /* NOTE: Test case 1 */
+    printf("======== Case 1 ======== \n");
+    MyStack *myStack = myStackCreate();
+    myStackPush(myStack, 1);
+    myStackPush(myStack, 2);
+    printf("myStackTop val: %d \n", myStackTop(myStack));
+    printf("myStackPop val: %d \n", myStackPop(myStack));
+    printf("myStackEmpty: %d \n", myStackEmpty(myStack));
+    myStackFree(myStack);
     return 0;
 }
