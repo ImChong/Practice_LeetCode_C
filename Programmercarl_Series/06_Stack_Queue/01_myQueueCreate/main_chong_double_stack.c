@@ -33,7 +33,7 @@ void stackPush(Stack* obj, int x) {
 
 /* 出栈 */
 void stackPop(Stack* obj) {
-    obj->stkSize--;
+    obj->stkSize--;                                     /* 将【栈大小】- 1 */
 }
 
 /* 查看栈顶元素 */
