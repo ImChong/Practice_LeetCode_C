@@ -35,7 +35,7 @@ void enQueue(Queue *obj, int x) {
     if (obj->head == -1) {
         obj->head = 0;
     }
-    obj->tail - (obj->tail + 1) % obj->size;
+    obj->tail = (obj->tail + 1) % obj->size;
     obj->data[obj->tail] = x;
 }
 
