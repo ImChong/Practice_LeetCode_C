@@ -70,7 +70,16 @@ void myStackPush(MyStack* obj, int x) {
 }
 
 int myStackPop(MyStack* obj) {
-    return 0;
+    if (isEmpty(obj->queue1)) {
+        while (obj->queue2->head != obj->queue2->tail) {
+            enQueue(obj->queue1, deQueue(obj->queue2));
+        }
+        return deQueue(obj->queue2);
+    }
+    while (obj->queue1->head != obj->queue1->tail) {
+        enQueue(obj->queue2, deQueue(obj->queue1));
+    }
+    return deQueue(obj->queue1);
 }
 
 int myStackTop(MyStack* obj) {
