@@ -10,12 +10,14 @@
 /* ==================================================================================================== */
 /* TODO: 目标函数 */
 /* TODO: 添加注释 */
+/* 栈结构体 */
 typedef struct {
     int *stk;           /* 栈数组：用于存储数据 */
     int stkSize;        /* 栈大小：记录当前栈的大小 */
     int stkCapacity;    /* 栈容量：记录栈大小的最大值 */
 } Stack;
 
+/* 创建栈 */
 Stack* stackCreate(int capacity) {
     Stack *ret = (Stack *)malloc(sizeof(Stack));        /* 为栈结构体分配空间 */
     ret->stk = (int *)malloc(sizeof(int) * capacity);   /* 为栈数组分配空间，大小为最大容量 */
@@ -24,31 +26,38 @@ Stack* stackCreate(int capacity) {
     return ret;                                         /* 返回创建的栈结构体 */
 }
 
+/* 入栈 */
 void stackPush(Stack* obj, int x) {
-    obj->stk[obj->stkSize++] = x;
+    obj->stk[obj->stkSize++] = x;           
 }
 
+/* 出栈 */
 void stackPop(Stack* obj) {
     obj->stkSize--;
 }
 
+/* 查看栈顶元素 */
 int stackTop(Stack* obj) {
     return obj->stk[obj->stkSize - 1];
 }
 
+/* 确认栈是否为空 */
 bool stackEmpty(Stack* obj) {
     return obj->stkSize == 0;
 }
 
+/* 释放栈空间 */
 void stackFree(Stack* obj) {
     free(obj->stk);
 }
 
+/* 队列结构体 */
 typedef struct {
     Stack *inStack;
     Stack *outStack;
 } MyQueue;
 
+/* 创建队列 */
 MyQueue* myQueueCreate() {
     MyQueue *ret = (MyQueue *)malloc(sizeof(MyQueue));
     ret->inStack = stackCreate(100);
@@ -56,6 +65,7 @@ MyQueue* myQueueCreate() {
     return ret;
 }
 
+/* 从输入栈移动到输出栈 */
 void in2out(MyQueue *obj) {
     while (!stackEmpty(obj->inStack)) {
         stackPush(obj->outStack, stackTop(obj->inStack));
@@ -63,10 +73,12 @@ void in2out(MyQueue *obj) {
     }
 }
 
+/* 入队 */
 void myQueuePush(MyQueue* obj, int x) {
     stackPush(obj->inStack, x);
 }
 
+/* 出队 */
 int myQueuePop(MyQueue* obj) {
     if (stackEmpty(obj->outStack)) {
         in2out(obj);
@@ -76,6 +88,7 @@ int myQueuePop(MyQueue* obj) {
     return x;
 }
 
+/* 查看队首元素 */
 int myQueuePeek(MyQueue* obj) {
     if (stackEmpty(obj->outStack)) {
         in2out(obj);
@@ -83,10 +96,12 @@ int myQueuePeek(MyQueue* obj) {
     return stackTop(obj->outStack);
 }
 
+/* 确认队是否为空 */
 bool myQueueEmpty(MyQueue* obj) {
     return (stackEmpty(obj->inStack) && stackEmpty(obj->outStack));
 }
 
+/* 释放队列空间 */
 void myQueueFree(MyQueue* obj) {
     stackFree(obj->inStack);
     stackFree(obj->outStack);
