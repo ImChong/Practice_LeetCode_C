@@ -97,7 +97,16 @@ bool myStackEmpty(MyStack* obj) {
 }
 
 void myStackFree(MyStack* obj) {
-
+    free(obj->queue1->data);
+    obj->queue1->data = NULL;
+    free(obj->queue1);
+    obj->queue1 = NULL;
+    free(obj->queue2->data);
+    obj->queue2->data = NULL;
+    free(obj->queue2);
+    obj->queue2 = NULL;
+    free(obj);
+    obj = NULL;
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
