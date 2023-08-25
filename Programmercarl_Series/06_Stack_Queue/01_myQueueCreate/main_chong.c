@@ -23,23 +23,23 @@ Stack* stackCreate(int capacity) {
 }
 
 void stackPush(Stack* obj, int x) {
-
+    obj->stk[obj->stkSize++] = x;
 }
 
 void stackPop(Stack* obj) {
-
+    obj->stkSize--;
 }
 
 int stackTop(Stack* obj) {
-
+    return obj->stk[obj->stkSize - 1];
 }
 
 bool stackEmpty(Stack* obj) {
-
+    return obj->stkSize == 0;
 }
 
 void stackFree(Stack* obj) {
-
+    free(obj->stk);
 }
 
 
