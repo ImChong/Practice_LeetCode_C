@@ -44,7 +44,6 @@ void stackFree(Stack* obj) {
     free(obj->stk);
 }
 
-
 typedef struct {
     Stack *inStack;
     Stack *outStack;
