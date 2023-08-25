@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
@@ -16,7 +17,7 @@ typedef struct {
 
 Stack* stackCreate(int capacity) {
     Stack *ret = (Stack *)malloc(sizeof(Stack));
-    ret->stk = (int *)malloc(sizeof(int) * capacity)
+    ret->stk = (int *)malloc(sizeof(int) * capacity);
     ret->stkSize = 0;
     ret->stkCapacity = capacity;
     return ret;
@@ -48,9 +49,18 @@ typedef struct {
     Stack *outStack;
 } MyQueue;
 
-
 MyQueue* myQueueCreate() {
+    MyQueue *ret = (MyQueue *)malloc(sizeof(MyQueue));
+    ret->inStack = stackCreate(100);
+    ret->outStack = stackCreate(100);
+    return ret;
+}
 
+void in2out(MyQueue *obj) {
+    while (!stackEmpty(obj->inStack)) {
+        stackPush(obj->outStack, stackTop(obj->inStack));
+        stackPop(obj->inStack);
+    }
 }
 
 void myQueuePush(MyQueue* obj, int x) {
@@ -82,9 +92,9 @@ int main(int argc, const char* argv[]) {
     MyQueue *myQueue = myQueueCreate();
     myQueuePush(myQueue, 1);
     myQueuePush(myQueue, 2);
-    printf("peek val: %d \r\n", myQueuePeek(myQueue));
-    printf("pop val: %d \r\n", myQueuePop(myQueue));
-    printf("myQueue empty: %d \r\n", myQueueEmpty(myQueue));
+    printf("peek val: %d \n", myQueuePeek(myQueue));
+    printf("pop val: %d \n", myQueuePop(myQueue));
+    printf("myQueue empty: %d \n", myQueueEmpty(myQueue));
     myQueueFree(myQueue);
     return 0;
 }
