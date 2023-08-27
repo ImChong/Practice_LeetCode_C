@@ -114,6 +114,22 @@
             "background": "blue",
             "iconColour": "blue",
             // "gutterIcon": false,
+        },
+        "#elif": {
+            "icon": "diff-renamed",
+            "type": "line",
+            "foreground": "white",
+            "background": "blue",
+            "iconColour": "blue",
+            // "gutterIcon": false,
+        },
+        "#else": {
+            "icon": "diff-renamed",
+            "type": "line",
+            "foreground": "white",
+            "background": "blue",
+            "iconColour": "blue",
+            // "gutterIcon": false,
         }
     },
     "todo-tree.general.tags": [
@@ -127,7 +143,9 @@
         "[x]",
         "DONE",
         "#if",
-        "#endif"
+        "#endif",
+        "#elif",
+        "#else"
     ],
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
     "cmake.configureOnOpen": false,
@@ -152,6 +170,7 @@
         "Ctil",
         "dbgconf",
         "Eigen",
+        "elif",
         "Embedfire",
         "ENDP",
         "EXTI",
