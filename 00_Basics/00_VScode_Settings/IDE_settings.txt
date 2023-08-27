@@ -119,8 +119,8 @@
             "icon": "diff-renamed",
             "type": "line",
             "foreground": "white",
-            "background": "blue",
-            "iconColour": "blue",
+            "background": "#1085c9",
+            "iconColour": "#1085c9",
             // "gutterIcon": false,
         },
         "#else": {
