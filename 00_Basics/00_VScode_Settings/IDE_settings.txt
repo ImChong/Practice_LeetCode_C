@@ -179,6 +179,7 @@
         "EXTI",
         "Farbod",
         "Farshidian",
+        "filecreated",
         "fileheader",
         "fsmc",
         "Fwlib",
@@ -242,7 +243,8 @@
         "waitflags",
         "waitstatus",
         "Wakeup",
-        "WWDG"
+        "WWDG",
+        "yeartoyear"
     ],
     "git.confirmSync": false,
     "security.workspace.trust.untrustedFiles": "open",
@@ -260,6 +262,29 @@
     "workbench.colorTheme": "Visual Studio Dark - C++",
     "code-runner.clearPreviousOutput": true,
     "window.zoomLevel": -1,
-    "fileheader.Author": "Chong Liu",
-    "fileheader.LastModifiedBy": "Chong Liu",
+    "psi-header.config": {
+        "author": "Chong Liu"
+    },
+    "psi-header.changes-tracking": {
+        "isActive": true,
+        "modAuthor": "Modified By:",
+        "modDate": "Last Modified:",
+        "autoHeader": "autoSave",
+        "enforceHeader": false,
+    },
+    "psi-header.templates": [
+        {
+            "language": "*",
+            "template": [
+                "@File: <<filename>>",
+                "@Created Date: <<filecreated('dddd, MMMM Do YYYY, h:mm:ss a')>>",
+                "@Author: <<author>>",
+                "@brief Description of what this file does",
+                "=================================================================================",
+                "Copyright (c) <<yeartoyear(fc, now)>> <<author>>",
+                "=================================================================================",
+                "Last Modified: <<author>> - <<dateformat('dddd, MMMM Do YYYY, h:mm:ss a')>>",
+            ]
+        }
+    ]
 }
