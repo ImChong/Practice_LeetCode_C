@@ -6,20 +6,19 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - Tuesday, August 29th 2023, 10:11:19 am
+ * Last Modified: Chong Liu - Tuesday, August 29th 2023, 10:32:47 am
  */
 /* 头文件 */
 #include <stdio.h>
 
-/* ARRAY_SIZE(arr)
- *  Functionality: description...
- *  Arguments: arguments...
- *  Return: possibleReturnValues
- *  References: document/website...
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
- */
+/* 获取数组长度 */
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+
+/* （token-pasting：##）将两个标记符号合并为一个标记 */
+#define TOKEN_CONCATENATE(x, y) x ## y
+
+/* 重命名打印函数 */
+#define INFO(format, ...) printf(format "\n", ##__VA_ARGS__)
 
 /* int main(int argc, char *argv[])
  *  Functionality: description...
@@ -31,12 +30,12 @@
  */
 int main(int argc, char *argv[])
 {
-    printf("Number of command-line arguments: %d\n", argc);
+    INFO("Number of command-line arguments: %d\n", argc);
 
-    printf("Command-line arguments:\n");
+    INFO("Command-line arguments:\n");
     for (int i = 0; i < argc; i++)
     {
-        printf("%s\n", argv[i]);
+        INFO("%s\n", argv[i]);
     }
 
     return 0;
