@@ -2,33 +2,56 @@
 psioniq File Header
 C Function Header Snippet for UIUC ECE391   - [TODO] rewrite snippets in vscode snippets json
 
+Path Intellisense
+
 Python
 Pylance
 
 C/C++
 C/C++ Themes
+C/C++ Project Generator
 c cpp cmake project creator
-Code Runner
-Error Lens
 
 CMake
 CMake Language Support
+CMake Highlight
 CMake Tools
+CMake Test Tools
+cmake-format
 
+C/C++ Makefile Project
 Makefile Tools
-
-Hex Editor
-vscode-pdf
 
 Git Blame
 Git Graph
 Git History
 GitLens — Git supercharged
+GitHub Pull Requests and Issues
+gitignore
+
+Markdown All in One
+Markdown Preview Enhanced
+
+ROS
+ROS Snippets
+
+Hex Editor
+vscode-pdf
+Excel Viewer
+Code Runner
+Error Lens
+Call Graph
+Crabviz
+Code Spell Checker
+Prettier - Code formatter
 
 Todo Tree
+Bookmarks
+highlight-words
+Copy file name
 vscode-icons
 Bracket Pair Color DLW
 indent-rainbow
 One Dark Pro
 Output Colorizer
-
+Generate Windows Terminal Scheme
