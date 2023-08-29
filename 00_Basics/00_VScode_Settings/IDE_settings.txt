@@ -270,7 +270,7 @@
         "modAuthor": "Modified By:",
         "modDate": "Last Modified:",
         "autoHeader": "autoSave",
-        "enforceHeader": false,
+        // "enforceHeader": false,
     },
     "psi-header.templates": [
         {

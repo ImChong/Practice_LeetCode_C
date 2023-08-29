@@ -1,7 +1,14 @@
 /* 本文件记录C语言常用宏定义技巧及常用函数 */
 #include <stdio.h>
 
-
+/* functionName()
+ *  Functionality: description...
+ *  Arguments: arguments...
+ *  Return: possibleReturnValues
+ *  References: document/website...
+ ***********************************************************************************
+ *  IMPORTANT NOTICE FOR READER
+ */
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 /* int main(int argc, char *argv[])
