@@ -1,6 +1,6 @@
 .NET Install Tool for Extension Authors
 psioniq File Header
-C Function Header Snippet for UIUC ECE391   - [TODO] rewrite snippet in vscode snippets
+C Function Header Snippet for UIUC ECE391   - [TODO] rewrite snippets in vscode snippets json
 
 Python
 Pylance
