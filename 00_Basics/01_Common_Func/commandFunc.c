@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - Tuesday, August 29th 2023, 10:36:39 am
+ * Last Modified: Chong Liu - Tuesday, August 29th 2023, 10:44:23 am
  */
 /* 头文件 */
 #include <stdio.h>
@@ -20,25 +20,21 @@
 /* 重命名打印函数 */
 #define INFO(format, ...) printf(format "\r\n", ##__VA_ARGS__)
 
-/* int main(int argc, char *argv[])
- *  Functionality: description...
- *  Arguments: arguments...
- *  Return: possibleReturnValues
- *  References: document/website...
+/* printCommandInfo()
+ *  Functionality: 打印命令行参数
+ *  Arguments: int argc, char *argv[]
+ *  Return: void
+ *  References:
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */
-int main(int argc, char *argv[])
-{
+void printCommandInfo(int argc, char *argv[]) {
     INFO("Number of command-line arguments: %d", argc);
-
     INFO("Command-line arguments:");
     for (int i = 0; i < argc; i++)
     {
         INFO("%s", argv[i]);
     }
-
-    return 0;
 }
 
 // $ ./program arg1 arg2 arg3
@@ -47,3 +43,10 @@ int main(int argc, char *argv[])
 // arg1
 // arg2
 // arg3
+
+int main(int argc, char *argv[])
+{
+    printCommandInfo(argc, argv);
+    return 0;
+}
+
