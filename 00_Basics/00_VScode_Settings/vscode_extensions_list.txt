@@ -1,0 +1,32 @@
+.NET Install Tool for Extension Authors
+
+Python
+Pylance
+
+C/C++
+C/C++ Themes
+c cpp cmake project creator
+Code Runner
+Error Lens
+
+CMake
+CMake Language Support
+CMake Tools
+
+Makefile Tools
+
+Hex Editor
+vscode-pdf
+
+Git Blame
+Git Graph
+Git History
+GitLens — Git supercharged
+
+Todo Tree
+vscode-icons
+Bracket Pair Color DLW
+indent-rainbow
+One Dark Pro
+Output Colorizer
+
