@@ -292,7 +292,7 @@
                 "@File: <<filename>>",
                 "@Created Date: <<filecreated('YYYY-MM-DD h:mm:ss a')>>",
                 "@Author: <<author>>",
-                "@brief Description of what this file does",
+                "@Brief: Description of what this file does",
                 "=================================================================================",
                 "Copyright (c) <<yeartoyear(fc, now)>> <<author>>",
                 "=================================================================================",
