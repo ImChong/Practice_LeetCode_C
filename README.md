@@ -2,7 +2,7 @@
 
 C language leetcode practice guide:
 
-- Basics - common c tips / functions
+- Basics - common C language tips / functions
 - Programmercarl_Series - [代码随想录系列](https://programmercarl.com/)
 - Labuladong_Series - [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
 
