@@ -1,4 +1,6 @@
 .NET Install Tool for Extension Authors
+psioniq File Header
+C Function Header Snippet for UIUC ECE391
 
 Python
 Pylance
