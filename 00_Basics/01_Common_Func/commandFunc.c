@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - Tuesday, August 29th 2023, 11:08:08 am
+ * Last Modified: Chong Liu - Tuesday, August 29th 2023, 11:08:18 am
  */
 /* 头文件 */
 #include <stdio.h>
@@ -17,7 +17,7 @@
 /* （token-pasting：##）将两个标记符号合并为一个标记 */
 #define TOKEN_CONCATENATE(x, y) x ## y
 
-/* 重命名打印函数: 打印时可省略输入 \r\n */
+/* 重命名打印函数: 打印时可省略输入\r\n */
 #define INFO(format, ...) printf(format "\r\n", ##__VA_ARGS__)
 
 /* printCommandInfo()
