@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - Tuesday, August 29th 2023, 10:32:47 am
+ * Last Modified: Chong Liu - Tuesday, August 29th 2023, 10:36:39 am
  */
 /* 头文件 */
 #include <stdio.h>
@@ -18,7 +18,7 @@
 #define TOKEN_CONCATENATE(x, y) x ## y
 
 /* 重命名打印函数 */
-#define INFO(format, ...) printf(format "\n", ##__VA_ARGS__)
+#define INFO(format, ...) printf(format "\r\n", ##__VA_ARGS__)
 
 /* int main(int argc, char *argv[])
  *  Functionality: description...
@@ -30,12 +30,12 @@
  */
 int main(int argc, char *argv[])
 {
-    INFO("Number of command-line arguments: %d\n", argc);
+    INFO("Number of command-line arguments: %d", argc);
 
-    INFO("Command-line arguments:\n");
+    INFO("Command-line arguments:");
     for (int i = 0; i < argc; i++)
     {
-        INFO("%s\n", argv[i]);
+        INFO("%s", argv[i]);
     }
 
     return 0;
