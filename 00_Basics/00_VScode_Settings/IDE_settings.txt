@@ -130,6 +130,13 @@
             "background": "blue",
             "iconColour": "blue",
             // "gutterIcon": false,
+        },
+        "Functionality": {
+            "icon": "note",
+            "type": "line",
+            "foreground": "white",
+            "background": "green",
+            "iconColour": "green",
         }
     },
     "todo-tree.general.tags": [
@@ -145,9 +152,10 @@
         "#if",
         "#endif",
         "#elif",
-        "#else"
+        "#else",
+        "Functionality"
     ],
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
     "cmake.configureOnOpen": false,
     "workbench.editor.wrapTabs": true,
     "files.trimTrailingWhitespace": true,
