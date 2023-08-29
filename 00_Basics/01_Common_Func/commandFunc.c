@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - Tuesday, August 29th 2023, 11:04:43 am
+ * Last Modified: Chong Liu - Tuesday, August 29th 2023, 11:07:26 am
  */
 /* 头文件 */
 #include <stdio.h>
@@ -35,16 +35,18 @@ void printCommandInfo(int argc, char *argv[]) {
     {
         INFO("%s", argv[i]);
     }
-    /* 命令行调用程序 */
-    // .\commandFunc.exe arg1 arg2 arg3
-
-    /* 打印输出 */
-    // Command-line arguments:
-    // ...\Practice_LeetCode_C\00_Basics\01_Common_Func\commandFunc.exe
-    // arg1
-    // arg2
-    // arg3
 }
+
+/* 命令行调用程序 */
+// .\commandFunc.exe arg1 arg2 arg3
+
+/* 打印输出 */
+// Command-line arguments:
+// ...\Practice_LeetCode_C\00_Basics\01_Common_Func\commandFunc.exe
+// arg1
+// arg2
+// arg3
+
 
 /* main()
  *  Functionality: 主函数
