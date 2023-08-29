@@ -1,7 +1,17 @@
-/* 本文件记录C语言常用宏定义技巧及常用函数 */
+/*
+ * @File: main.c
+ * @Created Date: Monday, August 28th 2023, 9:44:35 am
+ * @Author: Chong Liu
+ * @Brief: 本文件记录C语言常用宏定义技巧及常用函数
+ * =================================================================================
+ * Copyright (c) 2023 Chong Liu
+ * =================================================================================
+ * Last Modified: Chong Liu - Tuesday, August 29th 2023, 10:11:19 am
+ */
+/* 头文件 */
 #include <stdio.h>
 
-/* functionName()
+/* ARRAY_SIZE(arr)
  *  Functionality: description...
  *  Arguments: arguments...
  *  Return: possibleReturnValues
