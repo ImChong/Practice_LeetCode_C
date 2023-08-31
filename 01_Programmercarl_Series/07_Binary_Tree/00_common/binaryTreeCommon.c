@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 7:52:08 pm
+ * Last Modified: Chong Liu - 2023-08-31 7:59:13 pm
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -30,12 +30,12 @@ struct TreeNode {
 
 /* NOTE: 前序遍历: 递归 */
 void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
-    if (node == NULL) {
+    if (node == NULL) {                         /* 如果当前节点为 NULL，直接返回 */
         return;
     }
-    ret[(*returnSize)++] = node->val;
-    preOrder(node->left, ret, returnSize);
-    preOrder(node->right, ret, returnSize);
+    ret[(*returnSize)++] = node->val;           /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
+    preOrder(node->left, ret, returnSize);      /* 遍历左节点 */
+    preOrder(node->right, ret, returnSize);     /* 遍历右节点 */
 }
 
 int *preorderTraversal(struct TreeNode *root, int *returnSize) {
