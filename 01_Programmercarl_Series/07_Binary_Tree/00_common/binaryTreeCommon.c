@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 7:50:44 pm
+ * Last Modified: Chong Liu - 2023-08-31 7:52:08 pm
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -23,9 +23,9 @@
 
 /* NOTE: 树节点 */
 struct TreeNode {
-    int val;
-    struct TreeNode *left;
-    struct TreeNode *right;
+    int val;                    /* 节点的值 */
+    struct TreeNode *left;      /* 左节点 */
+    struct TreeNode *right;     /* 右节点 */
 };
 
 /* NOTE: 前序遍历: 递归 */
