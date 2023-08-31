@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 8:40:54 pm
+ * Last Modified: Chong Liu - 2023-08-31 8:41:26 pm
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -75,7 +75,6 @@ int main(int argc, const char* argv[]) {
      *  2   3
      *
      */
-
 
     struct TreeNode n1, n2, n3;     /* 初始化3个树节点 */
     n1.val = 1;     /* n1节点赋值为 1 */
