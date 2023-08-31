@@ -1,6 +1,14 @@
-/* 144.二叉树的前序遍历：https://leetcode.cn/problems/binary-tree-preorder-traversal/ */
-/* https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html */
-
+/*
+ * @File: main_chong.c
+ * @Created Date: 2023-08-28 9:44:35 am
+ * @Author: Chong Liu
+ * @Brief: 144.二叉树的前序遍历：https://leetcode.cn/problems/binary-tree-preorder-traversal/
+ * https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html
+ * =================================================================================
+ * Copyright (c) 2023 Chong Liu
+ * =================================================================================
+ * Last Modified: Chong Liu - 2023-08-31 7:46:10 pm
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
