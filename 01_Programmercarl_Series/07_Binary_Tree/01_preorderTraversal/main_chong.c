@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 8:39:29 pm
+ * Last Modified: Chong Liu - 2023-08-31 8:40:54 pm
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -67,9 +67,15 @@ int main(int argc, const char* argv[]) {
     /* NOTE: Test case 1 */
     printf("======== Case 1 ======== \n");
 
-    //   1
-    //  / \
-    // 2   3
+    /*
+     * 创建以下树结构
+     *
+     *    1
+     *   / \
+     *  2   3
+     *
+     */
+
 
     struct TreeNode n1, n2, n3;     /* 初始化3个树节点 */
     n1.val = 1;     /* n1节点赋值为 1 */
