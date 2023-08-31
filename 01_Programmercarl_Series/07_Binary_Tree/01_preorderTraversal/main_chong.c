@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 7:46:10 pm
+ * Last Modified: Chong Liu - 2023-08-31 8:39:29 pm
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,20 +21,20 @@ struct TreeNode {
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* TODO: 目标函数: 递归遍历 */
-void preorder(struct TreeNode *root, int *res, int *resSize) {
-    if (root == NULL) {
+void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
+    if (node == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
         return;
     }
-    res[(*resSize)++] = root->val;
-    preorder(root->left, res, resSize);
-    preorder(root->right, res, resSize);
+    ret[(*returnSize)++] = node->val;               /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
+    preOrder(node->left, ret, returnSize);          /* 前序遍历左节点 */
+    preOrder(node->right, ret, returnSize);         /* 前序遍历右节点 */
 }
 
-int* preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
-    int *res = (int *)malloc(sizeof(int) * 2000);
-    *returnSize = 0;
-    preorder(root, res, returnSize);
-    return res;
+int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
+    int *ret = (int *)malloc(sizeof(int) * 100);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
+    *returnSize = 0;                                /* 初始化数的大小为 0 */
+    preOrder(root, ret, returnSize);                /* 前序遍历根节点 */
+    return ret;                                     /* 返回结果 ret 数组 */
 }
 
 /* TODO: 目标函数：迭代遍历  */
@@ -66,16 +66,21 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
 int main(int argc, const char* argv[]) {
     /* NOTE: Test case 1 */
     printf("======== Case 1 ======== \n");
-    struct TreeNode n1, n2, n3;
-    n1.val = 1;
-    n2.val = 2;
-    n3.val = 3;
-    n1.left = NULL;
-    n1.right = &n2;
-    n2.left = &n3;
-    n2.right = NULL;
-    n3.left = NULL;
-    n3.right = NULL;
+
+    //   1
+    //  / \
+    // 2   3
+
+    struct TreeNode n1, n2, n3;     /* 初始化3个树节点 */
+    n1.val = 1;     /* n1节点赋值为 1 */
+    n2.val = 2;     /* n2节点赋值为 2 */
+    n3.val = 3;     /* n3节点赋值为 3 */
+    n1.left = NULL;     /* n1节点的左节点为 NULL */
+    n1.right = &n2;     /* n1节点的右节点为 n2 节点 */
+    n2.left = &n3;      /* n2节点的左节点为 n3 */
+    n2.right = NULL;    /* n2节点的右节点为 NULL */
+    n3.left = NULL;     /* n3节点的左节点为 NULL */
+    n3.right = NULL;    /* n3节点的右节点为 NULL */
 
     int returnSize = 0;
     int *result = preorderTraversal_recursion(&n1, &returnSize);
