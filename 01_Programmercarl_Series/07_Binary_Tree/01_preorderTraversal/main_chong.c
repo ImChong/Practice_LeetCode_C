@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 8:41:26 pm
+ * Last Modified: Chong Liu - 2023-09-01 10:18:21 am
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -39,9 +39,9 @@ int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 
 /* TODO: 目标函数：迭代遍历  */
 int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
-    int *res = (int *)malloc(sizeof(int) * 2000);
-    *returnSize = 0;
-    if (!root) {
+    int *res = (int *)malloc(sizeof(int) * 2000);   /* 初始化一个2000长度的 ret 数组，用于储存遍历答案 */
+    *returnSize = 0;                                /* 初始化数的大小为 0 */
+    if (root == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
         return res;
     }
 
