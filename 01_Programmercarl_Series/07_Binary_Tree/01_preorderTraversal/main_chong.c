@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 10:34:45 am
+ * Last Modified: Chong Liu - 2023-09-01 10:35:48 am
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -74,11 +74,9 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
 int main(int argc, const char* argv[]) {
     /*
      * 创建以下树结构
-     *
      *    1
      *   / \
      *  2   3
-     *
      */
     struct TreeNode n1, n2, n3;     /* 初始化3个树节点 */
     n1.val = 1;     /* n1节点赋值为 1 */
