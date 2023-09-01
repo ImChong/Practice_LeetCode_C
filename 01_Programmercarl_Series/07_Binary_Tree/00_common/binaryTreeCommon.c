@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 8:32:10 pm
+ * Last Modified: Chong Liu - 2023-09-01 10:42:23 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -38,7 +38,7 @@ void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
     preOrder(node->right, ret, returnSize);         /* 前序遍历右节点 */
 }
 
-int *preorderTraversal(struct TreeNode *root, int *returnSize) {
+int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     int *ret = (int *)malloc(sizeof(int) * 100);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
     *returnSize = 0;                                /* 初始化数的大小为 0 */
     preOrder(root, ret, returnSize);                /* 前序遍历根节点 */
@@ -55,7 +55,7 @@ void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
     inOrder(node->right, ret, returnSize);          /* 中序遍历右节点 */
 }
 
-int *inorderTraversal(struct TreeNode *root, int *returnSize) {
+int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     int *ret = (int *)malloc(sizeof(int) * 100);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
     *returnSize = 0;                                /* 初始化数的大小为 0 */
     inOrder(root, ret, returnSize);                 /* 中序遍历根节点 */
@@ -72,7 +72,7 @@ void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
     ret[(*returnSize)++] = node->val;               /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
 }
 
-int *postorderTraversal(struct TreeNode *root, int *returnSize) {
+int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     int *ret = (int *)malloc(sizeof(int) * 100);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
     *returnSize = 0;                                /* 初始化数的大小为 0 */
     postOrder(root, ret, returnSize);               /* 后序遍历根节点 */
