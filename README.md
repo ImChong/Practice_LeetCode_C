@@ -28,6 +28,9 @@ Run and Debug (Ctil+Shift+D) -> (Linux)(gdb) source code        /* Ubuntu System
 Run and Debug (Ctil+Shift+D) -> (Windows)(gdb) source code      /* Windows System */
 ```
 
+# Clean all .exe files
+run the ```killexe.bat``` file in this directory.
+
 # Progress
 
 - [x] .
