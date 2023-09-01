@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 10:36:57 pm
+ * Last Modified: Chong Liu - 2023-09-01 10:53:13 pm
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -22,6 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MAX_SIZE 2000               /* 数组和栈的大小 */
 #define PRE_ORDER_TRAVERSAL_EN 0    /* 前序遍历代码开关 */
 #define IN_ORDER_TRAVERSAL_EN 1     /* 中序遍历代码开关 */
 #define POST_ORDER_TRAVERSAL_EN 0   /* 后序遍历代码开关 */
@@ -57,7 +58,7 @@ struct TreeNode {
 }
 
 int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
-    int *ret = (int *)malloc(sizeof(int) * 100);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
+    int *ret = (int *)malloc(sizeof(int) * MAX_SIZE);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
     *returnSize = 0;                                /* 初始化数的大小为 0 */
     preOrder(root, ret, returnSize);                /* 前序遍历根节点 */
     return ret;                                     /* 返回结果 ret 数组 */
@@ -65,13 +66,13 @@ int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 
 /* NOTE: 前序遍历 - 迭代 */
 int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
-    int *res = (int *)malloc(sizeof(int) * 2000);   /* 初始化一个2000长度的 ret 数组，用于储存遍历答案 */
+    int *res = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个2000长度的 ret 数组，用于储存遍历答案 */
     *returnSize = 0;                                /* 初始化数的大小为 0 */
     if (root == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
         return res;
     }
 
-    struct TreeNode *stk[2000];                     /* 用数组实现初始化一个2000容量的树节点栈 */
+    struct TreeNode *stk[MAX_SIZE];                     /* 用数组实现初始化一个2000容量的树节点栈 */
     struct TreeNode *node = root;                   /* 获取根节点的指针 */
     int stk_top = 0;                                /* 栈顶索引为 0 */
     while (stk_top > 0 || node != NULL) {           /* 当栈顶索引大于0 或者 节点指针不指向NULL */
@@ -111,7 +112,7 @@ void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
 }
 
 int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
-    int *ret = (int *)malloc(sizeof(int) * 100);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
+    int *ret = (int *)malloc(sizeof(int) * MAX_SIZE);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
     *returnSize = 0;                                /* 初始化数的大小为 0 */
     inOrder(root, ret, returnSize);                 /* 中序遍历根节点 */
     return ret;                                     /* 返回结果 ret 数组 */
@@ -119,13 +120,13 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 
 /* TODO: 中序遍历 - 迭代 */
 int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
-    int *res = (int *)malloc(sizeof(int) * 2000);
+    int *res = (int *)malloc(sizeof(int) * MAX_SIZE);
     *returnSize = 0;
     if (root == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
         return res;
     }
 
-    struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * 2000);    /*  */
+    struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);    /*  */
     int stk_top = 0;                                                                        /* 栈顶索引为 0 */
     while (root != NULL || stk_top > 0) {
         while (root != NULL) {
@@ -165,10 +166,10 @@ void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
 }
 
 int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
-    int *ret = (int *)malloc(sizeof(int) * 100);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
-    *returnSize = 0;                                /* 初始化数的大小为 0 */
-    postOrder(root, ret, returnSize);               /* 后序遍历根节点 */
-    return ret;                                     /* 返回结果 ret 数组 */
+    int *ret = (int *)malloc(sizeof(int) * MAX_SIZE);       /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
+    *returnSize = 0;                                        /* 初始化数的大小为 0 */
+    postOrder(root, ret, returnSize);                       /* 后序遍历根节点 */
+    return ret;                                             /* 返回结果 ret 数组 */
 }
 
 /* TODO: 后序遍历 - 迭代 */
