@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 9:27:33 pm
+ * Last Modified: Chong Liu - 2023-09-01 9:34:03 pm
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -24,7 +24,7 @@
 
 #define PRE_ORDER_TRAVERSAL_EN 0    /* 前序遍历代码开关 */
 #define IN_ORDER_TRAVERSAL_EN 1     /* 中序遍历代码开关 */
-#define POST_ORDER_TRAVERSAL_EN 1   /* 后序遍历代码开关 */
+#define POST_ORDER_TRAVERSAL_EN 0   /* 后序遍历代码开关 */
 
 /* NOTE: 树节点 */
 struct TreeNode {
@@ -121,7 +121,7 @@ int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
         return res;
     }
 
-    struct TreeNode **stk = (struct TreeNode *)malloc(sizeof(struct TreeNode *) * 2000);    /*  */
+    struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * 2000);    /*  */
     int stk_top = 0;                                                                        /* 栈顶索引为 0 */
     while (root != NULL || stk_top > 0) {
         while (root != NULL) {
@@ -203,10 +203,10 @@ int main(int argc, const char* argv[]) {
     n1.left = &n2;      /* n1节点的左节点为 NULL */
     n1.right = &n3;     /* n1节点的右节点为 n2节点 */
 
-    n2.left = &n3;      /* n2节点的左节点为 n3节点 */
-    n2.right = NULL;    /* n2节点的右节点为 NULL */
+    n2.left = &n4;      /* n2节点的左节点为 n3节点 */
+    n2.right = &n5;     /* n2节点的右节点为 NULL */
 
-    n3.left = NULL;     /* n3节点的左节点为 NULL */
+    n3.left = &n6;      /* n3节点的左节点为 NULL */
     n3.right = NULL;    /* n3节点的右节点为 NULL */
 
     n4.left = NULL;     /* n4节点的左节点为 NULL */
@@ -225,7 +225,25 @@ int main(int argc, const char* argv[]) {
 #endif
 
 #if IN_ORDER_TRAVERSAL_EN
+    printf("inorderTraversal_recursion: \n");
+    /* NOTE: Test case 1 */
+    printf("======== Case 1 ======== \n");
+    int *result = inorderTraversal_recursion(&n1, &returnSize);
 
+    for (int i = 0; i < returnSize; i++) {
+        printf("%d ", result[i]);
+    }
+    printf("\r\n");
+
+    printf("inorderTraversal_iteration: \n");
+    /* NOTE: Test case 1 */
+    printf("======== Case 1 ======== \n");
+    result = inorderTraversal_iteration(&n1, &returnSize);
+
+    for (int i = 0; i < returnSize; i++) {
+        printf("%d ", result[i]);
+    }
+    printf("\n");
 #endif
 
 #if POST_ORDER_TRAVERSAL_EN
