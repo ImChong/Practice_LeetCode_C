@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 10:49:41 am
+ * Last Modified: Chong Liu - 2023-09-01 10:59:50 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -20,6 +20,11 @@
  *          层次遍历（迭代法）
  */
 #include <stdio.h>
+#include <stdlib.h>
+
+#define PRE_ORDER_TRAVERSAL_EN 1    /* 前序遍历代码开关 */
+#define IN_ORDER_TRAVERSAL_EN 1     /* 中序遍历代码开关 */
+#define POST_ORDER_TRAVERSAL_EN 1   /* 后序遍历代码开关 */
 
 /* NOTE: 树节点 */
 struct TreeNode {
@@ -28,14 +33,18 @@ struct TreeNode {
     struct TreeNode *right;     /* 右节点 */
 };
 
+#if PRE_ORDER_TRAVERSAL_EN
+/* ==================================================================================================== */
 /* preorderTraversal_recursion()
- *  Functionality: 前序遍历 - 递归
+ *  Functionality: 前序遍历
  *  Arguments: struct TreeNode *root, int *returnSize
  *  Return: int *ret
  *  References:
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */
+/* ==================================================================================================== */
+/* NOTE: 前序遍历 - 递归 */
  void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
         return;
@@ -52,14 +61,7 @@ int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     return ret;                                     /* 返回结果 ret 数组 */
 }
 
-/* postorderTraversal_recursion()
- *  Functionality: 前序遍历 - 递归
- *  Arguments: struct TreeNode *root, int *returnSize
- *  Return: int *ret
- *  References:
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
- */
+/* NOTE: 前序遍历 - 迭代 */
 int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     int *res = (int *)malloc(sizeof(int) * 2000);   /* 初始化一个2000长度的 ret 数组，用于储存遍历答案 */
     *returnSize = 0;                                /* 初始化数的大小为 0 */
@@ -81,15 +83,20 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     }
     return res;                                     /* 返回结果数组 */
 }
+#endif
 
+#if IN_ORDER_TRAVERSAL_EN
+/* ==================================================================================================== */
 /* inorderTraversal_recursion()
- *  Functionality: 中序遍历 - 递归
+ *  Functionality: 中序遍历
  *  Arguments: struct TreeNode *root, int *returnSize
  *  Return: int *ret
  *  References:
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */
+/* ==================================================================================================== */
+/* NOTE: 中序遍历 - 递归 */
 void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
         return;
@@ -106,9 +113,13 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     return ret;                                     /* 返回结果 ret 数组 */
 }
 
-/* TODO: 中序遍历: 迭代 */
+/* TODO: 中序遍历 - 迭代 */
 
 
+#endif
+
+#if POST_ORDER_TRAVERSAL_EN
+/* ==================================================================================================== */
 /* postorderTraversal_recursion()
  *  Functionality: 后序遍历 - 递归
  *  Arguments: struct TreeNode *root, int *returnSize
@@ -117,6 +128,8 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */
+/* ==================================================================================================== */
+/* NOTE: 后序遍历 - 递归 */
 void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
         return;
@@ -133,9 +146,12 @@ int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     return ret;                                     /* 返回结果 ret 数组 */
 }
 
-/* TODO: 后序遍历: 迭代 */
+/* TODO: 后序遍历 - 迭代 */
 
 
+#endif
+
+/* ==================================================================================================== */
 /* main()
  *  Functionality: 主函数
  *  Arguments: int argc, const char* argv[]
@@ -144,8 +160,37 @@ int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */
-/* NOTE: 主函数 */
+/* ==================================================================================================== */
 int main(int argc, const char* argv[]) {
+        /*
+     * 创建以下树结构
+     *    1
+     *   / \
+     *  2   3
+     */
+    struct TreeNode n1, n2, n3;     /* 初始化3个树节点 */
+    n1.val = 1;     /* n1节点赋值为 1 */
+    n2.val = 2;     /* n2节点赋值为 2 */
+    n3.val = 3;     /* n3节点赋值为 3 */
+    n1.left = NULL;     /* n1节点的左节点为 NULL */
+    n1.right = &n2;     /* n1节点的右节点为 n2 节点 */
+    n2.left = &n3;      /* n2节点的左节点为 n3 */
+    n2.right = NULL;    /* n2节点的右节点为 NULL */
+    n3.left = NULL;     /* n3节点的左节点为 NULL */
+    n3.right = NULL;    /* n3节点的右节点为 NULL */
 
+    int returnSize = 0;
+
+#if PRE_ORDER_TRAVERSAL_EN
+
+#endif
+
+#if IN_ORDER_TRAVERSAL_EN
+
+#endif
+
+#if POST_ORDER_TRAVERSAL_EN
+
+#endif
     return 0;
 }
