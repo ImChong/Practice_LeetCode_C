@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 10:47:55 am
+ * Last Modified: Chong Liu - 2023-09-01 10:49:41 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -91,7 +91,7 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
  *  IMPORTANT NOTICE FOR READER
  */
 void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
-    if (!node) {                                    /* 如果当前节点为 NULL，直接返回 */
+    if (node == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
         return;
     }
     inOrder(node->left, ret, returnSize);           /* 中序遍历左节点 */
@@ -108,6 +108,7 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 
 /* TODO: 中序遍历: 迭代 */
 
+
 /* postorderTraversal_recursion()
  *  Functionality: 后序遍历 - 递归
  *  Arguments: struct TreeNode *root, int *returnSize
@@ -117,7 +118,7 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
  *  IMPORTANT NOTICE FOR READER
  */
 void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
-    if (!node) {                                    /* 如果当前节点为 NULL，直接返回 */
+    if (node == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
         return;
     }
     postOrder(node->left, ret, returnSize);         /* 后序遍历左节点 */
