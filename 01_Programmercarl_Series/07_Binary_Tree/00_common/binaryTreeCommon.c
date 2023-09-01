@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 10:42:23 am
+ * Last Modified: Chong Liu - 2023-09-01 10:44:50 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -28,8 +28,15 @@ struct TreeNode {
     struct TreeNode *right;     /* 右节点 */
 };
 
-/* NOTE: 前序遍历: 递归 */
-void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
+/* preorderTraversal_recursion()
+ *  Functionality: 前序遍历 - 递归
+ *  Arguments: struct TreeNode *root, int *returnSize
+ *  Return: int *ret
+ *  References:
+ ***********************************************************************************
+ *  IMPORTANT NOTICE FOR READER
+ */
+ void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
         return;
     }
@@ -45,7 +52,14 @@ int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     return ret;                                     /* 返回结果 ret 数组 */
 }
 
-/* NOTE: 中序遍历: 递归 */
+/* inorderTraversal_recursion()
+ *  Functionality: 中序遍历 - 递归
+ *  Arguments: struct TreeNode *root, int *returnSize
+ *  Return: int *ret
+ *  References:
+ ***********************************************************************************
+ *  IMPORTANT NOTICE FOR READER
+ */
 void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (!node) {                                    /* 如果当前节点为 NULL，直接返回 */
         return;
@@ -62,7 +76,14 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     return ret;                                     /* 返回结果 ret 数组 */
 }
 
-/* NOTE: 后序遍历: 递归 */
+/* postorderTraversal_recursion()
+ *  Functionality: 后序遍历 - 递归
+ *  Arguments: struct TreeNode *root, int *returnSize
+ *  Return: int *ret
+ *  References:
+ ***********************************************************************************
+ *  IMPORTANT NOTICE FOR READER
+ */
 void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (!node) {                                    /* 如果当前节点为 NULL，直接返回 */
         return;
