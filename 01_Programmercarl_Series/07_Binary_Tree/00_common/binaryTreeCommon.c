@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 11:18:33 am
+ * Last Modified: Chong Liu - 2023-09-01 11:22:51 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -164,11 +164,11 @@ int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 int main(int argc, const char* argv[]) {
     /*
      * 创建以下树结构
-     *    1
-     *     \
-     *      2
-     *     /
-     *    3
+     *      1
+     *     / \
+     *    2   3
+     *   / \ /
+     *  4  5 6
      */
     struct TreeNode n1, n2, n3, n4, n5, n6;     /* 初始化3个树节点 */
     n1.val = 1;     /* n1节点赋值为 1 */
