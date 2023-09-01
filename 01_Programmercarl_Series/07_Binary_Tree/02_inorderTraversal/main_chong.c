@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 5:53:58 pm
+ * Last Modified: Chong Liu - 2023-09-01 5:59:28 pm
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -47,7 +47,11 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 
 /* TODO: 目标函数：迭代遍历  */
 int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
+    int *res = (int *)malloc(sizeof(int) * 2000);
+    *returnSize = 0;
 
+    struct TreeNode **stk = (struct TreeNode *)malloc(sizeof(struct TreeNode *) * 2000);    /*  */
+    int stk_top = 0;                                                                        /* 栈顶索引为 0 */
 
     return NULL;
 }
