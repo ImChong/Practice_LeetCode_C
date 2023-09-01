@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 10:45:17 am
+ * Last Modified: Chong Liu - 2023-09-01 11:15:29 am
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -75,16 +75,18 @@ int main(int argc, const char* argv[]) {
     /*
      * 创建以下树结构
      *    1
-     *   / \
-     *  2   3
+     *     \
+     *      2
+     *     /
+     *    3
      */
     struct TreeNode n1, n2, n3;     /* 初始化3个树节点 */
     n1.val = 1;     /* n1节点赋值为 1 */
     n2.val = 2;     /* n2节点赋值为 2 */
     n3.val = 3;     /* n3节点赋值为 3 */
     n1.left = NULL;     /* n1节点的左节点为 NULL */
-    n1.right = &n2;     /* n1节点的右节点为 n2 节点 */
-    n2.left = &n3;      /* n2节点的左节点为 n3 */
+    n1.right = &n2;     /* n1节点的右节点为 n2节点 */
+    n2.left = &n3;      /* n2节点的左节点为 n3节点 */
     n2.right = NULL;    /* n2节点的右节点为 NULL */
     n3.left = NULL;     /* n3节点的左节点为 NULL */
     n3.right = NULL;    /* n3节点的右节点为 NULL */

@@ -7,9 +7,16 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 10:40:54 am
+ * Last Modified: Chong Liu - 2023-09-01 11:14:51 am
  */
 #include <stdio.h>
+#include <stdlib.h>
+
+struct TreeNode {
+    int val;                    /* 节点的值 */
+    struct TreeNode *left;      /* 左节点 */
+    struct TreeNode *right;     /* 右节点 */
+};
 
 /* ==================================================================================================== */
 /* inorderTraversal()
@@ -21,14 +28,26 @@
  *  IMPORTANT NOTICE FOR READER
  */
 /* ==================================================================================================== */
-/* TODO: 目标函数: 递归遍历 */
-int* inorderTraversal_recursion(struct TreeNode* root, int* returnSize){
+/* DONE: 目标函数: 递归遍历 */
+void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
+    if (node == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
+        return;
+    }
+    inOrder(node->left, ret, returnSize);           /* 中序遍历左节点 */
+    ret[(*returnSize)++] = node->val;               /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
+    inOrder(node->right, ret, returnSize);          /* 中序遍历右节点 */
+}
 
+int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
+    int *ret = (int *)malloc(sizeof(int) * 100);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
+    *returnSize = 0;                                /* 初始化数的大小为 0 */
+    inOrder(root, ret, returnSize);                 /* 中序遍历根节点 */
+    return ret;                                     /* 返回结果 ret 数组 */
 }
 
 /* TODO: 目标函数：迭代遍历  */
 int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize){
-
+    return NULL;
 }
 
 /* ==================================================================================================== */
@@ -39,16 +58,18 @@ int main(int argc, const char* argv[]) {
     /*
      * 创建以下树结构
      *    1
-     *   / \
-     *  2   3
+     *     \
+     *      2
+     *     /
+     *    3
      */
     struct TreeNode n1, n2, n3;     /* 初始化3个树节点 */
     n1.val = 1;     /* n1节点赋值为 1 */
     n2.val = 2;     /* n2节点赋值为 2 */
     n3.val = 3;     /* n3节点赋值为 3 */
     n1.left = NULL;     /* n1节点的左节点为 NULL */
-    n1.right = &n2;     /* n1节点的右节点为 n2 节点 */
-    n2.left = &n3;      /* n2节点的左节点为 n3 */
+    n1.right = &n2;     /* n1 节点的右节点为 n2 节点 */
+    n2.left = &n3;      /* n2 节点的左节点为 n3 节点 */
     n2.right = NULL;    /* n2节点的右节点为 NULL */
     n3.left = NULL;     /* n3节点的左节点为 NULL */
     n3.right = NULL;    /* n3节点的右节点为 NULL */
@@ -66,12 +87,12 @@ int main(int argc, const char* argv[]) {
 
     /* NOTE: Test case 2 */
     printf("======== Case 2 ======== \n");
-    result = inorderTraversal_iteration(&n1, &returnSize);
+    // result = inorderTraversal_iteration(&n1, &returnSize);
 
-    for (int i = 0; i < returnSize; i++) {
-        printf("%d ", result[i]);
-    }
-    printf("\n");
+    // for (int i = 0; i < returnSize; i++) {
+    //     printf("%d ", result[i]);
+    // }
+    // printf("\n");
 
     free(result);
     return 0;
