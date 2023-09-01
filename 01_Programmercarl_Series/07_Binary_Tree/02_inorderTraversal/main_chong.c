@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 10:39:24 am
+ * Last Modified: Chong Liu - 2023-09-01 10:40:54 am
  */
 #include <stdio.h>
 
@@ -22,10 +22,14 @@
  */
 /* ==================================================================================================== */
 /* TODO: 目标函数: 递归遍历 */
+int* inorderTraversal_recursion(struct TreeNode* root, int* returnSize){
 
+}
 
 /* TODO: 目标函数：迭代遍历  */
+int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize){
 
+}
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
@@ -53,7 +57,7 @@ int main(int argc, const char* argv[]) {
 
     /* NOTE: Test case 1 */
     printf("======== Case 1 ======== \n");
-    int *result = preorderTraversal_recursion(&n1, &returnSize);
+    int *result = inorderTraversal_recursion(&n1, &returnSize);
 
     for (int i = 0; i < returnSize; i++) {
         printf("%d ", result[i]);
@@ -62,7 +66,7 @@ int main(int argc, const char* argv[]) {
 
     /* NOTE: Test case 2 */
     printf("======== Case 2 ======== \n");
-    result = preorderTraversal_iteration(&n1, &returnSize);
+    result = inorderTraversal_iteration(&n1, &returnSize);
 
     for (int i = 0; i < returnSize; i++) {
         printf("%d ", result[i]);
