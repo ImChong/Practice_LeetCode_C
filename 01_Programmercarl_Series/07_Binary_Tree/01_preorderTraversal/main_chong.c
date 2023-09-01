@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 10:36:57 am
+ * Last Modified: Chong Liu - 2023-09-01 10:38:34 am
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,7 +20,7 @@ struct TreeNode {
 
 /* ==================================================================================================== */
 /* preorderTraversal()
- *  Functionality:二叉树的前序遍历
+ *  Functionality: 二叉树的前序遍历
  *  Arguments: struct TreeNode *root, int *returnSize
  *  Return: int *res
  *  References: https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html
