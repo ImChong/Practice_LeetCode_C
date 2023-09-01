@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - Tuesday, August 29th 2023, 11:08:18 am
+ * Last Modified: Chong Liu - 2023-09-01 3:04:41 pm
  */
 /* 头文件 */
 #include <stdio.h>
@@ -19,6 +19,9 @@
 
 /* 重命名打印函数: 打印时可省略输入\r\n */
 #define INFO(format, ...) printf(format "\r\n", ##__VA_ARGS__)
+
+/* 声明了一个变量或函数,但不确定后面是否会使用它时,可以加上这个宏 */
+#define MAYBE_UNUSED attribute((unused))
 
 /* printCommandInfo()
  *  Functionality: 打印命令行参数
