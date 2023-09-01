@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 11:15:45 am
+ * Last Modified: Chong Liu - 2023-09-01 11:18:33 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -170,16 +170,31 @@ int main(int argc, const char* argv[]) {
      *     /
      *    3
      */
-    struct TreeNode n1, n2, n3;     /* 初始化3个树节点 */
+    struct TreeNode n1, n2, n3, n4, n5, n6;     /* 初始化3个树节点 */
     n1.val = 1;     /* n1节点赋值为 1 */
     n2.val = 2;     /* n2节点赋值为 2 */
     n3.val = 3;     /* n3节点赋值为 3 */
+    n4.val = 4;     /* n4节点赋值为 4 */
+    n5.val = 5;     /* n5节点赋值为 5 */
+    n6.val = 6;     /* n6节点赋值为 6 */
+
     n1.left = NULL;     /* n1节点的左节点为 NULL */
-    n1.right = &n2;     /* n1节点的右节点为 n2 节点 */
-    n2.left = &n3;      /* n2节点的左节点为 n3 */
+    n1.right = &n2;     /* n1节点的右节点为 n2节点 */
+
+    n2.left = &n3;      /* n2节点的左节点为 n3节点 */
     n2.right = NULL;    /* n2节点的右节点为 NULL */
+
     n3.left = NULL;     /* n3节点的左节点为 NULL */
     n3.right = NULL;    /* n3节点的右节点为 NULL */
+
+    n4.left = NULL;     /* n4节点的左节点为 NULL */
+    n4.right = NULL;    /* n4节点的右节点为 NULL */
+
+    n5.left = NULL;     /* n5节点的左节点为 NULL */
+    n5.right = NULL;    /* n5节点的右节点为 NULL */
+
+    n6.left = NULL;     /* n6节点的左节点为 NULL */
+    n6.right = NULL;    /* n6节点的右节点为 NULL */
 
     int returnSize = 0;
 
