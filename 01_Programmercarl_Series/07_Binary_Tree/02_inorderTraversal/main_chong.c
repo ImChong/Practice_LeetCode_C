@@ -7,10 +7,12 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 5:59:28 pm
+ * Last Modified: Chong Liu - 2023-09-01 10:55:51 pm
  */
 #include <stdio.h>
 #include <stdlib.h>
+
+#define MAX_SIZE 100            /* 数组和栈的大小 */
 
 struct TreeNode {
     int val;                    /* 节点的值 */
@@ -39,7 +41,7 @@ void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
 }
 
 int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
-    int *ret = (int *)malloc(sizeof(int) * 100);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
+    int *ret = (int *)malloc(sizeof(int) * MAX_SIZE);    /* 初始化一个100长度的 ret 数组，用于储存遍历答案 */
     *returnSize = 0;                                /* 初始化数的大小为 0 */
     inOrder(root, ret, returnSize);                 /* 中序遍历根节点 */
     return ret;                                     /* 返回结果 ret 数组 */
@@ -47,10 +49,13 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 
 /* TODO: 目标函数：迭代遍历  */
 int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
-    int *res = (int *)malloc(sizeof(int) * 2000);
+    int *res = (int *)malloc(sizeof(int) * MAX_SIZE);
     *returnSize = 0;
+    if (root == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
+        return res;
+    }
 
-    struct TreeNode **stk = (struct TreeNode *)malloc(sizeof(struct TreeNode *) * 2000);    /*  */
+    struct TreeNode **stk = (struct TreeNode *)malloc(sizeof(struct TreeNode *) * MAX_SIZE);    /*  */
     int stk_top = 0;                                                                        /* 栈顶索引为 0 */
 
     return NULL;
