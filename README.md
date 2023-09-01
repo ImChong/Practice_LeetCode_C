@@ -34,11 +34,24 @@ run the ```killexe.bat``` file in this directory.
 # Progress
 
 - [x] .
-- [x] ├── Basics
+- [x] ├── 00_Basics
 - [x] │   ├── 00_VScode_Settings
-- [x] │   ├── 01_Command_Line
-- [x] │   └── 02_Common_Func
-- [x] ├── Labuladong_Series
+- [x] │   ├── 01_Common_Func
+- [x] │   └── 02_Programming_Notes
+- [x] ├── 01_Programmercarl_Series
+- [x] │   ├── 01_Array
+- [x] │   ├── 02_Linked_List
+- [x] │   ├── 03_Hash_Table
+- [ ] │   ├── 04_String
+- [ ] │   ├── 05_Double_Pointer
+- [x] │   ├── 06_Stack_Queue
+- [x] │   ├── 07_Binary_Tree
+- [ ] │   ├── 08_Backtracking
+- [ ] │   ├── 09_Greedy
+- [ ] │   ├── 10_Dynamic_Programming
+- [ ] │   ├── 11_Monotone_Stack
+- [ ] │   └── 12_Graph_Theory
+- [x] ├── 02_Labuladong_Series
 - [x] │   ├── 01_Linked_List
 - [ ] │   ├── 02_Array
 - [ ] │   ├── 03_Binary_Tree
@@ -51,17 +64,5 @@ run the ```killexe.bat``` file in this directory.
 - [ ] │   ├── 10_House_Robber
 - [ ] │   └── 11_N_Sum
 - [x] ├── LICENSE
-- [x] ├── Programmercarl_Series
-- [x] │   ├── 01_Array
-- [x] │   ├── 02_Linked_List
-- [x] │   ├── 03_Hash_Table【Ongoing】
-- [ ] │   ├── 04_String
-- [ ] │   ├── 05_Double_Pointer
-- [x] │   ├── 06_Stack_Queue
-- [x] │   ├── 07_Binary_Tree
-- [ ] │   ├── 08_Backtracking
-- [ ] │   ├── 09_Greedy
-- [ ] │   ├── 10_Dynamic_Programming
-- [ ] │   └── 11_Monotone_Stack
-- [ ] └── README.md
+- [x] └── README.md
 
