@@ -13,7 +13,6 @@
 ## 1.1. 内存分配和初始化
 ---
 ### 1.1.1. struct TreeNode *root; 和 struct TreeNode *root = malloc(sizeof(struct TreeNode)); 有什么区别？
----
 ```c
 struct TreeNode *root;
 ```
@@ -31,7 +30,6 @@ struct TreeNode *root = malloc(sizeof(struct TreeNode));
 
 ---
 ### 1.1.2. struct TreeNode *stk[MAX_SIZE]; 和 struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE); 的区别？
----
 ```c
 struct TreeNode *stk[MAX_SIZE];
 ```
