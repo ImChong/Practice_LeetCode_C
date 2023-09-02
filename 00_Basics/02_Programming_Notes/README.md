@@ -12,7 +12,7 @@
       - [1.2.2.5. 语法和类型](#1225-语法和类型)
 
 ## 1.1. 研发通识
----
+
 ### 1.1.1. 正则表达式
 正则表达式（Regular Expression，常简写为 regex 或 regexp）是一种用于匹配字符串中字符组合的模式。正则表达式常用于字符串匹配、查找、以及替换操作。
 
@@ -38,7 +38,6 @@
 ---
 ---
 ## 1.2. 内存分配和初始化
----
 ### 1.2.1. struct TreeNode *root; 和 struct TreeNode *root = malloc(sizeof(struct TreeNode)); 有什么区别？
 ```c
 struct TreeNode *root;
@@ -55,7 +54,6 @@ struct TreeNode *root = malloc(sizeof(struct TreeNode));
 这样，`root` 就指向了一个有效的内存地址，您可以安全地对该内存进行读写操作（假设 `malloc` 成功，没有返回 `NULL`）。
 
 
----
 ### 1.2.2. struct TreeNode *stk[MAX_SIZE]; 和 struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE); 的区别？
 ```c
 struct TreeNode *stk[MAX_SIZE];
