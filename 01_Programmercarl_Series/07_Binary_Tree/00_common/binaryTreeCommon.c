@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 11:39:49 am
+ * Last Modified: Chong Liu - 2023-09-02 11:40:10 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -186,12 +186,12 @@ int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     struct TreeNode *prev = NULL;                           /* 设置前节点的指针为 NULL */
     while (node != NULL || stk_top > 0) {                   /* 当栈顶索引大于0 或者 节点指针不指向NULL */
         while (node != NULL) {                                  /* 当结点指针不指向NULL */
-            stk[stk_top++] = node;                                  /* 将当前节点指针放入栈顶，并将栈顶索引 + 1 */
+            stk[stk_top++] = node;                                  /* 入栈：将当前节点指针放入栈顶，并将栈顶索引 + 1 */
             node = node->left;                                      /* 节点指针向左移动 */
         }
-        node = stk[--stk_top];                                  /* 当节点指针指向NULL - 左节点指针已经到头：获取栈顶节点指针，并将栈顶索引 - 1 */
+        node = stk[--stk_top];                                  /* 出栈：当节点指针指向NULL - 左节点指针已经到头：获取栈顶节点指针，并将栈顶索引 - 1 */
         if (node->right == NULL || node->right == prev) {       /* 如果右节点为NULL 或者 右节点为前节点 */
-            res[(*returnSize)++] = node->val;                       /* 入栈：把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
+            res[(*returnSize)++] = node->val;                       /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
             prev = node;
             node = NULL;
         } else {
