@@ -49,62 +49,62 @@
         "background": "#ffffff",
         "opacity": 50,
         "iconColour": "gray",
-        "gutterIcon": true,
+        "gutterIcon": true
     },
     "todo-tree.highlights.customHighlight": {
         "TODO": {
             "icon": "check",
             "foreground": "black",
             "background": "yellow",
-            "iconColour": "yellow",
+            "iconColour": "yellow"
         },
         "NOTE": {
             "icon": "note",
             "foreground": "white",
             "background": "gray",
-            "iconColour": "gray",
+            "iconColour": "gray"
         },
         "COMMENT": {
             "icon": "note",
             "foreground": "white",
             "background": "gray",
-            "iconColour": "gray",
+            "iconColour": "gray"
         },
         "FIXME": {
             "foreground": "black",
             "background": "orange",
-            "iconColour": "orange",
+            "iconColour": "orange"
         },
         "BUG": {
             "icon": "bug",
             "foreground": "black",
             "background": "red",
-            "iconColour": "red",
+            "iconColour": "red"
         },
         "[ ]": {
             "icon": "check",
             "foreground": "black",
             "background": "white",
-            "iconColour": "white",
+            "iconColour": "white"
         },
         "[x]": {
             "icon": "check",
             "foreground": "white",
             "background": "green",
-            "iconColour": "green",
+            "iconColour": "green"
         },
         "DONE": {
             "icon": "check",
             "foreground": "white",
             "background": "green",
-            "iconColour": "green",
+            "iconColour": "green"
         },
         "#if": {
             "icon": "diff-renamed",
             "type": "line",
             "foreground": "white",
             "background": "blue",
-            "iconColour": "blue",
+            "iconColour": "blue"
             // "gutterIcon": false,
         },
         "#endif": {
@@ -112,7 +112,7 @@
             "type": "line",
             "foreground": "white",
             "background": "blue",
-            "iconColour": "blue",
+            "iconColour": "blue"
             // "gutterIcon": false,
         },
         "#elif": {
@@ -120,7 +120,7 @@
             "type": "line",
             "foreground": "white",
             "background": "#1085c9",
-            "iconColour": "#1085c9",
+            "iconColour": "#1085c9"
             // "gutterIcon": false,
         },
         "#else": {
@@ -128,7 +128,7 @@
             "type": "line",
             "foreground": "white",
             "background": "#1085c9",
-            "iconColour": "#1085c9",
+            "iconColour": "#1085c9"
             // "gutterIcon": false,
         },
         "Functionality": {
@@ -136,7 +136,7 @@
             "type": "line",
             "foreground": "white",
             "background": "green",
-            "iconColour": "green",
+            "iconColour": "green"
         }
     },
     "todo-tree.general.tags": [
@@ -165,23 +165,30 @@
     ],
     "explorer.confirmDelete": false,
     "cSpell.userWords": [
+        "AFIO",
         "AHBENR",
         "AHBPERIPH",
         "BDCR",
+        "blit",
         "Bootloader",
         "BSRR",
+        "centerx",
         "centroidal",
         "CFGR",
+        "Channelx",
         "cheshirekow",
         "Chong",
         "CMSIS",
+        "CNDTR",
         "Colour",
         "cornflowerblue",
+        "CPAR",
         "cpptools",
         "Crabviz",
         "Ctil",
         "dateformat",
         "dbgconf",
+        "DBGMCU",
         "Eigen",
         "elif",
         "Embedfire",
@@ -191,6 +198,7 @@
         "Farshidian",
         "filecreated",
         "fileheader",
+        "FLITF",
         "fsmc",
         "Fwlib",
         "GOOGLETEST",
@@ -206,17 +214,23 @@
         "Gtest",
         "highlightwords",
         "ICCARM",
+        "IDCODE",
         "ifndef",
         "inorder",
         "IOPBEN",
+        "JOFR",
+        "JSQR",
         "JTAG",
         "Kbytes",
         "Keil",
+        "killexe",
         "labuladong",
         "LCKR",
         "leetcode",
         "lightgreen",
         "loginfo",
+        "malloc",
+        "MAPR",
         "Microcontroller",
         "microcontrollers",
         "MICROLIB",
@@ -231,24 +245,39 @@
         "Periph",
         "programmercarl",
         "psioniq",
+        "pygame",
         "Pylance",
+        "Raiden",
+        "RDHR",
+        "RDLR",
+        "RDTR",
         "READWRITE",
         "rospkg",
         "rospy",
         "RSTR",
+        "RTCCLK",
+        "RTCCR",
         "SDIO",
         "SDRAM",
         "seperator",
+        "SMPR",
         "SRAM",
         "stackheap",
         "STDPERIPH",
         "STMICROELECTRONICS",
         "STRNE",
+        "struct",
         "subarray",
+        "SWTRIGR",
+        "TDHR",
+        "TDLR",
+        "TDTR",
+        "tmpreg",
         "UART",
         "UIUC",
         "urdf",
         "usart",
+        "USEREVENT",
         "USRAT",
         "uvguix",
         "uvoptx",
@@ -256,12 +285,13 @@
         "waitflags",
         "waitstatus",
         "Wakeup",
+        "WKUP",
         "WWDG",
         "yeartoyear"
     ],
     "git.confirmSync": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.fontSize": 11,
+    "terminal.integrated.fontSize": 14,
     "[cmake]": {
         "editor.defaultFormatter": "cheshirekow.cmake-format"
     },
@@ -282,7 +312,7 @@
         "isActive": true,
         "modAuthor": "Modified By:",
         "modDate": "Last Modified:",
-        "autoHeader": "autoSave",
+        "autoHeader": "autoSave"
         // "enforceHeader": false,
     },
     "psi-header.templates": [
@@ -296,8 +326,10 @@
                 "=================================================================================",
                 "Copyright (c) <<yeartoyear(fc, now)>> <<author>>",
                 "=================================================================================",
-                "Last Modified: <<author>> - <<dateformat('YYYY-MM-DD h:mm:ss a')>>",
+                "Last Modified: <<author>> - <<dateformat('YYYY-MM-DD h:mm:ss a')>>"
             ]
         }
-    ]
+    ],
+    "git.openRepositoryInParentFolders": "never",
+    "KeilAssistant.MDK.Uv4Path": "D:\\Developments\\Keil\\UV4\\UV4.exe"
 }
