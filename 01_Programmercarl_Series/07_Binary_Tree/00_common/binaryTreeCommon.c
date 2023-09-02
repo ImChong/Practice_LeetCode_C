@@ -329,5 +329,7 @@ int main(int argc, const char* argv[]) {
     printArray(result, returnSize);
     #endif
 #endif
+
+    free(result);
     return 0;
 }
