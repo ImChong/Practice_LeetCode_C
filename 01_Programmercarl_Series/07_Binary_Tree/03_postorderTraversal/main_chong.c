@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 11:07:27 am
+ * Last Modified: Chong Liu - 2023-09-02 11:31:20 am
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -54,7 +54,7 @@ void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
 
 int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     int *ret = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个 MAX_SIZE 长度的 ret 数组，用于储存遍历答案 */
-    *returnSize = 0;                                    /* 初始化数的大小为 0 */
+    *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     postOrder(root, ret, returnSize);                   /* 后序遍历根节点 */
     return ret;                                         /* 返回结果 ret 数组 */
 }
