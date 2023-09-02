@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 10:20:06 am
+ * Last Modified: Chong Liu - 2023-09-02 10:29:03 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -23,9 +23,9 @@
 #include <stdlib.h>
 
 #define MAX_SIZE 100                /* 数组和栈的大小 */
-#define PRE_ORDER_TRAVERSAL_EN 1    /* 前序遍历代码开关 */
-#define IN_ORDER_TRAVERSAL_EN 1     /* 中序遍历代码开关 */
-#define POST_ORDER_TRAVERSAL_EN 0   /* 后序遍历代码开关 */
+#define PRE_ORDER_TRAVERSAL_EN 0    /* 前序遍历代码开关 */
+#define IN_ORDER_TRAVERSAL_EN 0     /* 中序遍历代码开关 */
+#define POST_ORDER_TRAVERSAL_EN 1   /* 后序遍历代码开关 */
 
 /* NOTE: 树节点 */
 struct TreeNode {
@@ -40,7 +40,7 @@ struct TreeNode {
  *  Functionality: 前序遍历
  *  Arguments: struct TreeNode *root, int *returnSize
  *  Return: int *ret
- *  References:
+ *  References: 144.二叉树的前序遍历：https://leetcode.cn/problems/binary-tree-preorder-traversal/
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  *  遍历顺序：根节点 -> 左子树 -> 右子树
@@ -94,7 +94,7 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
  *  Functionality: 中序遍历
  *  Arguments: struct TreeNode *root, int *returnSize
  *  Return: int *ret
- *  References:
+ *  References: 94.二叉树的中序遍历: https://leetcode.cn/problems/binary-tree-inorder-traversal/
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  *  遍历顺序：左子树 -> 根节点 -> 右子树
@@ -148,7 +148,7 @@ int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
  *  Functionality: 后序遍历 - 递归
  *  Arguments: struct TreeNode *root, int *returnSize
  *  Return: int *ret
- *  References:
+ *  References: 145.二叉树的后序遍历：https://leetcode.cn/problems/binary-tree-postorder-traversal/
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  *  遍历顺序：左子树 -> 右子树 -> 根节点
@@ -175,7 +175,24 @@ int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 /* TODO: 后序遍历 - 迭代 */
 int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     int *res = (int *)malloc(sizeof(int) * MAX_SIZE);
-    return NULL;
+    *returnSize = 0;
+    if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
+        return res;
+    }
+
+    struct TreeNode *stk[MAX_SIZE];
+    struct TreeNode *node = root;
+    int stk_top = 0;
+    while (node != NULL || stk_top > 0) {
+        while (node != NULL) {
+            stk[stk_top++] = node;
+            node = node->left;
+        }
+        node = stk[--stk_top];
+        node = node->right;
+        res[(*returnSize)++] = node->val;
+    }
+    return res;
 }
 #endif
 
@@ -274,8 +291,8 @@ int main(int argc, const char* argv[]) {
     printArray(result, returnSize);
 
     printf("postorderTraversal_iteration: \n");
-    result = postorderTraversal_iteration(&n1, &returnSize);
-    printArray(result, returnSize);
+    // result = postorderTraversal_iteration(&n1, &returnSize);
+    // printArray(result, returnSize);
 #endif
     return 0;
 }

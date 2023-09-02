@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 10:23:02 am
+ * Last Modified: Chong Liu - 2023-09-02 10:24:22 am
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -31,7 +31,7 @@ struct TreeNode {
  *  IMPORTANT NOTICE FOR READER
  */
 /* ==================================================================================================== */
-/* TODO: 目标函数: 递归遍历 */
+/* DONE: 目标函数: 递归遍历 */
 void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
         return;
