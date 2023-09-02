@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 10:55:51 pm
+ * Last Modified: Chong Liu - 2023-09-02 8:57:17 am
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -55,10 +55,19 @@ int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
         return res;
     }
 
-    struct TreeNode **stk = (struct TreeNode *)malloc(sizeof(struct TreeNode *) * MAX_SIZE);    /*  */
-    int stk_top = 0;                                                                        /* 栈顶索引为 0 */
-
-    return NULL;
+    struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);    /*  */
+    struct TreeNode *node = root;
+    int stk_top = 0;                                                                            /* 栈顶索引为 0 */
+    while (node != NULL || stk_top > 0) {
+        while (node != NULL) {
+            stk[stk_top++] = node;
+            node = node->left;
+        }
+        node = stk[--stk_top];
+        res[(*returnSize)++] = node->val;
+        node = node->right;
+    }
+    return res;
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
@@ -97,12 +106,12 @@ int main(int argc, const char* argv[]) {
 
     /* NOTE: Test case 2 */
     printf("======== Case 2 ======== \n");
-    // result = inorderTraversal_iteration(&n1, &returnSize);
+    result = inorderTraversal_iteration(&n1, &returnSize);
 
-    // for (int i = 0; i < returnSize; i++) {
-    //     printf("%d ", result[i]);
-    // }
-    // printf("\n");
+    for (int i = 0; i < returnSize; i++) {
+        printf("%d ", result[i]);
+    }
+    printf("\n");
 
     free(result);
     return 0;
