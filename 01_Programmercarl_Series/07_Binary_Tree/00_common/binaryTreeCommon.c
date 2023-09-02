@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 11:43:39 am
+ * Last Modified: Chong Liu - 2023-09-02 12:04:21 pm
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -23,9 +23,11 @@
 #include <stdlib.h>
 
 #define MAX_SIZE 100                /* 数组和栈的大小 */
-#define PRE_ORDER_TRAVERSAL_EN 1    /* 前序遍历代码开关 */
-#define IN_ORDER_TRAVERSAL_EN 1     /* 中序遍历代码开关 */
+#define PRE_ORDER_TRAVERSAL_EN 0    /* 前序遍历代码开关 */
+#define IN_ORDER_TRAVERSAL_EN 0     /* 中序遍历代码开关 */
 #define POST_ORDER_TRAVERSAL_EN 1   /* 后序遍历代码开关 */
+#define RECURSION_EN 0              /* 递归代码开关 */
+#define ITERATION_EN 1              /* 迭代代码开关 */
 
 /* NOTE: 树节点 */
 struct TreeNode {
@@ -47,6 +49,7 @@ struct TreeNode {
  *  用途：前序遍历通常用于复制二叉树或构建与原二叉树结构相同的二叉树。
  */
 /* ==================================================================================================== */
+    #if RECURSION_EN
 /* NOTE: 前序遍历 - 递归 */
  void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
@@ -63,7 +66,9 @@ int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     preOrder(root, ret, returnSize);                    /* 前序遍历根节点 */
     return ret;                                         /* 返回结果 ret 数组 */
 }
+    #endif
 
+    #if ITERATION_EN
 /* NOTE: 前序遍历 - 迭代 */
 int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     int *res = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案（后期需要free） */
@@ -86,7 +91,9 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     }
     return res;                                         /* 返回结果数组 */
 }
+    #endif
 #endif
+
 
 #if IN_ORDER_TRAVERSAL_EN
 /* ==================================================================================================== */
@@ -101,6 +108,7 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
  *  用途：对于二叉搜索树（BST），中序遍历会按照递增的顺序访问所有节点。
  */
 /* ==================================================================================================== */
+    #if RECURSION_EN
 /* NOTE: 中序遍历 - 递归 */
 void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
@@ -117,7 +125,9 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     inOrder(root, ret, returnSize);                     /* 中序遍历根节点 */
     return ret;                                         /* 返回结果 ret 数组 */
 }
+    #endif
 
+    #if ITERATION_EN
 /* NOTE: 中序遍历 - 迭代 */
 int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     int *res = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案 */
@@ -140,7 +150,9 @@ int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     }
     return res;                                         /* 返回结果数组 */
 }
+    #endif
 #endif
+
 
 #if POST_ORDER_TRAVERSAL_EN
 /* ==================================================================================================== */
@@ -155,6 +167,7 @@ int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
  *  用途：后序遍历常用于删除二叉树或进行其他需要从底向上进行操作的场景。
  */
 /* ==================================================================================================== */
+    #if RECURSION_EN
 /* NOTE: 后序遍历 - 递归 */
 void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                                     /* 如果当前节点为 NULL，直接返回 */
@@ -171,7 +184,9 @@ int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     postOrder(root, ret, returnSize);                       /* 后序遍历根节点 */
     return ret;                                             /* 返回结果 ret 数组 */
 }
+    #endif
 
+    #if ITERATION_EN
 /* NOTE: 后序遍历 - 迭代 */
 int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     int *res = (int *)malloc(sizeof(int) * MAX_SIZE);       /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案（后期需要free） */
@@ -201,6 +216,7 @@ int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     }
     return res;                                             /* 返回结果数组 */
 }
+    #endif
 #endif
 
 /* ==================================================================================================== */
@@ -273,33 +289,45 @@ int main(int argc, const char* argv[]) {
     int *result = NULL;
 
 #if PRE_ORDER_TRAVERSAL_EN
+    #if RECURSION_EN
     printf("preorderTraversal_recursion: \n");
     result = preorderTraversal_recursion(&n1, &returnSize);
     printArray(result, returnSize);
+    #endif
 
+    #if ITERATION_EN
     printf("preorderTraversal_iteration: \n");
     result = preorderTraversal_iteration(&n1, &returnSize);
     printArray(result, returnSize);
+    #endif
 #endif
 
 #if IN_ORDER_TRAVERSAL_EN
+    #if RECURSION_EN
     printf("inorderTraversal_recursion: \n");
     result = inorderTraversal_recursion(&n1, &returnSize);
     printArray(result, returnSize);
+    #endif
 
+    #if ITERATION_EN
     printf("inorderTraversal_iteration: \n");
     result = inorderTraversal_iteration(&n1, &returnSize);
     printArray(result, returnSize);
+    #endif
 #endif
 
 #if POST_ORDER_TRAVERSAL_EN
+    #if RECURSION_EN
     printf("postorderTraversal_recursion: \n");
     result = postorderTraversal_recursion(&n1, &returnSize);
     printArray(result, returnSize);
+    #endif
 
+    #if ITERATION_EN
     printf("postorderTraversal_iteration: \n");
     result = postorderTraversal_iteration(&n1, &returnSize);
     printArray(result, returnSize);
+    #endif
 #endif
     return 0;
 }
