@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 9:57:23 am
+ * Last Modified: Chong Liu - 2023-09-02 10:08:39 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -23,7 +23,7 @@
 #include <stdlib.h>
 
 #define MAX_SIZE 100                /* 数组和栈的大小 */
-#define PRE_ORDER_TRAVERSAL_EN 0    /* 前序遍历代码开关 */
+#define PRE_ORDER_TRAVERSAL_EN 1    /* 前序遍历代码开关 */
 #define IN_ORDER_TRAVERSAL_EN 1     /* 中序遍历代码开关 */
 #define POST_ORDER_TRAVERSAL_EN 0   /* 后序遍历代码开关 */
 
@@ -196,25 +196,26 @@ int main(int argc, const char* argv[]) {
      *      1
      *     / \
      *    2   3
-     *   / \ /
-     *  4  5 6
+     *   / \ / \
+     *  4  5 6  7
      */
-    struct TreeNode n1, n2, n3, n4, n5, n6;     /* 初始化3个树节点 */
+    struct TreeNode n1, n2, n3, n4, n5, n6, n7;     /* 初始化3个树节点 */
     n1.val = 1;     /* n1节点赋值为 1 */
     n2.val = 2;     /* n2节点赋值为 2 */
     n3.val = 3;     /* n3节点赋值为 3 */
     n4.val = 4;     /* n4节点赋值为 4 */
     n5.val = 5;     /* n5节点赋值为 5 */
     n6.val = 6;     /* n6节点赋值为 6 */
+    n7.val = 7;     /* n7节点赋值为 7 */
 
-    n1.left = &n2;      /* n1节点的左节点为 NULL */
-    n1.right = &n3;     /* n1节点的右节点为 n2节点 */
+    n1.left = &n2;      /* n1节点的左节点为 n2节点 */
+    n1.right = &n3;     /* n1节点的右节点为 n3节点 */
 
-    n2.left = &n4;      /* n2节点的左节点为 n3节点 */
-    n2.right = &n5;     /* n2节点的右节点为 NULL */
+    n2.left = &n4;      /* n2节点的左节点为 n4节点 */
+    n2.right = &n5;     /* n2节点的右节点为 n5节点 */
 
-    n3.left = &n6;      /* n3节点的左节点为 NULL */
-    n3.right = NULL;    /* n3节点的右节点为 NULL */
+    n3.left = &n6;      /* n3节点的左节点为 n6节点 */
+    n3.right = &n7;     /* n3节点的右节点为 n7节点 */
 
     n4.left = NULL;     /* n4节点的左节点为 NULL */
     n4.right = NULL;    /* n4节点的右节点为 NULL */
@@ -225,17 +226,33 @@ int main(int argc, const char* argv[]) {
     n6.left = NULL;     /* n6节点的左节点为 NULL */
     n6.right = NULL;    /* n6节点的右节点为 NULL */
 
+    n7.left = NULL;     /* n7节点的左节点为 NULL */
+    n7.right = NULL;    /* n7节点的右节点为 NULL */
+
     int returnSize = 0;
+    int *result = NULL;
 
 #if PRE_ORDER_TRAVERSAL_EN
+    printf("preorderTraversal_recursion: \n");
+    result = preorderTraversal_recursion(&n1, &returnSize);
 
+    for (int i = 0; i < returnSize; i++) {
+        printf("%d ", result[i]);
+    }
+    printf("\r\n");
+
+    printf("preorderTraversal_iteration: \n");
+    result = preorderTraversal_iteration(&n1, &returnSize);
+
+    for (int i = 0; i < returnSize; i++) {
+        printf("%d ", result[i]);
+    }
+    printf("\r\n");
 #endif
 
 #if IN_ORDER_TRAVERSAL_EN
     printf("inorderTraversal_recursion: \n");
-    /* NOTE: Test case 1 */
-    printf("======== Case 1 ======== \n");
-    int *result = inorderTraversal_recursion(&n1, &returnSize);
+    result = inorderTraversal_recursion(&n1, &returnSize);
 
     for (int i = 0; i < returnSize; i++) {
         printf("%d ", result[i]);
@@ -243,14 +260,12 @@ int main(int argc, const char* argv[]) {
     printf("\r\n");
 
     printf("inorderTraversal_iteration: \n");
-    /* NOTE: Test case 1 */
-    printf("======== Case 1 ======== \n");
     result = inorderTraversal_iteration(&n1, &returnSize);
 
     for (int i = 0; i < returnSize; i++) {
         printf("%d ", result[i]);
     }
-    printf("\n");
+    printf("\r\n");
 #endif
 
 #if POST_ORDER_TRAVERSAL_EN
