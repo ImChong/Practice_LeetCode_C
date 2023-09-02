@@ -7,12 +7,14 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 12:16:07 pm
+ * Last Modified: Chong Liu - 2023-09-02 12:34:05 pm
  */
 #include <stdio.h>
 #include <stdlib.h>
 
 #define MAX_SIZE 100            /* 数组和栈的大小 */
+#define RECURSION_EN 0          /* 递归代码开关 */
+#define ITERATION_EN 1          /* 迭代代码开关 */
 
 /* NOTE: 树节点 */
 struct TreeNode {
@@ -42,6 +44,7 @@ struct TreeNode {
  * 结果：4 5 2 6 7 3 1
  */
 /* ==================================================================================================== */
+#if RECURSION_EN
 /* DONE: 目标函数: 递归遍历 */
 void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                                     /* 如果当前节点为 NULL，直接返回 */
@@ -58,7 +61,9 @@ int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     postOrder(root, ret, returnSize);                       /* 后序遍历根节点 */
     return ret;                                             /* 返回结果 ret 数组 */
 }
+#endif
 
+#if ITERATION_EN
 /* DONE: 目标函数：迭代遍历  */
 int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     int *res = (int *)malloc(sizeof(int) * MAX_SIZE);       /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案（后期需要free） */
@@ -88,6 +93,7 @@ int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     }
     return res;                                             /* 返回结果数组 */
 }
+#endif
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
@@ -103,35 +109,58 @@ void printArray(int *result, int returnSize) {
 int main(int argc, const char* argv[]) {
     /*
      * 创建以下树结构
-     *    1
-     *     \
-     *      2
-     *     /
-     *    3
+     *      1
+     *     / \
+     *    2   3
+     *   / \ / \
+     *  4  5 6  7
      */
-    struct TreeNode n1, n2, n3;     /* 初始化3个树节点 */
+    struct TreeNode n1, n2, n3, n4, n5, n6, n7;     /* 初始化3个树节点 */
     n1.val = 1;     /* n1节点赋值为 1 */
     n2.val = 2;     /* n2节点赋值为 2 */
     n3.val = 3;     /* n3节点赋值为 3 */
-    n1.left = NULL;     /* n1节点的左节点为 NULL */
-    n1.right = &n2;     /* n1 节点的右节点为 n2 节点 */
-    n2.left = &n3;      /* n2 节点的左节点为 n3 节点 */
-    n2.right = NULL;    /* n2节点的右节点为 NULL */
-    n3.left = NULL;     /* n3节点的左节点为 NULL */
-    n3.right = NULL;    /* n3节点的右节点为 NULL */
+    n4.val = 4;     /* n4节点赋值为 4 */
+    n5.val = 5;     /* n5节点赋值为 5 */
+    n6.val = 6;     /* n6节点赋值为 6 */
+    n7.val = 7;     /* n7节点赋值为 7 */
+
+    n1.left = &n2;      /* n1节点的左节点为 n2节点 */
+    n1.right = &n3;     /* n1节点的右节点为 n3节点 */
+
+    n2.left = &n4;      /* n2节点的左节点为 n4节点 */
+    n2.right = &n5;     /* n2节点的右节点为 n5节点 */
+
+    n3.left = &n6;      /* n3节点的左节点为 n6节点 */
+    n3.right = &n7;     /* n3节点的右节点为 n7节点 */
+
+    n4.left = NULL;     /* n4节点的左节点为 NULL */
+    n4.right = NULL;    /* n4节点的右节点为 NULL */
+
+    n5.left = NULL;     /* n5节点的左节点为 NULL */
+    n5.right = NULL;    /* n5节点的右节点为 NULL */
+
+    n6.left = NULL;     /* n6节点的左节点为 NULL */
+    n6.right = NULL;    /* n6节点的右节点为 NULL */
+
+    n7.left = NULL;     /* n7节点的左节点为 NULL */
+    n7.right = NULL;    /* n7节点的右节点为 NULL */
 
     int returnSize = 0;
     int *result = NULL;
 
+#if RECURSION_EN
     /* NOTE: Test case 1 */
     printf("======== recursion ======== \n");
     result = postorderTraversal_recursion(&n1, &returnSize);
     printArray(result, returnSize);
+#endif
 
+#if ITERATION_EN
     /* NOTE: Test case 2 */
     printf("======== iteration ======== \n");
     result = postorderTraversal_iteration(&n1, &returnSize);
     printArray(result, returnSize);
+#endif
 
     return 0;
 }
