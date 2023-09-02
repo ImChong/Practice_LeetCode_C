@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 10:08:39 am
+ * Last Modified: Chong Liu - 2023-09-02 10:15:34 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -181,6 +181,23 @@ int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
 #endif
 
 /* ==================================================================================================== */
+/* printArray()
+ *  Functionality: 打印结果数组
+ *  Arguments: arguments...
+ *  Return: possibleReturnValues
+ *  References: document/website...
+ ***********************************************************************************
+ *  IMPORTANT NOTICE FOR READER
+ */
+/* ==================================================================================================== */
+void printArray(int *result, int returnSize) {
+    for (int i = 0; i < returnSize; i++) {
+        printf("%d ", result[i]);
+    }
+    printf("\r\n");
+}
+
+/* ==================================================================================================== */
 /* main()
  *  Functionality: 主函数
  *  Arguments: int argc, const char* argv[]
@@ -235,37 +252,21 @@ int main(int argc, const char* argv[]) {
 #if PRE_ORDER_TRAVERSAL_EN
     printf("preorderTraversal_recursion: \n");
     result = preorderTraversal_recursion(&n1, &returnSize);
-
-    for (int i = 0; i < returnSize; i++) {
-        printf("%d ", result[i]);
-    }
-    printf("\r\n");
+    printArray(result, returnSize);
 
     printf("preorderTraversal_iteration: \n");
     result = preorderTraversal_iteration(&n1, &returnSize);
-
-    for (int i = 0; i < returnSize; i++) {
-        printf("%d ", result[i]);
-    }
-    printf("\r\n");
+    printArray(result, returnSize);
 #endif
 
 #if IN_ORDER_TRAVERSAL_EN
     printf("inorderTraversal_recursion: \n");
     result = inorderTraversal_recursion(&n1, &returnSize);
-
-    for (int i = 0; i < returnSize; i++) {
-        printf("%d ", result[i]);
-    }
-    printf("\r\n");
+    printArray(result, returnSize);
 
     printf("inorderTraversal_iteration: \n");
     result = inorderTraversal_iteration(&n1, &returnSize);
-
-    for (int i = 0; i < returnSize; i++) {
-        printf("%d ", result[i]);
-    }
-    printf("\r\n");
+    printArray(result, returnSize);
 #endif
 
 #if POST_ORDER_TRAVERSAL_EN
