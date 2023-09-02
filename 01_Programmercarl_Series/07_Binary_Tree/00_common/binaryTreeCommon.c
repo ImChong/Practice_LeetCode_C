@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 11:40:10 am
+ * Last Modified: Chong Liu - 2023-09-02 11:43:28 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -192,14 +192,14 @@ int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
         node = stk[--stk_top];                                  /* 出栈：当节点指针指向NULL - 左节点指针已经到头：获取栈顶节点指针，并将栈顶索引 - 1 */
         if (node->right == NULL || node->right == prev) {       /* 如果右节点为NULL 或者 右节点为前节点 */
             res[(*returnSize)++] = node->val;                       /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
-            prev = node;
-            node = NULL;
-        } else {
-            stk[stk_top++] = node;
-            node = node->right;
+            prev = node;                                            /* 给前节点指针赋值为当前节点 */
+            node = NULL;                                            /* 把当前节点指针赋值为 NULL*/
+        } else {                                                /* 否则 */
+            stk[stk_top++] = node;                                  /* 入栈：将当前节点指针放入栈顶，并将栈顶索引 + 1 */
+            node = node->right;                                     /* 节点指针向右移动 */
         }
     }
-    return res;
+    return res;                                             /* 返回结果数组 */
 }
 #endif
 
