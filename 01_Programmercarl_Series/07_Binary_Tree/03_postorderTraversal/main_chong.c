@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 11:06:46 am
+ * Last Modified: Chong Liu - 2023-09-02 11:07:27 am
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -44,19 +44,19 @@ struct TreeNode {
 /* ==================================================================================================== */
 /* DONE: 目标函数: 递归遍历 */
 void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
-    if (node == NULL) {                             /* 如果当前节点为 NULL，直接返回 */
+    if (node == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return;
     }
-    postOrder(node->left, ret, returnSize);         /* 后序遍历左节点 */
-    postOrder(node->right, ret, returnSize);        /* 后序遍历右节点 */
-    ret[(*returnSize)++] = node->val;               /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
+    postOrder(node->left, ret, returnSize);             /* 后序遍历左节点 */
+    postOrder(node->right, ret, returnSize);            /* 后序遍历右节点 */
+    ret[(*returnSize)++] = node->val;                   /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
 }
 
 int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
-    int *ret = (int *)malloc(sizeof(int) * MAX_SIZE);       /* 初始化一个 MAX_SIZE 长度的 ret 数组，用于储存遍历答案 */
-    *returnSize = 0;                                        /* 初始化数的大小为 0 */
-    postOrder(root, ret, returnSize);                       /* 后序遍历根节点 */
-    return ret;                                             /* 返回结果 ret 数组 */
+    int *ret = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个 MAX_SIZE 长度的 ret 数组，用于储存遍历答案 */
+    *returnSize = 0;                                    /* 初始化数的大小为 0 */
+    postOrder(root, ret, returnSize);                   /* 后序遍历根节点 */
+    return ret;                                         /* 返回结果 ret 数组 */
 }
 
 /* TODO: 目标函数：迭代遍历  */
