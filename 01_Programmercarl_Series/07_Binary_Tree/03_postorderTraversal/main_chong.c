@@ -7,13 +7,13 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 12:34:05 pm
+ * Last Modified: Chong Liu - 2023-09-02 12:44:42 pm
  */
 #include <stdio.h>
 #include <stdlib.h>
 
 #define MAX_SIZE 100            /* 数组和栈的大小 */
-#define RECURSION_EN 0          /* 递归代码开关 */
+#define RECURSION_EN 1          /* 递归代码开关 */
 #define ITERATION_EN 1          /* 迭代代码开关 */
 
 /* NOTE: 树节点 */
