@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 11:00:16 am
+ * Last Modified: Chong Liu - 2023-09-02 11:01:42 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -23,8 +23,8 @@
 #include <stdlib.h>
 
 #define MAX_SIZE 100                /* 数组和栈的大小 */
-#define PRE_ORDER_TRAVERSAL_EN 0    /* 前序遍历代码开关 */
-#define IN_ORDER_TRAVERSAL_EN 0     /* 中序遍历代码开关 */
+#define PRE_ORDER_TRAVERSAL_EN 1    /* 前序遍历代码开关 */
+#define IN_ORDER_TRAVERSAL_EN 1     /* 中序遍历代码开关 */
 #define POST_ORDER_TRAVERSAL_EN 1   /* 后序遍历代码开关 */
 
 /* NOTE: 树节点 */
