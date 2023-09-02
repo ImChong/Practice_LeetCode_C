@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 12:04:21 pm
+ * Last Modified: Chong Liu - 2023-09-02 12:13:52 pm
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -23,10 +23,10 @@
 #include <stdlib.h>
 
 #define MAX_SIZE 100                /* 数组和栈的大小 */
-#define PRE_ORDER_TRAVERSAL_EN 0    /* 前序遍历代码开关 */
-#define IN_ORDER_TRAVERSAL_EN 0     /* 中序遍历代码开关 */
+#define PRE_ORDER_TRAVERSAL_EN 1    /* 前序遍历代码开关 */
+#define IN_ORDER_TRAVERSAL_EN 1     /* 中序遍历代码开关 */
 #define POST_ORDER_TRAVERSAL_EN 1   /* 后序遍历代码开关 */
-#define RECURSION_EN 0              /* 递归代码开关 */
+#define RECURSION_EN 1              /* 递归代码开关 */
 #define ITERATION_EN 1              /* 迭代代码开关 */
 
 /* NOTE: 树节点 */
@@ -219,6 +219,23 @@ int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     #endif
 #endif
 
+/* printTree()
+ *  Functionality: 打印树结构
+ *  Arguments: void
+ *  Return: void
+ *  References: document/website...
+ ***********************************************************************************
+ *  IMPORTANT NOTICE FOR READER
+ */
+void printTree(void) {
+    printf("      1 \n");
+    printf("     / \\ \n");
+    printf("    2   3 \n");
+    printf("   / \\ / \\ \n");
+    printf("  4  5 6  7 \n");
+    printf("\n");
+}
+
 /* ==================================================================================================== */
 /* printArray()
  *  Functionality: 打印结果数组
@@ -285,8 +302,10 @@ int main(int argc, const char* argv[]) {
     n7.left = NULL;     /* n7节点的左节点为 NULL */
     n7.right = NULL;    /* n7节点的右节点为 NULL */
 
-    int returnSize = 0;
-    int *result = NULL;
+    printTree();            /* 打印树结构 */
+
+    int returnSize = 0;     /* 初始化结果数组大小 */
+    int *result = NULL;     /* 初始化结果数组指针为 NULL */
 
 #if PRE_ORDER_TRAVERSAL_EN
     #if RECURSION_EN
