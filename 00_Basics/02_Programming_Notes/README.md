@@ -27,7 +27,14 @@ struct TreeNode *root = malloc(sizeof(struct TreeNode));
 这样，root 就指向了一个有效的内存地址，您可以安全地对该内存进行读写操作（假设 malloc 成功，没有返回 NULL）。
 
 ## 2.2. struct TreeNode *stk[MAX_SIZE]; 和 struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE); 的区别？
-`struct TreeNode *stk[MAX_SIZE];` 和 `struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);` 都用于创建一个指针数组，该数组的元素类型为 `struct TreeNode*`。但两者有几个主要区别：
+```c
+struct TreeNode *stk[MAX_SIZE];
+```
+和
+```c
+struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);
+```
+都用于创建一个指针数组，该数组的元素类型为 `struct TreeNode*`。但两者有几个主要区别：
 ### 2.2.1. 堆栈存储 vs 堆存储
 - `struct TreeNode *stk[MAX_SIZE];`：在栈内存中分配空间。
 - `struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);`：在堆内存中分配空间。
