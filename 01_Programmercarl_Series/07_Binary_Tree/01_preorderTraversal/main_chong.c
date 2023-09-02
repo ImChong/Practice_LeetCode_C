@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 10:59:32 pm
+ * Last Modified: Chong Liu - 2023-09-02 9:16:53 am
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,13 +49,13 @@ int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 
 /* DONE: 目标函数：迭代遍历 */
 int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
-    int *res = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个2000长度的 ret 数组，用于储存遍历答案 */
+    int *res = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案 */
     *returnSize = 0;                                    /* 初始化数的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return res;
     }
 
-    struct TreeNode *stk[MAX_SIZE];                     /* 用数组实现初始化一个2000容量的树节点栈 */
+    struct TreeNode *stk[MAX_SIZE];                     /* 用数组实现初始化一个MAX_SIZE容量的树节点栈 */
     struct TreeNode *node = root;                       /* 获取根节点的指针 */
     int stk_top = 0;                                    /* 栈顶索引为 0 */
     while (stk_top > 0 || node != NULL) {               /* 当栈顶索引大于0 或者 节点指针不指向NULL */
