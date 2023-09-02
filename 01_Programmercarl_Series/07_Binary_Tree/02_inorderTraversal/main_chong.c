@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 11:31:30 am
+ * Last Modified: Chong Liu - 2023-09-02 11:33:06 am
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -67,8 +67,8 @@ int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     }
 
     struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);   /* 分配一个MAX_SIZE容量的树节点栈空间 */
-    struct TreeNode *node = root;                       /* 获取根节点的指针 */
     int stk_top = 0;                                    /* 栈顶索引为 0 */
+    struct TreeNode *node = root;                       /* 获取根节点的指针 */
     while (node != NULL || stk_top > 0) {               /* 当栈顶索引大于0 或者 节点指针不指向NULL */
         while (node != NULL) {                              /* 当结点指针不指向NULL */
             stk[stk_top++] = node;                              /* 将当前节点指针放入栈顶，并将栈顶索引 + 1 */

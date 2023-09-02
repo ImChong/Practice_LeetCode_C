@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 11:31:49 am
+ * Last Modified: Chong Liu - 2023-09-02 11:33:29 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -73,8 +73,8 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     }
 
     struct TreeNode *stk[MAX_SIZE];                     /* 用数组实现初始化一个MAX_SIZE容量的树节点栈 */
-    struct TreeNode *node = root;                       /* 获取根节点的指针 */
     int stk_top = 0;                                    /* 栈顶索引为 0 */
+    struct TreeNode *node = root;                       /* 获取根节点的指针 */
     while (stk_top > 0 || node != NULL) {               /* 当栈顶索引大于0 或者 节点指针不指向NULL */
         while (node != NULL) {                              /* 当结点指针不指向NULL */
             res[(*returnSize)++] = node->val;                   /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
@@ -127,8 +127,8 @@ int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     }
 
     struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);   /* 分配一个MAX_SIZE容量的树节点栈空间 */
-    struct TreeNode *node = root;                       /* 获取根节点的指针 */
     int stk_top = 0;                                    /* 栈顶索引为 0 */
+    struct TreeNode *node = root;                       /* 获取根节点的指针 */
     while (node != NULL || stk_top > 0) {               /* 当栈顶索引大于0 或者 节点指针不指向NULL */
         while (node != NULL) {                              /* 当结点指针不指向NULL */
             stk[stk_top++] = node;                              /* 将当前节点指针放入栈顶，并将栈顶索引 + 1 */
@@ -180,8 +180,8 @@ int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
         return res;
     }
 
-    struct TreeNode *stk[MAX_SIZE];
-    int stk_top = 0;
+    struct TreeNode *stk[MAX_SIZE];                     /* 用数组实现初始化一个MAX_SIZE容量的树节点栈 */
+    int stk_top = 0;                                    /* 栈顶索引为 0 */
     struct TreeNode *node = root;
     struct TreeNode *prev = NULL;
     while (node != NULL || stk_top > 0) {

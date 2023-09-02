@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 11:31:33 am
+ * Last Modified: Chong Liu - 2023-09-02 11:32:58 am
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -67,8 +67,8 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     }
 
     struct TreeNode *stk[MAX_SIZE];                     /* 用数组实现初始化一个MAX_SIZE容量的树节点栈 */
-    struct TreeNode *node = root;                       /* 获取根节点的指针 */
     int stk_top = 0;                                    /* 栈顶索引为 0 */
+    struct TreeNode *node = root;                       /* 获取根节点的指针 */
     while (node != NULL || stk_top > 0) {               /* 当栈顶索引大于0 或者 节点指针不指向NULL */
         while (node != NULL) {                              /* 当结点指针不指向NULL */
             res[(*returnSize)++] = node->val;                   /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
