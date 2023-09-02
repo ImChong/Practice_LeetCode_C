@@ -157,7 +157,7 @@ struct HashTable *createHashTable(int size);
 
 <!-- 字符串 -->
 ## 04_String：字符串
-
+在C语言中，字符串是由字符组成的数组，以空字符（Null Character，ASCII码为0）结尾。这个结尾的空字符用于标识字符串的结束。在C标准库（`<string.h>`）中，有多种函数可用于处理字符串。
 
 <!-- 双指针 -->
 ## 05_Double_Pointer：双指针
