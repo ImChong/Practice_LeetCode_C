@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 11:33:06 am
+ * Last Modified: Chong Liu - 2023-09-02 12:16:17 pm
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -107,7 +107,7 @@ int main(int argc, const char* argv[]) {
     int returnSize = 0;
 
     /* NOTE: Test case 1 */
-    printf("======== Case 1 ======== \n");
+    printf("======== recursion ======== \n");
     int *result = inorderTraversal_recursion(&n1, &returnSize);
 
     for (int i = 0; i < returnSize; i++) {
@@ -116,7 +116,7 @@ int main(int argc, const char* argv[]) {
     printf("\n");
 
     /* NOTE: Test case 2 */
-    printf("======== Case 2 ======== \n");
+    printf("======== iteration ======== \n");
     result = inorderTraversal_iteration(&n1, &returnSize);
 
     for (int i = 0; i < returnSize; i++) {

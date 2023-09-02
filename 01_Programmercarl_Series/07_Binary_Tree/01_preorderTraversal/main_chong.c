@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 12:07:49 pm
+ * Last Modified: Chong Liu - 2023-09-02 12:15:53 pm
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -86,6 +86,7 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     return res;                                         /* 返回结果数组 */
 }
 #endif
+
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* NOTE: 打印结果数组 */
@@ -139,17 +140,19 @@ int main(int argc, const char* argv[]) {
     int returnSize = 0;
     int *result = NULL;
 
-    #if RECURSION_EN
+#if RECURSION_EN
     /* NOTE: Test case 1 */
-    printf("======== Case 1 ======== \n");
+    printf("======== recursion ======== \n");
     result = preorderTraversal_recursion(&n1, &returnSize);
     printArray(result, returnSize);
-    #endif
+#endif
 
+#if ITERATION_EN
     /* NOTE: Test case 2 */
-    printf("======== Case 2 ======== \n");
+    printf("======== iteration ======== \n");
     result = preorderTraversal_iteration(&n1, &returnSize);
     printArray(result, returnSize);
+#endif
 
     free(result);
     return 0;

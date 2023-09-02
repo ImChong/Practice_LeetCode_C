@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 11:44:26 am
+ * Last Modified: Chong Liu - 2023-09-02 12:16:07 pm
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -124,12 +124,12 @@ int main(int argc, const char* argv[]) {
     int *result = NULL;
 
     /* NOTE: Test case 1 */
-    printf("======== Case 1 ======== \n");
+    printf("======== recursion ======== \n");
     result = postorderTraversal_recursion(&n1, &returnSize);
     printArray(result, returnSize);
 
     /* NOTE: Test case 2 */
-    printf("======== Case 2 ======== \n");
+    printf("======== iteration ======== \n");
     result = postorderTraversal_iteration(&n1, &returnSize);
     printArray(result, returnSize);
 
