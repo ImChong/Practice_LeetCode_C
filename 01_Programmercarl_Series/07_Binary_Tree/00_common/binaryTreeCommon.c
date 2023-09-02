@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 10:15:34 am
+ * Last Modified: Chong Liu - 2023-09-02 10:16:05 am
  */
 
 /* 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。*/
@@ -183,8 +183,8 @@ int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
 /* ==================================================================================================== */
 /* printArray()
  *  Functionality: 打印结果数组
- *  Arguments: arguments...
- *  Return: possibleReturnValues
+ *  Arguments: int *result, int returnSize
+ *  Return: void
  *  References: document/website...
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
