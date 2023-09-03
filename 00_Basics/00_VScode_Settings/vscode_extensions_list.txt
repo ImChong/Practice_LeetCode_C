@@ -1,6 +1,7 @@
 .NET Install Tool for Extension Authors
 psioniq File Header
 C Function Header Snippet for UIUC ECE391   - [TODO] rewrite snippets in vscode snippets json
+koroFileHeader
 
 Path Intellisense
 
@@ -31,6 +32,8 @@ gitignore
 
 Markdown All in One
 Markdown Preview Enhanced
+
+Keil Assistant
 
 ROS
 ROS Snippets

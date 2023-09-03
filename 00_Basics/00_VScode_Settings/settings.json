@@ -49,62 +49,62 @@
         "background": "#ffffff",
         "opacity": 50,
         "iconColour": "gray",
-        "gutterIcon": true
+        "gutterIcon": true,
     },
     "todo-tree.highlights.customHighlight": {
         "TODO": {
             "icon": "check",
             "foreground": "black",
             "background": "yellow",
-            "iconColour": "yellow"
+            "iconColour": "yellow",
         },
         "NOTE": {
             "icon": "note",
             "foreground": "white",
             "background": "gray",
-            "iconColour": "gray"
+            "iconColour": "gray",
         },
         "COMMENT": {
             "icon": "note",
             "foreground": "white",
             "background": "gray",
-            "iconColour": "gray"
+            "iconColour": "gray",
         },
         "FIXME": {
             "foreground": "black",
             "background": "orange",
-            "iconColour": "orange"
+            "iconColour": "orange",
         },
         "BUG": {
             "icon": "bug",
             "foreground": "black",
             "background": "red",
-            "iconColour": "red"
+            "iconColour": "red",
         },
         "[ ]": {
             "icon": "check",
             "foreground": "black",
             "background": "white",
-            "iconColour": "white"
+            "iconColour": "white",
         },
         "[x]": {
             "icon": "check",
             "foreground": "white",
             "background": "green",
-            "iconColour": "green"
+            "iconColour": "green",
         },
         "DONE": {
             "icon": "check",
             "foreground": "white",
             "background": "green",
-            "iconColour": "green"
+            "iconColour": "green",
         },
         "#if": {
             "icon": "diff-renamed",
             "type": "line",
             "foreground": "white",
             "background": "blue",
-            "iconColour": "blue"
+            "iconColour": "blue",
             // "gutterIcon": false,
         },
         "#endif": {
@@ -112,7 +112,7 @@
             "type": "line",
             "foreground": "white",
             "background": "blue",
-            "iconColour": "blue"
+            "iconColour": "blue",
             // "gutterIcon": false,
         },
         "#elif": {
@@ -120,7 +120,7 @@
             "type": "line",
             "foreground": "white",
             "background": "#1085c9",
-            "iconColour": "#1085c9"
+            "iconColour": "#1085c9",
             // "gutterIcon": false,
         },
         "#else": {
@@ -128,7 +128,7 @@
             "type": "line",
             "foreground": "white",
             "background": "#1085c9",
-            "iconColour": "#1085c9"
+            "iconColour": "#1085c9",
             // "gutterIcon": false,
         },
         "Functionality": {
@@ -136,7 +136,7 @@
             "type": "line",
             "foreground": "white",
             "background": "green",
-            "iconColour": "green"
+            "iconColour": "green",
         }
     },
     "todo-tree.general.tags": [
@@ -153,7 +153,7 @@
         "#endif",
         "#elif",
         "#else",
-        "Functionality"
+        "Functionality",
     ],
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
     "cmake.configureOnOpen": false,
@@ -178,6 +178,7 @@
         "Channelx",
         "cheshirekow",
         "Chong",
+        "CMAR",
         "CMSIS",
         "CNDTR",
         "Colour",
@@ -189,10 +190,12 @@
         "dateformat",
         "dbgconf",
         "DBGMCU",
+        "depedning",
         "Eigen",
         "elif",
         "Embedfire",
         "ENDP",
+        "ETRGINJ",
         "EXTI",
         "Farbod",
         "Farshidian",
@@ -212,7 +215,9 @@
         "GPIOG",
         "GPIOH",
         "Gtest",
+        "HCLK",
         "highlightwords",
+        "HPRE",
         "ICCARM",
         "IDCODE",
         "ifndef",
@@ -229,6 +234,7 @@
         "leetcode",
         "lightgreen",
         "loginfo",
+        "MACCR",
         "malloc",
         "MAPR",
         "Microcontroller",
@@ -241,8 +247,17 @@
         "Nomentum",
         "NORFLASH",
         "NRST",
+        "nums",
         "NVIC",
+        "obkoro",
+        "PCLK",
         "Periph",
+        "Postorder",
+        "prediv",
+        "Preorder",
+        "Presc",
+        "prescaler",
+        "prescalers",
         "programmercarl",
         "psioniq",
         "pygame",
@@ -263,12 +278,19 @@
         "SMPR",
         "SRAM",
         "stackheap",
+        "stdbool",
+        "stdlib",
         "STDPERIPH",
         "STMICROELECTRONICS",
+        "strcat",
+        "strchr",
+        "strcmp",
+        "strlen",
         "STRNE",
         "struct",
         "subarray",
         "SWTRIGR",
+        "SYSCLK",
         "TDHR",
         "TDLR",
         "TDTR",
@@ -282,9 +304,11 @@
         "uvguix",
         "uvoptx",
         "uvprojx",
+        "VECT",
         "waitflags",
         "waitstatus",
         "Wakeup",
+        "Warshall",
         "WKUP",
         "WWDG",
         "yeartoyear"
@@ -313,7 +337,6 @@
         "modAuthor": "Modified By:",
         "modDate": "Last Modified:",
         "autoHeader": "autoSave"
-        // "enforceHeader": false,
     },
     "psi-header.templates": [
         {
@@ -331,5 +354,39 @@
         }
     ],
     "git.openRepositoryInParentFolders": "never",
-    "KeilAssistant.MDK.Uv4Path": "D:\\Developments\\Keil\\UV4\\UV4.exe"
+    "KeilAssistant.MDK.Uv4Path": "D:\\Developments\\Keil\\UV4\\UV4.exe",
+    // 头部注释
+    "fileheader.customMade": {
+        "FilePath": "Do not edit", // 增加此项配置即可
+        "Author": "git config user.name", // 同时获取用户名与邮箱
+        "Date": "Do not edit", // 文件创建时间(不变)
+        "LastEditors": "git config user.name", // 文件最后编辑者 与Author字段一致
+        "LastEditTime": "Do not edit", // 文件最后编辑时间
+        "custom_string_obkoro1": "=================================================================================",
+        "custom_string_obkoro1_copyright": "Copyright (c) ${now_year} by git config user.name, All Rights Reserved. ",
+        "custom_string_obkoro2": "=================================================================================",
+        "Description": "" // 介绍文件的作用、文件的入参、出参。
+    },
+    // 函数注释
+    "fileheader.cursorMode": {
+        "description": "", // 函数注释生成之后，光标移动到这里
+        "param": "", // param 开启函数参数自动提取 需要将光标放在函数行或者函数上方的空白行
+        "return": ""
+    },
+    // 插件配置项
+    "fileheader.configObj": {
+        "autoAdd": false, // 检测文件没有头部注释，自动添加文件头部注释
+        "wideSame": true, // 设置为true开启
+        "wideNum": 13, // 字段长度 默认为13
+        // 自动添加头部注释黑名单
+        "prohibitAutoAdd": [
+            "json",
+            "md"
+        ],
+        "moveCursor": true, // 自动移动光标到Description所在行
+        "throttleTime": 1000, // 对同一个文件 需要过1秒钟再次修改文件并保存才会更新注释
+        "specialOptions":{
+            "Date": "CreateDate"
+        }
+    }
 }
