@@ -1,92 +1,7 @@
 # 代码随想录系列刷题练习
 
-- [代码随想录系列刷题练习](#代码随想录系列刷题练习)
-  - [01\_Array：数组](#01_array数组)
-    - [一维数组](#一维数组)
-    - [二维数组](#二维数组)
-    - [访问数组元素](#访问数组元素)
-    - [动态数组](#动态数组)
-    - [优缺点](#优缺点)
-  - [02\_Linked\_List：链表](#02_linked_list链表)
-    - [单向链表](#单向链表)
-    - [双向链表](#双向链表)
-    - [优缺点](#优缺点-1)
-  - [03\_Hash\_Table：哈希表](#03_hash_table哈希表)
-    - [基础实现](#基础实现)
-    - [示例结构定义](#示例结构定义)
-    - [基础操作](#基础操作)
-    - [优缺点](#优缺点-2)
-  - [04\_String：字符串](#04_string字符串)
-    - [字符串的定义和初始化](#字符串的定义和初始化)
-    - [常用字符串操作](#常用字符串操作)
-    - [字符串与内存](#字符串与内存)
-  - [05\_Double\_Pointer：双指针算法](#05_double_pointer双指针算法)
-    - [数组去重](#数组去重)
-    - [快慢指针](#快慢指针)
-    - [二分搜索](#二分搜索)
-    - [双指针在排序数组中查找和为特定值的两个元素](#双指针在排序数组中查找和为特定值的两个元素)
-  - [06\_Stack\_Queue：栈和队列](#06_stack_queue栈和队列)
-    - [栈（Stack）](#栈stack)
-    - [队列（Queue）](#队列queue)
-  - [07\_Binary\_Tree：二叉树](#07_binary_tree二叉树)
-  - [08\_Backtracking：回溯算法](#08_backtracking回溯算法)
-  - [09\_Greedy：贪心算法](#09_greedy贪心算法)
-  - [10\_Dynamic\_Programming：动态规划算法](#10_dynamic_programming动态规划算法)
-  - [11\_Monotone\_Stack：单调栈](#11_monotone_stack单调栈)
-  - [12\_Graph\_Theory：单调栈](#12_graph_theory单调栈)
-
-
 <!-- 数组 -->
-## 01_Array：数组
-在C语言中，数组（Array）是一种数据结构，用于存储多个相同类型的数据项。数组的所有元素存储在连续的内存位置上。数组可以有一维、二维或多维，并且每个元素可以通过索引来访问。
-
-### 一维数组
-一维数组可以看作是一个列表。例如，一个包含5个整数的一维数组可以声明如下：
-```c
-int arr[5];
-```
-在这里，`arr` 是一个包含5个整数的数组。
-
-初始化数组：
-```c
-int arr[5] = {1, 2, 3, 4, 5};
-```
-
-### 二维数组
-二维数组可以看作是一个表格，有行和列。例如：
-```c
-int matrix[2][3];
-```
-这是一个有2行和3列的二维数组。
-
-初始化二维数组：
-```c
-int matrix[2][3] = {
-    {1, 2, 3},
-    {4, 5, 6}
-};
-```
-
-### 访问数组元素
-数组元素可以通过索引来访问。注意，C语言的数组索引是从0开始的。
-```c
-int first_element = arr[0];  // 访问第一个元素
-int second_element = arr[1]; // 访问第二个元素
-```
-
-### 动态数组
-C语言标准库提供了动态内存分配的函数，如 `malloc()`，以动态地创建数组。
-```c
-int *dynamic_array;
-dynamic_array = (int *)malloc(5 * sizeof(int));
-```
-在这个例子中，`dynamic_array` 是一个指针，指向一个有5个整数的数组。
-
-记住，在使用 `malloc()` 分配的内存后，最终需要使用 `free()` 函数来释放这些内存。
-
-### 优缺点
-数组的主要优点是访问速度快，因为它们存储在连续的内存位置上。但是，数组的大小是固定的，这是它的一个主要缺点，尤其是在不知道需要多少内存的情况下。
-
+[数组](01_Array/README.md)
 
 <!-- 链表 -->
 ## 02_Linked_List：链表
@@ -364,6 +279,82 @@ int dequeue() {
 
 <!-- 二叉树 -->
 ## 07_Binary_Tree：二叉树
+在C语言中，二叉树（Binary Tree）是一种特殊的树形数据结构，在这种结构中，每个节点最多有两个子节点，通常被称为“左子节点”和“右子节点”。
+
+### 定义
+一个典型的二叉树节点在C语言中可以用结构体（struct）来定义：
+```c
+struct Node {
+    int data;  // 节点存储的数据
+    struct Node* left;  // 指向左子节点的指针
+    struct Node* right;  // 指向右子节点的指针
+};
+```
+
+### 创建和初始化
+以下是如何创建和初始化一个简单的二叉树的例子：
+```c
+#include <stdlib.h>
+
+struct Node* newNode(int data) {
+    struct Node* node = (struct Node*)malloc(sizeof(struct Node));
+    node->data = data;
+    node->left = NULL;
+    node->right = NULL;
+    return node;
+}
+
+int main() {
+    // 创建根节点
+    struct Node* root = newNode(1);
+
+    // 添加左子节点和右子节点
+    root->left = newNode(2);
+    root->right = newNode(3);
+
+    // 为左子节点添加子节点
+    root->left->left = newNode(4);
+    root->left->right = newNode(5);
+
+    // 为右子节点添加子节点
+    root->right->left = newNode(6);
+    root->right->right = newNode(7);
+
+    // 此时，我们有了一个拥有7个节点的二叉树。
+
+    return 0;
+}
+```
+
+### 遍历
+二叉树有多种遍历方法，包括：
+
+1. **前序遍历（Preorder）**：先访问根节点，然后遍历左子树，最后遍历右子树。
+2. **中序遍历（Inorder）**：先遍历左子树，然后访问根节点，最后遍历右子树。
+3. **后序遍历（Postorder）**：先遍历左子树，然后遍历右子树，最后访问根节点。
+
+例如，前序遍历的代码可能如下：
+```c
+void preorder(struct Node* root) {
+    if (root == NULL) {
+        return;
+    }
+    printf("%d ", root->data);
+    preorder(root->left);
+    preorder(root->right);
+}
+```
+
+### 应用
+二叉树在计算机科学和编程中有广泛的应用，包括但不限于：
+
+1. **二叉搜索树（Binary Search Trees）**：用于高效地搜索、插入和删除数据。
+2. **堆（Heaps）**：用于实现优先队列。
+3. **平衡树（如AVL Trees, Red-Black Trees等）**：用于维护排序数据的高效访问和修改。
+4. **用于解析表达式**：编译器可能使用二叉树来解析和求值数学或逻辑表达式。
+5. **文件系统的目录结构**：可以看作是一种树形结构，虽然通常不是二叉树。
+
+二叉树是数据结构和算法中非常重要的一个概念，掌握它有助于解决许多复杂的问题。
 
 <!-- 回溯算法 -->
 ## 08_Backtracking：回溯算法
