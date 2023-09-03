@@ -1,14 +1,14 @@
 # 代码随想录系列刷题练习
 
-[数组](01_Array/README.md)                      <!-- 数组 -->
+[01_Array: 数组](01_Array/README.md)                      <!-- 数组 -->
 
-[链表](02_Linked_List/README.md)                <!-- 链表 -->
+[02_Linked_List: 链表](02_Linked_List/README.md)                <!-- 链表 -->
 
-[链表](03_Hash_Table/README.md)                 <!-- 哈希表 -->
+[03_Hash_Table: 链表](03_Hash_Table/README.md)                 <!-- 哈希表 -->
 
-[字符串](04_String/README.md)                   <!-- 字符串 -->
+[04_String: 字符串](04_String/README.md)                   <!-- 字符串 -->
 
-[双指针算法](05_Double_Pointer/README.md)       <!-- 双指针算法 -->
+[05_Double_Pointer: 双指针算法](05_Double_Pointer/README.md)       <!-- 双指针算法 -->
 
 
 
