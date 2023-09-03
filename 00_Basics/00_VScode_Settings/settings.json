@@ -384,7 +384,7 @@
             "md"
         ],
         "moveCursor": true, // 自动移动光标到Description所在行
-        "throttleTime": 1000, // 对同一个文件 需要过1秒钟再次修改文件并保存才会更新注释
+        "throttleTime": 60000, // 对同一个文件 需要过1秒钟再次修改文件并保存才会更新注释
         "specialOptions":{
             "Date": "CreateDate"
         }
