@@ -49,62 +49,62 @@
         "background": "#ffffff",
         "opacity": 50,
         "iconColour": "gray",
-        "gutterIcon": true,
+        "gutterIcon": true
     },
     "todo-tree.highlights.customHighlight": {
         "TODO": {
             "icon": "check",
             "foreground": "black",
             "background": "yellow",
-            "iconColour": "yellow",
+            "iconColour": "yellow"
         },
         "NOTE": {
             "icon": "note",
             "foreground": "white",
             "background": "gray",
-            "iconColour": "gray",
+            "iconColour": "gray"
         },
         "COMMENT": {
             "icon": "note",
             "foreground": "white",
             "background": "gray",
-            "iconColour": "gray",
+            "iconColour": "gray"
         },
         "FIXME": {
             "foreground": "black",
             "background": "orange",
-            "iconColour": "orange",
+            "iconColour": "orange"
         },
         "BUG": {
             "icon": "bug",
             "foreground": "black",
             "background": "red",
-            "iconColour": "red",
+            "iconColour": "red"
         },
         "[ ]": {
             "icon": "check",
             "foreground": "black",
             "background": "white",
-            "iconColour": "white",
+            "iconColour": "white"
         },
         "[x]": {
             "icon": "check",
             "foreground": "white",
             "background": "green",
-            "iconColour": "green",
+            "iconColour": "green"
         },
         "DONE": {
             "icon": "check",
             "foreground": "white",
             "background": "green",
-            "iconColour": "green",
+            "iconColour": "green"
         },
         "#if": {
             "icon": "diff-renamed",
             "type": "line",
             "foreground": "white",
             "background": "blue",
-            "iconColour": "blue",
+            "iconColour": "blue"
             // "gutterIcon": false,
         },
         "#endif": {
@@ -112,7 +112,7 @@
             "type": "line",
             "foreground": "white",
             "background": "blue",
-            "iconColour": "blue",
+            "iconColour": "blue"
             // "gutterIcon": false,
         },
         "#elif": {
@@ -120,7 +120,7 @@
             "type": "line",
             "foreground": "white",
             "background": "#1085c9",
-            "iconColour": "#1085c9",
+            "iconColour": "#1085c9"
             // "gutterIcon": false,
         },
         "#else": {
@@ -128,7 +128,7 @@
             "type": "line",
             "foreground": "white",
             "background": "#1085c9",
-            "iconColour": "#1085c9",
+            "iconColour": "#1085c9"
             // "gutterIcon": false,
         },
         "Functionality": {
@@ -136,7 +136,7 @@
             "type": "line",
             "foreground": "white",
             "background": "green",
-            "iconColour": "green",
+            "iconColour": "green"
         }
     },
     "todo-tree.general.tags": [
@@ -153,7 +153,7 @@
         "#endif",
         "#elif",
         "#else",
-        "Functionality",
+        "Functionality"
     ],
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
     "cmake.configureOnOpen": false,
@@ -229,6 +229,7 @@
         "Kbytes",
         "Keil",
         "killexe",
+        "koro",
         "labuladong",
         "LCKR",
         "leetcode",
@@ -370,6 +371,7 @@
     // 函数注释
     "fileheader.cursorMode": {
         "description": "", // 函数注释生成之后，光标移动到这里
+        "custom_string_obkoro1": "=================================================================================",
         "param": "", // param 开启函数参数自动提取 需要将光标放在函数行或者函数上方的空白行
         "return": ""
     },
@@ -384,7 +386,7 @@
             "md"
         ],
         "moveCursor": true, // 自动移动光标到Description所在行
-        "throttleTime": 60000, // 对同一个文件 需要过1秒钟再次修改文件并保存才会更新注释
+        "throttleTime": 60000, // 对同一个文件 需要过60秒钟再次修改文件并保存才会更新注释
         "specialOptions":{
             "Date": "CreateDate"
         }
