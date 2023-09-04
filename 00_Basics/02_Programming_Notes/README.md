@@ -1,14 +1,8 @@
 # 1. C 语言编码知识笔记
+
 - [1. C 语言编码知识笔记](#1-c-语言编码知识笔记)
   - [1.1. 研发通识](#11-研发通识)
   - [1.2. 内存分配和初始化](#12-内存分配和初始化)
-    - [1.2.1. struct TreeNode \*root; 和 struct TreeNode \*root = malloc(sizeof(struct TreeNode)); 有什么区别？](#121-struct-treenode-root-和-struct-treenode-root--mallocsizeofstruct-treenode-有什么区别)
-    - [1.2.2. struct TreeNode \*stk\[MAX\_SIZE\]; 和 struct TreeNode \*\*stk = (struct TreeNode \*\*)malloc(sizeof(struct TreeNode \*) \* MAX\_SIZE); 的区别？](#122-struct-treenode-stkmax_size-和-struct-treenode-stk--struct-treenode-mallocsizeofstruct-treenode---max_size-的区别)
-      - [1.2.2.1. 堆栈存储 vs 堆存储](#1221-堆栈存储-vs-堆存储)
-      - [1.2.2.2. 生命周期](#1222-生命周期)
-      - [1.2.2.3. 可扩展性](#1223-可扩展性)
-      - [1.2.2.4. 初始化](#1224-初始化)
-      - [1.2.2.5. 语法和类型](#1225-语法和类型)
 
 ## 1.1. 研发通识
 
@@ -36,7 +30,7 @@
 
 ## 1.2. 内存分配和初始化
 > ### 1.2.1. struct TreeNode *root; 和 struct TreeNode *root = malloc(sizeof(struct TreeNode)); 有什么区别？
-> 
+>
 > ```c
 > struct TreeNode *root;
 > ```
@@ -48,10 +42,9 @@
 > 1. 它声明了一个名为 `root` 的指针，用于指向 `struct TreeNode` 类型的对象。
 > 2. 它使用 `malloc` 函数分配了足够存储一个 `struct TreeNode` 对象的内存。`sizeof(struct TreeNode)` 计算所需的内存大小。
 > 3. `malloc` 返回的内存地址被赋给了 `root` 指针。
-> 
+>
 > 这样，`root` 就指向了一个有效的内存地址，您可以安全地对该内存进行读写操作（假设 `malloc` 成功，没有返回 `NULL`）。
-> 
-> 
+>
 > ### 1.2.2. struct TreeNode *stk[MAX_SIZE]; 和 struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE); 的区别？
 > ```c
 > struct TreeNode *stk[MAX_SIZE];
@@ -76,5 +69,5 @@
 > #### 1.2.2.5. 语法和类型
 > - `struct TreeNode *stk[MAX_SIZE];` 是一个指针数组。
 > - `struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);` 是一个指向指针数组的指针。
-> 
+>
 > 尽管这两种方式都可以达到相似的目的，但它们适用于不同的场景和需求。堆内存更适用于动态和长寿命的数据，而栈内存更适用于短寿命和固定大小的数据。
