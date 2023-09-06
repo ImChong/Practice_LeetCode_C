@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-06 19:51:32
+ * @LastEditTime : 2023-09-06 19:52:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -23,7 +23,7 @@ typedef struct {
     int *stk;           /* 栈数组：用于存储数据 */
     int stkSize;        /* 栈大小：记录当前栈的大小 */
     int stkCapacity;    /* 栈容量：记录栈大小的最大值 */
-} Stack;
+} Stack;                /* 重命名结构体为 Stack */
 
 /**
  * @description: 创建栈
@@ -92,9 +92,9 @@ void stackFree(Stack* obj) {
 
 /* NOTE: 队列结构体 */
 typedef struct {
-    Stack *inStack;
-    Stack *outStack;
-} MyQueue;
+    Stack *inStack;     /* 入队栈 */
+    Stack *outStack;    /* 出队栈 */
+} MyQueue;              /* 重命名结构体为 MyQueue */
 
 /**
  * @description: 创建队列
