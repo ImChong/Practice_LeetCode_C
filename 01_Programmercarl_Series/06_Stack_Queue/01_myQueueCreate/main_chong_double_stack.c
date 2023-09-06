@@ -121,11 +121,10 @@ void in2out(MyQueue *obj) {
     }
 }
 
-/* 入队 */
 /**
- * @description:
+ * @description: 入队
  * =================================================================================
- * @param {MyQueue*} obj
+ * @param {MyQueue *} obj
  * @param {int} x
  * @return {*}
  */
@@ -133,9 +132,8 @@ void myQueuePush(MyQueue* obj, int x) {
     stackPush(obj->inStack, x);
 }
 
-/* 出队 */
 /**
- * @description:
+ * @description: 出队
  * =================================================================================
  * @param {MyQueue*} obj
  * @return {*}
@@ -149,9 +147,8 @@ int myQueuePop(MyQueue* obj) {
     return x;
 }
 
-/* 查看队首元素 */
 /**
- * @description:
+ * @description: 查看队首元素
  * =================================================================================
  * @param {MyQueue*} obj
  * @return {*}
@@ -163,9 +160,8 @@ int myQueuePeek(MyQueue* obj) {
     return stackTop(obj->outStack);
 }
 
-/* 确认队是否为空 */
 /**
- * @description:
+ * @description: 确认队是否为空
  * =================================================================================
  * @param {MyQueue*} obj
  * @return {*}
@@ -174,9 +170,8 @@ bool myQueueEmpty(MyQueue* obj) {
     return (stackEmpty(obj->inStack) && stackEmpty(obj->outStack));
 }
 
-/* 释放队列空间 */
 /**
- * @description:
+ * @description: 释放队列空间
  * =================================================================================
  * @param {MyQueue*} obj
  * @return {*}

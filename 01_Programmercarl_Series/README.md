@@ -10,7 +10,7 @@
 <!-- 双指针算法 -->
 [05_Double_Pointer: 双指针算法](05_Double_Pointer/)
 <!-- 栈和队列 -->
-[06_Stack_Queue: 双指针算法](06_Stack_Queue/)
+[06_Stack_Queue: 栈和队列](06_Stack_Queue/)
 <!-- 二叉树 -->
 [07_Binary_Tree: 二叉树](07_Binary_Tree/)
 <!-- 回溯算法 -->
