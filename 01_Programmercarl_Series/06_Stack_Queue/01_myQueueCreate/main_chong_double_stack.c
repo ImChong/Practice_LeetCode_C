@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-06 19:40:14
+ * @LastEditTime : 2023-09-06 19:48:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -16,10 +16,9 @@
 #include <stdlib.h>
 
 /* ==================================================================================================== */
-/* ==================================================================================================== */
-/* TODO: 目标函数 */
 /* TODO: 添加注释 */
-/* 栈结构体 */
+/* ==================================================================================================== */
+/* NOTE: 栈结构体 */
 typedef struct {
     int *stk;           /* 栈数组：用于存储数据 */
     int stkSize;        /* 栈大小：记录当前栈的大小 */
@@ -43,11 +42,11 @@ Stack *stackCreate(int capacity) {
 /**
  * @description: 入栈
  * =================================================================================
- * @param {Stack*} obj
+ * @param {Stack *} obj
  * @param {int} x
  * @return {void}
  */
-void stackPush(Stack* obj, int x) {
+void stackPush(Stack *obj, int x) {
     obj->stk[obj->stkSize++] = x;                       /* 将数据存入栈结构体内数组的【栈大小】索引位置，存入后将【栈大小】+ 1 */
 }
 
@@ -71,28 +70,36 @@ int stackTop(Stack* obj) {
     return obj->stk[obj->stkSize - 1];
 }
 
-/* 确认栈是否为空 */
+/**
+ * @description: 确认栈是否为空
+ * =================================================================================
+ * @param {Stack *} obj
+ * @return {bool} 栈是否为空
+ */
 bool stackEmpty(Stack* obj) {
     return obj->stkSize == 0;
 }
 
-/* 释放栈空间 */
+/**
+ * @description: 释放栈空间
+ * =================================================================================
+ * @param {Stack *} obj
+ * @return {void}
+ */
 void stackFree(Stack* obj) {
     free(obj->stk);
 }
 
-/* 队列结构体 */
+/* NOTE: 队列结构体 */
 typedef struct {
     Stack *inStack;
     Stack *outStack;
 } MyQueue;
 
-/* 创建队列 */
 /**
- * @description:
+ * @description: 创建队列
  * =================================================================================
- * @param {MyQueue} *ret
- * @return {*}
+ * @return {MyQueue *} ret
  */
 MyQueue* myQueueCreate(void) {
     MyQueue *ret = (MyQueue *)malloc(sizeof(MyQueue));
@@ -101,7 +108,12 @@ MyQueue* myQueueCreate(void) {
     return ret;
 }
 
-/* 从输入栈移动到输出栈 */
+/**
+ * @description: 从输入栈移动到输出栈
+ * =================================================================================
+ * @param {MyQueue *} obj
+ * @return {*}
+ */
 void in2out(MyQueue *obj) {
     while (!stackEmpty(obj->inStack)) {
         stackPush(obj->outStack, stackTop(obj->inStack));
@@ -110,11 +122,24 @@ void in2out(MyQueue *obj) {
 }
 
 /* 入队 */
+/**
+ * @description:
+ * =================================================================================
+ * @param {MyQueue*} obj
+ * @param {int} x
+ * @return {*}
+ */
 void myQueuePush(MyQueue* obj, int x) {
     stackPush(obj->inStack, x);
 }
 
 /* 出队 */
+/**
+ * @description:
+ * =================================================================================
+ * @param {MyQueue*} obj
+ * @return {*}
+ */
 int myQueuePop(MyQueue* obj) {
     if (stackEmpty(obj->outStack)) {
         in2out(obj);
@@ -125,6 +150,12 @@ int myQueuePop(MyQueue* obj) {
 }
 
 /* 查看队首元素 */
+/**
+ * @description:
+ * =================================================================================
+ * @param {MyQueue*} obj
+ * @return {*}
+ */
 int myQueuePeek(MyQueue* obj) {
     if (stackEmpty(obj->outStack)) {
         in2out(obj);
@@ -133,11 +164,23 @@ int myQueuePeek(MyQueue* obj) {
 }
 
 /* 确认队是否为空 */
+/**
+ * @description:
+ * =================================================================================
+ * @param {MyQueue*} obj
+ * @return {*}
+ */
 bool myQueueEmpty(MyQueue* obj) {
     return (stackEmpty(obj->inStack) && stackEmpty(obj->outStack));
 }
 
 /* 释放队列空间 */
+/**
+ * @description:
+ * =================================================================================
+ * @param {MyQueue*} obj
+ * @return {*}
+ */
 void myQueueFree(MyQueue* obj) {
     stackFree(obj->inStack);
     stackFree(obj->outStack);
