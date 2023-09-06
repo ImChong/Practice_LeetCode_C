@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-06 20:02:43
+ * @LastEditTime : 2023-09-06 20:08:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -109,7 +109,7 @@ MyQueue *myQueueCreate(void) {
 }
 
 /**
- * @description: 从入队栈移动到出队栈
+ * @description: 从入队栈反向并移动至出队栈
  * =================================================================================
  * @param {MyQueue *} obj
  * @return {void}
@@ -129,7 +129,7 @@ void in2out(MyQueue *obj) {
  * @return {void}
  */
 void myQueuePush(MyQueue* obj, int x) {
-    stackPush(obj->inStack, x);
+    stackPush(obj->inStack, x);                             /* 将元素放入入队栈 */
 }
 
 /**
@@ -139,8 +139,8 @@ void myQueuePush(MyQueue* obj, int x) {
  * @return {int} x
  */
 int myQueuePop(MyQueue* obj) {
-    if (stackEmpty(obj->outStack)) {
-        in2out(obj);
+    if (stackEmpty(obj->outStack)) {                        /* 如果出队栈为空 */
+        in2out(obj);                                            /* 将入队栈内所有元素反向放入出队栈 */
     }
     int x = stackTop(obj->outStack);
     stackPop(obj->outStack);
