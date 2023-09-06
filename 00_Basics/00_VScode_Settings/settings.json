@@ -77,7 +77,7 @@
         },
         "BUG": {
             "icon": "bug",
-            "foreground": "black",
+            "foreground": "white",
             "background": "red",
             "iconColour": "red"
         },
