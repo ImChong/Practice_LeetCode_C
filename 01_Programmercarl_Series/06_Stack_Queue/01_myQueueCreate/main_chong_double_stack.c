@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-06 20:16:31
+ * @LastEditTime : 2023-09-06 20:31:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -128,7 +128,7 @@ void in2out(MyQueue *obj) {
  * @param {int} x
  * @return {void}
  */
-void myQueuePush(MyQueue* obj, int x) {
+void myQueuePush(MyQueue *obj, int x) {
     stackPush(obj->inStack, x);                             /* 将元素放入入队栈 */
 }
 
@@ -138,7 +138,7 @@ void myQueuePush(MyQueue* obj, int x) {
  * @param {MyQueue *} obj
  * @return {int} x
  */
-int myQueuePop(MyQueue* obj) {
+int myQueuePop(MyQueue *obj) {
     if (stackEmpty(obj->outStack)) {                        /* 如果出队栈为空 */
         in2out(obj);                                            /* 将入队栈内所有元素反向放入出队栈 */
     }
@@ -153,11 +153,11 @@ int myQueuePop(MyQueue* obj) {
  * @param {MyQueue *} obj
  * @return {int} 队首元素
  */
-int myQueuePeek(MyQueue* obj) {
-    if (stackEmpty(obj->outStack)) {
-        in2out(obj);
+int myQueuePeek(MyQueue *obj) {
+    if (stackEmpty(obj->outStack)) {                        /* 如果出队栈为空 */
+        in2out(obj);                                            /* 将入队栈内所有元素反向放入出队栈 */
     }
-    return stackTop(obj->outStack);
+    return stackTop(obj->outStack);                         /* 返回出队栈栈顶元素 */
 }
 
 /**
@@ -167,7 +167,7 @@ int myQueuePeek(MyQueue* obj) {
  * @return {bool} 队列是否为空
  */
 bool myQueueEmpty(MyQueue* obj) {
-    return (stackEmpty(obj->inStack) && stackEmpty(obj->outStack));
+    return (stackEmpty(obj->inStack) && stackEmpty(obj->outStack));     /* 返回入队栈和出队栈是否都为空 */
 }
 
 /**
@@ -177,8 +177,8 @@ bool myQueueEmpty(MyQueue* obj) {
  * @return {*}
  */
 void myQueueFree(MyQueue* obj) {
-    stackFree(obj->inStack);
-    stackFree(obj->outStack);
+    stackFree(obj->inStack);                                /* 释放入队栈空间 */
+    stackFree(obj->outStack);                               /* 释放出队栈空间 */
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
