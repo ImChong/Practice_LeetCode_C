@@ -2,9 +2,9 @@
 
 C language leetcode practice guide:
 
-- [Basics](00_Basics/README.md) - common C language tips / functions
-- [Programmercarl_Series](01_Programmercarl_Series/README.md) - [代码随想录系列](https://programmercarl.com/)
-- [Labuladong_Series](02_Labuladong_Series/README.md) - [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
+- [Basics](00_Basics/) - common C language tips / functions
+- [Programmercarl_Series](01_Programmercarl_Series/) - [代码随想录系列](https://programmercarl.com/)
+- [Labuladong_Series](02_Labuladong_Series/) - [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
 
 # Versions
 
