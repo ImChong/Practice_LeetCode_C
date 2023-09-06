@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-06 19:48:23
+ * @LastEditTime : 2023-09-06 19:51:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -53,21 +53,21 @@ void stackPush(Stack *obj, int x) {
 /**
  * @description: 出栈
  * =================================================================================
- * @param {Stack*} obj
+ * @param {Stack *} obj
  * @return {void}
  */
-void stackPop(Stack* obj) {
+void stackPop(Stack *obj) {
     obj->stkSize--;                                     /* 将【栈大小】- 1 */
 }
 
 /**
  * @description: 查看栈顶元素
  * =================================================================================
- * @param {Stack*} obj
+ * @param {Stack *} obj
  * @return {int} 栈顶元素
  */
-int stackTop(Stack* obj) {
-    return obj->stk[obj->stkSize - 1];
+int stackTop(Stack *obj) {
+    return obj->stk[obj->stkSize - 1];                  /* 返回栈结构体内【栈大小 - 1】索引位置处的数据 */
 }
 
 /**
@@ -77,7 +77,7 @@ int stackTop(Stack* obj) {
  * @return {bool} 栈是否为空
  */
 bool stackEmpty(Stack* obj) {
-    return obj->stkSize == 0;
+    return obj->stkSize == 0;                           /* 返回确认 stkSize 栈大小是否为0 */
 }
 
 /**
@@ -87,7 +87,7 @@ bool stackEmpty(Stack* obj) {
  * @return {void}
  */
 void stackFree(Stack* obj) {
-    free(obj->stk);
+    free(obj->stk);                                     /* 释放栈结构体内 stk 数组的空间 */
 }
 
 /* NOTE: 队列结构体 */
