@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-06 19:52:08
+ * @LastEditTime : 2023-09-06 19:58:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -101,23 +101,23 @@ typedef struct {
  * =================================================================================
  * @return {MyQueue *} ret
  */
-MyQueue* myQueueCreate(void) {
-    MyQueue *ret = (MyQueue *)malloc(sizeof(MyQueue));
-    ret->inStack = stackCreate(100);
-    ret->outStack = stackCreate(100);
-    return ret;
+MyQueue *myQueueCreate(void) {
+    MyQueue *ret = (MyQueue *)malloc(sizeof(MyQueue));  /* 为队列结构体分配空间 */
+    ret->inStack = stackCreate(100);                    /* 入队栈初始化可容纳 100 数据 */
+    ret->outStack = stackCreate(100);                   /* 出队栈初始化可容纳 100 数据 */
+    return ret;                                         /* 返回创建的队列结构体 */
 }
 
 /**
- * @description: 从输入栈移动到输出栈
+ * @description: 从入队栈移动到出队栈
  * =================================================================================
  * @param {MyQueue *} obj
- * @return {*}
+ * @return {void}
  */
 void in2out(MyQueue *obj) {
-    while (!stackEmpty(obj->inStack)) {
-        stackPush(obj->outStack, stackTop(obj->inStack));
-        stackPop(obj->inStack);
+    while (!stackEmpty(obj->inStack)) {                     /* 当入队栈不为空时 */
+        stackPush(obj->outStack, stackTop(obj->inStack));       /* 将入队栈的栈顶元素放入出队栈 */
+        stackPop(obj->inStack);                                 /* 去除入队栈的栈顶元素 */
     }
 }
 
