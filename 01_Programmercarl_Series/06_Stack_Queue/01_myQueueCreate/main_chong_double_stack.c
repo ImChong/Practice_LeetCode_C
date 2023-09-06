@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-06 20:08:33
+ * @LastEditTime : 2023-09-06 20:16:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -142,9 +142,9 @@ int myQueuePop(MyQueue* obj) {
     if (stackEmpty(obj->outStack)) {                        /* 如果出队栈为空 */
         in2out(obj);                                            /* 将入队栈内所有元素反向放入出队栈 */
     }
-    int x = stackTop(obj->outStack);
-    stackPop(obj->outStack);
-    return x;
+    int x = stackTop(obj->outStack);                        /* 取出出队栈的栈顶元素，并赋值给 x */
+    stackPop(obj->outStack);                                /* 移除出队栈内的栈顶元素 */
+    return x;                                               /* 返回出队栈栈顶元素 x */
 }
 
 /**
