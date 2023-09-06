@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-06 19:58:09
+ * @LastEditTime : 2023-09-06 20:02:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -126,7 +126,7 @@ void in2out(MyQueue *obj) {
  * =================================================================================
  * @param {MyQueue *} obj
  * @param {int} x
- * @return {*}
+ * @return {void}
  */
 void myQueuePush(MyQueue* obj, int x) {
     stackPush(obj->inStack, x);
@@ -135,8 +135,8 @@ void myQueuePush(MyQueue* obj, int x) {
 /**
  * @description: 出队
  * =================================================================================
- * @param {MyQueue*} obj
- * @return {*}
+ * @param {MyQueue *} obj
+ * @return {int} x
  */
 int myQueuePop(MyQueue* obj) {
     if (stackEmpty(obj->outStack)) {
@@ -150,8 +150,8 @@ int myQueuePop(MyQueue* obj) {
 /**
  * @description: 查看队首元素
  * =================================================================================
- * @param {MyQueue*} obj
- * @return {*}
+ * @param {MyQueue *} obj
+ * @return {int} 队首元素
  */
 int myQueuePeek(MyQueue* obj) {
     if (stackEmpty(obj->outStack)) {
@@ -161,10 +161,10 @@ int myQueuePeek(MyQueue* obj) {
 }
 
 /**
- * @description: 确认队是否为空
+ * @description: 确认队列是否为空
  * =================================================================================
- * @param {MyQueue*} obj
- * @return {*}
+ * @param {MyQueue *} obj
+ * @return {bool} 队列是否为空
  */
 bool myQueueEmpty(MyQueue* obj) {
     return (stackEmpty(obj->inStack) && stackEmpty(obj->outStack));
@@ -173,7 +173,7 @@ bool myQueueEmpty(MyQueue* obj) {
 /**
  * @description: 释放队列空间
  * =================================================================================
- * @param {MyQueue*} obj
+ * @param {MyQueue *} obj
  * @return {*}
  */
 void myQueueFree(MyQueue* obj) {
