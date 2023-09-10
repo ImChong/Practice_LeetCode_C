@@ -21,10 +21,10 @@
 #define LEN 20
 
 typedef struct {
-    int *data;
-    int head;
-    int tail;
-    int size;
+    int *data;      /* 数据 */
+    int head;       /* 队列头 */
+    int tail;       /* 队列尾 */
+    int size;       /* 队列大小 */
 } Queue;
 
 typedef struct {
