@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-10 18:24:18
+ * @LastEditTime : 2023-09-10 18:25:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -85,6 +85,12 @@ bool myStackEmpty(MyStack* obj) {
     return (obj->top == NULL);
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {MyStack*} obj
+ * @return {*}
+ */
 void myStackFree(MyStack* obj) {
     while (obj->top != NULL) {
         ListNode *node = obj->top;
