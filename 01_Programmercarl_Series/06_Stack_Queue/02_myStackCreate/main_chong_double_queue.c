@@ -1,6 +1,19 @@
-/* 225. 用队列实现栈：https://leetcode.cn/problems/implement-stack-using-queues/ */
-/* https://programmercarl.com/0225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.html */
-/* https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.md */
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\06_Stack_Queue\02_myStackCreate\main_chong_double_queue.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-08-25 20:30:05
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-10 18:16:49
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 225. 用队列实现栈：https://leetcode.cn/problems/implement-stack-using-queues/
+ * https://programmercarl.com/0225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.html
+ * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.md
+ */
+/*  */
+/*  */
+/*  */
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -9,8 +22,6 @@
 /* ==================================================================================================== */
 /* 方法一：两个队列 */
 /* ==================================================================================================== */
-/* TODO: 目标函数 */
-/* TODO: 添加注释 - 出错了添加打印或者debug进行定位 */
 #define LEN 20
 
 typedef struct {
