@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-10 18:16:49
+ * @LastEditTime : 2023-09-10 18:21:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -36,6 +36,12 @@ typedef struct {
     Queue *queue2;
 } MyStack;
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {int} k
+ * @return {*}
+ */
 Queue *initQueue(int k) {
     Queue *obj = (Queue *)malloc(sizeof(Queue));
     obj->data = (int *)malloc(sizeof(int) * k);
@@ -45,6 +51,13 @@ Queue *initQueue(int k) {
     return obj;
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {Queue} *obj
+ * @param {int} x
+ * @return {*}
+ */
 void enQueue(Queue *obj, int x) {
     if (obj->head == -1) {
         obj->head = 0;
@@ -53,6 +66,12 @@ void enQueue(Queue *obj, int x) {
     obj->data[obj->tail] = x;
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {Queue} *obj
+ * @return {*}
+ */
 int deQueue(Queue *obj) {
     int a = obj->data[obj->head];
     if (obj->head == obj->tail) {
@@ -64,10 +83,21 @@ int deQueue(Queue *obj) {
     return a;
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {Queue} *obj
+ * @return {*}
+ */
 int isQueueEmpty(Queue *obj) {
     return obj->head == -1;
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @return {*}
+ */
 MyStack* myStackCreate() {
     MyStack *obj = (MyStack *)malloc(sizeof(MyStack));
     obj->queue1 = initQueue(LEN);
@@ -75,6 +105,13 @@ MyStack* myStackCreate() {
     return obj;
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {MyStack*} obj
+ * @param {int} x
+ * @return {*}
+ */
 void myStackPush(MyStack* obj, int x) {
     if (isQueueEmpty(obj->queue1)) {
         enQueue(obj->queue2, x);
@@ -83,6 +120,12 @@ void myStackPush(MyStack* obj, int x) {
     }
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {MyStack*} obj
+ * @return {*}
+ */
 int myStackPop(MyStack* obj) {
     if (isQueueEmpty(obj->queue1)) {
         while (obj->queue2->head != obj->queue2->tail) {
@@ -96,6 +139,12 @@ int myStackPop(MyStack* obj) {
     return deQueue(obj->queue1);
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {MyStack*} obj
+ * @return {*}
+ */
 int myStackTop(MyStack* obj) {
     if (isQueueEmpty(obj->queue1)) {
         return obj->queue2->data[obj->queue2->tail];
@@ -103,6 +152,12 @@ int myStackTop(MyStack* obj) {
     return obj->queue1->data[obj->queue1->tail];
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {MyStack*} obj
+ * @return {*}
+ */
 bool myStackEmpty(MyStack* obj) {
     if (obj->queue1->head == -1 && obj->queue2->head == -1) {
         return true;
@@ -110,6 +165,12 @@ bool myStackEmpty(MyStack* obj) {
     return false;
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {MyStack*} obj
+ * @return {*}
+ */
 void myStackFree(MyStack* obj) {
     free(obj->queue1->data);
     obj->queue1->data = NULL;
@@ -125,8 +186,14 @@ void myStackFree(MyStack* obj) {
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-/* NOTE：主函数 */
-int main(int argc, const char* argv[]) {
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc
+ * @param {char*} argv
+ * @return {*}
+ */
+int main(int argc, const char *argv[]) {
     /* NOTE: Test case 1 */
     printf("======== Case 1 ======== \n");
     MyStack *myStack = myStackCreate();
