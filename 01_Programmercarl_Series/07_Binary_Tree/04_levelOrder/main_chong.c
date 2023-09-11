@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 23:21:01
+ * @LastEditTime : 2023-09-11 23:24:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -48,7 +48,7 @@ void enQueue(struct Queue *queueHead, struct TreeNode *node) {
  * @return {struct TreeNode} *node
  */
 struct TreeNode *deQueue(struct Queue *queueHead) {
-
+    /* TODO */
 }
 
 /**
@@ -58,7 +58,7 @@ struct TreeNode *deQueue(struct Queue *queueHead) {
  * @return {void}
  */
 void freeQueue(struct Queue *queueHead) {
-
+    /* TODO */
 }
 
 /**
@@ -71,7 +71,7 @@ void freeQueue(struct Queue *queueHead) {
  * @return {void}
  */
 void bfs(int *returnSize, int **returnColumnSizes, int **returnNum, struct Queue *queueHead) {
-
+    /* TODO */
 }
 
 /**
@@ -90,7 +90,21 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
 /* ==================================================================================================== */
 
 /**
- * @description: 打印结果数组
+ * @description: 创建树节点
+ * =================================================================================
+ * @param {int} value
+ * @return {struct TreeNode} *node
+ */
+struct TreeNode *newNode(int value) {
+    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));
+    node->val = value;
+    node->left = NULL;
+    node->right = NULL;
+    return node;
+}
+
+/**
+ * @description: 打印数组
  * =================================================================================
  * @param {int} *result
  * @param {int} returnSize
@@ -104,17 +118,26 @@ void printArray(int *result, int returnSize) {
 }
 
 /**
- * @description: 创建树节点
+ * @description: 打印二维数组
  * =================================================================================
- * @param {int} value
- * @return {struct TreeNode} *node
+ * @param {int**} array
+ * @param {int} size
+ * @param {int*} columnSizes
+ * @return {*}
  */
-struct TreeNode *newNode(int value) {
-    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));
-    node->val = value;
-    node->left = NULL;
-    node->right = NULL;
-    return node;
+void print2DArray(int** array, int size, int* columnSizes) {
+    printf("[\n");
+    for (int i = 0; i < size; ++i) {
+        printf("  [");
+        for (int j = 0; j < columnSizes[i]; ++j) {
+            printf("%d", array[i][j]);
+            if (j < columnSizes[i] - 1) {
+                printf(", ");
+            }
+        }
+        printf("]\n");
+    }
+    printf("]\n");
 }
 
 /**
