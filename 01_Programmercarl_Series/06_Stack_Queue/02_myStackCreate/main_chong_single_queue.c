@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 19:41:47
+ * @LastEditTime : 2023-09-11 19:51:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,7 +30,7 @@ typedef struct {
 /**
  * @description: 创建栈
  * =================================================================================
- * @return {MyStack} *stk       栈指针
+ * @return {MyStack} *stk   栈指针
  */
 MyStack *myStackCreate() {
     MyStack *stk = (MyStack *)calloc(1, sizeof(MyStack));   /* 为栈分配空间并初始化为 0 */
@@ -40,8 +40,8 @@ MyStack *myStackCreate() {
 /**
  * @description: 入栈
  * =================================================================================
- * @param {MyStack} *obj
- * @param {int} x
+ * @param {MyStack} *obj    栈指针
+ * @param {int} x           入栈元素
  * @return {void}
  */
 void myStackPush(MyStack *obj, int x) {
@@ -52,37 +52,37 @@ void myStackPush(MyStack *obj, int x) {
 }
 
 /**
- * @description:
+ * @description: 出栈
  * =================================================================================
- * @param {MyStack*} obj
- * @return {*}
+ * @param {MyStack*} obj    栈指针
+ * @return {int} val        出栈元素
  */
 int myStackPop(MyStack* obj) {
-    ListNode *node = obj->top;
-    int val = node->val;
-    obj->top = node->next;
-    free(node);
-    return val;
+    ListNode *node = obj->top;      /* 获取当前栈顶元素的指针并存入当前元素指针 */
+    int val = node->val;            /* 获取当前元素的值 */
+    obj->top = node->next;          /* 将当前栈顶元素设置为下一元素 */
+    free(node);                     /* 将当前元素的空间释放 */
+    return val;                     /* 返回出栈元素的值 */
 }
 
 /**
- * @description:
+ * @description: 栈顶元素
  * =================================================================================
- * @param {MyStack*} obj
- * @return {*}
+ * @param {MyStack} *obj    栈指针
+ * @return {int}            栈顶元素值
  */
-int myStackTop(MyStack* obj) {
-    return obj->top->val;
+int myStackTop(MyStack *obj) {
+    return obj->top->val;           /* 返回栈顶元素值 */
 }
 
 /**
- * @description:
+ * @description: 栈是否为空
  * =================================================================================
- * @param {MyStack*} obj
- * @return {*}
+ * @param {MyStack} *obj    栈指针
+ * @return {bool}           0：栈不为空，1：栈顶为空
  */
 bool myStackEmpty(MyStack* obj) {
-    return (obj->top == NULL);
+    return (obj->top == NULL);      /* 确认栈顶元素是否为 NULL */
 }
 
 /**
