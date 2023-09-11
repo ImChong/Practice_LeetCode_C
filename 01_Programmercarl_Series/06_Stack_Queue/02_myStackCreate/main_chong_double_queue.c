@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 16:00:57
+ * @LastEditTime : 2023-09-11 16:01:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -86,15 +86,15 @@ int deQueue(Queue *obj) {
  * @return {int}            0：队列不为空，1：队列为空
  */
 int isQueueEmpty(Queue *obj) {
-    return obj->head == -1;                     /* 判断队列头是否为 -1 */
+    return obj->head == -1;                     /* 判断队列头是否为 -1，若队列头为 -1 则队列为空 */
 }
 
 /**
- * @description:
+ * @description: 创建栈
  * =================================================================================
- * @return {*}
+ * @return {MyStack} *obj   栈指针
  */
-MyStack* myStackCreate() {
+MyStack *myStackCreate() {
     MyStack *obj = (MyStack *)malloc(sizeof(MyStack));
     obj->queue1 = initQueue(LEN);
     obj->queue2 = initQueue(LEN);
