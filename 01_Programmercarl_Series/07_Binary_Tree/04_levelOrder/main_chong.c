@@ -27,10 +27,11 @@ struct TreeNode {
  * @param {TreeNode} *root
  * @param {int} *returnSize
  * @param {int} **returnColumnSizes
- * @return {*}
+ * @return {int} **result
  */
 int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
 
+    
 }
 
 /* ==================================================================================================== */
@@ -48,6 +49,20 @@ void printArray(int *result, int returnSize) {
         printf("%d ", result[i]);
     }
     printf("\r\n");
+}
+
+/**
+ * @description: 创建树节点
+ * =================================================================================
+ * @param {int} value
+ * @return {struct TreeNode} *node
+ */
+struct TreeNode *newNode(int value) {
+    struct TreeNode* node = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+    node->val = value;
+    node->left = NULL;
+    node->right = NULL;
+    return node;
 }
 
 /**
