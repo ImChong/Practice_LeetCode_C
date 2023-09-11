@@ -1,13 +1,15 @@
 /*
- * @File: main.c
- * @Created Date: Monday, August 28th 2023, 9:44:35 am
- * @Author: Chong Liu
- * @Brief: 本文件记录C语言常用宏定义技巧及常用函数
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\commandFunc.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-04 08:56:01
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-11 20:00:12
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 9:15:27 am
+ * @Description  : 本文件记录C语言常用宏定义技巧及常用函数
  */
+
 /* 头文件 */
 #include <stdio.h>
 
@@ -23,13 +25,12 @@
 /* 声明了一个变量或函数,但不确定后面是否会使用它时,可以加上这个宏 */
 #define MAYBE_UNUSED attribute((unused))
 
-/* printCommandInfo()
- *  Functionality: 打印命令行参数
- *  Arguments: int argc, char *argv[]
- *  Return: void
- *  References:
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description: 打印命令行参数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {void}
  */
 void printCommandInfo(int argc, char *argv[]) {
     INFO("Number of command-line arguments: %d", argc);
@@ -51,13 +52,12 @@ void printCommandInfo(int argc, char *argv[]) {
 // arg3
 
 
-/* main()
- *  Functionality: 主函数
- *  Arguments: int argc, char *argv[]
- *  Return: int
- *  References:
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
  */
 int main(int argc, char *argv[])
 {

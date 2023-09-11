@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 19:57:30
+ * @LastEditTime : 2023-09-11 19:58:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -91,7 +91,7 @@ bool myStackEmpty(MyStack* obj) {
  * @param {MyStack} *obj    栈指针
  * @return {void}
  */
-void myStackFree(MyStack* obj) {
+void myStackFree(MyStack *obj) {
     while (obj->top != NULL) {          /* 当栈顶指针不为 NULL 时 */
         ListNode *node = obj->top;          /* 获取栈顶元素的指针并存入当前元素指针 */
         obj->top = obj->top->next;          /* 将栈顶元素指针后移 */
@@ -105,9 +105,9 @@ void myStackFree(MyStack* obj) {
 /**
  * @description: 主函数
  * =================================================================================
- * @param {int} argc
- * @param {char} *argv
- * @return {*}
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
     /* NOTE: Test case 1 */
