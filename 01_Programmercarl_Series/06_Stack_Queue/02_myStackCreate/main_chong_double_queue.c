@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 16:15:51
+ * @LastEditTime : 2023-09-11 16:26:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -104,35 +104,35 @@ MyStack *myStackCreate() {
 /**
  * @description: 入栈
  * =================================================================================
- * @param {MyStack} *obj
- * @param {int} x
- * @return {*}
+ * @param {MyStack} *obj    栈指针
+ * @param {int} x           入栈元素
+ * @return {void}
  */
 void myStackPush(MyStack *obj, int x) {
-    if (isQueueEmpty(obj->queue1)) {
-        enQueue(obj->queue2, x);
-    } else {
-        enQueue(obj->queue1, x);
+    if (isQueueEmpty(obj->queue1)) {        /* 如果队列 1 为空 */
+        enQueue(obj->queue2, x);                /* 将元素入队队列 2 */
+    } else {                                /* 如果队列 1 不为空 */
+        enQueue(obj->queue1, x);                /* 将元素入队队列 1 */
     }
 }
 
 /**
- * @description:
+ * @description: 出栈
  * =================================================================================
- * @param {MyStack*} obj
- * @return {*}
+ * @param {MyStack} *obj    栈指针
+ * @return {int}            出战元素
  */
-int myStackPop(MyStack* obj) {
-    if (isQueueEmpty(obj->queue1)) {
-        while (obj->queue2->head != obj->queue2->tail) {
-            enQueue(obj->queue1, deQueue(obj->queue2));
+int myStackPop(MyStack *obj) {
+    if (isQueueEmpty(obj->queue1)) {                        /* 如果队列 1 为空 */
+        while (obj->queue2->head != obj->queue2->tail) {        /* 当队列 2 的队首元素索引不等于队列 2 队尾元素索引时 */
+            enQueue(obj->queue1, deQueue(obj->queue2));             /* 将队列 2 的队首元素放入队列 1 的队尾 */
         }
-        return deQueue(obj->queue2);
+        return deQueue(obj->queue2);                            /* 返回队列 2 的队首元素 */
     }
-    while (obj->queue1->head != obj->queue1->tail) {
-        enQueue(obj->queue2, deQueue(obj->queue1));
+    while (obj->queue1->head != obj->queue1->tail) {        /* 如果队列 1 的队首元素索引不等于队列 1 队尾元素索引时 */
+        enQueue(obj->queue2, deQueue(obj->queue1));             /* 将队列 1 的队首元素放入队列 2 的队尾 */
     }
-    return deQueue(obj->queue1);
+    return deQueue(obj->queue1);                            /* 返回队列 1 的队首元素 */
 }
 
 /**
