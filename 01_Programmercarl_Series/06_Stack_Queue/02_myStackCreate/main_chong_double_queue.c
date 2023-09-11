@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 11:37:47
+ * @LastEditTime : 2023-09-11 14:00:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -39,12 +39,15 @@ typedef struct {
  * @return {Queue} *obj     初始化后队列的指针
  */
 Queue *initQueue(int k) {
-    Queue *obj = (Queue *)malloc(sizeof(Queue));
-    obj->data = (int *)malloc(sizeof(int) * k);
+    Queue *obj = (Queue *)malloc(sizeof(Queue));    /* 为队列分配空间 */
+    obj->data = (int *)malloc(sizeof(int) * k);     /* 为队列内数组分配空间 */
     obj->head = -1;
     obj->tail = -1;
     obj->size = k;
     return obj;
+
+    int a[10] = {0};
+    int *a = (int *)malloc(sizeof(int) * 10);
 }
 
 /**
