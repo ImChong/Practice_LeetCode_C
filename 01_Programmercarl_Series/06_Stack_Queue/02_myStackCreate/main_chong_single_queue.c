@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 19:51:57
+ * @LastEditTime : 2023-09-11 19:57:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -86,18 +86,18 @@ bool myStackEmpty(MyStack* obj) {
 }
 
 /**
- * @description:
+ * @description: 释放栈空间
  * =================================================================================
- * @param {MyStack*} obj
- * @return {*}
+ * @param {MyStack} *obj    栈指针
+ * @return {void}
  */
 void myStackFree(MyStack* obj) {
-    while (obj->top != NULL) {
-        ListNode *node = obj->top;
-        obj->top = obj->top->next;
-        free(node);
+    while (obj->top != NULL) {          /* 当栈顶指针不为 NULL 时 */
+        ListNode *node = obj->top;          /* 获取栈顶元素的指针并存入当前元素指针 */
+        obj->top = obj->top->next;          /* 将栈顶元素指针后移 */
+        free(node);                         /* 释放当前元素指针所指空间 */
     }
-    free(obj);
+    free(obj);                          /* 释放栈空间 */
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
