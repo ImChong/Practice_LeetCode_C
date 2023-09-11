@@ -280,35 +280,15 @@ int main(int argc, const char* argv[]) {
      *   / \ / \
      *  4  5 6  7
      */
-    struct TreeNode n1, n2, n3, n4, n5, n6, n7;     /* 初始化3个树节点 */
-    n1.val = 1;     /* n1节点赋值为 1 */
-    n2.val = 2;     /* n2节点赋值为 2 */
-    n3.val = 3;     /* n3节点赋值为 3 */
-    n4.val = 4;     /* n4节点赋值为 4 */
-    n5.val = 5;     /* n5节点赋值为 5 */
-    n6.val = 6;     /* n6节点赋值为 6 */
-    n7.val = 7;     /* n7节点赋值为 7 */
+    struct TreeNode *root = newNode(1);
+    root->left = newNode(2);
+    root->right = newNode(3);
 
-    n1.left = &n2;      /* n1节点的左节点为 n2节点 */
-    n1.right = &n3;     /* n1节点的右节点为 n3节点 */
+    root->left->left = newNode(4);
+    root->left->right = newNode(5);
 
-    n2.left = &n4;      /* n2节点的左节点为 n4节点 */
-    n2.right = &n5;     /* n2节点的右节点为 n5节点 */
-
-    n3.left = &n6;      /* n3节点的左节点为 n6节点 */
-    n3.right = &n7;     /* n3节点的右节点为 n7节点 */
-
-    n4.left = NULL;     /* n4节点的左节点为 NULL */
-    n4.right = NULL;    /* n4节点的右节点为 NULL */
-
-    n5.left = NULL;     /* n5节点的左节点为 NULL */
-    n5.right = NULL;    /* n5节点的右节点为 NULL */
-
-    n6.left = NULL;     /* n6节点的左节点为 NULL */
-    n6.right = NULL;    /* n6节点的右节点为 NULL */
-
-    n7.left = NULL;     /* n7节点的左节点为 NULL */
-    n7.right = NULL;    /* n7节点的右节点为 NULL */
+    root->right->left = newNode(6);
+    root->right->right = newNode(7);
 
     printTree();            /* 打印树结构 */
 
@@ -318,13 +298,13 @@ int main(int argc, const char* argv[]) {
 #if PRE_ORDER_TRAVERSAL_EN
     #if RECURSION_EN
     printf("preorderTraversal_recursion: \n");
-    result = preorderTraversal_recursion(&n1, &returnSize);
+    result = preorderTraversal_recursion(root, &returnSize);
     printArray(result, returnSize);
     #endif
 
     #if ITERATION_EN
     printf("preorderTraversal_iteration: \n");
-    result = preorderTraversal_iteration(&n1, &returnSize);
+    result = preorderTraversal_iteration(root, &returnSize);
     printArray(result, returnSize);
     #endif
 #endif
@@ -332,13 +312,13 @@ int main(int argc, const char* argv[]) {
 #if IN_ORDER_TRAVERSAL_EN
     #if RECURSION_EN
     printf("inorderTraversal_recursion: \n");
-    result = inorderTraversal_recursion(&n1, &returnSize);
+    result = inorderTraversal_recursion(root, &returnSize);
     printArray(result, returnSize);
     #endif
 
     #if ITERATION_EN
     printf("inorderTraversal_iteration: \n");
-    result = inorderTraversal_iteration(&n1, &returnSize);
+    result = inorderTraversal_iteration(root, &returnSize);
     printArray(result, returnSize);
     #endif
 #endif
@@ -346,13 +326,13 @@ int main(int argc, const char* argv[]) {
 #if POST_ORDER_TRAVERSAL_EN
     #if RECURSION_EN
     printf("postorderTraversal_recursion: \n");
-    result = postorderTraversal_recursion(&n1, &returnSize);
+    result = postorderTraversal_recursion(root, &returnSize);
     printArray(result, returnSize);
     #endif
 
     #if ITERATION_EN
     printf("postorderTraversal_iteration: \n");
-    result = postorderTraversal_iteration(&n1, &returnSize);
+    result = postorderTraversal_iteration(root, &returnSize);
     printArray(result, returnSize);
     #endif
 #endif
