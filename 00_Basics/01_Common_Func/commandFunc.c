@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-04 08:56:01
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 20:00:49
+ * @LastEditTime : 2023-09-11 20:01:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -58,8 +58,7 @@ void printCommandInfo(int argc, char *argv[]) {
  * @param {char} *argv[]    程序入参字符串数组
  * @return {int}            程序运行状态
  */
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     printCommandInfo(argc, argv);
     return 0;
 }
