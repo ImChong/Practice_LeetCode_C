@@ -35,7 +35,14 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
-/* NOTE: 打印结果数组 */
+
+/**
+ * @description: 打印结果数组
+ * =================================================================================
+ * @param {int} *result
+ * @param {int} returnSize
+ * @return {void}
+ */
 void printArray(int *result, int returnSize) {
     for (int i = 0; i < returnSize; i++) {
         printf("%d ", result[i]);
