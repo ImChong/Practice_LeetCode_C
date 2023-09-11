@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 23:36:21
+ * @LastEditTime : 2023-09-11 23:36:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,6 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* 控制函数运行的宏定义 */
 #define MAX_SIZE 100                /* 数组和栈的大小 */
 #define PRE_ORDER_TRAVERSAL_EN 1    /* 前序遍历代码开关 */
 #define IN_ORDER_TRAVERSAL_EN 1     /* 中序遍历代码开关 */
