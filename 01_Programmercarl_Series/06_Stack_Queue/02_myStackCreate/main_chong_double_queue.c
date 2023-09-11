@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 16:28:22
+ * @LastEditTime : 2023-09-11 16:30:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -149,16 +149,16 @@ int myStackTop(MyStack* obj) {
 }
 
 /**
- * @description:
+ * @description: 栈是否为空
  * =================================================================================
- * @param {MyStack*} obj
- * @return {*}
+ * @param {MyStack*} obj    栈指针
+ * @return {bool}           0：栈不为空，1：栈为空
  */
 bool myStackEmpty(MyStack* obj) {
-    if (obj->queue1->head == -1 && obj->queue2->head == -1) {
-        return true;
+    if (obj->queue1->head == -1 && obj->queue2->head == -1) {   /* 如果队列 1 和队列 2 的队首元素索引均为 -1 */
+        return true;                                                /* 判断栈为空 */
     }
-    return false;
+    return false;                                               /* 否则，判断栈为非空 */
 }
 
 /**
