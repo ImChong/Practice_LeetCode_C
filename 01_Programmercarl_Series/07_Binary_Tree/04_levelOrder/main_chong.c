@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 23:06:53
+ * @LastEditTime : 2023-09-11 23:10:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -86,9 +86,33 @@ int main(int argc, const char *argv[]) {
      */
     struct TreeNode *root = newNode(1);
     root->left = newNode(2);
+    root->right = newNode(3);
+
+    root->left->left = newNode(4);
+    root->left->right = newNode(5);
+
+    root->right->left = newNode(6);
+    root->right->right = newNode(7);
 
     int returnSize = 0;
-    int *result = NULL;
+    int *returnColumnSizes;
+
+    /* NOTE: 函数调用 */
+    int** result = levelOrder(root, &returnSize, &returnColumnSizes);
+
+    /* NOTE*/
+    printf("[\n");
+    for (int i = 0; i < returnSize; ++i) {
+        printf("  [");
+        for (int j = 0; j < returnColumnSizes[i]; ++j) {
+            printf("%d", result[i][j]);
+            if (j < returnColumnSizes[i] - 1) {
+                printf(", ");
+            }
+        }
+        printf("]\n");
+    }
+    printf("]\n");
 
     return 0;
 }
