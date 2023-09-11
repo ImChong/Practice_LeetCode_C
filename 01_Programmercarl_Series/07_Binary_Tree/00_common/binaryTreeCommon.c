@@ -38,20 +38,19 @@ struct TreeNode {
 
 #if PRE_ORDER_TRAVERSAL_EN
 /* ==================================================================================================== */
-/* preorderTraversal_recursion()
- *  Functionality: 前序遍历
- *  Arguments: struct TreeNode *root, int *returnSize
- *  Return: int *ret
- *  References: 144.二叉树的前序遍历：https://leetcode.cn/problems/binary-tree-preorder-traversal/
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
- *  遍历顺序：根节点 -> 左子树 -> 右子树
- *  用途：前序遍历通常用于复制二叉树或构建与原二叉树结构相同的二叉树。
+/**
+ * @description: 144.二叉树的前序遍历：https://leetcode.cn/problems/binary-tree-preorder-traversal/
+ * 遍历顺序：根节点 -> 左子树 -> 右子树
+ * 用途：前序遍历通常用于复制二叉树或构建与原二叉树结构相同的二叉树。
+ * =================================================================================
+ * @param {struct TreeNode} *root
+ * @param {int} *returnSize
+ * @return {int} *ret
  */
 /* ==================================================================================================== */
     #if RECURSION_EN
 /* NOTE: 前序遍历 - 递归 */
- void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
+void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return;
     }
@@ -70,7 +69,7 @@ int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 
     #if ITERATION_EN
 /* NOTE: 前序遍历 - 迭代 */
-int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
+int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     int *res = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案（后期需要free） */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
