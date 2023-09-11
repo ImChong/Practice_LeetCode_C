@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 23:16:09
+ * @LastEditTime : 2023-09-11 23:21:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,6 +38,39 @@ struct Queue {
  * @return {void}
  */
 void enQueue(struct Queue *queueHead, struct TreeNode *node) {
+    /* TODO */
+}
+
+/**
+ * @description: 出队
+ * =================================================================================
+ * @param {struct Queue} *queueHead
+ * @return {struct TreeNode} *node
+ */
+struct TreeNode *deQueue(struct Queue *queueHead) {
+
+}
+
+/**
+ * @description: 释放队列空间
+ * =================================================================================
+ * @param {struct Queue} *queueHead
+ * @return {void}
+ */
+void freeQueue(struct Queue *queueHead) {
+
+}
+
+/**
+ * @description: 广度优先搜索算法 Breadth-First Search
+ * =================================================================================
+ * @param {int} *returnSize
+ * @param {int} **returnColumnSizes
+ * @param {int} **returnNum
+ * @param {struct Queue} *queueHead
+ * @return {void}
+ */
+void bfs(int *returnSize, int **returnColumnSizes, int **returnNum, struct Queue *queueHead) {
 
 }
 
@@ -50,8 +83,7 @@ void enQueue(struct Queue *queueHead, struct TreeNode *node) {
  * @return {int} **result
  */
 int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
-
-
+    /* TODO */
 }
 
 /* ==================================================================================================== */
