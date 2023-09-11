@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 14:22:04
+ * @LastEditTime : 2023-09-11 14:22:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,10 +44,7 @@ Queue *initQueue(int k) {
     obj->head = -1;                                 /* 队列头初始化为 -1 */
     obj->tail = -1;                                 /* 队列尾初始化为 -1 */
     obj->size = k;                                  /* 队列大小为 k */
-    return obj;
-
-    int a[10] = {0};
-    int *a = (int *)malloc(sizeof(int) * 10);
+    return obj;                                     /* 返回初始化后的队列对象指针 */
 }
 
 /**
