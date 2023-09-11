@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 14:28:32
+ * @LastEditTime : 2023-09-11 15:57:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -63,20 +63,20 @@ void enQueue(Queue *obj, int x) {
 }
 
 /**
- * @description:
+ * @description: 出队
  * =================================================================================
- * @param {Queue} *obj
- * @return {*}
+ * @param {Queue} *obj      队列指针
+ * @return {int} a          队首元素
  */
 int deQueue(Queue *obj) {
-    int a = obj->data[obj->head];
-    if (obj->head == obj->tail) {
-        obj->head = -1;
-        obj->tail = -1;
-        return a;
+    int a = obj->data[obj->head];               /* 取出队首元素并赋值给 a */
+    if (obj->head == obj->tail) {               /* 如果队列头索引等于队列尾索引 */
+        obj->head = -1;                             /* 队列头索引设置为 -1 */
+        obj->tail = -1;                             /* 队列尾索引设置为 -1 */
+        return a;                                   /* 返回之前取出的队首元素 */
     }
-    obj->head = (obj->head + 1) % obj->size;
-    return a;
+    obj->head = (obj->head + 1) % obj->size;    /* 队列头 + 1，（% obj->size）是为了防止新队列头索引超出队列内数组大小。超出部分从 0 开始：环形队列 */
+    return a;                                   /* 返回之前取出的队首元素 */
 }
 
 /**
