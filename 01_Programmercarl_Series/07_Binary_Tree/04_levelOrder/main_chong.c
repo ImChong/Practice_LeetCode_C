@@ -24,14 +24,14 @@ struct TreeNode {
 /**
  * @description:
  * =================================================================================
- * @param {TreeNode} *root
+ * @param {struct TreeNode} *root
  * @param {int} *returnSize
  * @param {int} **returnColumnSizes
  * @return {int} **result
  */
 int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
 
-    
+
 }
 
 /* ==================================================================================================== */
