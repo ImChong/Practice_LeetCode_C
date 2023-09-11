@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 14:23:10
+ * @LastEditTime : 2023-09-11 14:28:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -51,15 +51,15 @@ Queue *initQueue(int k) {
  * @description: 入队
  * =================================================================================
  * @param {Queue} *obj      队列指针
- * @param {int} x
- * @return {*}
+ * @param {int} x           入队元素
+ * @return {void}
  */
 void enQueue(Queue *obj, int x) {
-    if (obj->head == -1) {
-        obj->head = 0;
+    if (obj->head == -1) {                      /* 如果队列头为索引 -1 */
+        obj->head = 0;                          /* 将队列头改为索引 0 */
     }
-    obj->tail = (obj->tail + 1) % obj->size;
-    obj->data[obj->tail] = x;
+    obj->tail = (obj->tail + 1) % obj->size;    /* 队列尾 + 1，（% obj->size）是为了防止新添加的元素超出队列内数组大小。超出部分从 0 开始：环形队列 */
+    obj->data[obj->tail] = x;                   /* 将元素添加至队列内数组，索引为队列尾所指索引 */
 }
 
 /**
