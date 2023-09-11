@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 11:36:18
+ * @LastEditTime : 2023-09-11 11:37:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,8 +35,8 @@ typedef struct {
 /**
  * @description: 初始化队列
  * =================================================================================
- * @param {int} k
- * @return {*}
+ * @param {int} k           数据长度
+ * @return {Queue} *obj     初始化后队列的指针
  */
 Queue *initQueue(int k) {
     Queue *obj = (Queue *)malloc(sizeof(Queue));
