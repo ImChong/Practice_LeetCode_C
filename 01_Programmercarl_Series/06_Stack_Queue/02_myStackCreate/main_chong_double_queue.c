@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 16:30:44
+ * @LastEditTime : 2023-09-11 16:35:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -120,7 +120,7 @@ void myStackPush(MyStack *obj, int x) {
  * @description: 出栈
  * =================================================================================
  * @param {MyStack} *obj    栈指针
- * @return {int}            出战元素
+ * @return {int}            出栈元素
  */
 int myStackPop(MyStack *obj) {
     if (isQueueEmpty(obj->queue1)) {                        /* 如果队列 1 为空 */
@@ -151,10 +151,10 @@ int myStackTop(MyStack* obj) {
 /**
  * @description: 栈是否为空
  * =================================================================================
- * @param {MyStack*} obj    栈指针
+ * @param {MyStack} *obj    栈指针
  * @return {bool}           0：栈不为空，1：栈为空
  */
-bool myStackEmpty(MyStack* obj) {
+bool myStackEmpty(MyStack *obj) {
     if (obj->queue1->head == -1 && obj->queue2->head == -1) {   /* 如果队列 1 和队列 2 的队首元素索引均为 -1 */
         return true;                                                /* 判断栈为空 */
     }
@@ -162,10 +162,10 @@ bool myStackEmpty(MyStack* obj) {
 }
 
 /**
- * @description:
+ * @description: 释放栈空间
  * =================================================================================
- * @param {MyStack*} obj
- * @return {*}
+ * @param {MyStack*} obj    栈指针
+ * @return {void}
  */
 void myStackFree(MyStack* obj) {
     free(obj->queue1->data);
@@ -185,9 +185,9 @@ void myStackFree(MyStack* obj) {
 /**
  * @description: 主函数
  * =================================================================================
- * @param {int} argc
- * @param {char*} argv
- * @return {*}
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
     /* NOTE: Test case 1 */
