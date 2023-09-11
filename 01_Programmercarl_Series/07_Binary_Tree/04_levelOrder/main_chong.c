@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 23:25:52
+ * @LastEditTime : 2023-09-11 23:27:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -102,8 +102,6 @@ struct TreeNode *newNode(int value) {
     node->right = NULL;
     return node;
 }
-
-
 
 /**
  * @description: 打印二维数组
