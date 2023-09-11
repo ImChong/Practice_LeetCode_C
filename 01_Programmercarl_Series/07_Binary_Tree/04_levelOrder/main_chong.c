@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 23:10:08
+ * @LastEditTime : 2023-09-11 23:10:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -100,7 +100,7 @@ int main(int argc, const char *argv[]) {
     /* NOTE: 函数调用 */
     int** result = levelOrder(root, &returnSize, &returnColumnSizes);
 
-    /* NOTE*/
+    /* NOTE: 打印结果 */
     printf("[\n");
     for (int i = 0; i < returnSize; ++i) {
         printf("  [");
