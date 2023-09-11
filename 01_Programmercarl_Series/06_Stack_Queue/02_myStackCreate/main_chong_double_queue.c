@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 16:26:07
+ * @LastEditTime : 2023-09-11 16:28:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -136,16 +136,16 @@ int myStackPop(MyStack *obj) {
 }
 
 /**
- * @description:
+ * @description: 获取栈顶元素
  * =================================================================================
- * @param {MyStack*} obj
- * @return {*}
+ * @param {MyStack} *obj    栈指针
+ * @return {int}            栈顶元素
  */
 int myStackTop(MyStack* obj) {
-    if (isQueueEmpty(obj->queue1)) {
-        return obj->queue2->data[obj->queue2->tail];
+    if (isQueueEmpty(obj->queue1)) {                        /* 如果队列 1 为空 */
+        return obj->queue2->data[obj->queue2->tail];            /* 返回队列 2 的队尾元素 */
     }
-    return obj->queue1->data[obj->queue1->tail];
+    return obj->queue1->data[obj->queue1->tail];            /* 否则返回队列 1 的队尾元素 */
 }
 
 /**
