@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 14:22:45
+ * @LastEditTime : 2023-09-11 14:23:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,7 +25,7 @@ typedef struct {
     int head;       /* 队列头 */
     int tail;       /* 队列尾 */
     int size;       /* 队列大小 */
-} Queue;
+} Queue;            /* 队列结构体 */
 
 typedef struct {
     Queue *queue1;  /* 队列 1 */
@@ -48,9 +48,9 @@ Queue *initQueue(int k) {
 }
 
 /**
- * @description:
+ * @description: 入队
  * =================================================================================
- * @param {Queue} *obj
+ * @param {Queue} *obj      队列指针
  * @param {int} x
  * @return {*}
  */
