@@ -129,7 +129,7 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 
     #if ITERATION_EN
 /* NOTE: 中序遍历 - 迭代 */
-int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
+int *inorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     int *res = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案 */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
@@ -156,15 +156,14 @@ int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
 
 #if POST_ORDER_TRAVERSAL_EN
 /* ==================================================================================================== */
-/* postorderTraversal_recursion()
- *  Functionality: 后序遍历 - 递归
- *  Arguments: struct TreeNode *root, int *returnSize
- *  Return: int *ret
- *  References: 145.二叉树的后序遍历：https://leetcode.cn/problems/binary-tree-postorder-traversal/
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
- *  遍历顺序：左子树 -> 右子树 -> 根节点
- *  用途：后序遍历常用于删除二叉树或进行其他需要从底向上进行操作的场景。
+/**
+ * @description: 145.二叉树的后序遍历：https://leetcode.cn/problems/binary-tree-postorder-traversal/
+ * 遍历顺序：左子树 -> 右子树 -> 根节点
+ * 用途：后序遍历常用于删除二叉树或进行其他需要从底向上进行操作的场景。
+ * =================================================================================
+ * @param {struct TreeNode} *root
+ * @param {int} *returnSize
+ * @return {int} *res
  */
 /* ==================================================================================================== */
     #if RECURSION_EN
@@ -188,7 +187,7 @@ int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 
     #if ITERATION_EN
 /* NOTE: 后序遍历 - 迭代 */
-int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
+int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     int *res = (int *)malloc(sizeof(int) * MAX_SIZE);       /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案（后期需要free） */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     if (root == NULL) {                                     /* 如果当前节点为 NULL，直接返回 */
