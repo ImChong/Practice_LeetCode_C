@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 23:36:46
+ * @LastEditTime : 2023-09-11 23:40:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,9 +44,9 @@ struct TreeNode {
  * 遍历顺序：根节点 -> 左子树 -> 右子树
  * 用途：前序遍历通常用于复制二叉树或构建与原二叉树结构相同的二叉树。
  * =================================================================================
- * @param {struct TreeNode} *root
- * @param {int} *returnSize
- * @return {int} *ret
+ * @param {struct TreeNode} *root   二叉树的根节点
+ * @param {int} *returnSize         返回数组的大小
+ * @return {int} *ret               返回数组的指针
  */
 /* ==================================================================================================== */
     #if RECURSION_EN
@@ -102,9 +102,9 @@ int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
  * 遍历顺序：左子树 -> 根节点 -> 右子树
  * 用途：对于二叉搜索树（BST），中序遍历会按照递增的顺序访问所有节点。
  * =================================================================================
- * @param {struct TreeNode} *root
- * @param {int} *returnSize
- * @return {int} *ret
+ * @param {struct TreeNode} *root   二叉树的根节点
+ * @param {int} *returnSize         返回数组的大小
+ * @return {int} *ret               返回数组的指针
  */
 /* ==================================================================================================== */
     #if RECURSION_EN
@@ -160,9 +160,9 @@ int *inorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
  * 遍历顺序：左子树 -> 右子树 -> 根节点
  * 用途：后序遍历常用于删除二叉树或进行其他需要从底向上进行操作的场景。
  * =================================================================================
- * @param {struct TreeNode} *root
- * @param {int} *returnSize
- * @return {int} *res
+ * @param {struct TreeNode} *root   二叉树的根节点
+ * @param {int} *returnSize         返回数组的大小
+ * @return {int} *ret               返回数组的指针
  */
 /* ==================================================================================================== */
     #if RECURSION_EN
@@ -223,8 +223,8 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
 /**
  * @description: 创建树节点
  * =================================================================================
- * @param {int} value
- * @return {struct TreeNode} *node
+ * @param {int} value                   节点数值
+ * @return {struct TreeNode} *node      二叉树节点
  */
 struct TreeNode *newNode(int value) {
     struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));
@@ -251,8 +251,8 @@ void printTree(void) {
 /**
  * @description: 打印数组
  * =================================================================================
- * @param {int} *result
- * @param {int} returnSize
+ * @param {int} *result             结果数组
+ * @param {int} returnSize          结果数组大小
  * @return {void}
  */
 void printArray(int *result, int returnSize) {
