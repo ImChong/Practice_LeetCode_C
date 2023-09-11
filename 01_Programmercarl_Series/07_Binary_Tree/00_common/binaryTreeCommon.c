@@ -97,15 +97,14 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
 
 #if IN_ORDER_TRAVERSAL_EN
 /* ==================================================================================================== */
-/* inorderTraversal_recursion()
- *  Functionality: 中序遍历
- *  Arguments: struct TreeNode *root, int *returnSize
- *  Return: int *ret
- *  References: 94.二叉树的中序遍历: https://leetcode.cn/problems/binary-tree-inorder-traversal/
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
- *  遍历顺序：左子树 -> 根节点 -> 右子树
- *  用途：对于二叉搜索树（BST），中序遍历会按照递增的顺序访问所有节点。
+/**
+ * @description: 94.二叉树的中序遍历: https://leetcode.cn/problems/binary-tree-inorder-traversal/
+ * 遍历顺序：左子树 -> 根节点 -> 右子树
+ * 用途：对于二叉搜索树（BST），中序遍历会按照递增的顺序访问所有节点。
+ * =================================================================================
+ * @param {struct TreeNode} *root
+ * @param {int} *returnSize
+ * @return {int} *ret
  */
 /* ==================================================================================================== */
     #if RECURSION_EN
