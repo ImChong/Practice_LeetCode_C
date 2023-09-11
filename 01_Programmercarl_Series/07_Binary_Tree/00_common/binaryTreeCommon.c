@@ -236,16 +236,13 @@ void printTree(void) {
     printf("\n");
 }
 
-/* ==================================================================================================== */
-/* printArray()
- *  Functionality: 打印数组
- *  Arguments: int *result, int returnSize
- *  Return: void
- *  References: document/website...
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description: 打印数组
+ * =================================================================================
+ * @param {int} *result
+ * @param {int} returnSize
+ * @return {void}
  */
-/* ==================================================================================================== */
 void printArray(int *result, int returnSize) {
     for (int i = 0; i < returnSize; i++) {
         printf("%d ", result[i]);

@@ -103,19 +103,7 @@ struct TreeNode *newNode(int value) {
     return node;
 }
 
-/**
- * @description: 打印数组
- * =================================================================================
- * @param {int} *result
- * @param {int} returnSize
- * @return {void}
- */
-void printArray(int *result, int returnSize) {
-    for (int i = 0; i < returnSize; i++) {
-        printf("%d ", result[i]);
-    }
-    printf("\r\n");
-}
+
 
 /**
  * @description: 打印二维数组
