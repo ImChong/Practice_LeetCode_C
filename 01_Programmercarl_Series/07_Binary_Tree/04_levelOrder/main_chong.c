@@ -1,13 +1,14 @@
 /*
- * @File: main_chong.c
- * @Created Date: 2023-08-18 11:18:36 pm
- * @Author: Chong Liu
- * @Brief: 102. 二叉树的层序遍历: https://leetcode.cn/problems/binary-tree-level-order-traversal/
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\04_levelOrder\main_chong.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-11 21:17:11
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-11 23:06:12
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 102. 二叉树的层序遍历: https://leetcode.cn/problems/binary-tree-level-order-traversal/
  * https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html
- * =================================================================================
- * Copyright (c) 2023 Chong Liu
- * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 12:44:31 pm
  */
 #include <stdio.h>
 
