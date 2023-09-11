@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 16:14:19
+ * @LastEditTime : 2023-09-11 16:15:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -102,13 +102,13 @@ MyStack *myStackCreate() {
 }
 
 /**
- * @description:
+ * @description: 入栈
  * =================================================================================
- * @param {MyStack*} obj
+ * @param {MyStack} *obj
  * @param {int} x
  * @return {*}
  */
-void myStackPush(MyStack* obj, int x) {
+void myStackPush(MyStack *obj, int x) {
     if (isQueueEmpty(obj->queue1)) {
         enQueue(obj->queue2, x);
     } else {
