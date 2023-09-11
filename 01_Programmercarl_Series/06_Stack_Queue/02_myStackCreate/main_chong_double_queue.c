@@ -80,10 +80,10 @@ int deQueue(Queue *obj) {
 }
 
 /**
- * @description:
+ * @description: 判读队列是否为空
  * =================================================================================
- * @param {Queue} *obj
- * @return {*}
+ * @param {Queue} *obj      队列指针
+ * @return {int}
  */
 int isQueueEmpty(Queue *obj) {
     return obj->head == -1;
