@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 16:03:16
+ * @LastEditTime : 2023-09-11 16:14:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -96,9 +96,9 @@ int isQueueEmpty(Queue *obj) {
  */
 MyStack *myStackCreate() {
     MyStack *obj = (MyStack *)malloc(sizeof(MyStack));  /* 为栈结构体分配空间 */
-    obj->queue1 = initQueue(LEN);
-    obj->queue2 = initQueue(LEN);
-    return obj;
+    obj->queue1 = initQueue(LEN);                       /* 初始化队列 1 大小为 20 */
+    obj->queue2 = initQueue(LEN);                       /* 初始化队列 2 大小为 20 */
+    return obj;                                         /* 返回栈指针 */
 }
 
 /**
