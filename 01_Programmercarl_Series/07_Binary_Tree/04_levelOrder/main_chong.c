@@ -17,18 +17,21 @@ struct TreeNode {
     struct TreeNode *left;      /* 左节点 */
     struct TreeNode *right;     /* 右节点 */
 };
+
 /* ==================================================================================================== */
-/* functionName()
- *  Functionality: 二叉树的层序遍历
- *  Arguments: arguments...
- *  Return: possibleReturnValues
- *  References: document/website...
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
- */
 /* ==================================================================================================== */
 /* TODO: 目标函数 */
+/**
+ * @description:
+ * =================================================================================
+ * @param {TreeNode} *root
+ * @param {int} *returnSize
+ * @param {int} **returnColumnSizes
+ * @return {*}
+ */
+int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes){
 
+}
 
 
 
@@ -42,8 +45,14 @@ void printArray(int *result, int returnSize) {
     printf("\r\n");
 }
 
-/* NOTE：主函数 */
-int main(int argc, const char* argv[]) {
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
+int main(int argc, const char *argv[]) {
     /*
      * 创建以下树结构
      *      1
