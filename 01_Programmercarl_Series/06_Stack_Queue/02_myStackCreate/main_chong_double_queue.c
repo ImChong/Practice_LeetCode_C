@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-10 18:21:17
+ * @LastEditTime : 2023-09-11 11:35:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,8 +28,8 @@ typedef struct {
 } Queue;
 
 typedef struct {
-    Queue *queue1;
-    Queue *queue2;
+    Queue *queue1;  /* 队列 1 */
+    Queue *queue2;  /* 队列 2 */
 } MyStack;
 
 /**
