@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 16:12:50
+ * @LastEditTime : 2023-09-11 19:35:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -16,25 +16,25 @@
 #include <stdlib.h>
 
 /* ==================================================================================================== */
-/* TODO: 方法二：用一个队列实现栈 */
+/* TODO: 方法二：用一个链表实现栈 */
 /* ==================================================================================================== */
 typedef struct tagListNode {
-    struct tagListNode *next;
-    int val;
-} ListNode;
+    struct tagListNode *next;   /* 指向下一个链表元素的指针 */
+    int val;                    /* 元素数值 */
+} ListNode;                     /* 链表节点结构体 */
 
 typedef struct {
-    ListNode *top;
-} MyStack;
+    ListNode *top;              /* 栈顶节点指针 */
+} MyStack;                      /* 栈结构体 */
 
 /**
- * @description:
+ * @description: 创建栈
  * =================================================================================
- * @return {*}
+ * @return {MyStack} *stk       栈指针
  */
-MyStack* myStackCreate() {
-    MyStack *stk = (MyStack *)calloc(1, sizeof(MyStack));
-    return stk;
+MyStack *myStackCreate() {
+    MyStack *stk = (MyStack *)calloc(1, sizeof(MyStack));   /* 为栈创建空间并初始化为 0 */
+    return stk;                                             /* 返回栈指针 */
 }
 
 /**
