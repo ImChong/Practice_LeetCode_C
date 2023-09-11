@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 23:24:10
+ * @LastEditTime : 2023-09-11 23:25:52
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -120,12 +120,12 @@ void printArray(int *result, int returnSize) {
 /**
  * @description: 打印二维数组
  * =================================================================================
- * @param {int**} array
+ * @param {int} **array
  * @param {int} size
- * @param {int*} columnSizes
- * @return {*}
+ * @param {int} *columnSizes
+ * @return {void}
  */
-void print2DArray(int** array, int size, int* columnSizes) {
+void print2DArray(int **array, int size, int *columnSizes) {
     printf("[\n");
     for (int i = 0; i < size; ++i) {
         printf("  [");

@@ -238,7 +238,7 @@ void printTree(void) {
 
 /* ==================================================================================================== */
 /* printArray()
- *  Functionality: 打印结果数组
+ *  Functionality: 打印数组
  *  Arguments: int *result, int returnSize
  *  Return: void
  *  References: document/website...
@@ -254,15 +254,15 @@ void printArray(int *result, int returnSize) {
 }
 
 /* ==================================================================================================== */
-/* main()
- *  Functionality: 主函数
- *  Arguments: int argc, const char* argv[]
- *  Return: int
- *  References: document/website...
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
- */
 /* ==================================================================================================== */
+
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
 int main(int argc, const char* argv[]) {
     /*
      * 创建以下树结构
