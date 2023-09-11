@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-11 23:06:12
+ * @LastEditTime : 2023-09-11 23:06:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,6 +22,8 @@ struct TreeNode {
 /* ==================================================================================================== */
 /* TODO: 目标函数 */
 /* ==================================================================================================== */
+
+
 /**
  * @description:
  * =================================================================================
@@ -59,7 +61,7 @@ void printArray(int *result, int returnSize) {
  * @return {struct TreeNode} *node
  */
 struct TreeNode *newNode(int value) {
-    struct TreeNode* node = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));
     node->val = value;
     node->left = NULL;
     node->right = NULL;
@@ -82,35 +84,8 @@ int main(int argc, const char *argv[]) {
      *   / \ / \
      *  4  5 6  7
      */
-    struct TreeNode n1, n2, n3, n4, n5, n6, n7;     /* 初始化3个树节点 */
-    n1.val = 1;     /* n1节点赋值为 1 */
-    n2.val = 2;     /* n2节点赋值为 2 */
-    n3.val = 3;     /* n3节点赋值为 3 */
-    n4.val = 4;     /* n4节点赋值为 4 */
-    n5.val = 5;     /* n5节点赋值为 5 */
-    n6.val = 6;     /* n6节点赋值为 6 */
-    n7.val = 7;     /* n7节点赋值为 7 */
-
-    n1.left = &n2;      /* n1节点的左节点为 n2节点 */
-    n1.right = &n3;     /* n1节点的右节点为 n3节点 */
-
-    n2.left = &n4;      /* n2节点的左节点为 n4节点 */
-    n2.right = &n5;     /* n2节点的右节点为 n5节点 */
-
-    n3.left = &n6;      /* n3节点的左节点为 n6节点 */
-    n3.right = &n7;     /* n3节点的右节点为 n7节点 */
-
-    n4.left = NULL;     /* n4节点的左节点为 NULL */
-    n4.right = NULL;    /* n4节点的右节点为 NULL */
-
-    n5.left = NULL;     /* n5节点的左节点为 NULL */
-    n5.right = NULL;    /* n5节点的右节点为 NULL */
-
-    n6.left = NULL;     /* n6节点的左节点为 NULL */
-    n6.right = NULL;    /* n6节点的右节点为 NULL */
-
-    n7.left = NULL;     /* n7节点的左节点为 NULL */
-    n7.right = NULL;    /* n7节点的右节点为 NULL */
+    struct TreeNode *root = newNode(1);
+    root->left = newNode(2);
 
     int returnSize = 0;
     int *result = NULL;
