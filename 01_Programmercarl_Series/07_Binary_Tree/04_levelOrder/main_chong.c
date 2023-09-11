@@ -29,7 +29,7 @@ struct TreeNode {
  * @param {int} **returnColumnSizes
  * @return {*}
  */
-int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes){
+int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
 
 }
 
