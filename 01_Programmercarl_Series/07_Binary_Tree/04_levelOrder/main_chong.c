@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 10:19:23
+ * @LastEditTime : 2023-09-12 10:29:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,7 +22,7 @@ struct TreeNode {
 /* ==================================================================================================== */
 /* 层序遍历 借助其他数据结构，记录下，Tree 的下一层的所有结点。这样一层一层的遍历。直到结束 */
 
-/* 层序遍历 + 队列 */
+/* 层序遍历 + 链表队列 */
     /* 1：使用队列的数据结构存储对应的二叉树的结点 Queue */
     /* 2：使用变量 front 和 rear 维护队列，队列是具有先进先出的特点 */
     /* 3：使用 Queue[rear++] = root; 来入队 */
@@ -41,8 +41,8 @@ struct Queue {                  /* 队列结构体 */
 /**
  * @description: 入队
  * =================================================================================
- * @param {struct Queue} *queueHead
- * @param {struct TreeNode} *node
+ * @param {struct Queue} *queueHead     链表队列的虚拟头节点
+ * @param {struct TreeNode} *node       待入队元素
  * @return {void}
  */
 void enQueue(struct Queue *queueHead, struct TreeNode *node) {
@@ -65,6 +65,12 @@ void enQueue(struct Queue *queueHead, struct TreeNode *node) {
  */
 struct TreeNode *deQueue(struct Queue *queueHead) {
     /* TODO */
+    struct Queue *queueIt = queueHead->next;
+    struct TreeNode *node;
+    if (queueIt != NULL) {
+        queueHead->next = queueIt->next;
+        node
+    }
 }
 
 /**
