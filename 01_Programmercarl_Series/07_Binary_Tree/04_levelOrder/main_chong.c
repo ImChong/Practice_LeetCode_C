@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 10:31:34
+ * @LastEditTime : 2023-09-12 10:41:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -97,10 +97,10 @@ void freeQueue(struct Queue *queueHead) {
 /**
  * @description: 广度优先搜索算法 Breadth-First Search
  * =================================================================================
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
- * @param {int} **returnNum
- * @param {struct Queue} *queueHead
+ * @param {int} *returnSize             二叉树的层数
+ * @param {int} **returnColumnSizes     二叉树对应层级的节点数
+ * @param {int} **returnNum             结果二维数组
+ * @param {struct Queue} *queueHead     链表队列的虚拟头节点
  * @return {void}
  */
 void bfs(int *returnSize, int **returnColumnSizes, int **returnNum, struct Queue *queueHead) {
@@ -110,10 +110,10 @@ void bfs(int *returnSize, int **returnColumnSizes, int **returnNum, struct Queue
 /**
  * @description:
  * =================================================================================
- * @param {struct TreeNode} *root
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
- * @return {int} **result
+ * @param {struct TreeNode} *root       二叉树的根节点
+ * @param {int} *returnSize             二叉树的层数
+ * @param {int} **returnColumnSizes     二叉树对应层级的节点数
+ * @return {int} **result               结果二维数组
  */
 int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
     /* TODO */
