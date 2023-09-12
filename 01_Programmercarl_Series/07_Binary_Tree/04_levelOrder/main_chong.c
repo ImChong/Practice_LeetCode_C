@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 11:18:42
+ * @LastEditTime : 2023-09-12 11:25:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -54,7 +54,7 @@ void enQueue(struct Queue *queueHead, struct TreeNode *node) {
     /* TODO */
     struct Queue *queueIt = queueHead;
     while (queueIt->next != NULL) {
-        queueIt->next = queueIt->next;
+        queueIt = queueIt->next;
     }
     struct Queue *queueNew = (struct Queue *)malloc(sizeof(struct Queue));
     queueNew->node = node;
@@ -165,7 +165,7 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
     enQueue(queueHead, NULL);
     breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);
     freeQueue(queueHead);
-    return returnNum;
+    return resultArray;
 }
 
 /* ==================================================================================================== */
