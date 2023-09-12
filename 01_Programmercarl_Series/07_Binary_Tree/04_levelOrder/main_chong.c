@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 10:41:33
+ * @LastEditTime : 2023-09-12 10:46:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -125,8 +125,8 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
 /**
  * @description: 创建树节点
  * =================================================================================
- * @param {int} value
- * @return {struct TreeNode} *node
+ * @param {int} value                   树节点的数值
+ * @return {struct TreeNode} *node      新树节点的指针
  */
 struct TreeNode *newNode(int value) {
     struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));
@@ -139,9 +139,9 @@ struct TreeNode *newNode(int value) {
 /**
  * @description: 打印二维数组
  * =================================================================================
- * @param {int} **array
- * @param {int} size
- * @param {int} *columnSizes
+ * @param {int} **array                 二维数组
+ * @param {int} size                    二维数组的行数
+ * @param {int} *columnSizes            二维数组行数对应的列数
  * @return {void}
  */
 void print2DArray(int **array, int size, int *columnSizes) {
@@ -190,20 +190,7 @@ int main(int argc, const char *argv[]) {
 
     /* NOTE: 函数调用 */
     int** result = levelOrder(root, &returnSize, &returnColumnSizes);
-
-    /* NOTE: 打印结果 */
-    printf("[\n");
-    for (int i = 0; i < returnSize; ++i) {
-        printf("  [");
-        for (int j = 0; j < returnColumnSizes[i]; ++j) {
-            printf("%d", result[i][j]);
-            if (j < returnColumnSizes[i] - 1) {
-                printf(", ");
-            }
-        }
-        printf("]\n");
-    }
-    printf("]\n");
+    print2DArray(result, returnSize, returnColumnSizes);
 
     return 0;
 }
