@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 10:56:12
+ * @LastEditTime : 2023-09-12 11:01:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,7 +43,7 @@ struct Queue {                  /* 队列结构体 */
 };
 
 /**
- * @description: 入队
+ * @description: 入队 - 将新的树节点元素加入队尾
  * =================================================================================
  * @param {struct Queue} *queueHead     链表队列的虚拟头节点
  * @param {struct TreeNode} *node       待入队树节点元素
@@ -62,7 +62,7 @@ void enQueue(struct Queue *queueHead, struct TreeNode *node) {
 }
 
 /**
- * @description: 出队
+ * @description: 出队 - 将队首树节点元素弹出队列
  * =================================================================================
  * @param {struct Queue} *queueHead     链表队列的虚拟头节点
  * @return {struct TreeNode} *node      出队树节点元素
@@ -116,6 +116,10 @@ void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **returnNu
 
     int count = 0;
     returnNum[*returnSize] = (int *)malloc(sizeof(int) * MAX_SIZE);
+
+    while (1) {
+        struct TreeNode *node = deQueue(queueHead);
+    }
 }
 
 /**
