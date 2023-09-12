@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 10:52:22
+ * @LastEditTime : 2023-09-12 10:56:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,6 +35,8 @@ struct TreeNode {
 /* 时间复杂度：O(n) 空间复杂度: O(n) */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
+#define MAX_SIZE 2000           /* 数组和栈的大小 */
+
 struct Queue {                  /* 队列结构体 */
     struct TreeNode *node;      /* 树节点指针 */
     struct Queue    *next;      /* 指向下一元素的指针 */
@@ -107,6 +109,13 @@ void freeQueue(struct Queue *queueHead) {
  */
 void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **returnNum, struct Queue *queueHead) {
     /* TODO */
+    struct Queue *queueIt = queueHead->next;
+    if (queueIt->node == NULL) {
+        return;
+    }
+
+    int count = 0;
+    returnNum[*returnSize] = (int *)malloc(sizeof(int) * MAX_SIZE);
 }
 
 /**
