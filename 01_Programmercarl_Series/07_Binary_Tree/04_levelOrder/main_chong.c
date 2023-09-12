@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 11:25:02
+ * @LastEditTime : 2023-09-12 11:26:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -180,6 +180,7 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
  * @return {struct TreeNode} *node      新树节点的指针
  */
 struct TreeNode *newNode(int value) {
+    /* TODO */
     struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));
     node->val = value;
     node->left = NULL;
@@ -196,6 +197,7 @@ struct TreeNode *newNode(int value) {
  * @return {void}
  */
 void print2DArray(int **array, int size, int *columnSizes) {
+    /* TODO */
     printf("[\n");
     for (int i = 0; i < size; ++i) {
         printf("  [");
