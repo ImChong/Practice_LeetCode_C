@@ -103,7 +103,7 @@ void freeQueue(struct Queue *queueHead) {
  * @param {struct Queue} *queueHead     链表队列的虚拟头节点
  * @return {void}
  */
-void bfs(int *returnSize, int **returnColumnSizes, int **returnNum, struct Queue *queueHead) {
+void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **returnNum, struct Queue *queueHead) {
     /* TODO */
 }
 
