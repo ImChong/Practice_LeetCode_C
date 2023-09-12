@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 10:06:56
+ * @LastEditTime : 2023-09-12 10:13:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -33,9 +33,9 @@ struct TreeNode {
 /* 2：因为队列的结构特性，操作是先进先出 */
 /* 时间复杂度：O(n) 空间复杂度: O(n) */
 /* ==================================================================================================== */
-struct Queue {
-    struct TreeNode *node;
-    struct Queue    *next;
+struct Queue {                  /* 队列结构体 */
+    struct TreeNode *node;      /* 树节点指针 */
+    struct Queue    *next;      /* 指向下一元素的指针 */
 };
 
 /**
