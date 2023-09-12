@@ -42,7 +42,7 @@ struct Queue {                  /* 队列结构体 */
  * @description: 入队
  * =================================================================================
  * @param {struct Queue} *queueHead     链表队列的虚拟头节点
- * @param {struct TreeNode} *node       待入队元素
+ * @param {struct TreeNode} *node       待入队树节点元素
  * @return {void}
  */
 void enQueue(struct Queue *queueHead, struct TreeNode *node) {
@@ -60,8 +60,8 @@ void enQueue(struct Queue *queueHead, struct TreeNode *node) {
 /**
  * @description: 出队
  * =================================================================================
- * @param {struct Queue} *queueHead
- * @return {struct TreeNode} *node
+ * @param {struct Queue} *queueHead     链表队列的虚拟头节点
+ * @return {struct TreeNode} *node      出队树节点元素
  */
 struct TreeNode *deQueue(struct Queue *queueHead) {
     /* TODO */
@@ -79,11 +79,19 @@ struct TreeNode *deQueue(struct Queue *queueHead) {
 /**
  * @description: 释放队列空间
  * =================================================================================
- * @param {struct Queue} *queueHead
+ * @param {struct Queue} *queueHead     链表队列的虚拟头节点
  * @return {void}
  */
 void freeQueue(struct Queue *queueHead) {
     /* TODO */
+    struct Queue *queueIt = queueHead->next;
+    struct Queue *queuePre = queueHead->next;
+    if (queueIt != NULL) {
+        queuePre = queueIt;
+        queueIt = queueIt->next;
+        free(queuePre);
+    }
+    free(queueHead);
 }
 
 /**
