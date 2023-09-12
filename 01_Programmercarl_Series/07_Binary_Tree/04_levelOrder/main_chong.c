@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 10:29:15
+ * @LastEditTime : 2023-09-12 10:31:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -69,8 +69,11 @@ struct TreeNode *deQueue(struct Queue *queueHead) {
     struct TreeNode *node;
     if (queueIt != NULL) {
         queueHead->next = queueIt->next;
-        node
+        node = queueIt->node;
+        free(queueIt);
+        return node;
     }
+    return NULL;
 }
 
 /**
