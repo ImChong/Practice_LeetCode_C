@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 11:09:38
+ * @LastEditTime : 2023-09-12 11:18:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,7 @@
  * https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html
  */
 #include <stdio.h>
+#include <stdlib.h>
 
 /* NOTE: 树节点 */
 struct TreeNode {
@@ -103,11 +104,11 @@ void freeQueue(struct Queue *queueHead) {
  * =================================================================================
  * @param {int} *returnSize             二叉树的层数
  * @param {int} **returnColumnSizes     二叉树对应层级的节点数
- * @param {int} **returnNum             结果二维数组
+ * @param {int} **resultArray           结果二维数组
  * @param {struct Queue} *queueHead     链表队列的虚拟头节点
  * @return {void}
  */
-void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **returnNum, struct Queue *queueHead) {
+void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray, struct Queue *queueHead) {
     /* TODO */
     struct Queue *queueIt = queueHead->next;
     if (queueIt->node == NULL) {
@@ -115,14 +116,14 @@ void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **returnNu
     }
 
     int count = 0;
-    returnNum[*returnSize] = (int *)malloc(sizeof(int) * MAX_SIZE);
+    resultArray[*returnSize] = (int *)malloc(sizeof(int) * MAX_SIZE);
 
     while (1) {
         struct TreeNode *node = deQueue(queueHead);
         if (node == NULL) {
             break;
         }
-        returnNum[*returnSize][count] = node->val;
+        resultArray[*returnSize][count] = node->val;
         count++;
         if (node->left != NULL) {
             enQueue(queueHead, node->left);
@@ -135,7 +136,7 @@ void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **returnNu
     enQueue(queueHead, NULL);
     (*returnColumnSizes)[*returnSize] = count;
     *returnSize = *returnSize + 1;
-    breadthFirstSearch(returnSize, returnColumnSizes, returnNum, queueHead);
+    breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);
 }
 
 /**
@@ -144,10 +145,27 @@ void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **returnNu
  * @param {struct TreeNode} *root       二叉树的根节点
  * @param {int} *returnSize             二叉树的层数
  * @param {int} **returnColumnSizes     二叉树对应层级的节点数
- * @return {int} **result               结果二维数组
+ * @return {int} **resultArray          结果二维数组
  */
 int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
     /* TODO */
+    *returnSize = 0;
+    if (root == NULL) {
+        return NULL;
+    }
+
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);
+
+    struct Queue *queueHead = (struct Queue *)malloc(sizeof(struct Queue));
+    queueHead->next = NULL;
+    queueHead->node = NULL;
+
+    enQueue(queueHead, root);
+    enQueue(queueHead, NULL);
+    breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);
+    freeQueue(queueHead);
+    return returnNum;
 }
 
 /* ==================================================================================================== */
