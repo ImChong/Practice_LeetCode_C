@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 11:01:07
+ * @LastEditTime : 2023-09-12 11:09:38
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -119,7 +119,23 @@ void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **returnNu
 
     while (1) {
         struct TreeNode *node = deQueue(queueHead);
+        if (node == NULL) {
+            break;
+        }
+        returnNum[*returnSize][count] = node->val;
+        count++;
+        if (node->left != NULL) {
+            enQueue(queueHead, node->left);
+        }
+        if (node->right != NULL) {
+            enQueue(queueHead, node->right);
+        }
     }
+
+    enQueue(queueHead, NULL);
+    (*returnColumnSizes)[*returnSize] = count;
+    *returnSize = *returnSize + 1;
+    breadthFirstSearch(returnSize, returnColumnSizes, returnNum, queueHead);
 }
 
 /**
