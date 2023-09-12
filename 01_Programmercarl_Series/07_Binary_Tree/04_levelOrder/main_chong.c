@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 10:13:11
+ * @LastEditTime : 2023-09-12 10:19:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -47,6 +47,14 @@ struct Queue {                  /* 队列结构体 */
  */
 void enQueue(struct Queue *queueHead, struct TreeNode *node) {
     /* TODO */
+    struct Queue *queueIt = queueHead;
+    while (queueIt->next != NULL) {
+        queueIt->next = queueIt->next;
+    }
+    struct Queue *queueNew = (struct Queue *)malloc(sizeof(struct Queue));
+    queueNew->node = node;
+    queueNew->next = NULL;
+    queueIt->next = queueNew;
 }
 
 /**
