@@ -13,7 +13,7 @@ C language leetcode practice guide:
 - GNU gdb (GDB) 13.2
 
 # Build & Run Code
-In order to run source code in VSCode, select the .c file that wish to run. Then click:
+In order to run source code in VSCode, select the .c file that wish to run. Then click the following button in VSCode:
 ```
 Terminal -> Run Task... -> (Linux) Build & Run      /* Ubuntu System */
 Terminal -> Run Task... -> (Windows) Build & Run    /* Windows System */
@@ -22,7 +22,7 @@ Terminal -> Run Task... -> (Windows) Build & Run    /* Windows System */
 # Debug Code
 In order to debug source code in VSCode, select the .c file that wish to run.
 First Build & Run source code as the above section.
-Then click:
+Then click the following button in VSCode:
 ```
 Run and Debug (Ctil+Shift+D) -> (Linux)(gdb) source code        /* Ubuntu System */
 Run and Debug (Ctil+Shift+D) -> (Windows)(gdb) source code      /* Windows System */
