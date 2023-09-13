@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 20:33:54
+ * @LastEditTime : 2023-09-13 20:35:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -50,22 +50,22 @@ struct TreeNode {
  * @return {int} **resultArray          结果二维数组
  */
 int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
-    *returnSize = 0;                                                        /* 初始化二叉树的层数为 0 */
-    if (root == NULL) {                                                     /* 如果根节点为 NULL */
-        return NULL;                                                            /* 返回 NULL */
+    *returnSize = 0;                                                                    /* 初始化二叉树的层数为 0 */
+    if (root == NULL) {                                                                 /* 如果根节点为 NULL */
+        return NULL;                                                                        /* 返回 NULL */
     }
 
-    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);           /* 为二维数组分配空间 - 2000个int*类型数据 */
-    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);             /* 用来记录二叉树每层的节点数（二维数组每行的列数）- 2000个int类型数据 */
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);                       /* 为二维数组分配空间 - 2000个int*类型数据 */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);                         /* 用来记录二叉树每层的节点数（二维数组每行的列数）- 2000个int类型数据 */
 
-    struct TreeNode *treeNodeQueue[MAX_SIZE];                               /* 数组作为树节点的队列 */
-    int queueFront = 0;                                                     /* 队首索引 */
-    int queueRear = 0;                                                      /* 队尾索引 */
-    struct TreeNode *curNode;                                               /* 当前树节点的指针 */
+    struct TreeNode *treeNodeQueue[MAX_SIZE];                                           /* 数组作为树节点的队列 */
+    int queueFront = 0;                                                                 /* 队首索引 */
+    int queueRear = 0;                                                                  /* 队尾索引 */
+    struct TreeNode *curNode;                                                           /* 当前树节点的指针 */
 
-    treeNodeQueue[queueRear++] = root;
-    while (queueFront != queueRear) {
-        int colSize = 0;
+    treeNodeQueue[queueRear++] = root;                                                  /* 将树的根节点入队 */
+    while (queueFront != queueRear) {                                                   /* 当队首索引不等于队尾索引时 */
+        int colSize = 0;                                                                    /* 结果二维数组当前行的列数 */
         int last = queueRear;
         resultArray[*returnSize] = (int *)malloc(sizeof(int) * (last - queueFront));
         while (queueFront < last) {
