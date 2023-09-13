@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 16:38:03
+ * @LastEditTime : 2023-09-13 16:41:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -107,7 +107,6 @@ void freeQueue(struct Queue *queueHead) {
  * @return {void}
  */
 void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray, struct Queue *queueHead) {
-    /* TODO */
     struct Queue *queueIt = queueHead->next;                /* 初始化当前队列节点的指针为队首指针 */
     if (queueIt->node == NULL) {                            /* 如果队首节点的树节点指针为 NULL */
         return;                                                 /* 返回 */
