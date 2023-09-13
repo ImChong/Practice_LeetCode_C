@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 15:41:43
+ * @LastEditTime : 2023-09-13 15:42:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -52,7 +52,7 @@ struct Queue {                  /* 队列结构体 */
  * @return {void}
  */
 void enQueue(struct Queue *queueHead, struct TreeNode *node) {
-    struct Queue *queueIt = queueHead;          /* 获取队列头节点的指针 */
+    struct Queue *queueIt = queueHead;          /* 获取队列虚拟头节点的指针 */
     while (queueIt->next != NULL) {             /* 当队列节点指针的下一元素不为 NULL 时 */
         queueIt = queueIt->next;                    /* 队列节点指针向后移动一位，获取队列尾节点指针 */
     }
