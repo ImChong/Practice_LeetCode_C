@@ -3,16 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 17:49:49
+ * @LastEditTime : 2023-09-13 17:56:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 102. 二叉树的层序遍历: https://leetcode.cn/problems/binary-tree-level-order-traversal/
+ * @Description  : 102. 二叉树的层序遍历：从上往下层序遍历二叉树 - 此文件为数组解法
+ * 102. 二叉树的层序遍历: https://leetcode.cn/problems/binary-tree-level-order-traversal/
  * https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html
  * 解法参考：https://leetcode.cn/problems/binary-tree-level-order-traversal/solutions/1286876/er-cha-shu-de-ceng-xu-bian-li-cyu-yan-xi-jdk8/
- *
- * 此文件为数组解法
- *
  */
 #include <stdio.h>
 #include <stdlib.h>
