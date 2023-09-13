@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 15:31:08
+ * @LastEditTime : 2023-09-13 15:39:49
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -60,7 +60,7 @@ void enQueue(struct Queue *queueHead, struct TreeNode *node) {
     struct Queue *queueNew = (struct Queue *)malloc(sizeof(struct Queue));      /* 为新队列节点分配空间 */
     queueNew->node = node;                      /* 将当前新队列节点的树节点指针指向目标树节点指针 node */
     queueNew->next = NULL;                      /* 将当前新队列节点的下一节点指向 NULL */
-    queueIt->next = queueNew;                   /* 将队列尾节点的下一节点指向*/
+    queueIt->next = queueNew;                   /* 将队列尾节点的下一节点指向新队列节点 */
 }
 
 /**
