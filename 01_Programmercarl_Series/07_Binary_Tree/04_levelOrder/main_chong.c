@@ -194,18 +194,18 @@ struct TreeNode *newNode(int value) {
  */
 void print2DArray(int **array, int size, int *columnSizes) {
     /* TODO */
-    printf("[\n");
-    for (int i = 0; i < size; ++i) {
-        printf("  [");
-        for (int j = 0; j < columnSizes[i]; ++j) {
-            printf("%d", array[i][j]);
-            if (j < columnSizes[i] - 1) {
+    printf("[\n");                                          /* 打印总边框 [ */
+    for (int i = 0; i < size; ++i) {                        /* 遍历二维数组的行 */
+        printf("  [");                                          /* 打印行边框 [ */
+        for (int j = 0; j < columnSizes[i]; ++j) {                  /* 遍历 i 行内的元素 */
+            printf("%d", array[i][j]);                                  /* 打印 i 行内的元素 */
+            if (j < columnSizes[i] - 1) {                               /* 打印分隔符：, */
                 printf(", ");
             }
         }
-        printf("]\n");
+        printf("]\n");                                          /* 打印行边框 ] */
     }
-    printf("]\n");
+    printf("]\n");                                          /* 打印总边框 ] */
 }
 
 /**
