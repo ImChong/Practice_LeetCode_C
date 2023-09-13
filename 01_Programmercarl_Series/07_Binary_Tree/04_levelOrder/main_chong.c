@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 15:55:18
+ * @LastEditTime : 2023-09-13 15:59:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -52,8 +52,8 @@ struct Queue {                  /* 队列结构体 */
  * @return {void}
  */
 void enQueue(struct Queue *queueHead, struct TreeNode *node) {
-    struct Queue *queueIt = queueHead;          /* 获取队列虚拟头节点的指针 */
-    while (queueIt->next != NULL) {             /* 当队列节点指针的下一元素不为 NULL 时 */
+    struct Queue *queueIt = queueHead;          /* 初始化当前队列节点的指针为虚拟头节点的指针 */
+    while (queueIt->next != NULL) {             /* 当当前队列节点指针的下一元素不为 NULL 时 */
         queueIt = queueIt->next;                    /* 队列节点指针向后移动一位，获取队列尾节点指针 */
     }
     struct Queue *queueNew = (struct Queue *)malloc(sizeof(struct Queue));      /* 为新队列节点分配空间 */
@@ -69,9 +69,9 @@ void enQueue(struct Queue *queueHead, struct TreeNode *node) {
  * @return {struct TreeNode} *node      出队树节点元素
  */
 struct TreeNode *deQueue(struct Queue *queueHead) {
-    struct Queue *queueIt = queueHead->next;    /* 获取当前队首节点的指针 */
+    struct Queue *queueIt = queueHead->next;    /* 初始化当前队列节点的指针为队首指针 */
     struct TreeNode *node;                      /* 初始化一个树节点指针 node */
-    if (queueIt != NULL) {                      /* 如果当前队首节点指针不为 NULL */
+    if (queueIt != NULL) {                      /* 如果队首节点指针不为 NULL */
         queueHead->next = queueIt->next;            /* 将【虚拟头节点的下一节点指针】指向【队首节点的下一节点指针所指节点】 */
         node = queueIt->node;                       /* 获取当前队首节点的树节点元素 */
         free(queueIt);                              /* 释放队首节点的空间 */
@@ -88,8 +88,8 @@ struct TreeNode *deQueue(struct Queue *queueHead) {
  */
 void freeQueue(struct Queue *queueHead) {
     /* TODO */
-    struct Queue *queueIt = queueHead->next;    /* 获取当前*/
-    struct Queue *queuePre = queueHead->next;
+    struct Queue *queueIt = queueHead->next;    /* 初始化当前队列节点的指针为队首指针 */
+    struct Queue *queuePre = queueHead->next;   /* 初始化前一队列节点的指针为队首指针 */
     if (queueIt != NULL) {
         queuePre = queueIt;
         queueIt = queueIt->next;
