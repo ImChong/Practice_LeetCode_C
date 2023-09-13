@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 15:42:39
+ * @LastEditTime : 2023-09-13 15:43:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -70,8 +70,8 @@ void enQueue(struct Queue *queueHead, struct TreeNode *node) {
  */
 struct TreeNode *deQueue(struct Queue *queueHead) {
     /* TODO */
-    struct Queue *queueIt = queueHead->next;
-    struct TreeNode *node;
+    struct Queue *queueIt = queueHead->next;    /* 获取当前队列头节点的指针 */
+    struct TreeNode *node;                      /* 初始化一个树节点指针 node */
     if (queueIt != NULL) {
         queueHead->next = queueIt->next;
         node = queueIt->node;
