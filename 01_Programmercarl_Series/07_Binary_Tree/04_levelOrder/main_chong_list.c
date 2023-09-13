@@ -50,9 +50,9 @@ struct TreeNode {
  * @return {int} **resultArray          结果二维数组
  */
 int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
-    *returnSize = 0;
-    if (root == NULL) {
-        return NULL;
+    *returnSize = 0;                                                        /* 初始化二叉树的层数为 0 */
+    if (root == NULL) {                                                     /* 如果根节点为 NULL */
+        return NULL;                                                            /* 返回 NULL */
     }
 
     int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);
