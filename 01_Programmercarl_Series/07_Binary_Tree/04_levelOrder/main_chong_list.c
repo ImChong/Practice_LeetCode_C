@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 22:41:38
+ * @LastEditTime : 2023-09-13 22:42:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -66,7 +66,7 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
     treeNodeQueue[queueRear++] = root;                                                      /* 将树的根节点入队 */
     while (queueFront != queueRear) {                                                       /* 当队首索引不等于队尾索引时 - 保持循环 */
         int nodeNums = 0;                                                                       /* 二叉树当前层的节点数（结果二维数组当前行的列数） */
-        int layerLastNode = queueRear;                                                          /* 记录队尾索引 */
+        int layerLastNode = queueRear;                                                          /* 记录当前层队尾索引 */
         resultArray[*returnSize] = (int *)malloc(sizeof(int) * (layerLastNode - queueFront));   /* 为当前层的树节点记录数组分配空间 */
         while (queueFront < layerLastNode) {                                                    /* 当队首索引小于队尾索引时 - 保持循环 */
             curNode = treeNodeQueue[queueFront++];                                                  /* 取出当前队首树节点，并将队首索引 + 1 */
