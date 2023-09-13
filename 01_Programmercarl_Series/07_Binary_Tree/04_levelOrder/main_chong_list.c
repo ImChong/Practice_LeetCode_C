@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 20:24:42
+ * @LastEditTime : 2023-09-13 20:29:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -58,24 +58,24 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
     int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);           /* 为二维数组分配空间 - 2000个int*类型数据 */
     *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);             /* 用来记录二叉树每层的节点数（二维数组每行的列数）- 2000个int类型数据 */
 
-    struct TreeNode *layerQueue[MAX_SIZE];
+    struct TreeNode *treeNodeQueue[MAX_SIZE];
     int queueFront = 0;
     int queueRear = 0;
-    struct TreeNode *cur;
+    struct TreeNode *curNode;
 
-    layerQueue[queueRear++] = root;
+    treeNodeQueue[queueRear++] = root;
     while (queueFront != queueRear) {
         int colSize = 0;
         int last = queueRear;
         resultArray[*returnSize] = (int *)malloc(sizeof(int) * (last - queueFront));
         while (queueFront < last) {
-            cur = layerQueue[queueFront++];
-            resultArray[*returnSize][colSize++] = cur->val;
-            if (cur->left != NULL) {
-                layerQueue[queueRear++] = cur->left;
+            curNode = treeNodeQueue[queueFront++];
+            resultArray[*returnSize][colSize++] = curNode->val;
+            if (curNode->left != NULL) {
+                treeNodeQueue[queueRear++] = curNode->left;
             }
-            if (cur->right != NULL) {
-                layerQueue[queueRear++] = cur->right;
+            if (curNode->right != NULL) {
+                treeNodeQueue[queueRear++] = curNode->right;
             }
         }
         (*returnColumnSizes)[*returnSize] = colSize;
