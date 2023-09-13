@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 22:20:31
+ * @LastEditTime : 2023-09-13 22:23:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -55,10 +55,10 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
         return NULL;                                                                        /* 返回 NULL */
     }
 
-    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);                       /* 为二维数组分配空间 - 2000个int*类型数据 */
-    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);                         /* 用来记录二叉树每层的节点数（二维数组每行的列数）- 2000个int类型数据 */
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);                       /* 为二维数组分配空间 - 2000个 int* 类型数据 */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);                         /* 用来记录二叉树每层的节点数（二维数组每行的列数）- 2000个 int 类型数据 */
 
-    struct TreeNode *treeNodeQueue[MAX_SIZE];                                           /* 数组作为树节点的队列 */
+    struct TreeNode *treeNodeQueue[MAX_SIZE];                                           /* 数组作为树节点的队列 treeNodeQueue - 2000个 struct TreeNode * 类型数据  */
     int queueFront = 0;                                                                 /* 队首索引 */
     int queueRear = 0;                                                                  /* 队尾索引 */
     struct TreeNode *curNode;                                                           /* 当前树节点的指针 */
@@ -69,10 +69,10 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
         int last = queueRear;                                                               /* 记录队尾索引 */
         resultArray[*returnSize] = (int *)malloc(sizeof(int) * (last - queueFront));        /* 为当前层的树节点记录数组分配空间 */
         while (queueFront < last) {                                                         /* 当队首索引小于队尾索引时 - 保持循环 */
-            curNode = treeNodeQueue[queueFront++];                                          /* 取出队首树节点 */
-            resultArray[*returnSize][nodeNums++] = curNode->val;                            /* 将队首树节点的值放入结果二维数组当前层的 nodeNums 索引，并将 nodeNums + 1 */
-            if (curNode->left != NULL) {
-                treeNodeQueue[queueRear++] = curNode->left;
+            curNode = treeNodeQueue[queueFront++];                                              /* 取出当前队首树节点，并将队首索引 + 1 */
+            resultArray[*returnSize][nodeNums++] = curNode->val;                                /* 将当前队首树节点的值放入结果二维数组当前层的 nodeNums 索引，并将 nodeNums + 1 */
+            if (curNode->left != NULL) {                                                        /* 如果当前队首树节点的左节点不为 NULL */
+                treeNodeQueue[queueRear++] = curNode->left;                                         /* 将当前队首树节点的左节点放入队尾 */
             }
             if (curNode->right != NULL) {
                 treeNodeQueue[queueRear++] = curNode->right;
