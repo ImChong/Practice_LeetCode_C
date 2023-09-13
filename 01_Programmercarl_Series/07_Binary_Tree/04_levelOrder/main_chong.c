@@ -52,7 +52,6 @@ struct Queue {                  /* 队列结构体 */
  * @return {void}
  */
 void enQueue(struct Queue *queueHead, struct TreeNode *node) {
-    /* TODO */
     struct Queue *queueIt = queueHead;          /* 获取队列头节点的指针 */
     while (queueIt->next != NULL) {             /* 当队列节点指针的下一元素不为 NULL 时 */
         queueIt = queueIt->next;                    /* 队列节点指针向后移动一位 */
