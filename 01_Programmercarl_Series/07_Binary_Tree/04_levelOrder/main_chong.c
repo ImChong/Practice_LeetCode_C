@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 17:24:34
+ * @LastEditTime : 2023-09-13 17:33:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -176,7 +176,6 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
  * @return {struct TreeNode} *node      新树节点的指针
  */
 struct TreeNode *newNode(int value) {
-    /* TODO */
     struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));     /* 初始化树节点：为树节点分配空间 */
     node->val = value;                                                              /* 树节点的值为 value */
     node->left = NULL;                                                              /* 树节点的左子节点为 NULL */
