@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 17:17:39
+ * @LastEditTime : 2023-09-13 17:24:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -145,7 +145,6 @@ void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultAr
  * @return {int} **resultArray          结果二维数组
  */
 int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
-    /* TODO */
     *returnSize = 0;                                                                /* 初始化二叉树的层数为 0 */
     if (root == NULL) {                                                             /* 如果根节点为 NULL */
         return NULL;                                                                    /* 返回 NULL */
@@ -158,11 +157,11 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
     queueHead->next = NULL;                                                         /* 虚拟头节点的下一队列节点为 NULL */
     queueHead->node = NULL;                                                         /* 虚拟头节点保存的树节点为 NULL */
 
-    enQueue(queueHead, root);
-    enQueue(queueHead, NULL);
-    breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);
-    freeQueue(queueHead);
-    return resultArray;
+    enQueue(queueHead, root);                                                       /* 将树的根节点入队 */
+    enQueue(queueHead, NULL);                                                       /* 将 NULL 入队，表示当前树的层级结束 */
+    breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);      /* 开始广度优先搜索算法 */
+    freeQueue(queueHead);                                                           /* 释放队列空间 */
+    return resultArray;                                                             /* 返回结果二维数组 */
 }
 
 /* ==================================================================================================== */
