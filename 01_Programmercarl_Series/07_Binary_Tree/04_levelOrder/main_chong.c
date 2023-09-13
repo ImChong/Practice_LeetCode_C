@@ -177,11 +177,11 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
  */
 struct TreeNode *newNode(int value) {
     /* TODO */
-    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));
-    node->val = value;
-    node->left = NULL;
-    node->right = NULL;
-    return node;
+    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));     /* 初始化树节点：为树节点分配空间 */
+    node->val = value;                                                              /* 树节点的值为 value */
+    node->left = NULL;                                                              /* 树节点的左子节点为 NULL */
+    node->right = NULL;                                                             /* 树节点的右子节点为 NULL */
+    return node;                                                                    /* 返回树节点 */
 }
 
 /**
