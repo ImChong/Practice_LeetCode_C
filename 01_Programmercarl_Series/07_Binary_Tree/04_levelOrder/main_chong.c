@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 16:06:13
+ * @LastEditTime : 2023-09-13 16:08:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -138,7 +138,7 @@ void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultAr
 }
 
 /**
- * @description:
+ * @description: 二叉树的层序遍历
  * =================================================================================
  * @param {struct TreeNode} *root       二叉树的根节点
  * @param {int} *returnSize             二叉树的层数
