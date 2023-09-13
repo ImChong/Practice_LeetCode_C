@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 17:33:32
+ * @LastEditTime : 2023-09-13 17:44:49
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -193,7 +193,6 @@ struct TreeNode *newNode(int value) {
  * @return {void}
  */
 void print2DArray(int **array, int size, int *columnSizes) {
-    /* TODO */
     printf("[\n");                                          /* 打印总边框 [ */
     for (int i = 0; i < size; ++i) {                        /* 遍历二维数组的行 */
         printf("  [");                                          /* 打印行边框 [ */
