@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 16:41:32
+ * @LastEditTime : 2023-09-13 17:17:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -146,17 +146,17 @@ void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultAr
  */
 int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
     /* TODO */
-    *returnSize = 0;
-    if (root == NULL) {
-        return NULL;
+    *returnSize = 0;                                                                /* 初始化二叉树的层数为 0 */
+    if (root == NULL) {                                                             /* 如果根节点为 NULL */
+        return NULL;                                                                    /* 返回 NULL */
     }
 
-    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);
-    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);                   /* 为二维数组分配空间 - 2000个int*类型数据 */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);                     /* 为二维数组每行大小的数组分配空间 - 2000个int类型数据 */
 
-    struct Queue *queueHead = (struct Queue *)malloc(sizeof(struct Queue));
-    queueHead->next = NULL;
-    queueHead->node = NULL;
+    struct Queue *queueHead = (struct Queue *)malloc(sizeof(struct Queue));         /* 为链表队列的虚拟头节点分配空间 */
+    queueHead->next = NULL;                                                         /* 虚拟头节点的下一队列节点为 NULL */
+    queueHead->node = NULL;                                                         /* 虚拟头节点保存的树节点为 NULL */
 
     enQueue(queueHead, root);
     enQueue(queueHead, NULL);
