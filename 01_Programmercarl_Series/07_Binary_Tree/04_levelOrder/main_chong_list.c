@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 19:44:55
+ * @LastEditTime : 2023-09-13 20:03:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -64,8 +64,25 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
     struct TreeNode *cur;
 
     layerQueue[queueRear++] = root;
+    while (queueFront != queueRear) {
+        int colSize = 0;
+        int last = queueRear;
+        resultArray[*returnSize] = (int *)malloc(sizeof(int) * (last - queueFront));
+        while (queueFront < last) {
+            cur = layerQueue[queueFront++];
+            resultArray[*returnSize][colSize++] = cur->val;
+            if (cur->left != NULL) {
+                layerQueue[queueRear++] = cur->left;
+            }
+            if (cur->right != NULL) {
+                layerQueue[queueRear++] = cur->right;
+            }
+        }
+        (*returnColumnSizes)[*returnSize] = colSize;
+        (*returnSize)++;
+    }
 
-    return NULL
+    return resultArray;
 }
 
 /* ==================================================================================================== */
