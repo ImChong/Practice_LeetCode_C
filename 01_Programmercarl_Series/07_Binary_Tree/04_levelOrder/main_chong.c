@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 15:59:03
+ * @LastEditTime : 2023-09-13 16:06:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -87,15 +87,14 @@ struct TreeNode *deQueue(struct Queue *queueHead) {
  * @return {void}
  */
 void freeQueue(struct Queue *queueHead) {
-    /* TODO */
     struct Queue *queueIt = queueHead->next;    /* 初始化当前队列节点的指针为队首指针 */
     struct Queue *queuePre = queueHead->next;   /* 初始化前一队列节点的指针为队首指针 */
-    if (queueIt != NULL) {
-        queuePre = queueIt;
-        queueIt = queueIt->next;
-        free(queuePre);
+    while (queueIt != NULL) {                   /* 如果队首节点指针不为 NULL */
+        queuePre = queueIt;                         /* 赋值【前一队列节点指针】为【当前队列节点指针】 */
+        queueIt = queueIt->next;                    /* 当前队列节点指针向后移动一位 */
+        free(queuePre);                             /* 释放前一队列节点的内存空间 */
     }
-    free(queueHead);
+    free(queueHead);                            /* 释放虚拟头节点的内存空间 */
 }
 
 /**
