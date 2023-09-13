@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-12 11:46:10
+ * @LastEditTime : 2023-09-13 15:27:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -53,9 +53,9 @@ struct Queue {                  /* 队列结构体 */
  */
 void enQueue(struct Queue *queueHead, struct TreeNode *node) {
     /* TODO */
-    struct Queue *queueIt = queueHead;
-    while (queueIt->next != NULL) {
-        queueIt = queueIt->next;
+    struct Queue *queueIt = queueHead;          /* 获取队列头节点的指针 */
+    while (queueIt->next != NULL) {             /* 当队列节点指针的下一元素不为 NULL 时 */
+        queueIt = queueIt->next;                    /* 队列节点指针向后移动一位 */
     }
     struct Queue *queueNew = (struct Queue *)malloc(sizeof(struct Queue));
     queueNew->node = node;
