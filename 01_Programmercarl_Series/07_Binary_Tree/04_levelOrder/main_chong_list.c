@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 22:23:28
+ * @LastEditTime : 2023-09-13 22:36:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -74,15 +74,15 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
             if (curNode->left != NULL) {                                                        /* 如果当前队首树节点的左节点不为 NULL */
                 treeNodeQueue[queueRear++] = curNode->left;                                         /* 将当前队首树节点的左节点放入队尾 */
             }
-            if (curNode->right != NULL) {
-                treeNodeQueue[queueRear++] = curNode->right;
+            if (curNode->right != NULL) {                                                       /* 如果当前队首树节点的右节点不为 NULL */
+                treeNodeQueue[queueRear++] = curNode->right;                                        /* 将当前队首树节点的右节点放入队尾 */
             }
         }
-        (*returnColumnSizes)[*returnSize] = nodeNums;
-        (*returnSize)++;
+        (*returnColumnSizes)[*returnSize] = nodeNums;                                       /* 将当前层的节点数计入 *returnColumnSizes 对应的二叉树层数（二维数组的行数） */
+        (*returnSize)++;                                                                    /* 二叉树层数（二维数组行数） + 1 */
     }
 
-    return resultArray;
+    return resultArray;                                                                 /* 返回结果二维数组 */
 }
 
 /* ==================================================================================================== */
