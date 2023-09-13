@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-13 15:51:19
+ * @LastEditTime : 2023-09-13 15:55:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -69,15 +69,15 @@ void enQueue(struct Queue *queueHead, struct TreeNode *node) {
  * @return {struct TreeNode} *node      出队树节点元素
  */
 struct TreeNode *deQueue(struct Queue *queueHead) {
-    struct Queue *queueIt = queueHead->next;    /* 获取当前队列头节点的指针 */
+    struct Queue *queueIt = queueHead->next;    /* 获取当前队首节点的指针 */
     struct TreeNode *node;                      /* 初始化一个树节点指针 node */
-    if (queueIt != NULL) {                      /* 如果当前队列头节点指针不为 NULL */
-        queueHead->next = queueIt->next;            /* 将【虚拟头节点的下一节点指针】指向【队列头节点的下一节点指针所指节点】 */
-        node = queueIt->node;                       /* 获取当前队列头节点的树节点元素 */
-        free(queueIt);                              /* 释放队列头节点的空间 */
+    if (queueIt != NULL) {                      /* 如果当前队首节点指针不为 NULL */
+        queueHead->next = queueIt->next;            /* 将【虚拟头节点的下一节点指针】指向【队首节点的下一节点指针所指节点】 */
+        node = queueIt->node;                       /* 获取当前队首节点的树节点元素 */
+        free(queueIt);                              /* 释放队首节点的空间 */
         return node;                                /* 返回队首树节点元素 */
     }
-    return NULL;                                /* 如果当前队列头节点指针为 NULL，则返回 NULL */
+    return NULL;                                /* 如果当前队首节点指针为 NULL，则返回 NULL */
 }
 
 /**
@@ -88,7 +88,7 @@ struct TreeNode *deQueue(struct Queue *queueHead) {
  */
 void freeQueue(struct Queue *queueHead) {
     /* TODO */
-    struct Queue *queueIt = queueHead->next;
+    struct Queue *queueIt = queueHead->next;    /* 获取当前*/
     struct Queue *queuePre = queueHead->next;
     if (queueIt != NULL) {
         queuePre = queueIt;
