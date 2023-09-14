@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 15:18:56
+ * @LastEditTime : 2023-09-14 15:34:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -67,19 +67,19 @@ int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColum
     treeNodeQueue[queueRear++] = root;                                                  /* 将树的根节点放入队尾，并且队尾索引 + 1 */
     while (queueFront < queueRear) {                                                    /* 当队首索引小于队尾索引时 - 保持循环 */
         int nodeNums = queueRear - queueFront;                                              /* 当前层的节点数 = 队尾索引 - 队首索引 */
-        int *treeLevel = (int *)malloc(sizeof(int) * nodeNums);                             /* 为当前层节点数的数值分配空间 */
+        int *nodeValues = (int *)malloc(sizeof(int) * nodeNums);                            /* 为当前层节点的所有数值分配空间 */
         (*returnColumnSizes)[*returnSize] = nodeNums;                                       /* 记录当前层的节点数（当前行的列数） */
         for (int i = 0; i < nodeNums; i++) {                                                /* 遍历当前层的节点 */
             struct TreeNode *node = treeNodeQueue[queueFront++];                                /* 取出队首树节点 - 获取指针并将队首索引 + 1 */
-            treeLevel[i] = node->val;
-            if (node->left != NULL) {
-                treeNodeQueue[queueRear++] = node->left;
+            nodeValues[i] = node->val;                                                          /* 记录本层第 i 个节点数值 */
+            if (node->left != NULL) {                                                           /* 如果当前节点的左节点不为 NULL */
+                treeNodeQueue[queueRear++] = node->left;                                            /* 将左节点加入队尾 */
             }
-            if (node->right != NULL) {
-                treeNodeQueue[queueRear++] = node->right;
+            if (node->right != NULL) {                                                          /* 如果当前节点的右节点不为 NULL */
+                treeNodeQueue[queueRear++] = node->right;                                           /* 将右节点加入队尾 */
             }
         }
-        resultArray[(*returnSize)++] = treeLevel;
+        resultArray[(*returnSize)++] = nodeValues;                                          /* 将记录下来的当前层所有数值放入二维数组的当前层（二维数组的对应行），并将层数 + 1 */
     }
 
     for (int i = 0; 2 * i < *returnSize; i++) {
