@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 16:29:03
+ * @LastEditTime : 2023-09-14 20:15:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,6 +38,20 @@ int *rightSideView(struct TreeNode *root, int *returnSize){
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
+
+/**
+ * @description: 创建树节点
+ * =================================================================================
+ * @param {int} value                   树节点的数值
+ * @return {struct TreeNode} *node      新树节点的指针
+ */
+struct TreeNode *newNode(int value) {
+    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));     /* 初始化树节点：为树节点分配空间 */
+    node->val = value;                                                              /* 树节点的值为 value */
+    node->left = NULL;                                                              /* 树节点的左子节点为 NULL */
+    node->right = NULL;                                                             /* 树节点的右子节点为 NULL */
+    return node;                                                                    /* 返回树节点 */
+}
 
 /**
  * @description: 主函数
