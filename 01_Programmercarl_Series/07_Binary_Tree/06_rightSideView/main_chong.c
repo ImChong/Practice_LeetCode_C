@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 20:15:43
+ * @LastEditTime : 2023-09-14 21:26:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -51,6 +51,24 @@ struct TreeNode *newNode(int value) {
     node->left = NULL;                                                              /* 树节点的左子节点为 NULL */
     node->right = NULL;                                                             /* 树节点的右子节点为 NULL */
     return node;                                                                    /* 返回树节点 */
+}
+
+/**
+ * @description: 打印一维数组
+ * =================================================================================
+ * @param {int} *array      一维数组
+ * @param {int} size        一维数组的大小
+ * @return {void}
+ */
+void print1DArray(int *array, int size) {
+    printf("[");
+    for (int i = 0; i < size; ++i) {
+        printf("%d", array[i]);
+        if (i < size - 1) {
+            printf(", ");
+        }
+    }
+    printf("]\n");
 }
 
 /**
