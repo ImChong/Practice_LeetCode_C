@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 11:09:03
+ * @LastEditTime : 2023-09-14 11:25:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -41,6 +41,7 @@ struct TreeNode {
             时间复杂度：O(n) 空间复杂度: O(n) */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
+#define MAX_SIZE 2000           /* 初始化大小 */
 
 /**
  * TODO: 目标函数
@@ -53,10 +54,18 @@ struct TreeNode {
  */
 int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColumnSizes){
     /* TODO */
+    *returnSize = 0;
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);
+    if (root == NULL) {
+        (*returnColumnSizes)[*returnSize] = 0;
+        return resultArray;
+    }
 
-
-
-
+    struct TreeNode *treeNodeQueue[MAX_SIZE];
+    struct TreeNode *curNode;
+    int queueFront = 0;
+    int queueRear = 0;
 
 
     return NULL;
