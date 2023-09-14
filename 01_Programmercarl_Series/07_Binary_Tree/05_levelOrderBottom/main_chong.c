@@ -83,7 +83,12 @@ int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColum
     }
 
     for (int i = 0; 2 * i < *returnSize; i++) {
-
+        int *tmp1 = resultArray[i];
+        resultArray[i] = resultArray[(*returnSize) - i - 1];
+        resultArray[(*returnSize) - i - 1] = tmp1;
+        int tmp2 = (*returnColumnSizes)[i];
+        (*returnColumnSizes)[i] = (*returnColumnSizes)[(*returnSize) - i - 1];
+        (*returnColumnSizes)[(*returnSize) - i - 1] = tmp2;
     }
 
     return resultArray;
