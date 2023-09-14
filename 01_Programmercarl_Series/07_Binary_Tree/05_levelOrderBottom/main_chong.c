@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 15:34:58
+ * @LastEditTime : 2023-09-14 15:47:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -82,16 +82,16 @@ int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColum
         resultArray[(*returnSize)++] = nodeValues;                                          /* 将记录下来的当前层所有数值放入二维数组的当前层（二维数组的对应行），并将层数 + 1 */
     }
 
-    for (int i = 0; 2 * i < *returnSize; i++) {
-        int *tmp1 = resultArray[i];
-        resultArray[i] = resultArray[(*returnSize) - i - 1];
-        resultArray[(*returnSize) - i - 1] = tmp1;
-        int tmp2 = (*returnColumnSizes)[i];
-        (*returnColumnSizes)[i] = (*returnColumnSizes)[(*returnSize) - i - 1];
-        (*returnColumnSizes)[(*returnSize) - i - 1] = tmp2;
+    for (int i = 0; 2 * i < *returnSize; i++) {                                         /* 循环层数的一半 */
+        int *tmp1 = resultArray[i];                                                         /* 用临时指针保存第 i 层的数据 */
+        resultArray[i] = resultArray[(*returnSize) - i - 1];                                /* 将第【i】层的数据替换为第【总层数 - i - 1】层的数据 */
+        resultArray[(*returnSize) - i - 1] = tmp1;                                          /* 将第【总层数 - i - 1】层的数据替换为临时指针的数据，实现二维数组逆转 */
+        int tmp2 = (*returnColumnSizes)[i];                                                 /* 用临时指针保存第 i 层的节点数 */
+        (*returnColumnSizes)[i] = (*returnColumnSizes)[(*returnSize) - i - 1];              /* 将第【i】层的节点数替换为第【总层数 - i - 1】层的节点数 */
+        (*returnColumnSizes)[(*returnSize) - i - 1] = tmp2;                                 /* 将第【总层数 - i - 1】层的节点数替换为临时指针的节点数，实现二维数组逆转 */
     }
 
-    return resultArray;
+    return resultArray;                                                                 /* 返回结果二维数组 */
 }
 
 /* ==================================================================================================== */
