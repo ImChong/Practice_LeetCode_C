@@ -6,8 +6,8 @@
 ```c
 struct Node {
     int data;  // 节点存储的数据
-    struct Node* left;  // 指向左子节点的指针
-    struct Node* right;  // 指向右子节点的指针
+    struct Node *left;  // 指向左子节点的指针
+    struct Node *right;  // 指向右子节点的指针
 };
 ```
 
@@ -16,8 +16,8 @@ struct Node {
 ```c
 #include <stdlib.h>
 
-struct Node* newNode(int data) {
-    struct Node* node = (struct Node*)malloc(sizeof(struct Node));
+struct Node *newNode(int data) {
+    struct Node *node = (struct Node *)malloc(sizeof(struct Node));
     node->data = data;
     node->left = NULL;
     node->right = NULL;
@@ -26,7 +26,7 @@ struct Node* newNode(int data) {
 
 int main() {
     // 创建根节点
-    struct Node* root = newNode(1);
+    struct Node *root = newNode(1);
 
     // 添加左子节点和右子节点
     root->left = newNode(2);
@@ -55,7 +55,7 @@ int main() {
 
 例如，前序遍历的代码可能如下：
 ```c
-void preorder(struct Node* root) {
+void preorder(struct Node *root) {
     if (root == NULL) {
         return;
     }
