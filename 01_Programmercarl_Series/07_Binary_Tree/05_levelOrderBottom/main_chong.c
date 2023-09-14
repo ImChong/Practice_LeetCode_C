@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 11:52:15
+ * @LastEditTime : 2023-09-14 12:03:52
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -61,7 +61,30 @@ int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColum
         return resultArray;
     }
 
-    
+    struct TreeNode **treeNodeQueue = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);
+    int queueFront = 0;
+    int queueRear = 0;
+    treeNodeQueue[queueRear++] = root;
+    while (queueFront < queueRear) {
+        int nodeNums = queueRear - queueFront;
+        int *treeLevel = (int *)malloc(sizeof(int) * nodeNums);
+        (*returnColumnSizes)[*returnSize] = nodeNums;
+        for (int i = 0; i < nodeNums; i++) {
+            struct TreeNode *node = treeNodeQueue[queueFront++];
+            treeLevel[i] = node->val;
+            if (node->left != NULL) {
+                treeNodeQueue[queueRear++] = node->left;
+            }
+            if (node->right != NULL) {
+                treeNodeQueue[queueRear++] = node->right;
+            }
+        }
+        resultArray[(*returnSize)++] = treeLevel;
+    }
+
+    for (int i = 0; 2 * i < *returnSize; i++) {
+
+    }
 
     return resultArray;
 }
