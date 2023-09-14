@@ -86,6 +86,18 @@ int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColum
         }
     }
 
+    int i, j;
+    int col = 0;
+    int deep = 0;
+    for (i = queueRear - 1; i >= 0; i--) {
+        if (treeNodeQueue[i] == NULL) {
+            if (deep) {
+                resultArray[*returnSize] = (int *)malloc(sizeof(int) * col);
+                int endIndex
+            }
+        }
+    }
+
     return resultArray;
 }
 

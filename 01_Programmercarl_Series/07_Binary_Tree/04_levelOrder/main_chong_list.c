@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 11:16:40
+ * @LastEditTime : 2023-09-14 11:46:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -62,9 +62,9 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
     treeNodeQueue[queueRear++] = root;                                                              /* 将树的根节点入队 */
     while (queueFront != queueRear) {                                                               /* 当队首索引不等于队尾索引时 - 保持循环 */
         int nodeNums = 0;                                                                               /* 二叉树当前层的节点数（结果二维数组当前行的列数） */
-        int layerLastNodeIndex = queueRear;                                                             /* 记录当前层队尾索引 */
-        resultArray[*returnSize] = (int *)malloc(sizeof(int) * (layerLastNodeIndex - queueFront));      /* 为当前层的树节点记录数组分配空间 */
-        while (queueFront < layerLastNodeIndex) {                                                       /* 当队首索引小于队尾索引时 - 保持循环 */
+        int layerEndIndex = queueRear;                                                                  /* 记录当前层队尾索引 */
+        resultArray[*returnSize] = (int *)malloc(sizeof(int) * (layerEndIndex - queueFront));           /* 为当前层的树节点记录数组分配空间 */
+        while (queueFront < layerEndIndex) {                                                            /* 当队首索引小于队尾索引时 - 保持循环 */
             curNode = treeNodeQueue[queueFront++];                                                         /* 取出当前队首树节点，并将队首索引 + 1 */
             resultArray[*returnSize][nodeNums++] = curNode->val;                                           /* 将当前队首树节点的值放入结果二维数组当前层的 nodeNums 索引，并将 nodeNums + 1 */
             if (curNode->left != NULL) {                                                                   /* 如果当前队首树节点的左节点不为 NULL */
