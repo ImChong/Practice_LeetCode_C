@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 14:31:29
+ * @LastEditTime : 2023-09-14 14:34:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -64,7 +64,7 @@ int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColum
     struct TreeNode **treeNodeQueue = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);     /* 初始化树节点的队列 treeNodeQueue - 2000个 struct TreeNode * 类型数据  */
     int queueFront = 0;                                                     /* 队首索引 */
     int queueRear = 0;                                                      /* 队尾索引 */
-    treeNodeQueue[queueRear++] = root;
+    treeNodeQueue[queueRear++] = root;                                      /* 将树的根节点放入队尾，并且队尾索引 + 1 */
     while (queueFront < queueRear) {
         int nodeNums = queueRear - queueFront;
         int *treeLevel = (int *)malloc(sizeof(int) * nodeNums);
