@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 11:34:28
+ * @LastEditTime : 2023-09-14 11:52:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -58,45 +58,10 @@ int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColum
     int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);
     *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);
     if (root == NULL) {
-        (*returnColumnSizes)[*returnSize] = 0;
         return resultArray;
     }
 
-    struct TreeNode *treeNodeQueue[MAX_SIZE];
-    struct TreeNode *curNode;
-    int queueFront = 0;
-    int queueRear = 0;
-
-    treeNodeQueue[queueRear++] = NULL;
-    queueFront++;
-    treeNodeQueue[queueRear++] = root;
-    treeNodeQueue[queueRear++] = NULL;
-
-    while (queueRear != queueFront) {
-        while (treeNodeQueue[queueFront++] != NULL) {
-            if (treeNodeQueue[queueFront - 1]->left != NULL) {
-                treeNodeQueue[queueRear++] = treeNodeQueue[queueFront - 1]->left;
-            }
-            if (treeNodeQueue[queueFront - 1]->right != NULL) {
-                treeNodeQueue[queueRear++] = treeNodeQueue[queueFront - 1]->right;
-            }
-            if (queueRear != queueFront) {
-                treeNodeQueue[queueRear++] = NULL;
-            }
-        }
-    }
-
-    int i, j;
-    int col = 0;
-    int deep = 0;
-    for (i = queueRear - 1; i >= 0; i--) {
-        if (treeNodeQueue[i] == NULL) {
-            if (deep) {
-                resultArray[*returnSize] = (int *)malloc(sizeof(int) * col);
-                int endIndex
-            }
-        }
-    }
+    
 
     return resultArray;
 }
