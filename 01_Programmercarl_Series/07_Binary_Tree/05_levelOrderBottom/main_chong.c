@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 11:25:21
+ * @LastEditTime : 2023-09-14 11:34:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -67,8 +67,26 @@ int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColum
     int queueFront = 0;
     int queueRear = 0;
 
+    treeNodeQueue[queueRear++] = NULL;
+    queueFront++;
+    treeNodeQueue[queueRear++] = root;
+    treeNodeQueue[queueRear++] = NULL;
 
-    return NULL;
+    while (queueRear != queueFront) {
+        while (treeNodeQueue[queueFront++] != NULL) {
+            if (treeNodeQueue[queueFront - 1]->left != NULL) {
+                treeNodeQueue[queueRear++] = treeNodeQueue[queueFront - 1]->left;
+            }
+            if (treeNodeQueue[queueFront - 1]->right != NULL) {
+                treeNodeQueue[queueRear++] = treeNodeQueue[queueFront - 1]->right;
+            }
+            if (queueRear != queueFront) {
+                treeNodeQueue[queueRear++] = NULL;
+            }
+        }
+    }
+
+    return resultArray;
 }
 
 /* ==================================================================================================== */
