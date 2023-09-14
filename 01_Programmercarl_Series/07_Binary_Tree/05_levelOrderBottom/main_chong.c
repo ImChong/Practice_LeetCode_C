@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 14:30:51
+ * @LastEditTime : 2023-09-14 14:31:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -58,12 +58,12 @@ int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColum
     int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);           /* 为结果二维数组分配空间 - 2000个 int* 类型数据 */
     *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);             /* 用来记录二叉树每层的节点数（二维数组每行的列数）- 2000个 int 类型数据 */
     if (root == NULL) {                                                     /* 如果根节点为 NULL */
-        return resultArray;                                                     /* 返回 */
+        return resultArray;                                                     /* 返回结果二维数组 */
     }
 
-    struct TreeNode **treeNodeQueue = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);
-    int queueFront = 0;
-    int queueRear = 0;
+    struct TreeNode **treeNodeQueue = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);     /* 初始化树节点的队列 treeNodeQueue - 2000个 struct TreeNode * 类型数据  */
+    int queueFront = 0;                                                     /* 队首索引 */
+    int queueRear = 0;                                                      /* 队尾索引 */
     treeNodeQueue[queueRear++] = root;
     while (queueFront < queueRear) {
         int nodeNums = queueRear - queueFront;
