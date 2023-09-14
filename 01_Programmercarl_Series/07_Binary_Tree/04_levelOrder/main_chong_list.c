@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 11:00:36
+ * @LastEditTime : 2023-09-14 11:04:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -82,7 +82,7 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
         (*returnSize)++;                                                                               /* 二叉树层数（二维数组行数） + 1 */
     }
 
-    return resultArray;                                                                            /* 返回结果二维数组 */
+    return resultArray;                                                                             /* 返回结果二维数组 */
 }
 
 /* ==================================================================================================== */
