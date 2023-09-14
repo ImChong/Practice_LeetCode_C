@@ -8,6 +8,8 @@
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 199. 二叉树的右视图: https://leetcode.cn/problems/binary-tree-right-side-view/
+ * https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html#_199-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE
+ * 解法参考：
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -26,8 +28,35 @@ struct TreeNode {
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-/* NOTE：主函数 */
-int main(int argc, const char* argv[]) {
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
+int main(int argc, const char *argv[]) {
+    /*
+     * 创建以下树结构
+     *      1
+     *     / \
+     *    2   3
+     *   / \ / \
+     *  4  5 6  7
+     */
+    struct TreeNode *root = newNode(1);
+    root->left = newNode(2);
+    root->right = newNode(3);
 
+    root->left->left = newNode(4);
+    root->left->right = newNode(5);
+
+    root->right->left = newNode(6);
+    root->right->right = newNode(7);
+
+    int returnSize = 0;
+    int *returnColumnSizes;
+
+    
     return 0;
 }
