@@ -69,8 +69,8 @@ int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColum
         int nodeNums = queueRear - queueFront;                                              /* 当前层的节点数 = 队尾索引 - 队首索引 */
         int *treeLevel = (int *)malloc(sizeof(int) * nodeNums);                             /* 为当前层节点数的数值分配空间 */
         (*returnColumnSizes)[*returnSize] = nodeNums;                                       /* 记录当前层的节点数（当前行的列数） */
-        for (int i = 0; i < nodeNums; i++) {
-            struct TreeNode *node = treeNodeQueue[queueFront++];
+        for (int i = 0; i < nodeNums; i++) {                                                /* 遍历当前层的节点 */
+            struct TreeNode *node = treeNodeQueue[queueFront++];                                /* 取出队首树节点 - 获取指针并将队首索引 + 1 */
             treeLevel[i] = node->val;
             if (node->left != NULL) {
                 treeNodeQueue[queueRear++] = node->left;
