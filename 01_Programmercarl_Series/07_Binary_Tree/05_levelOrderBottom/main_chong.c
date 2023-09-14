@@ -54,18 +54,18 @@ struct TreeNode {
  */
 int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColumnSizes){
     /* TODO */
-    *returnSize = 0;                                                        /* 初始化二叉树的层数为 0 */
-    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);           /* 为结果二维数组分配空间 - 2000个 int* 类型数据 */
-    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);             /* 用来记录二叉树每层的节点数（二维数组每行的列数）- 2000个 int 类型数据 */
-    if (root == NULL) {                                                     /* 如果根节点为 NULL */
-        return resultArray;                                                     /* 返回结果二维数组 */
+    *returnSize = 0;                                                                    /* 初始化二叉树的层数为 0 */
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);                       /* 为结果二维数组分配空间 - 2000个 int* 类型数据 */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);                         /* 用来记录二叉树每层的节点数（二维数组每行的列数）- 2000个 int 类型数据 */
+    if (root == NULL) {                                                                 /* 如果根节点为 NULL */
+        return resultArray;                                                                 /* 返回结果二维数组 */
     }
 
     struct TreeNode **treeNodeQueue = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);     /* 初始化树节点的队列 treeNodeQueue - 2000个 struct TreeNode * 类型数据  */
-    int queueFront = 0;                                                     /* 队首索引 */
-    int queueRear = 0;                                                      /* 队尾索引 */
-    treeNodeQueue[queueRear++] = root;                                      /* 将树的根节点放入队尾，并且队尾索引 + 1 */
-    while (queueFront < queueRear) {                                        /* 当队首索引小于队尾索引时 - 保持循环 */
+    int queueFront = 0;                                                                 /* 队首索引 */
+    int queueRear = 0;                                                                  /* 队尾索引 */
+    treeNodeQueue[queueRear++] = root;                                                  /* 将树的根节点放入队尾，并且队尾索引 + 1 */
+    while (queueFront < queueRear) {                                                    /* 当队首索引小于队尾索引时 - 保持循环 */
         int nodeNums = queueRear - queueFront;
         int *treeLevel = (int *)malloc(sizeof(int) * nodeNums);
         (*returnColumnSizes)[*returnSize] = nodeNums;
