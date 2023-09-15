@@ -104,7 +104,6 @@ void freeTree(struct TreeNode *root) {
 
     freeTree(root->left);
     freeTree(root->right);
-
     free(root);
 }
 
