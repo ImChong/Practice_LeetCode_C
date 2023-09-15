@@ -49,12 +49,14 @@ void preorder(struct TreeNode *root, int *returnArr, int height, int *returnSize
     if (root == NULL) {
         return;
     }
-    
+
     if (height + 1 > *returnSize) {
         *returnSize = height + 1;
     }
 
     returnArr[height] = root->val;
+    preorder(root->left, returnArr, height + 1, returnSize);
+    preorder(root->right, returnArr, height + 1, returnSize);
     return;
 }
 
