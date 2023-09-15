@@ -16,7 +16,7 @@
 #define RECURSION_EN 1          /* 递归代码开关 */
 #define ITERATION_EN 1          /* 迭代代码开关 */
 
-/* NOTE: 树节点 */
+/* 树节点 */
 struct TreeNode {
     int val;                    /* 节点的值 */
     struct TreeNode *left;      /* 左节点 */
@@ -97,7 +97,7 @@ int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
-/* NOTE: 打印结果数组 */
+/* 打印结果数组 */
 void printArray(int *result, int returnSize) {
     for (int i = 0; i < returnSize; i++) {
         printf("%d ", result[i]);
@@ -105,7 +105,7 @@ void printArray(int *result, int returnSize) {
     printf("\r\n");
 }
 
-/* NOTE：主函数 */
+/* 主函数 */
 int main(int argc, const char* argv[]) {
     /*
      * 创建以下树结构
