@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 12:10:30
+ * @LastEditTime : 2023-09-15 12:12:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -92,7 +92,7 @@ struct TreeNode *newNode(int value) {
 }
 
 /**
- * @description: 释放树所占用的空间
+ * @description: 后续遍历释放树所占用的空间
  * =================================================================================
  * @param {TreeNode} *root
  * @return {void}
