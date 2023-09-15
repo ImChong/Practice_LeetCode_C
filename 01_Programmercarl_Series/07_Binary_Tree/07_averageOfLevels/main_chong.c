@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 14:54:37
+ * @LastEditTime : 2023-09-15 14:56:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -26,7 +26,7 @@
  */
 double *averageOfLevels(struct TreeNode *root, int *returnSize){
     /* TODO */
-    
+
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
@@ -35,7 +35,7 @@ double *averageOfLevels(struct TreeNode *root, int *returnSize){
  * @description: 主函数
  * =================================================================================
  * @param {int} argc
- * @param {char} *argv
+ * @param {char} *argv[]
  * @return {*}
  */
 int main(int argc, const char *argv[]) {
