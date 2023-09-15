@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 12:12:08
+ * @LastEditTime : 2023-09-15 12:14:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -98,13 +98,13 @@ struct TreeNode *newNode(int value) {
  * @return {void}
  */
 void freeTree(struct TreeNode *root) {
-    if (root == NULL) {
+    if (root == NULL) {             /* 如果传入节点为 NULL 则返回 */
         return;
     }
 
-    freeTree(root->left);
-    freeTree(root->right);
-    free(root);
+    freeTree(root->left);           /* 遍历释放左节点空间 */
+    freeTree(root->right);          /* 遍历释放右节点空间 */
+    free(root);                     /* 释放当前节点空间 */
 }
 
 /**
