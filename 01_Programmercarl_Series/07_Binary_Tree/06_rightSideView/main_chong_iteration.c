@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 14:20:15
+ * @LastEditTime : 2023-09-15 14:32:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -52,6 +52,28 @@ int *rightSideView(struct TreeNode *root, int *returnSize){
     struct TreeNode *treeNodeQueue[MAX_SIZE];
     int queueFront = 0;
     int queueRear = 0;
+
+    if (root == NULL) {
+        return resultArray;
+    }
+    treeNodeQueue[queueRear++] = root;
+
+    while (queueFront < queueRear) {
+        int layerLastIndex = queueRear;
+        int value = 0;
+        while (queueFront < layerLastIndex) {
+            struct TreeNode *curNode = treeNodeQueue[queueFront];
+            value = curNode->val;
+            if (curNode->left != NULL) {
+                treeNodeQueue[queueRear++] = curNode->left;
+            }
+            if (curNode->right != NULL) {
+                treeNodeQueue[queueRear++] = curNode->right;
+            }
+            queueFront++;
+        }
+        resultArray[(*returnSize)++] = value;
+    }
 
     return resultArray;                                                 /* 返回数组 */
 }
