@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 09:03:40
+ * @LastEditTime : 2023-09-15 09:06:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -70,7 +70,9 @@ void preorder(struct TreeNode *root, int *resultArray, int height, int *returnSi
  */
 int *rightSideView(struct TreeNode *root, int *returnSize){
     int *resultArray = (int *)calloc(MAX_SIZE, sizeof(int));
-    return NULL;
+    *returnSize = 0;
+    preorder(root, resultArray, 0, returnSize);
+    return resultArray;
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
@@ -134,8 +136,10 @@ int main(int argc, const char *argv[]) {
     root->right->right = newNode(7);
 
     int returnSize = 0;
-    int *returnColumnSizes;
 
+    /* NOTE: 函数调用 */
+    int* result = rightSideView(root, &returnSize);
+    print1DArray(result, returnSize);
 
     return 0;
 }
