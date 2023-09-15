@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 09:06:11
+ * @LastEditTime : 2023-09-15 09:08:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -99,14 +99,14 @@ struct TreeNode *newNode(int value) {
  * @return {void}
  */
 void print1DArray(int *array, int size) {
-    printf("[");
-    for (int i = 0; i < size; ++i) {
-        printf("%d", array[i]);
-        if (i < size - 1) {
+    printf("[");                        /* 打印行边框 [ */
+    for (int i = 0; i < size; ++i) {        /* 遍历 array 内的元素 */
+        printf("%d", array[i]);                 /* 打印 array 内的元素 */
+        if (i < size - 1) {                     /* 打印分隔符：, */
             printf(", ");
         }
     }
-    printf("]\n");
+    printf("]\n");                      /* 打印行边框 ] */
 }
 
 /**
