@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-14 15:56:15
+ * @LastEditTime : 2023-09-15 08:48:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,12 @@
  * https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html#_102-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86
  * 解法参考：https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/solutions/402560/er-cha-shu-de-ceng-ci-bian-li-ii-by-leetcode-solut/
  * 解法参考：https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/solutions/1298370/er-cha-shu-de-ceng-xu-bian-li-ii-cyu-yan-u762/
+ *
+ *       1
+ *      / \
+ *     2   3
+ *    / \ / \
+ *   4  5 6  7
  *
  * 层序遍历：
  * [
