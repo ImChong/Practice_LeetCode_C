@@ -1,6 +1,6 @@
 .NET Install Tool for Extension Authors
 psioniq File Header
-C Function Header Snippet for UIUC ECE391   - [TODO] rewrite snippets in vscode snippets json
+C Function Header Snippet for UIUC ECE391
 koroFileHeader
 
 Path Intellisense
