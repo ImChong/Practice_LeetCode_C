@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 08:49:37
+ * @LastEditTime : 2023-09-15 08:53:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -39,14 +39,16 @@ struct TreeNode {
 /**
  * @description: 二叉树的前序遍历
  * =================================================================================
- * @param {struct TreeNode} *root
- * @param {int} *returnArr
- * @param {int} height
- * @param {int} *returnSize
+ * @param {struct TreeNode} *root   二叉树的根节点
+ * @param {int} *returnArr          结果数组
+ * @param {int} height              二叉树的高度
+ * @param {int} *returnSize         结果数组的大小
  * @return {*}
  */
 void preorder(struct TreeNode *root, int *returnArr, int height, int *returnSize) {
-
+    if (root == NULL) {
+        return;
+    }
     return;
 }
 
