@@ -58,7 +58,6 @@ struct TreeNode {
 #define MAX_SIZE 2000           /* 初始化大小 */
 
 /**
- * DONE: 目标函数
  * @description: 二叉树的层序遍历
  * =================================================================================
  * @param {struct TreeNode} *root       二叉树的根节点

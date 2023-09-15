@@ -9,13 +9,11 @@ struct ListNode {
     struct ListNode *next;  /* 下一节点地址 */
 };
 
-/* DONE: 目标函数 */
 typedef struct {
     struct ListNode *head;     /* 链表虚拟头节点 */
     int size;           /* 链表长度 */
 } MyLinkedList;
 
-/* DONE: 目标函数 */
 MyLinkedList* myLinkedListCreate() {
     MyLinkedList *obj = (MyLinkedList*)malloc(sizeof(MyLinkedList));    /* 为虚拟头节点分配空间 */
     obj->head = NULL;       /* 初始化链表头 */
@@ -23,7 +21,6 @@ MyLinkedList* myLinkedListCreate() {
     return obj;             /* 返回虚拟头节点 */
 }
 
-/* DONE: 目标函数 */
 int myLinkedListGet(MyLinkedList* obj, int index) {
     if (index < 0 || index >= obj->size) {      /* 输入校验 */
         return -1;
@@ -35,7 +32,6 @@ int myLinkedListGet(MyLinkedList* obj, int index) {
     return curr->val;               /* 返回对应节点数值 */
 }
 
-/* DONE: 目标函数 */
 void myLinkedListAddAtHead(MyLinkedList* obj, int val) {
     struct ListNode *newHead = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新头节点分配空间*/
     newHead->val = val;             /* 为链表新头节点赋值 */
@@ -44,7 +40,6 @@ void myLinkedListAddAtHead(MyLinkedList* obj, int val) {
     obj->size++;                    /* 链表长度 + 1 */
 }
 
-/* DONE: 目标函数 */
 void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
     struct ListNode *newTail = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新尾节点分配空间*/
     newTail->val = val;             /* 为链表新尾节点赋值 */
@@ -62,7 +57,6 @@ void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
     obj->size++;                        /* 链表长度 + 1 */
 }
 
-/* DONE: 目标函数 */
 void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
     if (index < 0 || index > obj->size) {       /* 输入校验 */
         return;
@@ -91,7 +85,6 @@ void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
     obj->size++;                                                /* 链表长度 + 1 */
 }
 
-/* DONE: 目标函数 */
 void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
     if (index < 0 || index >= obj->size) {       /* 输入校验 */
         return;
@@ -113,7 +106,6 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
     obj->size--;                                /* 链表长度 - 1 */
 }
 
-/* DONE: 目标函数 */
 void myLinkedListFree(MyLinkedList* obj) {
     struct ListNode *curr = obj->head;     /* 获取当前链表头节点的指针 */
     while (curr != NULL) {          /* 当指针所指的节点不为NULL时 */

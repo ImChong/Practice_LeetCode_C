@@ -153,7 +153,6 @@ void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultAr
 }
 
 /**
- * DONE: 目标函数
  * @description: 二叉树的层序遍历
  * =================================================================================
  * @param {struct TreeNode} *root       二叉树的根节点

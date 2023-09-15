@@ -41,7 +41,7 @@ struct TreeNode {
  * 结果：[4, 2, 5, 1, 6, 3, 7]
  */
 /* ==================================================================================================== */
-/* DONE: 目标函数：递归遍历 */
+/* 递归遍历 */
 void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return;
@@ -58,7 +58,7 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     return ret;                                         /* 返回结果 ret 数组 */
 }
 
-/* DONE: 目标函数：迭代遍历  */
+/* 迭代遍历  */
 int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     int *res = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案 */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */

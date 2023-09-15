@@ -45,7 +45,7 @@ struct TreeNode {
  */
 /* ==================================================================================================== */
 #if RECURSION_EN
-/* DONE: 目标函数：递归遍历 */
+/* 递归遍历 */
 void postOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                                     /* 如果当前节点为 NULL，直接返回 */
         return;
@@ -64,7 +64,7 @@ int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 #endif
 
 #if ITERATION_EN
-/* DONE: 目标函数：迭代遍历  */
+/* 迭代遍历  */
 int* postorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
     int *res = (int *)malloc(sizeof(int) * MAX_SIZE);       /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案（后期需要free） */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
