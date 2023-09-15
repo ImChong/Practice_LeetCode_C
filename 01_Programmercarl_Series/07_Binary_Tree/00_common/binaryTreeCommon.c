@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 08:45:26
+ * @LastEditTime : 2023-09-15 12:17:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -26,13 +26,13 @@
  *   4  5 6  7
  *
  * 前序遍历：
- * 1 2 4 5 3 6 7
+ * [1, 2, 4, 5, 3, 6, 7]
  *
  * 中序遍历：
- * 4 2 5 1 6 3 7
+ * [4, 2, 5, 1, 6, 3, 7]
  *
  * 后序遍历：
- * 4 5 2 6 7 3 1
+ * [4, 5, 2, 6, 7, 3, 1]
  *
  */
 #include <stdio.h>
@@ -253,6 +253,22 @@ struct TreeNode *newNode(int value) {
 }
 
 /**
+ * @description: 后续遍历释放树所占用的空间
+ * =================================================================================
+ * @param {TreeNode} *root
+ * @return {void}
+ */
+void freeTree(struct TreeNode *root) {
+    if (root == NULL) {             /* 如果传入节点为 NULL 则返回 */
+        return;
+    }
+
+    freeTree(root->left);           /* 遍历释放左节点空间 */
+    freeTree(root->right);          /* 遍历释放右节点空间 */
+    free(root);                     /* 释放当前节点空间 */
+}
+
+/**
  * @description: 打印树结构
  * =================================================================================
  * @return {void}
@@ -267,17 +283,21 @@ void printTree(void) {
 }
 
 /**
- * @description: 打印数组
+ * @description: 打印一维数组
  * =================================================================================
- * @param {int} *result             结果数组
- * @param {int} returnSize          结果数组大小
+ * @param {int} *array      一维数组
+ * @param {int} size        一维数组的大小
  * @return {void}
  */
-void printArray(int *result, int returnSize) {
-    for (int i = 0; i < returnSize; i++) {
-        printf("%d ", result[i]);
+void print1DArray(int *array, int size) {
+    printf("[");                        /* 打印行边框 [ */
+    for (int i = 0; i < size; ++i) {        /* 遍历 array 内的元素 */
+        printf("%d", array[i]);                 /* 打印 array 内的元素 */
+        if (i < size - 1) {                     /* 打印分隔符：, */
+            printf(", ");
+        }
     }
-    printf("\r\n");
+    printf("]\n");                      /* 打印行边框 ] */
 }
 
 /**
@@ -315,13 +335,13 @@ int main(int argc, const char* argv[]) {
     #if RECURSION_EN
     printf("preorderTraversal_recursion: \n");
     result = preorderTraversal_recursion(root, &returnSize);
-    printArray(result, returnSize);
+    print1DArray(result, returnSize);
     #endif
 
     #if ITERATION_EN
     printf("preorderTraversal_iteration: \n");
     result = preorderTraversal_iteration(root, &returnSize);
-    printArray(result, returnSize);
+    print1DArray(result, returnSize);
     #endif
 #endif
 
@@ -329,13 +349,13 @@ int main(int argc, const char* argv[]) {
     #if RECURSION_EN
     printf("inorderTraversal_recursion: \n");
     result = inorderTraversal_recursion(root, &returnSize);
-    printArray(result, returnSize);
+    print1DArray(result, returnSize);
     #endif
 
     #if ITERATION_EN
     printf("inorderTraversal_iteration: \n");
     result = inorderTraversal_iteration(root, &returnSize);
-    printArray(result, returnSize);
+    print1DArray(result, returnSize);
     #endif
 #endif
 
@@ -343,13 +363,13 @@ int main(int argc, const char* argv[]) {
     #if RECURSION_EN
     printf("postorderTraversal_recursion: \n");
     result = postorderTraversal_recursion(root, &returnSize);
-    printArray(result, returnSize);
+    print1DArray(result, returnSize);
     #endif
 
     #if ITERATION_EN
     printf("postorderTraversal_iteration: \n");
     result = postorderTraversal_iteration(root, &returnSize);
-    printArray(result, returnSize);
+    print1DArray(result, returnSize);
     #endif
 #endif
 
