@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <limits.h>
 
-/* DONE: 目标函数 */
 int minSubArrayLen(int target, int *nums, int numsSize) {
     int minLen = INT_MAX;       /* 记录最小长度 */
     int sum = 0;                /* 记录子数组的合 */

@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 
-/* DONE: 目标函数 */
 int removeElement(int *nums, int numsSize, int val) {
     int quick, slow;            /* 初始化快慢指针 */
     for (quick = 0, slow = 0; quick < numsSize; quick++) {  /* 快指针遍历数组 */

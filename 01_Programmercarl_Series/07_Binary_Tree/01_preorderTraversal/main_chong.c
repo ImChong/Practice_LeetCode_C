@@ -44,7 +44,7 @@ struct TreeNode {
  */
 /* ==================================================================================================== */
 #if RECURSION_EN
-/* DONE: 目标函数: 递归遍历 */
+/* DONE: 目标函数：递归遍历 */
 void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return;
