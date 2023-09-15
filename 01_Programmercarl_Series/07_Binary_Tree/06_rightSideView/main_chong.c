@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 09:08:10
+ * @LastEditTime : 2023-09-15 12:10:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -66,7 +66,7 @@ void preorder(struct TreeNode *root, int *resultArray, int height, int *returnSi
  * =================================================================================
  * @param {TreeNode} *root          二叉树的根节点
  * @param {int} *returnSize         返回数组大小
- * @return {int} *resultArray         结果一维数组
+ * @return {int} *resultArray       结果一维数组
  */
 int *rightSideView(struct TreeNode *root, int *returnSize){
     int *resultArray = (int *)calloc(MAX_SIZE, sizeof(int));
@@ -89,6 +89,23 @@ struct TreeNode *newNode(int value) {
     node->left = NULL;                                                              /* 树节点的左子节点为 NULL */
     node->right = NULL;                                                             /* 树节点的右子节点为 NULL */
     return node;                                                                    /* 返回树节点 */
+}
+
+/**
+ * @description: 释放树所占用的空间
+ * =================================================================================
+ * @param {TreeNode} *root
+ * @return {void}
+ */
+void freeTree(struct TreeNode *root) {
+    if (root == NULL) {
+        return;
+    }
+
+    freeTree(root->left);
+    freeTree(root->right);
+
+    free(root);
 }
 
 /**
@@ -141,5 +158,7 @@ int main(int argc, const char *argv[]) {
     int* result = rightSideView(root, &returnSize);
     print1DArray(result, returnSize);
 
+    freeTree(root);     /* 释放树所占用的空间 */
+    free(result);       /* 释放结果一维数组的内存空间 */
     return 0;
 }
