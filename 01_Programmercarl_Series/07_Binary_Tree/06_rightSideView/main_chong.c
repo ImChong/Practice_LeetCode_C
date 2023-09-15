@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 12:19:58
+ * @LastEditTime : 2023-09-15 14:03:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,6 +34,14 @@ struct TreeNode {
 
 /* ==================================================================================================== */
 /* TODO: 目标函数 */
+/*
+先序遍历二叉树
+根结点深度为0,遍历到每个结点将值存在返回数组下标为深度的位置
+由于先序遍历，先遍历左孩子，后遍历右孩子，所以每一层，越靠右边的数，越后出现
+后出现的数覆盖先出现的数
+这样返回数组中储存的自然就是每层最右边的数
+返回数组的大小为二叉树深度加1
+*/
 /* ==================================================================================================== */
 #define MAX_SIZE 2000           /* 初始化大小 */
 
@@ -41,23 +49,22 @@ struct TreeNode {
  * @description: 二叉树的前序遍历
  * =================================================================================
  * @param {struct TreeNode} *root   二叉树的根节点
- * @param {int} *resultArray          结果一维数组
+ * @param {int} *resultArray          结果一维数组（返回数组）
  * @param {int} height              二叉树的高度
  * @param {int} *returnSize         结果数组的大小
  * @return {void}
  */
 void preorder(struct TreeNode *root, int *resultArray, int height, int *returnSize) {
-    if (root == NULL) {                                                 /* */
+    if (root == NULL) {                                                 /* 如果传入节点为 NULL 则返回 */
         return;
     }
 
-    if (height + 1 > *returnSize) {
-        *returnSize = height + 1;
+    if (height + 1 > *returnSize) {                                     /* 如果高度 + 1 > 返回数组的大小 */
+        *returnSize = height + 1;                                           /* 返回数组的大小 = 高度 + 1 */
     }
-
-    resultArray[height] = root->val;
-    preorder(root->left, resultArray, height + 1, returnSize);
-    preorder(root->right, resultArray, height + 1, returnSize);
+    resultArray[height] = root->val;                                    /* 返回数组对应的高度索引放入当前树节点的值 */
+    preorder(root->left, resultArray, height + 1, returnSize);          /* 遍历左节点 */
+    preorder(root->right, resultArray, height + 1, returnSize);         /* 遍历右节点 */
     return;
 }
 
@@ -66,13 +73,13 @@ void preorder(struct TreeNode *root, int *resultArray, int height, int *returnSi
  * =================================================================================
  * @param {TreeNode} *root          二叉树的根节点
  * @param {int} *returnSize         返回数组大小
- * @return {int} *resultArray       结果一维数组
+ * @return {int} *resultArray       结果一维数组（返回数组）
  */
 int *rightSideView(struct TreeNode *root, int *returnSize){
-    int *resultArray = (int *)calloc(MAX_SIZE, sizeof(int));
-    *returnSize = 0;
-    preorder(root, resultArray, 0, returnSize);
-    return resultArray;
+    int *resultArray = (int *)calloc(MAX_SIZE, sizeof(int));            /* 为返回结果数组分配空间，并初始化为 0 */
+    *returnSize = 0;                                                    /* 返回数组大小为 0 */
+    preorder(root, resultArray, 0, returnSize);                         /* 从根节点开始前序遍历 */
+    return resultArray;                                                 /* 返回数组 */
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
