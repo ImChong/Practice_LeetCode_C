@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 09:00:47
+ * @LastEditTime : 2023-09-15 09:03:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -41,12 +41,12 @@ struct TreeNode {
  * @description: 二叉树的前序遍历
  * =================================================================================
  * @param {struct TreeNode} *root   二叉树的根节点
- * @param {int} *returnArray          结果一维数组
+ * @param {int} *resultArray          结果一维数组
  * @param {int} height              二叉树的高度
  * @param {int} *returnSize         结果数组的大小
  * @return {*}
  */
-void preorder(struct TreeNode *root, int *returnArray, int height, int *returnSize) {
+void preorder(struct TreeNode *root, int *resultArray, int height, int *returnSize) {
     if (root == NULL) {
         return;
     }
@@ -55,9 +55,9 @@ void preorder(struct TreeNode *root, int *returnArray, int height, int *returnSi
         *returnSize = height + 1;
     }
 
-    returnArray[height] = root->val;
-    preorder(root->left, returnArray, height + 1, returnSize);
-    preorder(root->right, returnArray, height + 1, returnSize);
+    resultArray[height] = root->val;
+    preorder(root->left, resultArray, height + 1, returnSize);
+    preorder(root->right, resultArray, height + 1, returnSize);
     return;
 }
 
@@ -66,10 +66,10 @@ void preorder(struct TreeNode *root, int *returnArray, int height, int *returnSi
  * =================================================================================
  * @param {TreeNode} *root          二叉树的根节点
  * @param {int} *returnSize         返回数组大小
- * @return {int} *returnArray         结果一维数组
+ * @return {int} *resultArray         结果一维数组
  */
 int *rightSideView(struct TreeNode *root, int *returnSize){
-    int *returnArray = (int *)calloc(MAX_SIZE, sizeof(int));
+    int *resultArray = (int *)calloc(MAX_SIZE, sizeof(int));
     return NULL;
 }
 /* ==================================================================================================== */
