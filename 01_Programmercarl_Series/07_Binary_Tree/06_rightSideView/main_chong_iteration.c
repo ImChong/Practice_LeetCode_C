@@ -1,15 +1,14 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\06_rightSideView\main_chong.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\06_rightSideView\main_chong_iteration.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 14:03:47
+ * @LastEditTime : 2023-09-15 14:07:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 199. 二叉树的右视图: https://leetcode.cn/problems/binary-tree-right-side-view/
  * https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html#_199-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE
- * 解法参考：https://leetcode.cn/problems/binary-tree-right-side-view/solutions/214060/199-er-cha-shu-de-you-shi-tu-by-hamiguaex163com/
  * 解法参考：https://leetcode.cn/problems/binary-tree-right-side-view/solutions/1453989/by-goodgoodday-2kho/
  *
  *       1
@@ -33,14 +32,9 @@ struct TreeNode {
 };
 
 /* ==================================================================================================== */
-/* TODO: 目标函数 */
+/* DONE: 目标函数 */
 /*
-先序遍历二叉树
-根结点深度为0,遍历到每个结点将值存在返回数组下标为深度的位置
-由于先序遍历，先遍历左孩子，后遍历右孩子，所以每一层，越靠右边的数，越后出现
-后出现的数覆盖先出现的数
-这样返回数组中储存的自然就是每层最右边的数
-返回数组的大小为二叉树深度加1
+    BFS 迭代法
 */
 /* ==================================================================================================== */
 #define MAX_SIZE 2000           /* 初始化大小 */
