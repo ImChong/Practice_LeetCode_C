@@ -63,9 +63,9 @@ void preorder(struct TreeNode *root, int *returnArr, int height, int *returnSize
 /**
  * @description: 二叉树的右视图
  * =================================================================================
- * @param {TreeNode} *root
- * @param {int} *returnSize
- * @return {int} *resultArray
+ * @param {TreeNode} *root          二叉树的根节点
+ * @param {int} *returnSize         返回数组大小
+ * @return {int} *resultArray       结果一维数组
  */
 int *rightSideView(struct TreeNode *root, int *returnSize){
 
