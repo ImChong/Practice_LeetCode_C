@@ -46,7 +46,7 @@ void printList(struct ListNode *listPtr) {
 }
 
 struct ListNode* removeNthFromEnd(struct ListNode* head, int n){
-    // TODO: write code here
+    /* TODO: write code here */
 }
 
 int main()
