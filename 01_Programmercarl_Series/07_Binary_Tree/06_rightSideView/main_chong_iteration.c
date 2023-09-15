@@ -24,7 +24,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* NOTE: 树节点 */
+/* 树节点 */
 struct TreeNode {
     int val;                    /* 节点的值 */
     struct TreeNode *left;      /* 左节点 */
@@ -156,7 +156,7 @@ int main(int argc, const char *argv[]) {
 
     int returnSize = 0;
 
-    /* NOTE: 函数调用 */
+    /* 函数调用 */
     int* result = rightSideView(root, &returnSize);
     print1DArray(result, returnSize);
 

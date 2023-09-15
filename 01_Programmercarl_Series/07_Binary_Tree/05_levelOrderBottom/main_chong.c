@@ -30,7 +30,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* NOTE: 树节点 */
+/* 树节点 */
 struct TreeNode {
     int val;                    /* 节点的值 */
     struct TreeNode *left;      /* 左节点 */
@@ -41,7 +41,7 @@ struct TreeNode {
 /* ==================================================================================================== */
 /* 107. 二叉树的层序遍历 II：从下往上层序遍历二叉树 */
 
-/* NOTE: 层序遍历 + 队列(迭代法)*/
+/* 层序遍历 + 队列(迭代法)*/
 /* 关键点：  1：采用队列结构存储每一层的结点
             2：因为队列的结构特性，操作是先进先出
             3：将全部的的每一层节点存储于Queue队列当中
@@ -49,7 +49,7 @@ struct TreeNode {
             5：为了清晰的表示出每一层之间的间隔，这里在队列中插入null结点，表示换层了
             时间复杂度：O(n) 空间复杂度: O(n) */
 
-/* NOTE: 层序遍历 + 队列(迭代法) 优化 */
+/* 层序遍历 + 队列(迭代法) 优化 */
 /* 关键点：  1：去掉用来表示换行的null指针
             2：通过交换打印输出的方式，完成结果的输出
             时间复杂度：O(n) 空间复杂度: O(n) */
@@ -177,7 +177,7 @@ int main(int argc, const char *argv[]) {
     int returnSize = 0;
     int *returnColumnSizes;
 
-    /* NOTE: 函数调用 */
+    /* 函数调用 */
     int** result = levelOrderBottom(root, &returnSize, &returnColumnSizes);
     print2DArray(result, returnSize, returnColumnSizes);
 
