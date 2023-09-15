@@ -44,10 +44,10 @@ struct TreeNode {
  * @param {int} *resultArray          结果一维数组
  * @param {int} height              二叉树的高度
  * @param {int} *returnSize         结果数组的大小
- * @return {*}
+ * @return {void}
  */
 void preorder(struct TreeNode *root, int *resultArray, int height, int *returnSize) {
-    if (root == NULL) {
+    if (root == NULL) {                                                 /* */
         return;
     }
 
