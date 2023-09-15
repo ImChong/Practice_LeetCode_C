@@ -4,13 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* NOTE: 节点定义 */
+/* 节点定义 */
 struct ListNode {
     int val;
     struct ListNode *next;
 };
 
-/* NOTE: 创建链表，不使用虚拟头结点 */
+/* 创建链表，不使用虚拟头结点 */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
@@ -33,7 +33,7 @@ struct ListNode *createList(int *array, int size) {
     return head;
 }
 
-/* NOTE: 打印链表 */
+/* 打印链表 */
 void printList(struct ListNode *listPtr) {
     int i = 0;  /* 防止无限循环 */
     while (listPtr != NULL && i < 20) {
@@ -68,7 +68,7 @@ struct ListNode *detectCycle(struct ListNode *head) {
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-/* NOTE: 主函数 */
+/* 主函数 */
 int main(int argc, const char* argv[]) {
     /* NOTE: Case 1 */
     printf("======== Case 1 ======== \n");

@@ -4,13 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* NOTE: 节点定义 */
+/* 节点定义 */
 struct ListNode {
     int val;
     struct ListNode *next;
 };
 
-/* NOTE: 创建链表，不使用虚拟头结点 */
+/* 创建链表，不使用虚拟头结点 */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
@@ -33,7 +33,7 @@ struct ListNode *createList(int *array, int size) {
     return head;
 }
 
-/* NOTE: 打印链表 */
+/* 打印链表 */
 void printList(struct ListNode *listPtr, char listChar) {
     printf("linked list %c: ", listChar);
     while (listPtr != NULL) {
@@ -58,7 +58,7 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-/* NOTE: 主函数 */
+/* 主函数 */
 int main(int argc, const char* argv[]) {
     /* NOTE: Case 1 */
     printf("======== Case 1 ======== \n");
@@ -99,6 +99,6 @@ int main(int argc, const char* argv[]) {
     } else {
         printf("Intersction: NULL\n");
     }
-    
+
     return 0;
 }

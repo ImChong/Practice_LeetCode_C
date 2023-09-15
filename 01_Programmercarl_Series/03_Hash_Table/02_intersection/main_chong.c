@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* NOTE: 打印数组 */
+/* 打印数组 */
 void printArray(int* arr, int arrSize) {
     printf("Arr: ");
     for (int i = 0; i < arrSize; i++) {
@@ -15,7 +15,7 @@ void printArray(int* arr, int arrSize) {
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
-/* NOTE: 比较函数 */
+/* 比较函数 */
 int cmp(const void *a, const void *b) {
     return *(int *)a - *(int *)b;
 }
@@ -44,7 +44,7 @@ int* intersection(int* numsA, int numsASize, int* numsB, int numsBSize, int* ret
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-/* NOTE:主函数 */
+/* 主函数 */
 int main(int argc, char const *argv[]) {
     // NOTE: Test case 1
     printf("======== Case 1 ======== \n");
