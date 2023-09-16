@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 16:38:24
+ * @LastEditTime : 2023-09-16 16:39:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -18,7 +18,7 @@
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
-/* TODO: 目标函数 */
+/* 目标函数 */
 /*
     回溯算法理论基础：https://programmercarl.com/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html
         回溯法解决的问题都可以抽象为树形结构（N叉树），用树形结构来理解回溯
@@ -27,21 +27,36 @@
 */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
+#define MAX_SIZE 1000000           /* 初始化大小 */
+
+void backtrack(int n, int k, int start, int* path, int depth, int*** returnArray, int* returnSize, int* returnColumnSizes) {
+    if (depth == k) {
+        (*returnArray)[*returnSize] = (int*)malloc(k * sizeof(int));
+        for (int i = 0; i < k; ++i) {
+            (*returnArray)[*returnSize][i] = path[i];
+        }
+        returnColumnSizes[*returnSize] = k;
+        (*returnSize)++;
+        return;
+    }
+
+    for (int i = start; i <= n; ++i) {
+        path[depth] = i;
+        backtrack(n, k, i + 1, path, depth + 1, returnArray, returnSize, returnColumnSizes);
+    }
+}
 
 
+int** combine(int n, int k, int* returnSize, int** returnColumnSizes) {
+    *returnSize = 0;
+    int maxReturnSize = MAX_SIZE;  // 根据需要调整大小
+    int** returnArray = (int**)malloc(maxReturnSize * sizeof(int*));
+    *returnColumnSizes = (int*)malloc(maxReturnSize * sizeof(int));
 
-
-/**
- * @description: 目标函数：组合
- * =================================================================================
- * @param {int} n
- * @param {int} k
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
- * @return {int} **
- */
-int **combine(int n, int k, int *returnSize, int **returnColumnSizes){
-    return NULL;
+    int* path = (int*)malloc(k * sizeof(int));
+    backtrack(n, k, 1, path, 0, &returnArray, returnSize, *returnColumnSizes);
+    free(path);
+    return returnArray;
 }
 
 /* ==================================================================================================== */
