@@ -27,20 +27,20 @@
   - [39.组合总和](https://programmercarl.com/0039.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C.html)
   - [40.组合总和II](https://programmercarl.com/0040.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CII.html)
 - 分割问题
-  - [131.分割回文串]()
-  - [93.复原IP地址]()
+  - [131.分割回文串](https://programmercarl.com/0131.%E5%88%86%E5%89%B2%E5%9B%9E%E6%96%87%E4%B8%B2.html)
+  - [93.复原IP地址](https://programmercarl.com/0093.%E5%A4%8D%E5%8E%9FIP%E5%9C%B0%E5%9D%80.html)
 - 子集问题
-  - [78.子集]()
-  - [90.子集II]()
+  - [78.子集](https://programmercarl.com/0078.%E5%AD%90%E9%9B%86.html)
+  - [90.子集II](https://programmercarl.com/0090.%E5%AD%90%E9%9B%86II.html)
 - 排列问题
-  - [46.全排列]()
-  - [47.全排列II]()
+  - [46.全排列](https://programmercarl.com/0046.%E5%85%A8%E6%8E%92%E5%88%97.html)
+  - [47.全排列II](https://programmercarl.com/0047.%E5%85%A8%E6%8E%92%E5%88%97II.html)
 - 棋盘问题
-  - [51.N皇后]()
-  - [37.解数独]()
+  - [51.N皇后](https://programmercarl.com/0051.N%E7%9A%87%E5%90%8E.html)
+  - [37.解数独](https://programmercarl.com/0037.%E8%A7%A3%E6%95%B0%E7%8B%AC.html)
 - 其他
-  - [491.递增子序列]()
-  - [332.重新安排行程]()
+  - [491.递增子序列](https://programmercarl.com/0491.%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97.html)
+  - [332.重新安排行程](https://programmercarl.com/0332.%E9%87%8D%E6%96%B0%E5%AE%89%E6%8E%92%E8%A1%8C%E7%A8%8B.html)
 - [回溯算法总结篇](https://programmercarl.com/%E5%9B%9E%E6%BA%AF%E6%80%BB%E7%BB%93.html)
 
 ## 1.3. 示例：N皇后问题
