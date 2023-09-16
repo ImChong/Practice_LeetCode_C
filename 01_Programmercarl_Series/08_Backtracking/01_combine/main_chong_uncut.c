@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 11:38:48
+ * @LastEditTime : 2023-09-16 11:56:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -46,6 +46,17 @@ int ansTop;
 void backtracking(int n, int k, int startIndex) {
     if (pathTop == k) {
         int *temp = (int*)malloc(sizeof(int) * k);
+        for (int i = 0; i < k; i++) {
+            temp[i] = path[i];
+        }
+        ans[ansTop++] = temp;
+        return;
+    }
+
+    for (int j = startIndex; j <= n; j++) {
+        path[pathTop++] = j;
+        backtracking(n, k, j + 1);
+        pathTop--;
     }
 }
 
@@ -83,18 +94,24 @@ int **combine(int n, int k, int *returnSize, int **returnColumnSizes) {
 /**
  * @description: 打印组合
  * =================================================================================
- * @param {int} **result
- * @param {int} returnSize
- * @param {int} k
+ * @param {int} **result        二维数组
+ * @param {int} returnSize      二维数组的行数
+ * @param {int} k               k 个数的组合
  * @return {void}
  */
 void printCombinations(int **result, int returnSize, int k) {
+    printf("[\n");
     for (int i = 0; i < returnSize; ++i) {
+        printf("  [");
         for (int j = 0; j < k; ++j) {
-            printf("%d ", result[i][j]);
+            printf("%d", result[i][j]);
+            if (j < k - 1) {
+                printf(", ");
+            }
         }
-        printf("\n");
+        printf("]\n");
     }
+    printf("]\n");
 }
 
 /**
