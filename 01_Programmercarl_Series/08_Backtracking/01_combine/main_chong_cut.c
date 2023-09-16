@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 15:05:02
+ * @LastEditTime : 2023-09-16 15:07:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,10 +38,10 @@ int ansTop;         /* 记录当前的组数 */
 /**
  * @description: 回溯算法
  * =================================================================================
- * @param {int} n
- * @param {int} k
- * @param {int} startNum
- * @return {*}
+ * @param {int} n               [1, n] 数据的最大范围
+ * @param {int} k               k 个数的组合
+ * @param {int} startNum      起始索引
+ * @return {void}
  */
 void backtracking(int n, int k, int startNum) {
 
@@ -50,11 +50,11 @@ void backtracking(int n, int k, int startNum) {
 /**
  * @description: 目标函数：组合
  * =================================================================================
- * @param {int} n
- * @param {int} k
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
- * @return {int} **
+ * @param {int} n                       [1, n] 数据的最大范围
+ * @param {int} k                       k 个数的组合
+ * @param {int} *returnSize             返回二维数组的行数
+ * @param {int} **returnColumnSizes     数组表示二维数组每行的列数
+ * @return {int} **ans                  结果二维数组
  */
 int **combine(int n, int k, int *returnSize, int **returnColumnSizes){
     return NULL;
