@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 18:12:14
+ * @LastEditTime : 2023-09-16 18:15:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -51,6 +51,11 @@ void backtrack(int n, int k, int start, int *path, int depth, int ***returnArray
         returnColumnSizes[*returnSize] = k;                                                         /* 设置新组合的长度（其实就是k）*/
         (*returnSize)++;                                                                            /* 组合数增加 1 */
         return;                                                                                     /* 返回，进入回溯 */
+    }
+
+
+    if (n - start + 1 < k - depth) {                                                            /* 剪枝：如果剩下的数字数量小于还需要选择的数字数量，直接返回 */
+        return;
     }
 
     for (int i = start; i <= n; ++i) {                                                          /* 从start开始，遍历所有可能的数字 */
