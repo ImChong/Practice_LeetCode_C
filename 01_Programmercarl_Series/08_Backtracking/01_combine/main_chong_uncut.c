@@ -128,10 +128,10 @@ int main(int argc, const char *argv[]) {
     int *returnColumnSizes;
     int **result = combine(n, k, &returnSize, &returnColumnSizes);
 
-    // 调用打印函数
+    /* 调用打印函数 */
     printCombinations(result, returnSize, k);
 
-    // 释放内存
+    /* 释放内存 */
     for (int i = 0; i < returnSize; ++i) {
         free(result[i]);
     }
