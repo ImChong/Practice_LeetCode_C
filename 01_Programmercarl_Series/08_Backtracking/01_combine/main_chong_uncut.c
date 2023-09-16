@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 14:51:08
+ * @LastEditTime : 2023-09-16 14:53:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,10 +40,10 @@ int ansTop;         /* 记录当前的组数 */
  * =================================================================================
  * @param {int} n               [1, n] 数据的最大范围
  * @param {int} k               k 个数的组合
- * @param {int} startIndex      起始索引
+ * @param {int} startNum      起始索引
  * @return {void}
  */
-void backtracking(int n, int k, int startIndex) {
+void backtracking(int n, int k, int startNum) {
     if (pathTop == k) {                             /* 当path中元素个数为k个时，我们需要将path数组放入ans二维数组中 */
         int *temp = (int*)malloc(sizeof(int) * k);      /* path数组为我们动态申请，若直接将其地址放入二维数组，path数组中的值会随着我们回溯而逐渐变化，因此创建新的数组存储path中的值 */
         for (int i = 0; i < k; i++) {                   /* 将path数组内的数据移动至temp数组 */
@@ -53,7 +53,7 @@ void backtracking(int n, int k, int startIndex) {
         return;
     }
 
-    for (int j = startIndex; j <= n; j++) {         /* 从开始索引 startIndex 遍历至最大数据范围 */
+    for (int j = startNum; j <= n; j++) {           /* 从开始索引 startNum 遍历至最大数据范围 */
         path[pathTop++] = j;                            /* 将 j 加入当前组合 */
         backtracking(n, k, j + 1);                      /* 回溯，并将开始索引设置为 j + 1 */
         pathTop--;                                      /* 将记录当前数的数量 pathTop - 1 */
@@ -72,14 +72,13 @@ void backtracking(int n, int k, int startIndex) {
 int **combine(int n, int k, int *returnSize, int **returnColumnSizes) {
     path = (int *)malloc(sizeof(int) * k);                              /* path数组存储符合条件的结果 */
     ans = (int **)malloc(sizeof(int *) * MAX_SIZE);                     /* ans二维数组存储符合条件的结果数组的集合。（数组足够大，避免极端情况） */
-    pathTop = ansTop = 0;
+    pathTop = ansTop = 0;                                               /* 初始化当前数的数量 pathTop 和 当前的组数 ansTop 为 0 */
 
-    backtracking(n, k, 1);                                              /* 回溯算法 */
+    backtracking(n, k, 1);                                              /* 回溯算法，回溯初始值为 1 */
 
-    *returnSize = ansTop;                                               /* 最后的返回大小为ans数组大小 */
+    *returnSize = ansTop;                                               /* 最后的返回大小为当前的组数 */
     *returnColumnSizes = (int *)malloc(sizeof(int) * (*returnSize));    /* returnColumnSizes数组存储ans二维数组对应下标中一维数组的长度（都为k） */
-    int i;
-    for(i = 0; i < *returnSize; i++) {
+    for(int i = 0; i < *returnSize; i++) {
         (*returnColumnSizes)[i] = k;
     }
 
