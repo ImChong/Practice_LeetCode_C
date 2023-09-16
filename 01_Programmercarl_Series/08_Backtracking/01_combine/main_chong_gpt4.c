@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 17:52:19
+ * @LastEditTime : 2023-09-16 17:55:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,17 +30,17 @@
 #define MAX_SIZE 1000000           /* 初始化大小 */
 
 /**
- * @description:
+ * @description: 回溯函数
  * =================================================================================
  * @param {int} n
  * @param {int} k
  * @param {int} start
  * @param {int} *path
  * @param {int} depth
- * @param {int} *
+ * @param {int} ***returnArray
  * @param {int} *returnSize
  * @param {int} *returnColumnSizes
- * @return {*}
+ * @return {void}
  */
 void backtrack(int n, int k, int start, int *path, int depth, int ***returnArray, int *returnSize, int *returnColumnSizes) {
     if (depth == k) {  // 如果路径长度达到k
@@ -60,18 +60,18 @@ void backtrack(int n, int k, int start, int *path, int depth, int ***returnArray
 }
 
 /**
- * @description:
+ * @description: 目标函数
  * =================================================================================
  * @param {int} n
  * @param {int} k
  * @param {int} *returnSize
- * @param {int} *
- * @return {*}
+ * @param {int} **returnColumnSizes
+ * @return {int} **returnArray
  */
 int **combine(int n, int k, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;  // 初始化返回的组合数为0
     int maxReturnSize = 10000;  // 最大可能的组合数，可根据需要调整
-    int** returnArray = (int**)malloc(maxReturnSize * sizeof(int*));  // 分配返回数组的内存
+    int **returnArray = (int**)malloc(maxReturnSize * sizeof(int*));  // 分配返回数组的内存
     *returnColumnSizes = (int*)malloc(maxReturnSize * sizeof(int));  // 分配返回数组每行的列数的内存
 
     int* path = (int*)malloc(k * sizeof(int));  // 分配当前路径（组合）的内存
