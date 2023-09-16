@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 15:25:04
+ * @LastEditTime : 2023-09-16 16:00:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,7 +35,7 @@ int **ans;          /* 结果二维数组：记录所有 k 个数的组合 */
 int ansTop;         /* 记录当前的组数 */
 
 /**
- * @description: 回溯算法
+ * @description: 回溯算法 - 剪枝解法
  * =================================================================================
  * @param {int} n               [1, n] 数据的最大范围
  * @param {int} k               k 个数的组合
@@ -43,18 +43,18 @@ int ansTop;         /* 记录当前的组数 */
  * @return {void}
  */
 void backtracking(int n, int k, int startNum) {
-    if (pathTop == k) {
-        int *temp = (int *)malloc(sizeof(int) * k);
-        for (int i = 0; i < k; i++) {
+    if (pathTop == k) {                                         /* 当path中元素个数为k个时，我们需要将path数组放入ans二维数组中 */
+        int *temp = (int*)malloc(sizeof(int) * k);                  /* path数组为我们动态申请，若直接将其地址放入二维数组，path数组中的值会随着我们回溯而逐渐变化，因此创建新的数组存储path中的值 */
+        for (int i = 0; i < k; i++) {                               /* 将path数组内的数据移动至temp数组 */
             temp[i] = path[i];
         }
-        ans[ansTop++] = temp;
+        ans[ansTop++] = temp;                                       /* 将temp数组放入结果二维数组的末尾 */
         return;
     }
-    for (int j = startNum; j <= n - (k - pathTop) + 1; j++) {
-        path[pathTop++] = j;
-        backtracking(n, k, j + 1);
-        pathTop--;
+    for (int j = startNum; j <= n - (k - pathTop) + 1; j++) {   /* NOTE: 从开始索引 startNum 遍历至最大数据范围 - 剪枝解法 */
+        path[pathTop++] = j;                                        /* 将当前结点 j 放入path数组 */
+        backtracking(n, k, j + 1);                                  /* 进行递归，并将开始索引设置为 j + 1 */
+        pathTop--;                                                  /* 将记录当前数的数量 pathTop - 1：进行回溯，将数组最上层结点弹出 */
     }
 }
 
@@ -121,8 +121,8 @@ void printCombinations(int **result, int returnSize, int k) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    int n = 5;
-    int k = 2;
+    int n = 12;
+    int k = 8;
     int returnSize;
     int *returnColumnSizes;
     int **result = combine(n, k, &returnSize, &returnColumnSizes);
