@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 14:53:29
+ * @LastEditTime : 2023-09-16 15:22:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -53,9 +53,9 @@ void backtracking(int n, int k, int startNum) {
     }
 
     for (int j = startNum; j <= n; j++) {           /* 从开始索引 startNum 遍历至最大数据范围 */
-        path[pathTop++] = j;                            /* 将 j 加入当前组合 */
-        backtracking(n, k, j + 1);                      /* 回溯，并将开始索引设置为 j + 1 */
-        pathTop--;                                      /* 将记录当前数的数量 pathTop - 1 */
+        path[pathTop++] = j;                            /* 将当前结点 j 放入path数组 */
+        backtracking(n, k, j + 1);                      /* 进行递归，并将开始索引设置为 j + 1 */
+        pathTop--;                                      /* 将记录当前数的数量 pathTop - 1：进行回溯，将数组最上层结点弹出 */
     }
 }
 
