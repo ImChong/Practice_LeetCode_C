@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 17:59:59
+ * @LastEditTime : 2023-09-16 18:00:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -60,7 +60,7 @@ void backtrack(int n, int k, int start, int *path, int depth, int ***returnArray
 }
 
 /**
- * @description: 目标函数
+ * @description: 目标函数：包含所有由 n 个数中选出的 k 个不同整数的组合
  * =================================================================================
  * @param {int} n                       表示从 1 到 n 的整数中选择数字
  * @param {int} k                       表示需要选择 k 个不同的整数
