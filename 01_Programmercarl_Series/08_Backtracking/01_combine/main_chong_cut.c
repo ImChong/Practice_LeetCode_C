@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 15:07:43
+ * @LastEditTime : 2023-09-16 15:11:38
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,7 +44,7 @@ int ansTop;         /* 记录当前的组数 */
  * @return {void}
  */
 void backtracking(int n, int k, int startNum) {
-
+    return;
 }
 
 /**
