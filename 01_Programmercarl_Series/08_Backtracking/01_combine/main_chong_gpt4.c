@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 18:15:05
+ * @LastEditTime : 2023-09-16 18:22:49
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -74,15 +74,15 @@ void backtrack(int n, int k, int start, int *path, int depth, int ***returnArray
  * @return {int} **returnArray          二维数组，包含所有由 n 个数中选出的 k 个不同整数的组合
  */
 int **combine(int n, int k, int *returnSize, int **returnColumnSizes) {
-    *returnSize = 0;  // 初始化返回的组合数为0
-    int maxReturnSize = 10000;  // 最大可能的组合数，可根据需要调整
-    int **returnArray = (int**)malloc(maxReturnSize * sizeof(int*));  // 分配返回数组的内存
-    *returnColumnSizes = (int*)malloc(maxReturnSize * sizeof(int));  // 分配返回数组每行的列数的内存
+    *returnSize = 0;                                                                            /* 初始化返回的组合数为0 */
+    int maxReturnSize = MAX_SIZE;                                                               /* 最大可能的组合数，可根据需要调整 */
+    int **returnArray = (int**)malloc(maxReturnSize * sizeof(int*));                            /* 分配返回数组的内存 */
+    *returnColumnSizes = (int*)malloc(maxReturnSize * sizeof(int));                             /* 分配返回数组每行的列数的内存 */
 
-    int* path = (int*)malloc(k * sizeof(int));  // 分配当前路径（组合）的内存
-    backtrack(n, k, 1, path, 0, &returnArray, returnSize, *returnColumnSizes);  // 调用回溯函数
-    free(path);  // 释放路径的内存
-    return returnArray;  // 返回结果数组
+    int* path = (int*)malloc(k * sizeof(int));                                                  /* 分配当前路径（组合）的内存 */
+    backtrack(n, k, 1, path, 0, &returnArray, returnSize, *returnColumnSizes);                  /* 调用回溯函数 */
+    free(path);                                                                                 /* 释放路径的内存 */
+    return returnArray;                                                                         /* 返回结果数组 */
 }
 
 /* ==================================================================================================== */
