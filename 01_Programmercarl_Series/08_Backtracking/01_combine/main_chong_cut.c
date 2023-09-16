@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 15:12:56
+ * @LastEditTime : 2023-09-16 15:25:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -51,7 +51,11 @@ void backtracking(int n, int k, int startNum) {
         ans[ansTop++] = temp;
         return;
     }
-    return;
+    for (int j = startNum; j <= n - (k - pathTop) + 1; j++) {
+        path[pathTop++] = j;
+        backtracking(n, k, j + 1);
+        pathTop--;
+    }
 }
 
 /**
@@ -117,8 +121,8 @@ void printCombinations(int **result, int returnSize, int k) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    int n = 20;
-    int k = 10;
+    int n = 5;
+    int k = 2;
     int returnSize;
     int *returnColumnSizes;
     int **result = combine(n, k, &returnSize, &returnColumnSizes);
