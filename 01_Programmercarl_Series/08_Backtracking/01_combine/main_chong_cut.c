@@ -43,6 +43,14 @@ int ansTop;         /* 记录当前的组数 */
  * @return {void}
  */
 void backtracking(int n, int k, int startNum) {
+    if (pathTop == k) {
+        int *temp = (int *)malloc(sizeof(int) * k);
+        for (int i = 0; i < k; i++) {
+            temp[i] = path[i];
+        }
+        ans[ansTop++] = temp;
+        return;
+    }
     return;
 }
 
@@ -115,10 +123,10 @@ int main(int argc, const char *argv[]) {
     int *returnColumnSizes;
     int **result = combine(n, k, &returnSize, &returnColumnSizes);
 
-    // 调用打印函数
+    /* 调用打印函数 */
     printCombinations(result, returnSize, k);
 
-    // 释放内存
+    /* 释放内存 */
     for (int i = 0; i < returnSize; ++i) {
         free(result[i]);
     }
