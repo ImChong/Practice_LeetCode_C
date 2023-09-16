@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 11:34:23
+ * @LastEditTime : 2023-09-16 11:38:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,23 +38,25 @@ int ansTop;
 /**
  * @description: 回溯算法
  * =================================================================================
- * @param {int} n
- * @param {int} k
- * @param {int} startIndex
+ * @param {int} n               [1, n] 数据的最大范围
+ * @param {int} k               k 个数的组合
+ * @param {int} startIndex      起始索引
  * @return {void}
  */
 void backtracking(int n, int k, int startIndex) {
-
+    if (pathTop == k) {
+        int *temp = (int*)malloc(sizeof(int) * k);
+    }
 }
 
 /**
  * @description: 目标函数：组合
  * =================================================================================
- * @param {int} n
- * @param {int} k
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
- * @return {int} **ans
+ * @param {int} n                       [1, n] 数据的最大范围
+ * @param {int} k                       k 个数的组合
+ * @param {int} *returnSize             返回二维数组的行数
+ * @param {int} **returnColumnSizes     数组表示二维数组每行的列数
+ * @return {int} **ans                  结果二维数组
  */
 int **combine(int n, int k, int *returnSize, int **returnColumnSizes) {
     path = (int *)malloc(sizeof(int) * k);                              /* path数组存储符合条件的结果 */
