@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\08_Backtracking\01_combine\main_chong.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\08_Backtracking\01_combine\main_chong_cut.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 11:22:09
+ * @LastEditTime : 2023-09-16 15:02:16
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,7 +28,12 @@
 */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
+#define MAX_SIZE 1000000           /* 初始化大小 */
 
+int *path;          /* 记录当前 k 个数的组合 */
+int pathTop;        /* 记录当前数的数量 */
+int **ans;          /* 结果二维数组：记录所有 k 个数的组合 */
+int ansTop;         /* 记录当前的组数 */
 
 
 
