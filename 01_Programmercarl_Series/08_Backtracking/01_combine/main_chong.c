@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 10:21:33
+ * @LastEditTime : 2023-09-16 11:01:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,7 @@
  * 解法参考：https://leetcode.cn/problems/combinations/solutions/857507/dai-ma-sui-xiang-lu-dai-ni-xue-tou-hui-s-0uql/
  */
 #include <stdio.h>
+#include <stdlib.h>
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
@@ -26,7 +27,7 @@
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /**
- * @description:
+ * @description: 目标函数：组合
  * =================================================================================
  * @param {int} n
  * @param {int} k
@@ -35,13 +36,30 @@
  * @return {int} **
  */
 int **combine(int n, int k, int *returnSize, int **returnColumnSizes){
-
+    return NULL;
 }
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
+
+/**
+ * @description: 打印组合
+ * =================================================================================
+ * @param {int} **result
+ * @param {int} returnSize
+ * @param {int} k
+ * @return {void}
+ */
+void printCombinations(int **result, int returnSize, int k) {
+    for (int i = 0; i < returnSize; ++i) {
+        for (int j = 0; j < k; ++j) {
+            printf("%d ", result[i][j]);
+        }
+        printf("\n");
+    }
+}
 
 /**
  * @description: 主函数
@@ -51,6 +69,21 @@ int **combine(int n, int k, int *returnSize, int **returnColumnSizes){
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
+    int n = 4;
+    int k = 2;
+    int returnSize;
+    int *returnColumnSizes;
+    int **result = combine(n, k, &returnSize, &returnColumnSizes);
+
+    // 调用打印函数
+    printCombinations(result, returnSize, k);
+
+    // 释放内存
+    for (int i = 0; i < returnSize; ++i) {
+        free(result[i]);
+    }
+    free(result);
+    free(returnColumnSizes);
 
     return 0;
 }
