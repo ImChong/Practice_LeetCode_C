@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 11:24:45
+ * @LastEditTime : 2023-09-16 11:26:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,7 +28,10 @@
 */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
-
+int *path;
+int pathTop;
+int **ans;
+int ansTop;
 
 
 
@@ -41,7 +44,7 @@
  * @param {int} **returnColumnSizes
  * @return {int} **
  */
-int **combine(int n, int k, int *returnSize, int **returnColumnSizes){
+int **combine(int n, int k, int *returnSize, int **returnColumnSizes) {
     return NULL;
 }
 
