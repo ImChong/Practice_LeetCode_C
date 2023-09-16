@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 11:26:01
+ * @LastEditTime : 2023-09-16 11:30:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,12 +28,24 @@
 */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
+#define MAX_SIZE 10000           /* 初始化大小 */
+
 int *path;
 int pathTop;
 int **ans;
 int ansTop;
 
+/**
+ * @description: 回溯算法
+ * =================================================================================
+ * @param {int} n
+ * @param {int} k
+ * @param {int} startIndex
+ * @return {void}
+ */
+void backtracking(int n, int k, int startIndex) {
 
+}
 
 /**
  * @description: 目标函数：组合
@@ -42,10 +54,16 @@ int ansTop;
  * @param {int} k
  * @param {int} *returnSize
  * @param {int} **returnColumnSizes
- * @return {int} **
+ * @return {int} **ans
  */
 int **combine(int n, int k, int *returnSize, int **returnColumnSizes) {
-    return NULL;
+    path = (int *)malloc(sizeof(int) * k);                      /* path数组存储符合条件的结果 */
+    ans = (int **)malloc(sizeof(int *) * MAX_SIZE);             /* ans二维数组存储符合条件的结果数组的集合。（数组足够大，避免极端情况） */
+    pathTop = ansTop = 0;
+
+
+
+    return ans;
 }
 
 /* ==================================================================================================== */
