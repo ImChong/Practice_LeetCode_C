@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 18:00:44
+ * @LastEditTime : 2023-09-16 18:03:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -32,14 +32,14 @@
 /**
  * @description: 回溯函数
  * =================================================================================
- * @param {int} n
- * @param {int} k
- * @param {int} start
- * @param {int} *path
- * @param {int} depth
- * @param {int} ***returnArray
- * @param {int} *returnSize
- * @param {int} *returnColumnSizes
+ * @param {int} n                       表示从 1 到 n 的整数中选择数字
+ * @param {int} k                       表示需要选择 k 个不同的整数
+ * @param {int} start                   回溯算法的起始数字 - 算法会从这个数字开始，向后尝试每一个可能的整数
+ * @param {int} *path                   存储当前组合（路径）的数组 - 在回溯过程中，这个数组会不断地被修改
+ * @param {int} depth                   当前递归的深度，也代表了 path 数组中已存储的数字的数量
+ * @param {int} ***returnArray          存储所有有效组合的二维数组 - (输出参数)
+ * @param {int} *returnSize             用来存储返回的组合的数量 - (输出参数)
+ * @param {int} *returnColumnSizes      用来存储每个组合中整数的数量 - (输出参数)
  * @return {void}
  */
 void backtrack(int n, int k, int start, int *path, int depth, int ***returnArray, int *returnSize, int *returnColumnSizes) {
