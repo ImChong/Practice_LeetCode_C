@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 18:04:02
+ * @LastEditTime : 2023-09-16 18:12:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,19 +43,19 @@
  * @return {void}
  */
 void backtrack(int n, int k, int start, int *path, int depth, int ***returnArray, int *returnSize, int *returnColumnSizes) {
-    if (depth == k) {  // 如果路径长度达到k
-        (*returnArray)[*returnSize] = (int*)malloc(k * sizeof(int));  // 分配内存给新的组合
-        for (int i = 0; i < k; ++i) {  // 复制路径到新的组合
+    if (depth == k) {                                                                           /* 如果路径长度达到k */
+        (*returnArray)[*returnSize] = (int*)malloc(k * sizeof(int));                                /* 分配内存给新的组合 */
+        for (int i = 0; i < k; ++i) {                                                               /* 复制路径到新的组合 */
             (*returnArray)[*returnSize][i] = path[i];
         }
-        returnColumnSizes[*returnSize] = k;  // 设置新组合的长度（其实就是k）
-        (*returnSize)++;  // 组合数增加1
-        return;  // 返回，进入回溯
+        returnColumnSizes[*returnSize] = k;                                                         /* 设置新组合的长度（其实就是k）*/
+        (*returnSize)++;                                                                            /* 组合数增加 1 */
+        return;                                                                                     /* 返回，进入回溯 */
     }
 
-    for (int i = start; i <= n; ++i) {  // 从start开始，遍历所有可能的数字
-        path[depth] = i;  // 将当前数字加入路径
-        backtrack(n, k, i + 1, path, depth + 1, returnArray, returnSize, returnColumnSizes);  // 递归调用，深入下一层
+    for (int i = start; i <= n; ++i) {                                                          /* 从start开始，遍历所有可能的数字 */
+        path[depth] = i;                                                                            /* 将当前数字加入路径 */
+        backtrack(n, k, i + 1, path, depth + 1, returnArray, returnSize, returnColumnSizes);        /* 递归调用，深入下一层 */
     }
 }
 
