@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 14:33:03
+ * @LastEditTime : 2023-09-16 14:43:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,10 +30,10 @@
 /* ==================================================================================================== */
 #define MAX_SIZE 1000000           /* 初始化大小 */
 
-int *path;          /* 记录 k 个数的组合 */
-int pathTop;        /* */
-int **ans;          /* 记录所有 k 个数的组合 */
-int ansTop;         /* */
+int *path;          /* 记录当前 k 个数的组合 */
+int pathTop;        /* 记录当前数的数量 */
+int **ans;          /* 结果二维数组：记录所有 k 个数的组合 */
+int ansTop;         /* 记录当前的组数 */
 
 /**
  * @description: 回溯算法
@@ -44,12 +44,12 @@ int ansTop;         /* */
  * @return {void}
  */
 void backtracking(int n, int k, int startIndex) {
-    if (pathTop == k) {
-        int *temp = (int*)malloc(sizeof(int) * k);
-        for (int i = 0; i < k; i++) {
+    if (pathTop == k) {                             /* 当path中元素个数为k个时，我们需要将path数组放入ans二维数组中 */
+        int *temp = (int*)malloc(sizeof(int) * k);      /* path数组为我们动态申请，若直接将其地址放入二维数组，path数组中的值会随着我们回溯而逐渐变化，因此创建新的数组存储path中的值 */
+        for (int i = 0; i < k; i++) {                   /* 将path数组内的数据移动至temp数组 */
             temp[i] = path[i];
         }
-        ans[ansTop++] = temp;
+        ans[ansTop++] = temp;                           /* 将temp数组放入结果二维数组的末尾 */
         return;
     }
 
