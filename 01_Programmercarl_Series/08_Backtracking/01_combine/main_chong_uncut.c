@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 11:56:36
+ * @LastEditTime : 2023-09-16 12:01:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,7 +28,7 @@
 */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
-#define MAX_SIZE 10000           /* 初始化大小 */
+#define MAX_SIZE 1000000           /* 初始化大小 */
 
 int *path;
 int pathTop;
@@ -112,6 +112,8 @@ void printCombinations(int **result, int returnSize, int k) {
         printf("]\n");
     }
     printf("]\n");
+
+    printf("nums of combination: %d\n", returnSize);
 }
 
 /**
@@ -122,8 +124,8 @@ void printCombinations(int **result, int returnSize, int k) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    int n = 4;
-    int k = 2;
+    int n = 20;
+    int k = 10;
     int returnSize;
     int *returnColumnSizes;
     int **result = combine(n, k, &returnSize, &returnColumnSizes);
