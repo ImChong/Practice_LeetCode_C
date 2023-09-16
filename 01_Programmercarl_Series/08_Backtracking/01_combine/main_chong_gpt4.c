@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 16:39:31
+ * @LastEditTime : 2023-09-16 17:52:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,34 +29,55 @@
 /* ==================================================================================================== */
 #define MAX_SIZE 1000000           /* 初始化大小 */
 
-void backtrack(int n, int k, int start, int* path, int depth, int*** returnArray, int* returnSize, int* returnColumnSizes) {
-    if (depth == k) {
-        (*returnArray)[*returnSize] = (int*)malloc(k * sizeof(int));
-        for (int i = 0; i < k; ++i) {
+/**
+ * @description:
+ * =================================================================================
+ * @param {int} n
+ * @param {int} k
+ * @param {int} start
+ * @param {int} *path
+ * @param {int} depth
+ * @param {int} *
+ * @param {int} *returnSize
+ * @param {int} *returnColumnSizes
+ * @return {*}
+ */
+void backtrack(int n, int k, int start, int *path, int depth, int ***returnArray, int *returnSize, int *returnColumnSizes) {
+    if (depth == k) {  // 如果路径长度达到k
+        (*returnArray)[*returnSize] = (int*)malloc(k * sizeof(int));  // 分配内存给新的组合
+        for (int i = 0; i < k; ++i) {  // 复制路径到新的组合
             (*returnArray)[*returnSize][i] = path[i];
         }
-        returnColumnSizes[*returnSize] = k;
-        (*returnSize)++;
-        return;
+        returnColumnSizes[*returnSize] = k;  // 设置新组合的长度（其实就是k）
+        (*returnSize)++;  // 组合数增加1
+        return;  // 返回，进入回溯
     }
 
-    for (int i = start; i <= n; ++i) {
-        path[depth] = i;
-        backtrack(n, k, i + 1, path, depth + 1, returnArray, returnSize, returnColumnSizes);
+    for (int i = start; i <= n; ++i) {  // 从start开始，遍历所有可能的数字
+        path[depth] = i;  // 将当前数字加入路径
+        backtrack(n, k, i + 1, path, depth + 1, returnArray, returnSize, returnColumnSizes);  // 递归调用，深入下一层
     }
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {int} n
+ * @param {int} k
+ * @param {int} *returnSize
+ * @param {int} *
+ * @return {*}
+ */
+int **combine(int n, int k, int *returnSize, int **returnColumnSizes) {
+    *returnSize = 0;  // 初始化返回的组合数为0
+    int maxReturnSize = 10000;  // 最大可能的组合数，可根据需要调整
+    int** returnArray = (int**)malloc(maxReturnSize * sizeof(int*));  // 分配返回数组的内存
+    *returnColumnSizes = (int*)malloc(maxReturnSize * sizeof(int));  // 分配返回数组每行的列数的内存
 
-int** combine(int n, int k, int* returnSize, int** returnColumnSizes) {
-    *returnSize = 0;
-    int maxReturnSize = MAX_SIZE;  // 根据需要调整大小
-    int** returnArray = (int**)malloc(maxReturnSize * sizeof(int*));
-    *returnColumnSizes = (int*)malloc(maxReturnSize * sizeof(int));
-
-    int* path = (int*)malloc(k * sizeof(int));
-    backtrack(n, k, 1, path, 0, &returnArray, returnSize, *returnColumnSizes);
-    free(path);
-    return returnArray;
+    int* path = (int*)malloc(k * sizeof(int));  // 分配当前路径（组合）的内存
+    backtrack(n, k, 1, path, 0, &returnArray, returnSize, *returnColumnSizes);  // 调用回溯函数
+    free(path);  // 释放路径的内存
+    return returnArray;  // 返回结果数组
 }
 
 /* ==================================================================================================== */
