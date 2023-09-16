@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 16:00:20
+ * @LastEditTime : 2023-09-16 18:26:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -51,7 +51,7 @@ void backtracking(int n, int k, int startNum) {
         ans[ansTop++] = temp;                                       /* 将temp数组放入结果二维数组的末尾 */
         return;
     }
-    for (int j = startNum; j <= n - (k - pathTop) + 1; j++) {   /* NOTE: 从开始索引 startNum 遍历至最大数据范围 - 剪枝解法 */
+    for (int j = startNum; j <= n - (k - pathTop) + 1; j++) {   /* NOTE: 从开始索引 startNum 遍历至最大数据范围 - 剪枝：保障剩下的数字数量大于等于还需要选择的数字数量 */
         path[pathTop++] = j;                                        /* 将当前结点 j 放入path数组 */
         backtracking(n, k, j + 1);                                  /* 进行递归，并将开始索引设置为 j + 1 */
         pathTop--;                                                  /* 将记录当前数的数量 pathTop - 1：进行回溯，将数组最上层结点弹出 */

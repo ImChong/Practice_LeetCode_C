@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-16 18:22:49
+ * @LastEditTime : 2023-09-16 18:25:16
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -54,7 +54,7 @@ void backtrack(int n, int k, int start, int *path, int depth, int ***returnArray
     }
 
 
-    if (n - start + 1 < k - depth) {                                                            /* 剪枝：如果剩下的数字数量小于还需要选择的数字数量，直接返回 */
+    if (n - start + 1 < k - depth) {                                                            /* NOTE: 剪枝 - 如果剩下的数字数量小于还需要选择的数字数量，直接返回 */
         return;
     }
 
