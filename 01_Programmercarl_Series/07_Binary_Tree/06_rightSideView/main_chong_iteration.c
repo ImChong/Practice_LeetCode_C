@@ -50,7 +50,7 @@ struct TreeNode {
  */
 int *rightSideView(struct TreeNode *root, int *returnSize){
     int *resultArray = (int *)calloc(MAX_SIZE, sizeof(int));            /* 为返回结果数组分配空间，并初始化为 0 */
-    *returnSize = 0;
+    *returnSize = 0;                                                    /* 初始化返回数组大小为 0 */
     struct TreeNode *treeNodeQueue[MAX_SIZE];
     int queueFront = 0;
     int queueRear = 0;
