@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 12:12:21
+ * @LastEditTime : 2023-09-18 12:22:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -55,15 +55,15 @@ int *rightSideView(struct TreeNode *root, int *returnSize){
     int queueFront = 0;                                                 /* 队列头指针初始化为 0 */
     int queueRear = 0;                                                  /* 队列尾指针初始化为 0 */
 
-    if (root == NULL) {
+    if (root == NULL) {                                                 /* 如果根节点为空,直接返回 */
         return resultArray;
     }
-    treeNodeQueue[queueRear++] = root;
+    treeNodeQueue[queueRear++] = root;                                  /* 将根节点入队 */
 
-    while (queueFront < queueRear) {
-        int layerLastIndex = queueRear;
-        int value = 0;
-        while (queueFront < layerLastIndex) {
+    while (queueFront < queueRear) {                                    /* 当队列非空时循环 */
+        int layerLastIndex = queueRear;                                     /* 记录当前层的最后一个元素的索引 */
+        int value = 0;                                                      /* 当前层的最后一个元素的值初始化为 0 */
+        while (queueFront < layerLastIndex) {                               /* 遍历当前层的元素 */
             struct TreeNode *curNode = treeNodeQueue[queueFront];
             value = curNode->val;
             if (curNode->left != NULL) {
