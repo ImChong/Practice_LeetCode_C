@@ -3,7 +3,7 @@
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 23:03:48
+ * @LastEditTime : 2023-09-18 23:09:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -42,7 +42,7 @@ RingBufferSt g_rxRing;
  * =================================================================================
  * @param {RingBufferSt} *pRing
  * @param {uint8_t} byte
- * @return {*}
+ * @return {int16_t}
  */
 int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte)
 {
