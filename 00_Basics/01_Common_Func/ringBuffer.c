@@ -3,7 +3,7 @@
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 22:55:34
+ * @LastEditTime : 2023-09-18 23:03:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -37,13 +37,14 @@ uint8_t g_rxBuff[RING_BUFFER_SIZE];
 /* 接收环形结构体 */
 RingBufferSt g_rxRing;
 
-/****************************************************************************
- * Function: RingBuffer_AddByte
- * Descrip : 往环形buffer中增加一个字节
- * Author  : liujia
- * Date    : 2023.9.17
- ***************************************************************************/
-int16_t RingBuffer_AddByte(RingBufferSt* pRing, uint8_t byte)
+/**
+ * @description: 往环形 buffer 中增加一个字节
+ * =================================================================================
+ * @param {RingBufferSt} *pRing
+ * @param {uint8_t} byte
+ * @return {*}
+ */
+int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte)
 {
     /* 指针空检验 */
     RETURN_ERR_IF(pRing == NULL);
@@ -64,13 +65,14 @@ int16_t RingBuffer_AddByte(RingBufferSt* pRing, uint8_t byte)
     return UNIFORM_OK;
 }
 
-/****************************************************************************
- * Function: RingBuffer_GetByte
- * Descrip : 从环形buffer中取出一个字节
- * Author  : liujia
- * Date    : 2023.9.17
- ***************************************************************************/
-int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t* pByte)
+/**
+ * @description: 从环形 buffer 中取出一个字节
+ * =================================================================================
+ * @param {RingBufferSt} *pRing
+ * @param {uint8_t} *pByte
+ * @return {int16_t}
+ */
+int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte)
 {
     /* 指针空检验 */
     RETURN_ERR_IF(pRing == NULL);
@@ -94,13 +96,13 @@ int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t* pByte)
     return UNIFORM_OK;
 }
 
-/****************************************************************************
- * Function: RingBuffer_Print
- * Descrip : 打印环形buffer
- * Author  : liujia
- * Date    : 2023.9.17
- ***************************************************************************/
-int16_t RingBuffer_Print(RingBufferSt *pRing)
+/**
+ * @description: 打印环形 buffer
+ * =================================================================================
+ * @param {RingBufferSt} *pRing
+ * @return {void}
+ */
+void RingBuffer_Print(RingBufferSt *pRing)
 {
     printf("环形Buffer: ");
     for (int16_t i = 0; i < pRing->dataLen; ++i) {
@@ -116,12 +118,14 @@ int16_t RingBuffer_Print(RingBufferSt *pRing)
 //    printf("NULL\n");
 }
 
-/****************************************************************************
- * Function: RingBuffer_Init
- * Descrip : 环形buffer初始化
- * Author  : liujia
- * Date    : 2023.9.17
- ***************************************************************************/
+/**
+ * @description: 环形 buffer 初始化
+ * =================================================================================
+ * @param {RingBufferSt} *pRing
+ * @param {uint8_t} *pBuff
+ * @param {int16_t} buffLen
+ * @return {int16_t}
+ */
 int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen)
 {
     RETURN_ERR_IF(pRing == NULL);
@@ -135,12 +139,13 @@ int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen)
     return UNIFORM_OK;
 }
 
-/****************************************************************************
- * Function: RingBuffer_Test
- * Descrip : 测试环形buffer
- * Author  : liujia
- * Date    : 2023.9.17
- ***************************************************************************/
+/**
+ * @description: 测试环形 buffer
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
 int main(int argc, const char *argv[]) {
     // 初始化
     RingBuffer_Init(&g_rxRing, g_rxBuff, ARR_SIZE(g_rxBuff));
