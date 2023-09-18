@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-15 15:00:05
+ * @LastEditTime : 2023-09-18 12:12:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -51,9 +51,9 @@ struct TreeNode {
 int *rightSideView(struct TreeNode *root, int *returnSize){
     int *resultArray = (int *)calloc(MAX_SIZE, sizeof(int));            /* 为返回结果数组分配空间，并初始化为 0 */
     *returnSize = 0;                                                    /* 初始化返回数组大小为 0 */
-    struct TreeNode *treeNodeQueue[MAX_SIZE];
-    int queueFront = 0;
-    int queueRear = 0;
+    struct TreeNode *treeNodeQueue[MAX_SIZE];                           /* 创建队列存储树节点 */
+    int queueFront = 0;                                                 /* 队列头指针初始化为 0 */
+    int queueRear = 0;                                                  /* 队列尾指针初始化为 0 */
 
     if (root == NULL) {
         return resultArray;
