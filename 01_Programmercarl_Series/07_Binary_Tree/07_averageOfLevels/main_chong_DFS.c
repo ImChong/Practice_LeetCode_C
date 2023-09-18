@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 19:06:24
+ * @LastEditTime : 2023-09-18 19:28:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,7 +34,7 @@ struct TreeNode {
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
-/* TODO: 目标函数 */
+/* BUG: 目标函数 */
 /*
     Depth-First-Search (DFS) - 深度优先搜索算法
         使用深度优先搜索计算二叉树的层平均值，需要维护两个数组
@@ -49,22 +49,85 @@ struct TreeNode {
 int countsSize;
 int sumsSize;
 
-void
-/**
- * @description: 二叉树的层平均值
- * =================================================================================
- * @param {TreeNode} *root
- * @param {int} *returnSize
- * @return {double} *averages
- */
-double *averageOfLevels(struct TreeNode *root, int *returnSize){
-    /* TODO */
+void dfs(struct TreeNode *root, int level, int *counts, double* sums) {
+    if (root == NULL) {
+        return;
+    }
+    if (level < sumsSize) {
+        sums[level] += root->val;
+        counts[level] += 1;
+    } else {
+        sums[sumsSize++] = (double)root->val;
+        counts[countsSize++] = 1;
+    }
+    dfs(root->left, level + 1, counts, sums);
+    dfs(root->right, level + 1, counts, sums);
+}
 
+double *averageOfLevels(struct TreeNode* root, int* returnSize) {
+    countsSize = sumsSize = 0;
+    int* counts = malloc(sizeof(int) * 1001);
+    double* sums = malloc(sizeof(double) * 1001);
+    dfs(root, 0, counts, sums);
+    double* averages = malloc(sizeof(double) * 1001);
+    *returnSize = sumsSize;
+    for (int i = 0; i < sumsSize; i++) {
+        averages[i] = sums[i] / counts[i];
+    }
+    return averages;
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
+
+/**
+ * @description: 创建树节点
+ * =================================================================================
+ * @param {int} value                   树节点的数值
+ * @return {struct TreeNode} *node      新树节点的指针
+ */
+struct TreeNode *newNode(int value) {
+    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));     /* 初始化树节点：为树节点分配空间 */
+    node->val = value;                                                              /* 树节点的值为 value */
+    node->left = NULL;                                                              /* 树节点的左子节点为 NULL */
+    node->right = NULL;                                                             /* 树节点的右子节点为 NULL */
+    return node;                                                                    /* 返回树节点 */
+}
+
+/**
+ * @description: 后续遍历释放树所占用的空间
+ * =================================================================================
+ * @param {TreeNode} *root
+ * @return {void}
+ */
+void freeTree(struct TreeNode *root) {
+    if (root == NULL) {             /* 如果传入节点为 NULL 则返回 */
+        return;
+    }
+
+    freeTree(root->left);           /* 遍历释放左节点空间 */
+    freeTree(root->right);          /* 遍历释放右节点空间 */
+    free(root);                     /* 释放当前节点空间 */
+}
+
+/**
+ * @description: 打印一维数组
+ * =================================================================================
+ * @param {double} *array      一维数组
+ * @param {int} size        一维数组的大小
+ * @return {void}
+ */
+void print1DArray(double *array, int size) {
+    printf("[");                        /* 打印行边框 [ */
+    for (int i = 0; i < size; ++i) {        /* 遍历 array 内的元素 */
+        printf("%d", array[i]);                 /* 打印 array 内的元素 */
+        if (i < size - 1) {                     /* 打印分隔符：, */
+            printf(", ");
+        }
+    }
+    printf("]\n");                      /* 打印行边框 ] */
+}
 
 /**
  * @description: 主函数
@@ -74,6 +137,31 @@ double *averageOfLevels(struct TreeNode *root, int *returnSize){
  * @return {*}
  */
 int main(int argc, const char *argv[]) {
+    /*
+     * 创建以下树结构
+     *      1
+     *     / \
+     *    2   3
+     *   / \ / \
+     *  4  5 6  7
+     */
+    struct TreeNode *root = newNode(1);
+    root->left = newNode(2);
+    root->right = newNode(3);
 
+    root->left->left = newNode(4);
+    root->left->right = newNode(5);
+
+    root->right->left = newNode(6);
+    root->right->right = newNode(7);
+
+    int returnSize = 0;
+
+    /* 函数调用 */
+    double* result = averageOfLevels(root, &returnSize);
+    print1DArray(result, returnSize);
+
+    freeTree(root);     /* 释放树所占用的空间 */
+    free(result);       /* 释放结果一维数组的内存空间 */
     return 0;
 }
