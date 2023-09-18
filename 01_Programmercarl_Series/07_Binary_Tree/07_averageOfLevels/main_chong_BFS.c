@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 19:47:40
+ * @LastEditTime : 2023-09-18 19:50:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,17 +40,33 @@ struct TreeNode {
 */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
-/**
- * @description:
- * =================================================================================
- * @param {TreeNode} *root
- * @param {int} *returnSize
- * @return {double} *averages
- */
-double *averageOfLevels(struct TreeNode *root, int *returnSize){
-    /* TODO */
 
+double *averageOfLevels(struct TreeNode *root, int *returnSize) {
+    double *averages = malloc(sizeof(double) * 1001);
+    struct TreeNode **q = malloc(sizeof(struct TreeNode*) * 10001);
+    *returnSize = 0;
+
+    int qleft = 0, qright = 0;
+    q[qright++] = root;
+    while (qleft < qright) {
+        double sum = 0;
+        int size = qright - qleft;
+        for (int i = 0; i < size; i++) {
+            struct TreeNode* node = q[qleft++];
+            sum += node->val;
+            struct TreeNode *left = node->left, *right = node->right;
+            if (left != NULL) {
+                q[qright++] = left;
+            }
+            if (right != NULL) {
+                q[qright++] = right;
+            }
+        }
+        averages[(*returnSize)++] = sum / size;
+    }
+    return averages;
 }
+
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
