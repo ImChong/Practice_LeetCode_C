@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 19:01:35
+ * @LastEditTime : 2023-09-18 19:04:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,7 +12,6 @@
  * 解法参考：https://leetcode.cn/problems/average-of-levels-in-binary-tree/solutions/410522/er-cha-shu-de-ceng-ping-jun-zhi-by-leetcode-soluti/
  *
  * 方法一：深度优先搜索
- *
  *       1
  *      / \
  *     2   3
@@ -24,6 +23,14 @@
  * averages:    [4,  4,  5]
  */
 #include <stdio.h>
+#include <stdlib.h>
+
+/* 树节点 */
+struct TreeNode {
+    int val;                    /* 节点的值 */
+    struct TreeNode *left;      /* 左节点 */
+    struct TreeNode *right;     /* 右节点 */
+};
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
