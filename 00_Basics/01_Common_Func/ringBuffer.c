@@ -12,12 +12,12 @@
 #include <stdio.h>
 #include <stdint.h>
 
-/* 环形Buffer长度 */
+/* 环形 Buffer 长度 */
 #define RING_BUFFER_SIZE                5
-
+/* 程序状态宏 */
 #define UNIFORM_ERR                     (-1)
 #define UNIFORM_OK                      0
-
+/* 宏函数 */
 #define ARR_SIZE(arr)                   (sizeof(arr) / sizeof((arr)[0]))
 #define RETURN_ERR_IF(condition)        do { \
                                             if (condition) { \
