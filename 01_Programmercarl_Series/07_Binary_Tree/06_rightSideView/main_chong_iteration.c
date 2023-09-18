@@ -64,7 +64,7 @@ int *rightSideView(struct TreeNode *root, int *returnSize){
         int layerLastIndex = queueRear;                                     /* 记录当前层的最后一个元素的索引 */
         int value = 0;                                                      /* 当前层的最后一个元素的值初始化为 0 */
         while (queueFront < layerLastIndex) {                               /* 遍历当前层的元素 */
-            struct TreeNode *curNode = treeNodeQueue[queueFront];
+            struct TreeNode *curNode = treeNodeQueue[queueFront];               /* 获取当前遍历到的节点 */
             value = curNode->val;
             if (curNode->left != NULL) {
                 treeNodeQueue[queueRear++] = curNode->left;
