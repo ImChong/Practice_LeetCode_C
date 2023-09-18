@@ -1,26 +1,23 @@
 /*
  * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\ringbuffer.c
- * @Author       : Chong Liu / truegrit rainaftermath@qq.com
+ * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 22:53:49
+ * @LastEditTime : 2023-09-18 22:55:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 环形buffer
- */
-/*
- * @Author: truegrit rainaftermath@qq.com
- * @Date: 2023-09-17
- * @Description: 环形buffer
  */
 #include <stdio.h>
 #include <stdint.h>
 
 /* 环形Buffer长度 */
 #define RING_BUFFER_SIZE                5
+
 #define UNIFORM_ERR                     (-1)
 #define UNIFORM_OK                      0
+
 #define ARR_SIZE(arr)                   (sizeof(arr) / sizeof((arr)[0]))
 #define RETURN_ERR_IF(condition)        do { \
                                             if (condition) { \
