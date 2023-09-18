@@ -57,6 +57,54 @@ double *averageOfLevels(struct TreeNode *root, int *returnSize){
 /* ==================================================================================================== */
 
 /**
+ * @description: 创建树节点
+ * =================================================================================
+ * @param {int} value                   树节点的数值
+ * @return {struct TreeNode} *node      新树节点的指针
+ */
+struct TreeNode *newNode(int value) {
+    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));     /* 初始化树节点：为树节点分配空间 */
+    node->val = value;                                                              /* 树节点的值为 value */
+    node->left = NULL;                                                              /* 树节点的左子节点为 NULL */
+    node->right = NULL;                                                             /* 树节点的右子节点为 NULL */
+    return node;                                                                    /* 返回树节点 */
+}
+
+/**
+ * @description: 后续遍历释放树所占用的空间
+ * =================================================================================
+ * @param {TreeNode} *root
+ * @return {void}
+ */
+void freeTree(struct TreeNode *root) {
+    if (root == NULL) {             /* 如果传入节点为 NULL 则返回 */
+        return;
+    }
+
+    freeTree(root->left);           /* 遍历释放左节点空间 */
+    freeTree(root->right);          /* 遍历释放右节点空间 */
+    free(root);                     /* 释放当前节点空间 */
+}
+
+/**
+ * @description: 打印一维数组
+ * =================================================================================
+ * @param {double} *array      一维数组
+ * @param {int} size        一维数组的大小
+ * @return {void}
+ */
+void print1DArray(double *array, int size) {
+    printf("[");                        /* 打印行边框 [ */
+    for (int i = 0; i < size; ++i) {        /* 遍历 array 内的元素 */
+        printf("%.3f", array[i]);                 /* 打印 array 内的元素 */
+        if (i < size - 1) {                     /* 打印分隔符：, */
+            printf(", ");
+        }
+    }
+    printf("]\n");                      /* 打印行边框 ] */
+}
+
+/**
  * @description: 主函数
  * =================================================================================
  * @param {int} argc
@@ -64,6 +112,31 @@ double *averageOfLevels(struct TreeNode *root, int *returnSize){
  * @return {*}
  */
 int main(int argc, const char *argv[]) {
+    /*
+     * 创建以下树结构
+     *      1
+     *     / \
+     *    2   3
+     *   / \ / \
+     *  4  5 6  7
+     */
+    struct TreeNode *root = newNode(1);
+    root->left = newNode(2);
+    root->right = newNode(3);
 
+    root->left->left = newNode(4);
+    root->left->right = newNode(5);
+
+    root->right->left = newNode(6);
+    root->right->right = newNode(7);
+
+    int returnSize = 0;
+
+    /* 函数调用 */
+    double* result = averageOfLevels(root, &returnSize);
+    print1DArray(result, returnSize);
+
+    freeTree(root);     /* 释放树所占用的空间 */
+    free(result);       /* 释放结果一维数组的内存空间 */
     return 0;
 }
