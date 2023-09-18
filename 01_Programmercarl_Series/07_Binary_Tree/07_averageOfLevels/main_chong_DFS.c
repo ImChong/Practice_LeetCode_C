@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 19:38:33
+ * @LastEditTime : 2023-09-18 19:46:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -18,9 +18,9 @@
  *    / \ / \
  *   4  5 6  7
  *
- * sums:        [4,  8, 15]
- * counts:      [1,  2,  3]
- * averages:    [4,  4,  5]
+ * sums:        [1,    5,  22]
+ * counts:      [1,    2,   4]
+ * averages:    [1,  2.5, 5.5]
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,7 +49,7 @@ struct TreeNode {
 int countsSize;
 int sumsSize;
 
-void dfs(struct TreeNode *root, int level, int *counts, double* sums) {
+void depthFirstSearch(struct TreeNode *root, int level, int *counts, double* sums) {
     if (root == NULL) {
         return;
     }
@@ -60,15 +60,15 @@ void dfs(struct TreeNode *root, int level, int *counts, double* sums) {
         sums[sumsSize++] = (double)root->val;
         counts[countsSize++] = 1;
     }
-    dfs(root->left, level + 1, counts, sums);
-    dfs(root->right, level + 1, counts, sums);
+    depthFirstSearch(root->left, level + 1, counts, sums);
+    depthFirstSearch(root->right, level + 1, counts, sums);
 }
 
 double *averageOfLevels(struct TreeNode* root, int* returnSize) {
     countsSize = sumsSize = 0;
     int* counts = malloc(sizeof(int) * 1001);
     double* sums = malloc(sizeof(double) * 1001);
-    dfs(root, 0, counts, sums);
+    depthFirstSearch(root, 0, counts, sums);
     double* averages = malloc(sizeof(double) * 1001);
     *returnSize = sumsSize;
     for (int i = 0; i < sumsSize; i++) {
