@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 14:06:19
+ * @LastEditTime : 2023-09-18 19:47:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -18,9 +18,9 @@
  *    / \ / \
  *   4  5 6  7
  *
- * sums:        [4,  8, 15]
- * counts:      [1,  2,  3]
- * averages:    [4,  4,  5]
+ * sums:        [1,    5,  22]
+ * counts:      [1,    2,   4]
+ * averages:    [1,  2.5, 5.5]
  */
 #include <stdio.h>
 #include <stdlib.h>
