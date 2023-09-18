@@ -1,14 +1,39 @@
 /*
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\ringbuffer.c
+ * @Author       : Chong Liu / truegrit rainaftermath@qq.com
+ * @CreateDate   : 2023-09-18 22:40:08
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-18 22:53:49
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 环形buffer
+ */
+/*
  * @Author: truegrit rainaftermath@qq.com
  * @Date: 2023-09-17
  * @Description: 环形buffer
  */
-
-#include "ring_buffer.h"
-#include "base_type_def.h"
+#include <stdio.h>
+#include <stdint.h>
 
 /* 环形Buffer长度 */
-#define RING_BUFFER_SIZE 5
+#define RING_BUFFER_SIZE                5
+#define UNIFORM_ERR                     (-1)
+#define UNIFORM_OK                      0
+#define ARR_SIZE(arr)                   (sizeof(arr) / sizeof((arr)[0]))
+#define RETURN_ERR_IF(condition)        do { \
+                                            if (condition) { \
+                                                return UNIFORM_ERR; \
+                                            } \
+                                        } while (0)
+
+typedef struct {
+    uint8_t *pBuff;     /* 环形buffer数组 */
+    int16_t buffLen;    /* 环形buffer长度 */
+    int16_t dataLen;    /* 环形buffer中数据总长度 */
+    int16_t dataIdx;    /* 环形buffer的数据头指针 */
+} RingBufferSt;
 
 /* 接收环形Buffer */
 uint8_t g_rxBuff[RING_BUFFER_SIZE];
@@ -119,8 +144,7 @@ int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen)
  * Author  : liujia
  * Date    : 2023.9.17
  ***************************************************************************/
-void RingBuffer_Test(void)
-{
+int main(int argc, const char *argv[]) {
     // 初始化
     RingBuffer_Init(&g_rxRing, g_rxBuff, ARR_SIZE(g_rxBuff));
     RingBuffer_Print(&g_rxRing);
@@ -151,4 +175,6 @@ void RingBuffer_Test(void)
     RingBuffer_GetByte(&g_rxRing, &data);
     RingBuffer_GetByte(&g_rxRing, &data);
     RingBuffer_Print(&g_rxRing);
+
+    return 0;
 }
