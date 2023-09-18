@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 19:28:56
+ * @LastEditTime : 2023-09-18 19:38:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -121,7 +121,7 @@ void freeTree(struct TreeNode *root) {
 void print1DArray(double *array, int size) {
     printf("[");                        /* 打印行边框 [ */
     for (int i = 0; i < size; ++i) {        /* 遍历 array 内的元素 */
-        printf("%d", array[i]);                 /* 打印 array 内的元素 */
+        printf("%.3f", array[i]);                 /* 打印 array 内的元素 */
         if (i < size - 1) {                     /* 打印分隔符：, */
             printf(", ");
         }
