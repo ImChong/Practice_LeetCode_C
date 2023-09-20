@@ -6,32 +6,37 @@ C language leetcode practice guide:
 - [Programmercarl_Series](01_Programmercarl_Series/) - [代码随想录系列](https://programmercarl.com/)
 - [Labuladong_Series](02_Labuladong_Series/) - [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
 
-# Versions
+## Versions
 
 - gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
 - g++.exe (Rev7, Built by MSYS2 project) 13.1.0
 - GNU gdb (GDB) 13.2
 
-# Build & Run Code
+## Build & Run Code
+
 In order to run source code in VSCode, select the .c file that wish to run. Then click the following button in VSCode:
-```
+
+```txt
 Terminal -> Run Task... -> (Linux) Build & Run      /* Ubuntu System */
 Terminal -> Run Task... -> (Windows) Build & Run    /* Windows System */
 ```
 
-# Debug Code
+## Debug Code
+
 In order to debug source code in VSCode, select the .c file that wish to run.
 First Build & Run source code as the above section.
 Then click the following button in VSCode:
-```
+
+```txt
 Run and Debug (Ctil+Shift+D) -> (Linux)(gdb) source code        /* Ubuntu System */
 Run and Debug (Ctil+Shift+D) -> (Windows)(gdb) source code      /* Windows System */
 ```
 
-# Clean all .exe files
+## Clean all .exe files
+
 run the ```killexe.bat``` file in this directory.
 
-# Progress
+## Progress
 
 - [x] .
 - [x] ├── 00_Basics
