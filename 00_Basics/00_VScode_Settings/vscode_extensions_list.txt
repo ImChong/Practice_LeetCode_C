@@ -57,6 +57,7 @@ Excalidraw
 Todo Tree
 Bookmarks
 highlight-words
+Color Highlight
 Copy file name
 vscode-icons
 Bracket Pair Color DLW
