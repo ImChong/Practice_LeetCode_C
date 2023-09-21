@@ -1,6 +1,6 @@
 .NET Install Tool for Extension Authors
 psioniq File Header
-C Function Header Snippet for UIUC ECE391
+C Function Header Snippet for UIUC ECE391   - [TODO] rewrite snippets in vscode snippets json
 koroFileHeader
 
 Path Intellisense
@@ -32,13 +32,16 @@ gitignore
 
 Markdown All in One
 Markdown Preview Enhanced
-
-Keil Assistant
+markdownlint
 
 ROS
 ROS Snippets
 
+Keil Assistant
+PlatformIO IDE
+
 Hex Editor
+Intel HEX format
 vscode-pdf
 Excel Viewer
 Code Runner
@@ -47,6 +50,9 @@ Call Graph
 Crabviz
 Code Spell Checker
 Prettier - Code formatter
+Draw.io Integration
+Draw.io Integration: Mermaid plugin
+Excalidraw
 
 Todo Tree
 Bookmarks
