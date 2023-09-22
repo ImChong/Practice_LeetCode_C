@@ -1,16 +1,45 @@
-/* 515. 在每个树行中找最大值: https://leetcode.cn/problems/find-largest-value-in-each-tree-row/ */
-
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\09_largestValues\main_chong.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-08-18 23:18:36
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-22 22:21:42
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 515. 在每个树行中找最大值: https://leetcode.cn/problems/find-largest-value-in-each-tree-row/
+ */
 #include <stdio.h>
+#include <stdlib.h>
+
+struct TreeNode {
+    int val;                    /* 节点的值 */
+    struct TreeNode *left;      /* 左节点 */
+    struct TreeNode *right;     /* 右节点 */
+};
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 /* TODO: 目标函数 */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+
+int *largestValues(struct TreeNode *root, int *returnSize){
+    /* TODO */
+    return NULL;
+}
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-/* NOTE：主函数 */
-int main(int argc, const char* argv[]) {
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
+int main(int argc, const char *argv[]) {
 
     return 0;
 }
