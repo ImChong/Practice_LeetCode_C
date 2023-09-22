@@ -68,5 +68,17 @@
 			"printf(\"======== Case ${1:label} ======== \\n\");"
 		],
 		"description": "case head."
+	},
+	"tree_node": {
+		"prefix": "TreeNode",
+		"body": [
+			"/* 树节点 */",
+			"struct TreeNode {",
+			"    int val;                    /* 节点的值 */",
+			"    struct TreeNode *left;      /* 左节点 */",
+			"    struct TreeNode *right;     /* 右节点 */",
+			"};"
+		],
+		"description": "case head."
 	}
 }
