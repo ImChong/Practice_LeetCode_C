@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 19:53:07
+ * @LastEditTime : 2023-09-22 22:19:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,19 +12,42 @@
  * 解法参考：https://leetcode.cn/problems/n-ary-tree-level-order-traversal/solutions/1400623/n-cha-shu-de-ceng-xu-bian-li-by-leetcode-lxdr/
  */
 #include <stdio.h>
+#include <stdlib.h>
+
+struct TreeNode {
+    int val;                    /* 节点的值 */
+    struct TreeNode *left;      /* 左节点 */
+    struct TreeNode *right;     /* 右节点 */
+};
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
-/* TODO: 目标函数 */
-int** levelOrder(struct Node* root, int* returnSize, int** returnColumnSizes) {
+/* TODO */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/**
+ * @description:
+ * =================================================================================
+ * @param {Node} *root
+ * @param {int} *returnSize
+ * @param {int} **returnColumnSizes
+ * @return {*}
+ */
+int** levelOrder(struct Node *root, int *returnSize, int **returnColumnSizes) {
     /* TODO */
     return NULL;
 }
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-/* NOTE：主函数 */
-int main(int argc, const char* argv[]) {
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
+int main(int argc, const char *argv[]) {
 
     return 0;
 }
