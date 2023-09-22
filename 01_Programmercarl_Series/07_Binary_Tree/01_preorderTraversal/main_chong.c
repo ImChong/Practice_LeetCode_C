@@ -23,6 +23,7 @@ struct TreeNode {
 };
 
 /* ==================================================================================================== */
+/* ==================================================================================================== */
 /* preorderTraversal()
  *  Functionality: 二叉树的前序遍历
  *  Arguments: struct TreeNode *root, int *returnSize
@@ -42,6 +43,7 @@ struct TreeNode {
  *
  * 结果：[1, 2, 4, 5, 3, 6, 7]
  */
+/* ==================================================================================================== */
 /* ==================================================================================================== */
 #if RECURSION_EN
 /* 递归遍历 */
@@ -89,6 +91,7 @@ int* preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
+
 /* =打印结果数组 */
 void printArray(int *result, int returnSize) {
     for (int i = 0; i < returnSize; i++) {
@@ -141,14 +144,14 @@ int main(int argc, const char* argv[]) {
     int *result = NULL;
 
 #if RECURSION_EN
-    /* NOTE: Test case 1 */
+    /* Test case 1 */
     printf("======== recursion ======== \n");
     result = preorderTraversal_recursion(&n1, &returnSize);
     printArray(result, returnSize);
 #endif
 
 #if ITERATION_EN
-    /* NOTE: Test case 2 */
+    /* Test case 2 */
     printf("======== iteration ======== \n");
     result = preorderTraversal_iteration(&n1, &returnSize);
     printArray(result, returnSize);
