@@ -47,7 +47,7 @@
 	"case_head": {
 		"prefix": "case",
 		"body": [
-			"/* NOTE: Test case ${1:label} */",
+			"/* Test case ${1:label} */",
 			"printf(\"======== Case ${1:label} ======== \\n\");"
 		],
 		"description": "case head."
