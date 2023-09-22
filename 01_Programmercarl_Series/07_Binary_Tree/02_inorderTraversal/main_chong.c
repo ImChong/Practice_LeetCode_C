@@ -21,6 +21,7 @@ struct TreeNode {
 };
 
 /* ==================================================================================================== */
+/* ==================================================================================================== */
 /* inorderTraversal()
  *  Functionality: 二叉树的中序遍历
  *  Arguments: struct TreeNode* root, int* returnSize
@@ -40,6 +41,7 @@ struct TreeNode {
  *
  * 结果：[4, 2, 5, 1, 6, 3, 7]
  */
+/* ==================================================================================================== */
 /* ==================================================================================================== */
 /* 递归遍历 */
 void inOrder(struct TreeNode *node, int *ret, int *returnSize) {
@@ -83,7 +85,7 @@ int* inorderTraversal_iteration(struct TreeNode* root, int* returnSize) {
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-/* NOTE：主函数 */
+/* 主函数 */
 int main(int argc, const char* argv[]) {
     /*
      * 创建以下树结构
@@ -106,7 +108,7 @@ int main(int argc, const char* argv[]) {
 
     int returnSize = 0;
 
-    /* NOTE: Test case 1 */
+    /* Test case 1 */
     printf("======== recursion ======== \n");
     int *result = inorderTraversal_recursion(&n1, &returnSize);
 
@@ -115,7 +117,7 @@ int main(int argc, const char* argv[]) {
     }
     printf("\n");
 
-    /* NOTE: Test case 2 */
+    /* Test case 2 */
     printf("======== iteration ======== \n");
     result = inorderTraversal_iteration(&n1, &returnSize);
 
