@@ -31,15 +31,15 @@
         },
         {
             "light": "#b3ffb3",
-            "dark": "orange"
+            "dark": "#FF7F50"
         },
         {
             "light": "#ffff80",
-            "dark": "green"
+            "dark": "#32a852"
         },
         {
             "light": "#d1e0e0",
-            "dark": "red"
+            "dark": "#ff4747"
         }
     ],
     "todo-tree.highlights.defaultHighlight": {
@@ -48,77 +48,77 @@
         "foreground": "#000000",
         "background": "#ffffff",
         "opacity": 50,
-        "iconColour": "gray",
+        "iconColour": "#6c6c6c",
         "gutterIcon": true
     },
     "todo-tree.highlights.customHighlight": {
         "TODO": {
             "icon": "check",
-            "foreground": "black",
-            "background": "yellow",
-            "iconColour": "yellow"
+            "foreground": "#000000",
+            "background": "#fff719",
+            "iconColour": "#fff719"
         },
         "NOTE": {
             "icon": "note",
-            "foreground": "white",
-            "background": "gray",
-            "iconColour": "gray"
+            "foreground": "#F0EDE1",
+            "background": "#6c6c6c",
+            "iconColour": "#6c6c6c"
         },
         "COMMENT": {
             "icon": "note",
-            "foreground": "white",
-            "background": "gray",
-            "iconColour": "gray"
+            "foreground": "#F0EDE1",
+            "background": "#6c6c6c",
+            "iconColour": "#6c6c6c"
         },
         "FIXME": {
-            "foreground": "black",
-            "background": "orange",
-            "iconColour": "orange"
+            "foreground": "#000000",
+            "background": "#FF7F50",
+            "iconColour": "#FF7F50"
         },
         "BUG": {
             "icon": "bug",
-            "foreground": "white",
-            "background": "red",
-            "iconColour": "red"
+            "foreground": "#F0EDE1",
+            "background": "#ff4747",
+            "iconColour": "#ff4747"
         },
         "[ ]": {
             "icon": "check",
-            "foreground": "black",
-            "background": "white",
-            "iconColour": "white"
+            "foreground": "#000000",
+            "background": "#F0EDE1",
+            "iconColour": "#F0EDE1"
         },
         "[x]": {
             "icon": "check",
-            "foreground": "white",
-            "background": "green",
-            "iconColour": "green"
+            "foreground": "#F0EDE1",
+            "background": "#32a852",
+            "iconColour": "#32a852"
         },
         "DONE": {
             "icon": "check",
-            "foreground": "white",
-            "background": "green",
-            "iconColour": "green"
+            "foreground": "#F0EDE1",
+            "background": "#32a852",
+            "iconColour": "#32a852"
         },
         "#if": {
             "icon": "diff-renamed",
             "type": "line",
-            "foreground": "white",
-            "background": "blue",
-            "iconColour": "blue"
+            "foreground": "#F0EDE1",
+            "background": "#2881ff",
+            "iconColour": "#2881ff"
             // "gutterIcon": false,
         },
         "#endif": {
             "icon": "diff-renamed",
             "type": "line",
-            "foreground": "white",
-            "background": "blue",
-            "iconColour": "blue"
+            "foreground": "#F0EDE1",
+            "background": "#2881ff",
+            "iconColour": "#2881ff"
             // "gutterIcon": false,
         },
         "#elif": {
             "icon": "diff-renamed",
             "type": "line",
-            "foreground": "white",
+            "foreground": "#F0EDE1",
             "background": "#1085c9",
             "iconColour": "#1085c9"
             // "gutterIcon": false,
@@ -126,7 +126,7 @@
         "#else": {
             "icon": "diff-renamed",
             "type": "line",
-            "foreground": "white",
+            "foreground": "#F0EDE1",
             "background": "#1085c9",
             "iconColour": "#1085c9"
             // "gutterIcon": false,
@@ -134,9 +134,9 @@
         "Functionality": {
             "icon": "note",
             "type": "line",
-            "foreground": "white",
-            "background": "green",
-            "iconColour": "green"
+            "foreground": "#F0EDE1",
+            "background": "#32a852",
+            "iconColour": "#32a852"
         }
     },
     "todo-tree.general.tags": [
@@ -165,12 +165,20 @@
     ],
     "explorer.confirmDelete": false,
     "cSpell.userWords": [
+        "ADDI",
         "AFIO",
         "AHBENR",
         "AHBPERIPH",
+        "armar",
+        "armasm",
+        "armcc",
+        "armlink",
+        "AUIPC",
         "BDCR",
+        "BITBAND",
         "blit",
         "Bootloader",
+        "breakpooints",
         "BSRR",
         "centerx",
         "centroidal",
@@ -178,6 +186,7 @@
         "Channelx",
         "cheshirekow",
         "Chong",
+        "CISC",
         "CMAR",
         "CMSIS",
         "CNDTR",
@@ -190,18 +199,23 @@
         "dateformat",
         "dbgconf",
         "DBGMCU",
+        "DCMAKE",
         "depedning",
+        "Descrip",
+        "drawio",
         "Eigen",
         "elif",
         "Embedfire",
         "ENDP",
         "ETRGINJ",
+        "Excalidraw",
         "EXTI",
         "Farbod",
         "Farshidian",
         "filecreated",
         "fileheader",
         "FLITF",
+        "fromelf",
         "fsmc",
         "Fwlib",
         "GOOGLETEST",
@@ -216,13 +230,17 @@
         "GPIOH",
         "Gtest",
         "HCLK",
+        "hediet",
         "highlightwords",
         "HPRE",
         "ICCARM",
         "IDCODE",
         "ifndef",
         "inorder",
+        "Interl",
         "IOPBEN",
+        "IWDG",
+        "JALR",
         "JOFR",
         "JSQR",
         "JTAG",
@@ -234,16 +252,19 @@
         "LCKR",
         "leetcode",
         "lightgreen",
+        "liujia",
         "loginfo",
         "MACCR",
         "malloc",
         "MAPR",
+        "markdownlint",
         "Microcontroller",
         "microcontrollers",
         "MICROLIB",
         "Mindmap",
         "MSYS",
         "NAND",
+        "nlevel",
         "NOINIT",
         "Nomentum",
         "NORFLASH",
@@ -253,6 +274,7 @@
         "obkoro",
         "PCLK",
         "Periph",
+        "plannning",
         "Postorder",
         "prediv",
         "Preorder",
@@ -268,14 +290,18 @@
         "RDLR",
         "RDTR",
         "READWRITE",
+        "ringbuffer",
         "rospkg",
         "rospy",
         "RSTR",
         "RTCCLK",
         "RTCCR",
+        "scminput",
         "SDIO",
         "SDRAM",
         "seperator",
+        "skywoodsz",
+        "SLTI",
         "SMPR",
         "SRAM",
         "stackheap",
@@ -295,15 +321,20 @@
         "TDHR",
         "TDLR",
         "TDTR",
+        "THUBM",
         "tmpreg",
+        "truegrit",
         "UART",
         "UIUC",
         "urdf",
         "usart",
         "USEREVENT",
         "USRAT",
+        "UVGUI",
         "uvguix",
+        "UVOPT",
         "uvoptx",
+        "UVPROJ",
         "uvprojx",
         "VECT",
         "waitflags",
@@ -329,33 +360,7 @@
     "prettier.useTabs": true,
     "workbench.colorTheme": "Visual Studio Dark - C++",
     "code-runner.clearPreviousOutput": true,
-    "window.zoomLevel": -1,
-    "psi-header.config": {
-        "author": "Chong Liu"
-    },
-    "psi-header.changes-tracking": {
-        "isActive": true,
-        "modAuthor": "Modified By:",
-        "modDate": "Last Modified:",
-        "autoHeader": "autoSave"
-    },
-    "psi-header.templates": [
-        {
-            "language": "*",
-            "template": [
-                "@File: <<filename>>",
-                "@Created Date: <<filecreated('YYYY-MM-DD h:mm:ss a')>>",
-                "@Author: <<author>>",
-                "@Brief: Description of what this file does",
-                "=================================================================================",
-                "Copyright (c) <<yeartoyear(fc, now)>> <<author>>",
-                "=================================================================================",
-                "Last Modified: <<author>> - <<dateformat('YYYY-MM-DD h:mm:ss a')>>"
-            ]
-        }
-    ],
     "git.openRepositoryInParentFolders": "never",
-    "KeilAssistant.MDK.Uv4Path": "D:\\Developments\\Keil\\UV4\\UV4.exe",
     // 头部注释
     "fileheader.customMade": {
         "FilePath": "Do not edit", // 增加此项配置即可
@@ -386,9 +391,18 @@
             "md"
         ],
         "moveCursor": true, // 自动移动光标到Description所在行
-        "throttleTime": 60000, // 对同一个文件 需要过60秒钟再次修改文件并保存才会更新注释
+        "throttleTime": 5000, // 对同一个文件 需要过5秒钟再次修改文件并保存才会更新注释
         "specialOptions":{
             "Date": "CreateDate"
         }
+    },
+    "window.commandCenter": true,
+    "hediet.vscode-drawio.resizeImages": null,
+    "window.zoomLevel": -1,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
     }
 }
