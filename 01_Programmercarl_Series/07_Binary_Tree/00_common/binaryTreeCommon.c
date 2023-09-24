@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 13:36:45
+ * @LastEditTime : 2023-09-24 13:38:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -343,7 +343,6 @@ int main(int argc, const char* argv[]) {
      */
     printTree();            /* 打印树结构 */
 
-
     int arr[] = {1, 2, 3, 4, 5, 6, 7};          /* 初始化数组 */
     int size = ARRAY_SIZE(arr);                 /* 获取数组长度 */
     printf("Tree Array: \n");
@@ -356,48 +355,49 @@ int main(int argc, const char* argv[]) {
     int returnSize = 0;     /* 初始化结果数组大小 */
     int *result = NULL;     /* 初始化结果数组指针为 NULL */
 
-#if PRE_ORDER_TRAVERSAL_EN
-    #if RECURSION_EN
+#if PRE_ORDER_TRAVERSAL_EN      /* 前序遍历 */
+    #if RECURSION_EN                /* 递归 */
     printf("preorderTraversal_recursion: \n");
     result = preorderTraversal_recursion(root, &returnSize);
     print1DArray(result, returnSize);
     #endif
 
-    #if ITERATION_EN
+    #if ITERATION_EN                /* 迭代 */
     printf("preorderTraversal_iteration: \n");
     result = preorderTraversal_iteration(root, &returnSize);
     print1DArray(result, returnSize);
     #endif
 #endif
 
-#if IN_ORDER_TRAVERSAL_EN
-    #if RECURSION_EN
+#if IN_ORDER_TRAVERSAL_EN       /* 中序遍历 */
+    #if RECURSION_EN                /* 递归 */
     printf("inorderTraversal_recursion: \n");
     result = inorderTraversal_recursion(root, &returnSize);
     print1DArray(result, returnSize);
     #endif
 
-    #if ITERATION_EN
+    #if ITERATION_EN                /* 迭代 */
     printf("inorderTraversal_iteration: \n");
     result = inorderTraversal_iteration(root, &returnSize);
     print1DArray(result, returnSize);
     #endif
 #endif
 
-#if POST_ORDER_TRAVERSAL_EN
-    #if RECURSION_EN
+#if POST_ORDER_TRAVERSAL_EN     /* 后序遍历 */
+    #if RECURSION_EN                /* 递归 */
     printf("postorderTraversal_recursion: \n");
     result = postorderTraversal_recursion(root, &returnSize);
     print1DArray(result, returnSize);
     #endif
 
-    #if ITERATION_EN
+    #if ITERATION_EN                /* 迭代 */
     printf("postorderTraversal_iteration: \n");
     result = postorderTraversal_iteration(root, &returnSize);
     print1DArray(result, returnSize);
     #endif
 #endif
 
-    free(result);
+    freeTree(root);         /* 释放树所占用的空间 */
+    free(result);           /* 释放结果数组所占用的空间 */
     return 0;
 }
