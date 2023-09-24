@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-22 22:07:37
+ * @LastEditTime : 2023-09-24 09:00:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -49,7 +49,16 @@ struct TreeNode {
 int countsSize;
 int sumsSize;
 
-void depthFirstSearch(struct TreeNode *root, int level, int *counts, double* sums) {
+/**
+ * @description: 深度优先搜索算法
+ * =================================================================================
+ * @param {TreeNode} *root
+ * @param {int} level
+ * @param {int} *counts
+ * @param {double} *sums
+ * @return {void}
+ */
+void depthFirstSearch(struct TreeNode *root, int level, int *counts, double *sums) {
     if (root == NULL) {
         return;
     }
@@ -64,7 +73,14 @@ void depthFirstSearch(struct TreeNode *root, int level, int *counts, double* sum
     depthFirstSearch(root->right, level + 1, counts, sums);
 }
 
-double *averageOfLevels(struct TreeNode* root, int* returnSize) {
+/**
+ * @description: 二叉树的层平均值
+ * =================================================================================
+ * @param {TreeNode} *root
+ * @param {int} *returnSize
+ * @return {double} *averages
+ */
+double *averageOfLevels(struct TreeNode *root, int *returnSize) {
     countsSize = sumsSize = 0;
     int* counts = malloc(sizeof(int) * 1001);
     double* sums = malloc(sizeof(double) * 1001);
