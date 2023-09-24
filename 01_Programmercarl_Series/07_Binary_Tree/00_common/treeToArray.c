@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\00_common\treeToArray.c
+ * @FilePath     : /Practice_LeetCode_C/01_Programmercarl_Series/07_Binary_Tree/00_common/treeToArray.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-24 14:54:38
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 16:21:06
+ * @LastEditTime : 2023-09-24 22:20:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,19 +38,19 @@ typedef struct {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 将一个节点加入队列
  * =================================================================================
- * @param {Queue} *q
- * @param {TreeNode} *node
+ * @param {Queue} *q            队列指针
+ * @param {struct TreeNode} *node      待加入队列的树节点指针
  * @return {void}
  */
 void enqueue(Queue *q, struct TreeNode *node) {
-    if ((q->rear + 1) % MAX_QUEUE_SIZE == q->front) {
+    if ((q->rear + 1) % MAX_QUEUE_SIZE == q->front) {       /* 如果队列已满，输出错误信息并退出程序 */
         printf("Queue overflow\n");
         exit(1);
     }
-    q->data[q->rear] = node;
-    q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;
+    q->data[q->rear] = node;                                /* 将节点加入队列 */
+    q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;               /* 更新队列尾指针 */
 }
 
 /**
