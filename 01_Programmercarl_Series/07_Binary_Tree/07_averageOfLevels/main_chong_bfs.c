@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 12:30:50
+ * @LastEditTime : 2023-09-24 12:39:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -56,27 +56,27 @@ struct TreeNode {
 double *averageOfLevels(struct TreeNode *root, int *returnSize) {
     double *averages = malloc(sizeof(double) * MAX_SIZE);                       /* 为平均值数组分配空间 */
     struct TreeNode **queue = malloc(sizeof(struct TreeNode*) * MAX_SIZE);      /* 为队列分配空间 */
-    *returnSize = 0;
+    *returnSize = 0;                                                            /* 初始化返回数组大小为0 */
 
-    int qleft = 0, qright = 0;
-    queue[qright++] = root;
-    while (qleft < qright) {
-        double sum = 0;
-        int size = qright - qleft;
-        for (int i = 0; i < size; i++) {
-            struct TreeNode* node = queue[qleft++];
-            sum += node->val;
-            struct TreeNode *left = node->left, *right = node->right;
-            if (left != NULL) {
-                queue[qright++] = left;
+    int qleft = 0, qright = 0;                                                  /* 定义队列左右指针 */
+    queue[qright++] = root;                                                     /* 将根节点加入队列 */
+    while (qleft < qright) {                                                    /* 当队列不为空时循环 */
+        double sum = 0;                                                             /* 定义当前层节点值之和 */
+        int size = qright - qleft;                                                  /* 定义当前层节点数 */
+        for (int i = 0; i < size; i++) {                                            /* 遍历当前层节点 */
+            struct TreeNode* node = queue[qleft++];                                     /* 取出当前层节点 */
+            sum += node->val;                                                           /* 将当前层节点值加到当前层节点值之和上 */
+            struct TreeNode *left = node->left, *right = node->right;                   /* 取出当前层节点的左右子节点 */
+            if (left != NULL) {                                                         /* 如果左子节点不为空 */
+                queue[qright++] = left;                                                     /* 将左子节点加入队列 */
             }
-            if (right != NULL) {
-                queue[qright++] = right;
+            if (right != NULL) {                                                        /* 如果右子节点不为空 */
+                queue[qright++] = right;                                                    /* 将右子节点加入队列 */
             }
         }
-        averages[(*returnSize)++] = sum / size;
+        averages[(*returnSize)++] = sum / size;                                     /* 将当前层节点值之和除以当前层节点数得到当前层节点值的平均值 */
     }
-    return averages;
+    return averages;                                                            /* 返回平均值数组的指针 */
 }
 
 /* ==================================================================================================== */
