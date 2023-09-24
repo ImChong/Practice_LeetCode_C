@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 09:19:42
+ * @LastEditTime : 2023-09-24 09:20:16
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -76,9 +76,9 @@ void depthFirstSearch(struct TreeNode *root, int level, int *counts, double *sum
 /**
  * @description: 二叉树的层平均值
  * =================================================================================
- * @param {TreeNode} *root
- * @param {int} *returnSize
- * @return {double} *averages
+ * @param {TreeNode} *root      二叉树的根节点
+ * @param {int} *returnSize     返回的数组的大小
+ * @return {double} *averages   每层节点值的平均值组成的数组
  */
 double *averageOfLevels(struct TreeNode *root, int *returnSize) {
     countsSize = sumsSize = 0;
