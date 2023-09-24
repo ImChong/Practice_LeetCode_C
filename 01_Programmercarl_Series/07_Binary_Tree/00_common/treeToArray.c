@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-24 14:54:38
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 22:48:09
+ * @LastEditTime : 2023-09-24 22:55:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 /**********************************************************************************/
 /*                                                                                */
@@ -103,7 +104,7 @@ int *treeToArray(struct TreeNode *root, int *returnSize) {
         return NULL;                                                    /* 返回空指针 */
     }
 
-    int *result = (int*) malloc(MAX_QUEUE_SIZE * sizeof(int));      /* 动态分配数组内存 */
+    int *result = (int *)malloc(MAX_QUEUE_SIZE * sizeof(int));      /* 动态分配数组内存 */
     Queue q;                                                        /* 创建队列 */
     q.front = q.rear = 0;                                           /* 初始化队列 */
 
@@ -113,17 +114,38 @@ int *treeToArray(struct TreeNode *root, int *returnSize) {
     while (!isEmpty(&q)) {                                          /* 队列不为空时 */
         struct TreeNode *current = dequeue(&q);                         /* 取出队首节点 */
         if (current) {                                                  /* 如果节点不为空 */
-            result[index] = current->val;
-            enqueue(&q, current->left);
-            enqueue(&q, current->right);
-        } else {
-            result[index] = -1;
+            result[index] = current->val;                                   /* 将节点值加入数组 */
+            enqueue(&q, current->left);                                     /* 将左节点加入队列 */
+            enqueue(&q, current->right);                                    /* 将右节点加入队列 */
+        } else {                                                        /* 如果节点为空 */
+            result[index] = INT_MIN;                                        /* 将数组中的值设为最小值 */
         }
-        index++;
+        index++;                                                    /* 更新数组下标 */
     }
 
-    *returnSize = index;
-    return result;
+    *returnSize = index;                                            /* 更新数组大小 */
+    return result;                                                  /* 返回数组指针 */
+}
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                 HELPER FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 打印数组
+ * =================================================================================
+ * @param {int} *arr    数组指针
+ * @param {int} size    数组大小
+ * @return {void}
+ */
+void printArray(int *arr, int size) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] != INT_MIN)
+            printf("%d ", arr[i]);
+        else
+            printf("NULL ");
+    }
 }
 
 /**********************************************************************************/
@@ -149,12 +171,7 @@ int main(int argc, const char* argv[]) {
 
     int size;
     int *arr = treeToArray(&a, &size);
-    for (int i = 0; i < size; i++) {
-        if (arr[i] != -1)
-            printf("%d ", arr[i]);
-        else
-            printf("NULL ");
-    }
+    printArray(arr, size);
     free(arr);
 
     return 0;
