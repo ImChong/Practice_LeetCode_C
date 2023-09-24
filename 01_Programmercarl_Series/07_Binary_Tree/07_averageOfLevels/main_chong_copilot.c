@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MAX_SIZE 1001   /* 定义数组的最大大小 */
+
 /* 树节点 */
 struct TreeNode {
     int val;                    /* 节点的值 */
