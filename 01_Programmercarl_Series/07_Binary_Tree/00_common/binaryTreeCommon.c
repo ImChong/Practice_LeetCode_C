@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 12:46:02
+ * @LastEditTime : 2023-09-24 12:55:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -258,23 +258,25 @@ struct TreeNode *newNode(int value) {
     return node;
 }
 
+
 /**
- * @description: 创建测试树结构
+ * @description: 通过数组创建二叉树
  * =================================================================================
- * @return {struct TreeNode} *root    二叉树根节点
+ * @param {int} arr[]               一维数组
+ * @param {int} size                一维数组的大小
+ * @param {int} index               数组的索引
+ * @return {struct TreeNode} root   二叉树的根节点
  */
-struct TreeNode *createSampleTree() {
-    struct TreeNode *root = newNode(1);
-    root->left = newNode(2);
-    root->right = newNode(3);
+struct TreeNode *createTreeFromArray(int arr[], int size, int index) {
+    struct TreeNode* root = NULL;                                           /* 初始化根节点为 NULL */
 
-    root->left->left = newNode(4);
-    root->left->right = newNode(5);
+    if (index < size) {                                                     /* 如果索引小于数组大小 */
+        root = newNode(arr[index]);                                             /* 创建根节点 */
+        root->left = createTreeFromArray(arr, size, 2 * index + 1);             /* 创建左节点 */
+        root->right = createTreeFromArray(arr, size, 2 * index + 2);            /* 创建右节点 */
+    }
 
-    root->right->left = newNode(6);
-    root->right->right = newNode(7);
-
-    return root;
+    return root;                                                            /* 返回根节点 */
 }
 
 /**
@@ -341,7 +343,8 @@ int main(int argc, const char* argv[]) {
      *   / \ / \
      *  4  5 6  7
      */
-    struct TreeNode *root = createSampleTree();     /* 创建树结构 */
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};                                          /* 初始化树数组 */
+    struct TreeNode *root = createTreeFromArray(arr, ARRAY_SIZE(arr), 0);       /* 创建树结构 */
 
     printTree();            /* 打印树结构 */
 
