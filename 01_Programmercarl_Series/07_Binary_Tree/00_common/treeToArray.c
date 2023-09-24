@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-24 14:54:38
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 22:23:55
+ * @LastEditTime : 2023-09-24 22:24:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -70,13 +70,13 @@ struct TreeNode *dequeue(Queue *q) {
 }
 
 /**
- * @description:
+ * @description: 判断队列是否为空
  * =================================================================================
- * @param {Queue} *q
- * @return {*}
+ * @param {Queue} *q    队列指针
+ * @return {int}        如果队列为空，返回1；否则返回0
  */
 int isEmpty(Queue *q) {
-    return q->front == q->rear;
+    return q->front == q->rear;     /* 如果队首指针等于队尾指针，说明队列为空 */
 }
 
 /**********************************************************************************/
