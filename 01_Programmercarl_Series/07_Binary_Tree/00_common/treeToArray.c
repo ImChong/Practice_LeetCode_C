@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-24 14:54:38
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 22:23:03
+ * @LastEditTime : 2023-09-24 22:23:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -60,13 +60,13 @@ void enqueue(Queue *q, struct TreeNode *node) {
  * @return {struct TreeNode} *item      取出的树节点指针
  */
 struct TreeNode *dequeue(Queue *q) {
-    if (q->front == q->rear) {
+    if (q->front == q->rear) {                      /* 如果队列为空，输出错误信息并退出程序 */
         printf("Queue underflow\n");
         exit(1);
     }
-    struct TreeNode *item = q->data[q->front];
-    q->front = (q->front + 1) % MAX_QUEUE_SIZE;
-    return item;
+    struct TreeNode *item = q->data[q->front];      /* 取出队首节点 */
+    q->front = (q->front + 1) % MAX_QUEUE_SIZE;     /* 更新队首指针 */
+    return item;                                    /* 返回取出的节点指针 */
 }
 
 /**
