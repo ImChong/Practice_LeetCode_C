@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 10:54:57
+ * @LastEditTime : 2023-09-24 12:30:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -54,24 +54,24 @@ struct TreeNode {
  * @return {double} *averages   平均值数组的指针
  */
 double *averageOfLevels(struct TreeNode *root, int *returnSize) {
-    double *averages = malloc(sizeof(double) * MAX_SIZE);
-    struct TreeNode **q = malloc(sizeof(struct TreeNode*) * MAX_SIZE);
+    double *averages = malloc(sizeof(double) * MAX_SIZE);                       /* 为平均值数组分配空间 */
+    struct TreeNode **queue = malloc(sizeof(struct TreeNode*) * MAX_SIZE);      /* 为队列分配空间 */
     *returnSize = 0;
 
     int qleft = 0, qright = 0;
-    q[qright++] = root;
+    queue[qright++] = root;
     while (qleft < qright) {
         double sum = 0;
         int size = qright - qleft;
         for (int i = 0; i < size; i++) {
-            struct TreeNode* node = q[qleft++];
+            struct TreeNode* node = queue[qleft++];
             sum += node->val;
             struct TreeNode *left = node->left, *right = node->right;
             if (left != NULL) {
-                q[qright++] = left;
+                queue[qright++] = left;
             }
             if (right != NULL) {
-                q[qright++] = right;
+                queue[qright++] = right;
             }
         }
         averages[(*returnSize)++] = sum / size;
@@ -133,9 +133,9 @@ void print1DArray(double *array, int size) {
 /**
  * @description: 主函数
  * =================================================================================
- * @param {int} argc
- * @param {char} *argv[]
- * @return {*}
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
     /*

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 10:04:15
+ * @LastEditTime : 2023-09-24 12:31:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -149,9 +149,9 @@ void print1DArray(double *array, int size) {
 /**
  * @description: 主函数
  * =================================================================================
- * @param {int} argc
- * @param {char} *argv[]
- * @return {*}
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
     /*
