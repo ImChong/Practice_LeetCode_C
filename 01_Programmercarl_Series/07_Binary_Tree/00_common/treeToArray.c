@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-24 14:54:38
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 15:27:05
+ * @LastEditTime : 2023-09-24 15:31:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -27,6 +27,13 @@ typedef struct {
     int front, rear;
 } Queue;
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {Queue} *q
+ * @param {TreeNode} *node
+ * @return {void}
+ */
 void enqueue(Queue *q, struct TreeNode *node) {
     if ((q->rear + 1) % MAX_QUEUE_SIZE == q->front) {
         printf("Queue overflow\n");
@@ -36,6 +43,12 @@ void enqueue(Queue *q, struct TreeNode *node) {
     q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {Queue} *q
+ * @return {*}
+ */
 struct TreeNode *dequeue(Queue *q) {
     if (q->front == q->rear) {
         printf("Queue underflow\n");
@@ -46,10 +59,23 @@ struct TreeNode *dequeue(Queue *q) {
     return item;
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {Queue} *q
+ * @return {*}
+ */
 int isEmpty(Queue *q) {
     return q->front == q->rear;
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {TreeNode} *root
+ * @param {int} *returnSize
+ * @return {*}
+ */
 int *treeToArray(struct TreeNode *root, int *returnSize) {
     if (!root) {
         *returnSize = 0;
@@ -79,7 +105,14 @@ int *treeToArray(struct TreeNode *root, int *returnSize) {
     return result;
 }
 
-int main() {
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
+int main(int argc, const char* argv[]) {
     // 测试代码
     struct TreeNode a = {1, NULL, NULL};
     struct TreeNode b = {2, NULL, NULL};
