@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 12:43:37
+ * @LastEditTime : 2023-09-24 12:46:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -45,6 +45,8 @@
 #define POST_ORDER_TRAVERSAL_EN 1   /* 后序遍历代码开关 */
 #define RECURSION_EN 1              /* 递归代码开关 */
 #define ITERATION_EN 1              /* 迭代代码开关 */
+
+#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))    /* 获取数组长度 */
 
 /* 树节点 */
 struct TreeNode {
@@ -257,7 +259,7 @@ struct TreeNode *newNode(int value) {
 }
 
 /**
- * @description:
+ * @description: 创建测试树结构
  * =================================================================================
  * @return {struct TreeNode} *root    二叉树根节点
  */
