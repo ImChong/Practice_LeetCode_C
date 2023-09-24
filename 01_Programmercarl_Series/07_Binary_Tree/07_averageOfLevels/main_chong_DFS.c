@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 09:12:56
+ * @LastEditTime : 2023-09-24 09:19:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -64,13 +64,13 @@ void depthFirstSearch(struct TreeNode *root, int level, int *counts, double *sum
     }
     if (level < sumsSize) {                                     /* 如果当前层数小于记录节点值之和的数组的大小 */
         sums[level] += root->val;                                   /* 将当前节点的值加到对应层的节点值之和上 */
-        counts[level] += 1;
-    } else {
-        sums[sumsSize++] = (double)root->val;
-        counts[countsSize++] = 1;
+        counts[level] += 1;                                         /* 对应层的节点数加1 */
+    } else {                                                    /* 如果当前层数大于等于记录节点值之和的数组的大小 */
+        sums[sumsSize++] = (double)root->val;                       /* 在记录节点值之和的数组中新增一个元素，将当前节点的值赋值给它 */
+        counts[countsSize++] = 1;                                   /* 在记录节点数的数组中新增一个元素，将1赋值给它 */
     }
-    depthFirstSearch(root->left, level + 1, counts, sums);
-    depthFirstSearch(root->right, level + 1, counts, sums);
+    depthFirstSearch(root->left, level + 1, counts, sums);      /* 递归遍历左子树 */
+    depthFirstSearch(root->right, level + 1, counts, sums);     /* 递归遍历右子树 */
 }
 
 /**
