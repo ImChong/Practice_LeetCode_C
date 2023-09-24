@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 13:38:32
+ * @LastEditTime : 2023-09-24 13:39:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -280,7 +280,7 @@ void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
 /**
  * @description: 后续遍历释放树所占用的空间
  * =================================================================================
- * @param {TreeNode} *root      树的根节点
+ * @param {struct TreeNode} *root      树的根节点
  * @return {void}
  */
 void freeTree(struct TreeNode *root) {
