@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 10:53:08
+ * @LastEditTime : 2023-09-24 10:54:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -47,11 +47,11 @@ struct TreeNode {
 /* ==================================================================================================== */
 
 /**
- * @description:
+ * @description: 计算二叉树每一层节点值的平均值
  * =================================================================================
- * @param {TreeNode} *root
- * @param {int} *returnSize
- * @return {*}
+ * @param {TreeNode} *root      根节点指针
+ * @param {int} *returnSize     返回数组大小的指针
+ * @return {double} *averages   平均值数组的指针
  */
 double *averageOfLevels(struct TreeNode *root, int *returnSize) {
     double *averages = malloc(sizeof(double) * MAX_SIZE);
