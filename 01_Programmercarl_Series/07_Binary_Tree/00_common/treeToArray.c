@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-24 14:54:38
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 22:44:54
+ * @LastEditTime : 2023-09-24 22:46:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -33,8 +33,9 @@ struct TreeNode {
 
 /* 队列 */
 typedef struct {
-    struct TreeNode *data[MAX_QUEUE_SIZE];
-    int front, rear;
+    struct TreeNode *data[MAX_QUEUE_SIZE];  /* 队列的数据 */
+    int front;                              /* 队首指针 */
+    int rear;                               /* 队尾指针 */
 } Queue;
 
 /**********************************************************************************/
@@ -97,14 +98,14 @@ int isEmpty(Queue *q) {
  * @return {int} result             转换后的数组指针
  */
 int *treeToArray(struct TreeNode *root, int *returnSize) {
-    if (!root) {                                                /* 如果根节点为空 */
-        *returnSize = 0;                                            /* 返回数组大小为0 */
-        return NULL;                                                /* 返回空指针 */
+    if (!root) {                                                    /* 如果根节点为空 */
+        *returnSize = 0;                                                /* 返回数组大小为0 */
+        return NULL;                                                    /* 返回空指针 */
     }
 
-    int *result = (int*) malloc(MAX_QUEUE_SIZE * sizeof(int));
-    Queue q;
-    q.front = q.rear = 0;
+    int *result = (int*) malloc(MAX_QUEUE_SIZE * sizeof(int));      /* 动态分配数组内存 */
+    Queue q;                                                        /* 创建队列 */
+    q.front = q.rear = 0;                                           /* 初始化队列 */
 
     enqueue(&q, root);
     int index = 0;
