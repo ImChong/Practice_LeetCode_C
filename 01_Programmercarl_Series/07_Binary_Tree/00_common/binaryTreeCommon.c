@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 12:57:56
+ * @LastEditTime : 2023-09-24 13:05:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -258,25 +258,40 @@ struct TreeNode *newNode(int value) {
     return node;
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {int} *arr
+ * @param {int} size
+ * @param {int} index
+ * @param {TreeNode} **root
+ * @return {void}
+ */
+void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
+    if (index < size) {
+        *root = newNode(*(arr + index));
+        arrayToTree(arr, size, 2 * index + 1, &((*root)->left));
+        arrayToTree(arr, size, 2 * index + 2, &((*root)->right));
+    }
+}
 
 /**
- * @description: 通过数组创建二叉树
+ * @description:
  * =================================================================================
- * @param {int} arr[]               一维数组
- * @param {int} size                一维数组的大小
- * @param {int} index               数组的索引
- * @return {struct TreeNode} root   二叉树的根节点
+ * @param {TreeNode*} root
+ * @param {int*} arr
+ * @param {int*} index
+ * @return {*}
  */
-struct TreeNode *arrayToTree(int arr[], int size, int index) {
-    struct TreeNode* root = NULL;                                           /* 初始化根节点为 NULL */
-
-    if (index < size) {                                                     /* 如果索引小于数组大小 */
-        root = newNode(arr[index]);                                             /* 创建根节点 */
-        root->left = arrayToTree(arr, size, 2 * index + 1);             /* 创建左节点 */
-        root->right = arrayToTree(arr, size, 2 * index + 2);            /* 创建右节点 */
+void treeToArray(struct TreeNode* root, int* arr, int* index) {
+    if (root == NULL) {
+        return;
     }
 
-    return root;                                                            /* 返回根节点 */
+    arr[*index] = root->val;
+    (*index)++;
+    treeToArray(root->left, arr, index);
+    treeToArray(root->right, arr, index);
 }
 
 /**
@@ -343,10 +358,16 @@ int main(int argc, const char* argv[]) {
      *   / \ / \
      *  4  5 6  7
      */
-    int arr[] = {1, 2, 3, 4, 5, 6, 7};                                          /* 初始化树数组 */
-    struct TreeNode *root = arrayToTree(arr, ARRAY_SIZE(arr), 0);       /* 创建树结构 */
-
     printTree();            /* 打印树结构 */
+
+
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int size = ARRAY_SIZE(arr);
+
+    struct TreeNode *root = NULL;
+    arrayToTree(arr, size, 0, &root);
+
+
 
     int returnSize = 0;     /* 初始化结果数组大小 */
     int *result = NULL;     /* 初始化结果数组指针为 NULL */
