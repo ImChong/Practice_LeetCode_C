@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-24 14:54:38
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 22:20:51
+ * @LastEditTime : 2023-09-24 22:22:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,8 +40,8 @@ typedef struct {
 /**
  * @description: 将一个节点加入队列
  * =================================================================================
- * @param {Queue} *q            队列指针
- * @param {struct TreeNode} *node      待加入队列的树节点指针
+ * @param {Queue} *q                队列指针
+ * @param {struct TreeNode} *node   待加入队列的树节点指针
  * @return {void}
  */
 void enqueue(Queue *q, struct TreeNode *node) {
@@ -54,10 +54,10 @@ void enqueue(Queue *q, struct TreeNode *node) {
 }
 
 /**
- * @description:
+ * @description: 从队列中取出一个节点
  * =================================================================================
- * @param {Queue} *q
- * @return {*}
+ * @param {Queue} *q                    队列指针
+ * @return {struct TreeNode} *item      取出的树节点指针
  */
 struct TreeNode *dequeue(Queue *q) {
     if (q->front == q->rear) {
