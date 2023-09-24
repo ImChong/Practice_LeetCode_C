@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 09:20:16
+ * @LastEditTime : 2023-09-24 09:21:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -81,11 +81,11 @@ void depthFirstSearch(struct TreeNode *root, int level, int *counts, double *sum
  * @return {double} *averages   每层节点值的平均值组成的数组
  */
 double *averageOfLevels(struct TreeNode *root, int *returnSize) {
-    countsSize = sumsSize = 0;
-    int* counts = malloc(sizeof(int) * 1001);
-    double* sums = malloc(sizeof(double) * 1001);
+    countsSize = sumsSize = 0;                              /* 初始化记录节点数和节点值之和的数组的大小 */
+    int *counts = malloc(sizeof(int) * 1001);
+    double *sums = malloc(sizeof(double) * 1001);
     depthFirstSearch(root, 0, counts, sums);
-    double* averages = malloc(sizeof(double) * 1001);
+    double *averages = malloc(sizeof(double) * 1001);
     *returnSize = sumsSize;
     for (int i = 0; i < sumsSize; i++) {
         averages[i] = sums[i] / counts[i];
