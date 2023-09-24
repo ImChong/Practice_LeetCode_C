@@ -3,13 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 13:21:35
+ * @LastEditTime : 2023-09-24 13:23:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 二叉树的常用函数
- *
- * 用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。
  *
  * 二叉树主要有两种遍历方式：
  *   深度优先遍历：先往深走，遇到叶子节点再往回走。
@@ -19,6 +17,10 @@
  *   广度优先遍历：一层一层的去遍历。
  *       层次遍历（迭代法）
  *
+ * 数组形式表示：
+ * [1, 2, 3, 4, 5, 6, 7]    用数组来存储二叉树: 如果父节点的数组下标是 i，那么它的左孩子就是 i * 2 + 1，右孩子就是 i * 2 + 2。
+ *
+ * 树结构表示：
  *       1
  *      / \
  *     2   3
@@ -259,12 +261,12 @@ struct TreeNode *newNode(int value) {
 }
 
 /**
- * @description:
+ * @description: 数组转换为树
  * =================================================================================
  * @param {int} *arr
  * @param {int} size
  * @param {int} index
- * @param {TreeNode} **root
+ * @param {struct TreeNode} **root
  * @return {void}
  */
 void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
