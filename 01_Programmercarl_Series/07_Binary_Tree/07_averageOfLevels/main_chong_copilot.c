@@ -3,7 +3,7 @@
  * @Author       : Chong Liu - Copilot
  * @CreateDate   : 2023-09-24 09:23:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 09:28:01
+ * @LastEditTime : 2023-09-24 10:12:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -39,57 +39,57 @@ void depthFirstSearch(struct TreeNode *root, int level, int *counts, double *sum
 
 /* 二叉树的层平均值 */
 double *averageOfLevels(struct TreeNode *root, int *returnSize) {
-    countsSize = sumsSize = 0;                              /* 初始化记录节点数和节点值之和的数组的大小 */
-    int *counts = malloc(sizeof(int) * 1001);              /* 动态分配一个大小为1001的int类型数组，用于记录每层节点数 */
-    double *sums = malloc(sizeof(double) * 1001);           /* 动态分配一个大小为1001的double类型数组，用于记录每层节点值之和 */
-    depthFirstSearch(root, 0, counts, sums);                /* 调用深度优先搜索算法，遍历二叉树，更新counts和sums数组 */
-    double *averages = malloc(sizeof(double) * 1001);       /* 动态分配一个大小为1001的double类型数组，用于记录每层节点值的平均值 */
-    *returnSize = sumsSize;                                 /* 将返回的数组的大小设置为记录节点值之和的数组的大小 */
-    for (int i = 0; i < sumsSize; i++) {                    /* 遍历每层节点值之和的数组 */
-        averages[i] = sums[i] / counts[i];                      /* 计算每层节点值的平均值，存入averages数组中 */
+    countsSize = sumsSize = 0;                                  /* 初始化记录节点数和节点值之和的数组的大小 */
+    int *counts = malloc(sizeof(int) * 1001);                   /* 动态分配一个大小为1001的int类型数组，用于记录每层节点数 */
+    double *sums = malloc(sizeof(double) * 1001);               /* 动态分配一个大小为1001的double类型数组，用于记录每层节点值之和 */
+    depthFirstSearch(root, 0, counts, sums);                    /* 调用深度优先搜索算法，遍历二叉树，更新counts和sums数组 */
+    double *averages = malloc(sizeof(double) * 1001);           /* 动态分配一个大小为1001的double类型数组，用于记录每层节点值的平均值 */
+    *returnSize = sumsSize;                                     /* 将返回的数组的大小设置为记录节点值之和的数组的大小 */
+    for (int i = 0; i < sumsSize; i++) {                        /* 遍历每层节点值之和的数组 */
+        averages[i] = sums[i] / counts[i];                          /* 计算每层节点值的平均值，存入averages数组中 */
     }
-    free(counts);                                           /* 释放动态分配的内存 */
+    free(counts);                                               /* 释放动态分配的内存 */
     free(sums);
-    return averages;                                        /* 返回每层节点值的平均值组成的数组 */
+    return averages;                                            /* 返回每层节点值的平均值组成的数组 */
 }
 
 /* 创建树节点 */
 struct TreeNode *createNode(int val) {
-    struct TreeNode *node = malloc(sizeof(struct TreeNode)); /* 动态分配一个大小为struct TreeNode的内存空间 */
-    node->val = val;                                        /* 将节点的值设置为val */
-    node->left = NULL;                                      /* 将左节点设置为NULL */
-    node->right = NULL;                                     /* 将右节点设置为NULL */
-    return node;                                            /* 返回创建的节点 */
+    struct TreeNode *node = malloc(sizeof(struct TreeNode));    /* 动态分配一个大小为struct TreeNode的内存空间 */
+    node->val = val;                                            /* 将节点的值设置为val */
+    node->left = NULL;                                          /* 将左节点设置为NULL */
+    node->right = NULL;                                         /* 将右节点设置为NULL */
+    return node;                                                /* 返回创建的节点 */
 }
 
 /* 创建二叉树 */
 struct TreeNode *createTree() {
-    struct TreeNode *root = createNode(3);                  /* 创建根节点 */
-    root->left = createNode(9);                             /* 创建左节点 */
-    root->right = createNode(20);                           /* 创建右节点 */
-    root->right->left = createNode(15);                     /* 创建右子树的左节点 */
-    root->right->right = createNode(7);                      /* 创建右子树的右节点 */
-    return root;                                            /* 返回创建的二叉树的根节点 */
+    struct TreeNode *root = createNode(3);                      /* 创建根节点 */
+    root->left = createNode(9);                                 /* 创建左节点 */
+    root->right = createNode(20);                               /* 创建右节点 */
+    root->right->left = createNode(15);                         /* 创建右子树的左节点 */
+    root->right->right = createNode(7);                         /* 创建右子树的右节点 */
+    return root;                                                /* 返回创建的二叉树的根节点 */
 }
 
 /* 打印数组 */
 void printArray(double *arr, int size) {
-    printf("[");                                            /* 打印左括号 */
-    for (int i = 0; i < size; i++) {                        /* 遍历数组 */
-        printf("%.2f", arr[i]);                                 /* 打印数组元素 */
-        if (i != size - 1) {                                    /* 如果不是最后一个元素 */
-            printf(", ");                                           /* 打印逗号和空格 */
+    printf("[");                                                /* 打印左括号 */
+    for (int i = 0; i < size; i++) {                            /* 遍历数组 */
+        printf("%.2f", arr[i]);                                     /* 打印数组元素 */
+        if (i != size - 1) {                                        /* 如果不是最后一个元素 */
+            printf(", ");                                               /* 打印逗号和空格 */
         }
     }
-    printf("]\n");                                          /* 打印右括号和换行符 */
+    printf("]\n");                                              /* 打印右括号和换行符 */
 }
 
 /* 测试 */
 int main() {
-    struct TreeNode *root = createTree();                   /* 创建二叉树 */
-    int returnSize;                                         /* 定义返回的数组的大小 */
-    double *averages = averageOfLevels(root, &returnSize);  /* 计算每层节点值的平均值 */
-    printArray(averages, returnSize);                       /* 打印每层节点值的平均值 */
-    free(averages);                                         /* 释放动态分配的内存 */
-    return 0;                                               /* 返回0表示程序正常结束 */
+    struct TreeNode *root = createTree();                       /* 创建二叉树 */
+    int returnSize;                                             /* 定义返回的数组的大小 */
+    double *averages = averageOfLevels(root, &returnSize);      /* 计算每层节点值的平均值 */
+    printArray(averages, returnSize);                           /* 打印每层节点值的平均值 */
+    free(averages);                                             /* 释放动态分配的内存 */
+    return 0;                                                   /* 返回0表示程序正常结束 */
 }

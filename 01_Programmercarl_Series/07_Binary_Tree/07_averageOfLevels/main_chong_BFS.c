@@ -43,8 +43,8 @@ struct TreeNode {
 #define MAX_SIZE 1001   /* 定义数组的最大大小 */
 
 double *averageOfLevels(struct TreeNode *root, int *returnSize) {
-    double *averages = malloc(sizeof(double) * 1001);
-    struct TreeNode **q = malloc(sizeof(struct TreeNode*) * 10001);
+    double *averages = malloc(sizeof(double) * MAX_SIZE);
+    struct TreeNode **q = malloc(sizeof(struct TreeNode*) * MAX_SIZE);
     *returnSize = 0;
 
     int qleft = 0, qright = 0;
