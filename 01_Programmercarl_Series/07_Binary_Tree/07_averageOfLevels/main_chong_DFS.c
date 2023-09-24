@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 09:00:14
+ * @LastEditTime : 2023-09-24 09:12:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -46,24 +46,24 @@ struct TreeNode {
 */
 /* ==================================================================================================== */
 /* ==================================================================================================== */
-int countsSize;
-int sumsSize;
+int countsSize;     /* 记录每层节点数的数组的大小 */
+int sumsSize;       /* 记录每层节点值之和的数组的大小 */
 
 /**
  * @description: 深度优先搜索算法
  * =================================================================================
- * @param {TreeNode} *root
- * @param {int} level
- * @param {int} *counts
- * @param {double} *sums
+ * @param {TreeNode} *root  二叉树的根节点
+ * @param {int} level       当前节点所在的层数
+ * @param {int} *counts     记录每层节点数的数组
+ * @param {double} *sums    记录每层节点值之和的数组
  * @return {void}
  */
 void depthFirstSearch(struct TreeNode *root, int level, int *counts, double *sums) {
-    if (root == NULL) {
+    if (root == NULL) {                                         /* 如果当前节点为空，直接返回 */
         return;
     }
-    if (level < sumsSize) {
-        sums[level] += root->val;
+    if (level < sumsSize) {                                     /* 如果当前层数小于记录节点值之和的数组的大小 */
+        sums[level] += root->val;                                   /* 将当前节点的值加到对应层的节点值之和上 */
         counts[level] += 1;
     } else {
         sums[sumsSize++] = (double)root->val;
