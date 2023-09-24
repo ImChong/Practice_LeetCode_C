@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-24 14:54:38
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 22:25:57
+ * @LastEditTime : 2023-09-24 22:41:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -87,9 +87,9 @@ int isEmpty(Queue *q) {
 /**
  * @description: 将二叉树转换为数组
  * =================================================================================
- * @param {TreeNode} *root
- * @param {int} *returnSize
- * @return {*}
+ * @param {struct TreeNode} *root   二叉树根节点指针
+ * @param {int} *returnSize         数组长度指针
+ * @return {int} result             转换后的数组指针
  */
 int *treeToArray(struct TreeNode *root, int *returnSize) {
     if (!root) {
@@ -133,7 +133,8 @@ int *treeToArray(struct TreeNode *root, int *returnSize) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char* argv[]) {
-    // 测试代码
+    /* Test case 1 */
+    printf("======== Case 1 ======== \n");
     struct TreeNode a = {1, NULL, NULL};
     struct TreeNode b = {2, NULL, NULL};
     struct TreeNode c = {3, NULL, NULL};
