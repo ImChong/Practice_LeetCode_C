@@ -1,7 +1,18 @@
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\00_common\treeToArray.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-24 14:54:38
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-24 15:27:05
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 将树结构用数组表示
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_QUEUE_SIZE 100
+#define MAX_QUEUE_SIZE 100      /* 队列的最大容量 */
 
 /* 树节点 */
 struct TreeNode {
@@ -10,12 +21,13 @@ struct TreeNode {
     struct TreeNode *right;     /* 右节点 */
 };
 
+/* 队列 */
 typedef struct {
-    struct TreeNode* data[MAX_QUEUE_SIZE];
+    struct TreeNode *data[MAX_QUEUE_SIZE];
     int front, rear;
 } Queue;
 
-void enqueue(Queue* q, struct TreeNode* node) {
+void enqueue(Queue *q, struct TreeNode *node) {
     if ((q->rear + 1) % MAX_QUEUE_SIZE == q->front) {
         printf("Queue overflow\n");
         exit(1);
@@ -24,27 +36,27 @@ void enqueue(Queue* q, struct TreeNode* node) {
     q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;
 }
 
-struct TreeNode* dequeue(Queue* q) {
+struct TreeNode *dequeue(Queue *q) {
     if (q->front == q->rear) {
         printf("Queue underflow\n");
         exit(1);
     }
-    struct TreeNode* item = q->data[q->front];
+    struct TreeNode *item = q->data[q->front];
     q->front = (q->front + 1) % MAX_QUEUE_SIZE;
     return item;
 }
 
-int isEmpty(Queue* q) {
+int isEmpty(Queue *q) {
     return q->front == q->rear;
 }
 
-int* treeToArray(struct TreeNode* root, int* returnSize) {
+int *treeToArray(struct TreeNode *root, int *returnSize) {
     if (!root) {
         *returnSize = 0;
         return NULL;
     }
 
-    int* result = (int*) malloc(MAX_QUEUE_SIZE * sizeof(int));
+    int *result = (int*) malloc(MAX_QUEUE_SIZE  *sizeof(int));
     Queue q;
     q.front = q.rear = 0;
 
@@ -52,7 +64,7 @@ int* treeToArray(struct TreeNode* root, int* returnSize) {
     int index = 0;
 
     while (!isEmpty(&q)) {
-        struct TreeNode* current = dequeue(&q);
+        struct TreeNode *current = dequeue(&q);
         if (current) {
             result[index] = current->val;
             enqueue(&q, current->left);
@@ -76,7 +88,7 @@ int main() {
     a.right = &c;
 
     int size;
-    int* arr = treeToArray(&a, &size);
+    int *arr = treeToArray(&a, &size);
     for (int i = 0; i < size; i++) {
         if (arr[i] != -1)
             printf("%d ", arr[i]);
