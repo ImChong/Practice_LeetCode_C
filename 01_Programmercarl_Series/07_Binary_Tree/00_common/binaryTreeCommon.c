@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 13:05:48
+ * @LastEditTime : 2023-09-24 13:21:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -276,25 +276,6 @@ void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
 }
 
 /**
- * @description:
- * =================================================================================
- * @param {TreeNode*} root
- * @param {int*} arr
- * @param {int*} index
- * @return {*}
- */
-void treeToArray(struct TreeNode* root, int* arr, int* index) {
-    if (root == NULL) {
-        return;
-    }
-
-    arr[*index] = root->val;
-    (*index)++;
-    treeToArray(root->left, arr, index);
-    treeToArray(root->right, arr, index);
-}
-
-/**
  * @description: 后续遍历释放树所占用的空间
  * =================================================================================
  * @param {TreeNode} *root      树的根节点
@@ -360,14 +341,11 @@ int main(int argc, const char* argv[]) {
      */
     printTree();            /* 打印树结构 */
 
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};          /* 初始化数组 */
+    int size = ARRAY_SIZE(arr);                 /* 获取数组长度 */
 
-    int arr[] = {1, 2, 3, 4, 5, 6, 7};
-    int size = ARRAY_SIZE(arr);
-
-    struct TreeNode *root = NULL;
-    arrayToTree(arr, size, 0, &root);
-
-
+    struct TreeNode *root = NULL;               /* 初始化树的根节点 */
+    arrayToTree(arr, size, 0, &root);           /* 数组转换为树 */
 
     int returnSize = 0;     /* 初始化结果数组大小 */
     int *result = NULL;     /* 初始化结果数组指针为 NULL */
