@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 13:23:53
+ * @LastEditTime : 2023-09-24 13:36:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -343,8 +343,12 @@ int main(int argc, const char* argv[]) {
      */
     printTree();            /* 打印树结构 */
 
+
     int arr[] = {1, 2, 3, 4, 5, 6, 7};          /* 初始化数组 */
     int size = ARRAY_SIZE(arr);                 /* 获取数组长度 */
+    printf("Tree Array: \n");
+    print1DArray(arr, size);
+    printf("\n");
 
     struct TreeNode *root = NULL;               /* 初始化树的根节点 */
     arrayToTree(arr, size, 0, &root);           /* 数组转换为树 */
