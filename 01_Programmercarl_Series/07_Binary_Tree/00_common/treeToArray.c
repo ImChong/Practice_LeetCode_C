@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-24 14:54:38
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 22:46:26
+ * @LastEditTime : 2023-09-24 22:48:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -107,17 +107,17 @@ int *treeToArray(struct TreeNode *root, int *returnSize) {
     Queue q;                                                        /* 创建队列 */
     q.front = q.rear = 0;                                           /* 初始化队列 */
 
-    enqueue(&q, root);
-    int index = 0;
+    enqueue(&q, root);                                              /* 将根节点加入队列 */
+    int index = 0;                                                  /* 初始化数组下标 */
 
-    while (!isEmpty(&q)) {
-        struct TreeNode *current = dequeue(&q);
-        if (current) {
+    while (!isEmpty(&q)) {                                          /* 队列不为空时 */
+        struct TreeNode *current = dequeue(&q);                         /* 取出队首节点 */
+        if (current) {                                                  /* 如果节点不为空 */
             result[index] = current->val;
             enqueue(&q, current->left);
             enqueue(&q, current->right);
         } else {
-            result[index] = -1;  // 使用-1表示NULL，仅适用于不包含负值的树
+            result[index] = -1;
         }
         index++;
     }
