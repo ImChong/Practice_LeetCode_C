@@ -42,10 +42,10 @@ void depthFirstSearch(struct TreeNode *root, int level, int *counts, double *sum
 /* 二叉树的层平均值 */
 double *averageOfLevels(struct TreeNode *root, int *returnSize) {
     countsSize = sumsSize = 0;                                  /* 初始化记录节点数和节点值之和的数组的大小 */
-    int *counts = malloc(sizeof(int) * 1001);                   /* 动态分配一个大小为1001的int类型数组，用于记录每层节点数 */
-    double *sums = malloc(sizeof(double) * 1001);               /* 动态分配一个大小为1001的double类型数组，用于记录每层节点值之和 */
+    int *counts = malloc(sizeof(int) * MAX_SIZE);                   /* 动态分配一个大小为1001的int类型数组，用于记录每层节点数 */
+    double *sums = malloc(sizeof(double) * MAX_SIZE);               /* 动态分配一个大小为1001的double类型数组，用于记录每层节点值之和 */
     depthFirstSearch(root, 0, counts, sums);                    /* 调用深度优先搜索算法，遍历二叉树，更新counts和sums数组 */
-    double *averages = malloc(sizeof(double) * 1001);           /* 动态分配一个大小为1001的double类型数组，用于记录每层节点值的平均值 */
+    double *averages = malloc(sizeof(double) * MAX_SIZE);           /* 动态分配一个大小为1001的double类型数组，用于记录每层节点值的平均值 */
     *returnSize = sumsSize;                                     /* 将返回的数组的大小设置为记录节点值之和的数组的大小 */
     for (int i = 0; i < sumsSize; i++) {                        /* 遍历每层节点值之和的数组 */
         averages[i] = sums[i] / counts[i];                          /* 计算每层节点值的平均值，存入averages数组中 */
