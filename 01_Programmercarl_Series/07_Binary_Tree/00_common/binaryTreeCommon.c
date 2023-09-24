@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-22 22:13:42
+ * @LastEditTime : 2023-09-24 12:43:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -257,9 +257,28 @@ struct TreeNode *newNode(int value) {
 }
 
 /**
+ * @description:
+ * =================================================================================
+ * @return {struct TreeNode} *root    二叉树根节点
+ */
+struct TreeNode *createSampleTree() {
+    struct TreeNode *root = newNode(1);
+    root->left = newNode(2);
+    root->right = newNode(3);
+
+    root->left->left = newNode(4);
+    root->left->right = newNode(5);
+
+    root->right->left = newNode(6);
+    root->right->right = newNode(7);
+
+    return root;
+}
+
+/**
  * @description: 后续遍历释放树所占用的空间
  * =================================================================================
- * @param {TreeNode} *root
+ * @param {TreeNode} *root      树的根节点
  * @return {void}
  */
 void freeTree(struct TreeNode *root) {
@@ -320,15 +339,7 @@ int main(int argc, const char* argv[]) {
      *   / \ / \
      *  4  5 6  7
      */
-    struct TreeNode *root = newNode(1);
-    root->left = newNode(2);
-    root->right = newNode(3);
-
-    root->left->left = newNode(4);
-    root->left->right = newNode(5);
-
-    root->right->left = newNode(6);
-    root->right->right = newNode(7);
+    struct TreeNode *root = createSampleTree();     /* 创建树结构 */
 
     printTree();            /* 打印树结构 */
 
