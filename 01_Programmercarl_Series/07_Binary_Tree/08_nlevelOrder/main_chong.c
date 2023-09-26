@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-26 12:23:53
+ * @LastEditTime : 2023-09-26 14:00:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -63,16 +63,23 @@ struct Node {
  * @param {Node} *root
  * @param {int} *returnSize
  * @param {int} **returnColumnSizes
- * @return {int}
+ * @return {int} **ans
  */
 int **levelOrder(struct Node *root, int *returnSize, int **returnColumnSizes) {
+    int **ans = (int **)malloc(sizeof(int *) * MAX_LEVEL_SIZE);
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_LEVEL_SIZE);
+    if (!root) {
+        *returnSize = 0;
+        return ans;
+    }
+    struct Node **queue = (struct Node **)malloc(sizeof(struct Node *) * MAX_NODE_SIZE);
     /* TODO */
     return NULL;
 }
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                 UTILITY FUNCTIONS                              */
+/*                                 HELPER FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
 /**
