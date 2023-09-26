@@ -104,7 +104,7 @@ void freeTree(struct Node *root) {
 }
 
 /**
- * @description: 测试
+ * @description: 比较预期结果与运算结果
  * =================================================================================
  * @param {char} testNum
  * @param {int} ***expected
