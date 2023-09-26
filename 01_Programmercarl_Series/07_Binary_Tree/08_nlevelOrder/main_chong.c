@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 00:05:31
+ * @LastEditTime : 2023-09-27 00:10:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -204,7 +204,16 @@ void test_2(void) {
     expected[2][2] = 6;
 
     /* 构建 N 叉树 */
-    struct Node *root = NULL;   /* TODO */
+    struct Node *root = newNode(1);   /* TODO */
+    root->numChildren = 3;
+    root->children = (struct Node **)malloc(sizeof(struct Node *) * root->numChildren);
+    root->children[0] = newNode(3);
+    root->children[0]->numChildren = 2;
+    root->children[0]->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[0]->numChildren);
+    root->children[0]->children[0] = newNode(5);
+    root->children[0]->children[1] = newNode(6);
+    root->children[1] = newNode(2);
+    root->children[2] = newNode(4);
 
     /* 运算结果 */
     int returnSize = 0;
