@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-26 17:43:52
+ * @LastEditTime : 2023-09-26 17:45:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,6 +34,7 @@ struct TreeNode {
 /* ============================================================================== */
 
 int minDepth(struct TreeNode* root){
+    /* TODO */
     return 0;
 }
 
