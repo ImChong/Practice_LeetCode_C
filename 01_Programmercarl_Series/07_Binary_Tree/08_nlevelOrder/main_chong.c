@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-26 11:43:07
+ * @LastEditTime : 2023-09-26 11:54:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -95,14 +95,61 @@ void freeTree(struct Node *root) {
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
+/**
+ * @description: 测试 1 - []
+ * =================================================================================
+ * @return {*}
+ */
 void test_1(void) {
     struct Node *root = NULL;
-    int expected[] = {};
+    int **expected = NULL;      /* TODO */
 
     int returnSize = 0;
     int *returnColumnSizes;
 
-    int *result = levelOrder(root, &returnSize, &returnColumnSizes);
+    int **result = levelOrder(root, &returnSize, &returnColumnSizes);
+
+    for (int i = 0; i < returnSize; i++) {
+        for (int j = 0; j < returnColumnSizes[i]; j++) {
+            if (result[i][j] != expected[i][j]) {
+                printf("test 1 failed\n");
+                return;
+            }
+        }
+    }
+    printf("test 1 passed\n");
+}
+
+/**
+ * @description: 测试 2 - [1,null,3,2,4,null,5,6]
+ *     1
+ *    /|\
+ *   3 2 4
+ *  / \
+ * 5   6
+ * =================================================================================
+ * @return {*}
+ */
+void test_2(void) {
+
+}
+
+/**
+ * @description: 测试 3 - [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
+ *         1
+ *    /  |    |   \
+ *   2   3    4    5
+ *      / \   |   / \
+ *     6   7  8  9  10
+ *         |  |  |
+ *        11 12 13
+ *         |
+ *        14
+ * =================================================================================
+ * @return {*}
+ */
+void test_3(void) {
+
 }
 
 /**********************************************************************************/
