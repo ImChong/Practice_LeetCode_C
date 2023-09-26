@@ -133,11 +133,11 @@ void freeTree(struct Node *root) {
 /**
  * @description: 比较预期结果与运算结果
  * =================================================================================
- * @param {char} testNum
- * @param {int} ***expected
- * @param {int} ***result
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
+ * @param {char} testNum                测试编号
+ * @param {int} ***expected             预期结果
+ * @param {int} ***result               运算结果
+ * @param {int} *returnSize             运算结果数组的长度
+ * @param {int} **returnColumnSizes     运算结果数组的列数
  * @return {void}
  */
 void testAnswer(char testNum, int ***expected, int ***result, int *returnSize, int **returnColumnSizes) {
