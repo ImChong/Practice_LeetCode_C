@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-26 14:05:43
+ * @LastEditTime : 2023-09-26 23:37:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,8 +19,8 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define MAX_LEVEL_SIZE  1000
-#define MAX_NODE_SIZE   10000
+#define MAX_LEVEL_SIZE  1000    /* 最大层数 */
+#define MAX_NODE_SIZE   10000   /* 最大节点数 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -35,9 +35,9 @@
 /*                                                                                */
 /**********************************************************************************/
 struct Node {
-    int val;
-    int numChildren;
-    struct Node **children;
+    int val;                    /* 节点值 */
+    int numChildren;            /* 子节点个数 */
+    struct Node **children;     /* 子节点指针数组 */
 };
 
 /**********************************************************************************/
@@ -60,22 +60,22 @@ struct Node {
 /**
  * @description: N 叉树的层序遍历
  * =================================================================================
- * @param {Node} *root
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
- * @return {int} **ans
+ * @param {Node} *root                  根节点
+ * @param {int} *returnSize             返回数组的长度
+ * @param {int} **returnColumnSizes     返回数组的列数
+ * @return {int} **ans                  返回数组
  */
 int **levelOrder(struct Node *root, int *returnSize, int **returnColumnSizes) {
-    int **ans = (int **)malloc(sizeof(int *) * MAX_LEVEL_SIZE);
-    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_LEVEL_SIZE);
-    if (!root) {
-        *returnSize = 0;
-        return ans;
+    int **ans = (int **)malloc(sizeof(int *) * MAX_LEVEL_SIZE);                             /* 返回数组 */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_LEVEL_SIZE);                       /* 返回数组的列数 */
+    if (!root) {                                                                            /* 如果根节点为空，则返回 */
+        *returnSize = 0;                                                                        /* 返回数组的长度为 0 */
+        return ans;                                                                             /* 返回空数组 */
     }
-    struct Node **queue = (struct Node **)malloc(sizeof(struct Node *) * MAX_NODE_SIZE);
-    int head = 0, tail = 0;
-    int level = 0;
-    queue[tail++] = root;
+    struct Node **queue = (struct Node **)malloc(sizeof(struct Node *) * MAX_NODE_SIZE);    /* 队列 */
+    int head = 0, tail = 0;                                                                 /* 队列头尾指针 */
+    int level = 0;                                                                          /* 层数 */
+    queue[tail++] = root;                                                                   /* 根节点入队 */
 
     while (head != tail){
         int cnt = tail - head;
