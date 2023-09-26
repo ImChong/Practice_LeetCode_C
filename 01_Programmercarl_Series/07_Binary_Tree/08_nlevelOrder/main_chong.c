@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 00:01:13
+ * @LastEditTime : 2023-09-27 00:05:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -121,14 +121,14 @@ struct Node *newNode(int val) {
  * @return {void}
  */
 void freeTree(struct Node *root) {
-    if (root == NULL) {                             /* 如果传入节点为 NULL 则返回 */
+    if (root == NULL) {                                                     /* 如果传入节点为 NULL 则返回 */
         return;
     }
-    for (int i = 0; i < root->numChildren; i++) {   /* 遍历子节点 */
-        freeTree(root->children[i]);                    /* 递归释放子节点所占用的空间 */
+    for (int i = 0; i < root->numChildren; i++) {                           /* 遍历子节点 */
+        freeTree(root->children[i]);                                            /* 递归释放子节点所占用的空间 */
     }
-    free(root->children);                           /* 释放子节点指针数组所占用的空间 */
-    free(root);                                     /* 释放根节点所占用的空间 */
+    free(root->children);                                                   /* 释放子节点指针数组所占用的空间 */
+    free(root);                                                             /* 释放根节点所占用的空间 */
 }
 
 /**
@@ -142,16 +142,17 @@ void freeTree(struct Node *root) {
  * @return {void}
  */
 void testAnswer(char testNum, int ***expected, int ***result, int *returnSize, int **returnColumnSizes) {
-    for (int i = 0; i < (*returnSize); i++) {
-        for (int j = 0; j < (*returnColumnSizes)[i]; j++) {
-            if ((*result)[i][j] != (*expected)[i][j]) {
-                printf("test %c failed\n", testNum);
-                return;
+    for (int i = 0; i < (*returnSize); i++) {                               /* 遍历运算结果数组 */
+        for (int j = 0; j < (*returnColumnSizes)[i]; j++) {                     /* 遍历运算结果数组的列数 */
+            if ((*result)[i][j] != (*expected)[i][j]) {                             /* 如果预期结果与运算结果不相等 */
+                printf("test %c failed\n", testNum);                                    /* 测试失败 */
+                return;                                                                 /* 返回 */
             }
         }
     }
-    printf("test %c passed\n", testNum);
+    printf("test %c passed\n", testNum);                                    /* 测试成功 */
 }
+
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
