@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-26 23:46:10
+ * @LastEditTime : 2023-09-27 00:01:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,6 +21,7 @@
 /**********************************************************************************/
 #define MAX_LEVEL_SIZE  1000    /* 最大层数 */
 #define MAX_NODE_SIZE   10000   /* 最大节点数 */
+#define TEST_2_ARR_SIZE     3       /* 测试 2 的各数组的长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -165,13 +166,15 @@ void test_1(void) {
     /* 预期结果 */
     int **expected = NULL;
 
-    /* 运算结果 */
+    /* 构建 N 叉树 */
     struct Node *root = NULL;
+
+    /* 运算结果 */
     int returnSize = 0;
     int *returnColumnSizes;
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
-    /* 测试结果输出 */
+    /* 测试输出结果 */
     testAnswer('1', &expected, &result, &returnSize, &returnColumnSizes);
 }
 
@@ -187,15 +190,27 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 预期结果 */
-    int **expected = NULL;
+    /* int expected[3][3] = {{1}, {3, 2, 4}, {5, 6}}; */
+    int **expected = (int **)malloc(sizeof(int *) * TEST_2_ARR_SIZE);
+    expected[0] = (int *)malloc(sizeof(int) * TEST_2_ARR_SIZE);
+    expected[0][0] = 1;
+    expected[1] = (int *)malloc(sizeof(int) * TEST_2_ARR_SIZE);
+    expected[1][1] = 3;
+    expected[1][2] = 2;
+    expected[1][3] = 4;
+    expected[2] = (int *)malloc(sizeof(int) * TEST_2_ARR_SIZE);
+    expected[2][1] = 5;
+    expected[2][2] = 6;
+
+    /* 构建 N 叉树 */
+    struct Node *root = NULL;   /* TODO */
 
     /* 运算结果 */
-    struct Node *root = NULL;
     int returnSize = 0;
     int *returnColumnSizes;
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
-    /* 测试结果输出 */
+    /* 测试输出结果 */
     testAnswer('2', &expected, &result, &returnSize, &returnColumnSizes);
 }
 
@@ -217,13 +232,15 @@ void test_3(void) {
     /* 预期结果 */
     int **expected = NULL;
 
-    /* 运算结果 */
+    /* 构建 N 叉树 */
     struct Node *root = NULL;
+
+    /* 运算结果 */
     int returnSize = 0;
     int *returnColumnSizes;
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
-    /* 测试结果输出 */
+    /* 测试输出结果 */
     testAnswer('3', &expected, &result, &returnSize, &returnColumnSizes);
 }
 
