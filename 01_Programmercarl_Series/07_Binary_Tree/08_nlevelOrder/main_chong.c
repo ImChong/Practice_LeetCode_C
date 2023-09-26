@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-26 23:37:58
+ * @LastEditTime : 2023-09-26 23:42:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -77,21 +77,21 @@ int **levelOrder(struct Node *root, int *returnSize, int **returnColumnSizes) {
     int level = 0;                                                                          /* 层数 */
     queue[tail++] = root;                                                                   /* 根节点入队 */
 
-    while (head != tail){
-        int cnt = tail - head;
-        ans[level] = (int *)malloc(sizeof(int) * cnt);
-        for (int i = 0; i < cnt; i++) {
-            struct Node *cur = queue[head++];
-            ans[level][i] = cur->val;
-            for (int j = 0; j < cur->numChildren; j++) {
-                queue[tail++] = cur->children[j];
+    while (head != tail){                                                                   /* 队列不为空时 */
+        int cnt = tail - head;                                                                  /* 当前层的节点个数 */
+        ans[level] = (int *)malloc(sizeof(int) * cnt);                                          /* 为当前层的节点个数分配空间 */
+        for (int i = 0; i < cnt; i++) {                                                         /* 遍历当前层的节点 */
+            struct Node *cur = queue[head++];                                                       /* 当前节点出队 */
+            ans[level][i] = cur->val;                                                               /* 将当前节点的值存入当前层的数组 */
+            for (int j = 0; j < cur->numChildren; j++) {                                            /* 遍历当前节点的子节点 */
+                queue[tail++] = cur->children[j];                                                       /* 将子节点入队 */
             }
         }
-        (*returnColumnSizes)[level++] = cnt;
+        (*returnColumnSizes)[level++] = cnt;                                                    /* 将当前层的节点个数存入返回数组的列数 */
     }
-    *returnSize = level;
-    free(queue);
-    return ans;
+    *returnSize = level;                                                                    /* 返回数组的长度为层数 */
+    free(queue);                                                                            /* 释放队列空间 */
+    return ans;                                                                             /* 返回数组 */
 }
 
 /**********************************************************************************/
@@ -106,11 +106,11 @@ int **levelOrder(struct Node *root, int *returnSize, int **returnColumnSizes) {
  * @return {struct Node} *node
  */
 struct Node *newNode(int val) {
-    struct Node *node = (struct Node *)malloc(sizeof(struct Node));
-    node->val = val;
-    node->children = NULL;
-    node->numChildren = 0;
-    return node;
+    struct Node *node = (struct Node *)malloc(sizeof(struct Node));         /* 为新节点分配空间 */
+    node->val = val;                                                        /* 节点值为传入值 */
+    node->children = NULL;                                                  /* 子节点指针数组为空 */
+    node->numChildren = 0;                                                  /* 子节点个数为 0 */
+    return node;                                                            /* 返回新节点 */
 }
 
 /**
