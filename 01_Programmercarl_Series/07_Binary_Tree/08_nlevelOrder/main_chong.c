@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-26 12:03:30
+ * @LastEditTime : 2023-09-26 12:21:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -76,6 +76,20 @@ int **levelOrder(struct Node *root, int *returnSize, int **returnColumnSizes) {
 /*                                                                                */
 /**********************************************************************************/
 /**
+ * @description: 创建新节点
+ * =================================================================================
+ * @param {int} val
+ * @return {struct Node} *node
+ */
+struct Node *newNode(int val) {
+    struct Node *node = (struct Node *)malloc(sizeof(struct Node));
+    node->val = val;
+    node->children = NULL;
+    node->numChildren = 0;
+    return node;
+}
+
+/**
  * @description: 释放树所占用的空间
  * =================================================================================
  * @param {struct Node} *root
@@ -89,6 +103,27 @@ void freeTree(struct Node *root) {
     /* TODO */
 }
 
+/**
+ * @description: 测试
+ * =================================================================================
+ * @param {char} testNum
+ * @param {int} ***expected
+ * @param {int} ***result
+ * @param {int} *returnSize
+ * @param {int} **returnColumnSizes
+ * @return {void}
+ */
+void testAnswer(char testNum, int ***expected, int ***result, int *returnSize, int **returnColumnSizes) {
+    for (int i = 0; i < (*returnSize); i++) {
+        for (int j = 0; j < (*returnColumnSizes)[i]; j++) {
+            if ((*result)[i][j] != (*expected)[i][j]) {
+                printf("test %c failed\n", testNum);
+                return;
+            }
+        }
+    }
+    printf("test %c passed\n", testNum);
+}
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
@@ -100,23 +135,17 @@ void freeTree(struct Node *root) {
  * @return {*}
  */
 void test_1(void) {
-    struct Node *root = NULL;
-    int **expected = NULL;      /* TODO */
+    /* 预期结果 */
+    int **expected = NULL;
 
+    /* 运算结果 */
+    struct Node *root = NULL;
     int returnSize = 0;
     int *returnColumnSizes;
-
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
-    for (int i = 0; i < returnSize; i++) {
-        for (int j = 0; j < returnColumnSizes[i]; j++) {
-            if (result[i][j] != expected[i][j]) {
-                printf("test 1 failed\n");
-                return;
-            }
-        }
-    }
-    printf("test 1 passed\n");
+    /* 测试结果输出 */
+    testAnswer('1', &expected, &result, &returnSize, &returnColumnSizes);
 }
 
 /**
@@ -130,7 +159,17 @@ void test_1(void) {
  * @return {*}
  */
 void test_2(void) {
-    /* TODO */
+    /* 预期结果 */
+    int **expected = NULL;
+
+    /* 运算结果 */
+    struct Node *root = NULL;
+    int returnSize = 0;
+    int *returnColumnSizes;
+    int **result = levelOrder(root, &returnSize, &returnColumnSizes);
+
+    /* 测试结果输出 */
+    testAnswer('2', &expected, &result, &returnSize, &returnColumnSizes);
 }
 
 /**
@@ -148,7 +187,17 @@ void test_2(void) {
  * @return {*}
  */
 void test_3(void) {
-    /* TODO */
+    /* 预期结果 */
+    int **expected = NULL;
+
+    /* 运算结果 */
+    struct Node *root = NULL;
+    int returnSize = 0;
+    int *returnColumnSizes;
+    int **result = levelOrder(root, &returnSize, &returnColumnSizes);
+
+    /* 测试结果输出 */
+    testAnswer('3', &expected, &result, &returnSize, &returnColumnSizes);
 }
 
 /**********************************************************************************/
