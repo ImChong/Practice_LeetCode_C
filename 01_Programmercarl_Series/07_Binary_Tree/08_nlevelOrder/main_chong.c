@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-26 14:00:03
+ * @LastEditTime : 2023-09-26 14:05:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -73,8 +73,25 @@ int **levelOrder(struct Node *root, int *returnSize, int **returnColumnSizes) {
         return ans;
     }
     struct Node **queue = (struct Node **)malloc(sizeof(struct Node *) * MAX_NODE_SIZE);
-    /* TODO */
-    return NULL;
+    int head = 0, tail = 0;
+    int level = 0;
+    queue[tail++] = root;
+
+    while (head != tail){
+        int cnt = tail - head;
+        ans[level] = (int *)malloc(sizeof(int) * cnt);
+        for (int i = 0; i < cnt; i++) {
+            struct Node *cur = queue[head++];
+            ans[level][i] = cur->val;
+            for (int j = 0; j < cur->numChildren; j++) {
+                queue[tail++] = cur->children[j];
+            }
+        }
+        (*returnColumnSizes)[level++] = cnt;
+    }
+    *returnSize = level;
+    free(queue);
+    return ans;
 }
 
 /**********************************************************************************/
