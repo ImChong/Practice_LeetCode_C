@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-25 17:46:26
+ * @LastEditTime : 2023-09-26 11:22:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -77,6 +77,8 @@ int **levelOrder(struct Node *root, int *returnSize, int **returnColumnSizes) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-
+    test_1();
+    test_2();
+    test_3();
     return 0;
 }
