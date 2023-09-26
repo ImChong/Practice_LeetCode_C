@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 00:11:16
+ * @LastEditTime : 2023-09-27 00:16:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -218,7 +218,7 @@ void test_2(void) {
     /* 运算结果 */
     int returnSize = 0;
     int *returnColumnSizes;
-    int **result = levelOrder(root, &returnSize, &returnColumnSizes);
+    int **result = levelOrder(root, &returnSize, &returnColumnSizes);   /* BUG */   /* FIXME */
 
     /* 测试输出结果 */
     testAnswer('2', &expected, &result, &returnSize, &returnColumnSizes);
