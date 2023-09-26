@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-26 23:42:53
+ * @LastEditTime : 2023-09-26 23:46:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -114,17 +114,20 @@ struct Node *newNode(int val) {
 }
 
 /**
- * @description: 释放树所占用的空间
+ * @description: 释放N 叉树所占用的空间
  * =================================================================================
- * @param {struct Node} *root
+ * @param {struct Node} *root   根节点
  * @return {void}
  */
 void freeTree(struct Node *root) {
-    if (root == NULL) {             /* 如果传入节点为 NULL 则返回 */
+    if (root == NULL) {                             /* 如果传入节点为 NULL 则返回 */
         return;
     }
-
-    /* TODO */
+    for (int i = 0; i < root->numChildren; i++) {   /* 遍历子节点 */
+        freeTree(root->children[i]);                    /* 递归释放子节点所占用的空间 */
+    }
+    free(root->children);                           /* 释放子节点指针数组所占用的空间 */
+    free(root);                                     /* 释放根节点所占用的空间 */
 }
 
 /**
