@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 17:09:35
+ * @LastEditTime : 2023-09-27 17:12:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -298,13 +298,13 @@ void test_3(void) {
     root->children[1] = newNode(3);
     struct Node *node_3 = root->children[1];
     node_3->numChildren = 2;
-    node_3->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[1]->numChildren);
+    node_3->children = (struct Node **)malloc(sizeof(struct Node *) * node_3->numChildren);
     node_3->children[0] = newNode(6);
     struct Node *node_6 = node_3->children[0];
     node_3->children[1] = newNode(7);
     struct Node *node_7 = node_3->children[1];
-    node_3->children[1]->numChildren = 1;
-    node_3->children[1]->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[1]->children[1]->numChildren);
+    node_7->numChildren = 1;
+    node_7->children = (struct Node **)malloc(sizeof(struct Node *) * node_7->numChildren);
 
     root->children[2] = newNode(4);
     struct Node *node_4 = root->children[2];
