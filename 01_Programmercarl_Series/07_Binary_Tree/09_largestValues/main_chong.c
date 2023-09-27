@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 23:24:51
+ * @LastEditTime : 2023-09-27 23:25:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,9 +43,9 @@ struct TreeNode {
 /**
  * @description: 在每个树行中找最大值
  * =================================================================================
- * @param {TreeNode} *root
- * @param {int} *returnSize
- * @return {*}
+ * @param {struct TreeNode} *root       树的根节点
+ * @param {int} *returnSize             返回数组的大小
+ * @return {int} *ans                   返回数组的首地址
  */
 int *largestValues(struct TreeNode *root, int *returnSize){
     /* TODO */
