@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 19:06:15
+ * @LastEditTime : 2023-09-27 19:30:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -117,12 +117,23 @@ struct Node *newNode(int val) {
 /**
  * @description: 根据数组创建 N 叉树
  * =================================================================================
- * @param {int} *nums               数组
- * @param {int} numsSize            数组长度
+ * @param {int} *arr               数组
+ * @param {int} size            数组长度
  * @return {struct Node} *root      根节点
  */
-struct Node *creatTreeFromArray(int *nums, int numsSize) {
-    struct Node *root = newNode(nums[0]);
+struct Node *creatNTreeFromArray(int *arr, int size) {
+    if (size == 0) {
+        return NULL;
+    }
+    struct Node *root = newNode(arr[0]);
+    int i = 1;
+    int j = 0;
+    struct Node **queue = (struct Node **)malloc(sizeof(struct Node *) * size);
+    queue[j++] = root;
+    while (i < size && j < size) {
+        struct Node *node = queue[i++];
+        int numChildren = arr[i++];
+    }
 
     /* TODO */
 
@@ -339,7 +350,7 @@ void test_3(void) {
     struct Node *node_4 = root->children[2];
 
     node_4->numChildren = 1;
-    node_4->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[2]->numChildren);
+    node_4->children = (struct Node **)malloc(sizeof(struct Node *) * node_4->numChildren);
     node_4->children[0] = newNode(8);
     struct Node *node_8 = node_4->children[0];
 
