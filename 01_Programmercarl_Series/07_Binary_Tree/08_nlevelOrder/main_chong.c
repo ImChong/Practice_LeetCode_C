@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 23:53:38
+ * @LastEditTime : 2023-09-28 00:06:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -124,7 +124,7 @@ struct Node *newNode(int val) {
  * @param {int} **returnColumnSizes     运算结果数组的列数
  * @return {void}
  */
-void testAnswer(char testNum, int **expected, int **result, int returnSize, int *returnColumnSizes) {
+void validateAnswer(char testNum, int **expected, int **result, int returnSize, int *returnColumnSizes) {
     if (returnSize != ARRAY_SIZE(expected)) {                               /* 如果预期结果与运算结果的长度不相等 */
         printf("test %c failed\n", testNum);                                    /* 测试失败 */
         return;                                                                 /* 返回 */
@@ -194,7 +194,7 @@ void test_1(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    testAnswer('1', expected, result, returnSize, returnColumnSizes);
+    validateAnswer('1', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     free2DArray(expected, returnSize);
@@ -245,7 +245,7 @@ void test_2(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    testAnswer('2', expected, result, returnSize, returnColumnSizes);
+    validateAnswer('2', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     free2DArray(expected, returnSize);
@@ -355,7 +355,7 @@ void test_3(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    testAnswer('3', expected, result, returnSize, returnColumnSizes);
+    validateAnswer('3', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     free2DArray(expected, returnSize);
