@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 16:16:59
+ * @LastEditTime : 2023-09-27 16:20:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -177,6 +177,10 @@ void test_1(void) {
 
     /* 测试输出结果 */
     testAnswer('1', &expected, &result, &returnSize, &returnColumnSizes);
+
+    /* 释放内存空间 */
+    free(returnColumnSizes);
+    freeTree(root);
 }
 
 /**
