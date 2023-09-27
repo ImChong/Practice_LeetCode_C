@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 23:38:26
+ * @LastEditTime : 2023-09-27 23:40:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -112,6 +112,16 @@ void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
         arrayToTree(arr, size, 2 * index + 1, &((*root)->left));
         arrayToTree(arr, size, 2 * index + 2, &((*root)->right));
     }
+}
+
+void testAnswer(int *expected, int *result, int returnSize) {
+    for (int i = 0; i < returnSize; ++i) {
+        if (expected[i] != result[i]) {
+            printf("Test Failed.\n");
+            return;
+        }
+    }
+    printf("Test Passed.\n");
 }
 
 /**

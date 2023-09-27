@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 19:35:03
+ * @LastEditTime : 2023-09-27 23:44:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -124,10 +124,10 @@ struct Node *newNode(int val) {
  * @param {int} **returnColumnSizes     运算结果数组的列数
  * @return {void}
  */
-void testAnswer(char testNum, int ***expected, int ***result, int *returnSize, int **returnColumnSizes) {
-    for (int i = 0; i < (*returnSize); i++) {                               /* 遍历运算结果数组 */
-        for (int j = 0; j < (*returnColumnSizes)[i]; j++) {                     /* 遍历运算结果数组的列数 */
-            if ((*result)[i][j] != (*expected)[i][j]) {                             /* 如果预期结果与运算结果不相等 */
+void testAnswer(char testNum, int **expected, int **result, int returnSize, int *returnColumnSizes) {
+    for (int i = 0; i < returnSize; i++) {                                  /* 遍历运算结果数组 */
+        for (int j = 0; j < returnColumnSizes[i]; j++) {                        /* 遍历运算结果数组的列数 */
+            if (result[i][j] != expected[i][j]) {                                   /* 如果预期结果与运算结果不相等 */
                 printf("test %c failed\n", testNum);                                    /* 测试失败 */
                 return;                                                                 /* 返回 */
             }
@@ -190,7 +190,7 @@ void test_1(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    testAnswer('1', &expected, &result, &returnSize, &returnColumnSizes);
+    testAnswer('1', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     free2DArray(&expected, &returnSize);
@@ -241,7 +241,7 @@ void test_2(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    testAnswer('2', &expected, &result, &returnSize, &returnColumnSizes);
+    testAnswer('2', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     free2DArray(&expected, &returnSize);
@@ -351,7 +351,7 @@ void test_3(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    testAnswer('3', &expected, &result, &returnSize, &returnColumnSizes);
+    testAnswer('3', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     free2DArray(&expected, &returnSize);
