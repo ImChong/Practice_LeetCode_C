@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 19:04:11
+ * @LastEditTime : 2023-09-27 19:06:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -239,6 +239,8 @@ void test_2(void) {
     expected[2][1] = 6;
 
     /* 构建 N 叉树 */
+    /* int arr[] = {1,null,3,2,4,null,5,6}; */
+    /* struct Node *root = creatTreeFromArray(arr, ARRAY_SIZE(arr)); */
     struct Node *root = newNode(1);
     root->numChildren = 3;
     root->children = (struct Node **)malloc(sizeof(struct Node *) * root->numChildren);
@@ -304,6 +306,8 @@ void test_3(void) {
     expected[4][0] = 14;
 
     /* 构建 N 叉树 */
+    /* int arr[] = {1,NULL,2,3,4,5,NULL,NULL,6,7,NULL,8,NULL,9,10,NULL,NULL,11,NULL,12,NULL,13,NULL,NULL,14}; */
+    /* struct Node *root = creatTreeFromArray(arr, ARRAY_SIZE(arr)); */
     struct Node *root = newNode(1);
     root->numChildren = 4;
     root->children = (struct Node **)malloc(sizeof(struct Node *) * root->numChildren);
