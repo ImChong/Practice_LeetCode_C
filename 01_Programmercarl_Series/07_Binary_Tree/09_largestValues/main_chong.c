@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-28 00:09:50
+ * @LastEditTime : 2023-09-28 00:11:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -178,10 +178,10 @@ void test_1(void) {
 
     /* 构建二叉树 */
     printf("Tree Array: \n");
-    int treeArr[] = {1, 3, 2, 5, 3, INT_MIN, 9};
+    int treeArr[] = {1, 3, 2, 5, 3, INT_MIN, 9};            /* 二叉树数组 */
     print1DArray(treeArr, ARR_SIZE(treeArr));
-    struct TreeNode *root = NULL;
-    arrayToTree(treeArr, ARR_SIZE(treeArr), 0, &root);
+    struct TreeNode *root = NULL;                           /* 初始化二叉树根节点为 NULL */
+    arrayToTree(treeArr, ARR_SIZE(treeArr), 0, &root);      /* 二叉树数组转换为二叉树结构 */
     printf("\n");
 
     /* 运算结果 */
