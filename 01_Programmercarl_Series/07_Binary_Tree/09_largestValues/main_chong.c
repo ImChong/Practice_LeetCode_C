@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 22:58:43
+ * @LastEditTime : 2023-09-27 23:19:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,6 +40,76 @@ int *largestValues(struct TreeNode *root, int *returnSize){
 
 /**********************************************************************************/
 /*                                                                                */
+/*                                 HELPER FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 创建树节点
+ * =================================================================================
+ * @param {int} value                   节点数值
+ * @return {struct TreeNode} *node      二叉树节点
+ */
+struct TreeNode *newNode(int value) {
+    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));
+    node->val = value;
+    node->left = NULL;
+    node->right = NULL;
+    return node;
+}
+
+/**
+ * @description: 数组转换为树
+ * =================================================================================
+ * @param {int} *arr
+ * @param {int} size
+ * @param {int} index
+ * @param {struct TreeNode} **root
+ * @return {void}
+ */
+void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
+    if (index < size) {
+        *root = newNode(*(arr + index));
+        arrayToTree(arr, size, 2 * index + 1, &((*root)->left));
+        arrayToTree(arr, size, 2 * index + 2, &((*root)->right));
+    }
+}
+
+/**
+ * @description: 后续遍历释放树所占用的空间
+ * =================================================================================
+ * @param {struct TreeNode} *root      树的根节点
+ * @return {void}
+ */
+void freeTree(struct TreeNode *root) {
+    if (root == NULL) {             /* 如果传入节点为 NULL 则返回 */
+        return;
+    }
+
+    freeTree(root->left);           /* 遍历释放左节点空间 */
+    freeTree(root->right);          /* 遍历释放右节点空间 */
+    free(root);                     /* 释放当前节点空间 */
+}
+
+/**
+ * @description: 打印一维数组
+ * =================================================================================
+ * @param {int} *array      一维数组
+ * @param {int} size        一维数组的大小
+ * @return {void}
+ */
+void print1DArray(int *array, int size) {
+    printf("[");                        /* 打印行边框 [ */
+    for (int i = 0; i < size; ++i) {        /* 遍历 array 内的元素 */
+        printf("%d", array[i]);                 /* 打印 array 内的元素 */
+        if (i < size - 1) {                     /* 打印分隔符：, */
+            printf(", ");
+        }
+    }
+    printf("]\n");                      /* 打印行边框 ] */
+}
+
+/**********************************************************************************/
+/*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
@@ -50,10 +120,16 @@ int *largestValues(struct TreeNode *root, int *returnSize){
  *    3   2
  *   / \   \
  *  5   3   9
+ * output: [1,3,9]
  * =================================================================================
  * @return {*}
  */
 void test_1(void) {
+    /* 预期结果 */
+    int expected[] = {1, 3, 9};
+
+    /* 构建二叉树 */
+    struct TreeNode *root = newNode(1);
     /* TODO */
 }
 
@@ -62,10 +138,12 @@ void test_1(void) {
  *    1
  *   / \
  *  2   3
+ * output: [1,3]
  * =================================================================================
  * @return {*}
  */
 void test_2(void) {
+    int expected[] = {1, 3};
     /* TODO */
 }
 
