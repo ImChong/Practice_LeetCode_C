@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 16:53:50
+ * @LastEditTime : 2023-09-27 17:09:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -293,20 +293,33 @@ void test_3(void) {
     root->numChildren = 4;
     root->children = (struct Node **)malloc(sizeof(struct Node *) * root->numChildren);
     root->children[0] = newNode(2);
+    struct Node *node_2 = root->children[0];
+
     root->children[1] = newNode(3);
-    root->children[1]->numChildren = 2;
-    root->children[1]->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[1]->numChildren);
-    root->children[1]->children[0] = newNode(6);
-    root->children[1]->children[1] = newNode(7);
+    struct Node *node_3 = root->children[1];
+    node_3->numChildren = 2;
+    node_3->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[1]->numChildren);
+    node_3->children[0] = newNode(6);
+    struct Node *node_6 = node_3->children[0];
+    node_3->children[1] = newNode(7);
+    struct Node *node_7 = node_3->children[1];
+    node_3->children[1]->numChildren = 1;
+    node_3->children[1]->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[1]->children[1]->numChildren);
+
     root->children[2] = newNode(4);
-    root->children[2]->numChildren = 1;
-    root->children[2]->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[2]->numChildren);
-    root->children[2]->children[0] = newNode(8);
+    struct Node *node_4 = root->children[2];
+    node_4->numChildren = 1;
+    node_4->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[2]->numChildren);
+    node_4->children[0] = newNode(8);
+    node_4->children[0]->numChildren = 1;
+
     root->children[3] = newNode(5);
-    root->children[3]->numChildren = 2;
-    root->children[3]->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[3]->numChildren);
-    root->children[3]->children[0] = newNode(9);
-    root->children[3]->children[1] = newNode(10);
+    struct Node *node_5 = root->children[3];
+    node_5->numChildren = 2;
+    node_5->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[3]->numChildren);
+    node_5->children[0] = newNode(9);
+    node_5->children[0]->numChildren = 1;
+    node_5->children[1] = newNode(10);
 
     /* 运算结果 */
     int returnSize = 0;
