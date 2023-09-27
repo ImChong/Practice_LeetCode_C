@@ -218,7 +218,7 @@ void test_2(void) {
     /* 运算结果 */
     int returnSize = 0;
     int *returnColumnSizes;
-    int **result = levelOrder(root, &returnSize, &returnColumnSizes);   /* BUG */   /* FIXME */
+    int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
     testAnswer('2', &expected, &result, &returnSize, &returnColumnSizes);
