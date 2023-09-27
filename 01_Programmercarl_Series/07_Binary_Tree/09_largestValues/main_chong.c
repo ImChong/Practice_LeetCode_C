@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-28 00:02:04
+ * @LastEditTime : 2023-09-28 00:04:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -126,7 +126,7 @@ void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
  * @param {int} returnSize  结果数组的大小
  * @return {void}
  */
-void testAnswer(char testNum, int *expected, int *result, int returnSize) {
+void validateAnswer(char testNum, int *expected, int *result, int returnSize) {
     if (returnSize != ARR_SIZE(expected)) {
         printf("test %c failed\n", testNum);
         return;
@@ -193,7 +193,7 @@ void test_1(void) {
     print1DArray(expected, ARR_SIZE(expected));
     printf("Result: \n");
     print1DArray(result, ARR_SIZE(result));
-    testAnswer('1', expected, result, returnSize);
+    validateAnswer('1', expected, result, returnSize);
 
     /* 释放内存空间 */
     freeTree(root);
@@ -230,7 +230,7 @@ void test_2(void) {
     print1DArray(expected, ARR_SIZE(expected));
     printf("Result: \n");
     print1DArray(result, ARR_SIZE(result));
-    testAnswer('2', expected, result, returnSize);
+    validateAnswer('2', expected, result, returnSize);
 
     /* 释放内存空间 */
     /* TODO */
