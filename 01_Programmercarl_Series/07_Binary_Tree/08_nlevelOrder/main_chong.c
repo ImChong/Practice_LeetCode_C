@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 19:03:21
+ * @LastEditTime : 2023-09-27 19:04:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -115,11 +115,11 @@ struct Node *newNode(int val) {
 }
 
 /**
- * @description:
+ * @description: 根据数组创建 N 叉树
  * =================================================================================
- * @param {int} *nums
- * @param {int} numsSize
- * @return {*}
+ * @param {int} *nums               数组
+ * @param {int} numsSize            数组长度
+ * @return {struct Node} *root      根节点
  */
 struct Node *creatTreeFromArray(int *nums, int numsSize) {
     struct Node *root = newNode(nums[0]);
