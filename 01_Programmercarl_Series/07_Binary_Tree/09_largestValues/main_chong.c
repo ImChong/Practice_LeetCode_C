@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 23:25:31
+ * @LastEditTime : 2023-09-27 23:34:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 /**********************************************************************************/
 /*                                                                                */
@@ -82,6 +83,9 @@ struct TreeNode *newNode(int value) {
  */
 void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
     if (index < size) {
+        if (*(arr + index) == INT_MIN) {
+            return;
+        }
         *root = newNode(*(arr + index));
         arrayToTree(arr, size, 2 * index + 1, &((*root)->left));
         arrayToTree(arr, size, 2 * index + 2, &((*root)->right));
@@ -114,7 +118,11 @@ void freeTree(struct TreeNode *root) {
 void print1DArray(int *array, int size) {
     printf("[");                        /* 打印行边框 [ */
     for (int i = 0; i < size; ++i) {        /* 遍历 array 内的元素 */
-        printf("%d", array[i]);                 /* 打印 array 内的元素 */
+        if (array[i] == INT_MIN) {              /* 如果元素为 INT_MIN 则打印 NULL */
+            printf("NULL");
+        } else {                                /* 否则打印元素值 */
+            printf("%d", array[i]);                 /* 打印 array 内的元素 */
+        }
         if (i < size - 1) {                     /* 打印分隔符：, */
             printf(", ");
         }
@@ -128,7 +136,7 @@ void print1DArray(int *array, int size) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: [1,3,2,5,3,NULL,9]
+ * @description: [1, 3, 2, 5, 3, NULL, 9]
  *      1
  *     / \
  *    3   2
@@ -144,18 +152,26 @@ void test_1(void) {
 
     /* 构建二叉树 */
     printf("Tree Array: \n");
-    int treeArr[] = {1, 3, 2, 5, 3, NULL, 9};
+    int treeArr[] = {1, 3, 2, 5, 3, INT_MIN, 9};
     print1DArray(treeArr, ARR_SIZE(treeArr));
     printf("\n");
 
     struct TreeNode *root = NULL;
     arrayToTree(treeArr, ARR_SIZE(treeArr), 0, &root);
 
+    /* 运算结果 */
+    int returnSize = 0;     /* 初始化结果数组大小 */
+    int *result = largestValues(root, &returnSize);
+
+    /* 测试输出结果 */
+    /* TODO */
+
+    /* 释放内存空间 */
     /* TODO */
 }
 
 /**
- * @description: [1,2,3]
+ * @description: [1, 2, 3]
  *    1
  *   / \
  *  2   3
@@ -182,6 +198,6 @@ void test_2(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
-    test_2();
+    // test_2();
     return 0;
 }
