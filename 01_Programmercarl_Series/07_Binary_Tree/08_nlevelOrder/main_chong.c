@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 16:28:42
+ * @LastEditTime : 2023-09-27 16:34:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -144,7 +144,10 @@ void testAnswer(char testNum, int ***expected, int ***result, int *returnSize, i
  * @return {void}
  */
 void free2DArray(int ***result, int *returnSize) {
-    /* TODO */
+    for (int i = 0; i < (*returnSize); i++) {
+        free((*result)[i]);
+    }
+    free(*result);
 }
 
 /**
@@ -263,7 +266,7 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 预期结果 */
-    /* int expected[3][3] = {{1}, {2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13}, {14}}; */
+    /* int expected[5][5] = {{1}, {2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13}, {14}}; */
     int **expected = NULL;
 
     /* 构建 N 叉树 */
@@ -276,6 +279,12 @@ void test_3(void) {
 
     /* 测试输出结果 */
     testAnswer('3', &expected, &result, &returnSize, &returnColumnSizes);
+
+    /* 释放内存空间 */
+    free2DArray(&expected, &returnSize);
+    free2DArray(&result, &returnSize);
+    free(returnColumnSizes);
+    freeTree(root);
 }
 
 /**********************************************************************************/
