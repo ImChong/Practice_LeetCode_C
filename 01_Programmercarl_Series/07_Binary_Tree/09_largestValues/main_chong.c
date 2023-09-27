@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 23:40:50
+ * @LastEditTime : 2023-09-27 23:44:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -114,6 +114,14 @@ void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
     }
 }
 
+/**
+ * @description: 比较预期结果与运算结果
+ * =================================================================================
+ * @param {int} *expected   预期结果
+ * @param {int} *result     运算结果
+ * @param {int} returnSize  结果数组的大小
+ * @return {void}
+ */
 void testAnswer(int *expected, int *result, int returnSize) {
     for (int i = 0; i < returnSize; ++i) {
         if (expected[i] != result[i]) {
