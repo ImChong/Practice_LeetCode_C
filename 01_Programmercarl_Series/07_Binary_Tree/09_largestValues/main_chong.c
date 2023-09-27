@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 23:34:41
+ * @LastEditTime : 2023-09-27 23:38:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -73,7 +73,29 @@ struct TreeNode *newNode(int value) {
 }
 
 /**
- * @description: 数组转换为树
+ * @description: 打印一维数组 - NULL 用 INT_MIN 表示
+ * =================================================================================
+ * @param {int} *array      一维数组
+ * @param {int} size        一维数组的大小
+ * @return {void}
+ */
+void print1DArray(int *array, int size) {
+    printf("[");                        /* 打印行边框 [ */
+    for (int i = 0; i < size; ++i) {        /* 遍历 array 内的元素 */
+        if (array[i] == INT_MIN) {              /* 如果元素为 INT_MIN 则打印 NULL */
+            printf("NULL");
+        } else {                                /* 否则打印元素值 */
+            printf("%d", array[i]);                 /* 打印 array 内的元素 */
+        }
+        if (i < size - 1) {                     /* 打印分隔符：, */
+            printf(", ");
+        }
+    }
+    printf("]\n");                      /* 打印行边框 ] */
+}
+
+/**
+ * @description: 数组转换为树 - NULL 用 INT_MIN 表示
  * =================================================================================
  * @param {int} *arr                    一维数组
  * @param {int} size                    一维数组的大小
@@ -106,28 +128,6 @@ void freeTree(struct TreeNode *root) {
     freeTree(root->left);           /* 遍历释放左节点空间 */
     freeTree(root->right);          /* 遍历释放右节点空间 */
     free(root);                     /* 释放当前节点空间 */
-}
-
-/**
- * @description: 打印一维数组
- * =================================================================================
- * @param {int} *array      一维数组
- * @param {int} size        一维数组的大小
- * @return {void}
- */
-void print1DArray(int *array, int size) {
-    printf("[");                        /* 打印行边框 [ */
-    for (int i = 0; i < size; ++i) {        /* 遍历 array 内的元素 */
-        if (array[i] == INT_MIN) {              /* 如果元素为 INT_MIN 则打印 NULL */
-            printf("NULL");
-        } else {                                /* 否则打印元素值 */
-            printf("%d", array[i]);                 /* 打印 array 内的元素 */
-        }
-        if (i < size - 1) {                     /* 打印分隔符：, */
-            printf(", ");
-        }
-    }
-    printf("]\n");                      /* 打印行边框 ] */
 }
 
 /**********************************************************************************/
