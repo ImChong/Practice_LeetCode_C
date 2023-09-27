@@ -316,10 +316,10 @@ struct TreeNode *newNode(int value) {
 /**
  * @description: 数组转换为树
  * =================================================================================
- * @param {int} *arr
- * @param {int} size
- * @param {int} index
- * @param {struct TreeNode} **root
+ * @param {int} *arr                数组
+ * @param {int} size                数组大小
+ * @param {int} index               数组索引
+ * @param {struct TreeNode} **root  树的根节点
  * @return {void}
  */
 void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {

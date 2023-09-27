@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 23:21:51
+ * @LastEditTime : 2023-09-27 23:22:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -136,10 +136,14 @@ void test_1(void) {
     int expected[] = {1, 3, 9};
 
     /* 构建二叉树 */
-    int treeArr[] = {1, 3, 2, 5, 3, NULL, 9};
-    struct TreeNode *root = NULL;
     printf("Tree Array: \n");
+    int treeArr[] = {1, 3, 2, 5, 3, NULL, 9};
     print1DArray(treeArr, ARR_SIZE(treeArr));
+    printf("\n");
+
+    struct TreeNode *root = NULL;
+    arrayToTree(treeArr, ARR_SIZE(treeArr), 0, &root);
+
     /* TODO */
 }
 
