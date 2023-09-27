@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 17:12:11
+ * @LastEditTime : 2023-09-27 17:21:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -311,15 +311,20 @@ void test_3(void) {
     node_4->numChildren = 1;
     node_4->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[2]->numChildren);
     node_4->children[0] = newNode(8);
-    node_4->children[0]->numChildren = 1;
+    struct Node *node_8 = node_4->children[0];
+    node_8->numChildren = 1;
+    node_8->children = (struct Node **)malloc(sizeof(struct Node *) * node_8->numChildren);
 
     root->children[3] = newNode(5);
     struct Node *node_5 = root->children[3];
     node_5->numChildren = 2;
-    node_5->children = (struct Node **)malloc(sizeof(struct Node *) * root->children[3]->numChildren);
+    node_5->children = (struct Node **)malloc(sizeof(struct Node *) * node_5->numChildren);
     node_5->children[0] = newNode(9);
-    node_5->children[0]->numChildren = 1;
+    struct  Node *node_9 = node_5->children[0];
+    node_9->numChildren = 1;
+    node_9->children = (struct Node **)malloc(sizeof(struct Node *) * node_9->numChildren);
     node_5->children[1] = newNode(10);
+    struct  Node *node_10 = node_5->children[1];
 
     /* 运算结果 */
     int returnSize = 0;
