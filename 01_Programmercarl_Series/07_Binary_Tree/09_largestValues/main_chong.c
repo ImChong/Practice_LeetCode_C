@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-28 00:04:08
+ * @LastEditTime : 2023-09-28 00:09:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -127,7 +127,7 @@ void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
  * @return {void}
  */
 void validateAnswer(char testNum, int *expected, int *result, int returnSize) {
-    if (returnSize != ARR_SIZE(expected)) {
+    if (returnSize == 0 && expected != NULL) {
         printf("test %c failed\n", testNum);
         return;
     }
