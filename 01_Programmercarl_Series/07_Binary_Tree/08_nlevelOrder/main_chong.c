@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 16:23:45
+ * @LastEditTime : 2023-09-27 16:27:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -190,6 +190,8 @@ void test_1(void) {
     testAnswer('1', &expected, &result, &returnSize, &returnColumnSizes);
 
     /* 释放内存空间 */
+    free2DArray(&expected, &returnSize);
+    free2DArray(&result, &returnSize);
     free(returnColumnSizes);
     freeTree(root);
 }
@@ -239,6 +241,8 @@ void test_2(void) {
     testAnswer('2', &expected, &result, &returnSize, &returnColumnSizes);
 
     /* 释放内存空间 */
+    free2DArray(&expected, &returnSize);
+    free2DArray(&result, &returnSize);
     free(returnColumnSizes);
     freeTree(root);
 }
