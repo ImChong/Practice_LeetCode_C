@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 16:34:14
+ * @LastEditTime : 2023-09-27 16:41:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -267,7 +267,14 @@ void test_2(void) {
 void test_3(void) {
     /* 预期结果 */
     /* int expected[5][5] = {{1}, {2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13}, {14}}; */
-    int **expected = NULL;
+    int **expected = (int **)malloc(sizeof(int *) * TEST_ARR_SIZE);
+    expected[0] = (int *)malloc(sizeof(int) * TEST_ARR_SIZE);
+    expected[0][0] = 1;
+    expected[1] = (int *)malloc(sizeof(int) * TEST_ARR_SIZE);
+    expected[1][0] = 2;
+    expected[1][1] = 3;
+    expected[1][2] = 4;
+    expected[1][3] = 5;
 
     /* 构建 N 叉树 */
     struct Node *root = NULL;
