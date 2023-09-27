@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 23:19:03
+ * @LastEditTime : 2023-09-27 23:21:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,13 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO FUNCTIONS                                 */
+/*                                                                                */
+/**********************************************************************************/
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))    /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -114,7 +121,7 @@ void print1DArray(int *array, int size) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: [1,3,2,5,3,null,9]
+ * @description: [1,3,2,5,3,NULL,9]
  *      1
  *     / \
  *    3   2
@@ -129,7 +136,10 @@ void test_1(void) {
     int expected[] = {1, 3, 9};
 
     /* 构建二叉树 */
-    struct TreeNode *root = newNode(1);
+    int treeArr[] = {1, 3, 2, 5, 3, NULL, 9};
+    struct TreeNode *root = NULL;
+    printf("Tree Array: \n");
+    print1DArray(treeArr, ARR_SIZE(treeArr));
     /* TODO */
 }
 
