@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 19:30:07
+ * @LastEditTime : 2023-09-27 19:35:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -112,32 +112,6 @@ struct Node *newNode(int val) {
     node->children = NULL;                                                  /* 子节点指针数组为空 */
     node->numChildren = 0;                                                  /* 子节点个数为 0 */
     return node;                                                            /* 返回新节点 */
-}
-
-/**
- * @description: 根据数组创建 N 叉树
- * =================================================================================
- * @param {int} *arr               数组
- * @param {int} size            数组长度
- * @return {struct Node} *root      根节点
- */
-struct Node *creatNTreeFromArray(int *arr, int size) {
-    if (size == 0) {
-        return NULL;
-    }
-    struct Node *root = newNode(arr[0]);
-    int i = 1;
-    int j = 0;
-    struct Node **queue = (struct Node **)malloc(sizeof(struct Node *) * size);
-    queue[j++] = root;
-    while (i < size && j < size) {
-        struct Node *node = queue[i++];
-        int numChildren = arr[i++];
-    }
-
-    /* TODO */
-
-    return root;
 }
 
 /**
@@ -250,8 +224,6 @@ void test_2(void) {
     expected[2][1] = 6;
 
     /* 构建 N 叉树 */
-    /* int arr[] = {1,null,3,2,4,null,5,6}; */
-    /* struct Node *root = creatTreeFromArray(arr, ARRAY_SIZE(arr)); */
     struct Node *root = newNode(1);
     root->numChildren = 3;
     root->children = (struct Node **)malloc(sizeof(struct Node *) * root->numChildren);
@@ -317,8 +289,6 @@ void test_3(void) {
     expected[4][0] = 14;
 
     /* 构建 N 叉树 */
-    /* int arr[] = {1,NULL,2,3,4,5,NULL,NULL,6,7,NULL,8,NULL,9,10,NULL,NULL,11,NULL,12,NULL,13,NULL,NULL,14}; */
-    /* struct Node *root = creatTreeFromArray(arr, ARRAY_SIZE(arr)); */
     struct Node *root = newNode(1);
     root->numChildren = 4;
     root->children = (struct Node **)malloc(sizeof(struct Node *) * root->numChildren);
