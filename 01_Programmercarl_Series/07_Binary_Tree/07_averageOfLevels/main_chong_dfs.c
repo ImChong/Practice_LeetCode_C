@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\07_averageOfLevels\main_chong_DFS.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\07_averageOfLevels\main_chong_dfs.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-25 17:33:00
+ * @LastEditTime : 2023-09-28 00:24:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -45,9 +45,11 @@ struct TreeNode {
 };
 
 /**********************************************************************************/
-/*                                                                                */
-/*                                 TARGET FUNCTION                                */
-/*                                                                                */
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
 /**********************************************************************************/
 /*
     Depth-First-Search (DFS) - 深度优先搜索算法
