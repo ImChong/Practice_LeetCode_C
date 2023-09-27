@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 16:13:10
+ * @LastEditTime : 2023-09-27 16:16:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,7 +21,7 @@
 /**********************************************************************************/
 #define MAX_LEVEL_SIZE  1000    /* 最大层数 */
 #define MAX_NODE_SIZE   10000   /* 最大节点数 */
-#define TEST_2_ARR_SIZE     3   /* 测试 2 的各数组的长度 */
+#define TEST_ARR_SIZE   10      /* 测试的数组的长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -192,14 +192,14 @@ void test_1(void) {
 void test_2(void) {
     /* 预期结果 */
     /* int expected[3][3] = {{1}, {3, 2, 4}, {5, 6}}; */
-    int **expected = (int **)malloc(sizeof(int *) * TEST_2_ARR_SIZE);
-    expected[0] = (int *)malloc(sizeof(int) * TEST_2_ARR_SIZE);
+    int **expected = (int **)malloc(sizeof(int *) * TEST_ARR_SIZE);
+    expected[0] = (int *)malloc(sizeof(int) * TEST_ARR_SIZE);
     expected[0][0] = 1;
-    expected[1] = (int *)malloc(sizeof(int) * TEST_2_ARR_SIZE);
+    expected[1] = (int *)malloc(sizeof(int) * TEST_ARR_SIZE);
     expected[1][0] = 3;
     expected[1][1] = 2;
     expected[1][2] = 4;
-    expected[2] = (int *)malloc(sizeof(int) * TEST_2_ARR_SIZE);
+    expected[2] = (int *)malloc(sizeof(int) * TEST_ARR_SIZE);
     expected[2][0] = 5;
     expected[2][1] = 6;
 
