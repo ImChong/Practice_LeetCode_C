@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 23:44:57
+ * @LastEditTime : 2023-09-28 00:02:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -80,6 +80,10 @@ struct TreeNode *newNode(int value) {
  * @return {void}
  */
 void print1DArray(int *array, int size) {
+    if (array == NULL || size == 0) {   /* 如果数组为空或者数组大小为 0 则返回 */
+        printf("[]\n");
+        return;
+    }
     printf("[");                        /* 打印行边框 [ */
     for (int i = 0; i < size; ++i) {        /* 遍历 array 内的元素 */
         if (array[i] == INT_MIN) {              /* 如果元素为 INT_MIN 则打印 NULL */
@@ -122,14 +126,18 @@ void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
  * @param {int} returnSize  结果数组的大小
  * @return {void}
  */
-void testAnswer(int *expected, int *result, int returnSize) {
+void testAnswer(char testNum, int *expected, int *result, int returnSize) {
+    if (returnSize != ARR_SIZE(expected)) {
+        printf("test %c failed\n", testNum);
+        return;
+    }
     for (int i = 0; i < returnSize; ++i) {
         if (expected[i] != result[i]) {
-            printf("Test Failed.\n");
+            printf("test %c failed\n", testNum);
             return;
         }
     }
-    printf("Test Passed.\n");
+    printf("test %c passed\n", testNum);
 }
 
 /**
@@ -154,7 +162,7 @@ void freeTree(struct TreeNode *root) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: [1, 3, 2, 5, 3, NULL, 9]
+ * @description: 测试 1 - [1, 3, 2, 5, 3, NULL, 9]
  *      1
  *     / \
  *    3   2
@@ -172,24 +180,28 @@ void test_1(void) {
     printf("Tree Array: \n");
     int treeArr[] = {1, 3, 2, 5, 3, INT_MIN, 9};
     print1DArray(treeArr, ARR_SIZE(treeArr));
-    printf("\n");
-
     struct TreeNode *root = NULL;
     arrayToTree(treeArr, ARR_SIZE(treeArr), 0, &root);
+    printf("\n");
 
     /* 运算结果 */
-    int returnSize = 0;     /* 初始化结果数组大小 */
+    int returnSize = 0;
     int *result = largestValues(root, &returnSize);
 
     /* 测试输出结果 */
-    /* TODO */
+    printf("Expected: \n");
+    print1DArray(expected, ARR_SIZE(expected));
+    printf("Result: \n");
+    print1DArray(result, ARR_SIZE(result));
+    testAnswer('1', expected, result, returnSize);
 
     /* 释放内存空间 */
-    /* TODO */
+    freeTree(root);
+    free(result);
 }
 
 /**
- * @description: [1, 2, 3]
+ * @description: 测试 2 - [1, 2, 3]
  *    1
  *   / \
  *  2   3
@@ -198,7 +210,29 @@ void test_1(void) {
  * @return {*}
  */
 void test_2(void) {
+    /* 预期结果 */
     int expected[] = {1, 3};
+
+    /* 构建二叉树 */
+    printf("Tree Array: \n");
+    int treeArr[] = {1, 2, 3};
+    print1DArray(treeArr, ARR_SIZE(treeArr));
+    struct TreeNode *root = NULL;
+    arrayToTree(treeArr, ARR_SIZE(treeArr), 0, &root);
+    printf("\n");
+
+    /* 运算结果 */
+    int returnSize = 0;
+    int *result = largestValues(root, &returnSize);
+
+    /* 测试输出结果 */
+    printf("Expected: \n");
+    print1DArray(expected, ARR_SIZE(expected));
+    printf("Result: \n");
+    print1DArray(result, ARR_SIZE(result));
+    testAnswer('2', expected, result, returnSize);
+
+    /* 释放内存空间 */
     /* TODO */
 }
 
@@ -215,7 +249,9 @@ void test_2(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
+    printf("====================\n");
     test_1();
-    // test_2();
+    printf("====================\n");
+    test_2();
     return 0;
 }
