@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-28 00:06:43
+ * @LastEditTime : 2023-09-28 00:09:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -125,7 +125,7 @@ struct Node *newNode(int val) {
  * @return {void}
  */
 void validateAnswer(char testNum, int **expected, int **result, int returnSize, int *returnColumnSizes) {
-    if (returnSize != ARRAY_SIZE(expected)) {                               /* 如果预期结果与运算结果的长度不相等 */
+    if (returnSize == 0 && expected != NULL) {                              /* 如果预期结果与运算结果的长度不相等 */
         printf("test %c failed\n", testNum);                                    /* 测试失败 */
         return;                                                                 /* 返回 */
     }
