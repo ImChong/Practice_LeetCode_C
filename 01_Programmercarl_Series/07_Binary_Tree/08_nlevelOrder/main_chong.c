@@ -144,10 +144,10 @@ void testAnswer(char testNum, int ***expected, int ***result, int *returnSize, i
  * @return {void}
  */
 void free2DArray(int ***result, int *returnSize) {
-    for (int i = 0; i < (*returnSize); i++) {
-        free((*result)[i]);
+    for (int i = 0; i < (*returnSize); i++) {                               /* 遍历二维数组的每一行 */
+        free((*result)[i]);                                                     /* free每一行数组占用的空间 */
     }
-    free(*result);
+    free(*result);                                                          /* 最后free二维数组本身 */
 }
 
 /**
