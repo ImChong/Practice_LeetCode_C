@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-27 16:20:32
+ * @LastEditTime : 2023-09-27 16:23:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -115,23 +115,6 @@ struct Node *newNode(int val) {
 }
 
 /**
- * @description: 释放N 叉树所占用的空间
- * =================================================================================
- * @param {struct Node} *root   根节点
- * @return {void}
- */
-void freeTree(struct Node *root) {
-    if (root == NULL) {                                                     /* 如果传入节点为 NULL 则返回 */
-        return;
-    }
-    for (int i = 0; i < root->numChildren; i++) {                           /* 遍历子节点 */
-        freeTree(root->children[i]);                                            /* 递归释放子节点所占用的空间 */
-    }
-    free(root->children);                                                   /* 释放子节点指针数组所占用的空间 */
-    free(root);                                                             /* 释放根节点所占用的空间 */
-}
-
-/**
  * @description: 比较预期结果与运算结果
  * =================================================================================
  * @param {char} testNum                测试编号
@@ -151,6 +134,34 @@ void testAnswer(char testNum, int ***expected, int ***result, int *returnSize, i
         }
     }
     printf("test %c passed\n", testNum);                                    /* 测试成功 */
+}
+
+/**
+ * @description: 释放预期结果数组所占用的空间
+ * =================================================================================
+ * @param {int} ***result
+ * @param {int} *returnSize
+ * @return {void}
+ */
+void free2DArray(int ***result, int *returnSize) {
+    /* TODO */
+}
+
+/**
+ * @description: 释放 N 叉树所占用的空间
+ * =================================================================================
+ * @param {struct Node} *root   根节点
+ * @return {void}
+ */
+void freeTree(struct Node *root) {
+    if (root == NULL) {                                                     /* 如果传入节点为 NULL 则返回 */
+        return;
+    }
+    for (int i = 0; i < root->numChildren; i++) {                           /* 遍历子节点 */
+        freeTree(root->children[i]);                                            /* 递归释放子节点所占用的空间 */
+    }
+    free(root->children);                                                   /* 释放子节点指针数组所占用的空间 */
+    free(root);                                                             /* 释放根节点所占用的空间 */
 }
 
 /**********************************************************************************/
@@ -226,6 +237,10 @@ void test_2(void) {
 
     /* 测试输出结果 */
     testAnswer('2', &expected, &result, &returnSize, &returnColumnSizes);
+
+    /* 释放内存空间 */
+    free(returnColumnSizes);
+    freeTree(root);
 }
 
 /**
