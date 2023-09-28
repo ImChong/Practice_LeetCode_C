@@ -56,7 +56,7 @@ struct TreeNode {
 /* ============================================================================== */
 #if DFS_METHOD_EN
 
-void depthFirstSearch(){
+void depthFirstSearch(int *res, int *pos, struct TreeNode *root, int curHeight) {
     /* TODO */
     return;
 }
