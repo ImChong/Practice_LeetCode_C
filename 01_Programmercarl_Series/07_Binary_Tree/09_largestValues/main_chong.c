@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-28 16:38:38
+ * @LastEditTime : 2023-09-28 16:40:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -89,7 +89,7 @@ void depthFirstSearch(int *ans, int *index, struct TreeNode *root, int curHeight
  * @param {int} *returnSize             返回数组的大小
  * @return {int} *ans                   返回数组的首地址
  */
-int *largestValues(struct TreeNode *root, int *returnSize){
+int *largestValues(struct TreeNode *root, int *returnSize) {
     if (!root) {
         *returnSize = 0;
         return NULL;
