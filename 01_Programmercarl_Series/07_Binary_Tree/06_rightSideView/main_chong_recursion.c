@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-28 15:18:20
+ * @LastEditTime : 2023-09-28 15:20:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,6 +31,7 @@
 /**********************************************************************************/
 #define PREORDER_METHOD_EN  1
 #define BFS_METHOD_EN       0
+#define MAX_SIZE            2000    /* 初始化大小 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -63,8 +64,6 @@ struct TreeNode {
 /* ============================================================================== */
 /* ============================================================================== */
 #if PREORDER_METHOD_EN
-#define MAX_SIZE 2000           /* 初始化大小 */
-
 /**
  * @description: 二叉树的前序遍历
  * =================================================================================
@@ -102,6 +101,59 @@ int *rightSideView(struct TreeNode *root, int *returnSize){
     return resultArray;                                                 /* 返回数组 */
 }
 #endif  /* PREORDER_METHOD_EN */
+
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
+/*
+    BFS 层序遍历法 - 只记录每层的最后一个元素
+*/
+/* ============================================================================== */
+/* ============================================================================== */
+#if BFS_METHOD_EN
+/**
+ * @description: 二叉树的右视图
+ * =================================================================================
+ * @param {TreeNode} *root          二叉树的根节点
+ * @param {int} *returnSize         返回数组大小
+ * @return {int} *resultArray       结果一维数组（返回数组）
+ */
+int *rightSideView(struct TreeNode *root, int *returnSize){
+    int *resultArray = (int *)calloc(MAX_SIZE, sizeof(int));            /* 为返回结果数组分配空间，并初始化为 0 */
+    *returnSize = 0;                                                    /* 初始化返回数组大小为 0 */
+    struct TreeNode *treeNodeQueue[MAX_SIZE];                           /* 创建队列存储树节点 */
+    int queueFront = 0;                                                 /* 队列头指针初始化为 0 */
+    int queueRear = 0;                                                  /* 队列尾指针初始化为 0 */
+
+    if (root == NULL) {                                                 /* 如果根节点为空,直接返回 */
+        return resultArray;
+    }
+    treeNodeQueue[queueRear++] = root;                                  /* 将根节点入队 */
+
+    while (queueFront < queueRear) {                                    /* 当队列非空时循环 */
+        int layerLastIndex = queueRear;                                     /* 记录当前层的最后一个元素的索引 */
+        int value = 0;                                                      /* 当前层的最后一个元素的值初始化为 0 */
+        while (queueFront < layerLastIndex) {                               /* 遍历当前层的元素 */
+            struct TreeNode *curNode = treeNodeQueue[queueFront];               /* 获取当前遍历到的节点 */
+            value = curNode->val;                                               /* 更新 value 为当前节点的值 */
+            if (curNode->left != NULL) {                                        /* 如果左子节点非空,则入队 */
+                treeNodeQueue[queueRear++] = curNode->left;
+            }
+            if (curNode->right != NULL) {                                       /* 如果右子节点非空,则入队 */
+                treeNodeQueue[queueRear++] = curNode->right;
+            }
+            queueFront++;                                                       /* 队列头指针后移 */
+        }
+        resultArray[(*returnSize)++] = value;                               /* 将当前层的最后一个元素的值放入结果数组 */
+    }
+
+    return resultArray;                                                 /* 返回数组 */
+}
+#endif /* BFS_METHOD_EN */
 
 /**********************************************************************************/
 /*                                                                                */
