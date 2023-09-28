@@ -65,7 +65,7 @@ struct TreeNode {
  * @param {int} *pos
  * @param {TreeNode} *root
  * @param {int} curHeight
- * @return {*}
+ * @return {void}
  */
 void depthFirstSearch(int *res, int *pos, struct TreeNode *root, int curHeight) {
     /* TODO */
