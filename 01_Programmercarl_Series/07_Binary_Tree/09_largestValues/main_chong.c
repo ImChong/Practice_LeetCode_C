@@ -58,6 +58,15 @@ struct TreeNode {
 /* ============================================================================== */
 #if DFS_METHOD_EN
 
+/**
+ * @description: 深度优先搜索
+ * =================================================================================
+ * @param {int} *res
+ * @param {int} *pos
+ * @param {TreeNode} *root
+ * @param {int} curHeight
+ * @return {*}
+ */
 void depthFirstSearch(int *res, int *pos, struct TreeNode *root, int curHeight) {
     /* TODO */
     return;
