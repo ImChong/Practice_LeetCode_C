@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\04_levelOrder\main_chong_list.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\04_levelOrder\main_chong.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-28 15:44:19
+ * @LastEditTime : 2023-09-28 15:50:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,9 +34,9 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_METHOD_EN     1
-#define STRUCT_METHOD_EN    0
-#define MAX_SIZE            2000           /* 初始化大小 */
+#define ARRAY_METHOD_EN     1       /* 方法一开关：数组队列（注意：方法一与方法二不能同时开启） */
+#define STRUCT_METHOD_EN    0       /* 方法二开关：结构体链表队列 */
+#define MAX_SIZE            2000    /* 初始化大小 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -123,7 +123,7 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
 /**********************************************************************************/
 /* 层序遍历 - 借助链表结构体队列数据结构，记录下 Tree 的下一层的所有结点。这样一层一层的遍历。直到结束 */
 
-/* 层序遍历 + 链表队列 */
+/* 层序遍历 + 结构体链表队列 */
 /* 关键点：  1：使用队列的数据结构存储对应的二叉树的结点Queue
             2：使用变量front和rear维护队列，队列是具有先进先出的特点
             3：使用Queue[front++] = root;来入队
