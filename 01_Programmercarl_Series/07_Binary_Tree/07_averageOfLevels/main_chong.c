@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\07_averageOfLevels\main_chong_dfs.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\07_averageOfLevels\main_chong.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-28 00:24:05
+ * @LastEditTime : 2023-09-28 15:09:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,7 +11,6 @@
  * https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html#_637-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%B9%B3%E5%9D%87%E5%80%BC
  * 解法参考：https://leetcode.cn/problems/average-of-levels-in-binary-tree/solutions/410522/er-cha-shu-de-ceng-ping-jun-zhi-by-leetcode-soluti/
  *
- * 方法一：深度优先搜索
  *       1
  *      / \
  *     2   3
@@ -30,7 +29,9 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define MAX_SIZE 1001   /* 定义数组的最大大小 */
+#define DFS_METHOD_EN   1       /* 方法一开关：深度优先搜索（注意：方法一与方法二不能同时开启） */
+#define BFS_METHOD_EN   0       /* 方法二开关：广度优先搜索 */
+#define MAX_SIZE        1000    /* 定义数组的最大大小 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -52,6 +53,8 @@ struct TreeNode {
 /**********************************************************************************/
 /**********************************************************************************/
 /*
+    方法一：深度优先搜索
+
     Depth-First-Search (DFS) - 深度优先搜索算法
         使用深度优先搜索计算二叉树的层平均值，需要维护两个数组
         counts: 用于存储二叉树的每一层的节点数
@@ -62,6 +65,7 @@ struct TreeNode {
 */
 /* ============================================================================== */
 /* ============================================================================== */
+#if DFS_METHOD_EN
 int countsSize;     /* 记录每层节点数的数组的大小 */
 int sumsSize;       /* 记录每层节点值之和的数组的大小 */
 
@@ -109,6 +113,59 @@ double *averageOfLevels(struct TreeNode *root, int *returnSize) {
     }
     return averages;                                                    /* 返回每层节点值的平均值组成的数组 */
 }
+#endif  /* DFS_METHOD_EN */
+
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
+/*
+    方法二：广度优先搜索
+
+    Breadth-first search (BFS) - 广度优先搜索算法
+    使用一个队列来存储每一层的节点。
+    在遍历每一层节点时，它计算该层节点值的平均值，并将该平均值存储在数组中。
+    最后，函数返回该数组的指针。
+*/
+/* ============================================================================== */
+/* ============================================================================== */
+#if BFS_METHOD_EN
+/**
+ * @description: 计算二叉树每一层节点值的平均值
+ * =================================================================================
+ * @param {TreeNode} *root      根节点指针
+ * @param {int} *returnSize     返回数组大小的指针
+ * @return {double} *averages   平均值数组的指针
+ */
+double *averageOfLevels(struct TreeNode *root, int *returnSize) {
+    double *averages = malloc(sizeof(double) * MAX_SIZE);                       /* 为平均值数组分配空间 */
+    struct TreeNode **queue = malloc(sizeof(struct TreeNode*) * MAX_SIZE);      /* 为队列分配空间 */
+    *returnSize = 0;                                                            /* 初始化返回数组大小为0 */
+
+    int qleft = 0, qright = 0;                                                  /* 定义队列左右指针 */
+    queue[qright++] = root;                                                     /* 将根节点加入队列 */
+    while (qleft < qright) {                                                    /* 当队列不为空时循环 */
+        double sum = 0;                                                             /* 定义当前层节点值之和 */
+        int size = qright - qleft;                                                  /* 定义当前层节点数 */
+        for (int i = 0; i < size; i++) {                                            /* 遍历当前层节点 */
+            struct TreeNode* node = queue[qleft++];                                     /* 取出当前层节点 */
+            sum += node->val;                                                           /* 将当前层节点值加到当前层节点值之和上 */
+            struct TreeNode *left = node->left, *right = node->right;                   /* 取出当前层节点的左右子节点 */
+            if (left != NULL) {                                                         /* 如果左子节点不为空 */
+                queue[qright++] = left;                                                     /* 将左子节点加入队列 */
+            }
+            if (right != NULL) {                                                        /* 如果右子节点不为空 */
+                queue[qright++] = right;                                                    /* 将右子节点加入队列 */
+            }
+        }
+        averages[(*returnSize)++] = sum / size;                                     /* 将当前层节点值之和除以当前层节点数得到当前层节点值的平均值 */
+    }
+    return averages;                                                            /* 返回平均值数组的指针 */
+}
+#endif  /* BFS_METHOD_EN */
 
 /**********************************************************************************/
 /*                                                                                */
