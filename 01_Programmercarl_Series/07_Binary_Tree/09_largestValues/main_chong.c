@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-28 16:30:17
+ * @LastEditTime : 2023-09-28 16:38:38
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -94,8 +94,10 @@ int *largestValues(struct TreeNode *root, int *returnSize){
         *returnSize = 0;
         return NULL;
     }
-    int *res = (int *)malloc(sizeof(int) * MAX)
-    return NULL;
+    int *ans = (int *)malloc(sizeof(int) * MAX_NODE_SIZE);
+    *returnSize = 0;
+    depthFirstSearch(ans, returnSize, root, 0);
+    return ans;
 }
 #endif /* DFS_METHOD_EN */
 
