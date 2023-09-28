@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-28 16:05:15
+ * @LastEditTime : 2023-09-28 16:30:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -61,14 +61,24 @@ struct TreeNode {
 /**
  * @description: 深度优先搜索
  * =================================================================================
- * @param {int} *res
- * @param {int} *pos
+ * @param {int} *ans
+ * @param {int} *index
  * @param {TreeNode} *root
  * @param {int} curHeight
  * @return {void}
  */
-void depthFirstSearch(int *res, int *pos, struct TreeNode *root, int curHeight) {
-    /* TODO */
+void depthFirstSearch(int *ans, int *index, struct TreeNode *root, int curHeight) {
+    if (curHeight == *index) {
+        ans[(*index)++] == root->val;
+    } else {
+        ans[curHeight] = MAX(ans[curHeight], root->val);
+    }
+    if (root->left) {
+        depthFirstSearch(ans, index, root->left, curHeight + 1);
+    }
+    if (root->right) {
+        depthFirstSearch(ans, index, root->right, curHeight + 1);
+    }
     return;
 }
 
@@ -80,7 +90,11 @@ void depthFirstSearch(int *res, int *pos, struct TreeNode *root, int curHeight) 
  * @return {int} *ans                   返回数组的首地址
  */
 int *largestValues(struct TreeNode *root, int *returnSize){
-    /* TODO */
+    if (!root) {
+        *returnSize = 0;
+        return NULL;
+    }
+    int *res = (int *)malloc(sizeof(int) * MAX)
     return NULL;
 }
 #endif /* DFS_METHOD_EN */
