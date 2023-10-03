@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 10:55:14
+ * @LastEditTime : 2023-10-03 11:04:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -20,8 +20,8 @@
 /*                                                                                */
 /**********************************************************************************/
 /* 方法使能宏，注意一次只能使能一个方法，否则会出现函数重定义告警 */
-#define DFS_METHOD_EN 0     /* 深度优先搜索方法使能 */
-#define BFS_METHOD_EN 1     /* 广度优先搜索方法使能 */
+#define DFS_METHOD_EN 1     /* 深度优先搜索方法使能 */
+#define BFS_METHOD_EN 0     /* 广度优先搜索方法使能 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -117,31 +117,31 @@ int maxDepth(struct TreeNode* root) {
     if (root == NULL) {                                         /* 如果根节点为 NULL 则返回 0 */
         return 0;
     }
-    struct QueueNode *left, *right;
-    initQueue(&left, root);
-    right = left;
-    int ans = 0, sz = 1, tmp = 0;
-    while (left != NULL) {
-        tmp = 0;
-        while (sz > 0) {
-            if (left->node->left != NULL) {
-                initQueue(&right->next, left->node->left);
-                right = right->next;
-                tmp++;
+    struct QueueNode *left, *right;                             /* 定义左右节点指针 */
+    initQueue(&left, root);                                     /* 初始化左节点 */
+    right = left;                                               /* 初始化右节点 */
+    int ans = 0, sz = 1, tmp = 0;                               /* 定义最大深度、当前层节点个数、当前层节点个数的临时变量 */
+    while (left != NULL) {                                      /* 当左节点不为空时 */
+        tmp = 0;                                                    /* 重置当前层节点个数的临时变量 */
+        while (sz > 0) {                                            /* 遍历当前层的节点 */
+            if (left->node->left != NULL) {                             /* 如果左节点不为空 */
+                initQueue(&right->next, left->node->left);                  /* 初始化左节点 */
+                right = right->next;                                        /* 右节点指针指向下一个节点 */
+                tmp++;                                                      /* 当前层节点个数 + 1 */
             }
-            if (left->node->right != NULL) {
-                initQueue(&right->next, left->node->right);
-                right = right->next;
-                tmp++;
+            if (left->node->right != NULL) {                            /* 如果右节点不为空 */
+                initQueue(&right->next, left->node->right);                 /* 初始化右节点 */
+                right = right->next;                                        /* 右节点指针指向下一个节点 */
+                tmp++;                                                      /* 当前层节点个数 + 1 */
             }
-            left = left->next;
-            sz--;
+            left = left->next;                                          /* 左节点指针指向下一个节点 */
+            sz--;                                                       /* 当前层节点个数 - 1 */
         }
-        sz += tmp;
-        ans++;
+        sz += tmp;                                                  /* 更新当前层节点个数 */
+        ans++;                                                      /* 最大深度 + 1 */
     }
-    free(left);
-    return ans;
+    free(left);                                                 /* 释放内存空间 */
+    return ans;                                                 /* 返回最大深度 */
 }
 #endif /* BFS_METHOD_EN */
 
