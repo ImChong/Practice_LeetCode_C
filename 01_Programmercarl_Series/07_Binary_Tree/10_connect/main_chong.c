@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 08:35:54
+ * @LastEditTime : 2023-10-03 08:37:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -18,8 +18,9 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define LEVEL_ORDER_METHOD_EN   1   /* 层次遍历方法使能 */
-#define NEXT_POINTER_METHOD_EN  0   /* 使用已建立的 next 指针方法使能 */
+#define LEVEL_ORDER_METHOD_EN   1       /* 层次遍历方法使能 */
+#define NEXT_POINTER_METHOD_EN  0       /* 使用已建立的 next 指针方法使能 */
+#define MAX_QUEUE_SIZE          5000    /* 定义数组的最大大小 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -56,6 +57,11 @@ struct Node {
 #if LEVEL_ORDER_METHOD_EN
 
 struct Node *connect(struct Node *root) {
+    if (root == NULL) {
+        return root;
+    }
+
+
     /* TODO */
 	return NULL;
 }
