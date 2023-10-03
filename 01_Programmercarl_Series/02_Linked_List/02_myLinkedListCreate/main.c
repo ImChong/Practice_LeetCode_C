@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 12:41:09
+ * @LastEditTime : 2023-10-03 12:41:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -250,16 +250,30 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
-    /* 预期结果 */
+    /* ["MyLinkedList","addAtHead","deleteAtIndex","addAtHead","addAtHead","addAtHead","addAtHead","addAtHead","addAtTail","get","deleteAtIndex","deleteAtIndex"] */
+    /* [[],[2],[1],[2],[7],[3],[2],[5],[5],[5],[6],[4]] */
 
-    /* 构建二叉树 */
+    MyLinkedList *list = myLinkedListCreate();      /* MyLinkedList     [] */
+    myLinkedListAddAtHead(list, 2);                 /* addAtHead        [2] */
+    myLinkedListDeleteAtIndex(list, 1);             /* deleteAtIndex    [1] */
+    myLinkedListAddAtHead(list, 2);                 /* addAtHead        [2] */
+    myLinkedListAddAtHead(list, 7);                 /* addAtHead        [7] */
+    myLinkedListAddAtHead(list, 3);                 /* addAtHead        [3] */
+    myLinkedListAddAtHead(list, 2);                 /* addAtHead        [2] */
+    myLinkedListAddAtHead(list, 5);                 /* addAtHead        [5] */
+    myLinkedListAddAtTail(list, 5);                 /* addAtTail        [5] */
+    myLinkedListGet(list, 5);                       /* get          [5] */
+    myLinkedListDeleteAtIndex(list, 6);             /* deleteAtIndex    [6] */
+    myLinkedListDeleteAtIndex(list, 4);             /* deleteAtIndex    [4] */
 
-    /* 实际结果 */
-
-    /* 比较结果 */
+    printf("linked list: ");
+    for (int i = 0; i < list->size; i++) {
+        printf("%d ", myLinkedListGet(list, i));
+    }
+    printf("\n");
 
     /* 释放内存空间 */
-
+    myLinkedListFree(list);
 }
 
 /* TODO */
@@ -296,30 +310,7 @@ void test_3(void) {
 int main(int argc, const char *argv[]) {
 
 
-    /* NOTE: Case2 */
-    // /* ["MyLinkedList","addAtHead","deleteAtIndex","addAtHead","addAtHead","addAtHead","addAtHead","addAtHead","addAtTail","get","deleteAtIndex","deleteAtIndex"] */
-    // /* [[],[2],[1],[2],[7],[3],[2],[5],[5],[5],[6],[4]] */
 
-    // MyLinkedList *list = myLinkedListCreate();      /* MyLinkedList     [] */
-    // myLinkedListAddAtHead(list, 2);                 /* addAtHead        [2] */
-    // myLinkedListDeleteAtIndex(list, 1);             /* deleteAtIndex    [1] */
-    // myLinkedListAddAtHead(list, 2);                 /* addAtHead        [2] */
-    // myLinkedListAddAtHead(list, 7);                 /* addAtHead        [7] */
-    // myLinkedListAddAtHead(list, 3);                 /* addAtHead        [3] */
-    // myLinkedListAddAtHead(list, 2);                 /* addAtHead        [2] */
-    // myLinkedListAddAtHead(list, 5);                 /* addAtHead        [5] */
-    // myLinkedListAddAtTail(list, 5);                 /* addAtTail        [5] */
-    // myLinkedListGet(list, 5);                       /* get          [5] */
-    // myLinkedListDeleteAtIndex(list, 6);             /* deleteAtIndex    [6] */
-    // myLinkedListDeleteAtIndex(list, 4);             /* deleteAtIndex    [4] */
-
-    // printf("linked list: ");
-    // for (int i = 0; i < list->size; i++) {
-    //     printf("%d ", myLinkedListGet(list, i));
-    // }
-    // printf("\n");
-
-    // myLinkedListFree(list);
 
     /* NOTE: Case3 */
     /* ["MyLinkedList","addAtHead","get","addAtHead","addAtHead","deleteAtIndex","addAtHead","get","get","get","addAtHead","deleteAtIndex"] */
