@@ -1,9 +1,33 @@
-/* 977.有序数组的平方：https://leetcode.cn/problems/squares-of-a-sorted-array/ */
-/* https://programmercarl.com/0977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.html */
-
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\01_Array\03_sortedSquares\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-16 08:57:10
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-10-03 11:57:16
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 977.有序数组的平方：https://leetcode.cn/problems/squares-of-a-sorted-array/
+ * https://programmercarl.com/0977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.html
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
+/**
+ * @description:
+ * =================================================================================
+ * @param {int} *nums
+ * @param {int} numsSize
+ * @param {int} *returnSize
+ * @return {*}
+ */
 int *sortedSquares(int *nums, int numsSize, int *returnSize) {
     int *result = (int *)malloc(numsSize * sizeof(int));    /* 创建返回数组 */
     *returnSize = numsSize;     /* 确定返回大小 */
@@ -28,7 +52,20 @@ int *sortedSquares(int *nums, int numsSize, int *returnSize) {
     return result;
 }
 
-int main(int argc, char const *argv[]) {
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                  MAIN FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
+int main(int argc, const char *argv[]) {
     int nums[] = {-4, -1, 0, 3, 10};
     int numsSize = sizeof(nums) / sizeof(nums[0]);
     int returnSize;
