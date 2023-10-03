@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 10:25:27
+ * @LastEditTime : 2023-10-03 10:28:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -97,8 +97,8 @@ struct QueueNode {
 /**
  * @description: 初始化队列 - 虚拟头节点
  * =================================================================================
- * @param {struct QueueNode} **queue
- * @param {struct TreeNode} *node
+ * @param {struct QueueNode} **queue    队列指针
+ * @param {struct TreeNode} *node       节点指针
  * @return {void}
  */
 void initQueue(struct QueueNode **queue, struct TreeNode *node) {
