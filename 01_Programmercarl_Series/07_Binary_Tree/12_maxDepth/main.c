@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 10:09:04
+ * @LastEditTime : 2023-10-03 10:10:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -123,7 +123,7 @@ void validateAnswer(char testNum, int expect, int actual) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试函数
+ * @description: 测试函数 1
  * =================================================================================
  * @return {void}
  */
@@ -153,7 +153,7 @@ void test_1(void) {
 }
 
 /**
- * @description: 测试函数
+ * @description: 测试函数 2
  * =================================================================================
  * @return {void}
  */
@@ -162,13 +162,18 @@ void test_2(void) {
     int expect = 2;
 
     /* 构建二叉树 */
+    struct TreeNode *root = newNode(1);
+    root->right = newNode(2);
 
     /* 实际结果 */
+    int actual = maxDepth(root);
 
     /* 比较结果 */
+    validateAnswer('2', expect, actual);
 
     /* 释放内存空间 */
-
+    free(root->right);
+    free(root);
 }
 
 /**********************************************************************************/
