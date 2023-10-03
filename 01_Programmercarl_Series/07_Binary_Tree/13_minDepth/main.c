@@ -107,7 +107,7 @@ void test_1(void) {
     root->right->right = newNode(7);
 
     /* 实际结果 */
-    int actual = maxDepth(root);
+    int actual = minDepth(root);
 
     /* 比较结果 */
     validateAnswer('1', expect, actual);
@@ -133,7 +133,7 @@ void test_2(void) {
     struct TreeNode *root = newNode(2);
 
     /* 实际结果 */
-    int actual = maxDepth(root);
+    int actual = minDepth(root);
 
     /* 比较结果 */
     validateAnswer('2', expect, actual);
