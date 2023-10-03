@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 10:10:36
+ * @LastEditTime : 2023-10-03 10:13:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 /**********************************************************************************/
 /*                                                                                */
@@ -59,8 +60,13 @@ struct TreeNode {
  * @return {int} depth              最大深度
  */
 int maxDepth(struct TreeNode* root) {
-    /* TODO */
-    return 0;
+    if (root == NULL) {
+        return 0;
+    } else {
+        int leftHeight = maxDepth(root->left);
+        int rightHeight = maxDepth(root->right);
+        return fmax(leftHeight, rightHeight) + 1;
+    }
 }
 #endif /* DFS_METHOD_EN */
 
@@ -75,7 +81,12 @@ int maxDepth(struct TreeNode* root) {
 /* ============================================================================== */
 /* ============================================================================== */
 #if BFS_METHOD_EN
-
+/**
+ * @description: 二叉树的最大深度 - 广度优先搜索
+ * =================================================================================
+ * @param {struct TreeNode*} root   根节点
+ * @return {int} depth              最大深度
+ */
 int maxDepth(struct TreeNode* root){
     /* TODO */
     return 0;
