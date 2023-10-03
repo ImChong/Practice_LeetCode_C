@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 09:43:33
+ * @LastEditTime : 2023-10-03 09:44:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -55,7 +55,7 @@ struct TreeNode {
  * @description: 二叉树的最大深度 - 深度优先搜索
  * =================================================================================
  * @param {struct TreeNode*} root   根节点
- * @return {int} ans                最大深度
+ * @return {int} depth              最大深度
  */
 int maxDepth(struct TreeNode* root) {
     /* TODO */
