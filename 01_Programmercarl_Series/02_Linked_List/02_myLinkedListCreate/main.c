@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 12:36:22
+ * @LastEditTime : 2023-10-03 12:38:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -128,24 +128,24 @@ void myLinkedListAddAtIndex(MyLinkedList *obj, int index, int val) {
     }
 
     struct ListNode *newNode = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新节点分配空间 */
-    newNode->val = val;                                         /* 为链表新节点赋值 */
+    newNode->val = val;                         /* 为链表新节点赋值 */
 
-    struct ListNode *curr = obj->head;                                 /* 获取当前链表头节点的指针 */
-    for (int i = 0; i < index - 1; i++) {                       /* 因为新节点自己本身要占据一个节点位置，所以循环索引 - 1 次 */
-        curr = curr->next;                                          /* 指针向后移动一位 */
+    struct ListNode *curr = obj->head;          /* 获取当前链表头节点的指针 */
+    for (int i = 0; i < index - 1; i++) {       /* 因为新节点自己本身要占据一个节点位置，所以循环索引 - 1 次 */
+        curr = curr->next;                          /* 指针向后移动一位 */
     }
 
-    newNode->next = curr->next;                                 /* 将新节点的下一节点指向当前指针所指节点的下一节点*/
-    curr->next = newNode;                                       /* 将当前指针所指节点的下一节点指向新节点 */
-    obj->size++;                                                /* 链表长度 + 1 */
+    newNode->next = curr->next;                 /* 将新节点的下一节点指向当前指针所指节点的下一节点*/
+    curr->next = newNode;                       /* 将当前指针所指节点的下一节点指向新节点 */
+    obj->size++;                                /* 链表长度 + 1 */
 }
 
 /**
  * @description: 删除指定索引的节点
  * =================================================================================
- * @param {MyLinkedList} *obj
- * @param {int} index
- * @return {*}
+ * @param {MyLinkedList} *obj       虚拟头节点
+ * @param {int} index               索引
+ * @return {void}
  */
 void myLinkedListDeleteAtIndex(MyLinkedList *obj, int index) {
     if (index < 0 || index >= obj->size) {       /* 输入校验 */
