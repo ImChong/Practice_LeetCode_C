@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 12:41:36
+ * @LastEditTime : 2023-10-03 12:42:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -262,7 +262,7 @@ void test_2(void) {
     myLinkedListAddAtHead(list, 2);                 /* addAtHead        [2] */
     myLinkedListAddAtHead(list, 5);                 /* addAtHead        [5] */
     myLinkedListAddAtTail(list, 5);                 /* addAtTail        [5] */
-    myLinkedListGet(list, 5);                       /* get          [5] */
+    myLinkedListGet(list, 5);                       /* get              [5] */
     myLinkedListDeleteAtIndex(list, 6);             /* deleteAtIndex    [6] */
     myLinkedListDeleteAtIndex(list, 4);             /* deleteAtIndex    [4] */
 
@@ -283,35 +283,6 @@ void test_2(void) {
  * @return {void}
  */
 void test_3(void) {
-    /* 预期结果 */
-
-    /* 构建二叉树 */
-
-    /* 实际结果 */
-
-    /* 比较结果 */
-
-    /* 释放内存空间 */
-
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                  MAIN FUNCTION                                 */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 主函数
- * =================================================================================
- * @param {int} argc        程序入参个数
- * @param {char} *argv[]    程序入参字符串数组
- * @return {int}            程序运行状态
- */
-int main(int argc, const char *argv[]) {
-
-
-
-
     /* NOTE: Case3 */
     /* ["MyLinkedList","addAtHead","get","addAtHead","addAtHead","deleteAtIndex","addAtHead","get","get","get","addAtHead","deleteAtIndex"] */
     /* [[],[4],[1],[1],[5],[3],[7],[3],[3],[3],[1],[4]] */
@@ -339,7 +310,28 @@ int main(int argc, const char *argv[]) {
     myLinkedListAddAtHead(list, 1);             /* addAtHead        [1] */
     myLinkedListDeleteAtIndex(list, 4);         /* deleteAtIndex    [4] */
 
+    /* 释放内存空间 */
     printLinkedList(list);
+}
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                  MAIN FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
+int main(int argc, const char *argv[]) {
+
+
+
+
+
 
     return 0;
 }
