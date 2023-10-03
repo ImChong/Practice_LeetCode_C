@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 09:58:42
+ * @LastEditTime : 2023-10-03 10:05:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -101,6 +101,22 @@ struct TreeNode *newNode(int val) {
     return node;
 }
 
+/**
+ * @description: 验证答案
+ * =================================================================================
+ * @param {char} testNum    测试编号
+ * @param {int} expect      预期
+ * @param {int} actual      实际
+ * @return {void}
+ */
+void validateAnswer(char testNum, int expect, int actual) {
+    if (expect == actual) {
+        printf("Test %c ✅ Passed\n", testNum);
+    } else {
+        printf("Test %c ❌ Failed\n", testNum);
+    }
+}
+
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
@@ -116,10 +132,17 @@ void test_1(void) {
     int expect = 3;
 
     /* 构建二叉树 */
+    struct TreeNode *root = newNode(3);
+    root->left = newNode(9);
+    root->right = newNode(20);
+    root->right->left = newNode(15);
+    root->right->right = newNode(7);
 
     /* 实际结果 */
+    int actual = maxDepth(root);
 
     /* 比较结果 */
+
 
     /* 释放内存空间 */
 
