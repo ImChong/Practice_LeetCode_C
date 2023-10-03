@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 08:58:44
+ * @LastEditTime : 2023-10-03 09:02:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -64,7 +64,24 @@ struct Node *connect(struct Node *root) {
     struct Node *queue[MAX_QUEUE_SIZE];
     int left = 0, right = 0;
     queue[right++] = root;
-    /* TODO */
+
+    while (left < right) {
+        int size = right - left;
+        for (int i = 0; i < size; i++) {
+            struct Node *node = queue[left++];
+
+            if (i < size - 1) {
+                node->next = queue[left];
+            }
+
+            if (node->left != NULL) {
+                queue[right++] = node->left;
+            }
+            if (node->right != NULL) {
+                queue[right++] = node->right;
+            }
+        }
+    }
 	return root;
 }
 
