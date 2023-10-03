@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 12:39:40
+ * @LastEditTime : 2023-10-03 12:41:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -192,15 +192,15 @@ void myLinkedListFree(MyLinkedList *obj) {
 /**
  * @description: 打印链表
  * =================================================================================
- * @param {MyLinkedList} *list
- * @return {*}
+ * @param {MyLinkedList} *list      虚拟头节点
+ * @return {void}
  */
 void printLinkedList(MyLinkedList *list) {
-    printf("linked list (size: %d): ", list->size);
-    for (int i = 0; i < list->size; i++) {
-        printf("%d ", myLinkedListGet(list, i));
+    printf("linked list (size: %d): ", list->size);     /* 打印链表长度 */
+    for (int i = 0; i < list->size; i++) {              /* 循环打印链表节点数值 */
+        printf("%d ", myLinkedListGet(list, i));            /* 打印链表节点数值 */
     }
-    printf("\n");
+    printf("\n");                                       /* 换行 */
 }
 
 /**********************************************************************************/
@@ -212,26 +212,42 @@ void printLinkedList(MyLinkedList *list) {
 /**
  * @description:
  * =================================================================================
- * @return {*}
+ * @return {void}
  */
 void test_1(void) {
-    /* 预期结果 */
+    MyLinkedList *list = myLinkedListCreate();
 
-    /* 构建二叉树 */
+    myLinkedListAddAtHead(list, 1);
+    myLinkedListAddAtTail(list, 3);
+    myLinkedListAddAtIndex(list, 1, 2);
 
-    /* 实际结果 */
+    printf("linked list: ");
+    for (int i = 0; i < list->size; i++) {
+        printf("%d ", myLinkedListGet(list, i));
+    }
+    printf("\n");
 
-    /* 比较结果 */
+    printf("%d ", myLinkedListGet(list, 1));
+    myLinkedListDeleteAtIndex(list, 0);
+    printf("%d ", myLinkedListGet(list, 0));
+
+    printf("\n");
+
+    printf("linked list: ");
+    for (int i = 0; i < list->size; i++) {
+        printf("%d ", myLinkedListGet(list, i));
+    }
+    printf("\n");
 
     /* 释放内存空间 */
-
+    myLinkedListFree(list);
 }
 
 /* TODO */
 /**
  * @description:
  * =================================================================================
- * @return {*}
+ * @return {void}
  */
 void test_2(void) {
     /* 预期结果 */
@@ -250,7 +266,7 @@ void test_2(void) {
 /**
  * @description:
  * =================================================================================
- * @return {*}
+ * @return {void}
  */
 void test_3(void) {
     /* 预期结果 */
@@ -278,32 +294,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    /* NOTE: Case1 */
-    // MyLinkedList *list = myLinkedListCreate();
 
-    // myLinkedListAddAtHead(list, 1);
-    // myLinkedListAddAtTail(list, 3);
-    // myLinkedListAddAtIndex(list, 1, 2);
-
-    // printf("linked list: ");
-    // for (int i = 0; i < list->size; i++) {
-    //     printf("%d ", myLinkedListGet(list, i));
-    // }
-    // printf("\n");
-
-    // printf("%d ", myLinkedListGet(list, 1));
-    // myLinkedListDeleteAtIndex(list, 0);
-    // printf("%d ", myLinkedListGet(list, 0));
-
-    // printf("\n");
-
-    // printf("linked list: ");
-    // for (int i = 0; i < list->size; i++) {
-    //     printf("%d ", myLinkedListGet(list, i));
-    // }
-    // printf("\n");
-
-    // myLinkedListFree(list);
 
     /* NOTE: Case2 */
     // /* ["MyLinkedList","addAtHead","deleteAtIndex","addAtHead","addAtHead","addAtHead","addAtHead","addAtHead","addAtTail","get","deleteAtIndex","deleteAtIndex"] */
