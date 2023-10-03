@@ -57,32 +57,32 @@ struct Node {
 #if LEVEL_ORDER_METHOD_EN
 
 struct Node *connect(struct Node *root) {
-    if (root == NULL) {
+    if (root == NULL) {                             /* 如果根节点为空，直接返回 */
         return root;
     }
 
-    struct Node *queue[MAX_QUEUE_SIZE];
-    int left = 0, right = 0;
-    queue[right++] = root;
+    struct Node *queue[MAX_QUEUE_SIZE];             /* 定义队列 */
+    int left = 0, right = 0;                        /* 定义队列的左右指针 */
+    queue[right++] = root;                          /* 根节点入队 */
 
-    while (left < right) {
-        int size = right - left;
-        for (int i = 0; i < size; i++) {
-            struct Node *node = queue[left++];
+    while (left < right) {                          /* 队列不为空时，循环遍历 */
+        int size = right - left;                        /* 记录当前层的节点个数 */
+        for (int i = 0; i < size; i++) {                /* 遍历当前层的节点 */
+            struct Node *node = queue[left++];              /* 队首元素出队 */
 
-            if (i < size - 1) {
-                node->next = queue[left];
+            if (i < size - 1) {                             /* 如果不是当前层的最后一个节点 */
+                node->next = queue[left];                       /* 将队首元素的 next 指针指向队首元素的下一个元素 */
             }
 
-            if (node->left != NULL) {
+            if (node->left != NULL) {                       /* 如果左节点不为空，左节点入队 */
                 queue[right++] = node->left;
             }
-            if (node->right != NULL) {
+            if (node->right != NULL) {                      /* 如果右节点不为空，右节点入队 */
                 queue[right++] = node->right;
             }
         }
     }
-	return root;
+	return root;                                    /* 返回根节点 */
 }
 
 #endif /* LEVEL_ORDER_METHOD_EN */
