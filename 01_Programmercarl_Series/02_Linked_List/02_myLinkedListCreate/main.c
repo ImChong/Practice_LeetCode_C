@@ -148,11 +148,11 @@ void myLinkedListAddAtIndex(MyLinkedList *obj, int index, int val) {
  * @return {void}
  */
 void myLinkedListDeleteAtIndex(MyLinkedList *obj, int index) {
-    if (index < 0 || index >= obj->size) {       /* 输入校验 */
+    if (index < 0 || index >= obj->size) {      /* 输入校验 */
         return;
     }
 
-    struct ListNode *curr = obj->head;                 /* 获取当前链表头节点的指针 */
+    struct ListNode *curr = obj->head;          /* 获取当前链表头节点的指针 */
     if (index == 0) {                           /* 如果删除头节点 */
         obj->head = curr->next;                    /* 将虚拟头节点所指向的链表头节点指向当前指针的下一节点 */
     } else {                                    /* 如果删除中间节点 */
