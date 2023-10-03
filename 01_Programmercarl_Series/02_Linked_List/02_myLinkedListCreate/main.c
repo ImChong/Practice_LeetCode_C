@@ -1,27 +1,60 @@
-/* 707. 设计链表：https://leetcode.cn/problems/design-linked-list/ */
-/* https://programmercarl.com/0707.%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html */
-
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\02_myLinkedListCreate\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-16 08:57:10
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-10-03 12:08:01
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 707. 设计链表：https://leetcode.cn/problems/design-linked-list/
+ * https://programmercarl.com/0707.%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 GLOBAL VARIABLES                               */
+/*                                                                                */
+/**********************************************************************************/
 struct ListNode {
-    int val;                /* 节点数值 */
-    struct ListNode *next;  /* 下一节点地址 */
+    int val;                    /* 节点数值 */
+    struct ListNode *next;      /* 下一节点地址 */
 };
 
 typedef struct {
-    struct ListNode *head;     /* 链表虚拟头节点 */
-    int size;           /* 链表长度 */
+    struct ListNode *head;      /* 链表虚拟头节点 */
+    int size;                   /* 链表长度 */
 } MyLinkedList;
 
-MyLinkedList* myLinkedListCreate() {
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
+/**
+ * @description: 创建链表
+ * =================================================================================
+ * @return {*}
+ */
+MyLinkedList *myLinkedListCreate() {
     MyLinkedList *obj = (MyLinkedList*)malloc(sizeof(MyLinkedList));    /* 为虚拟头节点分配空间 */
     obj->head = NULL;       /* 初始化链表头 */
     obj->size = 0;          /* 初始化链表长度 */
     return obj;             /* 返回虚拟头节点 */
 }
 
-int myLinkedListGet(MyLinkedList* obj, int index) {
+/**
+ * @description: 获取指定索引的节点数值
+ * =================================================================================
+ * @param {MyLinkedList} *obj
+ * @param {int} index
+ * @return {*}
+ */
+int myLinkedListGet(MyLinkedList *obj, int index) {
     if (index < 0 || index >= obj->size) {      /* 输入校验 */
         return -1;
     }
@@ -32,7 +65,14 @@ int myLinkedListGet(MyLinkedList* obj, int index) {
     return curr->val;               /* 返回对应节点数值 */
 }
 
-void myLinkedListAddAtHead(MyLinkedList* obj, int val) {
+/**
+ * @description: 在链表头部添加新节点
+ * =================================================================================
+ * @param {MyLinkedList} *obj
+ * @param {int} val
+ * @return {*}
+ */
+void myLinkedListAddAtHead(MyLinkedList *obj, int val) {
     struct ListNode *newHead = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新头节点分配空间*/
     newHead->val = val;             /* 为链表新头节点赋值 */
     newHead->next = obj->head;      /* 将链表新头节点的下一节点设置为链表旧头节点 */
@@ -40,7 +80,14 @@ void myLinkedListAddAtHead(MyLinkedList* obj, int val) {
     obj->size++;                    /* 链表长度 + 1 */
 }
 
-void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
+/**
+ * @description: 在链表尾部添加新节点
+ * =================================================================================
+ * @param {MyLinkedList} *obj
+ * @param {int} val
+ * @return {*}
+ */
+void myLinkedListAddAtTail(MyLinkedList *obj, int val) {
     struct ListNode *newTail = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新尾节点分配空间*/
     newTail->val = val;             /* 为链表新尾节点赋值 */
     newTail->next = NULL;           /* 尾节点的下一节点为 NULL*/
@@ -57,7 +104,15 @@ void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
     obj->size++;                        /* 链表长度 + 1 */
 }
 
-void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
+/**
+ * @description: 在指定索引处插入新节点
+ * =================================================================================
+ * @param {MyLinkedList} *obj
+ * @param {int} index
+ * @param {int} val
+ * @return {*}
+ */
+void myLinkedListAddAtIndex(MyLinkedList *obj, int index, int val) {
     if (index < 0 || index > obj->size) {       /* 输入校验 */
         return;
     }
@@ -85,6 +140,13 @@ void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
     obj->size++;                                                /* 链表长度 + 1 */
 }
 
+/**
+ * @description: 删除指定索引的节点
+ * =================================================================================
+ * @param {MyLinkedList*} obj
+ * @param {int} index
+ * @return {*}
+ */
 void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
     if (index < 0 || index >= obj->size) {       /* 输入校验 */
         return;
@@ -106,6 +168,12 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
     obj->size--;                                /* 链表长度 - 1 */
 }
 
+/**
+ * @description: 释放链表内存空间
+ * =================================================================================
+ * @param {MyLinkedList*} obj
+ * @return {*}
+ */
 void myLinkedListFree(MyLinkedList* obj) {
     struct ListNode *curr = obj->head;     /* 获取当前链表头节点的指针 */
     while (curr != NULL) {          /* 当指针所指的节点不为NULL时 */
@@ -116,7 +184,17 @@ void myLinkedListFree(MyLinkedList* obj) {
     free(obj);                      /* 释放虚拟头节点的内存空间 */
 }
 
-/* 打印链表 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                 UTILITY FUNCTIONS                              */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 打印链表
+ * =================================================================================
+ * @param {MyLinkedList} *list
+ * @return {*}
+ */
 void printLinkedList(MyLinkedList *list) {
     printf("linked list (size: %d): ", list->size);
     for (int i = 0; i < list->size; i++) {
@@ -125,7 +203,18 @@ void printLinkedList(MyLinkedList *list) {
     printf("\n");
 }
 
-/* 主函数 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                  MAIN FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
 int main(int argc, const char* argv[]) {
     /* NOTE: Case1 */
     // MyLinkedList *list = myLinkedListCreate();
