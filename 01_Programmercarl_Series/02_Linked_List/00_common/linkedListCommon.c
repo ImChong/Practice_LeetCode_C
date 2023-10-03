@@ -1,13 +1,40 @@
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\linkedListCommon.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-16 08:57:10
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-10-03 12:01:18
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 链表公共函数
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 GLOBAL VARIABLES                               */
+/*                                                                                */
+/**********************************************************************************/
 /* 节点定义 */
 struct ListNode {
     int val;
     struct ListNode *next;
 };
 
-/* 创建链表，不使用虚拟头结点 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                 UTILITY FUNCTIONS                              */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 创建链表，不使用虚拟头结点
+ * =================================================================================
+ * @param {int} *array
+ * @param {int} size
+ * @return {*}
+ */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
@@ -30,7 +57,13 @@ struct ListNode *createList(int *array, int size) {
     return head;
 }
 
-/* 添加元素至链表 */
+/**
+ * @description: 添加元素至链表
+ * =================================================================================
+ * @param {ListNode} *head
+ * @param {int} val
+ * @return {*}
+ */
 struct ListNode *appendToList(struct ListNode *head, int val) {
     struct ListNode *newNode = (struct ListNode *)malloc(sizeof(struct ListNode));
     newNode->val = val;
@@ -47,7 +80,12 @@ struct ListNode *appendToList(struct ListNode *head, int val) {
     return head;
 }
 
-/* 打印链表 */
+/**
+ * @description: 打印链表
+ * =================================================================================
+ * @param {ListNode} *listPtr
+ * @return {*}
+ */
 void printList(struct ListNode *listPtr) {
     while (listPtr != NULL) {
         printf("%d ", listPtr->val);
@@ -56,9 +94,19 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
-/* 主函数 */
-int main()
-{
+/**********************************************************************************/
+/*                                                                                */
+/*                                  MAIN FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
+int main(int argc, const char *argv[]) {
     int arr[] = {1, 2, 3, 4, 5};
     struct ListNode *ansList = createList(arr, 5);
     ansList = appendToList(ansList, 6);
