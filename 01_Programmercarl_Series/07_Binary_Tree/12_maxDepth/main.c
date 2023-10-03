@@ -114,7 +114,7 @@ void initQueue(struct QueueNode **queue, struct TreeNode *node) {
  * @return {int} depth              最大深度
  */
 int maxDepth(struct TreeNode* root) {
-    if (root == NULL) {
+    if (root == NULL) {                                         /* 如果根节点为 NULL 则返回 0 */
         return 0;
     }
     struct QueueNode *left, *right;
