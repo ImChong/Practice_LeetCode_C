@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 08:47:34
+ * @LastEditTime : 2023-10-03 08:49:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -144,6 +144,15 @@ void printTree(struct Node *root) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
+    /*
+     * 创建以下树结构
+     *      1
+     *     / \
+     *    2   3
+     *   / \ / \
+     *  4  5 6  7
+     */
+    struct Node *root = newNode(1);
 
     return 0;
 }
