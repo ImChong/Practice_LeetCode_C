@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\10_connect\main_chong.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\10_connect\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 08:53:25
+ * @LastEditTime : 2023-10-03 08:58:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -65,7 +65,7 @@ struct Node *connect(struct Node *root) {
     int left = 0, right = 0;
     queue[right++] = root;
     /* TODO */
-	return NULL;
+	return root;
 }
 
 #endif /* LEVEL_ORDER_METHOD_EN */
