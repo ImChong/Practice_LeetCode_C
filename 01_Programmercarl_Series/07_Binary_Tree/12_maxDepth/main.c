@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 10:44:53
+ * @LastEditTime : 2023-10-03 10:53:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -102,7 +102,7 @@ struct QueueNode {
  * @return {void}
  */
 void initQueue(struct QueueNode **queue, struct TreeNode *node) {
-    *queue = (struct QueueNode *)malloc(sizeof(struct QueueNode));
+    *queue = (struct QueueNode *)malloc(sizeof(struct QueueNode));      /* 申请内存空间 */
     (*queue)->node = node;
     (*queue)->next = NULL;
 }
@@ -140,6 +140,7 @@ int maxDepth(struct TreeNode* root) {
         sz += tmp;
         ans++;
     }
+    free(left);
     return ans;
 }
 #endif /* BFS_METHOD_EN */
