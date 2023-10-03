@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 10:20:24
+ * @LastEditTime : 2023-10-03 10:25:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -20,8 +20,8 @@
 /*                                                                                */
 /**********************************************************************************/
 /* 方法使能宏，注意一次只能使能一个方法，否则会出现函数重定义告警 */
-#define DFS_METHOD_EN 1     /* 深度优先搜索方法使能 */
-#define BFS_METHOD_EN 0     /* 广度优先搜索方法使能 */
+#define DFS_METHOD_EN 0     /* 深度优先搜索方法使能 */
+#define BFS_METHOD_EN 1     /* 广度优先搜索方法使能 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -88,10 +88,24 @@ int maxDepth(struct TreeNode* root) {
 /* ============================================================================== */
 /* ============================================================================== */
 #if BFS_METHOD_EN
+/* 队列节点 */
 struct QueueNode {
-    struct TreeNode *node;
-    struct QueueNode *next;
+    struct TreeNode *node;      /* 节点指针 */
+    struct QueueNode *next;     /* 下一个节点指针 */
 };
+
+/**
+ * @description: 初始化队列
+ * =================================================================================
+ * @param {struct QueueNode} *
+ * @param {struct TreeNode} *node
+ * @return {void}
+ */
+void initQueue(struct QueueNode **queue, struct TreeNode *node) {
+    *queue = (struct QueueNode *)malloc(sizeof(struct QueueNode));
+    (*queue)->node = node;
+    (*queue)->next = NULL;
+}
 
 /**
  * @description: 二叉树的最大深度 - 广度优先搜索
