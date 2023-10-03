@@ -113,7 +113,7 @@ void initQueue(struct QueueNode **queue, struct TreeNode *node) {
  * @param {struct TreeNode*} root   根节点
  * @return {int} depth              最大深度
  */
-int maxDepth(struct TreeNode* root){
+int maxDepth(struct TreeNode* root) {
     /* TODO */
     return 0;
 }
