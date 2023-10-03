@@ -1,13 +1,14 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\12_maxDepth\main_chong.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\12_maxDepth\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-26 17:42:18
+ * @LastEditTime : 2023-10-03 09:20:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 104. 二叉树的最大深度: https://leetcode.cn/problems/maximum-depth-of-binary-tree/
+ * 解法参考: https://leetcode.cn/problems/maximum-depth-of-binary-tree/solutions/349250/er-cha-shu-de-zui-da-shen-du-by-leetcode-solution/
  */
 #include <stdio.h>
 
@@ -24,9 +25,11 @@ struct TreeNode {
 };
 
 /**********************************************************************************/
-/*                                                                                */
-/*                                 TARGET FUNCTION                                */
-/*                                                                                */
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
 /**********************************************************************************/
 /* TODO: 目标函数 */
 
@@ -34,7 +37,7 @@ struct TreeNode {
 /* ============================================================================== */
 
 int maxDepth(struct TreeNode* root){
-
+    /* TODO */
     return 0;
 }
 
