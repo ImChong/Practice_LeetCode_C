@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 10:28:34
+ * @LastEditTime : 2023-10-03 10:44:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -114,8 +114,33 @@ void initQueue(struct QueueNode **queue, struct TreeNode *node) {
  * @return {int} depth              最大深度
  */
 int maxDepth(struct TreeNode* root) {
-    /* TODO */
-    return 0;
+    if (root == NULL) {
+        return 0;
+    }
+    struct QueueNode *left, *right;
+    initQueue(&left, root);
+    right = left;
+    int ans = 0, sz = 1, tmp = 0;
+    while (left != NULL) {
+        tmp = 0;
+        while (sz > 0) {
+            if (left->node->left != NULL) {
+                initQueue(&right->next, left->node->left);
+                right = right->next;
+                tmp++;
+            }
+            if (left->node->right != NULL) {
+                initQueue(&right->next, left->node->right);
+                right = right->next;
+                tmp++;
+            }
+            left = left->next;
+            sz--;
+        }
+        sz += tmp;
+        ans++;
+    }
+    return ans;
 }
 #endif /* BFS_METHOD_EN */
 
