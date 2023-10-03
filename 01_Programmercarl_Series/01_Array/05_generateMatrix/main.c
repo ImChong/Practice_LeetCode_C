@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 11:59:27
+ * @LastEditTime : 2023-10-03 11:59:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,7 +35,6 @@ int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
     return 0;
 }
 
-
 /**********************************************************************************/
 /*                                                                                */
 /*                                  MAIN FUNCTION                                 */
@@ -49,8 +48,6 @@ int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-
-
 
     return 0;
 }
