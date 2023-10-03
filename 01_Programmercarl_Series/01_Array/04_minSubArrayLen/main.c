@@ -1,10 +1,34 @@
-/* 209.长度最小的子数组：https://leetcode.cn/problems/minimum-size-subarray-sum/ */
-/* https://programmercarl.com/0209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.html */
-
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\01_Array\04_minSubArrayLen\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-16 08:57:10
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-10-03 11:58:28
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 209.长度最小的子数组：https://leetcode.cn/problems/minimum-size-subarray-sum/
+ * https://programmercarl.com/0209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.html
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
 
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
+/**
+ * @description:
+ * =================================================================================
+ * @param {int} target
+ * @param {int} *nums
+ * @param {int} numsSize
+ * @return {*}
+ */
 int minSubArrayLen(int target, int *nums, int numsSize) {
     int minLen = INT_MAX;       /* 记录最小长度 */
     int sum = 0;                /* 记录子数组的合 */
@@ -21,7 +45,19 @@ int minSubArrayLen(int target, int *nums, int numsSize) {
     return minLen == INT_MAX ? 0 : minLen;  /* 返回最小长度 */
 }
 
-int main(int argc, char const *argv[]) {
+/**********************************************************************************/
+/*                                                                                */
+/*                                  MAIN FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
+int main(int argc, const char *argv[]) {
     int nums[] = {2, 3, 1, 2, 4, 3};
     int numsSize = sizeof(nums) / sizeof(nums[0]);
     int s = 7;
