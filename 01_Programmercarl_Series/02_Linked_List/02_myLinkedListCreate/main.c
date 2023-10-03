@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 12:42:18
+ * @LastEditTime : 2023-10-03 12:44:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -208,13 +208,15 @@ void printLinkedList(MyLinkedList *list) {
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-/* TODO */
 /**
  * @description:
  * =================================================================================
  * @return {void}
  */
 void test_1(void) {
+    printf("==================== \n");
+    printf("test_1: \n");
+
     MyLinkedList *list = myLinkedListCreate();
 
     myLinkedListAddAtHead(list, 1);
@@ -243,13 +245,15 @@ void test_1(void) {
     myLinkedListFree(list);
 }
 
-/* TODO */
 /**
  * @description:
  * =================================================================================
  * @return {void}
  */
 void test_2(void) {
+    printf("==================== \n");
+    printf("test_2: \n");
+
     /* ["MyLinkedList","addAtHead","deleteAtIndex","addAtHead","addAtHead","addAtHead","addAtHead","addAtHead","addAtTail","get","deleteAtIndex","deleteAtIndex"] */
     /* [[],[2],[1],[2],[7],[3],[2],[5],[5],[5],[6],[4]] */
 
@@ -276,14 +280,15 @@ void test_2(void) {
     myLinkedListFree(list);
 }
 
-/* TODO */
 /**
  * @description:
  * =================================================================================
  * @return {void}
  */
 void test_3(void) {
-    /* NOTE: Case3 */
+    printf("==================== \n");
+    printf("test_3: \n");
+
     /* ["MyLinkedList","addAtHead","get","addAtHead","addAtHead","deleteAtIndex","addAtHead","get","get","get","addAtHead","deleteAtIndex"] */
     /* [[],[4],[1],[1],[5],[3],[7],[3],[3],[3],[1],[4]] */
     /* [null,null,-1,null,null,null,null,4,4,4,null,null] */
@@ -327,11 +332,8 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-
-
-
-
-
-
+    test_1();
+    test_2();
+    test_3();
     return 0;
 }
