@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 08:37:33
+ * @LastEditTime : 2023-10-03 08:44:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -61,7 +61,9 @@ struct Node *connect(struct Node *root) {
         return root;
     }
 
-
+    struct Node *queue[MAX_QUEUE_SIZE];
+    int left = 0, right = 0;
+    queue[right++] = root;
     /* TODO */
 	return NULL;
 }
@@ -90,6 +92,26 @@ struct Node *connect(struct Node *root) {
 }
 
 #endif /* NEXT_POINTER_METHOD_EN */
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                 HELPER FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description:
+ * =================================================================================
+ * @param {int} val                 节点的值
+ * @return {struct Node} *node      新建的节点
+ */
+struct Node *newNode(int val) {
+    struct Node *node = (struct Node*)malloc(sizeof(struct Node));
+    node->val = val;
+    node->left = NULL;
+    node->right = NULL;
+    node->next = NULL;
+    return node;
+}
 
 /**********************************************************************************/
 /*                                                                                */
