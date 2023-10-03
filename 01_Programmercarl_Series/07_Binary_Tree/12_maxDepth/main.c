@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 10:53:08
+ * @LastEditTime : 2023-10-03 10:55:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -103,8 +103,8 @@ struct QueueNode {
  */
 void initQueue(struct QueueNode **queue, struct TreeNode *node) {
     *queue = (struct QueueNode *)malloc(sizeof(struct QueueNode));      /* 申请内存空间 */
-    (*queue)->node = node;
-    (*queue)->next = NULL;
+    (*queue)->node = node;                                              /* 节点指针赋值 */
+    (*queue)->next = NULL;                                              /* 下一个节点指针赋值 */
 }
 
 /**
