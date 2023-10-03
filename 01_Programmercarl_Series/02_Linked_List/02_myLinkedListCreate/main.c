@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 12:38:37
+ * @LastEditTime : 2023-10-03 12:39:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -171,17 +171,17 @@ void myLinkedListDeleteAtIndex(MyLinkedList *obj, int index) {
 /**
  * @description: 释放链表内存空间
  * =================================================================================
- * @param {MyLinkedList} *obj
- * @return {*}
+ * @param {MyLinkedList} *obj       虚拟头节点
+ * @return {void}
  */
 void myLinkedListFree(MyLinkedList *obj) {
-    struct ListNode *curr = obj->head;     /* 获取当前链表头节点的指针 */
-    while (curr != NULL) {          /* 当指针所指的节点不为NULL时 */
-        struct ListNode *tmp = curr;           /* 获取当前节点的指针 */
-        curr = curr->next;              /* 指针向后移动一位 */
-        free(tmp);                      /* 释放当前指针所指节点的内存空间 */
+    struct ListNode *curr = obj->head;      /* 获取当前链表头节点的指针 */
+    while (curr != NULL) {                  /* 当指针所指的节点不为NULL时 */
+        struct ListNode *tmp = curr;            /* 获取当前节点的指针 */
+        curr = curr->next;                      /* 指针向后移动一位 */
+        free(tmp);                              /* 释放当前指针所指节点的内存空间 */
     }
-    free(obj);                      /* 释放虚拟头节点的内存空间 */
+    free(obj);                              /* 释放虚拟头节点的内存空间 */
 }
 
 /**********************************************************************************/
