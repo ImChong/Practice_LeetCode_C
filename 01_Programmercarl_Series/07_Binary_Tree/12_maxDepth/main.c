@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 09:56:29
+ * @LastEditTime : 2023-10-03 09:58:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -79,6 +79,24 @@ int maxDepth(struct TreeNode* root){
     return 0;
 }
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 HELPER FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 新建节点
+ * =================================================================================
+ * @param {int} val                     节点值
+ * @return {struct TreeNode} *node      新建节点
+ */
+struct TreeNode *newNode(int val) {
+    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));
+    node->val = val;
+    node->left = NULL;
+    node->right = NULL;
+    return node;
+}
 
 /**********************************************************************************/
 /*                                                                                */
@@ -92,6 +110,7 @@ int maxDepth(struct TreeNode* root){
  */
 void test_1(void) {
     /* 预期结果 */
+    int expect = 3;
 
     /* 构建二叉树 */
 
