@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 08:44:26
+ * @LastEditTime : 2023-10-03 08:47:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -99,7 +99,7 @@ struct Node *connect(struct Node *root) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 新建节点
  * =================================================================================
  * @param {int} val                 节点的值
  * @return {struct Node} *node      新建的节点
@@ -111,6 +111,24 @@ struct Node *newNode(int val) {
     node->right = NULL;
     node->next = NULL;
     return node;
+}
+
+/**
+ * @description: 打印树节点 next 指针的值
+ * =================================================================================
+ * @param {struct Node} *root       树的根节点
+ * @return {void}
+ */
+void printTree(struct Node *root) {
+    if (!root) return;
+    printf("%d -> ", root->val);
+    if (root->next) {
+        printf("%d\n", root->next->val);
+    } else {
+        printf("NULL\n");
+    }
+    printTree(root->left);
+    printTree(root->right);
 }
 
 /**********************************************************************************/
