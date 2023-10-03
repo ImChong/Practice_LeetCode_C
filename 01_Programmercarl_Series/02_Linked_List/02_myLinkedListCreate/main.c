@@ -68,9 +68,9 @@ int myLinkedListGet(MyLinkedList *obj, int index) {
 /**
  * @description: 在链表头部添加新节点
  * =================================================================================
- * @param {MyLinkedList} *obj
- * @param {int} val
- * @return {*}
+ * @param {MyLinkedList} *obj       虚拟头节点
+ * @param {int} val                 新节点数值
+ * @return {void}
  */
 void myLinkedListAddAtHead(MyLinkedList *obj, int val) {
     struct ListNode *newHead = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新头节点分配空间*/
@@ -83,9 +83,9 @@ void myLinkedListAddAtHead(MyLinkedList *obj, int val) {
 /**
  * @description: 在链表尾部添加新节点
  * =================================================================================
- * @param {MyLinkedList} *obj
- * @param {int} val
- * @return {*}
+ * @param {MyLinkedList} *obj       虚拟头节点
+ * @param {int} val                 新节点数值
+ * @return {void}
  */
 void myLinkedListAddAtTail(MyLinkedList *obj, int val) {
     struct ListNode *newTail = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新尾节点分配空间*/
@@ -107,10 +107,10 @@ void myLinkedListAddAtTail(MyLinkedList *obj, int val) {
 /**
  * @description: 在指定索引处插入新节点
  * =================================================================================
- * @param {MyLinkedList} *obj
- * @param {int} index
- * @param {int} val
- * @return {*}
+ * @param {MyLinkedList} *obj       虚拟头节点
+ * @param {int} index               索引
+ * @param {int} val                 新节点数值
+ * @return {void}
  */
 void myLinkedListAddAtIndex(MyLinkedList *obj, int index, int val) {
     if (index < 0 || index > obj->size) {       /* 输入校验 */
