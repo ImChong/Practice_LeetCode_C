@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 12:08:01
+ * @LastEditTime : 2023-10-03 12:09:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -143,11 +143,11 @@ void myLinkedListAddAtIndex(MyLinkedList *obj, int index, int val) {
 /**
  * @description: 删除指定索引的节点
  * =================================================================================
- * @param {MyLinkedList*} obj
+ * @param {MyLinkedList} *obj
  * @param {int} index
  * @return {*}
  */
-void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
+void myLinkedListDeleteAtIndex(MyLinkedList *obj, int index) {
     if (index < 0 || index >= obj->size) {       /* 输入校验 */
         return;
     }
@@ -171,10 +171,10 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
 /**
  * @description: 释放链表内存空间
  * =================================================================================
- * @param {MyLinkedList*} obj
+ * @param {MyLinkedList} *obj
  * @return {*}
  */
-void myLinkedListFree(MyLinkedList* obj) {
+void myLinkedListFree(MyLinkedList *obj) {
     struct ListNode *curr = obj->head;     /* 获取当前链表头节点的指针 */
     while (curr != NULL) {          /* 当指针所指的节点不为NULL时 */
         struct ListNode *tmp = curr;           /* 获取当前节点的指针 */
@@ -205,6 +205,68 @@ void printLinkedList(MyLinkedList *list) {
 
 /**********************************************************************************/
 /*                                                                                */
+/*                                  TEST FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/* TODO */
+/**
+ * @description:
+ * =================================================================================
+ * @return {*}
+ */
+void test_1(void) {
+    /* 预期结果 */
+
+    /* 构建二叉树 */
+
+    /* 实际结果 */
+
+    /* 比较结果 */
+
+    /* 释放内存空间 */
+
+}
+
+/* TODO */
+/**
+ * @description:
+ * =================================================================================
+ * @return {*}
+ */
+void test_2(void) {
+    /* 预期结果 */
+
+    /* 构建二叉树 */
+
+    /* 实际结果 */
+
+    /* 比较结果 */
+
+    /* 释放内存空间 */
+
+}
+
+/* TODO */
+/**
+ * @description:
+ * =================================================================================
+ * @return {*}
+ */
+void test_3(void) {
+    /* 预期结果 */
+
+    /* 构建二叉树 */
+
+    /* 实际结果 */
+
+    /* 比较结果 */
+
+    /* 释放内存空间 */
+
+}
+
+/**********************************************************************************/
+/*                                                                                */
 /*                                  MAIN FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
@@ -215,7 +277,7 @@ void printLinkedList(MyLinkedList *list) {
  * @param {char} *argv[]    程序入参字符串数组
  * @return {int}            程序运行状态
  */
-int main(int argc, const char* argv[]) {
+int main(int argc, const char *argv[]) {
     /* NOTE: Case1 */
     // MyLinkedList *list = myLinkedListCreate();
 
