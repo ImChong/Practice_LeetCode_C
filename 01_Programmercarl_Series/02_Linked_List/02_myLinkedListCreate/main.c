@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 12:09:55
+ * @LastEditTime : 2023-10-03 12:36:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,7 +38,7 @@ typedef struct {
 /**
  * @description: 创建链表
  * =================================================================================
- * @return {*}
+ * @return {MyLinkedList} *obj      返回虚拟头节点
  */
 MyLinkedList *myLinkedListCreate() {
     MyLinkedList *obj = (MyLinkedList*)malloc(sizeof(MyLinkedList));    /* 为虚拟头节点分配空间 */
@@ -50,19 +50,19 @@ MyLinkedList *myLinkedListCreate() {
 /**
  * @description: 获取指定索引的节点数值
  * =================================================================================
- * @param {MyLinkedList} *obj
- * @param {int} index
- * @return {*}
+ * @param {MyLinkedList} *obj       虚拟头节点
+ * @param {int} index               索引
+ * @return {int} ans                返回指定索引的节点数值
  */
 int myLinkedListGet(MyLinkedList *obj, int index) {
     if (index < 0 || index >= obj->size) {      /* 输入校验 */
         return -1;
     }
-    struct ListNode *curr = obj->head;     /* 指针指向链表头节点 */
-    while (index-- > 0) {           /* 移动链表至指定索引，index > 0 因为初始的指针已经指向0索引 */
+    struct ListNode *curr = obj->head;          /* 指针指向链表头节点 */
+    while (index-- > 0) {                       /* 移动链表至指定索引，index > 0 因为初始的指针已经指向0索引 */
         curr = curr->next;
     }
-    return curr->val;               /* 返回对应节点数值 */
+    return curr->val;                           /* 返回对应节点数值 */
 }
 
 /**
