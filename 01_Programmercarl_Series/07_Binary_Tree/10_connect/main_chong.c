@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 08:49:04
+ * @LastEditTime : 2023-10-03 08:53:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -119,7 +119,7 @@ struct Node *newNode(int val) {
  * @param {struct Node} *root       树的根节点
  * @return {void}
  */
-void printTree(struct Node *root) {
+void printTreeNext(struct Node *root) {
     if (!root) return;
     printf("%d -> ", root->val);
     if (root->next) {
@@ -127,8 +127,8 @@ void printTree(struct Node *root) {
     } else {
         printf("NULL\n");
     }
-    printTree(root->left);
-    printTree(root->right);
+    printTreeNext(root->left);
+    printTreeNext(root->right);
 }
 
 /**********************************************************************************/
@@ -153,6 +153,31 @@ int main(int argc, const char *argv[]) {
      *  4  5 6  7
      */
     struct Node *root = newNode(1);
+    root->left = newNode(2);
+    root->right = newNode(3);
+    root->left->left = newNode(4);
+    root->left->right = newNode(5);
+    root->right->left = newNode(6);
+    root->right->right = newNode(7);
+
+    /*
+     * 预期结果
+     *        1 > NULL
+     *     /     \
+     *    2   >   3 > NULL
+     *   / \     / \
+     *  4 > 5 > 6 > 7 > NULL
+     */
+    root = connect(root);
+    printTreeNext(root);
+
+    free(root->left->left);
+    free(root->left->right);
+    free(root->right->left);
+    free(root->right->right);
+    free(root->left);
+    free(root->right);
+    free(root);
 
     return 0;
 }
