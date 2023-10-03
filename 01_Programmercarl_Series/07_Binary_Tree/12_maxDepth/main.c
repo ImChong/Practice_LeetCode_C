@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 10:05:05
+ * @LastEditTime : 2023-10-03 10:07:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -142,10 +142,14 @@ void test_1(void) {
     int actual = maxDepth(root);
 
     /* 比较结果 */
-
+    validateAnswer('1', expect, actual);
 
     /* 释放内存空间 */
-
+    free(root->right->right);
+    free(root->right->left);
+    free(root->right);
+    free(root->left);
+    free(root);
 }
 
 /**
