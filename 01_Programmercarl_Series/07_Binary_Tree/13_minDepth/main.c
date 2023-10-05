@@ -133,6 +133,7 @@ void test_2(void) {
 
     /* 构建二叉树 */
     struct TreeNode *root = newNode(2);
+    /* TODO */
 
     /* 实际结果 */
     int actual = minDepth(root);
