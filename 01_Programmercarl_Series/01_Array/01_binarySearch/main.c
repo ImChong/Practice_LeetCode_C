@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 11:53:32
+ * @LastEditTime : 2023-10-08 22:16:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -20,12 +20,12 @@
 /**********************************************************************************/
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 二分查找
  * =================================================================================
- * @param {int} *nums
- * @param {int} numsSize
- * @param {int} target
- * @return {int} ans
+ * @param {int} *nums       有序数组
+ * @param {int} numsSize    数组大小
+ * @param {int} target      目标值
+ * @return {int} ans        目标值在数组中的索引
  */
 int search(int *nums, int numsSize, int target) {
     int left = 0;
