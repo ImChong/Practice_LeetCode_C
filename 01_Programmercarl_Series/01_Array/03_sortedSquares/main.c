@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 11:57:16
+ * @LastEditTime : 2023-10-08 22:18:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,12 +21,12 @@
 /**********************************************************************************/
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 有序数组的平方
  * =================================================================================
- * @param {int} *nums
- * @param {int} numsSize
- * @param {int} *returnSize
- * @return {*}
+ * @param {int} *nums           有序数组
+ * @param {int} numsSize        数组大小
+ * @param {int} *returnSize     返回数组大小
+ * @return {int} *result        返回数组
  */
 int *sortedSquares(int *nums, int numsSize, int *returnSize) {
     int *result = (int *)malloc(numsSize * sizeof(int));    /* 创建返回数组 */
@@ -51,7 +51,6 @@ int *sortedSquares(int *nums, int numsSize, int *returnSize) {
     }
     return result;
 }
-
 
 /**********************************************************************************/
 /*                                                                                */
