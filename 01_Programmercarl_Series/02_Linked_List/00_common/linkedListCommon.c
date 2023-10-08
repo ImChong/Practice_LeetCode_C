@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 12:01:18
+ * @LastEditTime : 2023-10-08 22:22:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,9 +31,9 @@ struct ListNode {
 /**
  * @description: 创建链表，不使用虚拟头结点
  * =================================================================================
- * @param {int} *array
- * @param {int} size
- * @return {*}
+ * @param {int} *array                  数组
+ * @param {int} size                    数组大小
+ * @return {struct ListNode} *head      头节点指针
  */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
@@ -60,9 +60,9 @@ struct ListNode *createList(int *array, int size) {
 /**
  * @description: 添加元素至链表
  * =================================================================================
- * @param {ListNode} *head
- * @param {int} val
- * @return {*}
+ * @param {ListNode} *head              头节点指针
+ * @param {int} val                     元素值
+ * @return {struct ListNode} *head      头节点指针
  */
 struct ListNode *appendToList(struct ListNode *head, int val) {
     struct ListNode *newNode = (struct ListNode *)malloc(sizeof(struct ListNode));
@@ -83,8 +83,8 @@ struct ListNode *appendToList(struct ListNode *head, int val) {
 /**
  * @description: 打印链表
  * =================================================================================
- * @param {ListNode} *listPtr
- * @return {*}
+ * @param {ListNode} *listPtr       链表指针
+ * @return {void}
  */
 void printList(struct ListNode *listPtr) {
     while (listPtr != NULL) {
