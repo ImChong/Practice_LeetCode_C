@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 12:03:26
+ * @LastEditTime : 2023-10-08 22:23:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,7 +34,7 @@ struct ListNode {
  * =================================================================================
  * @param {int} *array
  * @param {int} size
- * @return {*}
+ * @return {struct ListNode} *head
  */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
@@ -62,7 +62,7 @@ struct ListNode *createList(int *array, int size) {
  * @description: 打印链表
  * =================================================================================
  * @param {ListNode} *listPtr
- * @return {*}
+ * @return {void}
  */
 void printList(struct ListNode *listPtr) {
     while (listPtr != NULL) {
@@ -83,11 +83,11 @@ void printList(struct ListNode *listPtr) {
 /* ============================================================================== */
 /* ============================================================================== */
 /**
- * @description:
+ * @description: 移除链表元素
  * =================================================================================
  * @param {ListNode} *head
  * @param {int} val
- * @return {*}
+ * @return {struct ListNode} *head
  */
 struct ListNode *removeElements(struct ListNode *head, int val){
     struct ListNode dummy;      /* 创建虚拟头节点 */
