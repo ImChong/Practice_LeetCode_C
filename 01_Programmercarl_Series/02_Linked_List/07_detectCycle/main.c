@@ -1,16 +1,41 @@
-/* 142. 环形链表 II：https://leetcode.cn/problems/linked-list-cycle-ii/ */
-/* https://programmercarl.com/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.html */
-
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\07_detectCycle\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-16 08:57:10
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-10-08 22:35:45
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 142. 环形链表 II：https://leetcode.cn/problems/linked-list-cycle-ii/
+ * https://programmercarl.com/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.html
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 GLOBAL VARIABLES                               */
+/*                                                                                */
+/**********************************************************************************/
 /* 节点定义 */
 struct ListNode {
     int val;
     struct ListNode *next;
 };
 
-/* 创建链表，不使用虚拟头结点 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                 UTILITY FUNCTIONS                              */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 创建链表，不使用虚拟头结点
+ * =================================================================================
+ * @param {int} *array
+ * @param {int} size
+ * @return {struct ListNode} *head
+ */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
@@ -33,7 +58,12 @@ struct ListNode *createList(int *array, int size) {
     return head;
 }
 
-/* 打印链表 */
+/**
+ * @description: 打印链表
+ * =================================================================================
+ * @param {ListNode} *listPtr
+ * @return {void}
+ */
 void printList(struct ListNode *listPtr) {
     int i = 0;  /* 防止无限循环 */
     while (listPtr != NULL && i < 20) {
@@ -44,9 +74,22 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
-/* ==================================================================================================== */
-/* ==================================================================================================== */
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
 /* TODO: 固定的套路能找到环，但是为什么会找到开始入环的第一个节点需要探索一下。 */
+/* ============================================================================== */
+/* ============================================================================== */
+/**
+ * @description: 环形链表 II
+ * =================================================================================
+ * @param {ListNode} *head
+ * @return {*}
+ */
 struct ListNode *detectCycle(struct ListNode *head) {
     struct ListNode *fast = head;   /* 创建快指针，将指针指向头节点 */
     struct ListNode *slow = head;   /* 创建慢指针，将指针指向头节点 */
@@ -65,12 +108,21 @@ struct ListNode *detectCycle(struct ListNode *head) {
     }
     return NULL;                    /* 如果无环则返回NULL */
 }
-/* ==================================================================================================== */
-/* ==================================================================================================== */
 
-/* 主函数 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                  MAIN FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
 int main(int argc, const char* argv[]) {
-    /* NOTE: Case 1 */
+    /* Case 1 */
     printf("======== Case 1 ======== \n");
     int arr1[] = {3, 2, 0, -4};
     struct ListNode *ansList = createList(arr1, 4);
@@ -84,14 +136,14 @@ int main(int argc, const char* argv[]) {
     printList(ansList);
     printf("Pos: %d\n", detectCycle(ansList)->val);
 
-    /* NOTE: Case 2 */
+    /* Case 2 */
     printf("======== Case 2 ======== \n");
     struct ListNode b1 = {1, NULL}, b2 = {2, NULL};
     b1.next = &b2; b2.next = &b1;
     printList(&b1);
     printf("Pos: %d\n", detectCycle(&b1)->val);
 
-    /* NOTE: Case 3 */
+    /* Case 3 */
     printf("======== Case 3 ======== \n");
     int arr3[] = {3, 2, 0, -4, -5, -6};
     ansList = createList(arr3, 6);
