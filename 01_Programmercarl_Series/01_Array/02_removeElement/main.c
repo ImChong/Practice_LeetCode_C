@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 11:56:22
+ * @LastEditTime : 2023-10-08 22:18:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -20,22 +20,22 @@
 /**********************************************************************************/
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 移除元素
  * =================================================================================
- * @param {int} *nums
- * @param {int} numsSize
- * @param {int} val
- * @return {*}
+ * @param {int} *nums       数组
+ * @param {int} numsSize    数组大小
+ * @param {int} val         目标值
+ * @return {int} slow       慢指针
  */
 int removeElement(int *nums, int numsSize, int val) {
-    int quick, slow;            /* 初始化快慢指针 */
+    int quick, slow;                                        /* 初始化快慢指针 */
     for (quick = 0, slow = 0; quick < numsSize; quick++) {  /* 快指针遍历数组 */
-        if (nums[quick] != val) {       /* 当快指针所指向的值不等于val时*/
-            nums[slow] = nums[quick];   /* 慢指针的值等于快指针的值 */
-            slow++;                     /* 慢指针位置 + 1 */
+        if (nums[quick] != val) {                               /* 当快指针所指向的值不等于val时*/
+            nums[slow] = nums[quick];                           /* 慢指针的值等于快指针的值 */
+            slow++;                                             /* 慢指针位置 + 1 */
         }
     }
-    return slow;    /* 返回慢指针  */
+    return slow;                                            /* 返回慢指针  */
 }
 
 /**********************************************************************************/
