@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-08 22:27:31
+ * @LastEditTime : 2023-10-08 22:28:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,7 +29,13 @@ struct ListNode {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-/* 创建链表 */
+/**
+ * @description: 创建链表
+ * =================================================================================
+ * @param {int} *array
+ * @param {int} size
+ * @return {struct ListNode} *head
+ */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
@@ -52,7 +58,12 @@ struct ListNode *createList(int *array, int size) {
     return head;
 }
 
-/* 打印链表 */
+/**
+ * @description: 打印链表
+ * =================================================================================
+ * @param {ListNode} *listPtr
+ * @return {void}
+ */
 void printList(struct ListNode *listPtr) {
     printf("linked list: ");
     while (listPtr != NULL) {
@@ -69,7 +80,13 @@ void printList(struct ListNode *listPtr) {
 /***                                                                            ***/
 /**********************************************************************************/
 /**********************************************************************************/
-struct ListNode* swapPairs(struct ListNode* head){
+/**
+ * @description: 两两交换链表中的节点
+ * =================================================================================
+ * @param {ListNode*} head
+ * @return {struct ListNode} *head
+ */
+struct ListNode *swapPairs(struct ListNode* head){
     if (head == NULL || head->next == NULL) {   /* 如果当前头节点和头节点的下一节点不存在的话，返回当前头节点*/
         return head;
     }
