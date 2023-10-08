@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 11:59:53
+ * @LastEditTime : 2023-10-08 22:20:49
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,10 +25,10 @@
 /**
  * @description:
  * =================================================================================
- * @param {int} n
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
- * @return {*}
+ * @param {int} n                       矩阵大小
+ * @param {int} *returnSize             返回数组大小
+ * @param {int} **returnColumnSizes     返回数组列大小
+ * @return {int} **ans                  返回数组
  */
 int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
 
