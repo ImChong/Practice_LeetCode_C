@@ -1,16 +1,41 @@
-/* 206. 反转链表：https://leetcode.cn/problems/reverse-linked-list/ */
-/* https://programmercarl.com/0206.%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8.html */
-
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\03_reverseList\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-16 08:57:10
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-10-08 22:26:30
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 206. 反转链表：https://leetcode.cn/problems/reverse-linked-list/
+ * https://programmercarl.com/0206.%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8.html
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 GLOBAL VARIABLES                               */
+/*                                                                                */
+/**********************************************************************************/
 /* 节点定义 */
 struct ListNode {
     int val;
     struct ListNode *next;
 };
 
-/* 创建链表 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                 UTILITY FUNCTIONS                              */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 创建链表
+ * =================================================================================
+ * @param {int} *array
+ * @param {int} size
+ * @return {struct ListNode} *head
+ */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
@@ -33,7 +58,12 @@ struct ListNode *createList(int *array, int size) {
     return head;
 }
 
-/* 打印链表 */
+/**
+ * @description: 打印链表
+ * =================================================================================
+ * @param {ListNode} *listPtr
+ * @return {void}
+ */
 void printList(struct ListNode *listPtr) {
     printf("linked list: ");
     while (listPtr != NULL) {
@@ -43,9 +73,20 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
-/* ==================================================================================================== */
-/* ==================================================================================================== */
-struct ListNode* reverseList(struct ListNode* head){
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
+/**
+ * @description: 反转链表
+ * =================================================================================
+ * @param {ListNode*} head
+ * @return {struct ListNode} *prev
+ */
+struct ListNode *reverseList(struct ListNode* head){
     struct ListNode *prev = NULL;   /* 初始化前一节点指针为NULL */
     struct ListNode *curr = head;   /* 初始化现节点指针头结点 */
     struct ListNode *next = NULL;   /* 初始化下一节点指针为NULL */
@@ -58,10 +99,19 @@ struct ListNode* reverseList(struct ListNode* head){
     }
     return prev;                /* 返回前一节点指针 */
 }
-/* ==================================================================================================== */
-/* ==================================================================================================== */
 
-/* 主函数 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                  MAIN FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
 int main(int argc, char const *argv[]) {
     int arr[5] = {1, 2, 3, 4, 5};
     struct ListNode *newList = createList(arr, 5);
