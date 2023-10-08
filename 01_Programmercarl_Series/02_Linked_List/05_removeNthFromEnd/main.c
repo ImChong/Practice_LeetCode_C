@@ -1,16 +1,41 @@
-/* 19. 删除链表的倒数第 N 个结点：https://leetcode.cn/problems/remove-nth-node-from-end-of-list/ */
-/* https://programmercarl.com/0019.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9.html */
-
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\05_removeNthFromEnd\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-16 08:57:10
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-10-08 22:30:50
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 19. 删除链表的倒数第 N 个结点：https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
+ * https://programmercarl.com/0019.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9.html
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 GLOBAL VARIABLES                               */
+/*                                                                                */
+/**********************************************************************************/
 /* 节点定义 */
 struct ListNode {
     int val;
     struct ListNode *next;
 };
 
-/* 创建链表，不使用虚拟头结点 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                 UTILITY FUNCTIONS                              */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 创建链表，不使用虚拟头结点
+ * =================================================================================
+ * @param {int} *array
+ * @param {int} size
+ * @return {struct ListNode} *head
+ */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
@@ -33,7 +58,12 @@ struct ListNode *createList(int *array, int size) {
     return head;
 }
 
-/* 打印链表 */
+/**
+ * @description: 打印链表
+ * =================================================================================
+ * @param {ListNode} *listPtr
+ * @return {void}
+ */
 void printList(struct ListNode *listPtr) {
     printf("linked list: ");
     while (listPtr != NULL) {
@@ -43,9 +73,21 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
-/* ==================================================================================================== */
-/* ==================================================================================================== */
-struct ListNode* removeNthFromEnd(struct ListNode* head, int n){
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
+/**
+ * @description: 删除链表的倒数第 N 个结点
+ * =================================================================================
+ * @param {ListNode*} head
+ * @param {int} n
+ * @return {struct ListNode} *head
+ */
+struct ListNode *removeNthFromEnd(struct ListNode* head, int n){
     if (!head || n <= 0) {      /* 如果头节点不存在 或 n <= 0 时 */
         return head;                /* 返回头节点 */
     }
@@ -78,26 +120,35 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n){
     free(dummy);                            /* 删除虚拟头节点 */
     return newHead;                         /* 返回链表头节点 */
 }
-/* ==================================================================================================== */
-/* ==================================================================================================== */
 
-/* 主函数 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                  MAIN FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
 int main(int argc, char const *argv[]) {
     int arr[5] = {1, 2, 3, 4, 5};
     struct ListNode *newList = createList(arr, 5);
     printList(newList);
 
-    /* NOTE: Case 1 */
+    /* Case 1 */
     printf("======== Case 1 ======== \n");
     struct ListNode *ansList = removeNthFromEnd(newList, 2);
     printList(ansList);
 
-    /* NOTE: Case 2 */
+    /* Case 2 */
     printf("======== Case 2 ======== \n");
     ansList = removeNthFromEnd(newList, 3);
     printList(ansList);
 
-    /* NOTE: Case 3 */
+    /* Case 3 */
     printf("======== Case 3 ======== \n");
     ansList = removeNthFromEnd(newList, 5);
     printList(ansList);
