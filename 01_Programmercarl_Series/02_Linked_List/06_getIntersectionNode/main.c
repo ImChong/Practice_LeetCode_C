@@ -1,16 +1,41 @@
-/* 面试题 02.07. 链表相交：https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/ */
-/* https://programmercarl.com/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4.html */
-
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\06_getIntersectionNode\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-16 08:57:10
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-10-08 22:33:49
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 面试题 02.07. 链表相交：https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/
+ * https://programmercarl.com/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4.html
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 GLOBAL VARIABLES                               */
+/*                                                                                */
+/**********************************************************************************/
 /* 节点定义 */
 struct ListNode {
     int val;
     struct ListNode *next;
 };
 
-/* 创建链表，不使用虚拟头结点 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                 UTILITY FUNCTIONS                              */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 创建链表，不使用虚拟头结点
+ * =================================================================================
+ * @param {int} *array
+ * @param {int} size
+ * @return {struct ListNode} *head
+ */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
@@ -33,7 +58,13 @@ struct ListNode *createList(int *array, int size) {
     return head;
 }
 
-/* 打印链表 */
+/**
+ * @description: 打印链表
+ * =================================================================================
+ * @param {ListNode} *listPtr
+ * @param {char} listChar
+ * @return {void}
+ */
 void printList(struct ListNode *listPtr, char listChar) {
     printf("linked list %c: ", listChar);
     while (listPtr != NULL) {
@@ -43,9 +74,20 @@ void printList(struct ListNode *listPtr, char listChar) {
     printf("\n");
 }
 
-/* ==================================================================================================== */
-/* ==================================================================================================== */
-/* TODO: 目标函数 */
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
+/**
+ * @description: 获取两个链表的交点
+ * =================================================================================
+ * @param {ListNode} *headA
+ * @param {ListNode} *headB
+ * @return {*}
+ */
 struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) {
     struct ListNode *pA = headA;
     struct ListNode *pB = headB;
@@ -55,12 +97,21 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
     }
     return pA;
 }
-/* ==================================================================================================== */
-/* ==================================================================================================== */
 
-/* 主函数 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                  MAIN FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
 int main(int argc, const char* argv[]) {
-    /* NOTE: Case 1 */
+    /* Case 1 */
     printf("======== Case 1 ======== \n");
     int arrA1[] = {4, 1, 8, 4, 5};
     struct ListNode *listA = createList(arrA1, 5);
@@ -78,12 +129,12 @@ int main(int argc, const char* argv[]) {
 
     struct ListNode *intersectNode = getIntersectionNode(listA, listB);
     if (intersectNode != NULL) {
-        printf("Intersction: %d\n", intersectNode->val);
+        printf("Intersection: %d\n", intersectNode->val);
     } else {
-        printf("Intersction: NULL\n");
+        printf("Intersection: NULL\n");
     }
 
-    /* NOTE: Case 2 */
+    /* Case 2 */
     printf("======== Case 2 ======== \n");
     int arrA2[] = {2, 6, 4};
     listA = createList(arrA2, 3);
@@ -95,9 +146,9 @@ int main(int argc, const char* argv[]) {
 
     intersectNode = getIntersectionNode(listA, listB);
     if (intersectNode != NULL) {
-        printf("Intersction: %d\n", intersectNode->val);
+        printf("Intersection: %d\n", intersectNode->val);
     } else {
-        printf("Intersction: NULL\n");
+        printf("Intersection: NULL\n");
     }
 
     return 0;
