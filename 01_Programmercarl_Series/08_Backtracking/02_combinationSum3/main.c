@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-09 12:26:25
+ * @LastEditTime : 2023-10-09 12:28:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,9 +35,6 @@ int **combinationSum3(int k, int n, int *returnSize, int **returnColumnSizes) {
 
     return NULL
 }
-
-
-
 
 /**********************************************************************************/
 /*                                                                                */
