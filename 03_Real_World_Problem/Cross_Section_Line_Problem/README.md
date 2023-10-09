@@ -3,8 +3,8 @@
 - [1. 多边形孔洞穿过最多线缆数量问题](#1-多边形孔洞穿过最多线缆数量问题)
   - [1.1. 问题](#11-问题)
   - [1.2. 解答](#12-解答)
-    - [1.2.1. Code](#121-code)
-    - [1.2.2. Result](#122-result)
+    - [1.2.1. 示例代码](#121-示例代码)
+    - [1.2.2. 运行结果](#122-运行结果)
 
 ## 1.1. 问题
 
@@ -22,7 +22,7 @@
 
 我们可以使用这种方法来估算矩形内可以摆放的圆的数量。现在，我将为半径为1的圆执行此计算。
 
-### 1.2.1. Code
+### 1.2.1. 示例代码
 
 ```python
 r = 1  # radius of the circles
@@ -56,7 +56,7 @@ num_circles_grid, circles_coordinates_grid = grid_circles_in_rectangle(vertices,
 num_circles_grid, circles_coordinates_grid
 ```
 
-### 1.2.2. Result
+### 1.2.2. 运行结果
 
 ```powershell
 (10,
