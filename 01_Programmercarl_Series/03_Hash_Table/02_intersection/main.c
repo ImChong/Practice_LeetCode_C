@@ -32,7 +32,7 @@ int cmp(const void *a, const void *b) {
 }
 
 /**
- * @description:
+ * @description: 两个数组的交集
  * =================================================================================
  * @param {int} *numsA
  * @param {int} numsASize
