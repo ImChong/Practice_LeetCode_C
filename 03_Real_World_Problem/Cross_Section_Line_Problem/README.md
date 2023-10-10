@@ -20,23 +20,17 @@
 
 1. **计算多边形的面积**:
 
-    > ```math
-    > A_{\text{polygon}} = \frac{1}{2} \sum_{k=1}^{i} (x_k y_{k+1} - x_{k+1} y_k)
-    > ```
-    >
-    > (其中，当 $k = i$ 时， $x_{i+1} = x_1$ 和 $y_{i+1} = y_1$ )
+     $A_{\text{polygon}} = \frac{1}{2} \sum_{k=1}^{i} (x_k y_{k+1} - x_{k+1} y_k)$
+
+     (其中，当 $k = i$ 时， $x_{i+1} = x_1$ 和 $y_{i+1} = y_1$ )
 
 2. **计算一个圆的面积**:
 
-    > ```math
-    > A_{\text{circle}} = \pi r^2
-    > ```
+    $A_{\text{circle}} = \pi r^2$
 
 3. **计算理论上最多可以摆放的圆的数量**:
 
-    > ```math
-    > n = \left\lfloor \frac{A_{\text{polygon}}}{A_{\text{circle}}} \right\rfloor
-    > ```
+    $n = \left\lfloor \frac{A_{\text{polygon}}}{A_{\text{circle}}} \right\rfloor$
 
 这里，我们直接将多边形的面积除以一个圆的面积来得到理论上最多可以摆放的圆的数量。但是由于圆的排布、多边形的形状等因素，实际可摆放的数量可能会少于这个估计值。
 
