@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-10 23:45:34
+ * @LastEditTime : 2023-10-10 23:47:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,7 +44,12 @@ struct HashTable {
 /*                                 HELPER FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-/* 创建哈希表 */
+/**
+ * @description: 创建哈希表
+ * =================================================================================
+ * @param {int} size
+ * @return {struct HashTable} *newTable
+ */
 struct HashTable *createHashTable(int size) {
     struct HashTable *newTable = (struct HashTable *)malloc(sizeof(struct HashTable));
     newTable->size = size;
@@ -55,12 +60,25 @@ struct HashTable *createHashTable(int size) {
     return newTable;
 }
 
-/* TODO：哈希码，理解这个是什么意思 */
+/**
+ * @description: 哈希码
+ * TODO：哈希码，理解这个是什么意思
+ * =================================================================================
+ * @param {HashTable} *table
+ * @param {int} key
+ * @return {int}
+ */
 int hashCode(struct HashTable *table, int key) {
     return (key & 0x7fffffff) % table->size;
 }
 
-/* 插入哈希元素 */
+/**
+ * @description: 插入哈希元素
+ * =================================================================================
+ * @param {HashTable} *table
+ * @param {int} key
+ * @return {void}
+ */
 void insert(struct HashTable *table, int key) {
     int slot = hashCode(table, key);
     struct HashNode *currentNode = table->table[slot];
@@ -78,7 +96,13 @@ void insert(struct HashTable *table, int key) {
     table->table[slot] = newNode;
 }
 
-/* 查找哈希元素 */
+/**
+ * @description: 查找哈希元素
+ * =================================================================================
+ * @param {HashTable} *table
+ * @param {int} key
+ * @return {int}
+ */
 int find(struct HashTable *table, int key) {
     int slot = hashCode(table, key);
     struct HashNode *currentNode = table->table[slot];
@@ -91,7 +115,12 @@ int find(struct HashTable *table, int key) {
     return 0;
 }
 
-/* 释放哈希表 */
+/**
+ * @description: 释放哈希表
+ * =================================================================================
+ * @param {HashTable} *table
+ * @return {void}
+ */
 void freeHashTable(struct HashTable *table) {
     for (int i = 0; i < table->size; i++) {
         struct HashNode *currentNode = table->table[i];
