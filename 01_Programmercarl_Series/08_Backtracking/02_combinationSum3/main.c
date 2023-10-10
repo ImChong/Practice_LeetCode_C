@@ -10,6 +10,7 @@
  * @Description  : 216. 组合总和 III: https://leetcode.cn/problems/combination-sum-iii/
  */
 #include <stdio.h>
+#include <stdint.h>
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -33,7 +34,7 @@
  */
 int **combinationSum3(int k, int n, int *returnSize, int **returnColumnSizes) {
 
-    return NULL
+    return NULL;
 }
 
 /**********************************************************************************/
