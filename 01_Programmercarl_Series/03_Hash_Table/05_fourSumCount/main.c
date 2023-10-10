@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-10 23:47:48
+ * @LastEditTime : 2023-10-10 23:49:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -141,7 +141,23 @@ void freeHashTable(struct HashTable *table) {
 /***                                                                            ***/
 /**********************************************************************************/
 /**********************************************************************************/
-int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums3, int nums3Size, int* nums4, int nums4Size) {
+/* TODO */
+/* ============================================================================== */
+/* ============================================================================== */
+/**
+ * @description:
+ * =================================================================================
+ * @param {int} *nums1
+ * @param {int} nums1Size
+ * @param {int} *nums2
+ * @param {int} nums2Size
+ * @param {int} *nums3
+ * @param {int} nums3Size
+ * @param {int} *nums4
+ * @param {int} nums4Size
+ * @return {int}
+ */
+int fourSumCount(int *nums1, int nums1Size, int *nums2, int nums2Size, int *nums3, int nums3Size, int *nums4, int nums4Size) {
     struct HashTable *hashTable = createHashTable(2 * nums1Size * nums2Size);
     for (int i = 0; i < nums1Size; i++) {
         for (int j = 0; j < nums2Size; j++) {
