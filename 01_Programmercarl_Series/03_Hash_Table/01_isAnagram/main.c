@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-10 10:10:53
+ * @LastEditTime : 2023-10-10 10:16:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,7 +29,7 @@
  * =================================================================================
  * @param {char} *s
  * @param {char} *t
- * @return {*}
+ * @return {bool} status
  */
 bool isAnagram(char *s, char *t) {
     int sLen = strlen(s);               /* 获得s的长度 */
