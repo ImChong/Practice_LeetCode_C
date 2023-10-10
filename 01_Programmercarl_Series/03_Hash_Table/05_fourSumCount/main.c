@@ -1,28 +1,50 @@
-/* 454. 四数相加 II：https://leetcode.cn/problems/4sum-ii/ */
-/* https://programmercarl.com/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.html */
-/* https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.md */
-
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\05_fourSumCount\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-08-23 22:54:19
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-10-10 23:45:34
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 454. 四数相加 II：https://leetcode.cn/problems/4sum-ii/
+ * https://programmercarl.com/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.html
+ * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.md
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO FUNCTIONS                                 */
+/*                                                                                */
+/**********************************************************************************/
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
-/* ==================================================================================================== */
-/* ==================================================================================================== */
-/* NOTE：哈希节点 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                 GLOBAL VARIABLES                               */
+/*                                                                                */
+/**********************************************************************************/
+/* 哈希节点 */
 struct HashNode {
     int key;
     int val;
     struct HashNode *next;
 };
 
-/* NOTE：哈希表 */
+/* 哈希表 */
 struct HashTable {
     int size;
     struct HashNode **table;
 };
 
-/* NOTE：创建哈希表 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                 HELPER FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+/* 创建哈希表 */
 struct HashTable *createHashTable(int size) {
     struct HashTable *newTable = (struct HashTable *)malloc(sizeof(struct HashTable));
     newTable->size = size;
@@ -38,7 +60,7 @@ int hashCode(struct HashTable *table, int key) {
     return (key & 0x7fffffff) % table->size;
 }
 
-/* NOTE：插入哈希元素 */
+/* 插入哈希元素 */
 void insert(struct HashTable *table, int key) {
     int slot = hashCode(table, key);
     struct HashNode *currentNode = table->table[slot];
@@ -56,7 +78,7 @@ void insert(struct HashTable *table, int key) {
     table->table[slot] = newNode;
 }
 
-/* NOTE：查找哈希元素 */
+/* 查找哈希元素 */
 int find(struct HashTable *table, int key) {
     int slot = hashCode(table, key);
     struct HashNode *currentNode = table->table[slot];
@@ -69,7 +91,7 @@ int find(struct HashTable *table, int key) {
     return 0;
 }
 
-/* NOTE：释放哈希表 */
+/* 释放哈希表 */
 void freeHashTable(struct HashTable *table) {
     for (int i = 0; i < table->size; i++) {
         struct HashNode *currentNode = table->table[i];
@@ -83,7 +105,13 @@ void freeHashTable(struct HashTable *table) {
     free(table);
 }
 
-/* TODO：目标函数 */
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
 int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums3, int nums3Size, int* nums4, int nums4Size) {
     struct HashTable *hashTable = createHashTable(2 * nums1Size * nums2Size);
     for (int i = 0; i < nums1Size; i++) {
@@ -102,12 +130,21 @@ int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums
     freeHashTable(hashTable);
     return count;
 }
-/* ==================================================================================================== */
-/* ==================================================================================================== */
 
-/* NOTE：主函数 */
+/**********************************************************************************/
+/*                                                                                */
+/*                                  MAIN FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
+ */
 int main(int argc, char const *argv[]) {
-    // NOTE: Test case 1
+    /* Test case 1 */
     printf("======== Case 1 ======== \n");
     int A[] = {1, 2};
     int B[] = {-2, -1};
