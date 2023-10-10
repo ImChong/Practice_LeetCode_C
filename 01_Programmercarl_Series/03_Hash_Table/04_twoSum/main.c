@@ -37,7 +37,7 @@ void printIndices(int *indices) {
 
 /* 主函数 */
 int main(int argc, char const *argv[]) {
-    // NOTE: Test case 1
+    /* Test case 1 */
     printf("======== Case 1 ======== \n");
     int nums1[] = {2, 7, 11, 15};
     int target = 9;
@@ -46,7 +46,7 @@ int main(int argc, char const *argv[]) {
     int *indices = twoSum(nums1, sizeof(nums1)/sizeof(nums1[0]), target, &returnSize);
     printIndices(indices);
 
-    // NOTE: Test case 2
+    /* Test case 2 */
     printf("======== Case 2 ======== \n");
     int nums2[] = {3, 2, 4};
     target = 6;
@@ -54,7 +54,7 @@ int main(int argc, char const *argv[]) {
     indices = twoSum(nums2, sizeof(nums2)/sizeof(nums2[0]), target, &returnSize);
     printIndices(indices);
 
-    // NOTE: Test case 3
+    /* Test case 3 */
     printf("======== Case 3 ======== \n");
     int nums3[] = {3, 3};
     target = 6;
