@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\03_isHappy\main_hash_table.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\03_isHappy\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-10 10:59:23
+ * @LastEditTime : 2023-10-10 11:00:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -160,7 +160,6 @@ int main(int argc, char const *argv[]) {
     } else {
         printf("%d is not happy number!\n", n);
     }
-
 
     return 0;
 }
