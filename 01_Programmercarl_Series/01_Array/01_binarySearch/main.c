@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 22:24:12
+ * @LastEditTime : 2023-10-12 22:28:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,14 @@
  * https://programmercarl.com/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE
  */
 #include <stdio.h>
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO FUNCTIONS                                 */
+/*                                                                                */
+/**********************************************************************************/
+/* 获取数组长度 */
+#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -78,11 +86,15 @@ void validateAnswer(char testNum, int expect, int actual) {
  */
 void test_1(void) {
     /* 预期结果 */
+    int expect = 4;
 
     /* 实际结果 */
+    int target = 9;
+    int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
+    int ans = search(nums, ARRAY_SIZE(nums), target);
 
     /* 比较结果 */
-
+    validateAnswer('1', expect, ans);
 }
 
 /**
@@ -116,12 +128,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    int nums[] = {-1, 0, 3, 5, 9, 12};      /* 有序数组 */
-    int numsSize = sizeof(nums) / sizeof(nums[0]);
-    int target = 0;
-
-    int result = search(nums, numsSize, target);
-    printf("Index of %d in the array: %d\n", target, result);
+    test_1();
 
     return 0;
 }
