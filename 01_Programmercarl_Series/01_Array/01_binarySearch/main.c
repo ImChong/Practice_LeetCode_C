@@ -84,13 +84,13 @@ void validateAnswer(char testNum, int expect, int actual) {
  * @return {void}
  */
 void test_1(void) {
-    /* 预期结果 */
-    int expect = 4;
-
     /* 实际结果 */
     int target = 9;
     int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
     int ans = search(nums, ARRAY_SIZE(nums), target);
+
+    /* 预期结果 */
+    int expect = 4;
 
     /* 比较结果 */
     validateAnswer('1', expect, ans);
@@ -102,13 +102,13 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
-    /* 预期结果 */
-    int expect = -1;
-
     /* 实际结果 */
     int target = 2;
     int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
     int ans = search(nums, ARRAY_SIZE(nums), target);
+
+    /* 预期结果 */
+    int expect = -1;
 
     /* 比较结果 */
     validateAnswer('2', expect, ans);
@@ -120,13 +120,13 @@ void test_2(void) {
  * @return {void}
  */
 void test_3(void) {
-    /* 预期结果 */
-    int expect = 4;
-
     /* 实际结果 */
     int target = 5;
     int nums[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};       /* 有序数组 */
     int ans = search(nums, ARRAY_SIZE(nums), target);
+
+    /* 预期结果 */
+    int expect = 4;
 
     /* 比较结果 */
     validateAnswer('2', expect, ans);
