@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 00:01:14
+ * @LastEditTime : 2023-10-13 00:02:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,13 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO FUNCTIONS                                 */
+/*                                                                                */
+/**********************************************************************************/
+#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -30,11 +37,11 @@ struct ListNode {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 创建链表
+ * @description: 从数组创建链表
  * =================================================================================
- * @param {int} *array
- * @param {int} size
- * @return {struct ListNode} *head
+ * @param {int} *array                  数组
+ * @param {int} size                    数组大小
+ * @return {struct ListNode} *head      头节点指针
  */
 struct ListNode *createList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
@@ -138,6 +145,16 @@ void validateAnswer(char testNum, int expect, int actual) {
  * @return {void}
  */
 void test_1(void) {
+    int nums1[] = {1, 2, 6, 3, 4, 5, 6};
+    int numsSize1 = sizeof(nums1) / sizeof(nums1[0]);
+    int val1 = 6;
+    int expectNums1[] = {1, 2, 3, 4, 5};
+    int expectLen1 = sizeof(expectNums1) / sizeof(expectNums1[0]);
+    /* 实际结果 */
+
+    /* 预期结果 */
+
+    /* 比较结果 */
 
 }
 
@@ -147,7 +164,11 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
-
+    int nums2[] = {1, 1, 1, 1, 1};
+    int numsSize2 = sizeof(nums2) / sizeof(nums2[0]);
+    int val2 = 1;
+    int expectNums2[] = {};
+    int expectLen2 = sizeof(expectNums2) / sizeof(expectNums2[0]);
 }
 
 /**
@@ -156,7 +177,11 @@ void test_2(void) {
  * @return {void}
  */
 void test_3(void) {
-
+    int nums3[] = {1, 2, 3, 4, 5};
+    int numsSize3 = sizeof(nums3) / sizeof(nums3[0]);
+    int val3 = 6;
+    int expectNums3[] = {1, 2, 3, 4, 5};
+    int expectLen3 = sizeof(expectNums3) / sizeof(expectNums3[0]);
 }
 
 /**********************************************************************************/
