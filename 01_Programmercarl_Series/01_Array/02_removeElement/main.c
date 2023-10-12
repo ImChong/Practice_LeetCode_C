@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 20:05:29
+ * @LastEditTime : 2023-10-12 22:43:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,13 @@
  * https://programmercarl.com/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.html
  */
 #include <stdio.h>
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO FUNCTIONS                                 */
+/*                                                                                */
+/**********************************************************************************/
+#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -51,12 +58,16 @@ int removeElement(int *nums, int numsSize, int val) {
  * @param {int} actual      实际
  * @return {void}
  */
-void validateAnswer(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
+void validateAnswer(char testNum, int expectLen, int actualLen, int expectNums[], int actualNums[]) {
+    if (expectLen != actualLen) {
         printf("❌ Test %c Failed\n", testNum);
     }
+    for (int i = 0; i < expectLen; i++) {
+        if (expectNums[i] != actualNums[i]) {
+            printf("❌ Test %c Failed\n", testNum);
+        }
+    }
+    printf("✅ Test %c Passed\n", testNum);
 }
 
 /**********************************************************************************/
@@ -70,7 +81,17 @@ void validateAnswer(char testNum, int expect, int actual) {
  * @return {void}
  */
 void test_1(void) {
+    /* 预期结果 */
+    int expectLen = 2;
+    int expectNums = {2, 2};
 
+    /* 实际结果 */
+    int removeVal = 3;
+    int nums[] = {3, 2, 2, 3};
+    int actualLen = removeElement(nums, ARRAY_SIZE(nums), removeVal);
+
+    /* 比较结果 */
+    validateAnswer('1', expectLen, actualLen, expectNums, nums);
 }
 
 /**
@@ -104,20 +125,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    int nums[] = {3, 2, 2, 3};
-    int numsSize = sizeof(nums) / sizeof(nums[0]);
-    int val = 3;
-
-    int newSize = removeElement(nums, numsSize, val);
-    printf("New size of the array after removing %d: %d\n", val, newSize);
-
-    /* Print the modified array */
-    printf("Modified array: ");
-    for (int i = 0; i < newSize; i++)
-    {
-        printf("%d ", nums[i]);
-    }
-    printf("\n");
+    test_1();
 
     return 0;
 };
