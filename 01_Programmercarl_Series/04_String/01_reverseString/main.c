@@ -64,7 +64,7 @@ void validateAnswer(char testNum, int expect, int actual) {
 /**
  * @description: 测试 1
  * =================================================================================
- * @return {*}
+ * @return {void}
  */
 void test_1(void) {
 
@@ -73,7 +73,7 @@ void test_1(void) {
 /**
  * @description: 测试 2
  * =================================================================================
- * @return {*}
+ * @return {void}
  */
 void test_2(void) {
 
@@ -82,7 +82,7 @@ void test_2(void) {
 /**
  * @description: 测试 3
  * =================================================================================
- * @return {*}
+ * @return {void}
  */
 void test_3(void) {
 
