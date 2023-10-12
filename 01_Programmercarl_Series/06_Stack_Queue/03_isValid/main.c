@@ -1,9 +1,9 @@
 /*
- * @FilePath     : /Practice_LeetCode_C/01_Programmercarl_Series/06_Stack_Queue/03_isValid/main_chong.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\06_Stack_Queue\03_isValid\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-03 10:29:02
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 23:13:01
+ * @LastEditTime : 2023-10-12 20:29:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -33,7 +33,58 @@ bool isValid(char *s){
     return false;
 }
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 HELPER FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 验证答案
+ * =================================================================================
+ * @param {char} testNum    测试编号
+ * @param {int} expect      预期
+ * @param {int} actual      实际
+ * @return {void}
+ */
+void validateAnswer(char testNum, int expect, int actual) {
+    if (expect == actual) {
+        printf("✅ Test %c Passed\n", testNum);
+    } else {
+        printf("❌ Test %c Failed\n", testNum);
+    }
+}
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                  TEST FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 测试 1
+ * =================================================================================
+ * @return {void}
+ */
+void test_1(void) {
+
+}
+
+/**
+ * @description: 测试 2
+ * =================================================================================
+ * @return {void}
+ */
+void test_2(void) {
+
+}
+
+/**
+ * @description: 测试 3
+ * =================================================================================
+ * @return {void}
+ */
+void test_3(void) {
+
+}
 
 /**********************************************************************************/
 /*                                                                                */
