@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 20:09:02
+ * @LastEditTime : 2023-10-13 00:01:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -85,25 +85,25 @@ void printList(struct ListNode *listPtr) {
 /**
  * @description: 移除链表元素
  * =================================================================================
- * @param {ListNode} *head
- * @param {int} val
- * @return {struct ListNode} *head
+ * @param {ListNode} *head              链表虚拟头节点
+ * @param {int} val                     目标值
+ * @return {struct ListNode} *head      返回链表虚拟头节点
  */
 struct ListNode *removeElements(struct ListNode *head, int val){
-    struct ListNode dummy;      /* 创建虚拟头节点 */
-    dummy.next = head;          /* 将传入链表接在虚拟头节点后面 */
+    struct ListNode dummy;                          /* 创建虚拟头节点 */
+    dummy.next = head;                              /* 将传入链表接在虚拟头节点后面 */
 
-    struct ListNode *curr = &dummy;     /* 创建指针：用于遍历列表 */
-    while (curr->next != NULL) {        /* 当指针下一节点不为空时循环 */
-        if (curr->next->val == val) {           /* 当当前指针下一节点的值等于目标值时 */
-            struct ListNode *tmp = curr->next;      /* 创建临时节点储存当前指针下一节点 */
-            curr->next = curr->next->next;          /* 将当前指针节点的下一节点挂载为下下个节点 */
-            free(tmp);                              /* 释放之前储存的临时节点 */
-        } else {                                /* 当当前指针下一节点的值不等于目标值时 */
-            curr = curr->next;                      /* 当前指针的位置 + 1 */
+    struct ListNode *curr = &dummy;                 /* 创建指针：用于遍历列表 */
+    while (curr->next != NULL) {                    /* 遍历链表 */
+        if (curr->next->val == val) {                   /* 当前节点的下一个节点的值等于目标值 */
+            struct ListNode *tmp = curr->next;              /* 保存当前节点的下一个节点 */
+            curr->next = curr->next->next;                  /* 当前节点的下一个节点指向下下个节点 */
+            free(tmp);                                      /* 释放当前节点的下一个节点 */
+        } else {                                        /* 当前节点的下一个节点的值不等于目标值 */
+            curr = curr->next;                              /* 当前节点指向下一个节点 */
         }
     }
-    return dummy.next;          /* 返回虚拟头节点后挂载的结果链表 */
+    return dummy.next;                              /* 返回链表虚拟头节点 */
 }
 
 /**********************************************************************************/
