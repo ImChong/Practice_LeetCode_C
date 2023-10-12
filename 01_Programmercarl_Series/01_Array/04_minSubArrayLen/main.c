@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 23:48:57
+ * @LastEditTime : 2023-10-12 23:53:16
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -103,7 +103,17 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
+    /* 实际结果 */
+    int nums[] = {1, 1, 1, 1, 1, 1, 1, 1};
+    int numsSize = ARRAY_SIZE(nums);
+    int target = 11;
+    int resultLen = minSubArrayLen(target, nums, numsSize);
 
+    /* 预期结果 */
+    int expectLen = 0;
+
+    /* 比较结果 */
+    validateAnswer('1', expectLen, resultLen);
 }
 
 /**
@@ -129,5 +139,6 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
+    test_2();
     return 0;
 }
