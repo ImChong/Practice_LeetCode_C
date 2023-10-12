@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 23:38:41
+ * @LastEditTime : 2023-10-12 23:39:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -144,7 +144,21 @@ void test_2(void) {
  * @return {void}
  */
 void test_3(void) {
+    /* 实际结果 */
+    int nums[] = {1};
+    int numsSize = ARRAY_SIZE(nums);
+    int returnSize;
+    int *returnNums = sortedSquares(nums, numsSize, &returnSize);
 
+    /* 预期结果 */
+    int expectNums[] = {1};
+    int expectSize = ARRAY_SIZE(expectNums);
+
+    /* 比较结果 */
+    validateAnswer('3', expectNums, expectSize, returnNums, returnSize);
+
+    /* 释放内存 */
+    free(returnNums);
 }
 
 /**********************************************************************************/
@@ -160,19 +174,8 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    int nums[] = {-4, -1, 0, 3, 10};
-    int numsSize = sizeof(nums) / sizeof(nums[0]);
-    int returnSize;
-
-    int *result = sortedSquares(nums, numsSize, &returnSize);
-
-    printf("Sorted Squares: ");
-    for (int i = 0; i < returnSize; i++) {
-        printf("%d ", result[i]);
-    }
-    printf("\n");
-
-    free(result);
-
+    test_1();
+    test_2();
+    test_3();
     return 0;
 }
