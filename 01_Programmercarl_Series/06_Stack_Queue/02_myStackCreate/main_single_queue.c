@@ -1,9 +1,9 @@
 /*
- * @FilePath     : /Practice_LeetCode_C/01_Programmercarl_Series/06_Stack_Queue/02_myStackCreate/main_chong_single_queue.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\06_Stack_Queue\02_myStackCreate\main_single_queue.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-24 23:03:32
+ * @LastEditTime : 2023-10-12 09:59:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -118,7 +118,7 @@ void myStackFree(MyStack *obj) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    /* NOTE: Test case 1 */
+    /* Test case 1 */
     printf("======== Case 1 ======== \n");
     MyStack *myStack = myStackCreate();
     myStackPush(myStack, 1);

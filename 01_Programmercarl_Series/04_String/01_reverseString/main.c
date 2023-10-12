@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 09:57:22
+ * @LastEditTime : 2023-10-12 10:00:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,7 +40,21 @@ void reverseString(char *s, int sSize){
 /*                                 HELPER FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-
+/**
+ * @description: 验证答案
+ * =================================================================================
+ * @param {char} testNum    测试编号
+ * @param {int} expect      预期
+ * @param {int} actual      实际
+ * @return {void}
+ */
+void validateAnswer(char testNum, int expect, int actual) {
+    if (expect == actual) {
+        printf("✅ Test %c Passed\n", testNum);
+    } else {
+        printf("❌ Test %c Failed\n", testNum);
+    }
+}
 
 /**********************************************************************************/
 /*                                                                                */
