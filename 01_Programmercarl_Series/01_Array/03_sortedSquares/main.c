@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 23:37:36
+ * @LastEditTime : 2023-10-12 23:38:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -109,6 +109,7 @@ void test_1(void) {
     int expectSize = ARRAY_SIZE(expectNums);
 
     /* 比较结果 */
+    validateAnswer('1', expectNums, expectSize, returnNums, returnSize);
 
     /* 释放内存 */
     free(returnNums);
@@ -120,7 +121,21 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
+    /* 实际结果 */
+    int nums[] = {-7, -3, 2, 3, 11};
+    int numsSize = ARRAY_SIZE(nums);
+    int returnSize;
+    int *returnNums = sortedSquares(nums, numsSize, &returnSize);
 
+    /* 预期结果 */
+    int expectNums[] = {4, 9, 9, 49, 121};
+    int expectSize = ARRAY_SIZE(expectNums);
+
+    /* 比较结果 */
+    validateAnswer('2', expectNums, expectSize, returnNums, returnSize);
+
+    /* 释放内存 */
+    free(returnNums);
 }
 
 /**
