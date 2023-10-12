@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 23:44:19
+ * @LastEditTime : 2023-10-12 23:50:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -86,8 +86,9 @@ void validateAnswer(char testNum, int expect, int actual) {
 void test_1(void) {
     /* 实际结果 */
     int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
+    int numsSize = ARRAY_SIZE(nums);
     int target = 9;
-    int ans = search(nums, ARRAY_SIZE(nums), target);
+    int ans = search(nums, numsSize, target);
 
     /* 预期结果 */
     int expect = 4;
@@ -104,8 +105,9 @@ void test_1(void) {
 void test_2(void) {
     /* 实际结果 */
     int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
+    int numsSize = ARRAY_SIZE(nums);
     int target = 2;
-    int ans = search(nums, ARRAY_SIZE(nums), target);
+    int ans = search(nums, numsSize, target);
 
     /* 预期结果 */
     int expect = -1;
@@ -122,8 +124,9 @@ void test_2(void) {
 void test_3(void) {
     /* 实际结果 */
     int nums[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};       /* 有序数组 */
+    int numsSize = ARRAY_SIZE(nums);
     int target = 5;
-    int ans = search(nums, ARRAY_SIZE(nums), target);
+    int ans = search(nums, numsSize, target);
 
     /* 预期结果 */
     int expect = 4;
