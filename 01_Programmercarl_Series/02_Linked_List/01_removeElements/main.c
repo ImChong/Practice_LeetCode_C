@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 00:17:14
+ * @LastEditTime : 2023-10-13 00:18:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -185,9 +185,7 @@ void test_1(void) {
     validateAnswer('1', expectList, ansList);
 
     /* 释放内存 */
-    free(head);
-    free(ansList);
-    free(expectList);
+
 }
 
 /**
