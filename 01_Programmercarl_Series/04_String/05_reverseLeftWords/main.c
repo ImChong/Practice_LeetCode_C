@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-11 00:06:33
+ * @LastEditTime : 2023-10-12 19:57:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 剑指 Offer 58 - II. 左旋转字符串： https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/
+ * @Description  : LCR 182. 动态口令： https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/
  * https://programmercarl.com/%E5%89%91%E6%8C%87Offer58-II.%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E5%89%91%E6%8C%87Offer58-II.%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.md
  */
@@ -22,10 +22,62 @@
 
 /* ============================================================================== */
 /* ============================================================================== */
+char *dynamicPassword(char *password, int target) {
 
+}
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 HELPER FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 验证答案
+ * =================================================================================
+ * @param {char} testNum    测试编号
+ * @param {int} expect      预期
+ * @param {int} actual      实际
+ * @return {void}
+ */
+void validateAnswer(char testNum, int expect, int actual) {
+    if (expect == actual) {
+        printf("✅ Test %c Passed\n", testNum);
+    } else {
+        printf("❌ Test %c Failed\n", testNum);
+    }
+}
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                  TEST FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 测试 1
+ * =================================================================================
+ * @return {void}
+ */
+void test_1(void) {
 
+}
+
+/**
+ * @description: 测试 2
+ * =================================================================================
+ * @return {void}
+ */
+void test_2(void) {
+
+}
+
+/**
+ * @description: 测试 3
+ * =================================================================================
+ * @return {void}
+ */
+void test_3(void) {
+
+}
 
 /**********************************************************************************/
 /*                                                                                */
@@ -40,6 +92,6 @@
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-
+    test_1();
     return 0;
 }
