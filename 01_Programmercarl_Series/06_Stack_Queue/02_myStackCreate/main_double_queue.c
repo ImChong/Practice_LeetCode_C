@@ -213,7 +213,7 @@ void myStackFree(MyStack* obj) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    /* NOTE: Test case 1 */
+    /* Test case 1 */
     printf("======== Case 1 ======== \n");
     MyStack *myStack = myStackCreate();
     myStackPush(myStack, 1);

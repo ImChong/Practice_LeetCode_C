@@ -207,7 +207,7 @@ void myQueueFree(MyQueue* obj) {
  * @return {int}
  */
 int main(int argc, const char* argv[]) {
-    /* NOTE: Test case 1 */
+    /* Test case 1 */
     printf("======== Case 1 ======== \n");
     MyQueue *myQueue = myQueueCreate();
     myQueuePush(myQueue, 1);
