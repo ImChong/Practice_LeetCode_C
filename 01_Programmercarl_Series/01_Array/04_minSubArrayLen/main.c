@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 23:43:51
+ * @LastEditTime : 2023-10-12 23:48:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -85,15 +85,16 @@ void validateAnswer(char testNum, int expect, int actual) {
  */
 void test_1(void) {
     /* 实际结果 */
-    int target = 9;
-    int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
-    int ans = search(nums, ARRAY_SIZE(nums), target);
+    int nums[] = {2, 3, 1, 2, 4, 3};
+    int numsSize = ARRAY_SIZE(nums);
+    int target = 7;
+    int resultLen = minSubArrayLen(target, nums, numsSize);
 
     /* 预期结果 */
-    int expect = 4;
+    int expectLen = 2;
 
     /* 比较结果 */
-    validateAnswer('1', expect, ans);
+    validateAnswer('1', expectLen, resultLen);
 }
 
 /**
@@ -127,12 +128,6 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    int nums[] = {2, 3, 1, 2, 4, 3};
-    int numsSize = sizeof(nums) / sizeof(nums[0]);
-    int s = 7;
-
-    int result = minSubArrayLen(s, nums, numsSize);
-    printf("Minimum size of subarray whose sum is at least %d: %d\n", s, result);
-
+    test_1();
     return 0;
 }
