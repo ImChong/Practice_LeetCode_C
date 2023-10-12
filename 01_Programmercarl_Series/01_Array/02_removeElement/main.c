@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 23:24:37
+ * @LastEditTime : 2023-10-12 23:27:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -121,7 +121,36 @@ void test_2(void) {
  * @return {void}
  */
 void test_3(void) {
+    /* 实际结果 */
+    int nums[] = {1};
+    int removeVal = 2;
+    int resultLen = removeElement(nums, ARRAY_SIZE(nums), removeVal);
 
+    /* 预期结果 */
+    int expectNums[] = {1};
+    int expectLen = ARRAY_SIZE(expectNums);
+
+    /* 比较结果 */
+    validateAnswer('3', expectNums, expectLen, nums, resultLen);
+}
+
+/**
+ * @description: 测试 4
+ * =================================================================================
+ * @return {void}
+ */
+void test_4(void) {
+    /* 实际结果 */
+    int nums[] = {1};
+    int removeVal = 1;
+    int resultLen = removeElement(nums, ARRAY_SIZE(nums), removeVal);
+
+    /* 预期结果 */
+    int expectNums[] = {};
+    int expectLen = ARRAY_SIZE(expectNums);
+
+    /* 比较结果 */
+    validateAnswer('4', expectNums, expectLen, nums, resultLen);
 }
 
 /**********************************************************************************/
@@ -139,5 +168,7 @@ void test_3(void) {
 int main(int argc, const char *argv[]) {
     test_1();
     test_2();
+    test_3();
+    test_4();
     return 0;
 };
