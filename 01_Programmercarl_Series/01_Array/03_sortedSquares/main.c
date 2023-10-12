@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 20:05:40
+ * @LastEditTime : 2023-10-12 23:28:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,25 +29,25 @@
  * @return {int} *result        返回数组
  */
 int *sortedSquares(int *nums, int numsSize, int *returnSize) {
-    int *result = (int *)malloc(numsSize * sizeof(int));    /* 创建返回数组 */
-    *returnSize = numsSize;     /* 确定返回大小 */
+    int *result = (int *)malloc(numsSize * sizeof(int));
+    *returnSize = numsSize;
 
-    int left = 0;                   /* 左指针 */
-    int right = numsSize - 1;       /* 右指针 */
-    int index = numsSize - 1;       /* 当前索引：从后往前 */
+    int left = 0;
+    int right = numsSize - 1;
+    int index = numsSize - 1;
 
-    while (left <= right) {         /* 当左指针的位置 <= 右指针的位置时 */
-        int leftSquare = nums[left] * nums[left];       /* 计算左指针所指值的平方：左平方 */
-        int rightSquare = nums[right] * nums[right];    /* 计算右指针所指值的平方：右平方 */
+    while (left <= right) {
+        int leftSquare = nums[left] * nums[left];
+        int rightSquare = nums[right] * nums[right];
 
-        if (leftSquare > rightSquare) {     /* 如果左平方 > 右平方 */
-            result[index] = leftSquare;         /* 返回数组当前索引的值设置为左平方 */
-            left++;                             /* 左指针位置 + 1 */
-        } else {                            /* 如果左平方 < 右平方 */
-            result[index] = rightSquare;        /* 返回数组当前索引的值设置为右平方 */
-            right--;                            /* 右指针位置 - 1 */
+        if (leftSquare > rightSquare) {
+            result[index] = leftSquare;
+            left++;
+        } else {
+            result[index] = rightSquare;
+            right--;
         }
-        index--;                            /* 索引值位置 - 1：从小到大排列 */
+        index--;
     }
     return result;
 }
