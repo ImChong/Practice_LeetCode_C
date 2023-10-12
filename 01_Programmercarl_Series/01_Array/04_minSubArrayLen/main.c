@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 23:43:34
+ * @LastEditTime : 2023-10-12 23:43:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -84,7 +84,16 @@ void validateAnswer(char testNum, int expect, int actual) {
  * @return {void}
  */
 void test_1(void) {
+    /* 实际结果 */
+    int target = 9;
+    int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
+    int ans = search(nums, ARRAY_SIZE(nums), target);
 
+    /* 预期结果 */
+    int expect = 4;
+
+    /* 比较结果 */
+    validateAnswer('1', expect, ans);
 }
 
 /**
