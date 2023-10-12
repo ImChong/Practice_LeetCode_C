@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 22:43:11
+ * @LastEditTime : 2023-10-12 22:53:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -53,12 +53,14 @@ int removeElement(int *nums, int numsSize, int val) {
 /**
  * @description: 验证答案
  * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
+ * @param {char} testNum        测试编号
+ * @param {int} *expectNums     预期结果
+ * @param {int} expectLen       预期结果长度
+ * @param {int} *actualNums     实际结果
+ * @param {int} actualLen       实际结果长度
  * @return {void}
  */
-void validateAnswer(char testNum, int expectLen, int actualLen, int expectNums[], int actualNums[]) {
+void validateAnswer(char testNum, int *expectNums, int expectLen, int *actualNums, int actualLen) {
     if (expectLen != actualLen) {
         printf("❌ Test %c Failed\n", testNum);
     }
@@ -83,7 +85,7 @@ void validateAnswer(char testNum, int expectLen, int actualLen, int expectNums[]
 void test_1(void) {
     /* 预期结果 */
     int expectLen = 2;
-    int expectNums = {2, 2};
+    int expectNums[] = {2, 2};
 
     /* 实际结果 */
     int removeVal = 3;
@@ -91,7 +93,7 @@ void test_1(void) {
     int actualLen = removeElement(nums, ARRAY_SIZE(nums), removeVal);
 
     /* 比较结果 */
-    validateAnswer('1', expectLen, actualLen, expectNums, nums);
+    validateAnswer('1', expectNums, expectLen, nums, actualLen);
 }
 
 /**
