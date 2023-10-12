@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 00:02:43
+ * @LastEditTime : 2023-10-13 00:17:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -33,7 +33,7 @@ struct ListNode {
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                 UTILITY FUNCTIONS                              */
+/*                                 HELPER FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
 /**
@@ -79,6 +79,21 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
+/**
+ * @description: 释放链表
+ * =================================================================================
+ * @param {ListNode} *listPtr
+ * @return {void}
+ */
+void freeList(struct ListNode *listPtr) {
+    struct ListNode *tmp = NULL;
+    while (listPtr != NULL) {
+        tmp = listPtr;
+        listPtr = listPtr->next;
+        free(tmp);
+    }
+}
+
 /**********************************************************************************/
 /**********************************************************************************/
 /***                                                                            ***/
@@ -121,13 +136,22 @@ struct ListNode *removeElements(struct ListNode *head, int val){
 /**
  * @description: 验证答案
  * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
+ * @param {char} testNum            测试编号
+ * @param {ListNode} *expectList    预期
+ * @param {ListNode} *ansList       结果
  * @return {void}
  */
-void validateAnswer(char testNum, int expect, int actual) {
-    if (expect == actual) {
+void validateAnswer(char testNum, struct ListNode *expectList, struct ListNode *ansList) {
+    struct ListNode *curr1 = expectList, *curr2 = ansList;
+    while (curr1 != NULL && curr2 != NULL) {
+        if (curr1->val != curr2->val) {
+            printf("❌ Test %c Failed\n", testNum);
+            return;
+        }
+        curr1 = curr1->next;
+        curr2 = curr2->next;
+    }
+    if (curr1 == NULL && curr2 == NULL) {
         printf("✅ Test %c Passed\n", testNum);
     } else {
         printf("❌ Test %c Failed\n", testNum);
@@ -145,17 +169,25 @@ void validateAnswer(char testNum, int expect, int actual) {
  * @return {void}
  */
 void test_1(void) {
-    int nums1[] = {1, 2, 6, 3, 4, 5, 6};
-    int numsSize1 = sizeof(nums1) / sizeof(nums1[0]);
-    int val1 = 6;
-    int expectNums1[] = {1, 2, 3, 4, 5};
-    int expectLen1 = sizeof(expectNums1) / sizeof(expectNums1[0]);
     /* 实际结果 */
+    int nums[] = {1, 2, 6, 3, 4, 5, 6};
+    int numsSize = ARRAY_SIZE(nums);
+    struct ListNode *head = createList(nums, numsSize);
+    int removeVal = 6;
+    struct ListNode *ansList = removeElements(head, removeVal);
 
     /* 预期结果 */
+    int expectNums[] = {1, 2, 3, 4, 5};
+    int expectLen = ARRAY_SIZE(expectNums);
+    struct ListNode *expectList = createList(expectNums, expectLen);
 
     /* 比较结果 */
+    validateAnswer('1', expectList, ansList);
 
+    /* 释放内存 */
+    free(head);
+    free(ansList);
+    free(expectList);
 }
 
 /**
@@ -197,12 +229,6 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char* argv[]) {
-    int arr[7] = {1, 2, 6, 3, 4, 5, 6};
-    struct ListNode *head = createList(arr, 7);
-
-    struct ListNode *ansList = removeElements(head, 6);
-    printList(ansList);
-
-    free(head);
+    test_1();
     return 0;
 }

@@ -94,6 +94,21 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
+/**
+ * @description: 释放链表
+ * =================================================================================
+ * @param {ListNode} *listPtr       链表指针
+ * @return {void}
+ */
+void freeList(struct ListNode *listPtr) {
+    struct ListNode *tmp = NULL;
+    while (listPtr != NULL) {
+        tmp = listPtr;
+        listPtr = listPtr->next;
+        free(tmp);
+    }
+}
+
 /**********************************************************************************/
 /*                                                                                */
 /*                                  MAIN FUNCTION                                 */
