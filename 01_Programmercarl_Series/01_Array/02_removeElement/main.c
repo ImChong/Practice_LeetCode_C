@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 22:53:39
+ * @LastEditTime : 2023-10-12 23:24:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -83,17 +83,17 @@ void validateAnswer(char testNum, int *expectNums, int expectLen, int *actualNum
  * @return {void}
  */
 void test_1(void) {
-    /* 预期结果 */
-    int expectLen = 2;
-    int expectNums[] = {2, 2};
-
     /* 实际结果 */
-    int removeVal = 3;
     int nums[] = {3, 2, 2, 3};
-    int actualLen = removeElement(nums, ARRAY_SIZE(nums), removeVal);
+    int removeVal = 3;
+    int resultLen = removeElement(nums, ARRAY_SIZE(nums), removeVal);
+
+    /* 预期结果 */
+    int expectNums[] = {2, 2};
+    int expectLen = ARRAY_SIZE(expectNums);
 
     /* 比较结果 */
-    validateAnswer('1', expectNums, expectLen, nums, actualLen);
+    validateAnswer('1', expectNums, expectLen, nums, resultLen);
 }
 
 /**
@@ -102,7 +102,17 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
+    /* 实际结果 */
+    int nums[] = {0, 1, 2, 2, 3, 0, 4, 2};
+    int removeVal = 2;
+    int resultLen = removeElement(nums, ARRAY_SIZE(nums), removeVal);
 
+    /* 预期结果 */
+    int expectNums[] = {0, 1, 3, 0, 4};
+    int expectLen = ARRAY_SIZE(expectNums);
+
+    /* 比较结果 */
+    validateAnswer('2', expectNums, expectLen, nums, resultLen);
 }
 
 /**
@@ -128,6 +138,6 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
-
+    test_2();
     return 0;
 };
