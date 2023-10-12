@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 23:39:32
+ * @LastEditTime : 2023-10-12 23:42:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -36,27 +36,27 @@
  * @return {int} *result        返回数组
  */
 int *sortedSquares(int *nums, int numsSize, int *returnSize) {
-    int *result = (int *)malloc(numsSize * sizeof(int));
-    *returnSize = numsSize;
+    int *result = (int *)malloc(numsSize * sizeof(int));        /* 分配内存 */
+    *returnSize = numsSize;                                     /* 返回数组大小 */
 
-    int left = 0;
-    int right = numsSize - 1;
-    int index = numsSize - 1;
+    int left = 0;                                               /* 左指针 */
+    int right = numsSize - 1;                                   /* 右指针 */
+    int index = numsSize - 1;                                   /* 返回数组索引 */
 
-    while (left <= right) {
-        int leftSquare = nums[left] * nums[left];
-        int rightSquare = nums[right] * nums[right];
+    while (left <= right) {                                     /* 循环条件：左指针小于等于右指针 */
+        int leftSquare = nums[left] * nums[left];                   /* 左指针平方 */
+        int rightSquare = nums[right] * nums[right];                /* 右指针平方 */
 
-        if (leftSquare > rightSquare) {
-            result[index] = leftSquare;
-            left++;
-        } else {
-            result[index] = rightSquare;
-            right--;
+        if (leftSquare > rightSquare) {                             /* 左指针平方大于右指针平方 */
+            result[index] = leftSquare;                                 /* 返回数组索引的值等于左指针平方 */
+            left++;                                                     /* 左指针右移 */
+        } else {                                                    /* 左指针平方小于等于右指针平方 */
+            result[index] = rightSquare;                                /* 返回数组索引的值等于右指针平方 */
+            right--;                                                    /* 右指针左移 */
         }
-        index--;
+        index--;                                                    /* 返回数组索引左移 */
     }
-    return result;
+    return result;                                              /* 返回数组 */
 }
 
 /**********************************************************************************/
