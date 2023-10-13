@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:41:48
+ * @LastEditTime : 2023-10-13 21:22:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,21 +43,18 @@ struct ListNode {
  * @param {int} size
  * @return {struct ListNode} *head
  */
-struct ListNode *arrayToLinkedList(int *array, int size) {
-    struct ListNode *head = NULL;       /* 头节点指针 */
-    struct ListNode *current = NULL;    /* 当前节点指针 */
+struct ListNode *arrayToLinkedList(int *array, int arrSize) {
+    struct ListNode *head = NULL;                                                           /* 链表头指针 */
+    struct ListNode *current = NULL;                                                        /* 当前节点指针 */
 
-    for (int i = 0; i < size; i++) {
-        /* 创建新结点 */
-        struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));
-        new_node->val = array[i];
-        new_node->next = NULL;
+    for (int i = 0; i < arrSize; i++) {                                                     /* 遍历数组 */
+        struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));         /* 新建节点 */
+        new_node->val = array[i];                                                               /* 将数组元素赋值给新节点 */
+        new_node->next = NULL;                                                                  /* 将新节点的下一节点指针设置为NULL */
 
-        /* 如果链表为空，则将新结点设置为头结点 */
         if (head == NULL) {
             head = new_node;
         } else {
-            /* 否则，将新结点追加到链表末尾 */
             current->next = new_node;
         }
         current = new_node;
