@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 21:15:55
+ * @LastEditTime : 2023-10-13 21:18:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -109,28 +109,28 @@ void freeLinkedList(struct ListNode *head) {
  * @return {struct ListNode} *head      交换后的链表头结点
  */
 struct ListNode *swapPairs(struct ListNode* head){
-    if (head == NULL || head->next == NULL) {
-        return head;
+    if (head == NULL || head->next == NULL) {       /* 递归终止条件 */
+        return head;                                    /* 返回头结点 */
     }
 
-    struct ListNode* newHead = head->next;
-    struct ListNode* prev = NULL;
+    struct ListNode* newHead = head->next;          /* 交换后的头结点 */
+    struct ListNode* prev = NULL;                   /* 前一节点指针 */
 
-    while (head && head->next) {
-        struct ListNode *first = head;
-        struct ListNode *second = head->next;
+    while (head && head->next) {                    /* 循环条件：链表不为空 */
+        struct ListNode *first = head;                  /* 第一个节点指针 */
+        struct ListNode *second = head->next;           /* 第二个节点指针 */
 
-        first->next = second->next;
-        second->next = first;
+        first->next = second->next;                     /* 改变链表指向：将第一个节点指针指向第三个节点 */
+        second->next = first;                           /* 改变链表指向：将第二个节点指针指向第一个节点 */
 
-        if (prev) {
-            prev->next = second;
+        if (prev) {                                     /* 如果前一节点指针不为空 */
+            prev->next = second;                            /* 改变链表指向：将前一节点指针指向第二个节点 */
         }
 
-        prev = first;
-        head = first->next;
+        prev = first;                                   /* 位移指针：将前一节点指针设置为第一个节点指针 */
+        head = first->next;                             /* 位移指针：将头结点指针设置为第三个节点指针 */
     }
-    return newHead;
+    return newHead;                                 /* 返回交换后的头结点 */
 }
 
 /**********************************************************************************/
