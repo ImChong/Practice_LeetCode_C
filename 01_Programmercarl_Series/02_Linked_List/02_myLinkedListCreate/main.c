@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 19:42:45
+ * @LastEditTime : 2023-10-13 19:43:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -160,7 +160,7 @@ void myLinkedListDeleteAtIndex(MyLinkedList *obj, int index) {
             curr = curr->next;                          /* 指针向后移动一位 */
         }
         if (curr->next) {                           /* 如果当前指针所指节点的下一节点存在*/
-            struct ListNode* tmp = curr->next;                 /* 获取待删除节点的指针 */
+            struct ListNode* tmp = curr->next;          /* 获取待删除节点的指针 */
             curr->next = curr->next->next;              /* 将待删除节点上一节点的下一节点改为待删除节点的下一节点*/
             free(tmp);                                  /* 释放待删除节点内存空间 */
         }
