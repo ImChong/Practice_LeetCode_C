@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 09:35:21
+ * @LastEditTime : 2023-10-13 09:48:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -214,9 +214,9 @@ void test_2(void) {
     /* 比较结果 */
     validateAnswer('2', expectList, ansList);
 
-    /* FIXME: 释放内存 */
-    // freeList(head);
-    // freeList(expectList);
+    /* 释放内存 */
+    // freeList(head);      /* head 内存已被 removeElements 释放，故无需再释放 */
+    freeList(expectList);
 }
 
 /**
