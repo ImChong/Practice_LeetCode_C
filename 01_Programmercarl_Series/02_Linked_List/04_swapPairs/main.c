@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 21:10:45
+ * @LastEditTime : 2023-10-13 21:13:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -174,7 +174,22 @@ void validateAnswer(char testNum, struct ListNode *expect, struct ListNode *actu
  */
 void test_1(void) {
     /* 实际结果 */
-    int arr[] = {1, 2, 3, 4, 5};
+    int arr[] = {1, 2, 3, 4};
+    int arrSize = ARRAY_SIZE(arr);
+    struct ListNode *arrList = createList(arr, arrSize);
+    struct ListNode *ansList = swapPairs(arrList);
+
+    /* 预期结果 */
+    int expectArr[] = {2, 1, 4, 3};
+    int expectSize = ARRAY_SIZE(expectArr);
+    struct ListNode *expectList = createList(expectArr, expectSize);
+
+    /* 比较结果 */
+    validateAnswer('1', expectList, ansList);
+
+    /* 释放内存 */
+    freeLinkedList(arrList);
+    freeLinkedList(expectList);
 }
 
 /**
@@ -208,10 +223,6 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
-    int arr[5] = {1, 2, 3, 4, 5};
-    struct ListNode *newList = createList(arr, 5);
-    printList(newList);
-    struct ListNode *ansList = swapPairs(newList);
-    printList(ansList);
+    test_1();
     return 0;
 }
