@@ -39,9 +39,9 @@ struct ListNode {
 /**
  * @description: 创建链表 - 不使用虚拟头结点
  * =================================================================================
- * @param {int} *array
- * @param {int} size
- * @return {struct ListNode} *head
+ * @param {int} *array                  数组
+ * @param {int} size                    数组大小
+ * @return {struct ListNode} *head      链表头指针
  */
 struct ListNode *arrayToLinkedList(int *array, int arrSize) {
     struct ListNode *head = NULL;                                                           /* 链表头指针 */
