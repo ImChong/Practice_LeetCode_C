@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 21:13:01
+ * @LastEditTime : 2023-10-13 21:14:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -198,7 +198,23 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
+    /* 实际结果 */
+    int arr[] = {1, 2, 3, 4, 5};
+    int arrSize = ARRAY_SIZE(arr);
+    struct ListNode *arrList = createList(arr, arrSize);
+    struct ListNode *ansList = swapPairs(arrList);
 
+    /* 预期结果 */
+    int expectArr[] = {2, 1, 4, 3, 5};
+    int expectSize = ARRAY_SIZE(expectArr);
+    struct ListNode *expectList = createList(expectArr, expectSize);
+
+    /* 比较结果 */
+    validateAnswer('2', expectList, ansList);
+
+    /* 释放内存 */
+    freeLinkedList(arrList);
+    freeLinkedList(expectList);
 }
 
 /**
