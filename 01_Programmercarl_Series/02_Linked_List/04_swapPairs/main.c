@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 21:19:32
+ * @LastEditTime : 2023-10-13 21:25:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -39,27 +39,27 @@ struct ListNode {
 /**
  * @description: 创建链表 - 不使用虚拟头结点
  * =================================================================================
- * @param {int} *array
- * @param {int} size
- * @return {struct ListNode} *head
+ * @param {int} *array                  数组
+ * @param {int} size                    数组大小
+ * @return {struct ListNode} *head      链表头指针
  */
-struct ListNode *createList(int *array, int size) {
-    struct ListNode *head = NULL;
-    struct ListNode *current = NULL;
+struct ListNode *arrayToLinkedList(int *array, int arrSize) {
+    struct ListNode *head = NULL;                                                           /* 链表头指针 */
+    struct ListNode *current = NULL;                                                        /* 当前节点指针 */
 
-    for (int i = 0; i < size; i++) {
-        struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));
-        new_node->val = array[i];
-        new_node->next = NULL;
+    for (int i = 0; i < arrSize; i++) {                                                     /* 遍历数组 */
+        struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));         /* 新建节点 */
+        new_node->val = array[i];                                                               /* 将数组元素赋值给新节点 */
+        new_node->next = NULL;                                                                  /* 将新节点的下一节点指针设置为NULL */
 
-        if (head == NULL) {
-            head = new_node;
-        } else {
-            current->next = new_node;
+        if (head == NULL) {                                                                     /* 如果链表为空 */
+            head = new_node;                                                                        /* 将新节点设置为头结点 */
+        } else {                                                                                /* 如果链表不为空 */
+            current->next = new_node;                                                               /* 将新节点追加到链表末尾 */
         }
-        current = new_node;
+        current = new_node;                                                                     /* 将当前节点指针指向新节点 */
     }
-    return head;
+    return head;                                                                            /* 返回头结点指针 */
 }
 
 /**
