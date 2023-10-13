@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 20:12:21
+ * @LastEditTime : 2023-10-13 20:45:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -87,28 +87,28 @@ void printList(struct ListNode *listPtr) {
  * @return {struct ListNode} *head
  */
 struct ListNode *swapPairs(struct ListNode* head){
-    if (head == NULL || head->next == NULL) {   /* 如果当前头节点和头节点的下一节点不存在的话，返回当前头节点*/
+    if (head == NULL || head->next == NULL) {
         return head;
     }
 
-    struct ListNode* newHead = head->next;      /* 新头节点为现头节点的下一节点 */
-    struct ListNode* prev = NULL;               /* 前节点初始化为NULL */
+    struct ListNode* newHead = head->next;
+    struct ListNode* prev = NULL;
 
-    while (head && head->next) {                /* 当当前节点和下一节点存在的时候 */
-        struct ListNode *first = head;              /* 第一节点为现头节点 */
-        struct ListNode *second = head->next;       /* 第二节点为现头节点的下一节点 */
+    while (head && head->next) {
+        struct ListNode *first = head;
+        struct ListNode *second = head->next;
 
-        first->next = second->next;                 /* 改变链表指向：第一节点的下一节点指向第二节点的下一节点 */
-        second->next = first;                       /* 改变链表指向：第二节点的下一节点指向第一节点 */
+        first->next = second->next;
+        second->next = first;
 
-        if (prev) {                                 /* 如果前节点存在 */
-            prev->next = second;                        /* 前节点的下一节点指向第二节点 */
+        if (prev) {
+            prev->next = second;
         }
 
-        prev = first;                               /* 将第一节点设置为前节点 */
-        head = first->next;                         /* 将第一节点的下一节点设置为头节点 */
+        prev = first;
+        head = first->next;
     }
-    return newHead;                             /* 返回新头节点 */
+    return newHead;
 }
 
 /**********************************************************************************/
