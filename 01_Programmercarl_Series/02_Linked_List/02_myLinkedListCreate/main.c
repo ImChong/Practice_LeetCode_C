@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:13:48
+ * @LastEditTime : 2023-10-13 20:15:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -263,8 +263,8 @@ void test_1(void) {
 
     /* 预期结果 */
     MyLinkedList *expectDummy = myLinkedListCreate();
-    myLinkedListAddAtTail(expectDummy, 2);
-    myLinkedListAddAtTail(expectDummy, 3);
+    int nums[] = {2, 3};
+    arrayToLinkedList(expectDummy, nums, ARRAY_SIZE(nums));
 
     /* 比较结果 */
     validateAnswer('1', expectDummy, actualDummy);
@@ -298,11 +298,8 @@ void test_2(void) {
 
     /* 预期结果 */
     MyLinkedList *expectDummy = myLinkedListCreate();
-    myLinkedListAddAtTail(expectDummy, 5);
-    myLinkedListAddAtTail(expectDummy, 2);
-    myLinkedListAddAtTail(expectDummy, 3);
-    myLinkedListAddAtTail(expectDummy, 7);
-    myLinkedListAddAtTail(expectDummy, 2);
+    int nums[] = {5, 2, 3, 7, 2};
+    arrayToLinkedList(expectDummy, nums, ARRAY_SIZE(nums));
 
     /* 比较结果 */
     validateAnswer('2', expectDummy, actualDummy);
