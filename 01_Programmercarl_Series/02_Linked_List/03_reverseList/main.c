@@ -80,6 +80,21 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
+/**
+ * @description: 释放链表内存
+ * =================================================================================
+ * @param {ListNode} *head      链表头指针
+ * @return {void}
+ */
+void freeLinkedList(struct ListNode *head) {
+    struct ListNode *current = head;
+    while (current != NULL) {
+        struct ListNode *temp = current;
+        current = current->next;
+        free(temp);
+    }
+}
+
 /**********************************************************************************/
 /**********************************************************************************/
 /***                                                                            ***/
@@ -134,21 +149,6 @@ void validateAnswer(char testNum, struct ListNode *expect, struct ListNode *actu
         actual = actual->next;
     }
     printf("✅ Test %c Passed\n", testNum);
-}
-
-/**
- * @description: 释放链表内存
- * =================================================================================
- * @param {ListNode} *head      链表头指针
- * @return {void}
- */
-void freeLinkedList(struct ListNode *head) {
-    struct ListNode *current = head;
-    while (current != NULL) {
-        struct ListNode *temp = current;
-        current = current->next;
-        free(temp);
-    }
 }
 
 /**********************************************************************************/

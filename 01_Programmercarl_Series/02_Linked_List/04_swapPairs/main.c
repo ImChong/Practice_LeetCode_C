@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:45:55
+ * @LastEditTime : 2023-10-13 20:54:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -73,6 +73,21 @@ void printList(struct ListNode *listPtr) {
     printf("\n");
 }
 
+/**
+ * @description: 释放链表内存
+ * =================================================================================
+ * @param {ListNode} *head      链表头指针
+ * @return {void}
+ */
+void freeLinkedList(struct ListNode *head) {
+    struct ListNode *current = head;
+    while (current != NULL) {
+        struct ListNode *temp = current;
+        current = current->next;
+        free(temp);
+    }
+}
+
 /**********************************************************************************/
 /**********************************************************************************/
 /***                                                                            ***/
@@ -119,18 +134,28 @@ struct ListNode *swapPairs(struct ListNode* head){
 /**
  * @description: 验证答案
  * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
+ * @param {char} testNum        测试编号
+ * @param {ListNode} *expect    预期
+ * @param {ListNode} *actual    实际
  * @return {void}
  */
-void validateAnswer(char testNum, int expect, int actual) {
-    if (expect == actual) {
+void validateAnswer(char testNum, struct ListNode *expect, struct ListNode *actual) {
+    if (expect == NULL && actual == NULL) {
         printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
+        return;
     }
+    while (expect != NULL && actual != NULL) {
+        if (expect->val != actual->val) {
+            printf("❌ Test %c Failed\n", testNum);
+            return;
+        }
+        expect = expect->next;
+        actual = actual->next;
+    }
+    printf("✅ Test %c Passed\n", testNum);
 }
+
+
 
 /**********************************************************************************/
 /*                                                                                */
