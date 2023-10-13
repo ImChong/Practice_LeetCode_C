@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:38:45
+ * @LastEditTime : 2023-10-13 20:39:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -165,8 +165,8 @@ void test_1(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5};
     int arrSize = ARRAY_SIZE(arr);
-    struct ListNode *newList = arrayToLinkedList(arr, arrSize);
-    struct ListNode *ansList = reverseList(newList);
+    struct ListNode *arrList = arrayToLinkedList(arr, arrSize);
+    struct ListNode *ansList = reverseList(arrList);
 
     /* 预期结果 */
     int expect[] = {5, 4, 3, 2, 1};
@@ -177,7 +177,8 @@ void test_1(void) {
     validateAnswer('1', expectList, ansList);
 
     /* 释放内存 */
-    free(newList);
+    freeLinkedList(arrList);
+    freeLinkedList(expectList);
 }
 
 /**
@@ -211,10 +212,6 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
-    int arr[] = {1, 2, 3, 4, 5};
-    struct ListNode *newList = arrayToLinkedList(arr, 5);
-    printList(newList);
-    struct ListNode *ansList = reverseList(newList);
-    printList(ansList);
+    test_1();
     return 0;
 }
