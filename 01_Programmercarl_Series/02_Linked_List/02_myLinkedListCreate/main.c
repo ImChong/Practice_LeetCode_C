@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:15:32
+ * @LastEditTime : 2023-10-13 20:18:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -314,37 +314,31 @@ void test_2(void) {
  * @return {void}
  */
 void test_3(void) {
-    printf("==================== \n");
-    printf("test_3: \n");
-
+    /* 实际结果 */
     /* ["MyLinkedList","addAtHead","get","addAtHead","addAtHead","deleteAtIndex","addAtHead","get","get","get","addAtHead","deleteAtIndex"] */
     /* [[],[4],[1],[1],[5],[3],[7],[3],[3],[3],[1],[4]] */
     /* [null,null,-1,null,null,null,null,4,4,4,null,null] */
+    MyLinkedList *actualDummy = myLinkedListCreate();  /* MyLinkedList     [ ] */
+    myLinkedListAddAtHead(actualDummy, 4);             /* addAtHead        [4] */
+    myLinkedListGet(actualDummy, 1);                   /* get              [1] */
+    myLinkedListAddAtHead(actualDummy, 1);             /* addAtHead        [1] */
+    myLinkedListAddAtHead(actualDummy, 2);             /* addAtHead        [2] */
+    myLinkedListDeleteAtIndex(actualDummy, 3);         /* deleteAtIndex    [3] */
+    myLinkedListAddAtHead(actualDummy, 7);             /* addAtHead        [7] */
+    myLinkedListAddAtHead(actualDummy, 1);             /* addAtHead        [1] */
+    myLinkedListDeleteAtIndex(actualDummy, 4);         /* deleteAtIndex    [4] */
+    printLinkedList(actualDummy);
 
-    MyLinkedList *list = myLinkedListCreate();  /* MyLinkedList     [ ] */
-    myLinkedListAddAtHead(list, 4);             /* addAtHead        [4] */
+    /* 预期结果 */
+    MyLinkedList *expectDummy = myLinkedListCreate();
+    int nums[] = {1, 7, 2, 1};
+    arrayToLinkedList(expectDummy, nums, ARRAY_SIZE(nums));
 
-    printLinkedList(list);
-
-    myLinkedListGet(list, 1);                   /* get              [1] */
-    myLinkedListAddAtHead(list, 1);             /* addAtHead        [1] */
-    myLinkedListAddAtHead(list, 2);             /* addAtHead        [2] */
-
-    printLinkedList(list);
-
-    myLinkedListDeleteAtIndex(list, 3);         /* deleteAtIndex    [3] */
-    myLinkedListAddAtHead(list, 7);             /* addAtHead        [7] */
-
-    printLinkedList(list);
-
-    printf("%d \n", myLinkedListGet(list, 3));  /* get              [3] */
-    printf("%d \n", myLinkedListGet(list, 3));  /* get              [3] */
-    printf("%d \n", myLinkedListGet(list, 3));  /* get              [3] */
-    myLinkedListAddAtHead(list, 1);             /* addAtHead        [1] */
-    myLinkedListDeleteAtIndex(list, 4);         /* deleteAtIndex    [4] */
+    /* 比较结果 */
+    validateAnswer('3', expectDummy, actualDummy);
 
     /* 释放内存空间 */
-    printLinkedList(list);
+    myLinkedListFree(actualDummy);
 }
 
 /**********************************************************************************/
@@ -362,6 +356,6 @@ void test_3(void) {
 int main(int argc, const char *argv[]) {
     test_1();
     test_2();
-    // test_3();
+    test_3();
     return 0;
 }
