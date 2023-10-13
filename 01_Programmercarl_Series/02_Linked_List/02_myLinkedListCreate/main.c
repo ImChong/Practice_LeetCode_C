@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:18:44
+ * @LastEditTime : 2023-10-13 20:19:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -320,7 +320,6 @@ void test_3(void) {
     /* [null,null,-1,null,null,null,null,4,4,4,null,null] */
     MyLinkedList *actualDummy = myLinkedListCreate();  /* MyLinkedList     [ ] */
     myLinkedListAddAtHead(actualDummy, 4);             /* addAtHead        [4] */
-    myLinkedListGet(actualDummy, 1);                   /* get              [1] */
     myLinkedListAddAtHead(actualDummy, 1);             /* addAtHead        [1] */
     myLinkedListAddAtHead(actualDummy, 2);             /* addAtHead        [2] */
     myLinkedListDeleteAtIndex(actualDummy, 3);         /* deleteAtIndex    [3] */
