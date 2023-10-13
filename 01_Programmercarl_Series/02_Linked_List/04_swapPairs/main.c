@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:45:37
+ * @LastEditTime : 2023-10-13 20:45:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -83,8 +83,8 @@ void printList(struct ListNode *listPtr) {
 /**
  * @description: 两两交换链表中的节点
  * =================================================================================
- * @param {ListNode*} head
- * @return {struct ListNode} *head
+ * @param {struct ListNode} *head       链表头结点
+ * @return {struct ListNode} *head      交换后的链表头结点
  */
 struct ListNode *swapPairs(struct ListNode* head){
     if (head == NULL || head->next == NULL) {
