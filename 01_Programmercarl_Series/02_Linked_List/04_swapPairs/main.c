@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:56:24
+ * @LastEditTime : 2023-10-13 21:09:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -154,8 +154,6 @@ void validateAnswer(char testNum, struct ListNode *expect, struct ListNode *actu
     }
     printf("✅ Test %c Passed\n", testNum);
 }
-
-
 
 /**********************************************************************************/
 /*                                                                                */
