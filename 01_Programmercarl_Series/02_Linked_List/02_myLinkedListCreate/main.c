@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:10:04
+ * @LastEditTime : 2023-10-13 20:13:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -197,6 +197,20 @@ void myLinkedListFree(MyLinkedList *obj) {
 /*                                                                                */
 /**********************************************************************************/
 /**
+ * @description: 将数组转换为链表
+ * =================================================================================
+ * @param {MyLinkedList} *list      虚拟头节点
+ * @param {int} *nums               数组
+ * @param {int} numsSize            数组大小
+ * @return {void}
+ */
+void arrayToLinkedList(MyLinkedList *list, int *nums, int numsSize) {
+    for (int i = 0; i < numsSize; i++) {
+        myLinkedListAddAtTail(list, nums[i]);
+    }
+}
+
+/**
  * @description: 打印链表
  * =================================================================================
  * @param {MyLinkedList} *list      虚拟头节点
@@ -282,6 +296,17 @@ void test_2(void) {
     myLinkedListDeleteAtIndex(actualDummy, 4);             /* deleteAtIndex    [4] */
     printLinkedList(actualDummy);
 
+    /* 预期结果 */
+    MyLinkedList *expectDummy = myLinkedListCreate();
+    myLinkedListAddAtTail(expectDummy, 5);
+    myLinkedListAddAtTail(expectDummy, 2);
+    myLinkedListAddAtTail(expectDummy, 3);
+    myLinkedListAddAtTail(expectDummy, 7);
+    myLinkedListAddAtTail(expectDummy, 2);
+
+    /* 比较结果 */
+    validateAnswer('2', expectDummy, actualDummy);
+
     /* 释放内存空间 */
     myLinkedListFree(actualDummy);
 }
@@ -339,7 +364,7 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
-    // test_2();
+    test_2();
     // test_3();
     return 0;
 }
