@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 21:22:12
+ * @LastEditTime : 2023-10-13 21:24:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -52,14 +52,14 @@ struct ListNode *arrayToLinkedList(int *array, int arrSize) {
         new_node->val = array[i];                                                               /* 将数组元素赋值给新节点 */
         new_node->next = NULL;                                                                  /* 将新节点的下一节点指针设置为NULL */
 
-        if (head == NULL) {
-            head = new_node;
-        } else {
-            current->next = new_node;
+        if (head == NULL) {                                                                     /* 如果链表为空 */
+            head = new_node;                                                                        /* 将新节点设置为头结点 */
+        } else {                                                                                /* 如果链表不为空 */
+            current->next = new_node;                                                               /* 将新节点追加到链表末尾 */
         }
-        current = new_node;
+        current = new_node;                                                                     /* 将当前节点指针指向新节点 */
     }
-    return head;
+    return head;                                                                            /* 返回头结点指针 */
 }
 
 /**
