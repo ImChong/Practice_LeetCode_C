@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:29:59
+ * @LastEditTime : 2023-10-13 20:36:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -115,17 +115,25 @@ struct ListNode *reverseList(struct ListNode* head){
 /**
  * @description: 验证答案
  * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
+ * @param {char} testNum        测试编号
+ * @param {ListNode} *expect    预期
+ * @param {ListNode} *actual    实际
  * @return {void}
  */
-void validateAnswer(char testNum, int expect, int actual) {
-    if (expect == actual) {
+void validateAnswer(char testNum, struct ListNode *expect, struct ListNode *actual) {
+    if (expect == NULL && actual == NULL) {
         printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
+        return;
     }
+    while (expect != NULL && actual != NULL) {
+        if (expect->val != actual->val) {
+            printf("❌ Test %c Failed\n", testNum);
+            return;
+        }
+        expect = expect->next;
+        actual = actual->next;
+    }
+    printf("✅ Test %c Passed\n", testNum);
 }
 
 /**********************************************************************************/
@@ -139,6 +147,18 @@ void validateAnswer(char testNum, int expect, int actual) {
  * @return {void}
  */
 void test_1(void) {
+    /* 实际结果 */
+    int arr[] = {1, 2, 3, 4, 5};
+    int arrSize = ARRAY_SIZE(arr);
+    struct ListNode *newList = arrayToLinkedList(arr, arrSize);
+    struct ListNode *ansList = reverseList(newList);
+
+    /* 预期结果 */
+    int expect[] = {5, 4, 3, 2, 1};
+    int expectSize = ARRAY_SIZE(expect);
+    struct ListNode *expectList = arrayToLinkedList(expect, expectSize);
+
+    /* 比较结果 */
 
 }
 
@@ -173,7 +193,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
-    int arr[5] = {1, 2, 3, 4, 5};
+    int arr[] = {1, 2, 3, 4, 5};
     struct ListNode *newList = arrayToLinkedList(arr, 5);
     printList(newList);
     struct ListNode *ansList = reverseList(newList);
