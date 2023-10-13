@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:08:09
+ * @LastEditTime : 2023-10-13 20:08:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -241,7 +241,6 @@ void validateAnswer(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
 void test_1(void) {
     /* 实际结果 */
     MyLinkedList *actualDummy = myLinkedListCreate();
-
     myLinkedListAddAtHead(actualDummy, 1);
     myLinkedListAddAtTail(actualDummy, 3);
     myLinkedListAddAtIndex(actualDummy, 1, 2);
