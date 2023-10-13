@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 19:12:35
+ * @LastEditTime : 2023-10-13 19:13:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -56,7 +56,7 @@ MyLinkedList *myLinkedListCreate() {
  */
 int myLinkedListGet(MyLinkedList *obj, int index) {
     if (index < 0 || index >= obj->size) {      /* 输入校验 */
-        return -1;
+        return -1;                                  /* 返回 -1 */
     }
     struct ListNode *curr = obj->head;          /* 获取当前链表头节点的指针 */
     while (index-- > 0) {                       /* 循环索引次 */
