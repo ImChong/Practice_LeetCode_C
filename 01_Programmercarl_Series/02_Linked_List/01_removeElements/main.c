@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 09:48:10
+ * @LastEditTime : 2023-10-13 09:49:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -225,11 +225,24 @@ void test_2(void) {
  * @return {void}
  */
 void test_3(void) {
-    int nums3[] = {1, 2, 3, 4, 5};
-    int numsSize3 = sizeof(nums3) / sizeof(nums3[0]);
-    int val3 = 6;
-    int expectNums3[] = {1, 2, 3, 4, 5};
-    int expectLen3 = sizeof(expectNums3) / sizeof(expectNums3[0]);
+    /* 实际结果 */
+    int nums[] = {1, 2, 3, 4, 5};
+    int numsSize = ARRAY_SIZE(nums);
+    struct ListNode *head = createList(nums, numsSize);
+    int removeVal = 6;
+    struct ListNode *ansList = removeElements(head, removeVal);
+
+    /* 预期结果 */
+    int expectNums[] = {1, 2, 3, 4, 5};
+    int expectLen = ARRAY_SIZE(expectNums);
+    struct ListNode *expectList = createList(expectNums, expectLen);
+
+    /* 比较结果 */
+    validateAnswer('3', expectList, ansList);
+
+    /* 释放内存 */
+    freeList(head);
+    freeList(expectList);
 }
 
 /**********************************************************************************/
@@ -247,5 +260,6 @@ void test_3(void) {
 int main(int argc, const char* argv[]) {
     test_1();
     test_2();
+    test_3();
     return 0;
 }
