@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 12:44:31
+ * @LastEditTime : 2023-10-13 19:12:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -58,11 +58,11 @@ int myLinkedListGet(MyLinkedList *obj, int index) {
     if (index < 0 || index >= obj->size) {      /* 输入校验 */
         return -1;
     }
-    struct ListNode *curr = obj->head;          /* 指针指向链表头节点 */
-    while (index-- > 0) {                       /* 移动链表至指定索引，index > 0 因为初始的指针已经指向0索引 */
-        curr = curr->next;
+    struct ListNode *curr = obj->head;          /* 获取当前链表头节点的指针 */
+    while (index-- > 0) {                       /* 循环索引次 */
+        curr = curr->next;                          /* 指针向后移动一位 */
     }
-    return curr->val;                           /* 返回对应节点数值 */
+    return curr->val;                           /* 返回指定索引的节点数值 */
 }
 
 /**
