@@ -256,5 +256,7 @@ void test_3(void) {
  */
 int main(int argc, char const *argv[]) {
     test_1();
+    test_2();
+    test_3();
     return 0;
 }
