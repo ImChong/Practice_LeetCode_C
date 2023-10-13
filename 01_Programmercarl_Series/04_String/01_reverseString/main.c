@@ -68,6 +68,11 @@ void validateAnswer(char testNum, int expect, int actual) {
  * @return {void}
  */
 void test_1(void) {
+    /* 实际结果 */
+
+    /* 预期结果 */
+
+    /* 比较结果 */
 
 }
 
