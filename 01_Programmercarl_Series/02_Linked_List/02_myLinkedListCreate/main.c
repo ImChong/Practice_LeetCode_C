@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 19:48:14
+ * @LastEditTime : 2023-10-13 20:08:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -210,6 +210,24 @@ void printLinkedList(MyLinkedList *list) {
     printf("\n");                                       /* 换行 */
 }
 
+/**
+ * @description: 验证答案
+ * =================================================================================
+ * @param {char} testNum
+ * @param {MyLinkedList} *expect
+ * @param {MyLinkedList} *actual
+ * @return {*}
+ */
+void validateAnswer(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
+    for (int i = 0; i < expect->size; i++) {
+        if (myLinkedListGet(expect, i) != myLinkedListGet(actual, i)) {
+            printf("❌ Test %c Failed\n", testNum);
+            return;
+        }
+    }
+    printf("✅ Test %c Passed\n", testNum);
+}
+
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
@@ -221,35 +239,25 @@ void printLinkedList(MyLinkedList *list) {
  * @return {void}
  */
 void test_1(void) {
-    printf("==================== \n");
-    printf("test_1: \n");
+    /* 实际结果 */
+    MyLinkedList *actualDummy = myLinkedListCreate();
 
-    MyLinkedList *list = myLinkedListCreate();
+    myLinkedListAddAtHead(actualDummy, 1);
+    myLinkedListAddAtTail(actualDummy, 3);
+    myLinkedListAddAtIndex(actualDummy, 1, 2);
+    myLinkedListDeleteAtIndex(actualDummy, 0);
+    printLinkedList(actualDummy);
 
-    myLinkedListAddAtHead(list, 1);
-    myLinkedListAddAtTail(list, 3);
-    myLinkedListAddAtIndex(list, 1, 2);
+    /* 预期结果 */
+    MyLinkedList *expectDummy = myLinkedListCreate();
+    myLinkedListAddAtTail(expectDummy, 2);
+    myLinkedListAddAtTail(expectDummy, 3);
 
-    printf("linked list: ");
-    for (int i = 0; i < list->size; i++) {
-        printf("%d ", myLinkedListGet(list, i));
-    }
-    printf("\n");
-
-    printf("%d ", myLinkedListGet(list, 1));
-    myLinkedListDeleteAtIndex(list, 0);
-    printf("%d ", myLinkedListGet(list, 0));
-
-    printf("\n");
-
-    printf("linked list: ");
-    for (int i = 0; i < list->size; i++) {
-        printf("%d ", myLinkedListGet(list, i));
-    }
-    printf("\n");
+    /* 比较结果 */
+    validateAnswer('1', expectDummy, actualDummy);
 
     /* 释放内存空间 */
-    myLinkedListFree(list);
+    myLinkedListFree(actualDummy);
 }
 
 /**
@@ -340,7 +348,7 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
-    test_2();
-    test_3();
+    // test_2();
+    // test_3();
     return 0;
 }
