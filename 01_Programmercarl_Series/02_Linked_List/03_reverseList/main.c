@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:22:35
+ * @LastEditTime : 2023-10-13 20:29:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,7 +43,7 @@ struct ListNode {
  * @param {int} size
  * @return {struct ListNode} *head
  */
-struct ListNode *createList(int *array, int size) {
+struct ListNode *arrayToLinkedList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
 
@@ -174,7 +174,7 @@ void test_3(void) {
  */
 int main(int argc, char const *argv[]) {
     int arr[5] = {1, 2, 3, 4, 5};
-    struct ListNode *newList = createList(arr, 5);
+    struct ListNode *newList = arrayToLinkedList(arr, 5);
     printList(newList);
     struct ListNode *ansList = reverseList(newList);
     printList(ansList);
