@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 00:19:27
+ * @LastEditTime : 2023-10-13 09:35:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -86,6 +86,9 @@ void printList(struct ListNode *listPtr) {
  * @return {void}
  */
 void freeList(struct ListNode *listPtr) {
+    if (listPtr == NULL) {
+        return;
+    }
     struct ListNode *tmp = NULL;
     while (listPtr != NULL) {
         tmp = listPtr;
@@ -196,11 +199,24 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
-    int nums2[] = {1, 1, 1, 1, 1};
-    int numsSize2 = sizeof(nums2) / sizeof(nums2[0]);
-    int val2 = 1;
-    int expectNums2[] = {};
-    int expectLen2 = sizeof(expectNums2) / sizeof(expectNums2[0]);
+    /* 实际结果 */
+    int nums[] = {1, 1, 1, 1, 1};
+    int numsSize = ARRAY_SIZE(nums);
+    struct ListNode *head = createList(nums, numsSize);
+    int removeVal = 1;
+    struct ListNode *ansList = removeElements(head, removeVal);
+
+    /* 预期结果 */
+    int expectNums[] = {};
+    int expectLen = ARRAY_SIZE(expectNums);
+    struct ListNode *expectList = createList(expectNums, expectLen);
+
+    /* 比较结果 */
+    validateAnswer('2', expectList, ansList);
+
+    /* FIXME: 释放内存 */
+    // freeList(head);
+    // freeList(expectList);
 }
 
 /**
@@ -230,5 +246,6 @@ void test_3(void) {
  */
 int main(int argc, const char* argv[]) {
     test_1();
+    test_2();
     return 0;
 }
