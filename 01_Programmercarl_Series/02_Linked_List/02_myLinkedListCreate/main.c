@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 19:13:28
+ * @LastEditTime : 2023-10-13 19:42:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -89,19 +89,19 @@ void myLinkedListAddAtHead(MyLinkedList *obj, int val) {
  */
 void myLinkedListAddAtTail(MyLinkedList *obj, int val) {
     struct ListNode *newTail = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新尾节点分配空间*/
-    newTail->val = val;
-    newTail->next = NULL;
+    newTail->val = val;                         /* 为链表新尾节点赋值 */
+    newTail->next = NULL;                       /* 将链表新尾节点的下一节点设置为NULL */
 
-    if (obj->head == NULL) {
-        obj->head = newTail;
-    } else {
-        struct ListNode *curr = obj->head;
-        while (curr->next != NULL) {
-            curr = curr->next;
+    if (obj->head == NULL) {                    /* 如果链表为空 */
+        obj->head = newTail;                        /* 将虚拟头节点指向的链表头节点设置为链表新尾节点 */
+    } else {                                    /* 如果链表不为空 */
+        struct ListNode *curr = obj->head;          /* 获取当前链表头节点的指针 */
+        while (curr->next != NULL) {                /* 当指针所指的节点不为NULL时 */
+            curr = curr->next;                          /* 指针向后移动一位 */
         }
-        curr->next = newTail;
+        curr->next = newTail;                       /* 将当前指针所指节点的下一节点指向新节点 */
     }
-    obj->size++;
+    obj->size++;                                /* 链表长度 + 1 */
 }
 
 /**
