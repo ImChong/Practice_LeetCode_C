@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 21:12:31
+ * @LastEditTime : 2023-10-14 21:13:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -111,13 +111,13 @@ void freeLinkedList(struct ListNode *head) {
  * @return {*}
  */
 struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) {
-    struct ListNode *pA = headA;
-    struct ListNode *pB = headB;
-    while (pA != pB) {
-        pA = pA != NULL ? pA->next : headB;
-        pB = pB != NULL ? pB->next : headA;
+    struct ListNode *pA = headA;                /* 链表A指针 */
+    struct ListNode *pB = headB;                /* 链表B指针 */
+    while (pA != pB) {                          /* 循环条件：两个指针不相等 */
+        pA = pA != NULL ? pA->next : headB;         /* 链表A指针后移 */
+        pB = pB != NULL ? pB->next : headA;         /* 链表B指针后移 */
     }
-    return pA;
+    return pA;                                  /* 返回交点 */
 }
 
 /**********************************************************************************/
