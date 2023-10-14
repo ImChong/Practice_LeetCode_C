@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 20:34:37
+ * @LastEditTime : 2023-10-14 20:37:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -110,37 +110,37 @@ void freeLinkedList(struct ListNode *head) {
  * @return {struct ListNode} *head
  */
 struct ListNode *removeNthFromEnd(struct ListNode* head, int n){
-    if (!head || n <= 0) {                  /* 如果头节点不存在 或 n <= 0 时 */
-        return head;                            /* 返回头节点 */
+    if (!head || n <= 0) {                      /* 如果头节点不存在 或 n <= 0 时 */
+        return head;                                /* 返回头节点 */
     }
 
     struct ListNode *dummy = (struct ListNode*)malloc(sizeof(struct ListNode));     /* 初始化虚拟头节点 */
-    dummy->val = 0;                         /* 虚拟头节点值为0 */
-    dummy->next = head;                     /* 虚拟头节点的下一节点指向链表头节点 */
+    dummy->val = 0;                             /* 虚拟头节点值为0 */
+    dummy->next = head;                         /* 虚拟头节点的下一节点指向链表头节点 */
 
-    struct ListNode *first = dummy;         /* 设置第一指针指向虚拟头节点的位置 */
-    struct ListNode *second = dummy;        /* 设置第二指针指向虚拟头节点的位置 */
+    struct ListNode *first = dummy;             /* 设置第一指针指向虚拟头节点的位置 */
+    struct ListNode *second = dummy;            /* 设置第二指针指向虚拟头节点的位置 */
 
-    for (int i = 0; i <= n; i++) {          /* 循环 n + 1 次：需要末尾 NULL 作为循环结束条件，故 n + 1 */
-        if (first != NULL) {                    /* 如果第一指针没有指向 NULL */
-            first = first->next;                    /* 将第一指针向后移动一个位置 */
-        } else {                                /* 循环过程中第一指针指向了 NULL */
-            return head;                            /* 则返回头节点，代表出界 */
+    for (int i = 0; i <= n; i++) {              /* 循环 n + 1 次：需要末尾 NULL 作为循环结束条件，故 n + 1 */
+        if (first != NULL) {                        /* 如果第一指针没有指向 NULL */
+            first = first->next;                        /* 将第一指针向后移动一个位置 */
+        } else {                                    /* 循环过程中第一指针指向了 NULL */
+            return head;                                /* 则返回头节点，代表出界 */
         }
     }
 
-    while (first != NULL) {                 /* 当第一指针未指向 NULL 时循环 */
-        first = first->next;                    /* 第一指针向后移动一个位置 */
-        second = second->next;                  /* 第二指针向后移动一个位置，直到第二指针指向待删除节点的前一节点 */
+    while (first != NULL) {                     /* 当第一指针未指向 NULL 时循环 */
+        first = first->next;                        /* 第一指针向后移动一个位置 */
+        second = second->next;                      /* 第二指针向后移动一个位置，直到第二指针指向待删除节点的前一节点 */
     }
 
-    struct ListNode *tmp = second->next;    /* 用一个临时指针储存第二指针所指的下一节点：待删除节点 */
-    second->next = second->next->next;      /* 将第二指针的下一节点指向下下节点 */
-    free(tmp);                              /* 删除指定节点 */
+    struct ListNode *tmp = second->next;        /* 用一个临时指针储存第二指针所指的下一节点：待删除节点 */
+    second->next = second->next->next;          /* 将第二指针的下一节点指向下下节点 */
+    free(tmp);                                  /* 删除指定节点 */
 
-    struct ListNode *newHead = dummy->next; /* 设置链表头节点为虚拟头节点的下一节点 */
-    free(dummy);                            /* 删除虚拟头节点 */
-    return newHead;                         /* 返回链表头节点 */
+    struct ListNode *newHead = dummy->next;     /* 设置链表头节点为虚拟头节点的下一节点 */
+    free(dummy);                                /* 删除虚拟头节点 */
+    return newHead;                             /* 返回链表头节点 */
 }
 
 /**********************************************************************************/
@@ -209,7 +209,16 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
+    /* 实际结果 */
+    int arr[] = {1, 2, 3, 4, 5};
+    int arrSize = ARRAY_SIZE(arr);
+    struct ListNode *newList = arrayToLinkedList(arr, arrSize);
+    int n = 5;
+    struct ListNode *ansList = removeNthFromEnd(newList, n);
 
+    /* 预期结果 */
+    int expectArr[] = {2, 3, 4, 5};
+    int expectArrSize = ARRAY_SIZE(expectArr);
 }
 
 /**
