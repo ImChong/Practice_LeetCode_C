@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-08 22:22:20
+ * @LastEditTime : 2023-10-14 20:22:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,13 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO FUNCTIONS                                 */
+/*                                                                                */
+/**********************************************************************************/
+#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -35,7 +42,7 @@ struct ListNode {
  * @param {int} size                    数组大小
  * @return {struct ListNode} *head      头节点指针
  */
-struct ListNode *createList(int *array, int size) {
+struct ListNode *arrayToLinkedList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
 
@@ -123,7 +130,8 @@ void freeList(struct ListNode *listPtr) {
  */
 int main(int argc, const char *argv[]) {
     int arr[] = {1, 2, 3, 4, 5};
-    struct ListNode *ansList = createList(arr, 5);
+    int arrSize = ARRAY_SIZE(arr);
+    struct ListNode *ansList = arrayToLinkedList(arr, arrSize);
     ansList = appendToList(ansList, 6);
     printList(ansList);
     return 0;
