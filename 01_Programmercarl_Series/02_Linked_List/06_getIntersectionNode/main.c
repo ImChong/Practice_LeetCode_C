@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 20:55:50
+ * @LastEditTime : 2023-10-14 21:12:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -106,8 +106,8 @@ void freeLinkedList(struct ListNode *head) {
 /**
  * @description: 获取两个链表的交点
  * =================================================================================
- * @param {ListNode} *headA
- * @param {ListNode} *headB
+ * @param {ListNode} *headA     链表A头指针
+ * @param {ListNode} *headB     链表B头指针
  * @return {*}
  */
 struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) {
@@ -148,6 +148,9 @@ void validateAnswer(char testNum, int expect, int actual) {
 /**********************************************************************************/
 /**
  * @description: 测试 1
+ * listA: 4 -> 1 -> 8 -> 4 -> 5
+ * listB: 5 -> 0 -> 1 -> 8 -> 4 -> 5
+ * expected: 8
  * =================================================================================
  * @return {void}
  */
@@ -157,6 +160,9 @@ void test_1(void) {
 
 /**
  * @description: 测试 2
+ * listA: 0 -> 9 -> 1 -> 2 -> 4
+ * listB: 3 -> 2 -> 4
+ * expected: 2
  * =================================================================================
  * @return {void}
  */
@@ -166,6 +172,9 @@ void test_2(void) {
 
 /**
  * @description: 测试 3
+ * listA: 2 -> 6 -> 4
+ * listB: 1 -> 5
+ * expected: NULL
  * =================================================================================
  * @return {void}
  */
