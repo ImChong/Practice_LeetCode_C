@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 20:28:08
+ * @LastEditTime : 2023-10-14 20:28:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -78,6 +78,21 @@ void printList(struct ListNode *listPtr) {
         listPtr = listPtr->next;
     }
     printf("\n");
+}
+
+/**
+ * @description: 释放链表内存
+ * =================================================================================
+ * @param {ListNode} *head      链表头指针
+ * @return {void}
+ */
+void freeLinkedList(struct ListNode *head) {
+    struct ListNode *current = head;
+    while (current != NULL) {
+        struct ListNode *temp = current;
+        current = current->next;
+        free(temp);
+    }
 }
 
 /**********************************************************************************/
