@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 20:30:19
+ * @LastEditTime : 2023-10-14 20:34:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -191,9 +191,16 @@ void test_1(void) {
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
     /* 预期结果 */
+    int expectArr[] = {1, 2, 3, 5};
+    int expectArrSize = ARRAY_SIZE(expectArr);
+    struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
 
     /* 比较结果 */
+    validateAnswer('1', expectList, ansList);
 
+    /* 释放内存 */
+    freeLinkedList(newList);
+    freeLinkedList(expectList);
 }
 
 /**
@@ -227,24 +234,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
-    int arr[5] = {1, 2, 3, 4, 5};
-    struct ListNode *newList = createList(arr, 5);
-    printList(newList);
-
-    /* Case 1 */
-    printf("======== Case 1 ======== \n");
-    struct ListNode *ansList = removeNthFromEnd(newList, 2);
-    printList(ansList);
-
-    /* Case 2 */
-    printf("======== Case 2 ======== \n");
-    ansList = removeNthFromEnd(newList, 3);
-    printList(ansList);
-
-    /* Case 3 */
-    printf("======== Case 3 ======== \n");
-    ansList = removeNthFromEnd(newList, 5);
-    printList(ansList);
+    test_1();
 
     return 0;
 }
