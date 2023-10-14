@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 20:41:31
+ * @LastEditTime : 2023-10-14 20:43:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -235,7 +235,23 @@ void test_2(void) {
  * @return {void}
  */
 void test_3(void) {
+    /* 实际结果 */
+    int arr[] = {1};
+    int arrSize = ARRAY_SIZE(arr);
+    struct ListNode *newList = arrayToLinkedList(arr, arrSize);
+    int n = 1;
+    struct ListNode *ansList = removeNthFromEnd(newList, n);
 
+    /* 预期结果 */
+    int expectArr[] = {};
+    int expectArrSize = ARRAY_SIZE(expectArr);
+    struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
+
+    /* 比较结果 */
+    validateAnswer('3', expectList, ansList);
+
+    /* 释放内存 */
+    /* 内存已清除，无需再释放内存 */
 }
 
 /**********************************************************************************/
@@ -253,5 +269,6 @@ void test_3(void) {
 int main(int argc, char const *argv[]) {
     test_1();
     test_2();
+    test_3();
     return 0;
 }
