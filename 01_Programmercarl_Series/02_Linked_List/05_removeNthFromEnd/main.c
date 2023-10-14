@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 20:37:01
+ * @LastEditTime : 2023-10-14 20:38:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -213,12 +213,21 @@ void test_2(void) {
     int arr[] = {1, 2, 3, 4, 5};
     int arrSize = ARRAY_SIZE(arr);
     struct ListNode *newList = arrayToLinkedList(arr, arrSize);
-    int n = 5;
+    int n = 7;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
+    printList(ansList);
 
     /* 预期结果 */
     int expectArr[] = {2, 3, 4, 5};
     int expectArrSize = ARRAY_SIZE(expectArr);
+    struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
+
+    /* 比较结果 */
+    validateAnswer('2', expectList, ansList);
+
+    /* 释放内存 */
+    freeLinkedList(newList);
+    freeLinkedList(expectList);
 }
 
 /**
@@ -244,6 +253,6 @@ void test_3(void) {
  */
 int main(int argc, char const *argv[]) {
     test_1();
-
+    test_2();
     return 0;
 }
