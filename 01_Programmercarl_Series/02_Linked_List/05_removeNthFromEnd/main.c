@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 20:43:48
+ * @LastEditTime : 2023-10-14 20:50:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -179,6 +179,8 @@ void validateAnswer(char testNum, struct ListNode *expect, struct ListNode *actu
 /**********************************************************************************/
 /**
  * @description: 测试 1
+ * {1, 2, 3, 4, 5}
+ * n = 2
  * =================================================================================
  * @return {void}
  */
@@ -191,6 +193,7 @@ void test_1(void) {
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
     /* 预期结果 */
+    /* {1, 2, 3, 5} */
     int expectArr[] = {1, 2, 3, 5};
     int expectArrSize = ARRAY_SIZE(expectArr);
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
@@ -205,6 +208,8 @@ void test_1(void) {
 
 /**
  * @description: 测试 2
+ * {1, 2, 3, 4, 5}
+ * n = 7
  * =================================================================================
  * @return {void}
  */
@@ -217,6 +222,7 @@ void test_2(void) {
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
     /* 预期结果 */
+    /* {1, 2, 3, 4, 5} */
     int expectArr[] = {1, 2, 3, 4, 5};
     int expectArrSize = ARRAY_SIZE(expectArr);
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
@@ -231,6 +237,8 @@ void test_2(void) {
 
 /**
  * @description: 测试 3
+ * {1}
+ * n = 1
  * =================================================================================
  * @return {void}
  */
@@ -243,6 +251,7 @@ void test_3(void) {
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
     /* 预期结果 */
+    /* {} */
     int expectArr[] = {};
     int expectArrSize = ARRAY_SIZE(expectArr);
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
@@ -252,6 +261,35 @@ void test_3(void) {
 
     /* 释放内存 */
     /* 内存已清除，无需再释放内存 */
+}
+
+/**
+ * @description: 测试 4
+ * {1, 2, 3, 4, 5}
+ * n = 5
+ * =================================================================================
+ * @return {void}
+ */
+void test_4(void) {
+    /* 实际结果 */
+    int arr[] = {1, 2, 3, 4, 5};
+    int arrSize = ARRAY_SIZE(arr);
+    struct ListNode *newList = arrayToLinkedList(arr, arrSize);
+    int n = 5;
+    struct ListNode *ansList = removeNthFromEnd(newList, n);
+
+    /* 预期结果 */
+    /* {2, 3, 4, 5} */
+    int expectArr[] = {2, 3, 4, 5};
+    int expectArrSize = ARRAY_SIZE(expectArr);
+    struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
+
+    /* 比较结果 */
+    validateAnswer('4', expectList, ansList);
+
+    /* 释放内存 */
+    freeLinkedList(ansList);        /* newList 的链表头已被释放内存 */
+    freeLinkedList(expectList);
 }
 
 /**********************************************************************************/
@@ -270,5 +308,6 @@ int main(int argc, char const *argv[]) {
     test_1();
     test_2();
     test_3();
+    test_4();
     return 0;
 }
