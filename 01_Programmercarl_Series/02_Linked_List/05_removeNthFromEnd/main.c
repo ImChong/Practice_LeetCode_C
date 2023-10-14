@@ -88,13 +88,13 @@ void printList(struct ListNode *listPtr) {
  * @return {struct ListNode} *head
  */
 struct ListNode *removeNthFromEnd(struct ListNode* head, int n){
-    if (!head || n <= 0) {      /* 如果头节点不存在 或 n <= 0 时 */
-        return head;                /* 返回头节点 */
+    if (!head || n <= 0) {                  /* 如果头节点不存在 或 n <= 0 时 */
+        return head;                            /* 返回头节点 */
     }
 
     struct ListNode *dummy = (struct ListNode*)malloc(sizeof(struct ListNode));     /* 初始化虚拟头节点 */
-    dummy->val = 0;         /* 虚拟头节点值为0 */
-    dummy->next = head;     /* 虚拟头节点的下一节点指向链表头节点 */
+    dummy->val = 0;                         /* 虚拟头节点值为0 */
+    dummy->next = head;                     /* 虚拟头节点的下一节点指向链表头节点 */
 
     struct ListNode *first = dummy;         /* 设置第一指针指向虚拟头节点的位置 */
     struct ListNode *second = dummy;        /* 设置第二指针指向虚拟头节点的位置 */
