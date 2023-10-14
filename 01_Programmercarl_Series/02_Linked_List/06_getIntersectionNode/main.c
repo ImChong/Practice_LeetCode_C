@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 21:16:40
+ * @LastEditTime : 2023-10-14 21:38:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -171,7 +171,31 @@ void validateAnswer(char testNum, int expect, int actual) {
  * @return {void}
  */
 void test_1(void) {
+    /* 实际结果 */
+    int arrA[] = {4, 1, 8, 4, 5};
+    int arrASize = ARRAY_SIZE(arrA);
+    struct ListNode *listA = arrayToLinkedList(arrA, arrASize);
+    int arrB[] = {5, 0, 1};
+    int arrBSize = ARRAY_SIZE(arrB);
+    struct ListNode *listB = arrayToLinkedList(arrB, arrBSize);
+    /* 将链表B的尾结点指向链表A的第二个结点 */
+    struct ListNode *current = listB;
+    while (current->next != NULL) {
+        current = current->next;
+    }
+    current->next = listA->next->next;
 
+    struct ListNode *intersectNode = getIntersectionNode(listA, listB);
+
+    /* 预期结果 */
+    int expect = 8;
+
+    /* 比较结果 */
+    validateAnswer('1', expect, intersectNode->val);
+
+    /* 释放内存 - A/B链表相互链接，不可 while 循环释放 */
+    // freeLinkedList(listA);
+    // freeLinkedList(listB);
 }
 
 /**
@@ -198,6 +222,18 @@ void test_3(void) {
 
 }
 
+/**
+ * @description: 测试 4
+ * listA: 4 -> 1 -> 8 -> 4 -> 5
+ * listB: 1 -> 6 -> 4
+ * expected: 1
+ * =================================================================================
+ * @return {void}
+ */
+void test_4(void) {
+
+}
+
 /**********************************************************************************/
 /*                                                                                */
 /*                                  MAIN FUNCTION                                 */
@@ -210,46 +246,8 @@ void test_3(void) {
  * @param {char} *argv[]    程序入参字符串数组
  * @return {int}            程序运行状态
  */
-int main(int argc, const char* argv[]) {
-    /* Case 1 */
-    printf("======== Case 1 ======== \n");
-    int arrA1[] = {4, 1, 8, 4, 5};
-    struct ListNode *listA = arrayToLinkedList(arrA1, 5);
-    printList(listA, 'A');
-
-    int arrB1[] = {5, 0, 1};
-    struct ListNode *listB = arrayToLinkedList(arrB1, 3);
-    /* 将B链表挂载至A链表 */
-    struct ListNode *current = listB;
-    while (current->next != NULL) {
-        current = current->next;
-    }
-    current->next = listA->next->next;
-    printList(listB, 'B');
-
-    struct ListNode *intersectNode = getIntersectionNode(listA, listB);
-    if (intersectNode != NULL) {
-        printf("Intersection: %d\n", intersectNode->val);
-    } else {
-        printf("Intersection: NULL\n");
-    }
-
-    /* Case 2 */
-    printf("======== Case 2 ======== \n");
-    int arrA2[] = {2, 6, 4};
-    listA = arrayToLinkedList(arrA2, 3);
-    printList(listA, 'A');
-
-    int arrB2[] = {1, 5};
-    listB = arrayToLinkedList(arrB2, 2);
-    printList(listB, 'B');
-
-    intersectNode = getIntersectionNode(listA, listB);
-    if (intersectNode != NULL) {
-        printf("Intersection: %d\n", intersectNode->val);
-    } else {
-        printf("Intersection: NULL\n");
-    }
+int main(int argc, const char *argv[]) {
+    test_1();
 
     return 0;
 }
