@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 20:52:01
+ * @LastEditTime : 2023-10-14 20:53:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,7 +43,7 @@ struct ListNode {
  * @param {int} size
  * @return {struct ListNode} *head
  */
-struct ListNode *createList(int *array, int size) {
+struct ListNode *arrayToLinkedList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
 
@@ -79,6 +79,21 @@ void printList(struct ListNode *listPtr, char listChar) {
         listPtr = listPtr->next;
     }
     printf("\n");
+}
+
+/**
+ * @description: 释放链表内存
+ * =================================================================================
+ * @param {ListNode} *head      链表头指针
+ * @return {void}
+ */
+void freeLinkedList(struct ListNode *head) {
+    struct ListNode *current = head;
+    while (current != NULL) {
+        struct ListNode *temp = current;
+        current = current->next;
+        free(temp);
+    }
 }
 
 /**********************************************************************************/
@@ -174,11 +189,11 @@ int main(int argc, const char* argv[]) {
     /* Case 1 */
     printf("======== Case 1 ======== \n");
     int arrA1[] = {4, 1, 8, 4, 5};
-    struct ListNode *listA = createList(arrA1, 5);
+    struct ListNode *listA = arrayToLinkedList(arrA1, 5);
     printList(listA, 'A');
 
     int arrB1[] = {5, 0, 1};
-    struct ListNode *listB = createList(arrB1, 3);
+    struct ListNode *listB = arrayToLinkedList(arrB1, 3);
     /* 将B链表挂载至A链表 */
     struct ListNode *current = listB;
     while (current->next != NULL) {
@@ -197,11 +212,11 @@ int main(int argc, const char* argv[]) {
     /* Case 2 */
     printf("======== Case 2 ======== \n");
     int arrA2[] = {2, 6, 4};
-    listA = createList(arrA2, 3);
+    listA = arrayToLinkedList(arrA2, 3);
     printList(listA, 'A');
 
     int arrB2[] = {1, 5};
-    listB = createList(arrB2, 2);
+    listB = arrayToLinkedList(arrB2, 2);
     printList(listB, 'B');
 
     intersectNode = getIntersectionNode(listA, listB);
