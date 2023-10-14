@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 20:53:11
+ * @LastEditTime : 2023-10-14 20:55:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -39,9 +39,9 @@ struct ListNode {
 /**
  * @description: 创建链表，不使用虚拟头结点
  * =================================================================================
- * @param {int} *array
- * @param {int} size
- * @return {struct ListNode} *head
+ * @param {int} *array                  数组
+ * @param {int} size                    数组大小
+ * @return {struct ListNode} *head      链表头指针
  */
 struct ListNode *arrayToLinkedList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
@@ -68,8 +68,8 @@ struct ListNode *arrayToLinkedList(int *array, int size) {
 /**
  * @description: 打印链表
  * =================================================================================
- * @param {ListNode} *listPtr
- * @param {char} listChar
+ * @param {ListNode} *listPtr           链表头指针
+ * @param {char} listChar               链表标识字符
  * @return {void}
  */
 void printList(struct ListNode *listPtr, char listChar) {
@@ -84,7 +84,7 @@ void printList(struct ListNode *listPtr, char listChar) {
 /**
  * @description: 释放链表内存
  * =================================================================================
- * @param {ListNode} *head      链表头指针
+ * @param {ListNode} *head              链表头指针
  * @return {void}
  */
 void freeLinkedList(struct ListNode *head) {
