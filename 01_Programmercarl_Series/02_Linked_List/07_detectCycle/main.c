@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 20:17:25
+ * @LastEditTime : 2023-10-14 21:44:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,13 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO FUNCTIONS                                 */
+/*                                                                                */
+/**********************************************************************************/
+#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -72,6 +79,21 @@ void printList(struct ListNode *listPtr) {
         i++;
     }
     printf("\n");
+}
+
+/**
+ * @description: 释放链表内存
+ * =================================================================================
+ * @param {ListNode} *head              链表头指针
+ * @return {void}
+ */
+void freeLinkedList(struct ListNode *head) {
+    struct ListNode *current = head;
+    while (current != NULL) {
+        struct ListNode *temp = current;
+        current = current->next;
+        free(temp);
+    }
 }
 
 /**********************************************************************************/
