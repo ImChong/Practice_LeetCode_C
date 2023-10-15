@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 21:43:00
+ * @LastEditTime : 2023-10-15 18:58:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -208,6 +208,28 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    int arrA[] = {0, 9, 1, 2, 4};
+    int arrASize = ARRAY_SIZE(arrA);
+    struct ListNode *listA = arrayToLinkedList(arrA, arrASize);
+    int arrB[] = {3, 2, 4};
+    int arrBSize = ARRAY_SIZE(arrB);
+    struct ListNode *listB = arrayToLinkedList(arrB, arrBSize);
+    /* 将链表B的尾结点指向链表A的第四个结点 */
+    struct ListNode *current = listB;
+    while (current->next != NULL) {
+        current = current->next;
+    }
+    current->next = listA->next->next->next;
+
+    struct ListNode *intersectNode = getIntersectionNode(listA, listB);
+
+    /* 预期结果 */
+    int expect = 2;
+
+    /* 比较结果 */
+    validateAnswer('2', expect, intersectNode->val);
+
+    /* 释放内存 - A/B链表相互链接，不可 while 循环释放 */
 }
 
 /**
@@ -250,6 +272,6 @@ void test_4(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
-
+    test_2();
     return 0;
 }
