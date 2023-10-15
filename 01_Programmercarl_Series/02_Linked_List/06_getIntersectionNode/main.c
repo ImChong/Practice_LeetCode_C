@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-15 18:58:39
+ * @LastEditTime : 2023-10-15 19:15:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -242,20 +242,28 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    int arrA[] = {2, 6, 4};
+    int arrASize = ARRAY_SIZE(arrA);
+    struct ListNode *listA = arrayToLinkedList(arrA, arrASize);
+    int arrB[] = {1, 5};
+    int arrBSize = ARRAY_SIZE(arrB);
+    struct ListNode *listB = arrayToLinkedList(arrB, arrBSize);
 
-}
+    struct ListNode *intersectNode = getIntersectionNode(listA, listB);
 
-/**
- * @description: 测试 4
- * listA: 4 -> 1 -> 8 -> 4 -> 5
- * listB: 1 -> 6 -> 4
- * expected: 1
- * =================================================================================
- * @return {void}
- */
-void test_4(void) {
-    /* 实际结果 */
+    /* 预期结果 */
+    struct ListNode *expect = NULL;
 
+    /* 比较结果 */
+    if (expect == intersectNode) {
+        printf("✅ Test 3 Passed\n");
+    } else {
+        printf("❌ Test 3 Failed\n");
+    }
+
+    /* 释放内存 */
+    freeLinkedList(listA);
+    freeLinkedList(listB);
 }
 
 /**********************************************************************************/
@@ -273,5 +281,6 @@ void test_4(void) {
 int main(int argc, const char *argv[]) {
     test_1();
     test_2();
+    test_3();
     return 0;
 }
