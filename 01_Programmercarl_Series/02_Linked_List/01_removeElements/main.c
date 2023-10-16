@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 21:23:12
+ * @LastEditTime : 2023-10-16 09:26:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,7 +43,7 @@ struct ListNode {
  * @param {int} size                    数组大小
  * @return {struct ListNode} *head      头节点指针
  */
-struct ListNode *createList(int *array, int size) {
+struct ListNode *arrayToLinkedList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
 
@@ -175,14 +175,14 @@ void test_1(void) {
     /* 实际结果 */
     int nums[] = {1, 2, 6, 3, 4, 5, 6};
     int numsSize = ARRAY_SIZE(nums);
-    struct ListNode *head = createList(nums, numsSize);
+    struct ListNode *head = arrayToLinkedList(nums, numsSize);
     int removeVal = 6;
     struct ListNode *ansList = removeElements(head, removeVal);
 
     /* 预期结果 */
     int expectNums[] = {1, 2, 3, 4, 5};
     int expectLen = ARRAY_SIZE(expectNums);
-    struct ListNode *expectList = createList(expectNums, expectLen);
+    struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
     validateAnswer('1', expectList, ansList);
@@ -201,14 +201,14 @@ void test_2(void) {
     /* 实际结果 */
     int nums[] = {1, 1, 1, 1, 1};
     int numsSize = ARRAY_SIZE(nums);
-    struct ListNode *head = createList(nums, numsSize);
+    struct ListNode *head = arrayToLinkedList(nums, numsSize);
     int removeVal = 1;
     struct ListNode *ansList = removeElements(head, removeVal);
 
     /* 预期结果 */
     int expectNums[] = {};
     int expectLen = ARRAY_SIZE(expectNums);
-    struct ListNode *expectList = createList(expectNums, expectLen);
+    struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
     validateAnswer('2', expectList, ansList);
@@ -227,14 +227,14 @@ void test_3(void) {
     /* 实际结果 */
     int nums[] = {1, 2, 3, 4, 5};
     int numsSize = ARRAY_SIZE(nums);
-    struct ListNode *head = createList(nums, numsSize);
+    struct ListNode *head = arrayToLinkedList(nums, numsSize);
     int removeVal = 6;
     struct ListNode *ansList = removeElements(head, removeVal);
 
     /* 预期结果 */
     int expectNums[] = {1, 2, 3, 4, 5};
     int expectLen = ARRAY_SIZE(expectNums);
-    struct ListNode *expectList = createList(expectNums, expectLen);
+    struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
     validateAnswer('3', expectList, ansList);

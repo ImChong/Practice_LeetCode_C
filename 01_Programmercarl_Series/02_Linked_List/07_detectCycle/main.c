@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 21:44:30
+ * @LastEditTime : 2023-10-16 09:25:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -164,6 +164,7 @@ void validateAnswer(char testNum, int expect, int actual) {
  */
 void test_1(void) {
     /* 实际结果 */
+    int arr[] = {3, 2, 0, -4};
 
     /* 预期结果 */
 
