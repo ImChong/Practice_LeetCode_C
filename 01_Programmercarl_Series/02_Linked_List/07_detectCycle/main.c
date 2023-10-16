@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-16 09:27:22
+ * @LastEditTime : 2023-10-16 09:30:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -18,7 +18,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))          /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -165,6 +165,8 @@ void validateAnswer(char testNum, int expect, int actual) {
 void test_1(void) {
     /* 实际结果 */
     int arr[] = {3, 2, 0, -4};
+    int arrSize = ARR_SIZE(arr);
+    struct ListNode *arrList = arrayToLinkedList(arr, arrSize);
 
     /* 预期结果 */
 
