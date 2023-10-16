@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-16 09:25:39
+ * @LastEditTime : 2023-10-16 09:27:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,7 +43,7 @@ struct ListNode {
  * @param {int} size
  * @return {struct ListNode} *head
  */
-struct ListNode *createList(int *array, int size) {
+struct ListNode *arrayToLinkedList(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
 
@@ -206,7 +206,7 @@ int main(int argc, const char* argv[]) {
     /* Case 1 */
     printf("======== Case 1 ======== \n");
     int arr1[] = {3, 2, 0, -4};
-    struct ListNode *ansList = createList(arr1, 4);
+    struct ListNode *ansList = arrayToLinkedList(arr1, 4);
     struct ListNode *pPos = ansList;
     struct ListNode *pTail = ansList;
     while (pTail->next != NULL) {   /* 获取链表尾部节点 */
@@ -227,7 +227,7 @@ int main(int argc, const char* argv[]) {
     /* Case 3 */
     printf("======== Case 3 ======== \n");
     int arr3[] = {3, 2, 0, -4, -5, -6};
-    ansList = createList(arr3, 6);
+    ansList = arrayToLinkedList(arr3, 6);
     pPos = ansList;
     pTail = ansList;
     while (pTail->next != NULL) {   /* 获取链表尾部节点 */
