@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-17 23:21:28
+ * @LastEditTime : 2023-10-17 23:26:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -192,6 +192,27 @@ bool myQueueEmpty(MyQueue* obj) {
 void myQueueFree(MyQueue* obj) {
     stackFree(obj->inStack);                                /* 释放入队栈空间 */
     stackFree(obj->outStack);                               /* 释放出队栈空间 */
+}
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                 HELPER FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 验证答案
+ * =================================================================================
+ * @param {char} testNum    测试编号
+ * @param {int} expect      预期
+ * @param {int} actual      实际
+ * @return {void}
+ */
+void validateAnswer(char testNum, int expect, int actual) {
+    if (expect == actual) {
+        printf("✅ Test %c Passed\n", testNum);
+    } else {
+        printf("❌ Test %c Failed\n", testNum);
+    }
 }
 
 /**********************************************************************************/
