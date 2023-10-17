@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-17 22:49:56
+ * @LastEditTime : 2023-10-17 23:15:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -187,17 +187,20 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    int arr[] = {1, 2};
+    int arrSize = ARR_SIZE(arr);
+    struct ListNode *arrList = arrayToLinkedList(arr, arrSize);
+    arrList->next->next = arrList;   /* 将尾节点指向指定节点 */
+    int actual = detectCycle(arrList)->val;
 
     /* 预期结果 */
+    int expect = 1;
 
     /* 比较结果 */
+    validateAnswer('2', expect, actual);
 
-    // printf("======== Case 2 ======== \n");
-    // struct ListNode b1 = {1, NULL}, b2 = {2, NULL};
-    // b1.next = &b2; b2.next = &b1;
-    // printList(&b1);
-    // printf("Pos: %d\n", detectCycle(&b1)->val);
-
+    /* 释放内存 */
+    /* 需要释放指定长度，否则会进入无限循环 */
 }
 
 /**
@@ -207,24 +210,23 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    int arr[] = {1};
+    int arrSize = ARR_SIZE(arr);
+    struct ListNode *arrList = arrayToLinkedList(arr, arrSize);
+    struct ListNode *actual = detectCycle(arrList);
 
     /* 预期结果 */
+    struct ListNode *expect = NULL;
 
     /* 比较结果 */
+    if (actual == expect) {
+        printf("✅ Test 3 Passed\n");
+    } else {
+        printf("❌ Test 3 Failed\n");
+    }
 
-    /* Case 3 */
-    // printf("======== Case 3 ======== \n");
-    // int arr3[] = {3, 2, 0, -4, -5, -6};
-    // ansList = arrayToLinkedList(arr3, 6);
-    // pPos = ansList;
-    // pTail = ansList;
-    // while (pTail->next != NULL) {   /* 获取链表尾部节点 */
-    //     pTail = pTail->next;
-    // }
-    // pPos = pPos->next->next;          /* 获取链表指定节点 */
-    // pTail->next = pPos;         /* 将尾节点指向指定节点 */
-    // printList(ansList);
-    // printf("Pos: %d\n", detectCycle(ansList)->val);
+    /* 释放内存 */
+    freeLinkedList(arrList);
 }
 
 /**********************************************************************************/
@@ -241,6 +243,7 @@ void test_3(void) {
  */
 int main(int argc, const char* argv[]) {
     test_1();
-
+    test_2();
+    test_3();
     return 0;
 }
