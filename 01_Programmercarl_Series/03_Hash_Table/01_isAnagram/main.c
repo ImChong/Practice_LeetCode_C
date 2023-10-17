@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 20:20:38
+ * @LastEditTime : 2023-10-17 23:16:52
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -83,6 +83,11 @@ void validateAnswer(char testNum, int expect, int actual) {
  * @return {void}
  */
 void test_1(void) {
+    /* 实际结果 */
+
+    /* 预期结果 */
+
+    /* 比较结果 */
 
 }
 
@@ -92,6 +97,11 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
+    /* 实际结果 */
+
+    /* 预期结果 */
+
+    /* 比较结果 */
 
 }
 
@@ -101,6 +111,11 @@ void test_2(void) {
  * @return {void}
  */
 void test_3(void) {
+    /* 实际结果 */
+
+    /* 预期结果 */
+
+    /* 比较结果 */
 
 }
 
