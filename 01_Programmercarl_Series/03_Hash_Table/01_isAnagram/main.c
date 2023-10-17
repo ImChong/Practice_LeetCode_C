@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-17 23:16:52
+ * @LastEditTime : 2023-10-17 23:48:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -89,6 +89,11 @@ void test_1(void) {
 
     /* 比较结果 */
 
+    /* Test case 1 */
+    printf("======== Case 1 ======== \n");
+    char s1[] = "anagram";
+    char t1[] = "nagaram";
+    printf("Test case 1: %d\n", isAnagram(s1, t1));
 }
 
 /**
@@ -103,6 +108,11 @@ void test_2(void) {
 
     /* 比较结果 */
 
+    /* Test case 2 */
+    printf("======== Case 2 ======== \n");
+    char s2[] = "rat";
+    char t2[] = "car";
+    printf("Test case 2: %d\n", isAnagram(s2, t2));
 }
 
 /**
@@ -132,17 +142,8 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
-    /* Test case 1 */
-    printf("======== Case 1 ======== \n");
-    char s1[] = "anagram";
-    char t1[] = "nagaram";
-    printf("Test case 1: %d\n", isAnagram(s1, t1));
-
-    /* Test case 2 */
-    printf("======== Case 2 ======== \n");
-    char s2[] = "rat";
-    char t2[] = "car";
-    printf("Test case 2: %d\n", isAnagram(s2, t2));
+    test_1();
+    // test_2();
 
     return 0;
 }
