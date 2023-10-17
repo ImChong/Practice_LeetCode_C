@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-17 10:02:15
+ * @LastEditTime : 2023-10-17 22:49:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -167,11 +167,17 @@ void test_1(void) {
     int arr[] = {3, 2, 0, -4};
     int arrSize = ARR_SIZE(arr);
     struct ListNode *arrList = arrayToLinkedList(arr, arrSize);
+    arrList->next->next->next->next = arrList->next;   /* 将尾节点指向指定节点 */
+    int actual = detectCycle(arrList)->val;
 
     /* 预期结果 */
+    int expect = 2;
 
     /* 比较结果 */
+    validateAnswer('1', expect, actual);
 
+    /* 释放内存 */
+    /* 需要释放指定长度，否则会进入无限循环 */
 }
 
 /**
@@ -186,6 +192,12 @@ void test_2(void) {
 
     /* 比较结果 */
 
+    // printf("======== Case 2 ======== \n");
+    // struct ListNode b1 = {1, NULL}, b2 = {2, NULL};
+    // b1.next = &b2; b2.next = &b1;
+    // printList(&b1);
+    // printf("Pos: %d\n", detectCycle(&b1)->val);
+
 }
 
 /**
@@ -199,6 +211,20 @@ void test_3(void) {
     /* 预期结果 */
 
     /* 比较结果 */
+
+    /* Case 3 */
+    // printf("======== Case 3 ======== \n");
+    // int arr3[] = {3, 2, 0, -4, -5, -6};
+    // ansList = arrayToLinkedList(arr3, 6);
+    // pPos = ansList;
+    // pTail = ansList;
+    // while (pTail->next != NULL) {   /* 获取链表尾部节点 */
+    //     pTail = pTail->next;
+    // }
+    // pPos = pPos->next->next;          /* 获取链表指定节点 */
+    // pTail->next = pPos;         /* 将尾节点指向指定节点 */
+    // printList(ansList);
+    // printf("Pos: %d\n", detectCycle(ansList)->val);
 }
 
 /**********************************************************************************/
@@ -214,40 +240,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char* argv[]) {
-    /* Case 1 */
-    printf("======== Case 1 ======== \n");
-    int arr1[] = {3, 2, 0, -4};
-    struct ListNode *ansList = arrayToLinkedList(arr1, 4);
-    struct ListNode *pPos = ansList;
-    struct ListNode *pTail = ansList;
-    while (pTail->next != NULL) {   /* 获取链表尾部节点 */
-        pTail = pTail->next;
-    }
-    pPos = pPos->next;          /* 获取链表指定节点 */
-    pTail->next = pPos;         /* 将尾节点指向指定节点 */
-    printList(ansList);
-    printf("Pos: %d\n", detectCycle(ansList)->val);
-
-    /* Case 2 */
-    printf("======== Case 2 ======== \n");
-    struct ListNode b1 = {1, NULL}, b2 = {2, NULL};
-    b1.next = &b2; b2.next = &b1;
-    printList(&b1);
-    printf("Pos: %d\n", detectCycle(&b1)->val);
-
-    /* Case 3 */
-    printf("======== Case 3 ======== \n");
-    int arr3[] = {3, 2, 0, -4, -5, -6};
-    ansList = arrayToLinkedList(arr3, 6);
-    pPos = ansList;
-    pTail = ansList;
-    while (pTail->next != NULL) {   /* 获取链表尾部节点 */
-        pTail = pTail->next;
-    }
-    pPos = pPos->next->next;          /* 获取链表指定节点 */
-    pTail->next = pPos;         /* 将尾节点指向指定节点 */
-    printList(ansList);
-    printf("Pos: %d\n", detectCycle(ansList)->val);
+    test_1();
 
     return 0;
 }
