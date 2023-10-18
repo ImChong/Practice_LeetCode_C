@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 10:04:22
+ * @LastEditTime : 2023-10-18 09:17:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -69,11 +69,15 @@ void validateAnswer(char testNum, int expect, int actual) {
  */
 void test_1(void) {
     /* 实际结果 */
+    char *s = "hello";
+    int sSize = strlen(s);
+    char *actual = reverseString(s, sSize);
 
     /* 预期结果 */
+    char *expect = "olleh";
 
     /* 比较结果 */
-
+    validateAnswer("1", expect, actual);
 }
 
 /**
