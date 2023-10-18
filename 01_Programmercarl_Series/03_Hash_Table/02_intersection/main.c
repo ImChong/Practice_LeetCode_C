@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-19 00:47:25
+ * @LastEditTime : 2023-10-19 00:48:16
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -78,9 +78,9 @@ int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *ret
 /**
  * @description: 打印数组
  * =================================================================================
- * @param {int} *arr
- * @param {int} arrSize
- * @return {void}
+ * @param {int} *arr            数组
+ * @param {int} arrSize         数组大小
+ * @return {void}               
  */
 void printArray(int *arr, int arrSize) {
     printf("Arr: ");
@@ -90,11 +90,6 @@ void printArray(int *arr, int arrSize) {
     printf("\n");
 }
 
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
 /**
  * @description: 验证答案
  * =================================================================================
@@ -162,6 +157,15 @@ void test_2(void) {
 
     /* 比较结果 */
 
+    /* Test case 2 */
+    printf("======== Case 2 ======== \n");
+    int nums3[] = {4, 9, 5};
+    int nums4[] = {9, 4, 9, 8, 4};
+    printArray(nums4, 5);
+    int returnSize = 0;
+    int *ans = intersection(nums3, 3, nums4, 5, &returnSize);
+    printArray(ans, returnSize);
+
 }
 
 /**
@@ -191,23 +195,9 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
-    /* Test case 1 */
-    printf("======== Case 1 ======== \n");
-    int nums1[] = {1, 2, 2, 1};
-    int nums1Size = sizeof(nums1) / sizeof(nums1[0]);
-    int nums2[] = {2, 2};
-    int nums2Size = sizeof(nums2) / sizeof(nums2[0]);
-    int returnSize = 0;
-    int *ans = intersection(nums1, nums1Size, nums2, nums2Size, &returnSize);
-    printArray(ans, returnSize);
+    test_1();
 
-    /* Test case 2 */
-    printf("======== Case 2 ======== \n");
-    int nums3[] = {4, 9, 5};
-    int nums4[] = {9, 4, 9, 8, 4};
-    printArray(nums4, 5);
-    ans = intersection(nums3, 3, nums4, 5, &returnSize);
-    printArray(ans, returnSize);
+
 
     return 0;
 }
