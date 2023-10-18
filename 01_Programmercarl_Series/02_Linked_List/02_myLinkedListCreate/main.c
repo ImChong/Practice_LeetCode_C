@@ -18,7 +18,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -264,7 +264,7 @@ void test_1(void) {
     /* 预期结果 */
     MyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {2, 3};
-    arrayToLinkedList(expectDummy, nums, ARRAY_SIZE(nums));
+    arrayToLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateAnswer('1', expectDummy, actualDummy);
@@ -299,7 +299,7 @@ void test_2(void) {
     /* 预期结果 */
     MyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {5, 2, 3, 7, 2};
-    arrayToLinkedList(expectDummy, nums, ARRAY_SIZE(nums));
+    arrayToLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateAnswer('2', expectDummy, actualDummy);
@@ -331,7 +331,7 @@ void test_3(void) {
     /* 预期结果 */
     MyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {1, 7, 2, 1};
-    arrayToLinkedList(expectDummy, nums, ARRAY_SIZE(nums));
+    arrayToLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateAnswer('3', expectDummy, actualDummy);

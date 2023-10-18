@@ -17,7 +17,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -86,11 +86,11 @@ void test_1(void) {
     /* 实际结果 */
     int nums[] = {3, 2, 2, 3};
     int removeVal = 3;
-    int resultLen = removeElement(nums, ARRAY_SIZE(nums), removeVal);
+    int resultLen = removeElement(nums, ARR_SIZE(nums), removeVal);
 
     /* 预期结果 */
     int expectNums[] = {2, 2};
-    int expectLen = ARRAY_SIZE(expectNums);
+    int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
     validateAnswer('1', expectNums, expectLen, nums, resultLen);
@@ -105,11 +105,11 @@ void test_2(void) {
     /* 实际结果 */
     int nums[] = {0, 1, 2, 2, 3, 0, 4, 2};
     int removeVal = 2;
-    int resultLen = removeElement(nums, ARRAY_SIZE(nums), removeVal);
+    int resultLen = removeElement(nums, ARR_SIZE(nums), removeVal);
 
     /* 预期结果 */
     int expectNums[] = {0, 1, 3, 0, 4};
-    int expectLen = ARRAY_SIZE(expectNums);
+    int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
     validateAnswer('2', expectNums, expectLen, nums, resultLen);
@@ -124,11 +124,11 @@ void test_3(void) {
     /* 实际结果 */
     int nums[] = {1};
     int removeVal = 2;
-    int resultLen = removeElement(nums, ARRAY_SIZE(nums), removeVal);
+    int resultLen = removeElement(nums, ARR_SIZE(nums), removeVal);
 
     /* 预期结果 */
     int expectNums[] = {1};
-    int expectLen = ARRAY_SIZE(expectNums);
+    int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
     validateAnswer('3', expectNums, expectLen, nums, resultLen);
@@ -143,11 +143,11 @@ void test_4(void) {
     /* 实际结果 */
     int nums[] = {1};
     int removeVal = 1;
-    int resultLen = removeElement(nums, ARRAY_SIZE(nums), removeVal);
+    int resultLen = removeElement(nums, ARR_SIZE(nums), removeVal);
 
     /* 预期结果 */
     int expectNums[] = {};
-    int expectLen = ARRAY_SIZE(expectNums);
+    int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
     validateAnswer('4', expectNums, expectLen, nums, resultLen);

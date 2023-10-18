@@ -18,7 +18,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -172,13 +172,13 @@ void validateAnswer(char testNum, struct ListNode *expect, struct ListNode *actu
 void test_1(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4};
-    int arrSize = ARRAY_SIZE(arr);
+    int arrSize = ARR_SIZE(arr);
     struct ListNode *arrList = arrayToLinkedList(arr, arrSize);
     struct ListNode *ansList = swapPairs(arrList);
 
     /* 预期结果 */
     int expectArr[] = {2, 1, 4, 3};
-    int expectSize = ARRAY_SIZE(expectArr);
+    int expectSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectSize);
 
     /* 比较结果 */
@@ -197,13 +197,13 @@ void test_1(void) {
 void test_2(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5};
-    int arrSize = ARRAY_SIZE(arr);
+    int arrSize = ARR_SIZE(arr);
     struct ListNode *arrList = arrayToLinkedList(arr, arrSize);
     struct ListNode *ansList = swapPairs(arrList);
 
     /* 预期结果 */
     int expectArr[] = {2, 1, 4, 3, 5};
-    int expectSize = ARRAY_SIZE(expectArr);
+    int expectSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectSize);
 
     /* 比较结果 */
@@ -222,13 +222,13 @@ void test_2(void) {
 void test_3(void) {
     /* 实际结果 */
     int arr[] = {1};
-    int arrSize = ARRAY_SIZE(arr);
+    int arrSize = ARR_SIZE(arr);
     struct ListNode *arrList = arrayToLinkedList(arr, arrSize);
     struct ListNode *ansList = swapPairs(arrList);
 
     /* 预期结果 */
     int expectArr[] = {1};
-    int expectSize = ARRAY_SIZE(expectArr);
+    int expectSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectSize);
 
     /* 比较结果 */

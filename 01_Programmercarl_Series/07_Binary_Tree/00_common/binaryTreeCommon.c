@@ -58,7 +58,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))    /* 获取数组长度 */
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))    /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -444,7 +444,7 @@ int main(int argc, const char* argv[]) {
     printTree();            /* 打印树结构 */
 
     int arr[] = {1, 2, 3, 4, 5, 6, 7};          /* 初始化数组 */
-    int size = ARRAY_SIZE(arr);                 /* 获取数组长度 */
+    int size = ARR_SIZE(arr);                 /* 获取数组长度 */
     printf("Tree Array: \n");
     print1DArray(arr, size);
     printf("\n");

@@ -19,7 +19,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -222,7 +222,7 @@ int main(int argc, const char *argv[]) {
     int returnSize = 0;
     int *returnColumnSizes;
 
-    int **result = threeSum(nums, ARRAY_SIZE(nums), &returnSize, &returnColumnSizes);
+    int **result = threeSum(nums, ARR_SIZE(nums), &returnSize, &returnColumnSizes);
     printAns(result, returnSize, returnColumnSizes);
     freeAns(&result, &returnSize, &returnColumnSizes);
     return 0;

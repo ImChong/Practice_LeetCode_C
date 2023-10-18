@@ -18,7 +18,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -100,13 +100,13 @@ void validateAnswer(char testNum, int *expectNums, int expectLen, int *actualNum
 void test_1(void) {
     /* 实际结果 */
     int nums[] = {-4, -1, 0, 3, 10};
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     int returnSize;
     int *returnNums = sortedSquares(nums, numsSize, &returnSize);
 
     /* 预期结果 */
     int expectNums[] = {0, 1, 9, 16, 100};
-    int expectSize = ARRAY_SIZE(expectNums);
+    int expectSize = ARR_SIZE(expectNums);
 
     /* 比较结果 */
     validateAnswer('1', expectNums, expectSize, returnNums, returnSize);
@@ -123,13 +123,13 @@ void test_1(void) {
 void test_2(void) {
     /* 实际结果 */
     int nums[] = {-7, -3, 2, 3, 11};
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     int returnSize;
     int *returnNums = sortedSquares(nums, numsSize, &returnSize);
 
     /* 预期结果 */
     int expectNums[] = {4, 9, 9, 49, 121};
-    int expectSize = ARRAY_SIZE(expectNums);
+    int expectSize = ARR_SIZE(expectNums);
 
     /* 比较结果 */
     validateAnswer('2', expectNums, expectSize, returnNums, returnSize);
@@ -146,13 +146,13 @@ void test_2(void) {
 void test_3(void) {
     /* 实际结果 */
     int nums[] = {1};
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     int returnSize;
     int *returnNums = sortedSquares(nums, numsSize, &returnSize);
 
     /* 预期结果 */
     int expectNums[] = {1};
-    int expectSize = ARRAY_SIZE(expectNums);
+    int expectSize = ARR_SIZE(expectNums);
 
     /* 比较结果 */
     validateAnswer('3', expectNums, expectSize, returnNums, returnSize);

@@ -19,7 +19,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 /**********************************************************************************/
 /*                                                                                */
@@ -263,7 +263,7 @@ int main(int argc, char const *argv[]) {
     int B[] = {-2, -1};
     int C[] = {-1, 2};
     int D[] = {0, 2};
-    int result = fourSumCount(A, ARRAY_SIZE(A), B, ARRAY_SIZE(B), C, ARRAY_SIZE(C), D, ARRAY_SIZE(D));
+    int result = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
     printf("result: %d\n", result);
 
     return 0;

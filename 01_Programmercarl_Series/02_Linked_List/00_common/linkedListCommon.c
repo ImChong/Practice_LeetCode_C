@@ -17,7 +17,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -130,7 +130,7 @@ void freeList(struct ListNode *listPtr) {
  */
 int main(int argc, const char *argv[]) {
     int arr[] = {1, 2, 3, 4, 5};
-    int arrSize = ARRAY_SIZE(arr);
+    int arrSize = ARR_SIZE(arr);
     struct ListNode *ansList = arrayToLinkedList(arr, arrSize);
     ansList = appendToList(ansList, 6);
     printList(ansList);

@@ -19,7 +19,7 @@
 /*                                                                                */
 /**********************************************************************************/
 /* 获取数组长度 */
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 /* （token-pasting：##）将两个标记符号合并为一个标记 */
 #define TOKEN_CONCATENATE(x, y) x ## y

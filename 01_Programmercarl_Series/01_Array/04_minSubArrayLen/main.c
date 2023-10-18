@@ -19,7 +19,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -86,7 +86,7 @@ void validateAnswer(char testNum, int expect, int actual) {
 void test_1(void) {
     /* 实际结果 */
     int nums[] = {2, 3, 1, 2, 4, 3};
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     int target = 7;
     int resultLen = minSubArrayLen(target, nums, numsSize);
 
@@ -105,7 +105,7 @@ void test_1(void) {
 void test_2(void) {
     /* 实际结果 */
     int nums[] = {1, 1, 1, 1, 1, 1, 1, 1};
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     int target = 11;
     int resultLen = minSubArrayLen(target, nums, numsSize);
 
@@ -124,7 +124,7 @@ void test_2(void) {
 void test_3(void) {
     /* 实际结果 */
     int nums[] = {1, 2, 3, 4, 5};
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     int target = 11;
     int resultLen = minSubArrayLen(target, nums, numsSize);
 

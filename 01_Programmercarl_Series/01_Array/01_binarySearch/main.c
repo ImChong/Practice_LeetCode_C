@@ -17,7 +17,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -86,7 +86,7 @@ void validateAnswer(char testNum, int expect, int actual) {
 void test_1(void) {
     /* 实际结果 */
     int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     int target = 9;
     int ans = search(nums, numsSize, target);
 
@@ -105,7 +105,7 @@ void test_1(void) {
 void test_2(void) {
     /* 实际结果 */
     int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     int target = 2;
     int ans = search(nums, numsSize, target);
 
@@ -124,7 +124,7 @@ void test_2(void) {
 void test_3(void) {
     /* 实际结果 */
     int nums[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};       /* 有序数组 */
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     int target = 5;
     int ans = search(nums, numsSize, target);
 

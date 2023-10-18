@@ -18,7 +18,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -174,14 +174,14 @@ void validateAnswer(char testNum, struct ListNode *expectList, struct ListNode *
 void test_1(void) {
     /* 实际结果 */
     int nums[] = {1, 2, 6, 3, 4, 5, 6};
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     struct ListNode *head = arrayToLinkedList(nums, numsSize);
     int removeVal = 6;
     struct ListNode *ansList = removeElements(head, removeVal);
 
     /* 预期结果 */
     int expectNums[] = {1, 2, 3, 4, 5};
-    int expectLen = ARRAY_SIZE(expectNums);
+    int expectLen = ARR_SIZE(expectNums);
     struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
@@ -200,14 +200,14 @@ void test_1(void) {
 void test_2(void) {
     /* 实际结果 */
     int nums[] = {1, 1, 1, 1, 1};
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     struct ListNode *head = arrayToLinkedList(nums, numsSize);
     int removeVal = 1;
     struct ListNode *ansList = removeElements(head, removeVal);
 
     /* 预期结果 */
     int expectNums[] = {};
-    int expectLen = ARRAY_SIZE(expectNums);
+    int expectLen = ARR_SIZE(expectNums);
     struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
@@ -226,14 +226,14 @@ void test_2(void) {
 void test_3(void) {
     /* 实际结果 */
     int nums[] = {1, 2, 3, 4, 5};
-    int numsSize = ARRAY_SIZE(nums);
+    int numsSize = ARR_SIZE(nums);
     struct ListNode *head = arrayToLinkedList(nums, numsSize);
     int removeVal = 6;
     struct ListNode *ansList = removeElements(head, removeVal);
 
     /* 预期结果 */
     int expectNums[] = {1, 2, 3, 4, 5};
-    int expectLen = ARRAY_SIZE(expectNums);
+    int expectLen = ARR_SIZE(expectNums);
     struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
