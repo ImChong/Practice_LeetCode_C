@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-19 00:52:54
+ * @LastEditTime : 2023-10-19 00:54:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -186,11 +186,22 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    int nums1[] = {1, 2, 3, 4, 5};
+    int nums1Size = ARR_SIZE(nums1);
+    int nums2[] = {6, 7, 8, 9, 10};
+    int nums2Size = ARR_SIZE(nums2);
+    int returnSize = 0;
+    int *ans = intersection(nums1, nums1Size, nums2, nums2Size, &returnSize);
 
     /* 预期结果 */
+    int expect[] = {};
+    int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
+    validateAnswer('3', expect, expectSize, ans, returnSize);
 
+    /* 释放内存 */
+    free(ans);
 }
 
 /**********************************************************************************/
@@ -208,6 +219,6 @@ void test_3(void) {
 int main(int argc, char const *argv[]) {
     test_1();
     test_2();
-
+    test_3();
     return 0;
 }
