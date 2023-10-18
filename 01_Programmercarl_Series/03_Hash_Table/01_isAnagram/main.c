@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-19 00:39:39
+ * @LastEditTime : 2023-10-19 00:40:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -122,11 +122,15 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    char s[] = "";
+    char t[] = "";
+    bool actual = isAnagram(s, t);
 
     /* 预期结果 */
+    bool expect = true;
 
     /* 比较结果 */
-
+    validateAnswer('3', expect, actual);
 }
 
 /**********************************************************************************/
@@ -143,7 +147,7 @@ void test_3(void) {
  */
 int main(int argc, char const *argv[]) {
     test_1();
-    // test_2();
-
+    test_2();
+    test_3();
     return 0;
 }
