@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-19 00:44:27
+ * @LastEditTime : 2023-10-19 00:47:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -98,17 +98,26 @@ void printArray(int *arr, int arrSize) {
 /**
  * @description: 验证答案
  * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
+ * @param {char} testNum        测试编号
+ * @param {int} *expect         预期
+ * @param {int} expectSize      预期大小
+ * @param {int} *actual         实际
+ * @param {int} actualSize      实际大小
+ * @return {*}
  */
-void validateAnswer(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
+void validateAnswer(char testNum, int *expect, int expectSize, int *actual, int actualSize) {
+    if (expectSize != actualSize) {
         printf("❌ Test %c Failed\n", testNum);
+        return;
+    } else {
+        for (int i = 0; i < expectSize; i++) {
+            if (expect[i] != actual[i]) {
+                printf("❌ Test %c Failed\n", testNum);
+                return;
+            }
+        }
     }
+    printf("✅ Test %c Passed\n", testNum);
 }
 
 /**********************************************************************************/
@@ -125,11 +134,20 @@ void test_1(void) {
     /* 实际结果 */
     int nums1[] = {1, 2, 2, 1};
     int nums1Size = ARR_SIZE(nums1);
+    int nums2[] = {2, 2};
+    int nums2Size = ARR_SIZE(nums2);
+    int returnSize = 0;
+    int *ans = intersection(nums1, nums1Size, nums2, nums2Size, &returnSize);
 
     /* 预期结果 */
+    int expect[] = {2};
+    int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
+    validateAnswer('1', expect, expectSize, ans, returnSize);
 
+    /* 释放内存 */
+    free(ans);
 }
 
 /**
