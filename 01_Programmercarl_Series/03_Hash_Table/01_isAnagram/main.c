@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-19 00:36:59
+ * @LastEditTime : 2023-10-19 00:39:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -84,16 +84,17 @@ void validateAnswer(char testNum, int expect, int actual) {
  */
 void test_1(void) {
     /* 实际结果 */
+    char s[] = "anagram";
+    char t[] = "nagaram";
+    bool actual = isAnagram(s, t);
 
     /* 预期结果 */
+    bool expect = true;
 
     /* 比较结果 */
 
     /* Test case 1 */
-    printf("======== Case 1 ======== \n");
-    char s1[] = "anagram";
-    char t1[] = "nagaram";
-    printf("Test case 1: %d\n", isAnagram(s1, t1));
+    validateAnswer('1', expect, actual);
 }
 
 /**
@@ -103,16 +104,15 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    char s[] = "rat";
+    char t[] = "car";
+    bool actual = isAnagram(s, t);
 
     /* 预期结果 */
+    bool expect = false;
 
     /* 比较结果 */
-
-    /* Test case 2 */
-    printf("======== Case 2 ======== \n");
-    char s2[] = "rat";
-    char t2[] = "car";
-    printf("Test case 2: %d\n", isAnagram(s2, t2));
+    validateAnswer('2', expect, actual);
 }
 
 /**
