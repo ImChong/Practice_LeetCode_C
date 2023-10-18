@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-19 00:48:16
+ * @LastEditTime : 2023-10-19 00:52:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -159,24 +159,28 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    int nums1[] = {4, 9, 5};
+    int nums1Size = ARR_SIZE(nums1);
+    int nums2[] = {9, 4, 9, 8, 4};
+    int nums2Size = ARR_SIZE(nums2);
+    int returnSize = 0;
+    int *ans = intersection(nums1, nums1Size, nums2, nums2Size, &returnSize);
 
     /* 预期结果 */
+    int expect[] = {4, 9};
+    int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
+    validateAnswer('2', expect, expectSize, ans, returnSize);
 
-    /* Test case 2 */
-    printf("======== Case 2 ======== \n");
-    int nums3[] = {4, 9, 5};
-    int nums4[] = {9, 4, 9, 8, 4};
-    printArray(nums4, 5);
-    int returnSize = 0;
-    int *ans = intersection(nums3, 3, nums4, 5, &returnSize);
-    printArray(ans, returnSize);
-
+    /* 释放内存 */
+    free(ans);
 }
 
 /**
  * @description: 测试 3
+ * 输入：nums1 = [1,2,3,4,5], nums2 = [6,7,8,9,10]
+ * 输出：[]
  * =================================================================================
  * @return {void}
  */
@@ -203,8 +207,7 @@ void test_3(void) {
  */
 int main(int argc, char const *argv[]) {
     test_1();
-
-
+    test_2();
 
     return 0;
 }
