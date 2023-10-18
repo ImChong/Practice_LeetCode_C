@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-17 23:48:41
+ * @LastEditTime : 2023-10-19 00:36:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -27,9 +27,9 @@
 /**
  * @description: 有效的字母异位词
  * =================================================================================
- * @param {char} *s
- * @param {char} *t
- * @return {bool} status
+ * @param {char} *s         s字符串
+ * @param {char} *t         t字符串
+ * @return {bool} status    返回状态
  */
 bool isAnagram(char *s, char *t) {
     int sLen = strlen(s);               /* 获得s的长度 */
