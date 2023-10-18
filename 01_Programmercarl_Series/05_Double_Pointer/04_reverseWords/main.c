@@ -56,6 +56,11 @@ void validateAnswer(char testNum, int expect, int actual) {
  * @return {void}
  */
 void test_1(void) {
+    /* 实际结果 */
+
+    /* 预期结果 */
+
+    /* 比较结果 */
 
 }
 
@@ -65,6 +70,11 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
+    /* 实际结果 */
+
+    /* 预期结果 */
+
+    /* 比较结果 */
 
 }
 
@@ -74,6 +84,11 @@ void test_2(void) {
  * @return {void}
  */
 void test_3(void) {
+    /* 实际结果 */
+
+    /* 预期结果 */
+
+    /* 比较结果 */
 
 }
 
