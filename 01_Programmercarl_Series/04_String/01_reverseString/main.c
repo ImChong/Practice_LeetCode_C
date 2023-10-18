@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-18 18:53:15
+ * @LastEditTime : 2023-10-18 23:45:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -73,13 +73,13 @@ void test_1(void) {
     /* 实际结果 */
     char *s = "hello";
     int sSize = strlen(s);
-    char *actual = reverseString(s, sSize);
+    reverseString(s, sSize);
 
     /* 预期结果 */
     char *expect = "olleh";
 
     /* 比较结果 */
-    validateAnswer("1", expect, actual);
+    validateAnswer("1", expect, s);
 }
 
 /**
@@ -93,13 +93,13 @@ void test_2(void) {
     /* 实际结果 */
     char *s = "Hannah";
     int sSize = strlen(s);
-    char *actual = reverseString(s, sSize);
+    reverseString(s, sSize);
 
     /* 预期结果 */
     char *expect = "hannaH";
 
     /* 比较结果 */
-    validateAnswer("2", expect, actual);
+    validateAnswer("2", expect, s);
 }
 
 /**
@@ -113,13 +113,13 @@ void test_3(void) {
     /* 实际结果 */
     char *s = "1";
     int sSize = strlen(s);
-    char *actual = reverseString(s, sSize);
+    reverseString(s, sSize);
 
     /* 预期结果 */
     char *expect = "1";
 
     /* 比较结果 */
-    validateAnswer("3", expect, actual);
+    validateAnswer("3", expect, s);
 }
 
 /**********************************************************************************/
