@@ -7,3 +7,5 @@
 - **settings.json**：VSCode插件设置
 
 - **vscode_extensions_list.txt**：VSCode插件列表
+
+- **bashrc.md**：Bash Shell Prompt Color 颜色修改
