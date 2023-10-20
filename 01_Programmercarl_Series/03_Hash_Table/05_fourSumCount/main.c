@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 07:50:30
+ * @LastEditTime : 2023-10-21 07:53:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -173,22 +173,22 @@ void freeHashTable(struct HashTable *table) {
  * @return {int}                四元组之和为 0 的不同元组的个数
  */
 int fourSumCount(int *nums1, int nums1Size, int *nums2, int nums2Size, int *nums3, int nums3Size, int *nums4, int nums4Size) {
-    struct HashTable *hashTable = createHashTable(2 * nums1Size * nums2Size);
-    for (int i = 0; i < nums1Size; i++) {
-        for (int j = 0; j < nums2Size; j++) {
-            insert(hashTable, nums1[i] + nums2[j]);
+    struct HashTable *hashTable = createHashTable(2 * nums1Size * nums2Size);       /* 创建哈希表 */
+    for (int i = 0; i < nums1Size; i++) {                                           /* 遍历数组1 */
+        for (int j = 0; j < nums2Size; j++) {                                           /* 遍历数组2 */
+            insert(hashTable, nums1[i] + nums2[j]);                                         /* 将数组1和数组2的和插入哈希表 */
         }
     }
 
-    int count = 0;
-    for (int i = 0; i < nums3Size; i++) {
-        for (int j = 0; j < nums4Size; j++) {
-            count += find(hashTable, -1 * (nums3[i] + nums4[j]));
+    int count = 0;                                                                  /* 计数器 */
+    for (int i = 0; i < nums3Size; i++) {                                               /* 遍历数组3 */
+        for (int j = 0; j < nums4Size; j++) {                                               /* 遍历数组4 */
+            count += find(hashTable, -1 * (nums3[i] + nums4[j]));                               /* 如果数组3和数组4的和的负数存在于哈希表中，计数器加 1 */
         }
     }
 
-    freeHashTable(hashTable);
-    return count;
+    freeHashTable(hashTable);                                                       /* 释放哈希表 */
+    return count;                                                                   /* 返回计数器 */
 }
 
 /**********************************************************************************/
