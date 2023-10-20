@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 07:50:04
+ * @LastEditTime : 2023-10-21 07:50:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -130,7 +130,7 @@ void freeHashTable(struct HashTable *table) {
         }
     }
     free(table->table);                                                                 /* 释放哈希表的哈希节点 */
-    free(table);
+    free(table);                                                                        /* 释放哈希表 */
 }
 
 /**********************************************************************************/
