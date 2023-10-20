@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 21:56:32
+ * @LastEditTime : 2023-10-20 21:57:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -61,8 +61,7 @@ struct HashTable *createHashTable(int size) {
 }
 
 /**
- * @description: 哈希码
- * TODO：哈希码，理解这个是什么意思
+ * @description: 哈希码 - 获取键在哈希表中的槽位
  * =================================================================================
  * @param {HashTable} *table        哈希表
  * @param {int} key                 键
