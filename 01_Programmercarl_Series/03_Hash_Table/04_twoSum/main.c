@@ -64,13 +64,13 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
 /**
  * @description: 打印结果
  * =================================================================================
- * @param {int} *indices
+ * @param {int} *arr            结果数组
  * @return {void}
  */
-void printIndices(int *indices) {
-    if (indices) {
-        printf("Indices: [%d, %d]\n", indices[0], indices[1]);
-        free(indices);
+void printArray(int *arr) {
+    if (arr) {
+        printf("Indices: [%d, %d]\n", arr[0], arr[1]);
+        free(arr);
     } else {
         printf("No solution found.\n");
     }
