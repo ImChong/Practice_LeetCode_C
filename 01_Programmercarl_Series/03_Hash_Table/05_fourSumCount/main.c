@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 20:22:02
+ * @LastEditTime : 2023-10-20 21:20:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,7 +19,7 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))          /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -28,9 +28,9 @@
 /**********************************************************************************/
 /* 哈希节点 */
 struct HashNode {
-    int key;
-    int val;
-    struct HashNode *next;
+    int key;                    /* 键 */
+    int val;                    /* 值 */
+    struct HashNode *next;      /* 下一个节点 */
 };
 
 /* 哈希表 */
@@ -69,7 +69,7 @@ struct HashTable *createHashTable(int size) {
  * @return {int}
  */
 int hashCode(struct HashTable *table, int key) {
-    return (key & 0x7fffffff) % table->size;
+    return (key & 0x7fffffff) % table->size;        /* 0x7fffffff 是一个十六进制数，等于 2^31 - 1，即 2147483647 */
 }
 
 /**
