@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 23:42:32
+ * @LastEditTime : 2023-10-20 11:00:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -74,7 +74,7 @@ int *sortedSquares(int *nums, int numsSize, int *returnSize) {
  * @param {int} actualLen       实际结果长度
  * @return {*}
  */
-void validateAnswer(char testNum, int *expectNums, int expectLen, int *actualNums, int actualLen) {
+void validateAnswerArray(char testNum, int *expectNums, int expectLen, int *actualNums, int actualLen) {
     if (expectLen != actualLen) {
         printf("❌ Test %c Failed\n", testNum);
     } else {
@@ -109,7 +109,7 @@ void test_1(void) {
     int expectSize = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateAnswer('1', expectNums, expectSize, returnNums, returnSize);
+    validateAnswerArray('1', expectNums, expectSize, returnNums, returnSize);
 
     /* 释放内存 */
     free(returnNums);
@@ -132,7 +132,7 @@ void test_2(void) {
     int expectSize = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateAnswer('2', expectNums, expectSize, returnNums, returnSize);
+    validateAnswerArray('2', expectNums, expectSize, returnNums, returnSize);
 
     /* 释放内存 */
     free(returnNums);
@@ -155,7 +155,7 @@ void test_3(void) {
     int expectSize = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateAnswer('3', expectNums, expectSize, returnNums, returnSize);
+    validateAnswerArray('3', expectNums, expectSize, returnNums, returnSize);
 
     /* 释放内存 */
     free(returnNums);

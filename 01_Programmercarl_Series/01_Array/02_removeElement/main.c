@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 23:27:08
+ * @LastEditTime : 2023-10-20 11:00:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -60,7 +60,7 @@ int removeElement(int *nums, int numsSize, int val) {
  * @param {int} actualLen       实际结果长度
  * @return {void}
  */
-void validateAnswer(char testNum, int *expectNums, int expectLen, int *actualNums, int actualLen) {
+void validateAnswerArray(char testNum, int *expectNums, int expectLen, int *actualNums, int actualLen) {
     if (expectLen != actualLen) {
         printf("❌ Test %c Failed\n", testNum);
     }
@@ -93,7 +93,7 @@ void test_1(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateAnswer('1', expectNums, expectLen, nums, resultLen);
+    validateAnswerArray('1', expectNums, expectLen, nums, resultLen);
 }
 
 /**
@@ -112,7 +112,7 @@ void test_2(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateAnswer('2', expectNums, expectLen, nums, resultLen);
+    validateAnswerArray('2', expectNums, expectLen, nums, resultLen);
 }
 
 /**
@@ -131,7 +131,7 @@ void test_3(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateAnswer('3', expectNums, expectLen, nums, resultLen);
+    validateAnswerArray('3', expectNums, expectLen, nums, resultLen);
 }
 
 /**
@@ -150,7 +150,7 @@ void test_4(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateAnswer('4', expectNums, expectLen, nums, resultLen);
+    validateAnswerArray('4', expectNums, expectLen, nums, resultLen);
 }
 
 /**********************************************************************************/

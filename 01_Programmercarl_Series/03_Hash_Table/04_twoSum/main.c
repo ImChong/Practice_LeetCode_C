@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-10 23:39:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 10:56:21
+ * @LastEditTime : 2023-10-20 10:59:16
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -77,16 +77,23 @@ void printIndices(int *indices) {
 /**
  * @description: 验证答案
  * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
+ * @param {char} testNum        测试编号
+ * @param {int} *expectNums     预期结果
+ * @param {int} expectLen       预期结果长度
+ * @param {int} *actualNums     实际结果
+ * @param {int} actualLen       实际结果长度
+ * @return {*}
  */
-void validateAnswer(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
+void validateAnswerArray(char testNum, int *expectNums, int expectLen, int *actualNums, int actualLen) {
+    if (expectLen != actualLen) {
         printf("❌ Test %c Failed\n", testNum);
+    } else {
+        for (int i = 0; i < expectLen; i++) {
+            if (expectNums[i] != actualNums[i]) {
+                printf("❌ Test %c Failed\n", testNum);
+            }
+        }
+        printf("✅ Test %c Passed\n", testNum);
     }
 }
 
