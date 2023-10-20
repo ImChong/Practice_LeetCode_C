@@ -125,6 +125,9 @@ void test_1(void) {
 
     /* 比较结果 */
     validateAnswerArray('1', expect, expectSize, actual, actualSize);
+
+    /* 释放内存 */
+    free(actual);
 }
 
 /**
