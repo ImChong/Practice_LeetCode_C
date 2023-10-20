@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 21:24:03
+ * @LastEditTime : 2023-10-20 21:27:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -204,11 +204,22 @@ void validateAnswer(char testNum, int expect, int actual) {
 /**********************************************************************************/
 /**
  * @description: 测试 1
+ * 输入：nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]
+ * 输出：2
+ *
+ * 两个元组如下：
+ * 1. (0, 0, 0, 1) -> nums1[0] + nums2[0] + nums3[0] + nums4[1] = 1 + (-2) + (-1) + 2 = 0
+ * 2. (1, 1, 0, 0) -> nums1[1] + nums2[1] + nums3[0] + nums4[0] = 2 + (-1) + (-1) + 0 = 0
  * =================================================================================
  * @return {void}
  */
 void test_1(void) {
     /* 实际结果 */
+    int A[] = {1, 2};
+    int B[] = {-2, -1};
+    int C[] = {-1, 2};
+    int D[] = {0, 2};
+    int act = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
     /* 预期结果 */
 
@@ -259,12 +270,7 @@ void test_3(void) {
 int main(int argc, char const *argv[]) {
     /* Test case 1 */
     printf("======== Case 1 ======== \n");
-    int A[] = {1, 2};
-    int B[] = {-2, -1};
-    int C[] = {-1, 2};
-    int D[] = {0, 2};
-    int result = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
-    printf("result: %d\n", result);
+
 
     return 0;
 }
