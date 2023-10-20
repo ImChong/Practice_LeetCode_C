@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 07:38:55
+ * @LastEditTime : 2023-10-21 07:42:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -250,11 +250,17 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    int A[] = {1,1};
+    int B[] = {-1,-1};
+    int C[] = {1,-1};
+    int D[] = {1,-1};
+    int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
     /* 预期结果 */
+    int expect = 8;
 
     /* 比较结果 */
-
+    validateAnswer('2', expect, actual);
 }
 
 /**
@@ -285,5 +291,6 @@ void test_3(void) {
  */
 int main(int argc, char const *argv[]) {
     test_1();
+    test_2();
     return 0;
 }
