@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 21:27:30
+ * @LastEditTime : 2023-10-20 21:28:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -219,12 +219,13 @@ void test_1(void) {
     int B[] = {-2, -1};
     int C[] = {-1, 2};
     int D[] = {0, 2};
-    int act = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
+    int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
     /* 预期结果 */
+    int expect = 2;
 
     /* 比较结果 */
-
+    validateAnswer('1', expect, actual);
 }
 
 /**
@@ -268,9 +269,6 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
-    /* Test case 1 */
-    printf("======== Case 1 ======== \n");
-
-
+    test_1();
     return 0;
 }
