@@ -210,10 +210,14 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    int n = 1;
+    bool actual = isHappy(n);
 
     /* 预期结果 */
+    bool expect = true;
 
     /* 比较结果 */
+    validateAnswer('3', expect, actual);
 
 }
 
@@ -232,5 +236,6 @@ void test_3(void) {
 int main(int argc, char const *argv[]) {
     test_1();
     test_2();
+    test_3();
     return 0;
 }
