@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-10 23:39:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 10:59:16
+ * @LastEditTime : 2023-10-20 16:38:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -119,10 +119,17 @@ void validateAnswerArray(char testNum, int *expectNums, int expectLen, int *actu
 void test_1(void) {
     /* 实际结果 */
     int nums[] = {2, 7, 11, 15};
+    int numsSize = ARR_SIZE(nums);
+    int target = 9;
+    int actualSize = 0;
+    int *actual = twoSum(nums, numsSize, target, &actualSize);
 
     /* 预期结果 */
+    int expect[] = {0, 1};
+    int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
+    validateAnswerArray('1', expect, expectSize, actual, actualSize);
 
 }
 
@@ -187,30 +194,31 @@ void test_4(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
-    /* Test case 1 */
-    printf("======== Case 1 ======== \n");
-    int nums1[] = {2, 7, 11, 15};
-    int target = 9;
-    int returnSize;
+    test_1();
+    // /* Test case 1 */
+    // printf("======== Case 1 ======== \n");
+    // int nums1[] = {2, 7, 11, 15};
+    // int target = 9;
+    // int returnSize;
 
-    int *indices = twoSum(nums1, sizeof(nums1)/sizeof(nums1[0]), target, &returnSize);
-    printIndices(indices);
+    // int *indices = twoSum(nums1, sizeof(nums1)/sizeof(nums1[0]), target, &returnSize);
+    // printIndices(indices);
 
-    /* Test case 2 */
-    printf("======== Case 2 ======== \n");
-    int nums2[] = {3, 2, 4};
-    target = 6;
+    // /* Test case 2 */
+    // printf("======== Case 2 ======== \n");
+    // int nums2[] = {3, 2, 4};
+    // target = 6;
 
-    indices = twoSum(nums2, sizeof(nums2)/sizeof(nums2[0]), target, &returnSize);
-    printIndices(indices);
+    // indices = twoSum(nums2, sizeof(nums2)/sizeof(nums2[0]), target, &returnSize);
+    // printIndices(indices);
 
-    /* Test case 3 */
-    printf("======== Case 3 ======== \n");
-    int nums3[] = {3, 3};
-    target = 6;
+    // /* Test case 3 */
+    // printf("======== Case 3 ======== \n");
+    // int nums3[] = {3, 3};
+    // target = 6;
 
-    indices = twoSum(nums3, sizeof(nums3)/sizeof(nums3[0]), target, &returnSize);
-    printIndices(indices);
+    // indices = twoSum(nums3, sizeof(nums3)/sizeof(nums3[0]), target, &returnSize);
+    // printIndices(indices);
 
     return 0;
 }
