@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 21:28:23
+ * @LastEditTime : 2023-10-20 21:34:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -51,13 +51,13 @@ struct HashTable {
  * @return {struct HashTable} *newTable     哈希表
  */
 struct HashTable *createHashTable(int size) {
-    struct HashTable *newTable = (struct HashTable *)malloc(sizeof(struct HashTable));
-    newTable->size = size;
-    newTable->table = (struct HashNode **)malloc(sizeof(struct HashNode *) * size);
-    for (int i = 0; i < size; i++) {
-        newTable->table[i] = NULL;
+    struct HashTable *newTable = (struct HashTable *)malloc(sizeof(struct HashTable));      /* 为哈希表分配空间 */
+    newTable->size = size;                                                                  /* 设置哈希表大小 */
+    newTable->table = (struct HashNode **)malloc(sizeof(struct HashNode *) * size);         /* 为哈希节点分配空间 */
+    for (int i = 0; i < size; i++) {                                                        /* 遍历哈希表 */
+        newTable->table[i] = NULL;                                                              /* 将哈希表的每个节点都设置为空 */
     }
-    return newTable;
+    return newTable;                                                                        /* 返回哈希表 */
 }
 
 /**
