@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 10:48:15
+ * @LastEditTime : 2023-10-20 10:51:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -193,11 +193,14 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    int n = 2;
+    bool actual = isHappy(n);
 
     /* 预期结果 */
+    bool expect = false;
 
     /* 比较结果 */
-
+    validateAnswer('2', expect, actual);
 }
 
 /**
@@ -228,5 +231,6 @@ void test_3(void) {
  */
 int main(int argc, char const *argv[]) {
     test_1();
+    test_2();
     return 0;
 }
