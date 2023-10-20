@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 07:47:46
+ * @LastEditTime : 2023-10-21 07:50:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -121,15 +121,15 @@ int find(struct HashTable *table, int key) {
  * @return {void}
  */
 void freeHashTable(struct HashTable *table) {
-    for (int i = 0; i < table->size; i++) {
-        struct HashNode *currentNode = table->table[i];
-        while (currentNode) {
-            struct HashNode *tmp = currentNode;
-            currentNode = currentNode->next;
-            free(tmp);
+    for (int i = 0; i < table->size; i++) {                                             /* 遍历哈希表 */
+        struct HashNode *currentNode = table->table[i];                                     /* 获取哈希表的哈希节点 */
+        while (currentNode) {                                                               /* 遍历哈希节点 */
+            struct HashNode *tmp = currentNode;                                                 /* 临时节点 */
+            currentNode = currentNode->next;                                                    /* 将哈希节点指向下一个节点 */
+            free(tmp);                                                                          /* 释放临时节点 */
         }
     }
-    free(table->table);
+    free(table->table);                                                                 /* 释放哈希表的哈希节点 */
     free(table);
 }
 
