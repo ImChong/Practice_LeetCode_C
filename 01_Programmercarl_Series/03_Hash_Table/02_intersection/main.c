@@ -103,7 +103,7 @@ void printArray(int *arr, int arrSize) {
  * @param {int} actualSize      实际大小
  * @return {*}
  */
-void validateAnswer(char testNum, int *expect, int expectSize, int *actual, int actualSize) {
+void validateAnswerArray(char testNum, int *expect, int expectSize, int *actual, int actualSize) {
     if (expectSize != actualSize) {
         printf("❌ Test %c Failed\n", testNum);
         return;
@@ -144,7 +144,7 @@ void test_1(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateAnswer('1', expect, expectSize, ans, returnSize);
+    validateAnswerArray('1', expect, expectSize, ans, returnSize);
 
     /* 释放内存 */
     free(ans);
@@ -171,7 +171,7 @@ void test_2(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateAnswer('2', expect, expectSize, ans, returnSize);
+    validateAnswerArray('2', expect, expectSize, ans, returnSize);
 
     /* 释放内存 */
     free(ans);
@@ -198,7 +198,7 @@ void test_3(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateAnswer('3', expect, expectSize, ans, returnSize);
+    validateAnswerArray('3', expect, expectSize, ans, returnSize);
 
     /* 释放内存 */
     free(ans);
