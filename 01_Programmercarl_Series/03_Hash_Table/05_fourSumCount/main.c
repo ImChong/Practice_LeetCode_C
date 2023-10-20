@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 21:20:42
+ * @LastEditTime : 2023-10-20 21:24:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -47,8 +47,8 @@ struct HashTable {
 /**
  * @description: 创建哈希表
  * =================================================================================
- * @param {int} size
- * @return {struct HashTable} *newTable
+ * @param {int} size                        哈希表大小
+ * @return {struct HashTable} *newTable     哈希表
  */
 struct HashTable *createHashTable(int size) {
     struct HashTable *newTable = (struct HashTable *)malloc(sizeof(struct HashTable));
@@ -75,8 +75,8 @@ int hashCode(struct HashTable *table, int key) {
 /**
  * @description: 插入哈希元素
  * =================================================================================
- * @param {HashTable} *table
- * @param {int} key
+ * @param {HashTable} *table        哈希表
+ * @param {int} key                 键
  * @return {void}
  */
 void insert(struct HashTable *table, int key) {
@@ -99,9 +99,9 @@ void insert(struct HashTable *table, int key) {
 /**
  * @description: 查找哈希元素
  * =================================================================================
- * @param {HashTable} *table
- * @param {int} key
- * @return {int}
+ * @param {HashTable} *table        哈希表
+ * @param {int} key                 键
+ * @return {int}                    值
  */
 int find(struct HashTable *table, int key) {
     int slot = hashCode(table, key);
@@ -118,7 +118,7 @@ int find(struct HashTable *table, int key) {
 /**
  * @description: 释放哈希表
  * =================================================================================
- * @param {HashTable} *table
+ * @param {HashTable} *table        哈希表
  * @return {void}
  */
 void freeHashTable(struct HashTable *table) {
@@ -145,17 +145,17 @@ void freeHashTable(struct HashTable *table) {
 /* ============================================================================== */
 /* ============================================================================== */
 /**
- * @description:
+ * @description: 四数相加 II
  * =================================================================================
- * @param {int} *nums1
- * @param {int} nums1Size
- * @param {int} *nums2
- * @param {int} nums2Size
- * @param {int} *nums3
- * @param {int} nums3Size
- * @param {int} *nums4
- * @param {int} nums4Size
- * @return {int}
+ * @param {int} *nums1          数组1
+ * @param {int} nums1Size       数组1大小
+ * @param {int} *nums2          数组2
+ * @param {int} nums2Size       数组2大小
+ * @param {int} *nums3          数组3
+ * @param {int} nums3Size       数组3大小
+ * @param {int} *nums4          数组4
+ * @param {int} nums4Size       数组4大小
+ * @return {int}                四元组之和为 0 的不同元组的个数
  */
 int fourSumCount(int *nums1, int nums1Size, int *nums2, int nums2Size, int *nums3, int nums3Size, int *nums4, int nums4Size) {
     struct HashTable *hashTable = createHashTable(2 * nums1Size * nums2Size);
