@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-10 23:39:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 21:09:10
+ * @LastEditTime : 2023-10-20 21:11:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -139,11 +139,21 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    int nums[] = {3, 2, 4};
+    int numsSize = ARR_SIZE(nums);
+    int target = 6;
+    int actualSize = 0;
+    int *actual = twoSum(nums, numsSize, target, &actualSize);
 
     /* 预期结果 */
+    int expect[] = {1, 2};
+    int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
+    validateAnswerArray('2', expect, expectSize, actual, actualSize);
 
+    /* 释放内存 */
+    free(actual);
 }
 
 /**
@@ -192,30 +202,7 @@ void test_4(void) {
  */
 int main(int argc, char const *argv[]) {
     test_1();
-    // /* Test case 1 */
-    // printf("======== Case 1 ======== \n");
-    // int nums1[] = {2, 7, 11, 15};
-    // int target = 9;
-    // int returnSize;
-
-    // int *indices = twoSum(nums1, sizeof(nums1)/sizeof(nums1[0]), target, &returnSize);
-    // printIndices(indices);
-
-    // /* Test case 2 */
-    // printf("======== Case 2 ======== \n");
-    // int nums2[] = {3, 2, 4};
-    // target = 6;
-
-    // indices = twoSum(nums2, sizeof(nums2)/sizeof(nums2[0]), target, &returnSize);
-    // printIndices(indices);
-
-    // /* Test case 3 */
-    // printf("======== Case 3 ======== \n");
-    // int nums3[] = {3, 3};
-    // target = 6;
-
-    // indices = twoSum(nums3, sizeof(nums3)/sizeof(nums3[0]), target, &returnSize);
-    // printIndices(indices);
+    test_2();
 
     return 0;
 }
