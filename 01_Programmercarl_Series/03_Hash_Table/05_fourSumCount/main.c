@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 07:42:28
+ * @LastEditTime : 2023-10-21 07:47:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -245,6 +245,8 @@ void test_1(void) {
 
 /**
  * @description: 测试 2
+ * 输入：nums1 = [1,1], nums2 = [-1,-1], nums3 = [1,-1], nums4 = [1,-1]
+ * 输出：8
  * =================================================================================
  * @return {void}
  */
@@ -265,16 +267,46 @@ void test_2(void) {
 
 /**
  * @description: 测试 3
+ * 输入：nums1 = [0,1,-1], nums2 = [-1,1,0], nums3 = [0,0,1], nums4 = [-1,1,1]
+ * 输出：17
  * =================================================================================
  * @return {void}
  */
 void test_3(void) {
     /* 实际结果 */
+    int A[] = {0,1,-1};
+    int B[] = {-1,1,0};
+    int C[] = {0,0,1};
+    int D[] = {-1,1,1};
+    int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
     /* 预期结果 */
+    int expect = 17;
 
     /* 比较结果 */
+    validateAnswer('3', expect, actual);
+}
 
+/**
+ * @description: 测试 4
+ * 输入：nums1 = [0], nums2 = [0], nums3 = [0], nums4 = [0]
+ * 输出：1
+ * =================================================================================
+ * @return {void}
+ */
+void test_4(void) {
+    /* 实际结果 */
+    int A[] = {0};
+    int B[] = {0};
+    int C[] = {0};
+    int D[] = {0};
+    int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
+
+    /* 预期结果 */
+    int expect = 1;
+
+    /* 比较结果 */
+    validateAnswer('4', expect, actual);
 }
 
 /**********************************************************************************/
@@ -292,5 +324,7 @@ void test_3(void) {
 int main(int argc, char const *argv[]) {
     test_1();
     test_2();
+    test_3();
+    test_4();
     return 0;
 }
