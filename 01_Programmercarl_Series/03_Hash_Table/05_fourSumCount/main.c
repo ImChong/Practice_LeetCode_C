@@ -64,9 +64,9 @@ struct HashTable *createHashTable(int size) {
  * @description: 哈希码
  * TODO：哈希码，理解这个是什么意思
  * =================================================================================
- * @param {HashTable} *table
- * @param {int} key
- * @return {int}
+ * @param {HashTable} *table        哈希表
+ * @param {int} key                 键
+ * @return {int}                    哈希码
  */
 int hashCode(struct HashTable *table, int key) {
     return (key & 0x7fffffff) % table->size;        /* 0x7fffffff 是一个十六进制数，等于 2^31 - 1，即 2147483647 */
