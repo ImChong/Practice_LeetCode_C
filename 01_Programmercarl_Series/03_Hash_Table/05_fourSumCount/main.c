@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 21:51:10
+ * @LastEditTime : 2023-10-20 21:54:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -82,12 +82,12 @@ int hashCode(struct HashTable *table, int key) {
 void insert(struct HashTable *table, int key) {
     int slot = hashCode(table, key);                                                    /* 计算哈希码 */
     struct HashNode *currentNode = table->table[slot];                                  /* 获取哈希表的哈希节点 */
-    while (currentNode) {
-        if (currentNode->key == key) {
-            currentNode->val++;
-            return;
+    while (currentNode) {                                                               /* 遍历哈希节点 */
+        if (currentNode->key == key) {                                                      /* 如果哈希节点的键等于 key */
+            currentNode->val++;                                                                 /* 将哈希节点的值加 1 */
+            return;                                                                             /* 返回 */
         }
-        currentNode = currentNode->next;
+        currentNode = currentNode->next;                                                    /* 否则，将哈希节点指向下一个节点 */
     }
     struct HashNode *newNode = (struct HashNode *)malloc(sizeof(struct HashNode));
     newNode->key = key;
