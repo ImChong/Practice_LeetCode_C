@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 21:54:18
+ * @LastEditTime : 2023-10-20 21:56:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -89,11 +89,11 @@ void insert(struct HashTable *table, int key) {
         }
         currentNode = currentNode->next;                                                    /* 否则，将哈希节点指向下一个节点 */
     }
-    struct HashNode *newNode = (struct HashNode *)malloc(sizeof(struct HashNode));
-    newNode->key = key;
-    newNode->val = 1;
-    newNode->next = table->table[slot];
-    table->table[slot] = newNode;
+    struct HashNode *newNode = (struct HashNode *)malloc(sizeof(struct HashNode));      /* 为新节点分配空间 */
+    newNode->key = key;                                                                 /* 设置新节点的键 */
+    newNode->val = 1;                                                                   /* 设置新节点的值 */
+    newNode->next = table->table[slot];                                                 /* 将新节点的下一个节点指向哈希表的哈希节点 */
+    table->table[slot] = newNode;                                                       /* 将哈希表的哈希节点指向新节点 */
 }
 
 /**
