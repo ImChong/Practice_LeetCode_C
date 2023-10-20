@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-10 23:39:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 21:11:07
+ * @LastEditTime : 2023-10-20 21:15:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -191,11 +191,18 @@ void test_3(void) {
  */
 void test_4(void) {
     /* 实际结果 */
+    int nums[] = {3, 3};
+    int numsSize = ARR_SIZE(nums);
+    int target = 7;
+    int actualSize = 0;
+    int *actual = twoSum(nums, numsSize, target, &actualSize);
 
     /* 预期结果 */
+    int *expect = NULL;
+    int expectSize = 0;
 
     /* 比较结果 */
-
+    validateAnswerArray('4', expect, expectSize, actual, actualSize);
 }
 
 /**********************************************************************************/
@@ -214,5 +221,6 @@ int main(int argc, char const *argv[]) {
     test_1();
     test_2();
     test_3();
+    test_4();
     return 0;
 }
