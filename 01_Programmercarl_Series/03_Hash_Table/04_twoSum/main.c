@@ -165,11 +165,21 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    int nums[] = {3, 3};
+    int numsSize = ARR_SIZE(nums);
+    int target = 6;
+    int actualSize = 0;
+    int *actual = twoSum(nums, numsSize, target, &actualSize);
 
     /* 预期结果 */
+    int expect[] = {0, 1};
+    int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
+    validateAnswerArray('3', expect, expectSize, actual, actualSize);
 
+    /* 释放内存 */
+    free(actual);
 }
 
 /**
