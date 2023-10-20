@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 21:34:20
+ * @LastEditTime : 2023-10-20 21:51:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -80,8 +80,8 @@ int hashCode(struct HashTable *table, int key) {
  * @return {void}
  */
 void insert(struct HashTable *table, int key) {
-    int slot = hashCode(table, key);
-    struct HashNode *currentNode = table->table[slot];
+    int slot = hashCode(table, key);                                                    /* 计算哈希码 */
+    struct HashNode *currentNode = table->table[slot];                                  /* 获取哈希表的哈希节点 */
     while (currentNode) {
         if (currentNode->key == key) {
             currentNode->val++;
