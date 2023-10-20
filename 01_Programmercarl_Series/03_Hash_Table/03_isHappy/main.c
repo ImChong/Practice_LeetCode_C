@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 10:45:30
+ * @LastEditTime : 2023-10-20 10:48:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -174,11 +174,14 @@ void validateAnswer(char testNum, int expect, int actual) {
  */
 void test_1(void) {
     /* 实际结果 */
+    int n = 19;
+    bool actual = isHappy(n);
 
     /* 预期结果 */
+    bool expect = true;
 
     /* 比较结果 */
-
+    validateAnswer('1', expect, actual);
 }
 
 /**
@@ -224,23 +227,6 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
-    /* Test case 1 */
-    printf("======== Case 1 ======== \n");
-    int n = 19;
-    if (isHappy(n)) {
-        printf("%d is happy number!\n", n);
-    } else {
-        printf("%d is not happy number!\n", n);
-    }
-
-    /* Test case 2 */
-    printf("======== Case 2 ======== \n");
-    n = 2;
-    if (isHappy(n)) {
-        printf("%d is happy number!\n", n);
-    } else {
-        printf("%d is not happy number!\n", n);
-    }
-
+    test_1();
     return 0;
 }
