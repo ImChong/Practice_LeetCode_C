@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-10 23:39:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 21:08:23
+ * @LastEditTime : 2023-10-20 21:09:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,11 +34,11 @@
 /**
  * @description: 两数之和
  * =================================================================================
- * @param {int} *nums
- * @param {int} numsSize
- * @param {int} target
- * @param {int} *returnSize
- * @return {int} *result
+ * @param {int} *nums           输入数组
+ * @param {int} numsSize        输入数组长度
+ * @param {int} target          目标值
+ * @param {int} *returnSize     返回数组长度
+ * @return {int} *result        返回数组
  */
 int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
     for (int i = 0; i < numsSize; i++) {                            /* 慢指针遍历数组 */
@@ -84,7 +84,7 @@ void printIndices(int *indices) {
  * @param {int} expectLen       预期结果长度
  * @param {int} *actualNums     实际结果
  * @param {int} actualLen       实际结果长度
- * @return {*}
+ * @return {void}
  */
 void validateAnswerArray(char testNum, int *expectNums, int expectLen, int *actualNums, int actualLen) {
     if (expectLen != actualLen) {
