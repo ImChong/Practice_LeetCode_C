@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 07:47:01
+ * @LastEditTime : 2023-10-21 07:47:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -103,15 +103,15 @@ void insert(struct HashTable *table, int key) {
  * @return {int}                    值
  */
 int find(struct HashTable *table, int key) {
-    int slot = hashCode(table, key);
-    struct HashNode *currentNode = table->table[slot];
-    while (currentNode) {
-        if (currentNode->key == key) {
-            return currentNode->val;
+    int slot = hashCode(table, key);                                                    /* 计算哈希码 */
+    struct HashNode *currentNode = table->table[slot];                                  /* 获取哈希表的哈希节点 */
+    while (currentNode) {                                                               /* 遍历哈希节点 */
+        if (currentNode->key == key) {                                                      /* 如果哈希节点的键等于 key */
+            return currentNode->val;                                                            /* 返回哈希节点的值 */
         }
-        currentNode = currentNode->next;
+        currentNode = currentNode->next;                                                    /* 否则，将哈希节点指向下一个节点 */
     }
-    return 0;
+    return 0;                                                                           /* 如果没有找到，返回 0 */
 }
 
 /**
