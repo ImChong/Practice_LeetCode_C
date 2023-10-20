@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 21:24:58
+ * @LastEditTime : 2023-10-20 11:07:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -132,7 +132,7 @@ struct ListNode *reverseList(struct ListNode* head){
  * @param {ListNode} *actual    实际
  * @return {void}
  */
-void validateAnswer(char testNum, struct ListNode *expect, struct ListNode *actual) {
+void validateAnswerList(char testNum, struct ListNode *expect, struct ListNode *actual) {
     if (expect == NULL && actual == NULL) {
         printf("✅ Test %c Passed\n", testNum);
         return;
@@ -171,7 +171,7 @@ void test_1(void) {
     struct ListNode *expectList = arrayToLinkedList(expect, expectSize);
 
     /* 比较结果 */
-    validateAnswer('1', expectList, ansList);
+    validateAnswerList('1', expectList, ansList);
 
     /* 释放内存 */
     freeLinkedList(arrList);
@@ -196,7 +196,7 @@ void test_2(void) {
     struct ListNode *expectList = arrayToLinkedList(expect, expectSize);
 
     /* 比较结果 */
-    validateAnswer('2', expectList, ansList);
+    validateAnswerList('2', expectList, ansList);
 
     /* 释放内存 */
     freeLinkedList(arrList);
@@ -221,7 +221,7 @@ void test_3(void) {
     struct ListNode *expectList = arrayToLinkedList(expect, expectSize);
 
     /* 比较结果 */
-    validateAnswer('3', expectList, ansList);
+    validateAnswerList('3', expectList, ansList);
 
     /* 释放内存 */
     freeLinkedList(arrList);
