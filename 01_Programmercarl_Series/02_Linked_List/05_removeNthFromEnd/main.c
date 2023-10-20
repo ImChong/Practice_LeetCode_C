@@ -156,7 +156,7 @@ struct ListNode *removeNthFromEnd(struct ListNode* head, int n){
  * @param {ListNode} *actual    实际
  * @return {void}
  */
-void validateAnswer(char testNum, struct ListNode *expect, struct ListNode *actual) {
+void validateAnswerList(char testNum, struct ListNode *expect, struct ListNode *actual) {
     if (expect == NULL && actual == NULL) {
         printf("✅ Test %c Passed\n", testNum);
         return;
@@ -199,7 +199,7 @@ void test_1(void) {
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
 
     /* 比较结果 */
-    validateAnswer('1', expectList, ansList);
+    validateAnswerList('1', expectList, ansList);
 
     /* 释放内存 */
     freeLinkedList(newList);
@@ -228,7 +228,7 @@ void test_2(void) {
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
 
     /* 比较结果 */
-    validateAnswer('2', expectList, ansList);
+    validateAnswerList('2', expectList, ansList);
 
     /* 释放内存 */
     freeLinkedList(newList);
@@ -257,7 +257,7 @@ void test_3(void) {
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
 
     /* 比较结果 */
-    validateAnswer('3', expectList, ansList);
+    validateAnswerList('3', expectList, ansList);
 
     /* 释放内存 */
     /* 内存已清除，无需再释放内存 */
@@ -285,7 +285,7 @@ void test_4(void) {
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
 
     /* 比较结果 */
-    validateAnswer('4', expectList, ansList);
+    validateAnswerList('4', expectList, ansList);
 
     /* 释放内存 */
     freeLinkedList(ansList);        /* newList 的链表头已被释放内存 */
