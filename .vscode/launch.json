@@ -28,7 +28,7 @@
                 }
             ],
             "linux": {      /* Linux下的运行指令 */
-                "program": "${fileDirname}/main",
+                "program": "${fileDirname}/main.exe",
                 "miDebuggerPath": "/usr/bin/gdb"
             },
             "windows": {    /* Windows下的运行指令 */
