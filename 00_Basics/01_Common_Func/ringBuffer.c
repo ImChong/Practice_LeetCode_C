@@ -3,7 +3,7 @@
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:36:02
+ * @LastEditTime : 2023-10-21 14:40:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -63,8 +63,7 @@ int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte) {
  * @param {uint8_t} *pByte
  * @return {int16_t}
  */
-int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte)
-{
+int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte) {
     /* 指针空检验 */
     RETURN_ERR_IF(pRing == NULL);
     RETURN_ERR_IF(pByte == NULL);
@@ -93,8 +92,7 @@ int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte)
  * @param {RingBufferSt} *pRing
  * @return {void}
  */
-void RingBuffer_Print(RingBufferSt *pRing)
-{
+void RingBuffer_Print(RingBufferSt *pRing) {
     printf("环形Buffer: ");
     for (int16_t i = 0; i < pRing->dataLen; ++i) {
         int16_t idx = (pRing->dataIdx + i) % pRing->buffLen;
@@ -117,8 +115,7 @@ void RingBuffer_Print(RingBufferSt *pRing)
  * @param {int16_t} buffLen
  * @return {int16_t}
  */
-int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen)
-{
+int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen) {
     RETURN_ERR_IF(pRing == NULL);
     RETURN_ERR_IF(pBuff == NULL);
     RETURN_ERR_IF(buffLen <= 0);
