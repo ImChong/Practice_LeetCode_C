@@ -3,14 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:09:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:50:03
+ * @LastEditTime : 2023-10-21 19:59:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 运行链表公共函数
  */
-#include "commonHeader.h"           /* 00_Basics\01_Common_Func\inc\commonHeader.h */
+#include "commonArray.h"           /* 00_Basics\01_Common_Func\inc\commonHeader.h */
 #include "linkedListCommon.h"
+#include "commonRingBuffer.h"
 
 /**********************************************************************************/
 /*                                                                                */
