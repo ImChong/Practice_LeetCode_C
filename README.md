@@ -22,7 +22,7 @@ or
 Simply Press Ctrl+Shift+B
 ```
 
-for the source code to accomplish the above code please see [source code](.vscode\tasks.json).
+for the source code to accomplish the above code please see [source code](.vscode/tasks.json).
 
 ## Debug Code
 
@@ -36,7 +36,7 @@ or
 Simply Press F5
 ```
 
-for the source code to accomplish the above code please see [source code](.vscode\launch.json).
+for the source code to accomplish the above code please see [source code](.vscode/launch.json).
 
 ## Clean all .exe files
 
