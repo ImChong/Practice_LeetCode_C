@@ -36,11 +36,11 @@
  * @return {void}
  */
 void printCommandInfo(int argc, char *argv[]) {
-    INFO("Number of command-line arguments: %d\r\n", argc);
-    INFO("Command-line arguments:\r\n");
+    INFO("Number of command-line arguments: %d", argc);
+    INFO("Command-line arguments:");
     for (int i = 0; i < argc; i++)
     {
-        INFO("%d -> %s\r\n", i, argv[i]);
+        INFO("%d -> %s", i, argv[i]);
     }
 }
 
