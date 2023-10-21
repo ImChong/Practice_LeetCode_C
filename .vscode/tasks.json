@@ -20,8 +20,8 @@
                 "args": [
 					"-fdiagnostics-color=always",							/* 使gcc输出带颜色 */
 					"-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",	/* 常用头文件路径 */
+					"-I${fileDirname}/inc/",								/* 当前活跃文件的头文件所在目录 */
 					"-I${fileDirname}",										/* 当前活跃文件所在目录 */
-					"-I${fileDirname}/inc",									/* 当前活跃文件的头文件所在目录 */
 					"-g",													/* 生成调试信息 */
 					"${workspaceFolder}/00_Basics/01_Common_Func/src/*.c",	/* 将 Common_Func/src 目录下所有.c文件同步编译 */
 					"*.c",													/* 将当前目录下所有.c文件同步编译 */
@@ -34,8 +34,8 @@
                 "args": [
 					"-fdiagnostics-color=always",							/* 使gcc输出带颜色 */
 					"-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",	/* 常用头文件路径 */
+					"-I${fileDirname}/inc/",								/* 当前活跃文件的头文件所在目录 */
 					"-I${fileDirname}",										/* 当前活跃文件所在目录 */
-					"-I${fileDirname}/inc",									/* 当前活跃文件的头文件所在目录 */
 					"-g",													/* 生成调试信息 */
 					"${workspaceFolder}/00_Basics/01_Common_Func/src/*.c",	/* 将 Common_Func/src 目录下所有.c文件同步编译 */
 					// "${fileDirname}/solutionFunc.c",						/* 将 solutionFunc.c 同步编译 */
