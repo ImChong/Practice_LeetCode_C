@@ -1,3 +1,6 @@
 {
-    "C_Cpp.default.compilerPath": "D:/Developments/msys64/mingw64/bin/gcc.exe"      /* 将此处修改为本地 gcc.exe 地址*/
+    "C_Cpp.default.compilerPath": "D:/Developments/msys64/mingw64/bin/gcc.exe",      /* 将此处修改为本地 gcc.exe 地址*/
+    "code-runner.executorMap": {
+        "c": "cd $dir && gcc -I$workspaceRoot/00_Basics/01_Common_Func/inc/ -I$dirWithoutTrailingSlash/inc/ $workspaceRoot/00_Basics/01_Common_Func/src/*.c *.c -o main && $dirmain",       // "cd $dir && gcc *.c -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    }
 }

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 13:59:50
+ * @LastEditTime : 2023-10-21 22:05:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,7 +11,7 @@
  * https://programmercarl.com/0707.%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html
  */
 #include <stdio.h>
-#include "commonHeader.h"
+#include "commonArray.h"
 #include "dummyLinkedListCommon.h"
 
 /**********************************************************************************/
