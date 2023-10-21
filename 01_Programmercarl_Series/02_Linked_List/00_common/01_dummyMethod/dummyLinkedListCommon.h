@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 10:39:38
+ * @LastEditTime : 2023-10-21 10:47:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -27,5 +27,25 @@ typedef struct {
     int size;                   /* 链表长度 */
 } MyLinkedList;
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 UTILITY FUNCTIONS                              */
+/*                                                                                */
+/**********************************************************************************/
+MyLinkedList *myLinkedListCreate(void);
+int myLinkedListGet(MyLinkedList *dummyHead, int index);
+void myLinkedListAddAtHead(MyLinkedList *dummyHead, int val);
+void myLinkedListAddAtTail(MyLinkedList *dummyHead, int val);
+void myLinkedListAddAtIndex(MyLinkedList *dummyHead, int index, int val);
+void myLinkedListDeleteAtIndex(MyLinkedList *dummyHead, int index);
+void myLinkedListFree(MyLinkedList *dummyHead);
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                 HELPER FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+void arrayToLinkedList(MyLinkedList *dummyHead, int *nums, int numsSize);
+void printLinkedList(MyLinkedList *dummyHead);
 
 #endif  /* __DUMMY_LINKED_LIST_COMMON_H */
