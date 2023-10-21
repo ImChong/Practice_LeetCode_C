@@ -1,15 +1,15 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\main.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\00_noDummyMethod\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:09:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 10:28:56
+ * @LastEditTime : 2023-10-21 14:31:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 运行链表公共函数
  */
-#include "commonMacroFunc.h"
+#include "commonHeader.h"
 #include "linkedListCommon.h"
 
 /**********************************************************************************/
