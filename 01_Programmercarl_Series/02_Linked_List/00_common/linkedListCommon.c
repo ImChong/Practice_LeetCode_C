@@ -3,14 +3,13 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-14 20:22:57
+ * @LastEditTime : 2023-10-21 10:15:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 链表公共函数
  */
-#include <stdio.h>
-#include <stdlib.h>
+#include "linkedListCommon.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -18,17 +17,6 @@
 /*                                                                                */
 /**********************************************************************************/
 #define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 GLOBAL VARIABLES                               */
-/*                                                                                */
-/**********************************************************************************/
-/* 节点定义 */
-struct ListNode {
-    int val;
-    struct ListNode *next;
-};
 
 /**********************************************************************************/
 /*                                                                                */
@@ -90,13 +78,13 @@ struct ListNode *appendToList(struct ListNode *head, int val) {
 /**
  * @description: 打印链表
  * =================================================================================
- * @param {ListNode} *listPtr       链表指针
+ * @param {ListNode} *head          头节点指针
  * @return {void}
  */
-void printList(struct ListNode *listPtr) {
-    while (listPtr != NULL) {
-        printf("%d ", listPtr->val);
-        listPtr = listPtr->next;
+void printList(struct ListNode *head) {
+    while (head != NULL) {
+        printf("%d ", head->val);
+        head = head->next;
     }
     printf("\n");
 }
@@ -104,35 +92,16 @@ void printList(struct ListNode *listPtr) {
 /**
  * @description: 释放链表
  * =================================================================================
- * @param {ListNode} *listPtr       链表指针
+ * @param {ListNode} *head          头节点指针
  * @return {void}
  */
-void freeList(struct ListNode *listPtr) {
+void freeList(struct ListNode *head) {
     struct ListNode *tmp = NULL;
-    while (listPtr != NULL) {
-        tmp = listPtr;
-        listPtr = listPtr->next;
+    while (head != NULL) {
+        tmp = head;
+        head = head->next;
         free(tmp);
     }
 }
 
-/**********************************************************************************/
-/*                                                                                */
-/*                                  MAIN FUNCTION                                 */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 主函数
- * =================================================================================
- * @param {int} argc        程序入参个数
- * @param {char} *argv[]    程序入参字符串数组
- * @return {int}            程序运行状态
- */
-int main(int argc, const char *argv[]) {
-    int arr[] = {1, 2, 3, 4, 5};
-    int arrSize = ARR_SIZE(arr);
-    struct ListNode *ansList = arrayToLinkedList(arr, arrSize);
-    ansList = appendToList(ansList, 6);
-    printList(ansList);
-    return 0;
-}
+
