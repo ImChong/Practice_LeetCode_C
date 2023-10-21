@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-04 08:56:01
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:07:15
+ * @LastEditTime : 2023-10-21 14:08:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -20,6 +20,15 @@
 /**********************************************************************************/
 /**
  * @description: 打印命令行参数
+ * 命令行调用程序
+ *      .\commandFunc.exe arg1 arg2 arg3
+ *
+ * 打印输出
+ *      Command-line arguments:
+ *      ...\Practice_LeetCode_C\00_Basics\01_Common_Func\commandFunc.exe
+ *      arg1
+ *      arg2
+ *      arg3
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组
@@ -34,14 +43,5 @@ void printCommandInfo(int argc, char *argv[]) {
     }
 }
 
-/* 命令行调用程序 */
-// .\commandFunc.exe arg1 arg2 arg3
-
-/* 打印输出 */
-// Command-line arguments:
-// ...\Practice_LeetCode_C\00_Basics\01_Common_Func\commandFunc.exe
-// arg1
-// arg2
-// arg3
 
 

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 13:52:38
+ * @LastEditTime : 2023-10-21 14:10:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -140,14 +140,17 @@ int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen)
     return UNIFORM_OK;
 }
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                  TEST FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
 /**
- * @description: 测试环形 buffer
+ * @description: 测试 1
  * =================================================================================
- * @param {int} argc        程序入参个数
- * @param {char} *argv[]    程序入参字符串数组
- * @return {int}            程序运行状态
+ * @return {void}
  */
-int main(int argc, const char *argv[]) {
+void Test_RingBuffer(void) {
     // 初始化
     RingBuffer_Init(&g_rxRing, g_rxBuff, ARR_SIZE(g_rxBuff));
     RingBuffer_Print(&g_rxRing);
@@ -178,8 +181,4 @@ int main(int argc, const char *argv[]) {
     RingBuffer_GetByte(&g_rxRing, &data);
     RingBuffer_GetByte(&g_rxRing, &data);
     RingBuffer_Print(&g_rxRing);
-
-    printCommandInfo(argc, argv);
-
-    return 0;
 }
