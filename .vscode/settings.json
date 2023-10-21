@@ -1,9 +1,3 @@
 {
-    "C_Cpp.default.compilerPath": "D:/Developments/msys64/mingw64/bin/gcc.exe",
-    "files.associations": {
-        "*.excalidraw": "json",
-        "*.excalidrawlib": "json",
-        "stdio.h": "c",
-        "solutionfunc.h": "c"
-    }, /* 将此处修改为本地 gcc.exe 地址*/
+    "C_Cpp.default.compilerPath": "D:/Developments/msys64/mingw64/bin/gcc.exe",     /* 将此处修改为本地 gcc.exe 地址*/
 }
