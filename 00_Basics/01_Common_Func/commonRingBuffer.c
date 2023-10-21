@@ -20,10 +20,8 @@
 /*                                 GLOBAL VARIABLES                               */
 /*                                                                                */
 /**********************************************************************************/
-/* 接收环形Buffer */
-uint8_t g_rxBuff[RING_BUFFER_SIZE];
-/* 接收环形结构体 */
-RingBufferSt g_rxRing;
+uint8_t g_rxBuff[RING_BUFFER_SIZE];     /* 接收环形Buffer */
+RingBufferSt g_rxRing;                  /* 接收环形结构体 */
 
 /**********************************************************************************/
 /*                                                                                */
