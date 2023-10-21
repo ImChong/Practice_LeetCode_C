@@ -8,40 +8,40 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(linux)(gdb) source code",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": true,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "preLaunchTask": "(Linux) Build",
-            "miDebuggerPath": "/usr/bin/gdb",
-            "setupCommands": [
+            "name": "(linux)(gdb) source code",                                 /* 任务名称 */
+            "type": "cppdbg",                                                   /* 调试器类型 */
+            "request": "launch",                                                /* 请求类型 */
+            "program": "${fileDirname}/${fileBasenameNoExtension}",             /* 指定运行文件 */
+            "args": [],                                                         /* 运行参数 */
+            "stopAtEntry": true,                                                /* 运行后是否停在入口处 */
+            "cwd": "${fileDirname}",                                            /* 指定工作目录 */
+            "environment": [],                                                  /* 环境变量 */
+            "externalConsole": false,                                           /* 是否使用外部控制台 */
+            "MIMode": "gdb",                                                    /* 调试器类型 */
+            "preLaunchTask": "(Linux) Build",                                   /* 运行前执行的任务 */
+            "miDebuggerPath": "/usr/bin/gdb",                                   /* 将此处修改为本地 gdb 地址*/
+            "setupCommands": [                                                  /* 额外的调试器命令 */
                 {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
+                    "description": "Enable pretty-printing for gdb",                /* 命令描述 */
+                    "text": "-enable-pretty-printing",                              /* 命令内容 */
+                    "ignoreFailures": true                                          /* 忽略失败 */
                 }
             ]
         },
         {
-            "name": "(windows)(gdb) source code",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
-            "args": [],
-            "stopAtEntry": true,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "preLaunchTask": "(Windows) Build",
-            "miDebuggerPath": "D:/Developments/msys64/mingw64/bin/gdb.exe",    /* 将此处修改为本地 gdb.exe 地址*/
-            "setupCommands": [
+            "name": "(windows)(gdb) source code",                               /* 任务名称 */
+            "type": "cppdbg",                                                   /* 调试器类型 */
+            "request": "launch",                                                /* 请求类型 */
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",         /* 指定运行文件 */
+            "args": [],                                                         /* 运行参数 */
+            "stopAtEntry": true,                                                /* 运行后是否停在入口处 */
+            "cwd": "${fileDirname}",                                            /* 指定工作目录 */
+            "environment": [],                                                  /* 环境变量 */
+            "externalConsole": false,                                           /* 是否使用外部控制台 */
+            "MIMode": "gdb",                                                    /* 调试器类型 */
+            "preLaunchTask": "(Windows) Build",                                 /* 运行前执行的任务 */
+            "miDebuggerPath": "D:/Developments/msys64/mingw64/bin/gdb.exe",     /* 将此处修改为本地 gdb.exe 地址 */
+            "setupCommands": [                                                  /* 额外的调试器命令 */
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
