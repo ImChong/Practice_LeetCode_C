@@ -3,20 +3,13 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 10:15:36
+ * @LastEditTime : 2023-10-21 10:27:06
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 链表公共函数
  */
 #include "linkedListCommon.h"
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                MACRO FUNCTIONS                                 */
-/*                                                                                */
-/**********************************************************************************/
-#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -76,12 +69,37 @@ struct ListNode *appendToList(struct ListNode *head, int val) {
 }
 
 /**
+ * @description: 移除链表元素
+ * =================================================================================
+ * @param {ListNode} *head              链表虚拟头节点
+ * @param {int} val                     目标值
+ * @return {struct ListNode} *head      返回链表虚拟头节点
+ */
+struct ListNode *removeElements(struct ListNode *head, int val) {
+    struct ListNode dummy;                          /* 创建虚拟头节点 */
+    dummy.next = head;                              /* 将传入链表接在虚拟头节点后面 */
+
+    struct ListNode *curr = &dummy;                 /* 创建指针：用于遍历列表 */
+    while (curr->next != NULL) {                    /* 遍历链表 */
+        if (curr->next->val == val) {                   /* 当前节点的下一个节点的值等于目标值 */
+            struct ListNode *tmp = curr->next;              /* 保存当前节点的下一个节点 */
+            curr->next = curr->next->next;                  /* 当前节点的下一个节点指向下下个节点 */
+            free(tmp);                                      /* 释放当前节点的下一个节点 */
+        } else {                                        /* 当前节点的下一个节点的值不等于目标值 */
+            curr = curr->next;                              /* 当前节点指向下一个节点 */
+        }
+    }
+    return dummy.next;                              /* 返回链表虚拟头节点 */
+}
+
+/**
  * @description: 打印链表
  * =================================================================================
  * @param {ListNode} *head          头节点指针
  * @return {void}
  */
 void printList(struct ListNode *head) {
+    printf("Linked List: ");
     while (head != NULL) {
         printf("%d ", head->val);
         head = head->next;

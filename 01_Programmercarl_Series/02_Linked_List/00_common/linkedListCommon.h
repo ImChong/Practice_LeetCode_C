@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 10:16:15
+ * @LastEditTime : 2023-10-21 10:27:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,6 +34,7 @@ struct ListNode {
 /**********************************************************************************/
 struct ListNode *arrayToLinkedList(int *array, int size);
 struct ListNode *appendToList(struct ListNode *head, int val);
+struct ListNode *removeElements(struct ListNode *head, int val);
 void printList(struct ListNode *head);
 void freeList(struct ListNode *head);
 
