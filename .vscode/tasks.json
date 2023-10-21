@@ -2,7 +2,7 @@
 	"version": "2.0.0",
 	"tasks": [
 		/* 运行前请确保当前活跃文件为所期望运行的.c文件 */
-		
+
 		/* linux System Tasks */
 		{
 			"type": "cppbuild",
@@ -10,8 +10,9 @@
 			"command": "/usr/bin/gcc",
 			"args": [
 				"-fdiagnostics-color=always",
+				"-I${fileDirname}",
 				"-g",
-				"${file}",
+				"*.c",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}"
 			],
@@ -48,8 +49,11 @@
 			"command": "D:/Developments/msys64/mingw64/bin/gcc.exe",	/* 将此处修改为本地 gcc.exe 地址*/
 			"args": [
 				"-fdiagnostics-color=always",
+				"-I${fileDirname}",
 				"-g",
-				"${file}",
+				// "${fileDirname}/solutionFunc.c",						/* 将 solutionFunc.c 同步编译 */
+				// "${file}",											/* 将当前活跃文件同步编译 */
+				"*.c",													/* 将当前目录下所有.c文件同步编译 */
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}.exe"
 			],
