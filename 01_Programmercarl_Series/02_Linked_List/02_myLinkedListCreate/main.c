@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-13 20:19:12
+ * @LastEditTime : 2023-10-21 10:40:38
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -47,7 +47,7 @@ typedef struct {
  * =================================================================================
  * @return {MyLinkedList} *obj      返回虚拟头节点
  */
-MyLinkedList *myLinkedListCreate() {
+MyLinkedList *myLinkedListCreate(void) {
     MyLinkedList *obj = (MyLinkedList*)malloc(sizeof(MyLinkedList));    /* 为虚拟头节点分配空间 */
     obj->head = NULL;       /* 初始化链表头 */
     obj->size = 0;          /* 初始化链表长度 */
