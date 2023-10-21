@@ -9,7 +9,6 @@
  * =================================================================================
  * @Description  : 链表公共函数 - 未使用虚拟头节点
  */
-
 #ifndef __LINKED_LIST_COMMON_H
 #define __LINKED_LIST_COMMON_H
 
@@ -37,5 +36,6 @@ struct ListNode *appendToList(struct ListNode *head, int val);
 struct ListNode *removeFromList(struct ListNode *head, int val);
 void printList(struct ListNode *head);
 void freeList(struct ListNode *head);
+
 
 #endif  /* __LINKED_LIST_COMMON_H */
