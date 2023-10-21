@@ -14,7 +14,6 @@
 			"problemMatcher": [
 				"$gcc"														/* 指定错误匹配模式 */
 			],
-			"group": "build",												/* 将此处注释将次任务组设置为默认F5任务 */
 			"detail": "编译当前活跃文件",									  /* 任务描述 */
 			"linux": {		/* Linux下的编译指令 */
                 "command": "/usr/bin/gcc",									/* 指定编译器：修改至指定地址 */
@@ -68,6 +67,7 @@
                 "Build Current File",		/* 编译当前活跃文件 */
                 "Run Current File"			/* 运行当前活跃文件 */
             ],
+			"group": "build",												/* 此处将此任务组设置为默认任务 */
             "detail": "编译并运行当前活跃文件"							  	  /* 任务描述 */
         }
 	]
