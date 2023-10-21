@@ -12,6 +12,7 @@
 				"-fdiagnostics-color=always",
 				"-I${workspaceFolder}/00_Basics/02_Common_Header/",
 				"-I${fileDirname}",
+				"-I${fileDirname}/inc",
 				"-g",
 				"*.c",
 				"-o",
@@ -53,6 +54,7 @@
 				"-fdiagnostics-color=always",
 				"-I${workspaceFolder}/00_Basics/02_Common_Header/",
 				"-I${fileDirname}",
+				"-I${fileDirname}/inc",
 				"-g",
 				// "${fileDirname}/solutionFunc.c",						/* 将 solutionFunc.c 同步编译 */
 				// "${file}",											/* 将当前活跃文件同步编译 */
