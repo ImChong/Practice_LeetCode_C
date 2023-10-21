@@ -28,7 +28,7 @@ Simply Press Ctrl+Shift+B
 
 for the source code to accomplish the above code please see [source code](.vscode/tasks.json).
 
-for the 'Code Runner' vscode extension to accomplish the above code please see [source code](.vscode/settings.json).
+for the `Code Runner` vscode extension to accomplish the above code please see [source code](.vscode/settings.json).
 
 ## Debug Code
 
