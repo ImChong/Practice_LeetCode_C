@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:22:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:40:51
+ * @LastEditTime : 2023-10-21 14:41:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,6 +43,12 @@ int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte);
 int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte);
 void RingBuffer_Print(RingBufferSt *pRing);
 int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen);
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                  TEST FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
 void Test_RingBuffer(void);
 
 
