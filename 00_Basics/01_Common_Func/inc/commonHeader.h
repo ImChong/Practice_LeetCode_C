@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\02_Common_Header\commonHeader.h
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonHeader.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 13:42:27
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:20:34
+ * @LastEditTime : 2023-10-21 14:59:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -26,6 +26,10 @@
 /* 程序判断宏 */
 #define UNIFORM_TRUE    1
 #define UNIFORM_FALSE   0
+
+/* 程序调试宏 */
+#define STATIC          static
+#define STATIC_FUNC     static
 
 /**********************************************************************************/
 /*                                                                                */
