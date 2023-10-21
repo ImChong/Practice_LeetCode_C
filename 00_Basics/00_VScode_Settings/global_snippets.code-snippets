@@ -35,4 +35,60 @@
 		],
 		"description": "function seperator snippet."
 	},
+	"tree_node": {
+		"prefix": "TreeNode",
+		"body": [
+			"/* 树节点 */",
+			"struct TreeNode {",
+			"    int val;                    /* 节点的值 */",
+			"    struct TreeNode *left;      /* 左节点 */",
+			"    struct TreeNode *right;     /* 右节点 */",
+			"};"
+		],
+		"description": "tree node."
+	},
+	"macro_constants": {
+		"prefix": "MacroConstants",
+		"body": [
+			"/**********************************************************************************/",
+			"/*                                                                                */",
+			"/*                                MACRO CONSTANTS                                 */",
+			"/*                                                                                */",
+			"/**********************************************************************************/"
+		],
+		"description": "macro constants."
+	},
+	"macro_functions": {
+		"prefix": "MacroFunctions",
+		"body": [
+			"/**********************************************************************************/",
+			"/*                                                                                */",
+			"/*                                MACRO FUNCTIONS                                 */",
+			"/*                                                                                */",
+			"/**********************************************************************************/"
+		],
+		"description": "macro functions."
+	},
+	"helper_functions": {
+		"prefix": "HelperFunctions",
+		"body": [
+			"/**********************************************************************************/",
+			"/*                                                                                */",
+			"/*                                HELPER FUNCTIONS                                */",
+			"/*                                                                                */",
+			"/**********************************************************************************/"
+		],
+		"description": "helper functions."
+	},
+	"utility_functions": {
+		"prefix": "UtilityFunctions",
+		"body": [
+			"/**********************************************************************************/",
+			"/*                                                                                */",
+			"/*                                UTILITY FUNCTIONS                               */",
+			"/*                                                                                */",
+			"/**********************************************************************************/"
+		],
+		"description": "utility functions."
+	}
 }
