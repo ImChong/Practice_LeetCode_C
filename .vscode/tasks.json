@@ -10,7 +10,7 @@
 			"command": "/usr/bin/gcc",
 			"args": [
 				"-fdiagnostics-color=always",
-				"-I${workspaceFolder}/00_Basics/01_Common_Func/",
+				"-I${workspaceFolder}/00_Basics/02_Common_Header/",
 				"-I${fileDirname}",
 				"-g",
 				"*.c",
@@ -51,7 +51,7 @@
 			"command": "D:/Developments/msys64/mingw64/bin/gcc.exe",	/* 将此处修改为本地 gcc.exe 地址*/
 			"args": [
 				"-fdiagnostics-color=always",
-				"-I${workspaceFolder}/00_Basics/01_Common_Func/commandHeader.h",
+				"-I${workspaceFolder}/00_Basics/02_Common_Header/",
 				"-I${fileDirname}",
 				"-g",
 				// "${fileDirname}/solutionFunc.c",						/* 将 solutionFunc.c 同步编译 */
