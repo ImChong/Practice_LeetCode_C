@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 10:51:53
+ * @LastEditTime : 2023-10-21 08:44:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,9 +44,10 @@
 #if HASH_TABLE_METHOD_EN
 /**
  * @description: 获取下一数字
+ * getNext函数用于计算一个数字各位数字平方和
  * =================================================================================
- * @param {int} n
- * @return {*}
+ * @param {int} n       当前数字
+ * @return {int}        下一数字
  */
 int getNext(int n) {
     int sum = 0;            /* 计算总和 */
@@ -61,8 +62,8 @@ int getNext(int n) {
 /**
  * @description: 快乐数
  * =================================================================================
- * @param {int} n
- * @return {*}
+ * @param {int} n       当前数字
+ * @return {bool}       是否为快乐数
  */
 bool isHappy(int n) {
     // sum = a1^2 + a2^2 + ... ak^2
