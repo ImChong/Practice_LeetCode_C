@@ -38,8 +38,6 @@
 					"-I${fileDirname}",										/* 当前活跃文件所在目录 */
 					"-g",													/* 生成调试信息 */
 					"${workspaceFolder}/00_Basics/01_Common_Func/src/*.c",	/* 将 Common_Func/src 目录下所有.c文件同步编译 */
-					// "${fileDirname}/solutionFunc.c",						/* 将 solutionFunc.c 同步编译 */
-					// "${file}",											/* 将当前活跃文件同步编译 */
 					"*.c",													/* 将当前目录下所有.c文件同步编译 */
 					"-o",													/* 指定输出文件名 */
 					"${fileDirname}/main.exe"								/* "${fileDirname}/${fileBasenameNoExtension}.exe" */
