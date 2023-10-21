@@ -28,11 +28,11 @@
                 }
             ],
             "linux": {      /* Linux下的运行指令 */
-                "program": "${fileDirname}/${fileBasenameNoExtension}",
+                "program": "${fileDirname}/main",
                 "miDebuggerPath": "/usr/bin/gdb"
             },
             "windows": {    /* Windows下的运行指令 */
-                "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "program": "${fileDirname}/main.exe",
                 "miDebuggerPath": "D:/Developments/msys64/mingw64/bin/gdb.exe"
             },
         }
