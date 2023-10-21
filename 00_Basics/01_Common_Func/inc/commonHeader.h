@@ -50,9 +50,6 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-/* 获取数组长度 */
-#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
-
 /* 返回错误码 */
 #define RETURN_ERR_IF(condition)        do { \
                                             if (condition) { \
