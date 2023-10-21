@@ -14,11 +14,12 @@ C language leetcode practice guide:
 
 ## Build & Run Code
 
-In order to run source code in VSCode, select the .c file that wish to run. Then click the following button in VSCode:
+In order to run source code in VSCode, select the main.c file that wish to run. Then click the following button in VSCode:
 
 ```txt
-Terminal -> Run Task... -> (Linux) Build & Run      /* Ubuntu System */
-Terminal -> Run Task... -> (Windows) Build & Run    /* Windows System */
+Terminal -> Run Task... -> Build & Run Current File
+or
+Simply Press Ctrl+Shift+B
 ```
 
 ## Debug Code
@@ -28,13 +29,18 @@ First Build & Run source code as the above section.
 Then click the following button in VSCode:
 
 ```txt
-Run and Debug (Ctil+Shift+D) -> (Linux)(gdb) source code        /* Ubuntu System */
-Run and Debug (Ctil+Shift+D) -> (Windows)(gdb) source code      /* Windows System */
+Run and Debug (Ctil+Shift+D) -> (gdb) Debug Main
+or
+Simply Press F5
 ```
 
 ## Clean all .exe files
 
-run the ```killexe.bat``` file in this directory.
+```txt
+ctrl+~ to open the terminal
+then
+run the ```.\killexe.bat``` file in the workspace root directory.
+```
 
 ## Progress
 
@@ -70,4 +76,3 @@ run the ```killexe.bat``` file in this directory.
 - [ ] │   └── 11_N_Sum
 - [x] ├── LICENSE
 - [x] └── README.md
-
