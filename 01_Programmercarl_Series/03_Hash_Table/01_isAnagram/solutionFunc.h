@@ -18,4 +18,5 @@
 
 bool isAnagram(char *s, char *t);
 
+
 #endif  /* __SOLUTION_FUNC_H */
