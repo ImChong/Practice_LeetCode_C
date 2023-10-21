@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\ringBuffer.c
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\commonRingBuffer.c
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:40:32
+ * @LastEditTime : 2023-10-21 18:36:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -93,7 +93,7 @@ int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte) {
  * @return {void}
  */
 void RingBuffer_Print(RingBufferSt *pRing) {
-    printf("环形Buffer: ");
+    printf("Ring Buffer: ");
     for (int16_t i = 0; i < pRing->dataLen; ++i) {
         int16_t idx = (pRing->dataIdx + i) % pRing->buffLen;
         printf("%d -> ", pRing->pBuff[idx]);
