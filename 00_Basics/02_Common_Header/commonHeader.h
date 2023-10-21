@@ -12,6 +12,8 @@
 #ifndef __COMMON_HEADER_H
 #define __COMMON_HEADER_H
 
+#include <stdio.h>
+
 /**********************************************************************************/
 /*                                                                                */
 /*                                MACRO CONSTANTS                                 */
