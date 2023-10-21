@@ -34,7 +34,7 @@ struct ListNode {
 /**********************************************************************************/
 struct ListNode *arrayToLinkedList(int *array, int size);
 struct ListNode *appendToList(struct ListNode *head, int val);
-struct ListNode *removeElements(struct ListNode *head, int val);
+struct ListNode *removeFromList(struct ListNode *head, int val);
 void printList(struct ListNode *head);
 void freeList(struct ListNode *head);
 

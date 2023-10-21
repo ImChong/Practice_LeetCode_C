@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:09:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 10:25:37
+ * @LastEditTime : 2023-10-21 10:28:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,7 +28,12 @@ int main(int argc, const char *argv[]) {
     int arr[] = {1, 2, 3, 4, 5};                                    /* 数组 */
     int arrSize = ARR_SIZE(arr);                                    /* 数组大小 */
     struct ListNode *ansList = arrayToLinkedList(arr, arrSize);     /* 数组转链表 */
+    printList(ansList);                                             /* 打印链表 */
+
     ansList = appendToList(ansList, 6);                             /* 添加元素至链表末端 */
+    printList(ansList);                                             /* 打印链表 */
+
+    ansList = removeFromList(ansList, 2);                           /* 添加元素至链表末端 */
     printList(ansList);                                             /* 打印链表 */
     return 0;                                                       /* 返回运行状态 */
 }
