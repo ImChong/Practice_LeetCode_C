@@ -3,14 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 10:49:13
+ * @LastEditTime : 2023-10-21 13:59:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 707. 设计链表：https://leetcode.cn/problems/design-linked-list/
  * https://programmercarl.com/0707.%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html
  */
-#include "commonMacroFunc.h"
+#include <stdio.h>
+#include "commonHeader.h"
 #include "dummyLinkedListCommon.h"
 
 /**********************************************************************************/
