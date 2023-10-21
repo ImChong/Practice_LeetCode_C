@@ -10,8 +10,8 @@
  * @Description  : 主函数
  */
 #include "commonHeader.h"       /* 00_Basics\01_Common_Func\inc\commonHeader.h */
-#include "printCommand.h"
-#include "ringBuffer.h"
+#include "commonCmd.h"
+#include "commonRingBuffer.h"
 
 /**********************************************************************************/
 /*                                                                                */
