@@ -37,12 +37,13 @@
                 "(Linux) Build",
                 "(Linux) Run"
             ],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
+			// "group": {					/* 取消该处注释将次任务组设置为默认F5任务 */
+			// 	"kind": "build",
+			// 	"isDefault": true
+			// },
             "detail": "执行构建并运行目标程序"
         },
+
 		/* Windows System Tasks */
 		{
 			"label": "(Windows) Build",
@@ -77,7 +78,7 @@
                 "(Windows) Build",
                 "(Windows) Run"
             ],
-			// "group": {	/* 取消该处注释将次任务组设置为默认F5任务 */
+			// "group": {					/* 取消该处注释将次任务组设置为默认F5任务 */
 			// 	"kind": "build",
 			// 	"isDefault": true
 			// },
