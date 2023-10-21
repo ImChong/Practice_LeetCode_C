@@ -3,12 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 09:26:30
+ * @LastEditTime : 2023-10-21 09:55:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 242. 有效的字母异位词：https://leetcode.cn/problems/valid-anagram/
- * https://programmercarl.com/0242.%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html
  */
 #include "solutionFunc.h"
 #include "testFunc.h"

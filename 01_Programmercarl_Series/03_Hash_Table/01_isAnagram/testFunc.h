@@ -9,6 +9,8 @@
  * =================================================================================
  * @Description  : 测试函数
  */
+#ifndef __TEST_FUNC_H
+#define __TEST_FUNC_H
 
 /**********************************************************************************/
 /*                                                                                */
@@ -25,3 +27,5 @@ void validateAnswer(char testNum, int expect, int actual);
 void test_1(void);
 void test_2(void);
 void test_3(void);
+
+#endif  /* __TEST_FUNC_H */
