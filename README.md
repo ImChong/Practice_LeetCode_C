@@ -18,7 +18,11 @@ In order to run source code in VSCode, select the main.c file that wish to run. 
 
 ```txt
 Terminal -> Run Task... -> Build & Run Current File
+```
+
 or
+
+```txt
 Simply Press Ctrl+Shift+B
 ```
 
@@ -32,7 +36,11 @@ Then click the following button in VSCode:
 
 ```txt
 Run and Debug (Ctil+Shift+D) -> (gdb) Debug Main
+```
+
 or
+
+```txt
 Simply Press F5
 ```
 
