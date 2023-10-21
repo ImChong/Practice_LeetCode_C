@@ -14,7 +14,7 @@
 				"-g",
 				"*.c",
 				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
+				"${fileDirname}/main"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -55,7 +55,7 @@
 				// "${file}",											/* 将当前活跃文件同步编译 */
 				"*.c",													/* 将当前目录下所有.c文件同步编译 */
 				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}.exe"
+				"${fileDirname}/main.exe"								/* "${fileDirname}/${fileBasenameNoExtension}.exe" */
 			],
 			"options": {
 				"cwd": "${fileDirname}"
