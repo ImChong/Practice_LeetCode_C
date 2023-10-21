@@ -55,7 +55,7 @@ ctrl+~ to open the terminal
 then
 
 ```txt
-.\killexe.bat
+Run .\killexe.bat
 ```
 
 for the source code to accomplish the above code please see [source code](killexe.bat).
