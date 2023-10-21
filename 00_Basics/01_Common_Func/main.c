@@ -3,13 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:03:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:15:48
+ * @LastEditTime : 2023-10-21 14:43:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 主函数
  */
+#include "commonHeader.h"       /* 00_Basics\02_Common_Header\commonHeader.h */
 #include "printCommand.h"
+#include "ringBuffer.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -24,6 +26,10 @@
  * @return {int}            程序运行状态
  */
 int main(int argc, char *argv[]) {
+    INFO("== printCommandInfo =============================");
     printCommandInfo(argc, argv);
+
+    INFO("== Test_RingBuffer =============================");
+    Test_RingBuffer();
     return 0;
 }
