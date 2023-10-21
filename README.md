@@ -46,7 +46,7 @@ Simply Press F5
 
 for the source code to accomplish the above code please see [source code](.vscode/launch.json).
 
-## Clean all .exe files
+## Clean all .exe files (Windows System Only)
 
 ```txt
 ctrl+~ to open the terminal
