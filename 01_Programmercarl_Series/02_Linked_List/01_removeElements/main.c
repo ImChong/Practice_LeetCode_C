@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-16 09:26:19
+ * @LastEditTime : 2023-10-21 10:27:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -114,7 +114,7 @@ void freeList(struct ListNode *listPtr) {
  * @param {int} val                     目标值
  * @return {struct ListNode} *head      返回链表虚拟头节点
  */
-struct ListNode *removeElements(struct ListNode *head, int val){
+struct ListNode *removeElements(struct ListNode *head, int val) {
     struct ListNode dummy;                          /* 创建虚拟头节点 */
     dummy.next = head;                              /* 将传入链表接在虚拟头节点后面 */
 
