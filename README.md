@@ -22,6 +22,8 @@ or
 Simply Press Ctrl+Shift+B
 ```
 
+for the source code to accomplish the above code please see [source code](.vscode\tasks.json).
+
 ## Debug Code
 
 In order to debug source code in VSCode, select the .c file that wish to run.
@@ -34,6 +36,8 @@ or
 Simply Press F5
 ```
 
+for the source code to accomplish the above code please see [source code](.vscode\launch.json).
+
 ## Clean all .exe files
 
 ```txt
@@ -41,6 +45,8 @@ ctrl+~ to open the terminal
 then
 run the ```.\killexe.bat``` file in the workspace root directory.
 ```
+
+for the source code to accomplish the above code please see [source code](killexe.bat).
 
 ## Progress
 
