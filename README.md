@@ -55,7 +55,6 @@ ctrl+~ to open the terminal
 then
 run the ```.\killexe.bat``` file in the workspace root directory.
 
-
 for the source code to accomplish the above code please see [source code](killexe.bat).
 
 ## Progress
