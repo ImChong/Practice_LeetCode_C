@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include "commonHeader.h"
-#include "ringBuffer.h"
+#include "commonRingBuffer.h"
 
 /**********************************************************************************/
 /*                                                                                */

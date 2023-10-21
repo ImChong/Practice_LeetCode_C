@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\printCommand.c
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\commonCmd.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-04 08:56:01
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:19:33
+ * @LastEditTime : 2023-10-21 17:50:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,7 +11,8 @@
  */
 
 /* 头文件 */
-#include "commonHeader.h"       /* 00_Basics\02_Common_Header\commonHeader.h */
+#include "commonHeader.h"       /* 00_Basics\01_Common_Func\inc\commonHeader.h */
+#include "commonCmd.h"          /* 00_Basics\01_Common_Func\inc\commonCmd.h */
 
 /**********************************************************************************/
 /*                                                                                */
