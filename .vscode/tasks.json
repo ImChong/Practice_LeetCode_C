@@ -27,7 +27,7 @@
 		},
 		{
 			"label": "(Linux) Run",
-			"command": "${fileDirname}/${fileBasenameNoExtension}",
+			"command": "${fileDirname}/main",
 			"detail": "运行目标程序"
 		},
 		{
@@ -67,7 +67,7 @@
 		},
 		{
 			"label": "(Windows) Run",
-			"command": "${fileDirname}/${fileBasenameNoExtension}.exe",
+			"command": "${fileDirname}/main.exe",
 			"detail": "运行目标程序"
 		},
 		{
