@@ -5,45 +5,40 @@
 
 		/* linux System Tasks */
 		{
-			"type": "cppbuild",
-			"label": "(Linux) Build",
-			"command": "/usr/bin/gcc",
+			"label": "(Linux) Build",									/* 任务名称 */
+			"command": "/usr/bin/gcc",									/* 将此处修改为本地 gcc 地址*/
 			"args": [
-				"-fdiagnostics-color=always",
-				"-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",
-				"-I${fileDirname}",
-				"-I${fileDirname}/inc",
-				"-g",
-				"*.c",
-				"-o",
-				"${fileDirname}/main"
+				"-fdiagnostics-color=always",							/* 使gcc输出带颜色 */
+				"-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",	/* 常用头文件路径 */
+				"-I${fileDirname}",										/* 当前活跃文件所在目录 */
+				"-I${fileDirname}/inc",									/* 当前活跃文件的头文件所在目录 */
+				"-g",													/* 生成调试信息 */
+				"*.c",													/* 将当前目录下所有.c文件同步编译 */
+				"-o",													/* 指定输出文件名 */
+				"${fileDirname}/main"									/* 输出文件位置及文件名 */
 			],
 			"options": {
-				"cwd": "${fileDirname}"
+				"cwd": "${fileDirname}"									/* 指定工作目录 */
 			},
 			"problemMatcher": [
-				"$gcc"
+				"$gcc"													/* 指定错误匹配模式 */
 			],
-			"group": "build",
-			"detail": "构建目标程序"
+			"group": "build",											/* 将此处注释将次任务组设置为默认F5任务 */
+			"detail": "构建目标程序"									 /* 任务描述 */
 		},
 		{
-			"label": "(Linux) Run",
-			"command": "${fileDirname}/main",
-			"detail": "运行目标程序"
+			"label": "(Linux) Run",										/* 任务名称 */
+			"command": "${fileDirname}/main",							/* 指定运行文件 */
+			"detail": "运行目标程序"									 /* 任务描述 */
 		},
 		{
-            "label": "(Linux) Build & Run",
-            "dependsOrder": "sequence",
+            "label": "(Linux) Build & Run",								/* 任务名称 */
+            "dependsOrder": "sequence",									/* 依赖顺序 */
             "dependsOn": [
                 "(Linux) Build",
                 "(Linux) Run"
             ],
-			// "group": {					/* 取消该处注释将次任务组设置为默认F5任务 */
-			// 	"kind": "build",
-			// 	"isDefault": true
-			// },
-            "detail": "执行构建并运行目标程序"
+            "detail": "执行构建并运行目标程序"							  /* 任务描述 */
         },
 
 		/* Windows System Tasks */
@@ -51,42 +46,42 @@
 			"label": "(Windows) Build",
 			"command": "D:/Developments/msys64/mingw64/bin/gcc.exe",	/* 将此处修改为本地 gcc.exe 地址*/
 			"args": [
-				"-fdiagnostics-color=always",
-				"-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",
-				"-I${fileDirname}",
-				"-I${fileDirname}/inc",
-				"-g",
+				"-fdiagnostics-color=always",							/* 使gcc输出带颜色 */
+				"-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",	/* 常用头文件路径 */
+				"-I${fileDirname}",										/* 当前活跃文件所在目录 */
+				"-I${fileDirname}/inc",									/* 当前活跃文件的头文件所在目录 */
+				"-g",													/* 生成调试信息 */
 				// "${fileDirname}/solutionFunc.c",						/* 将 solutionFunc.c 同步编译 */
 				// "${file}",											/* 将当前活跃文件同步编译 */
 				"*.c",													/* 将当前目录下所有.c文件同步编译 */
-				"-o",
+				"-o",													/* 指定输出文件名 */
 				"${fileDirname}/main.exe"								/* "${fileDirname}/${fileBasenameNoExtension}.exe" */
 			],
 			"options": {
-				"cwd": "${fileDirname}"
+				"cwd": "${fileDirname}"									/* 指定工作目录 */
 			},
 			"problemMatcher": [
-				"$gcc"
+				"$gcc"													/* 指定错误匹配模式 */
 			],
-			"detail": "构建目标程序"
+			"detail": "构建目标程序"									 /* 任务描述 */
 		},
 		{
-			"label": "(Windows) Run",
-			"command": "${fileDirname}/main.exe",
-			"detail": "运行目标程序"
+			"label": "(Windows) Run",									/* 任务名称 */
+			"command": "${fileDirname}/main.exe",						/* 指定运行文件 */
+			"detail": "运行目标程序"									 /* 任务描述 */
 		},
 		{
-            "label": "(Windows) Build & Run",
-            "dependsOrder": "sequence",
+            "label": "(Windows) Build & Run",							/* 任务名称 */
+            "dependsOrder": "sequence",									/* 依赖顺序 */
             "dependsOn": [
                 "(Windows) Build",
                 "(Windows) Run"
             ],
-			// "group": {					/* 取消该处注释将次任务组设置为默认F5任务 */
+			// "group": {				/* 取消该处注释将次任务组设置为默认F5任务 */
 			// 	"kind": "build",
 			// 	"isDefault": true
 			// },
-            "detail": "执行构建并运行目标程序"
+            "detail": "执行构建并运行目标程序"							  /* 任务描述 */
         },
 	]
 }
