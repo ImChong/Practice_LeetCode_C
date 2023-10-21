@@ -3,7 +3,7 @@
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:10:59
+ * @LastEditTime : 2023-10-21 14:36:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,32 +12,23 @@
 #include <stdio.h>
 #include <stdint.h>
 #include "commonHeader.h"
+#include "ringBuffer.h"
 
-/* 环形 Buffer 长度 */
-#define RING_BUFFER_SIZE                5
-/* 程序状态宏 */
-#define UNIFORM_ERR                     (-1)
-#define UNIFORM_OK                      0
-/* 宏函数 */
-#define ARR_SIZE(arr)                   (sizeof(arr) / sizeof((arr)[0]))
-#define RETURN_ERR_IF(condition)        do { \
-                                            if (condition) { \
-                                                return UNIFORM_ERR; \
-                                            } \
-                                        } while (0)
-
-typedef struct {
-    uint8_t *pBuff;     /* 环形buffer数组 */
-    int16_t buffLen;    /* 环形buffer长度 */
-    int16_t dataLen;    /* 环形buffer中数据总长度 */
-    int16_t dataIdx;    /* 环形buffer的数据头指针 */
-} RingBufferSt;
-
+/**********************************************************************************/
+/*                                                                                */
+/*                                 GLOBAL VARIABLES                               */
+/*                                                                                */
+/**********************************************************************************/
 /* 接收环形Buffer */
 uint8_t g_rxBuff[RING_BUFFER_SIZE];
 /* 接收环形结构体 */
 RingBufferSt g_rxRing;
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 UTILITY FUNCTIONS                              */
+/*                                                                                */
+/**********************************************************************************/
 /**
  * @description: 往环形 buffer 中增加一个字节
  * =================================================================================
@@ -45,8 +36,7 @@ RingBufferSt g_rxRing;
  * @param {uint8_t} byte
  * @return {int16_t}
  */
-int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte)
-{
+int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte) {
     /* 指针空检验 */
     RETURN_ERR_IF(pRing == NULL);
 
