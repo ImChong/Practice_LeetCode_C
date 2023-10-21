@@ -1,13 +1,13 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\linkedListCommon.h
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\00_noDummyMethod\linkedListCommon.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 10:27:19
+ * @LastEditTime : 2023-10-21 10:32:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 链表公共函数
+ * @Description  : 链表公共函数 - 未使用虚拟头节点
  */
 
 #ifndef __LINKED_LIST_COMMON_H
