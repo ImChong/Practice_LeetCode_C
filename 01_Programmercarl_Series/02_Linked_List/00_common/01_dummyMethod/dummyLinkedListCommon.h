@@ -48,4 +48,5 @@ void myLinkedListFree(MyLinkedList *dummyHead);
 void arrayToLinkedList(MyLinkedList *dummyHead, int *nums, int numsSize);
 void printLinkedList(MyLinkedList *dummyHead);
 
+
 #endif  /* __DUMMY_LINKED_LIST_COMMON_H */
