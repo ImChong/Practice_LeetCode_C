@@ -3,7 +3,7 @@
 	"tasks": [
 		/* 运行前请确保当前活跃文件为所期望运行的.c文件 */
 
-		/* Build：编译当前活跃文件 */
+		/* 编译当前活跃文件 */
 		{
 			"label": "Build Current File",									/* 任务名称 */
 			"command": "",													/* 初始化指令 */
@@ -45,7 +45,7 @@
 				]
             }
 		},
-		/* Run：运行当前活跃文件 */
+		/* 运行当前活跃文件 */
 		{
 			"label": "Run Current File",									/* 任务名称 */
 			"command": "",													/* 初始化指令 */
@@ -60,13 +60,13 @@
 				"command": "${fileDirname}/main.exe"						/* 指定运行文件 */
 			}
 		},
-		/* Build & Run：编译并运行当前活跃文件 */
+		/* 编译并运行当前活跃文件 */
 		{
             "label": "Build & Run Current File",							/* 任务名称 */
             "dependsOrder": "sequence",										/* 依赖顺序 */
             "dependsOn": [
-                "Build",
-                "Run"
+                "Build Current File",		/* 编译当前活跃文件 */
+                "Run Current File"			/* 运行当前活跃文件 */
             ],
             "detail": "编译并运行当前活跃文件"							  	  /* 任务描述 */
         }
