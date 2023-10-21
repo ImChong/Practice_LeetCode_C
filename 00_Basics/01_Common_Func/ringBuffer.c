@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 环形buffer
+ * @Description  : 环形缓冲区
  */
 #include <stdio.h>
 #include <stdint.h>

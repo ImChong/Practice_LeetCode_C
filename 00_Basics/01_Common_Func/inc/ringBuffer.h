@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:22:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:41:08
+ * @LastEditTime : 2023-10-21 14:45:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 环形buffer
+ * @Description  : 环形缓冲区
  */
 #ifndef __RINGBUFFER_H__
 #define __RINGBUFFER_H__
