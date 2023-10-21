@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\ringbuffer.c
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\ringBuffer.c
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-18 23:09:47
+ * @LastEditTime : 2023-10-21 13:52:38
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,7 @@
  */
 #include <stdio.h>
 #include <stdint.h>
+#include "commonHeader.h"
 
 /* 环形 Buffer 长度 */
 #define RING_BUFFER_SIZE                5
@@ -177,6 +178,8 @@ int main(int argc, const char *argv[]) {
     RingBuffer_GetByte(&g_rxRing, &data);
     RingBuffer_GetByte(&g_rxRing, &data);
     RingBuffer_Print(&g_rxRing);
+
+    printCommandInfo(argc, argv);
 
     return 0;
 }
