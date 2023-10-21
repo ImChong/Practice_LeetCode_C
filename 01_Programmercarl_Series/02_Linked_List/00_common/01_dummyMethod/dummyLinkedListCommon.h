@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:52:08
+ * @LastEditTime : 2023-10-21 14:54:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,7 +29,7 @@ typedef struct {
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                 UTILITY FUNCTIONS                              */
+/*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
 MyLinkedList *myLinkedListCreate(void);
@@ -42,7 +42,7 @@ void myLinkedListFree(MyLinkedList *dummyHead);
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
+/*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
 void arrayToLinkedList(MyLinkedList *dummyHead, int *nums, int numsSize);
