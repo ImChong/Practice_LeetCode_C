@@ -64,8 +64,8 @@
             "label": "Build & Run Current File",                            /* 任务名称 */
             "dependsOrder": "sequence",                                        /* 依赖顺序 */
             "dependsOn": [
-                "Build Current File",        /* 编译当前活跃文件 */
-                "Run Current File"            /* 运行当前活跃文件 */
+                "Build Current File",           /* 编译当前活跃文件 */
+                "Run Current File"              /* 运行当前活跃文件 */
             ],
             "group": "build",                                                /* 此处将此任务组设置为默认任务 */
             "detail": "编译并运行当前活跃文件"                                    /* 任务描述 */
