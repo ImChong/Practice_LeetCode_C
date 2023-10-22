@@ -26,10 +26,10 @@ C language leetcode practice guide:
 > Terminal -> Run Task... -> Build & Run Current File
 > ```
 >
-> or
+> or Simply Press
 >
 > ```txt
-> Simply Press Ctrl+Shift+B
+> Ctrl+Shift+B
 > ```
 >
 > for the source code to accomplish the above code please see [source code](.vscode/tasks.json).
@@ -48,10 +48,10 @@ C language leetcode practice guide:
 > Run and Debug (Ctil+Shift+D) -> (gdb) Debug Main
 > ```
 >
-> or
+> or Simply Press
 >
 > ```txt
-> Simply Press F5
+> F5
 > ```
 >
 > for the source code to accomplish the above code please see [source code](.vscode/launch.json).
