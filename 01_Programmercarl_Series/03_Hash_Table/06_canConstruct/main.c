@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-18 18:59:00
+ * @LastEditTime : 2023-10-22 13:52:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,7 @@
  */
 #include <stdio.h>
 #include <stdbool.h>
+#include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -46,27 +47,6 @@ bool canConstruct(char *ransomNote, char *magazine){
         }
     }
     return true;
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
- */
-void validateAnswer(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
 }
 
 /**********************************************************************************/
