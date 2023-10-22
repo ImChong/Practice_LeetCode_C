@@ -36,5 +36,8 @@ int main(int argc, const char *argv[]) {
 
     ansList = removeFromList(ansList, 2);                           /* 添加元素至链表末端 */
     printList(ansList);                                             /* 打印链表 */
-    return 0;                                                       /* 返回运行状态 */
+
+    Test_RingBuffer();
+
+    return 0;
 }
