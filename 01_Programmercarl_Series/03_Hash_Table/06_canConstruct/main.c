@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 22:29:16
+ * @LastEditTime : 2023-10-22 22:32:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,20 +40,20 @@
  * @return {bool}                   是否可以构造
  */
 bool canConstruct(char *ransomNote, char *magazine){
-    int counter[26] = {0};
+    int counter[26] = {0};                              /* 计数器 */
 
-    for (int i = 0; magazine[i] != '\0'; i++) {
-        counter[magazine[i] - 'a']++;
+    for (int i = 0; magazine[i] != '\0'; i++) {         /* 统计杂志中的字符出现的次数 */
+        counter[magazine[i] - 'a']++;                       /* 以字符的 ASCII 码作为数组下标，每遇到一个字符就将其在计数器中的数量 + 1 */
     }
 
-    for (int i = 0; ransomNote[i] != '\0'; i++) {
-        counter[ransomNote[i] - 'a']--;
+    for (int i = 0; ransomNote[i] != '\0'; i++) {       /* 遍历勒索信中的字符 */
+        counter[ransomNote[i] - 'a']--;                     /* 每遇到一个字符就将其在计数器中的数量 - 1 */
 
-        if (counter[ransomNote[i] - 'a'] < 0) {
-            return false;
+        if (counter[ransomNote[i] - 'a'] < 0) {             /* 如果减一后数量小于零 */
+            return false;                                       /* 则说明杂志中没有足够的该字符，无法构造出勒索信，返回 false */
         }
     }
-    return true;
+    return true;                                        /* 如果遍历完勒索信中的所有字符后都没有返回 false，则说明可以构造出勒索信，返回 true */
 }
 
 /**********************************************************************************/
