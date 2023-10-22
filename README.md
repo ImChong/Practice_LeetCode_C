@@ -48,7 +48,7 @@ Simply Press F5
 
 for the source code to accomplish the above code please see [source code](.vscode/launch.json).
 
-## Clean all .exe files (Windows System Only)
+## Clean all .exe files
 
 ```txt
 ctrl+~ to open the terminal
@@ -57,7 +57,8 @@ ctrl+~ to open the terminal
 then
 
 ```txt
-Run .\killexe.bat
+Run .\killexe.bat       /* windows system */
+Run ./remove-exe.sh     /* linux system */
 ```
 
 for the source code to accomplish the above code please see [source code](killexe.bat).
