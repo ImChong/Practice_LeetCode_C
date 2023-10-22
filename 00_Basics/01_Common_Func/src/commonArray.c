@@ -36,9 +36,9 @@ void printArray(int *arr, int arrSize) {
 /**
  * @description: 打印二维数组
  * =================================================================================
- * @param {int} **result
- * @param {int} returnSize
- * @param {int} *returnColumnSizes
+ * @param {int} **result                返回数组
+ * @param {int} returnSize              返回数组大小
+ * @param {int} *returnColumnSizes      返回数组列大小
  * @return {void}
  */
 void print2DArray(int **result, int returnSize, int *returnColumnSizes) {
@@ -59,9 +59,9 @@ void print2DArray(int **result, int returnSize, int *returnColumnSizes) {
 /**
  * @description: 释放二维数组
  * =================================================================================
- * @param {int} ***result
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
+ * @param {int} ***result               返回数组
+ * @param {int} *returnSize             返回数组大小
+ * @param {int} **returnColumnSizes     返回数组列大小
  * @return {void}
  */
 void free2DArray(int ***result, int *returnSize, int **returnColumnSizes) {
