@@ -3,13 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 10:32:08
+ * @LastEditTime : 2023-10-22 08:48:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 链表公共函数 - 未使用虚拟头节点
  */
-#include "linkedListCommon.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "commonLinkedList.h"
 
 /**********************************************************************************/
 /*                                                                                */
