@@ -10,6 +10,7 @@
  * @Description  : 通用数组源文件
  */
 #include <stdio.h>
+#include <stdlib.h>
 #include "commonArray.h"
 
 /**********************************************************************************/
