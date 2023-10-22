@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 09:15:47
+ * @LastEditTime : 2023-10-22 09:26:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,8 +13,6 @@
 #include <stdio.h>
 #include "commonArray.h"
 #include "commonLinkedListDummy.h"
-
-
 
 /**********************************************************************************/
 /*                                                                                */
