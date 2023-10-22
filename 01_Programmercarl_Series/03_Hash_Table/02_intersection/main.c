@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 08:42:16
+ * @LastEditTime : 2023-10-22 13:26:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,13 +12,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                MACRO FUNCTIONS                                 */
-/*                                                                                */
-/**********************************************************************************/
-#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))          /* 获取数组长度 */
+#include "commonArray.h"            /* 00_Basics\01_Common_Func\inc\commonArray.h */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -105,31 +99,6 @@ void printArray(int *arr, int arrSize) {
         printf("%d ", arr[i]);
     }
     printf("\n");
-}
-
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum        测试编号
- * @param {int} *expect         预期
- * @param {int} expectSize      预期大小
- * @param {int} *actual         实际
- * @param {int} actualSize      实际大小
- * @return {*}
- */
-void validateAnswerArray(char testNum, int *expect, int expectSize, int *actual, int actualSize) {
-    if (expectSize != actualSize) {
-        printf("❌ Test %c Failed\n", testNum);
-        return;
-    } else {
-        for (int i = 0; i < expectSize; i++) {
-            if (expect[i] != actual[i]) {
-                printf("❌ Test %c Failed\n", testNum);
-                return;
-            }
-        }
-    }
-    printf("✅ Test %c Passed\n", testNum);
 }
 
 /**********************************************************************************/
