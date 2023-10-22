@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\01_dummyMethod\dummyLinkedListCommon.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\01_dummyMethod\commonLinkedListDummy.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 10:47:26
+ * @LastEditTime : 2023-10-22 09:15:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,7 +11,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include "dummyLinkedListCommon.h"
+#include "commonLinkedListDummy.h"
 
 /**********************************************************************************/
 /*                                                                                */
