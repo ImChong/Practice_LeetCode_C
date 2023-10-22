@@ -1,16 +1,14 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\commonCmd.c
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonCmd\commonCmd.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-04 08:56:01
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 17:50:32
+ * @LastEditTime : 2023-10-22 09:32:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 打印函数输入的命令行参数
  */
-
-/* 头文件 */
 #include "commonHeader.h"       /* 00_Basics\01_Common_Func\inc\commonHeader.h */
 #include "commonCmd.h"          /* 00_Basics\01_Common_Func\inc\commonCmd.h */
 
