@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 09:15:40
+ * @LastEditTime : 2023-10-22 09:23:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -198,4 +198,22 @@ void printLinkedList(MyLinkedList *list) {
         printf("%d ", myLinkedListGet(list, i));            /* 打印链表节点数值 */
     }
     printf("\n");                                       /* 换行 */
+}
+
+/**
+ * @description: 验证答案
+ * =================================================================================
+ * @param {char} testNum            测试编号
+ * @param {MyLinkedList} *expect    预期
+ * @param {MyLinkedList} *actual    实际
+ * @return {void}
+ */
+void validateAnswer(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
+    for (int i = 0; i < expect->size; i++) {
+        if (myLinkedListGet(expect, i) != myLinkedListGet(actual, i)) {
+            printf("❌ Test %c Failed\n", testNum);
+            return;
+        }
+    }
+    printf("✅ Test %c Passed\n", testNum);
 }

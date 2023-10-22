@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\01_dummyMethod\dummyLinkedListCommon.h
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonLinkedListDummy.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 14:54:05
+ * @LastEditTime : 2023-10-22 09:23:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -47,6 +47,7 @@ void myLinkedListFree(MyLinkedList *dummyHead);
 /**********************************************************************************/
 void arrayToLinkedList(MyLinkedList *dummyHead, int *nums, int numsSize);
 void printLinkedList(MyLinkedList *dummyHead);
+void validateAnswer(char testNum, MyLinkedList *expect, MyLinkedList *actual);
 
 
 #endif  /* __DUMMY_LINKED_LIST_COMMON_H */

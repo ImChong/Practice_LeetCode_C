@@ -14,28 +14,7 @@
 #include "commonArray.h"
 #include "commonLinkedListDummy.h"
 
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum            测试编号
- * @param {MyLinkedList} *expect    预期
- * @param {MyLinkedList} *actual    实际
- * @return {void}
- */
-void validateAnswer(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
-    for (int i = 0; i < expect->size; i++) {
-        if (myLinkedListGet(expect, i) != myLinkedListGet(actual, i)) {
-            printf("❌ Test %c Failed\n", testNum);
-            return;
-        }
-    }
-    printf("✅ Test %c Passed\n", testNum);
-}
+
 
 /**********************************************************************************/
 /*                                                                                */
