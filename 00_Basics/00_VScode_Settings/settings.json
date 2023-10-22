@@ -503,7 +503,7 @@
 
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-        "c": "cd $dir && gcc -I$workspaceRoot/00_Basics/01_Common_Func/inc/ -I$dirWithoutTrailingSlash/inc/ $workspaceRoot/00_Basics/01_Common_Func/src/*.c *.c -o main.exe && $dirmain.exe",
+        "c": "cd $dir && gcc -I$workspaceRoot/00_Basics/01_Common_Func/inc/ -I$workspaceRoot/00_Basics/01_Common_Func/inc/commonDef/ -I$dirWithoutTrailingSlash/inc/ $workspaceRoot/00_Basics/01_Common_Func/src/*.c *.c -o main.exe && $dirmain.exe",
         "zig": "zig run",
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
