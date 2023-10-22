@@ -26,7 +26,7 @@ C language leetcode practice guide:
 > Terminal -> Run Task... -> Build & Run Current File
 > ```
 >
-> or Simply Press
+> or simply press
 >
 > ```txt
 > Ctrl+Shift+B
@@ -48,7 +48,7 @@ C language leetcode practice guide:
 > Run and Debug (Ctil+Shift+D) -> (gdb) Debug Main
 > ```
 >
-> or Simply Press
+> or simply press
 >
 > ```txt
 > F5
@@ -58,8 +58,10 @@ C language leetcode practice guide:
 
 ## Clean all .exe files
 
+> Open the terminal
+>
 > ```txt
-> ctrl+~ to open the terminal
+> ctrl+~
 > ```
 >
 > then run
