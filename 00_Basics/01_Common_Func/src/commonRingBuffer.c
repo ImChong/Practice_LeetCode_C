@@ -3,7 +3,7 @@
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 12:23:07
+ * @LastEditTime : 2023-10-22 12:42:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,7 +11,7 @@
  */
 #include <stdio.h>
 #include <stdint.h>
-#include "commonHeader.h"
+#include "commonTypeDef.h"
 #include "commonArray.h"
 #include "commonRingBuffer.h"
 
