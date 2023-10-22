@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 22:44:20
+ * @LastEditTime : 2023-10-22 22:49:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -149,13 +149,25 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    int nums[] = {-1, 0, 1, 2, -1, -4};
+    // Test Case 1
+    int nums1[] = {-1, 0, 1, 2, -1, -4};
+    int numsSize1 = 6;
+    int returnSize1 = 0;
+    int *expected1[] = {(int[]){-1, -1, 2}, (int[]){-1, 0, 1}};
+    int expectedSizes1[] = {3, 3};
 
-    int returnSize = 0;
-    int *returnColumnSizes;
+    // Test Case 2
+    int nums2[] = {0, 0, 0, 0};
+    int numsSize2 = 4;
+    int returnSize2 = 0;
+    int *expected2[] = {(int[]){0, 0, 0}};
+    int expectedSizes2[] = {3};
 
-    int **result = threeSum(nums, ARR_SIZE(nums), &returnSize, &returnColumnSizes);
-    print2DArray(result, returnSize, returnColumnSizes);
-    free2DArray(&result, &returnSize, &returnColumnSizes);
+    // Test Case 3
+    int nums3[] = {1, 2, -2, -1};
+    int numsSize3 = 4;
+    int returnSize3 = 0;
+    int *expected3[] = {};
+    int expectedSizes3[] = {0};
     return 0;
 }
