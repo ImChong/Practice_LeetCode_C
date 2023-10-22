@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 09:53:22
+ * @LastEditTime : 2023-10-22 09:56:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,7 +40,7 @@ void test_1(void) {
     arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateAnswerDummyLinkedList('1', expectDummy, actualDummy);
+    validateAnswerMyLinkedList('1', expectDummy, actualDummy);
 
     /* 释放内存空间 */
     myLinkedListFree(actualDummy);
@@ -75,7 +75,7 @@ void test_2(void) {
     arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateAnswerDummyLinkedList('2', expectDummy, actualDummy);
+    validateAnswerMyLinkedList('2', expectDummy, actualDummy);
 
     /* 释放内存空间 */
     myLinkedListFree(actualDummy);
@@ -107,7 +107,7 @@ void test_3(void) {
     arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateAnswerDummyLinkedList('3', expectDummy, actualDummy);
+    validateAnswerMyLinkedList('3', expectDummy, actualDummy);
 
     /* 释放内存空间 */
     myLinkedListFree(actualDummy);

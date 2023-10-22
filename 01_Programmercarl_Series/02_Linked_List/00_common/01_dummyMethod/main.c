@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 09:26:35
+ * @LastEditTime : 2023-10-22 09:56:52
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,8 +11,8 @@
  * https://programmercarl.com/0707.%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html
  */
 #include <stdio.h>
-#include "commonArray.h"
-#include "commonLinkedListDummy.h"
+#include "commonArray.h"                /* 00_Basics\01_Common_Func\inc\commonArray.h */
+#include "commonLinkedListDummy.h"      /* 00_Basics\01_Common_Func\inc\commonLinkedListDummy.h */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -36,10 +36,10 @@ void test_1(void) {
     /* 预期结果 */
     MyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {2, 3};
-    arrayToLinkedList(expectDummy, nums, ARR_SIZE(nums));
+    arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateAnswer('1', expectDummy, actualDummy);
+    validateAnswerMyLinkedList('1', expectDummy, actualDummy);
 
     /* 释放内存空间 */
     myLinkedListFree(actualDummy);

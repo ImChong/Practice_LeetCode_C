@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\01_dummyMethod\commonLinkedListDummy.c
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonLinkedListDummy.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 09:23:33
+ * @LastEditTime : 2023-10-22 09:55:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -213,7 +213,7 @@ void printLinkedList(MyLinkedList *list) {
  * @param {MyLinkedList} *actual    实际
  * @return {void}
  */
-void validateAnswerDummyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
+void validateAnswerMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
     for (int i = 0; i < expect->size; i++) {
         if (myLinkedListGet(expect, i) != myLinkedListGet(actual, i)) {
             printf("❌ Test %c Failed\n", testNum);
