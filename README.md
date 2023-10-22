@@ -4,13 +4,13 @@ C language leetcode practice guide:
 
 - [Basics](00_Basics/) - Prerequisites
   - [VScode_Settings](00_Basics/00_VScode_Settings/) - VScode settings
-  - [Common_Func](00_Basics/01_Common_Func/) - common c function modules
+  - [Common_Func](00_Basics/01_Common_Func/) - Common c function modules
 - [Programmercarl_Series](01_Programmercarl_Series/) - [代码随想录系列](https://programmercarl.com/)
 - [Labuladong_Series](02_Labuladong_Series/) - [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
-- [Real_World_Problem](03_Real_World_Problem/) - real world problem
-- [Misc](04_Misc/) - miscellaneous
-  - [Clean_Exe](04_Misc/00_Clean_Exe/) - executables to clean all .exe files
-  - [Programming_Notes](04_Misc/01_Programming_Notes/) - programming notes
+- [Real_World_Problem](03_Real_World_Problem/) - Real world problem
+- [Misc](04_Misc/) - Miscellaneous
+  - [Clean_Exe](04_Misc/00_Clean_Exe/) - Executables to clean all .exe files
+  - [Programming_Notes](04_Misc/01_Programming_Notes/) - Programming notes
 
 ## Versions
 
