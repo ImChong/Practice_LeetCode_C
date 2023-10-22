@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 通用虚拟头节点链表头文件 - 使用虚拟头节点
  */
-#ifndef __DUMMY_LINKED_LIST_COMMON_H
-#define __DUMMY_LINKED_LIST_COMMON_H
+#ifndef __COMMON_LINKED_LIST_DUMMY_H
+#define __COMMON_LINKED_LIST_DUMMY_H
 
 /**********************************************************************************/
 /*                                                                                */
@@ -56,4 +56,4 @@ void printLinkedList(MyLinkedList *dummyHead);
 void validateAnswerMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual);
 
 
-#endif  /* __DUMMY_LINKED_LIST_COMMON_H */
+#endif  /* __COMMON_LINKED_LIST_DUMMY_H */

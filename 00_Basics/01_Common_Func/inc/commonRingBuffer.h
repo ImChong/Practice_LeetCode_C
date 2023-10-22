@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 通用环形缓冲区头文件
  */
-#ifndef __RINGBUFFER_H__
-#define __RINGBUFFER_H__
+#ifndef __COMMON_RING_BUFFER_H
+#define __COMMON_RING_BUFFER_H
 
 #include <stdint.h>
 
@@ -52,4 +52,4 @@ int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen);
 void Test_RingBuffer(void);
 
 
-#endif  /* __RINGBUFFER_H__ */
+#endif  /* __COMMON_RING_BUFFER_H */

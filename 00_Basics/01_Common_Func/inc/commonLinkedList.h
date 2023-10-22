@@ -3,14 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 12:19:06
+ * @LastEditTime : 2023-10-22 12:24:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用链表头文件 - 未使用虚拟头节点
  */
-#ifndef __LINKED_LIST_COMMON_H
-#define __LINKED_LIST_COMMON_H
+#ifndef __COMMON_LINKED_LIST_H
+#define __COMMON_LINKED_LIST_H
 
 /**********************************************************************************/
 /*                                                                                */
@@ -35,4 +35,4 @@ void printList(struct ListNode *head);
 void freeList(struct ListNode *head);
 
 
-#endif  /* __LINKED_LIST_COMMON_H */
+#endif  /* __COMMON_LINKED_LIST_H */
