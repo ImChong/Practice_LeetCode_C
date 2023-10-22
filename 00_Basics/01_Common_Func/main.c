@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:03:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:05:54
+ * @LastEditTime : 2023-10-22 13:33:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -26,10 +26,10 @@
  * @return {int}            程序运行状态
  */
 int main(int argc, char *argv[]) {
-    INFO("== printCommandInfo =============================");
+    INFO("✅ == printCommandInfo =============================");
     printCommandInfo(argc, argv);
 
-    INFO("== Test_RingBuffer =============================");
+    INFO("✅ == Test_RingBuffer =============================");
     Test_RingBuffer();
     return 0;
 }

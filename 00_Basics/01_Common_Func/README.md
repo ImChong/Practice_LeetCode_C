@@ -10,6 +10,7 @@
   - [通用数组头文件](./inc/commonArray.h) - commonArray.h
   - [通用链表头文件](./inc/commonLinkedList.h) - commonLinkedList.h
   - [通用虚拟头节点链表头文件](./inc/commonLinkedListDummy.h) - commonLinkedListDummy.h
+  - [通用哈希表头文件](./inc/commonHashTable.h) - commonHashTable.h
   - [通用二叉树头文件](./inc/commonBinaryTree.h) - commonBinaryTree.h
 - [通用源文件](./src/) - src/
   - [通用源文件](./src/commonHelper.c) - commonHelper.c
@@ -18,5 +19,6 @@
   - [通用数组源文件](./inc/commonArray.c) - commonArray.c
   - [通用链表源文件](./inc/commonLinkedList.c) - commonLinkedList.c
   - [通用虚拟头节点链表源文件](./inc/commonLinkedListDummy.c) - commonLinkedListDummy.c
+  - -[通用哈希表源文件](./inc/commonHashTable.c) - commonHashTable.c
   - [通用二叉树源文件](./inc/commonBinaryTree.c) - commonBinaryTree.c
 - [主程序(测试用途)](main.c) - main.c
