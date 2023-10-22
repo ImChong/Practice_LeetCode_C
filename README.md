@@ -14,6 +14,8 @@ C language leetcode practice guide:
 
 ## Build & Run Code
 
+### VSCode Native - Build & Run Current File
+
 In order to run source code in VSCode, select the main.c file that wish to run. Then click the following button in VSCode:
 
 ```txt
@@ -27,6 +29,8 @@ Simply Press Ctrl+Shift+B
 ```
 
 for the source code to accomplish the above code please see [source code](.vscode/tasks.json).
+
+### VSCode Extension - Code Runner
 
 for the `Code Runner` vscode extension to accomplish the above code please see [source code](.vscode/settings.json).
 
