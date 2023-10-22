@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-17 22:38:16
+ * @LastEditTime : 2023-10-22 13:21:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,89 +12,9 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                MACRO FUNCTIONS                                 */
-/*                                                                                */
-/**********************************************************************************/
-#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 GLOBAL VARIABLES                               */
-/*                                                                                */
-/**********************************************************************************/
-/* 节点定义 */
-struct ListNode {
-    int val;
-    struct ListNode *next;
-};
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 UTILITY FUNCTIONS                              */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 创建链表，不使用虚拟头结点
- * =================================================================================
- * @param {int} *array                  数组
- * @param {int} size                    数组大小
- * @return {struct ListNode} *head      链表头指针
- */
-struct ListNode *arrayToLinkedList(int *array, int size) {
-    struct ListNode *head = NULL;       /* 头节点指针 */
-    struct ListNode *current = NULL;    /* 当前节点指针 */
-
-    for (int i = 0; i < size; i++) {
-        /* 创建新结点 */
-        struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));
-        new_node->val = array[i];
-        new_node->next = NULL;
-
-        /* 如果链表为空，则将新结点设置为头结点 */
-        if (head == NULL) {
-            head = new_node;
-        } else {
-            /* 否则，将新结点追加到链表末尾 */
-            current->next = new_node;
-        }
-        current = new_node;
-    }
-    return head;
-}
-
-/**
- * @description: 打印链表
- * =================================================================================
- * @param {ListNode} *listPtr           链表头指针
- * @param {char} listChar               链表标识字符
- * @return {void}
- */
-void printList(struct ListNode *listPtr, char listChar) {
-    printf("linked list %c: ", listChar);
-    while (listPtr != NULL) {
-        printf("%d ", listPtr->val);
-        listPtr = listPtr->next;
-    }
-    printf("\n");
-}
-
-/**
- * @description: 释放链表内存
- * =================================================================================
- * @param {ListNode} *head              链表头指针
- * @return {void}
- */
-void freeLinkedList(struct ListNode *head) {
-    struct ListNode *current = head;
-    while (current != NULL) {
-        struct ListNode *temp = current;
-        current = current->next;
-        free(temp);
-    }
-}
+#include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
+#include "commonArray.h"            /* 00_Basics\01_Common_Func\inc\commonArray.h */
+#include "commonLinkedList.h"       /* 00_Basics\01_Common_Func\inc\commonLinkedList.h */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -138,27 +58,6 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
- */
-void validateAnswer(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
-}
-
-/**********************************************************************************/
-/*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
@@ -194,8 +93,8 @@ void test_1(void) {
     validateAnswer('1', expect, intersectNode->val);
 
     /* 释放内存 - A/B链表相互链接，不可 while 循环释放 */
-    // freeLinkedList(listA);
-    // freeLinkedList(listB);
+    // freeList(listA);
+    // freeList(listB);
 }
 
 /**
@@ -262,8 +161,8 @@ void test_3(void) {
     }
 
     /* 释放内存 */
-    freeLinkedList(listA);
-    freeLinkedList(listB);
+    freeList(listA);
+    freeList(listB);
 }
 
 /**********************************************************************************/
