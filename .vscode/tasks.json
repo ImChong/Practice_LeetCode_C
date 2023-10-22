@@ -20,6 +20,7 @@
                 "args": [
                     "-fdiagnostics-color=always",                                   /* 使gcc输出带颜色 */
                     "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",           /* 常用头文件路径 */
+                    "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/commonDef/", /* 常用头文件路径 */
                     "-I${fileDirname}/inc/",                                        /* 当前活跃文件的头文件所在目录 */
                     "-I${fileDirname}",                                             /* 当前活跃文件所在目录 */
                     "-g",                                                           /* 生成调试信息 */
@@ -34,6 +35,7 @@
                 "args": [
                     "-fdiagnostics-color=always",                                   /* 使gcc输出带颜色 */
                     "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",           /* 常用头文件路径 */
+                    "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/commonDef/", /* 常用头文件路径 */
                     "-I${fileDirname}/inc/",                                        /* 当前活跃文件的头文件所在目录 */
                     "-I${fileDirname}",                                             /* 当前活跃文件所在目录 */
                     "-g",                                                           /* 生成调试信息 */
