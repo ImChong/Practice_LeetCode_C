@@ -53,7 +53,7 @@
 /* 返回错误码 */
 #define RETURN_ERR_IF(condition)        do { \
                                             if (condition) { \
-                                                return UNIFORM_ERR; \
+                                                return COMMON_ERR; \
                                             } \
                                         } while (0)
 

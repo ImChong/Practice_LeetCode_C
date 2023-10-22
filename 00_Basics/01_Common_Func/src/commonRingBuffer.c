@@ -41,7 +41,7 @@ int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte) {
 
     /* 环形buffer数据已满 */
     if (pRing->dataLen == pRing->buffLen) {
-        return UNIFORM_ERR;
+        return COMMON_ERR;
     }
 
     /* 找到第一个数据的索引号 */
@@ -52,7 +52,7 @@ int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte) {
 
     pRing->pBuff[idx] = byte;
     pRing->dataLen++;
-    return UNIFORM_OK;
+    return COMMON_OK;
 }
 
 /**
@@ -69,7 +69,7 @@ int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte) {
 
     /* 环形buffer数据为空 */
     if (pRing->dataLen <= 0) {
-        return UNIFORM_ERR;
+        return COMMON_ERR;
     }
 
     /* 取出一个字节 */
@@ -82,7 +82,7 @@ int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte) {
     }
 
     pRing->dataLen--;
-    return UNIFORM_OK;
+    return COMMON_OK;
 }
 
 /**
@@ -123,7 +123,7 @@ int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen) {
     pRing->buffLen = buffLen;
     pRing->dataLen = 0;
     pRing->dataIdx = 0;
-    return UNIFORM_OK;
+    return COMMON_OK;
 }
 
 /**********************************************************************************/
