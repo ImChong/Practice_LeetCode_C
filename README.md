@@ -36,34 +36,34 @@ C language leetcode practice guide:
 
 ## Debug Code
 
-In order to debug source code in VSCode, select the .c file that wish to run.
-First Build & Run source code as the above section.
-Then click the following button in VSCode:
-
-```txt
-Run and Debug (Ctil+Shift+D) -> (gdb) Debug Main
-```
-
-or
-
-```txt
-Simply Press F5
-```
-
-for the source code to accomplish the above code please see [source code](.vscode/launch.json).
+> In order to debug source code in VSCode, select the .c file that wish to run.
+> First Build & Run source code as the above section.
+> Then click the following button in VSCode:
+>
+> ```txt
+> Run and Debug (Ctil+Shift+D) -> (gdb) Debug Main
+> ```
+>
+> or
+>
+> ```txt
+> Simply Press F5
+> ```
+>
+> for the source code to accomplish the above code please see [source code](.vscode/launch.json).
 
 ## Clean all .exe files
 
-```txt
-ctrl+~ to open the terminal
-```
-
-then
-
-```txt
-Run .\killexe.bat       /* windows system */
-Run ./remove-exe.sh     /* linux system */
-```
+> ```txt
+> ctrl+~ to open the terminal
+> ```
+>
+> then
+>
+> ```txt
+> Run .\killexe.bat       /* windows system */
+> Run ./remove-exe.sh     /* linux system */
+> ```
 
 for the source code to accomplish the above code please see [source code](killexe.bat).
 
