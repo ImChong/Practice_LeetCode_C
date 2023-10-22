@@ -62,11 +62,11 @@ C language leetcode practice guide:
 > ctrl+~ to open the terminal
 > ```
 >
-> then
+> then run
 >
 > ```txt
-> Run .\04_Misc\00_Clean_Exe\killexe.bat        /* windows system */
-> Run ./04_Misc/00_Clean_Exe/killexe.sh         /* linux system */
+> .\04_Misc\00_Clean_Exe\killexe.bat        /* windows system */
+> ./04_Misc/00_Clean_Exe/killexe.sh         /* linux system */
 > ```
 
 for the source code to accomplish the above code please see [source code](./04_Misc/00_Clean_Exe/).
