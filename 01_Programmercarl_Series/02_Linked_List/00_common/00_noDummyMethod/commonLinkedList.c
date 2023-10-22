@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\00_noDummyMethod\linkedListCommon.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\00_noDummyMethod\commonLinkedList.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 08:48:26
+ * @LastEditTime : 2023-10-22 08:53:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -48,7 +48,7 @@ struct ListNode *arrayToLinkedList(int *array, int size) {
 }
 
 /**
- * @description: 添加元素至链表
+ * @description: 添加元素至链表 - 不使用虚拟头结点
  * =================================================================================
  * @param {ListNode} *head              头节点指针
  * @param {int} val                     元素值
