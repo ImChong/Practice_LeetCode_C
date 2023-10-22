@@ -200,6 +200,11 @@ void printLinkedList(MyLinkedList *list) {
     printf("\n");                                       /* 换行 */
 }
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                  TEST FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
 /**
  * @description: 验证答案
  * =================================================================================
@@ -208,7 +213,7 @@ void printLinkedList(MyLinkedList *list) {
  * @param {MyLinkedList} *actual    实际
  * @return {void}
  */
-void validateAnswer(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
+void validateAnswerDummyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
     for (int i = 0; i < expect->size; i++) {
         if (myLinkedListGet(expect, i) != myLinkedListGet(actual, i)) {
             printf("❌ Test %c Failed\n", testNum);
