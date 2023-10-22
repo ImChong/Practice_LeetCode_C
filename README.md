@@ -7,7 +7,7 @@ C language leetcode practice guide:
 - [Labuladong_Series](02_Labuladong_Series/) - [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
 - [Real_World_Problem](03_Real_World_Problem/) - real world problem
 - [Misc](04_Misc/) - miscellaneous
-  - [Clean_Exe](04_Misc/00_Clean_Exe/) - clean all .exe files
+  - [Clean_Exe](04_Misc/00_Clean_Exe/) - executables to clean all .exe files
   - [Programming_Notes](04_Misc/01_Programming_Notes/) - programming notes
 
 ## Versions
