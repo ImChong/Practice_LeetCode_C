@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-20 11:00:19
+ * @LastEditTime : 2023-10-22 13:08:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,13 +12,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                MACRO FUNCTIONS                                 */
-/*                                                                                */
-/**********************************************************************************/
-#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
+#include "commonArray.h"        /* 00_Basics\01_Common_Func\inc\commonArray.h */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -57,34 +51,6 @@ int *sortedSquares(int *nums, int numsSize, int *returnSize) {
         index--;                                                    /* 返回数组索引左移 */
     }
     return result;                                              /* 返回数组 */
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum        测试编号
- * @param {int} *expectNums     预期结果
- * @param {int} expectLen       预期结果长度
- * @param {int} *actualNums     实际结果
- * @param {int} actualLen       实际结果长度
- * @return {*}
- */
-void validateAnswerArray(char testNum, int *expectNums, int expectLen, int *actualNums, int actualLen) {
-    if (expectLen != actualLen) {
-        printf("❌ Test %c Failed\n", testNum);
-    } else {
-        for (int i = 0; i < expectLen; i++) {
-            if (expectNums[i] != actualNums[i]) {
-                printf("❌ Test %c Failed\n", testNum);
-            }
-        }
-        printf("✅ Test %c Passed\n", testNum);
-    }
 }
 
 /**********************************************************************************/

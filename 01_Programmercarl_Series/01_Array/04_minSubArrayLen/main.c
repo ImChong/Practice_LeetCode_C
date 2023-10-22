@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 23:54:50
+ * @LastEditTime : 2023-10-22 13:08:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,13 +13,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                MACRO FUNCTIONS                                 */
-/*                                                                                */
-/**********************************************************************************/
-#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
+#include "commonHelper.h"       /* 00_Basics\01_Common_Func\inc\commonHelper.h */
+#include "commonArray.h"        /* 00_Basics\01_Common_Func\inc\commonArray.h */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -50,27 +45,6 @@ int minSubArrayLen(int target, int *nums, int numsSize) {
         }
     }
     return minLen == INT_MAX ? 0 : minLen;                  /* 返回最小长度 */
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
- */
-void validateAnswer(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
 }
 
 /**********************************************************************************/
