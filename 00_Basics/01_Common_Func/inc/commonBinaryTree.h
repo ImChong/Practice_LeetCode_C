@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 二叉树相关的宏定义及宏函数
+ * @Description  : 通用二叉树头文件
  */
 #ifndef __COMMON_BINARY_TREE_H
 #define __COMMON_BINARY_TREE_H

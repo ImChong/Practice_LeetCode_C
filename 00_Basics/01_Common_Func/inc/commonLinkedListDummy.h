@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 09:55:45
+ * @LastEditTime : 2023-10-22 12:19:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 链表公共函数 - 使用虚拟头节点
+ * @Description  : 通用虚拟头节点链表头文件 - 使用虚拟头节点
  */
 #ifndef __DUMMY_LINKED_LIST_COMMON_H
 #define __DUMMY_LINKED_LIST_COMMON_H

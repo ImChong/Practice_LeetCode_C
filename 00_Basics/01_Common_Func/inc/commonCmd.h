@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:12:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 17:51:39
+ * @LastEditTime : 2023-10-22 12:18:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 打印函数输入的命令行参数
+ * @Description  : 通用命令行指令头文件
  */
 #ifndef __COMMAND_CMD_H
 #define __COMMAND_CMD_H
