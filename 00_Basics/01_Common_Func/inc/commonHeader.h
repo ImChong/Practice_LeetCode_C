@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 本文件记录C语言常用宏定义及宏函数
+ * @Description  : 通用头文件
  */
 #ifndef __COMMON_HEADER_H
 #define __COMMON_HEADER_H
