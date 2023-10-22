@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 22:23:20
+ * @LastEditTime : 2023-10-22 22:29:16
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,7 +11,7 @@
  * https://programmercarl.com/0383.%E8%B5%8E%E9%87%91%E4%BF%A1.html
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0383.%E8%B5%8E%E9%87%91%E4%BF%A1.md
  *
- * 给你两个字符串：ransomNote 和 magazine ，判断 ransomNote 能不能由 magazine 里面的字符构成。
+ * 给两个字符串：ransomNote 和 magazine ，判断 ransomNote 能不能由 magazine 里面的字符构成。
  *
  */
 #include <stdio.h>
@@ -63,44 +63,62 @@ bool canConstruct(char *ransomNote, char *magazine){
 /**********************************************************************************/
 /**
  * @description: 测试 1
+ * 输入：ransomNote = "a", magazine = "b"
+ * 输出：false
  * =================================================================================
  * @return {void}
  */
 void test_1(void) {
     /* 实际结果 */
+    char ransomNote[] = "a";
+    char magazine[] = "b";
+    bool actual = canConstruct(ransomNote, magazine);
 
     /* 预期结果 */
+    bool expect = false;
 
     /* 比较结果 */
-
+    validateAnswer('1', expect, actual);
 }
 
 /**
  * @description: 测试 2
+ * 输入：ransomNote = "aa", magazine = "ab"
+ * 输出：false
  * =================================================================================
  * @return {void}
  */
 void test_2(void) {
     /* 实际结果 */
+    char ransomNote[] = "aa";
+    char magazine[] = "ab";
+    bool actual = canConstruct(ransomNote, magazine);
 
     /* 预期结果 */
+    bool expect = false;
 
     /* 比较结果 */
-
+    validateAnswer('2', expect, actual);
 }
 
 /**
  * @description: 测试 3
+ * 输入：ransomNote = "aa", magazine = "aab"
+ * 输出：true
  * =================================================================================
  * @return {void}
  */
 void test_3(void) {
     /* 实际结果 */
+    char ransomNote[] = "aa";
+    char magazine[] = "aab";
+    bool actual = canConstruct(ransomNote, magazine);
 
     /* 预期结果 */
+    bool expect = true;
 
     /* 比较结果 */
-
+    validateAnswer('3', expect, actual);
 }
 
 /**********************************************************************************/
@@ -116,22 +134,8 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
-    /* Test case 1 */
-    printf("======== Case 1 ======== \n");
-    char r1[] = "a";
-    char m1[] = "b";
-    printf("Can be constructed: %s\r\n", canConstruct(r1, m1) ? "true" : "false");
-
-    /* Test case 2 */
-    printf("======== Case 2 ======== \n");
-    char r2[] = "aa";
-    char m2[] = "ab";
-    printf("Can be constructed: %s\r\n", canConstruct(r2, m2) ? "true" : "false");
-
-    /* Test case 3 */
-    printf("======== Case 3 ======== \n");
-    char r3[] = "aa";
-    char r4[] = "aab";
-    printf("Can be constructed: %s\r\n", canConstruct(r3, r4) ? "true" : "false");
+    test_1();
+    test_2();
+    test_3();
     return 0;
 }
