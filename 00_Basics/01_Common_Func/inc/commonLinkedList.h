@@ -34,5 +34,12 @@ struct ListNode *removeFromList(struct ListNode *head, int val);
 void printList(struct ListNode *head);
 void freeList(struct ListNode *head);
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                  TEST FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+void validateAnswerLinkedList(char testNum, struct ListNode *expectList, struct ListNode *ansList);
+
 
 #endif  /* __COMMON_LINKED_LIST_H */

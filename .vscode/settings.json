@@ -13,6 +13,7 @@
         "*.excalidraw": "json",
         "*.excalidrawlib": "json",
         "commoncmd.h": "c",
-        "commonhelper.h": "c"
+        "commonhelper.h": "c",
+        "commonlinkedlist.h": "c"
     }
 }

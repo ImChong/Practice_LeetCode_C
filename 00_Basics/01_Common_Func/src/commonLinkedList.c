@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\00_noDummyMethod\commonLinkedList.c
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonLinkedList.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 08:53:47
+ * @LastEditTime : 2023-10-22 13:13:38
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -124,4 +124,32 @@ void freeList(struct ListNode *head) {
     }
 }
 
-
+/**********************************************************************************/
+/*                                                                                */
+/*                                  TEST FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 验证答案
+ * =================================================================================
+ * @param {char} testNum            测试编号
+ * @param {ListNode} *expectList    预期
+ * @param {ListNode} *ansList       结果
+ * @return {void}
+ */
+void validateAnswerLinkedList(char testNum, struct ListNode *expectList, struct ListNode *ansList) {
+    struct ListNode *curr1 = expectList, *curr2 = ansList;
+    while (curr1 != NULL && curr2 != NULL) {
+        if (curr1->val != curr2->val) {
+            printf("❌ Test %c Failed\n", testNum);
+            return;
+        }
+        curr1 = curr1->next;
+        curr2 = curr2->next;
+    }
+    if (curr1 == NULL && curr2 == NULL) {
+        printf("✅ Test %c Passed\n", testNum);
+    } else {
+        printf("❌ Test %c Failed\n", testNum);
+    }
+}

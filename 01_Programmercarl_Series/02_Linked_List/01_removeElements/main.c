@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 10:27:46
+ * @LastEditTime : 2023-10-22 13:14:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,90 +12,8 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                MACRO FUNCTIONS                                 */
-/*                                                                                */
-/**********************************************************************************/
-#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度 */
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 GLOBAL VARIABLES                               */
-/*                                                                                */
-/**********************************************************************************/
-/* 节点定义 */
-struct ListNode {
-    int val;
-    struct ListNode *next;
-};
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 从数组创建链表
- * =================================================================================
- * @param {int} *array                  数组
- * @param {int} size                    数组大小
- * @return {struct ListNode} *head      头节点指针
- */
-struct ListNode *arrayToLinkedList(int *array, int size) {
-    struct ListNode *head = NULL;       /* 头节点指针 */
-    struct ListNode *current = NULL;    /* 当前节点指针 */
-
-    for (int i = 0; i < size; i++) {
-        /* 创建新结点 */
-        struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));
-        new_node->val = array[i];
-        new_node->next = NULL;
-
-        /* 如果链表为空，则将新结点设置为头结点 */
-        if (head == NULL) {
-            head = new_node;
-        } else {
-            /* 否则，将新结点追加到链表末尾 */
-            current->next = new_node;
-        }
-        current = new_node;
-    }
-    return head;
-}
-
-/**
- * @description: 打印链表
- * =================================================================================
- * @param {ListNode} *listPtr
- * @return {void}
- */
-void printList(struct ListNode *listPtr) {
-    while (listPtr != NULL) {
-        printf("%d ", listPtr->val);
-        listPtr = listPtr->next;
-    }
-    printf("\n");
-}
-
-/**
- * @description: 释放链表
- * =================================================================================
- * @param {ListNode} *listPtr
- * @return {void}
- */
-void freeList(struct ListNode *listPtr) {
-    if (listPtr == NULL) {
-        return;
-    }
-    struct ListNode *tmp = NULL;
-    while (listPtr != NULL) {
-        tmp = listPtr;
-        listPtr = listPtr->next;
-        free(tmp);
-    }
-}
+#include "commonArray.h"        /* 00_Basics\01_Common_Func\inc\commonArray.h */
+#include "commonLinkedList.h"   /* 00_Basics\01_Common_Func\inc\commonLinkedList.h */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -133,36 +51,6 @@ struct ListNode *removeElements(struct ListNode *head, int val) {
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum            测试编号
- * @param {ListNode} *expectList    预期
- * @param {ListNode} *ansList       结果
- * @return {void}
- */
-void validateAnswer(char testNum, struct ListNode *expectList, struct ListNode *ansList) {
-    struct ListNode *curr1 = expectList, *curr2 = ansList;
-    while (curr1 != NULL && curr2 != NULL) {
-        if (curr1->val != curr2->val) {
-            printf("❌ Test %c Failed\n", testNum);
-            return;
-        }
-        curr1 = curr1->next;
-        curr2 = curr2->next;
-    }
-    if (curr1 == NULL && curr2 == NULL) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
-}
-
-/**********************************************************************************/
-/*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
@@ -185,7 +73,7 @@ void test_1(void) {
     struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
-    validateAnswer('1', expectList, ansList);
+    validateAnswerLinkedList('1', expectList, ansList);
 
     /* 释放内存 */
     freeList(head);
@@ -211,7 +99,7 @@ void test_2(void) {
     struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
-    validateAnswer('2', expectList, ansList);
+    validateAnswerLinkedList('2', expectList, ansList);
 
     /* 释放内存 */
     // freeList(head);      /* head 内存已被 removeElements 释放，故无需再释放 */
@@ -237,7 +125,7 @@ void test_3(void) {
     struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
-    validateAnswer('3', expectList, ansList);
+    validateAnswerLinkedList('3', expectList, ansList);
 
     /* 释放内存 */
     freeList(head);
