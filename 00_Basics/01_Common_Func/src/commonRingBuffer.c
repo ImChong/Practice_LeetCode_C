@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\commonRingBuffer.c
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonRingBuffer.c
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 19:19:34
+ * @LastEditTime : 2023-10-22 12:23:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,8 +11,8 @@
  */
 #include <stdio.h>
 #include <stdint.h>
-#include "commonArray.h"
 #include "commonHeader.h"
+#include "commonArray.h"
 #include "commonRingBuffer.h"
 
 /**********************************************************************************/
