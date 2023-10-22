@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:27:12
+ * @LastEditTime : 2023-10-22 22:44:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,6 +30,45 @@ void printArray(int *arr, int arrSize) {
         printf("%d ", arr[i]);
     }
     printf("\n");
+}
+
+/**
+ * @description: 打印二维数组
+ * =================================================================================
+ * @param {int} **result
+ * @param {int} returnSize
+ * @param {int} *returnColumnSizes
+ * @return {void}
+ */
+void print2DArray(int **result, int returnSize, int *returnColumnSizes) {
+    printf("Ans: [\n");
+    for (int i = 0; i < returnSize; i++) {
+        printf("  [");
+        for (int j = 0; j < returnColumnSizes[i]; j++) {
+            printf("%d", result[i][j]);
+            if (j < returnColumnSizes[i] - 1) {
+                printf(", ");
+            }
+        }
+        printf("]\n");
+    }
+    printf("]\n");
+}
+
+/**
+ * @description: 释放二维数组
+ * =================================================================================
+ * @param {int} ***result
+ * @param {int} *returnSize
+ * @param {int} **returnColumnSizes
+ * @return {void}
+ */
+void free2DArray(int ***result, int *returnSize, int **returnColumnSizes) {
+    for (int i = 0; i < *returnSize; i++) {
+        free((*result)[i]);
+    }
+    free(*result);
+    free(*returnColumnSizes);
 }
 
 /**********************************************************************************/

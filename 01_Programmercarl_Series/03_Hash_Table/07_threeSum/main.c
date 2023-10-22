@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 22:41:16
+ * @LastEditTime : 2023-10-22 22:44:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -87,51 +87,6 @@ int **threeSum(int *nums, int numsSize, int *returnSize, int **returnColumnSizes
         }
     }
     return ans;
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 打印结果
- * =================================================================================
- * @param {int} **result
- * @param {int} returnSize
- * @param {int} *returnColumnSizes
- * @return {void}
- */
-void print2DArray(int **result, int returnSize, int *returnColumnSizes) {
-    printf("[\n");
-    for (int i = 0; i < returnSize; i++) {
-        printf("  Ans[%d]: ", i);
-        printf("[");
-        for (int j = 0; j < returnColumnSizes[0]; j++) {
-            printf("%d", result[i][j]);
-            if (j < returnColumnSizes[0] - 1) {                     /* 打印分隔符：, */
-                printf(", ");
-            }
-        }
-        printf("]\n");
-    }
-    printf("]\n");
-}
-
-/**
- * @description: 释放结果空间
- * =================================================================================
- * @param {int} ***result
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
- * @return {void}
- */
-void free2DArray(int ***result, int *returnSize, int **returnColumnSizes) {
-    for (int i = 0; i < *returnSize; i++) {
-        free((*result)[i]);
-    }
-    free(*result);
-    free(*returnColumnSizes);
 }
 
 /**********************************************************************************/

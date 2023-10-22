@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:30:42
+ * @LastEditTime : 2023-10-22 22:44:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,6 +25,8 @@
 /*                                                                                */
 /**********************************************************************************/
 void printArray(int *arr, int arrSize);
+void print2DArray(int **result, int returnSize, int *returnColumnSizes);
+void free2DArray(int ***result, int *returnSize, int **returnColumnSizes);
 
 /**********************************************************************************/
 /*                                                                                */
