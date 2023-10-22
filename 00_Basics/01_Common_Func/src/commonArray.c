@@ -1,13 +1,13 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonArray\commonArray.c
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonArray.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 09:33:32
+ * @LastEditTime : 2023-10-22 12:20:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 数组公共函数
+ * @Description  : 通用数组源文件
  */
 
 /**********************************************************************************/

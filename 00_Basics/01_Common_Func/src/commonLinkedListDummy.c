@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 09:55:51
+ * @LastEditTime : 2023-10-22 12:20:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 链表公共函数 - 使用虚拟头节点
+ * @Description  : 通用虚拟头节点链表源文件 - 使用虚拟头节点
  */
 #include <stdio.h>
 #include <stdlib.h>
