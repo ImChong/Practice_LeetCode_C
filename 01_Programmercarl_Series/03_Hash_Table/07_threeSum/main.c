@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 22:30:35
+ * @LastEditTime : 2023-10-22 22:41:16
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
 #include "commonArray.h"            /* 00_Basics\01_Common_Func\inc\commonArray.h */
 
 /**********************************************************************************/
@@ -25,9 +26,9 @@
 /**
  * @description: 比较函数
  * =================================================================================
- * @param {void} *a
- * @param {void} *b
- * @return {*}
+ * @param {void} *a     a项
+ * @param {void} *b     b项
+ * @return {int}        比较结果
  */
 int cmp(const void *a, const void *b) {
     return *(int *)a - *(int *)b;
@@ -36,11 +37,11 @@ int cmp(const void *a, const void *b) {
 /**
  * @description: 三数之和
  * =================================================================================
- * @param {int} *nums
- * @param {int} numsSize
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
- * @return {int} **ans
+ * @param {int} *nums                   数组
+ * @param {int} numsSize                数组大小
+ * @param {int} *returnSize             返回数组大小
+ * @param {int} **returnColumnSizes     返回数组列大小
+ * @return {int} **ans                  返回数组
  */
 int **threeSum(int *nums, int numsSize, int *returnSize, int **returnColumnSizes){
     *returnSize = 0;
@@ -99,16 +100,22 @@ int **threeSum(int *nums, int numsSize, int *returnSize, int **returnColumnSizes
  * @param {int} **result
  * @param {int} returnSize
  * @param {int} *returnColumnSizes
- * @return {*}
+ * @return {void}
  */
-void printAns(int **result, int returnSize, int *returnColumnSizes) {
+void print2DArray(int **result, int returnSize, int *returnColumnSizes) {
+    printf("[\n");
     for (int i = 0; i < returnSize; i++) {
-        printf("Ans[%d]: ", i);
+        printf("  Ans[%d]: ", i);
+        printf("[");
         for (int j = 0; j < returnColumnSizes[0]; j++) {
-            printf("%d ", result[i][j]);
+            printf("%d", result[i][j]);
+            if (j < returnColumnSizes[0] - 1) {                     /* 打印分隔符：, */
+                printf(", ");
+            }
         }
-        printf("\n");
+        printf("]\n");
     }
+    printf("]\n");
 }
 
 /**
@@ -117,35 +124,14 @@ void printAns(int **result, int returnSize, int *returnColumnSizes) {
  * @param {int} ***result
  * @param {int} *returnSize
  * @param {int} **returnColumnSizes
- * @return {*}
+ * @return {void}
  */
-void freeAns(int ***result, int *returnSize, int **returnColumnSizes) {
+void free2DArray(int ***result, int *returnSize, int **returnColumnSizes) {
     for (int i = 0; i < *returnSize; i++) {
         free((*result)[i]);
     }
     free(*result);
     free(*returnColumnSizes);
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
- */
-void validateAnswer(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
 }
 
 /**********************************************************************************/
@@ -214,7 +200,7 @@ int main(int argc, const char *argv[]) {
     int *returnColumnSizes;
 
     int **result = threeSum(nums, ARR_SIZE(nums), &returnSize, &returnColumnSizes);
-    printAns(result, returnSize, returnColumnSizes);
-    freeAns(&result, &returnSize, &returnColumnSizes);
+    print2DArray(result, returnSize, returnColumnSizes);
+    free2DArray(&result, &returnSize, &returnColumnSizes);
     return 0;
 }
