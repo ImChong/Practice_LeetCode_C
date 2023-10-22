@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 08:47:37
+ * @LastEditTime : 2023-10-22 13:28:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,6 +21,7 @@
  */
 #include <stdio.h>
 #include <stdbool.h>
+#include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -139,27 +140,6 @@ bool isHappy(int n) {
 }
 
 #endif /* FAST_SLOW_POINTER_METHOD_EN */
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
- */
-void validateAnswer(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
-}
 
 /**********************************************************************************/
 /*                                                                                */
