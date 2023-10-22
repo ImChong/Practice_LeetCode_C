@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-10 23:39:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:30:28
+ * @LastEditTime : 2023-10-22 13:31:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -52,49 +52,6 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
     }
     *returnSize = 0;                                                /* 如果快慢指针所指的和没有等于target的情况，将返回数组大小修改为0 */
     return NULL;                                                    /* 返回 NULL*/
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 打印结果
- * =================================================================================
- * @param {int} *arr            结果数组
- * @return {void}
- */
-void printArray(int *arr) {
-    if (arr) {
-        printf("Indices: [%d, %d]\n", arr[0], arr[1]);
-        free(arr);
-    } else {
-        printf("No solution found.\n");
-    }
-}
-
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum        测试编号
- * @param {int} *expectNums     预期结果
- * @param {int} expectLen       预期结果长度
- * @param {int} *actualNums     实际结果
- * @param {int} actualLen       实际结果长度
- * @return {void}
- */
-void validateAnswerArray(char testNum, int *expectNums, int expectLen, int *actualNums, int actualLen) {
-    if (expectLen != actualLen) {
-        printf("❌ Test %c Failed\n", testNum);
-    } else {
-        for (int i = 0; i < expectLen; i++) {
-            if (expectNums[i] != actualNums[i]) {
-                printf("❌ Test %c Failed\n", testNum);
-            }
-        }
-        printf("✅ Test %c Passed\n", testNum);
-    }
 }
 
 /**********************************************************************************/
