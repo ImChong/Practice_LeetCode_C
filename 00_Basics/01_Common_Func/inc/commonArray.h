@@ -20,5 +20,12 @@
 /* 获取数组长度 */
 #define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                HELPER FUNCTIONS                                */
+/*                                                                                */
+/**********************************************************************************/
+void validateAnswerArray(char testNum, int *expectNums, int expectLen, int *actualNums, int actualLen);
+
 
 #endif  /* __COMMON_ARRAY_H */
