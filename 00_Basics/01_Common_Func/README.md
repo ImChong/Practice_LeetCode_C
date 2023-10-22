@@ -16,9 +16,9 @@
   - [通用源文件](./src/commonHelper.c) - commonHelper.c
   - [通用命令行指令源文件](./src/commonCmd.c) - commonCmd.c
   - [通用环形缓冲区源文件](./src/commonRingBuffer.c) - commonRingBuffer.c
-  - [通用数组源文件](./inc/commonArray.c) - commonArray.c
-  - [通用链表源文件](./inc/commonLinkedList.c) - commonLinkedList.c
-  - [通用虚拟头节点链表源文件](./inc/commonLinkedListDummy.c) - commonLinkedListDummy.c
-  - [通用哈希表源文件](./inc/commonHashTable.c) - commonHashTable.c
-  - [通用二叉树源文件](./inc/commonBinaryTree.c) - commonBinaryTree.c
+  - [通用数组源文件](./src/commonArray.c) - commonArray.c
+  - [通用链表源文件](./src/commonLinkedList.c) - commonLinkedList.c
+  - [通用虚拟头节点链表源文件](./src/commonLinkedListDummy.c) - commonLinkedListDummy.c
+  - [通用哈希表源文件](./src/commonHashTable.c) - commonHashTable.c
+  - [通用二叉树源文件](./src/commonBinaryTree.c) - commonBinaryTree.c
 - [主程序(测试用途)](main.c) - main.c
