@@ -66,7 +66,7 @@ C language leetcode practice guide:
 >
 > ```txt
 > Run .\04_Misc\00_Clean_Exe\killexe.bat        /* windows system */
-> Run ./04_Misc/00_Clean_Exe/remove-exe.sh      /* linux system */
+> Run ./04_Misc/00_Clean_Exe/killexe.sh         /* linux system */
 > ```
 
 for the source code to accomplish the above code please see [source code](./04_Misc/00_Clean_Exe/).
