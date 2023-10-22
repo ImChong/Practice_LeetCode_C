@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-04 08:56:01
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 12:41:14
+ * @LastEditTime : 2023-10-22 12:54:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -42,6 +42,3 @@ void printCommandInfo(int argc, char *argv[]) {
         INFO("%d -> %s", i, argv[i]);
     }
 }
-
-
-
