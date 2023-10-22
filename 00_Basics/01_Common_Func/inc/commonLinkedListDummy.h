@@ -45,7 +45,7 @@ void myLinkedListFree(MyLinkedList *dummyHead);
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void arrayToLinkedList(MyLinkedList *dummyHead, int *nums, int numsSize);
+void arrayToMyLinkedList(MyLinkedList *dummyHead, int *nums, int numsSize);
 void printLinkedList(MyLinkedList *dummyHead);
 void validateAnswer(char testNum, MyLinkedList *expect, MyLinkedList *actual);
 

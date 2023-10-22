@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 10:40:38
+ * @LastEditTime : 2023-10-22 09:47:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -204,7 +204,7 @@ void myLinkedListFree(MyLinkedList *obj) {
  * @param {int} numsSize            数组大小
  * @return {void}
  */
-void arrayToLinkedList(MyLinkedList *list, int *nums, int numsSize) {
+void arrayToMyLinkedList(MyLinkedList *list, int *nums, int numsSize) {
     for (int i = 0; i < numsSize; i++) {
         myLinkedListAddAtTail(list, nums[i]);
     }
@@ -264,7 +264,7 @@ void test_1(void) {
     /* 预期结果 */
     MyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {2, 3};
-    arrayToLinkedList(expectDummy, nums, ARR_SIZE(nums));
+    arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateAnswer('1', expectDummy, actualDummy);
@@ -299,7 +299,7 @@ void test_2(void) {
     /* 预期结果 */
     MyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {5, 2, 3, 7, 2};
-    arrayToLinkedList(expectDummy, nums, ARR_SIZE(nums));
+    arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateAnswer('2', expectDummy, actualDummy);
@@ -331,7 +331,7 @@ void test_3(void) {
     /* 预期结果 */
     MyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {1, 7, 2, 1};
-    arrayToLinkedList(expectDummy, nums, ARR_SIZE(nums));
+    arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateAnswer('3', expectDummy, actualDummy);
