@@ -1,8 +1,9 @@
 # C 语言常用函数
 
 - [通用头文件](./inc/) - inc/
-  - [通用类型定义头文件](./inc/commonTypeDef.h) - commonTypeDef.h
-  - [通用打印定义头文件](./inc/commonPrintDef.h) - commonPrintDef.h
+  - [通用定义头文件](./inc/commonDef/) - commonDef/
+    - [通用类型定义头文件](./inc/commonTypeDef.h) - commonTypeDef.h
+    - [通用打印定义头文件](./inc/commonPrintDef.h) - commonPrintDef.h
   - [通用头文件](./inc/commonHelper.h) - commonHelper.h
   - [通用命令行指令头文件](./inc/commonCmd.h) - commonCmd.h
   - [通用环形缓冲区头文件](./inc/commonRingBuffer.h) - commonRingBuffer.h
