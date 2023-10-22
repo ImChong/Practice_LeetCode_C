@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 13:42:27
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-21 17:44:44
+ * @LastEditTime : 2023-10-22 12:14:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -20,12 +20,12 @@
 /*                                                                                */
 /**********************************************************************************/
 /* 程序状态宏 */
-#define UNIFORM_ERR     (-1)
-#define UNIFORM_OK      0
+#define COMMON_ERR     (-1)
+#define COMMON_OK      0
 
 /* 程序判断宏 */
-#define UNIFORM_TRUE    1
-#define UNIFORM_FALSE   0
+#define COMMON_TRUE    1
+#define COMMON_FALSE   0
 
 /* 程序调试宏 */
 #define STATIC          static
