@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:26:08
+ * @LastEditTime : 2023-10-22 13:27:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -79,26 +79,6 @@ int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *ret
     }
     *returnSize = k;                                    /* 返回数组大小为k */
     return res;                                         /* 返回结果数组 */
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 打印数组
- * =================================================================================
- * @param {int} *arr            数组
- * @param {int} arrSize         数组大小
- * @return {void}
- */
-void printArray(int *arr, int arrSize) {
-    printf("Arr: ");
-    for (int i = 0; i < arrSize; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
 }
 
 /**********************************************************************************/
