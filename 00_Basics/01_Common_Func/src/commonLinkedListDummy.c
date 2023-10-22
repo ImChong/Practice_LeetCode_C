@@ -180,7 +180,7 @@ void myLinkedListFree(MyLinkedList *dummyHead) {
  * @param {int} numsSize            数组大小
  * @return {void}
  */
-void arrayToLinkedList(MyLinkedList *list, int *nums, int numsSize) {
+void arrayToMyLinkedList(MyLinkedList *list, int *nums, int numsSize) {
     for (int i = 0; i < numsSize; i++) {
         myLinkedListAddAtTail(list, nums[i]);
     }
