@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 23:01:01
+ * @LastEditTime : 2023-10-23 23:03:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -45,30 +45,7 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
     return NULL;
 }
 
-/**********************************************************************************/
-/*                                                                                */
-/*                               STRUCT DEFINITION                                */
-/*                                                                                */
-/**********************************************************************************/
-/* 测试数据结构定义 */
-struct InputStruct {
-    int *Arr;                       /* 输入数组 */
-    int target;                     /* 输入目标值 */
-};
 
-/* 输出数据结构定义 */
-struct outputStruct {
-    int rtnSize;                    /* 输出返回数组大小 */
-    int *rtnColSize;                /* 输出返回数组列大小 */
-    int **Arr;                      /* 输出返回数组 */
-};
-
-/* 测试数据定义 */
-struct TestStruct {
-    char testNum;                   /* 测试编号 */
-    struct InputStruct input;       /* 输入数据 */
-    struct outputStruct output;     /* 期望输出 */
-};
 
 /**********************************************************************************/
 /*                                                                                */
