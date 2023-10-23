@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 11:22:20
+ * @LastEditTime : 2023-10-23 11:26:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -112,6 +112,7 @@ void validateAnswerArray(char testNum, int *expectArr, int expectLen, int *actua
  */
 void validateAnswer2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
                                 int **actual2DArr, int actualRtnSize, int *actualRtnColSize) {
+    /* TODO: 完善此函数 */
     if (expect2DArr == NULL && actual2DArr == NULL) {
         printf("✅ Test %c passed\n", testNum);
     }
