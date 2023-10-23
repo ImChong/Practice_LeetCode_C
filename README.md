@@ -80,8 +80,7 @@ for the source code to accomplish the above code please see [source code](./04_M
 - [x] .
 - [x] ├── 00_Basics
 - [x] │   ├── 00_VScode_Settings
-- [x] │   ├── 01_Common_Func
-- [x] │   └── 02_Programming_Notes
+- [x] │   └── 01_Common_Func
 - [x] ├── 01_Programmercarl_Series
 - [x] │   ├── 01_Array
 - [x] │   ├── 02_Linked_List
