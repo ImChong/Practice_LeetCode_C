@@ -126,7 +126,7 @@ struct Node *newNode(int val) {
  * @param {int} **returnColumnSizes     运算结果数组的列数
  * @return {void}
  */
-void validateAnswer2DArray(char testNum, int **expected, int **result, int returnSize, int *returnColumnSizes) {
+void validate2DArray(char testNum, int **expected, int **result, int returnSize, int *returnColumnSizes) {
     if (returnSize == 0 && expected != NULL) {                              /* 如果预期结果与运算结果的长度不相等 */
         printf("❌ Test %c failed\n", testNum);                                 /* 测试失败 */
         return;                                                                 /* 返回 */
@@ -196,7 +196,7 @@ void test_1(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    validateAnswer2DArray('1', expected, result, returnSize, returnColumnSizes);
+    validate2DArray('1', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     free2DArray(expected, returnSize);
@@ -247,7 +247,7 @@ void test_2(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    validateAnswer2DArray('2', expected, result, returnSize, returnColumnSizes);
+    validate2DArray('2', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     free2DArray(expected, returnSize);
@@ -357,7 +357,7 @@ void test_3(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    validateAnswer2DArray('3', expected, result, returnSize, returnColumnSizes);
+    validate2DArray('3', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     free2DArray(expected, returnSize);

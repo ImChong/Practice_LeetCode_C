@@ -111,7 +111,7 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
  * @param {int} *actualRtnColSize
  * @return {void}
  */
-void validateAnswer2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
+void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
                                 int **actual2DArr, int actualRtnSize, int *actualRtnColSize) {
 
     bool isSuccess = true;
