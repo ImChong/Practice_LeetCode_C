@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:24:27
+ * @LastEditTime : 2023-10-23 18:51:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -79,8 +79,6 @@ void test_1(void) {
     bool expect = true;
 
     /* 比较结果 */
-
-    /* Test case 1 */
     validateAnswer('1', expect, actual);
 }
 
