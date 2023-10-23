@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 22:48:54
+ * @LastEditTime : 2023-10-23 22:50:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -37,9 +37,9 @@ void printArray(int *arr, int arrSize) {
 /**
  * @description: 打印二维数组
  * =================================================================================
- * @param {int} **2DArr                返回数组
- * @param {int} arrSize              返回数组大小
- * @param {int} *arrColSizes      返回数组列大小
+ * @param {int} **2DArr             返回数组
+ * @param {int} arrSize             返回数组大小
+ * @param {int} *arrColSizes        返回数组列大小
  * @return {void}
  */
 void print2DArray(int **arr, int arrSize, int *arrColSizes) {
@@ -55,6 +55,19 @@ void print2DArray(int **arr, int arrSize, int *arrColSizes) {
         printf("]\n");
     }
     printf("]\n");
+}
+
+/**
+ * @description: 释放数组
+ * =================================================================================
+ * @param {int} *result     返回数组
+ * @return {void}
+ */
+void freeArray(int *result) {
+    if (result == NULL) {
+        return;
+    }
+    free(result);
 }
 
 /**

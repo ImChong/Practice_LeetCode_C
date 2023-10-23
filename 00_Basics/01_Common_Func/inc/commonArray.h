@@ -26,6 +26,7 @@
 /**********************************************************************************/
 void printArray(int *arr, int arrSize);
 void print2DArray(int **result, int returnSize, int *returnColumnSizes);
+void freeArray(int *result);
 void free2DArray(int **result, int returnSize);
 
 /**********************************************************************************/
