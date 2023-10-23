@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 10:43:15
+ * @LastEditTime : 2023-10-23 11:22:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -112,6 +112,20 @@ void validateAnswerArray(char testNum, int *expectArr, int expectLen, int *actua
  */
 void validateAnswer2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
                                 int **actual2DArr, int actualRtnSize, int *actualRtnColSize) {
-
-
+    if (expect2DArr == NULL && actual2DArr == NULL) {
+        printf("✅ Test %c passed\n", testNum);
+    }
+    if (actualRtnSize == 0 && expect2DArr != NULL) {
+        printf("❌ Test %c failed\n", testNum);
+        return;
+    }
+    for (int i = 0; i < expectRtnSize; i++) {
+        for (int j = 0; j < expectRtnColSize[i]; j++) {
+            if (actual2DArr[i][j] != expect2DArr[i][j]) {
+                printf("❌ Test %c failed\n", testNum);
+                return;
+            }
+        }
+    }
+    printf("✅ Test %c passed\n", testNum);
 }
