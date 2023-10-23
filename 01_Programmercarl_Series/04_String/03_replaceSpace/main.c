@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 00:56:23
+ * @LastEditTime : 2023-10-24 01:04:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,28 +31,6 @@ char *replaceSpace(char *s) {
     return 0;
 }
 
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
- */
-void validateSingleValue(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
-}
-
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
@@ -67,11 +45,14 @@ void validateSingleValue(char testNum, int expect, int actual) {
  */
 void test_1(void) {
     /* 实际结果 */
+    char *s = "a.aef.qerf.bb";
+    char *actual = replaceSpace(s);
 
     /* 预期结果 */
+    char *expect = "a aef qerf bb";
 
     /* 比较结果 */
-
+    validateString('1', expect, actual);
 }
 
 /**
