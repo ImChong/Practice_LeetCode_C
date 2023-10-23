@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\08_nlevelOrder\main_chong.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\08_nlevelOrder\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-28 00:17:10
+ * @LastEditTime : 2023-10-23 10:38:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -128,18 +128,18 @@ struct Node *newNode(int val) {
  */
 void validateAnswer(char testNum, int **expected, int **result, int returnSize, int *returnColumnSizes) {
     if (returnSize == 0 && expected != NULL) {                              /* 如果预期结果与运算结果的长度不相等 */
-        printf("test %c failed\n", testNum);                                    /* 测试失败 */
+        printf("❌ Test %c failed\n", testNum);                                 /* 测试失败 */
         return;                                                                 /* 返回 */
     }
     for (int i = 0; i < returnSize; i++) {                                  /* 遍历运算结果数组 */
         for (int j = 0; j < returnColumnSizes[i]; j++) {                        /* 遍历运算结果数组的列数 */
             if (result[i][j] != expected[i][j]) {                                   /* 如果预期结果与运算结果不相等 */
-                printf("test %c failed\n", testNum);                                    /* 测试失败 */
+                printf("❌ Test %c failed\n", testNum);                                 /* 测试失败 */
                 return;                                                                 /* 返回 */
             }
         }
     }
-    printf("test %c passed\n", testNum);                                    /* 测试成功 */
+    printf("✅ Test %c passed\n", testNum);                                 /* 测试成功 */
 }
 
 /**
