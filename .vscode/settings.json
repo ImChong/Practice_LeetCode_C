@@ -8,12 +8,5 @@
     },
     "code-runner.executorMap": {
         "c": "cd $dir && gcc -I$workspaceRoot/00_Basics/01_Common_Func/inc/ -I$workspaceRoot/00_Basics/01_Common_Func/inc/commonDef/ -I$dirWithoutTrailingSlash/inc/ $workspaceRoot/00_Basics/01_Common_Func/src/*.c *.c -o main.exe && $dirmain.exe"
-    },
-    "files.associations": {
-        "*.excalidraw": "json",
-        "*.excalidrawlib": "json",
-        "commoncmd.h": "c",
-        "commonhelper.h": "c",
-        "commonlinkedlist.h": "c"
     }
 }
