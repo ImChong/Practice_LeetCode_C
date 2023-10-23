@@ -8,6 +8,7 @@
   - [commonCmd.h](./inc/commonCmd.h) - 通用命令行指令头文件
   - [commonRingBuffer.h](./inc/commonRingBuffer.h) - 通用环形缓冲区头文件
   - [commonArray.h](./inc/commonArray.h) - 通用数组头文件
+  - [commonString.h](./inc/commonString.h) - 通用字符串头文件
   - [commonLinkedList.h](./inc/commonLinkedList.h) - 通用链表头文件
   - [commonLinkedListDummy.h](./inc/commonLinkedListDummy.h) - 通用虚拟头节点链表头文件
   - [commonHashTable.h](./inc/commonHashTable.h) - 通用哈希表头文件
@@ -17,6 +18,7 @@
   - [commonCmd.c](./src/commonCmd.c) - 通用命令行指令源文件
   - [commonRingBuffer.c](./src/commonRingBuffer.c) - 通用环形缓冲区源文件
   - [commonArray.c](./src/commonArray.c) - 通用数组源文件
+  - [commonString.c](./src/commonString.c) - 通用字符串源文件
   - [commonLinkedList.c](./src/commonLinkedList.c) - 通用链表源文件
   - [commonLinkedListDummy.c](./src/commonLinkedListDummy.c) - 通用虚拟头节点链表源文件
   - [commonHashTable.c](./src/commonHashTable.c) - 通用哈希表源文件
