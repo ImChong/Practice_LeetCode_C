@@ -41,7 +41,7 @@ struct HashTable *createHashTable(int size) {
  * @param {int} key                 键
  * @return {int}                    哈希码
  */
-int hashCode(struct HashTable *table, int key) {
+int getHashCode(struct HashTable *table, int key) {
     return (key & 0x7fffffff) % table->size;        /* 0x7fffffff 是一个十六进制数，等于 2^31 - 1，即 2147483647 */
 }
 
@@ -53,7 +53,7 @@ int hashCode(struct HashTable *table, int key) {
  * @return {void}
  */
 void insert(struct HashTable *table, int key) {
-    int slot = hashCode(table, key);                                                    /* 计算哈希码 */
+    int slot = getHashCode(table, key);                                                    /* 计算哈希码 */
     struct HashNode *currentNode = table->table[slot];                                  /* 获取哈希表的哈希节点 */
     while (currentNode) {                                                               /* 遍历哈希节点 */
         if (currentNode->key == key) {                                                      /* 如果哈希节点的键等于 key */
@@ -77,7 +77,7 @@ void insert(struct HashTable *table, int key) {
  * @return {int}                    值
  */
 int find(struct HashTable *table, int key) {
-    int slot = hashCode(table, key);                                                    /* 计算哈希码 */
+    int slot = getHashCode(table, key);                                                    /* 计算哈希码 */
     struct HashNode *currentNode = table->table[slot];                                  /* 获取哈希表的哈希节点 */
     while (currentNode) {                                                               /* 遍历哈希节点 */
         if (currentNode->key == key) {                                                      /* 如果哈希节点的键等于 key */
