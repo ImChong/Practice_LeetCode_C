@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 23:05:21
+ * @LastEditTime : 2023-10-23 23:30:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -47,6 +47,32 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
 
 /**********************************************************************************/
 /*                                                                                */
+/*                               STRUCT DEFINITION                                */
+/*                                                                                */
+/**********************************************************************************/
+/* 测试数据结构定义 */
+struct InputStruct {
+    int *arr;                       /* 输入数组 */
+    int arrSize;                    /* 输入数组大小 */
+    int target;                     /* 输入目标值 */
+};
+
+/* 输出数据结构定义 */
+struct outputStruct {
+    int rtnSize;                    /* 输出返回数组大小 */
+    int *rtnColSize;                /* 输出返回数组列大小 */
+    int **arr;                      /* 输出返回数组 */
+};
+
+/* 测试数据定义 */
+struct TestStruct {
+    char testNum;                   /* 测试编号 */
+    struct InputStruct input;       /* 输入数据 */
+    struct outputStruct output;     /* 期望输出 */
+};
+
+/**********************************************************************************/
+/*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
@@ -58,8 +84,8 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
  */
 void runTest(struct TestStruct *test) {
     /* 实际结果 */
-    int *nums = test->input.Arr;
-    int numsSize = ARR_SIZE(nums);
+    int *nums = test->input.arr;
+    int numsSize = test->input.arrSize;
     int target = test->input.target;
     int actualRtnSize = 0;
     int *actualRtnColSize = NULL;
@@ -68,7 +94,7 @@ void runTest(struct TestStruct *test) {
     /* 预期结果 */
     int expectRtnSize = test->output.rtnSize;
     int *expectRtnColSize = test->output.rtnColSize;
-    int **expect2DArr = test->output.Arr;
+    int **expect2DArr = test->output.arr;
 
     /* 比较结果 */
     validate2DArray(test->testNum, expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
@@ -88,11 +114,12 @@ void runTest(struct TestStruct *test) {
 void test_1(void) {
     struct TestStruct test;
     test.testNum = '1';
-    test.input.Arr = (int[]){1, 0, -1, 0, -2, 2};
+    test.input.arr = (int[]){1, 0, -1, 0, -2, 2};
+    test.input.arrSize = 6;
     test.input.target = 0;
     test.output.rtnSize = 3;
     test.output.rtnColSize = (int[]){4, 4, 4};
-    test.output.Arr = (int*[]){(int[]){-2, -1, 1, 2}, (int[]){-2, 0, 0, 2}, (int[]){-1, 0, 0, 1}};
+    test.output.arr = (int*[]){(int[]){-2, -1, 1, 2}, (int[]){-2, 0, 0, 2}, (int[]){-1, 0, 0, 1}};
     runTest(&test);
 }
 
@@ -106,11 +133,12 @@ void test_1(void) {
 void test_2(void) {
     struct TestStruct test;
     test.testNum = '2';
-    test.input.Arr = (int[]){2, 2, 2, 2, 2};
+    test.input.arr = (int[]){2, 2, 2, 2, 2};
+    test.input.arrSize = 6;
     test.input.target = 8;
     test.output.rtnSize = 1;
     test.output.rtnColSize = (int[]){4};
-    test.output.Arr = (int*[]){(int[]){2, 2, 2, 2}};
+    test.output.arr = (int*[]){(int[]){2, 2, 2, 2}};
     runTest(&test);
 }
 
@@ -124,11 +152,12 @@ void test_2(void) {
 void test_3(void) {
     struct TestStruct test;
     test.testNum = '3';
-    test.input.Arr = (int[]){1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    test.input.arr = (int[]){1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    test.input.arrSize = 10;
     test.input.target = 20;
     test.output.rtnSize = 9;
     test.output.rtnColSize = (int[]){4, 4, 4, 4, 4, 4, 4, 4, 4};
-    test.output.Arr = (int*[]){(int[]){1, 2, 7, 10},
+    test.output.arr = (int*[]){(int[]){1, 2, 7, 10},
                                 (int[]){1, 3, 6, 10},
                                 (int[]){1, 4, 5, 10},
                                 (int[]){1, 4, 6, 9},
