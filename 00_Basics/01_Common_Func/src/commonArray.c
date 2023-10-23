@@ -102,7 +102,7 @@ void validateAnswerArray(char testNum, int *expectArr, int expectLen, int *actua
 /**
  * @description: 验证二维数组答案
  * =================================================================================
- * @param {char} testNum
+ * @param {char} testNum            测试编号
  * @param {int} **expect2DArr
  * @param {int} expectRtnSize
  * @param {int} *expectRtnColSize
