@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 23:33:49
+ * @LastEditTime : 2023-10-24 01:02:06
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,7 @@
  */
 #include <stdio.h>
 #include <string.h>
+#include "commonString.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -31,27 +32,6 @@
 void reverseString(char *s, int sSize){
 
     return;
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
- */
-void validateSingleValue(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
 }
 
 /**********************************************************************************/
@@ -76,7 +56,7 @@ void test_1(void) {
     char *expect = "olleh";
 
     /* 比较结果 */
-    validateSingleValue("1", expect, s);
+    validateString('1', expect, s);
 }
 
 /**
@@ -96,7 +76,7 @@ void test_2(void) {
     char *expect = "hannaH";
 
     /* 比较结果 */
-    validateSingleValue("2", expect, s);
+    validateString('2', expect, s);
 }
 
 /**
@@ -116,7 +96,7 @@ void test_3(void) {
     char *expect = "1";
 
     /* 比较结果 */
-    validateSingleValue("3", expect, s);
+    validateString('3', expect, s);
 }
 
 /**********************************************************************************/

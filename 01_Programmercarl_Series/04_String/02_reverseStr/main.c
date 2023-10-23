@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 00:54:21
+ * @LastEditTime : 2023-10-24 01:00:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,34 +31,6 @@
 char *reverseStr(char *s, int k){
 
     return NULL;
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证字符串
- * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
- */
-void validateString(char testNum, char *expect, char *actual) {
-    if (expect == NULL && actual == NULL) {
-        printf("✅ Test %c Passed\n", testNum);
-        return;
-    } else if (expect == NULL || actual == NULL) {
-        printf("❌ Test %c Failed\n", testNum);
-        return;
-    }
-    if (strcmp(expect, actual) == 0) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
 }
 
 /**********************************************************************************/
