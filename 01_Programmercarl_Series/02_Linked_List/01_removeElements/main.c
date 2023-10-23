@@ -73,7 +73,7 @@ void test_1(void) {
     struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
-    validateAnswerLinkedList('1', expectList, ansList);
+    validateLinkedList('1', expectList, ansList);
 
     /* 释放内存 */
     freeList(head);
@@ -99,7 +99,7 @@ void test_2(void) {
     struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
-    validateAnswerLinkedList('2', expectList, ansList);
+    validateLinkedList('2', expectList, ansList);
 
     /* 释放内存 */
     // freeList(head);      /* head 内存已被 removeElements 释放，故无需再释放 */
@@ -125,7 +125,7 @@ void test_3(void) {
     struct ListNode *expectList = arrayToLinkedList(expectNums, expectLen);
 
     /* 比较结果 */
-    validateAnswerLinkedList('3', expectList, ansList);
+    validateLinkedList('3', expectList, ansList);
 
     /* 释放内存 */
     freeList(head);

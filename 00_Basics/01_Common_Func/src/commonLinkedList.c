@@ -137,7 +137,7 @@ void freeList(struct ListNode *head) {
  * @param {ListNode} *ansList       结果
  * @return {void}
  */
-void validateAnswerLinkedList(char testNum, struct ListNode *expectList, struct ListNode *ansList) {
+void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNode *ansList) {
     struct ListNode *curr1 = expectList, *curr2 = ansList;
     while (curr1 != NULL && curr2 != NULL) {
         if (curr1->val != curr2->val) {

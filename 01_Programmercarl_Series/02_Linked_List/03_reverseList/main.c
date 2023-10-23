@@ -65,7 +65,7 @@ void test_1(void) {
     struct ListNode *expectList = arrayToLinkedList(expect, expectSize);
 
     /* 比较结果 */
-    validateAnswerLinkedList('1', expectList, ansList);
+    validateLinkedList('1', expectList, ansList);
 
     /* 释放内存 */
     freeList(arrList);
@@ -90,7 +90,7 @@ void test_2(void) {
     struct ListNode *expectList = arrayToLinkedList(expect, expectSize);
 
     /* 比较结果 */
-    validateAnswerLinkedList('2', expectList, ansList);
+    validateLinkedList('2', expectList, ansList);
 
     /* 释放内存 */
     freeList(arrList);
@@ -115,7 +115,7 @@ void test_3(void) {
     struct ListNode *expectList = arrayToLinkedList(expect, expectSize);
 
     /* 比较结果 */
-    validateAnswerLinkedList('3', expectList, ansList);
+    validateLinkedList('3', expectList, ansList);
 
     /* 释放内存 */
     freeList(arrList);

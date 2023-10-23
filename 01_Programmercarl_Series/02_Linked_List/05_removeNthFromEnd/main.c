@@ -90,7 +90,7 @@ void test_1(void) {
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
 
     /* 比较结果 */
-    validateAnswerLinkedList('1', expectList, ansList);
+    validateLinkedList('1', expectList, ansList);
 
     /* 释放内存 */
     freeList(newList);
@@ -119,7 +119,7 @@ void test_2(void) {
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
 
     /* 比较结果 */
-    validateAnswerLinkedList('2', expectList, ansList);
+    validateLinkedList('2', expectList, ansList);
 
     /* 释放内存 */
     freeList(newList);
@@ -148,7 +148,7 @@ void test_3(void) {
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
 
     /* 比较结果 */
-    validateAnswerLinkedList('3', expectList, ansList);
+    validateLinkedList('3', expectList, ansList);
 
     /* 释放内存 */
     /* 内存已清除，无需再释放内存 */
@@ -176,7 +176,7 @@ void test_4(void) {
     struct ListNode *expectList = arrayToLinkedList(expectArr, expectArrSize);
 
     /* 比较结果 */
-    validateAnswerLinkedList('4', expectList, ansList);
+    validateLinkedList('4', expectList, ansList);
 
     /* 释放内存 */
     freeList(ansList);        /* newList 的链表头已被释放内存 */
