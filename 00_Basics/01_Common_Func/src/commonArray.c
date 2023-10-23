@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 22:44:10
+ * @LastEditTime : 2023-10-23 10:43:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -61,16 +61,15 @@ void print2DArray(int **result, int returnSize, int *returnColumnSizes) {
  * =================================================================================
  * @param {int} ***result               返回数组
  * @param {int} *returnSize             返回数组大小
- * @param {int} **returnColumnSizes     返回数组列大小
  * @return {void}
  */
-void free2DArray(int ***result, int *returnSize, int **returnColumnSizes) {
-    for (int i = 0; i < *returnSize; i++) {
-        free((*result)[i]);
+void free2DArray(int **result, int returnSize) {
+    for (int i = 0; i < returnSize; i++) {                                  /* 遍历二维数组的每一行 */
+        free(result[i]);                                                        /* free每一行数组占用的空间 */
     }
-    free(*result);
-    free(*returnColumnSizes);
+    free(result);                                                           /* 最后free二维数组本身 */
 }
+
 
 /**********************************************************************************/
 /*                                                                                */
@@ -78,23 +77,41 @@ void free2DArray(int ***result, int *returnSize, int **returnColumnSizes) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 验证答案
+ * @description: 验证数组答案
  * =================================================================================
  * @param {char} testNum        测试编号
- * @param {int} *expectNums     预期结果
+ * @param {int} *expectArr      预期结果
  * @param {int} expectLen       预期结果长度
- * @param {int} *actualNums     实际结果
+ * @param {int} *actualArr      实际结果
  * @param {int} actualLen       实际结果长度
  * @return {void}
  */
-void validateAnswerArray(char testNum, int *expectNums, int expectLen, int *actualNums, int actualLen) {
+void validateAnswerArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen) {
     if (expectLen != actualLen) {
         printf("❌ Test %c Failed\n", testNum);
     }
     for (int i = 0; i < expectLen; i++) {
-        if (expectNums[i] != actualNums[i]) {
+        if (expectArr[i] != actualArr[i]) {
             printf("❌ Test %c Failed\n", testNum);
         }
     }
     printf("✅ Test %c Passed\n", testNum);
+}
+
+/**
+ * @description: 验证二维数组答案
+ * =================================================================================
+ * @param {char} testNum
+ * @param {int} **expect2DArr
+ * @param {int} expectRtnSize
+ * @param {int} *expectRtnColSize
+ * @param {int} **actual2DArr
+ * @param {int} actualRtnSize
+ * @param {int} *actualRtnColSize
+ * @return {void}
+ */
+void validateAnswer2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
+                                int **actual2DArr, int actualRtnSize, int *actualRtnColSize) {
+
+
 }
