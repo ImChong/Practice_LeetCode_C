@@ -3,13 +3,21 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 22:50:35
+ * @LastEditTime : 2023-10-23 22:00:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 18. 四数之和：https://leetcode.cn/problems/4sum/
  * https://programmercarl.com/0018.%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C.html
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0018.%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C.md
+ *
+ * 给一个由 n 个整数组成的数组 nums ，和一个目标值 target 。
+ * 请找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：
+ *      0 <= a, b, c, d < n
+ *      a、b、c 和 d 互不相同
+ *      nums[a] + nums[b] + nums[c] + nums[d] == target
+ *
+ * 可以按 任意顺序 返回答案
  */
 #include <stdio.h>
 #include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
