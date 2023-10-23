@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 23:34:38
+ * @LastEditTime : 2023-10-24 01:06:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,7 @@
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0151.%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D.md
  */
 #include <stdio.h>
+#include "commonString.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -29,27 +30,6 @@
 char *reverseWords(char *s) {
 
     return 0;
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
- */
-void validateSingleValue(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
 }
 
 /**********************************************************************************/
