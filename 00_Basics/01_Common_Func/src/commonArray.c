@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 22:47:20
+ * @LastEditTime : 2023-10-23 22:48:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -65,6 +65,9 @@ void print2DArray(int **arr, int arrSize, int *arrColSizes) {
  * @return {void}
  */
 void free2DArray(int **arr, int arrSize) {
+    if (arr == NULL) {
+        return;
+    }
     for (int i = 0; i < arrSize; i++) {
         free(arr[i]);
     }
