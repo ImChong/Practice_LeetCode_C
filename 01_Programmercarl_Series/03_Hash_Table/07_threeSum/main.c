@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 17:22:50
+ * @LastEditTime : 2023-10-23 18:32:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -115,7 +115,7 @@ void test_1(void) {
     /* 预期结果 */
     int expectRtnSize = 2;
     int expectRtnColSize[] = {3, 3};
-    int *expect2DArr[] = {(int[]){-1, -1, 2}, (int[]){-1, 0, 1}};
+    int *expect2DArr[] = {(int[]){-1, -1, 2}, (int[]){-1, 0, 1, 2}};    /* *expect2DArr[] 内数组可以不同长度 */
 
     /* 比较结果 */
     validateAnswer2DArray('1', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
