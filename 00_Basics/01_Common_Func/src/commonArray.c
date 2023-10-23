@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 11:26:51
+ * @LastEditTime : 2023-10-23 11:39:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "commonArray.h"
 
 /**********************************************************************************/
@@ -112,21 +113,29 @@ void validateAnswerArray(char testNum, int *expectArr, int expectLen, int *actua
  */
 void validateAnswer2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
                                 int **actual2DArr, int actualRtnSize, int *actualRtnColSize) {
-    /* BUG: 完善此函数 */
-    if (expect2DArr == NULL && actual2DArr == NULL) {
-        printf("✅ Test %c passed\n", testNum);
-    }
-    if (actualRtnSize == 0 && expect2DArr != NULL) {
-        printf("❌ Test %c failed\n", testNum);
-        return;
-    }
-    for (int i = 0; i < expectRtnSize; i++) {
-        for (int j = 0; j < expectRtnColSize[i]; j++) {
-            if (actual2DArr[i][j] != expect2DArr[i][j]) {
-                printf("❌ Test %c failed\n", testNum);
-                return;
+
+    bool isSuccess = true;
+
+    if (actualRtnSize != expectRtnSize) {
+        isSuccess = false;
+    } else {
+        for (int i = 0; i < expectRtnSize; i++) {
+            if (actualRtnColSize[i] != expectRtnColSize[i]) {
+                isSuccess = false;
+                break;
+            }
+            for (int j = 0; j < expectRtnColSize[i]; j++) {
+                if (actual2DArr[i][j] != expect2DArr[i][j]) {
+                    isSuccess = false;
+                    break;
+                }
             }
         }
     }
-    printf("✅ Test %c passed\n", testNum);
+
+    if (isSuccess) {
+        printf("✅ Test %c passed\n", testNum);
+    } else {
+        printf("❌ Test %c failed\n", testNum);
+    }
 }
