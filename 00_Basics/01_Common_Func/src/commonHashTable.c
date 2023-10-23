@@ -52,7 +52,7 @@ int getHashCode(struct HashTable *table, int key) {
  * @param {int} key                 键
  * @return {void}
  */
-void insert(struct HashTable *table, int key) {
+void insertHashTable(struct HashTable *table, int key) {
     int slot = getHashCode(table, key);                                                    /* 计算哈希码 */
     struct HashNode *currentNode = table->table[slot];                                  /* 获取哈希表的哈希节点 */
     while (currentNode) {                                                               /* 遍历哈希节点 */
