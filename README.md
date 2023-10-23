@@ -34,7 +34,7 @@ C language leetcode practice guide:
 > Ctrl+Shift+B
 > ```
 >
-> for the source code to accomplish the above code please see [source code](.vscode/tasks.json).
+> for the code to accomplish the above behavior please see [source code](.vscode/tasks.json).
 
 ### VSCode Extension - Code Runner
 
@@ -56,7 +56,7 @@ C language leetcode practice guide:
 > F5
 > ```
 >
-> for the source code to accomplish the above code please see [source code](.vscode/launch.json).
+> for the code to accomplish the above behavior please see [source code](.vscode/launch.json).
 
 ## Clean all .exe files
 
@@ -73,7 +73,7 @@ C language leetcode practice guide:
 > ./04_Misc/00_Clean_Exe/killexe.sh         /* linux system */
 > ```
 
-for the source code to accomplish the above code please see [source code](./04_Misc/00_Clean_Exe/).
+for the code to accomplish the above behavior please see [source code](./04_Misc/00_Clean_Exe/).
 
 ## Progress
 
