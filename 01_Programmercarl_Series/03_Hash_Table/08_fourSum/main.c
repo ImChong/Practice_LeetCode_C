@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 22:07:19
+ * @LastEditTime : 2023-10-23 22:19:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -60,19 +60,23 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
 void test_1(void) {
     /* 实际结果 */
     int nums[] = {1, 0, -1, 0, -2, 2};
+    int numsSize = ARR_SIZE(nums);
+    int target = 0;
+    int actualRtnSize = 0;
+    int *actualRtnColSize = NULL;
+    int **actual2DArr = fourSum(nums, numsSize, target, &actualRtnSize, &actualRtnColSize);
 
     /* 预期结果 */
+    int expectRtnSize = 3;
+    int *expectedRtnColSize[] = {4, 4, 4};
+    int *expected2DArr[] = {(int[]){-2, -1, 1, 2}, (int[]){-2, 0, 0, 2}, (int[]){-1, 0, 0, 1}};
 
     /* 比较结果 */
+    validate2DArray('1', expected2DArr, expectRtnSize, expectedRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
 
-
-    // Test Case 1
-    int nums1[] = {1, 0, -1, 0, -2, 2};
-    int numsSize1 = 6;
-    int target1 = 0;
-    int returnSize1 = 0;
-    int *expected1[] = {(int[]){-2, -1, 1, 2}, (int[]){-2, 0, 0, 2}, (int[]){-1, 0, 0, 1}};
-    int expectedSizes1[] = {4, 4, 4};
+    /* 释放内存 */
+    free(actualRtnColSize);
+    free2DArray(actual2DArr, actualRtnSize);
 }
 
 /**
@@ -129,6 +133,6 @@ void test_3(void) {
  */
 int main(int argc, const char* argv[]) {
     test_1();
-
+    test_2();
     return 0;
 }
