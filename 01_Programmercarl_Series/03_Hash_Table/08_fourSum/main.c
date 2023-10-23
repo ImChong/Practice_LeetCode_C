@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 22:05:52
+ * @LastEditTime : 2023-10-23 22:07:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,14 +31,14 @@
 /**********************************************************************************/
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 四数之和
  * =================================================================================
- * @param {int} *nums
- * @param {int} numsSize
- * @param {int} target
- * @param {int} *returnSize
- * @param {int} **returnColumnSizes
- * @return {int} **ans
+ * @param {int} *nums                   数组
+ * @param {int} numsSize                数组大小
+ * @param {int} target                  目标值
+ * @param {int} *returnSize             返回数组大小
+ * @param {int} **returnColumnSizes     返回数组列大小
+ * @return {int} **ans                  返回数组
  */
 int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **returnColumnSizes) {
 

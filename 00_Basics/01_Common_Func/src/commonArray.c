@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 11:39:58
+ * @LastEditTime : 2023-10-23 22:08:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -102,13 +102,13 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
 /**
  * @description: 验证二维数组答案
  * =================================================================================
- * @param {char} testNum            测试编号
- * @param {int} **expect2DArr
- * @param {int} expectRtnSize
- * @param {int} *expectRtnColSize
- * @param {int} **actual2DArr
- * @param {int} actualRtnSize
- * @param {int} *actualRtnColSize
+ * @param {char} testNum                测试编号
+ * @param {int} **expect2DArr           预期结果
+ * @param {int} expectRtnSize           预期结果大小
+ * @param {int} *expectRtnColSize       预期结果列大小
+ * @param {int} **actual2DArr           实际结果
+ * @param {int} actualRtnSize           实际结果大小
+ * @param {int} *actualRtnColSize       实际结果列大小
  * @return {void}
  */
 void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
