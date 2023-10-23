@@ -38,7 +38,7 @@ C language leetcode practice guide:
 
 ### VSCode Extension - Code Runner
 
-> for the `Code Runner` vscode extension to accomplish the above code please see [source code](.vscode/settings.json).
+> for the `Code Runner` vscode extension to accomplish the above behavior please see [source code](.vscode/settings.json).
 
 ## Debug Code
 
