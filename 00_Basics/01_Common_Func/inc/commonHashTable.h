@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 11:50:39
+ * @LastEditTime : 2023-10-23 11:54:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,7 +38,7 @@ struct HashTable {
 struct HashTable *createHashTable(int size);
 int getHashCode(struct HashTable *table, int key);
 void insertHashTable(struct HashTable *table, int key);
-int searchHashTable((struct HashTable *table, int key);
+int searchHashTable(struct HashTable *table, int key);
 void freeHashTable(struct HashTable *table);
 
 
