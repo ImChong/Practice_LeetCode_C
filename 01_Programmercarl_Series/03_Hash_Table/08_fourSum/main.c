@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 23:03:55
+ * @LastEditTime : 2023-10-23 23:05:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,8 +44,6 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
 
     return NULL;
 }
-
-
 
 /**********************************************************************************/
 /*                                                                                */
