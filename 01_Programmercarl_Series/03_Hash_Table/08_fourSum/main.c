@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 22:00:31
+ * @LastEditTime : 2023-10-23 22:05:52
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,6 +21,7 @@
  */
 #include <stdio.h>
 #include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
+#include "commonArray.h"            /* 00_Basics\01_Common_Func\inc\commonArray.h */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -39,7 +40,7 @@
  * @param {int} **returnColumnSizes
  * @return {int} **ans
  */
-int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **returnColumnSizes){
+int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **returnColumnSizes) {
 
     return NULL;
 }
@@ -51,11 +52,14 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
 /**********************************************************************************/
 /**
  * @description: 测试 1
+ * 输入：nums = [1,0,-1,0,-2,2], target = 0
+ * 输出：[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
  * =================================================================================
  * @return {void}
  */
 void test_1(void) {
     /* 实际结果 */
+    int nums[] = {1, 0, -1, 0, -2, 2};
 
     /* 预期结果 */
 
@@ -73,6 +77,8 @@ void test_1(void) {
 
 /**
  * @description: 测试 2
+ * 输入：nums = [2,2,2,2,2], target = 8
+ * 输出：[[2,2,2,2]]
  * =================================================================================
  * @return {void}
  */
@@ -83,18 +89,12 @@ void test_2(void) {
 
     /* 比较结果 */
 
-
-    // Test Case 2
-    int nums2[] = {0, 0, 0, 0};
-    int numsSize2 = 4;
-    int target2 = 0;
-    int returnSize2 = 0;
-    int *expected2[] = {(int[]){0, 0, 0, 0}};
-    int expectedSizes2[] = {4};
 }
 
 /**
  * @description: 测试 3
+ * 输入：nums = [1,2,3,4,5,6,7,8,9,10], target = 20
+ * 输出：[[1,2,7,10],[1,3,6,10],[1,4,5,10],[1,4,6,9],[2,3,5,10],[2,3,6,9],[2,4,5,9],[3,4,5,8],[3,4,6,7]]
  * =================================================================================
  * @return {void}
  */
