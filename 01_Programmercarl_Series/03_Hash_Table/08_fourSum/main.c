@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 22:19:29
+ * @LastEditTime : 2023-10-23 23:01:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -47,9 +47,62 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
 
 /**********************************************************************************/
 /*                                                                                */
+/*                               STRUCT DEFINITION                                */
+/*                                                                                */
+/**********************************************************************************/
+/* 测试数据结构定义 */
+struct InputStruct {
+    int *Arr;                       /* 输入数组 */
+    int target;                     /* 输入目标值 */
+};
+
+/* 输出数据结构定义 */
+struct outputStruct {
+    int rtnSize;                    /* 输出返回数组大小 */
+    int *rtnColSize;                /* 输出返回数组列大小 */
+    int **Arr;                      /* 输出返回数组 */
+};
+
+/* 测试数据定义 */
+struct TestStruct {
+    char testNum;                   /* 测试编号 */
+    struct InputStruct input;       /* 输入数据 */
+    struct outputStruct output;     /* 期望输出 */
+};
+
+/**********************************************************************************/
+/*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
+/**
+ * @description: 运行测试
+ * =================================================================================
+ * @param {struct TestStruct} *test
+ * @return {void}
+ */
+void runTest(struct TestStruct *test) {
+    /* 实际结果 */
+    int *nums = test->input.Arr;
+    int numsSize = ARR_SIZE(nums);
+    int target = test->input.target;
+    int actualRtnSize = 0;
+    int *actualRtnColSize = NULL;
+    int **actual2DArr = fourSum(nums, numsSize, target, &actualRtnSize, &actualRtnColSize);
+
+    /* 预期结果 */
+    int expectRtnSize = test->output.rtnSize;
+    int *expectRtnColSize = test->output.rtnColSize;
+    int **expect2DArr = test->output.Arr;
+
+    /* 比较结果 */
+    validate2DArray(test->testNum, expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
+
+    /* 释放内存 */
+    freeArray(actualRtnColSize);
+    free2DArray(actual2DArr, actualRtnSize);
+}
+
 /**
  * @description: 测试 1
  * 输入：nums = [1,0,-1,0,-2,2], target = 0
@@ -58,25 +111,14 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
  * @return {void}
  */
 void test_1(void) {
-    /* 实际结果 */
-    int nums[] = {1, 0, -1, 0, -2, 2};
-    int numsSize = ARR_SIZE(nums);
-    int target = 0;
-    int actualRtnSize = 0;
-    int *actualRtnColSize = NULL;
-    int **actual2DArr = fourSum(nums, numsSize, target, &actualRtnSize, &actualRtnColSize);
-
-    /* 预期结果 */
-    int expectRtnSize = 3;
-    int *expectedRtnColSize[] = {4, 4, 4};
-    int *expected2DArr[] = {(int[]){-2, -1, 1, 2}, (int[]){-2, 0, 0, 2}, (int[]){-1, 0, 0, 1}};
-
-    /* 比较结果 */
-    validate2DArray('1', expected2DArr, expectRtnSize, expectedRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
-
-    /* 释放内存 */
-    free(actualRtnColSize);
-    free2DArray(actual2DArr, actualRtnSize);
+    struct TestStruct test;
+    test.testNum = '1';
+    test.input.Arr = (int[]){1, 0, -1, 0, -2, 2};
+    test.input.target = 0;
+    test.output.rtnSize = 3;
+    test.output.rtnColSize = (int[]){4, 4, 4};
+    test.output.Arr = (int*[]){(int[]){-2, -1, 1, 2}, (int[]){-2, 0, 0, 2}, (int[]){-1, 0, 0, 1}};
+    runTest(&test);
 }
 
 /**
@@ -87,12 +129,14 @@ void test_1(void) {
  * @return {void}
  */
 void test_2(void) {
-    /* 实际结果 */
-
-    /* 预期结果 */
-
-    /* 比较结果 */
-
+    struct TestStruct test;
+    test.testNum = '2';
+    test.input.Arr = (int[]){2, 2, 2, 2, 2};
+    test.input.target = 8;
+    test.output.rtnSize = 1;
+    test.output.rtnColSize = (int[]){4};
+    test.output.Arr = (int*[]){(int[]){2, 2, 2, 2}};
+    runTest(&test);
 }
 
 /**
@@ -103,20 +147,22 @@ void test_2(void) {
  * @return {void}
  */
 void test_3(void) {
-    /* 实际结果 */
-
-    /* 预期结果 */
-
-    /* 比较结果 */
-
-    // Test Case 3
-    int nums3[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int numsSize3 = 10;
-    int target3 = 20;
-    int returnSize3 = 0;
-    int *expected3[] = {(int[]){1, 2, 7, 10}, (int[]){1, 3, 6, 10}, (int[]){1, 4, 5, 10}, (int[]){1, 4, 6, 9}, (int[]){2, 3, 5, 10}, (int[]){2, 3, 6, 9}, (int[]){2, 4, 5, 9}, (int[]){3, 4, 5, 8}, (int[]){3, 4, 6, 7}};
-    int expectedSizes3[] = {4, 4, 4, 4, 4, 4, 4, 4, 4};
-    return 0;
+    struct TestStruct test;
+    test.testNum = '3';
+    test.input.Arr = (int[]){1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    test.input.target = 20;
+    test.output.rtnSize = 9;
+    test.output.rtnColSize = (int[]){4, 4, 4, 4, 4, 4, 4, 4, 4};
+    test.output.Arr = (int*[]){(int[]){1, 2, 7, 10},
+                                (int[]){1, 3, 6, 10},
+                                (int[]){1, 4, 5, 10},
+                                (int[]){1, 4, 6, 9},
+                                (int[]){2, 3, 5, 10},
+                                (int[]){2, 3, 6, 9},
+                                (int[]){2, 4, 5, 9},
+                                (int[]){3, 4, 5, 8},
+                                (int[]){3, 4, 6, 7}};
+    runTest(&test);
 }
 
 /**********************************************************************************/
@@ -134,5 +180,6 @@ void test_3(void) {
 int main(int argc, const char* argv[]) {
     test_1();
     test_2();
+    test_3();
     return 0;
 }
