@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 12:19:15
+ * @LastEditTime : 2023-10-23 19:09:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -53,7 +53,7 @@ void printLinkedList(MyLinkedList *dummyHead);
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void validateAnswerMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual);
+void validateMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual);
 
 
 #endif  /* __COMMON_LINKED_LIST_DUMMY_H */

@@ -213,7 +213,7 @@ void printLinkedList(MyLinkedList *list) {
  * @param {MyLinkedList} *actual    实际
  * @return {void}
  */
-void validateAnswerMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
+void validateMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
     for (int i = 0; i < expect->size; i++) {
         if (myLinkedListGet(expect, i) != myLinkedListGet(actual, i)) {
             printf("❌ Test %c Failed\n", testNum);

@@ -40,7 +40,7 @@ void test_1(void) {
     arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateAnswerMyLinkedList('1', expectDummy, actualDummy);
+    validateMyLinkedList('1', expectDummy, actualDummy);
 
     /* 释放内存空间 */
     myLinkedListFree(actualDummy);
@@ -75,7 +75,7 @@ void test_2(void) {
     arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateAnswerMyLinkedList('2', expectDummy, actualDummy);
+    validateMyLinkedList('2', expectDummy, actualDummy);
 
     /* 释放内存空间 */
     myLinkedListFree(actualDummy);
@@ -107,7 +107,7 @@ void test_3(void) {
     arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateAnswerMyLinkedList('3', expectDummy, actualDummy);
+    validateMyLinkedList('3', expectDummy, actualDummy);
 
     /* 释放内存空间 */
     myLinkedListFree(actualDummy);
