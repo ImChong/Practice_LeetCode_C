@@ -2,8 +2,8 @@
 
 - [inc/](./inc/) - 通用头文件
   - [commonDef/](./inc/commonDef/) - 通用定义头文件
-    - [commonTypeDef.h](./inc/commonTypeDef.h) - 通用类型定义头文件
-    - [commonPrintDef.h](./inc/commonPrintDef.h) - 通用打印定义头文件
+    - [commonTypeDef.h](./inc/commonDef/commonTypeDef.h) - 通用类型定义头文件
+    - [commonPrintDef.h](./inc/commonDef/commonPrintDef.h) - 通用打印定义头文件
   - [commonHelper.h](./inc/commonHelper.h) - 通用头文件
   - [commonCmd.h](./inc/commonCmd.h) - 通用命令行指令头文件
   - [commonRingBuffer.h](./inc/commonRingBuffer.h) - 通用环形缓冲区头文件
