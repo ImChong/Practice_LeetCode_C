@@ -87,7 +87,7 @@ void free2DArray(int **result, int returnSize) {
  * @param {int} actualLen       实际结果长度
  * @return {void}
  */
-void validateAnswerArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen) {
+void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen) {
     if (expectLen != actualLen) {
         printf("❌ Test %c Failed\n", testNum);
     }

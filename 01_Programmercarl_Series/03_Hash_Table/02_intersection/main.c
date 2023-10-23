@@ -107,7 +107,7 @@ void test_1(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateAnswerArray('1', expect, expectSize, ans, returnSize);
+    validateArray('1', expect, expectSize, ans, returnSize);
 
     /* 释放内存 */
     free(ans);
@@ -134,7 +134,7 @@ void test_2(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateAnswerArray('2', expect, expectSize, ans, returnSize);
+    validateArray('2', expect, expectSize, ans, returnSize);
 
     /* 释放内存 */
     free(ans);
@@ -161,7 +161,7 @@ void test_3(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateAnswerArray('3', expect, expectSize, ans, returnSize);
+    validateArray('3', expect, expectSize, ans, returnSize);
 
     /* 释放内存 */
     free(ans);
