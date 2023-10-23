@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 22:49:03
+ * @LastEditTime : 2023-10-23 15:11:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,7 +43,7 @@ int cmp(const void *a, const void *b) {
  * @param {int} **returnColumnSizes     返回数组列大小
  * @return {int} **ans                  返回数组
  */
-int **threeSum(int *nums, int numsSize, int *returnSize, int **returnColumnSizes){
+int **threeSum(int *nums, int numsSize, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;
     if (numsSize < 3) {
         return NULL;

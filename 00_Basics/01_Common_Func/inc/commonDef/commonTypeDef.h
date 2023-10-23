@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonTypeDef.h
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonDef\commonTypeDef.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 12:30:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 12:36:27
+ * @LastEditTime : 2023-10-23 12:25:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
