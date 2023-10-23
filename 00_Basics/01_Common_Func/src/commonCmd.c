@@ -21,7 +21,7 @@
 /**
  * @description: 打印命令行参数
  * 命令行调用程序
- *      .\commandFunc.exe arg1 arg2 arg3
+ *      .\main.exe arg1 arg2 arg3
  *
  * 打印输出
  *      Number of command-line arguments: 4
