@@ -47,7 +47,7 @@ typedef unsigned long long      uint64_t;
 /*                                                                                */
 /**********************************************************************************/
 /* 声明了一个变量或函数,但不确定后面是否会使用它时,可以加上这个宏 */
-#define MAYBE_UNUSED            attribute((unused))
+#define MAYBE_UNUSED                    attribute((unused))
 
 /* 返回错误码 */
 #define RETURN_ERR_IF(condition)        do { \
