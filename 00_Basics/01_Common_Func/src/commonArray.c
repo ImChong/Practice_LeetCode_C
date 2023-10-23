@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 22:08:13
+ * @LastEditTime : 2023-10-23 22:46:49
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -37,18 +37,18 @@ void printArray(int *arr, int arrSize) {
 /**
  * @description: 打印二维数组
  * =================================================================================
- * @param {int} **result                返回数组
- * @param {int} returnSize              返回数组大小
- * @param {int} *returnColumnSizes      返回数组列大小
+ * @param {int} **2DArr                返回数组
+ * @param {int} arrSize              返回数组大小
+ * @param {int} *arrColSizes      返回数组列大小
  * @return {void}
  */
-void print2DArray(int **result, int returnSize, int *returnColumnSizes) {
+void print2DArray(int **arr, int arrSize, int *arrColSizes) {
     printf("Ans: [\n");
-    for (int i = 0; i < returnSize; i++) {
+    for (int i = 0; i < arrSize; i++) {
         printf("  [");
-        for (int j = 0; j < returnColumnSizes[i]; j++) {
-            printf("%d", result[i][j]);
-            if (j < returnColumnSizes[i] - 1) {
+        for (int j = 0; j < arrColSizes[i]; j++) {
+            printf("%d", arr[i][j]);
+            if (j < arrColSizes[i] - 1) {
                 printf(", ");
             }
         }
