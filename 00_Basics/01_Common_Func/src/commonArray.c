@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 22:46:49
+ * @LastEditTime : 2023-10-23 22:47:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -60,15 +60,15 @@ void print2DArray(int **arr, int arrSize, int *arrColSizes) {
 /**
  * @description: 释放二维数组
  * =================================================================================
- * @param {int} ***result               返回数组
- * @param {int} *returnSize             返回数组大小
+ * @param {int} **arr               返回数组
+ * @param {int} arrSize             返回数组大小
  * @return {void}
  */
-void free2DArray(int **result, int returnSize) {
-    for (int i = 0; i < returnSize; i++) {                                  /* 遍历二维数组的每一行 */
-        free(result[i]);                                                        /* free每一行数组占用的空间 */
+void free2DArray(int **arr, int arrSize) {
+    for (int i = 0; i < arrSize; i++) {
+        free(arr[i]);
     }
-    free(result);                                                           /* 最后free二维数组本身 */
+    free(arr);
 }
 
 
