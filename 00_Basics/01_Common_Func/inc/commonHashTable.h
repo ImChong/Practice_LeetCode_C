@@ -36,7 +36,7 @@ struct HashTable {
 /*                                                                                */
 /**********************************************************************************/
 struct HashTable *createHashTable(int size);
-int getHashCode(struct HashTable *table, int key);
+int getHashSlot(struct HashTable *table, int key);
 void insertHashTable(struct HashTable *table, int key);
 int searchHashTable(struct HashTable *table, int key);
 void freeHashTable(struct HashTable *table);
