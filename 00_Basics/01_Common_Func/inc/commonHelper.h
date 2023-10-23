@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 13:42:27
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 12:57:07
+ * @LastEditTime : 2023-10-23 19:11:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,7 +17,7 @@
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void validateAnswer(char testNum, int expect, int actual);
+void validateSingleValue(char testNum, int expect, int actual);
 
 
 #endif  /* __COMMON_HEADER_H */

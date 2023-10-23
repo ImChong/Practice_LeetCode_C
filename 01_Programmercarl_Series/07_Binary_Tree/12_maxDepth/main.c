@@ -172,7 +172,7 @@ struct TreeNode *newNode(int val) {
  * @param {int} actual      实际
  * @return {void}
  */
-void validateAnswer(char testNum, int expect, int actual) {
+void validateSingleValue(char testNum, int expect, int actual) {
     if (expect == actual) {
         printf("✅ Test %c Passed\n", testNum);
     } else {
@@ -205,7 +205,7 @@ void test_1(void) {
     int actual = maxDepth(root);
 
     /* 比较结果 */
-    validateAnswer('1', expect, actual);
+    validateSingleValue('1', expect, actual);
 
     /* 释放内存空间 */
     free(root->right->right);
@@ -232,7 +232,7 @@ void test_2(void) {
     int actual = maxDepth(root);
 
     /* 比较结果 */
-    validateAnswer('2', expect, actual);
+    validateSingleValue('2', expect, actual);
 
     /* 释放内存空间 */
     free(root->right);

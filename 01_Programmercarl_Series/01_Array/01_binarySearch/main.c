@@ -68,7 +68,7 @@ void test_1(void) {
     int expect = 4;
 
     /* 比较结果 */
-    validateAnswer('1', expect, ans);
+    validateSingleValue('1', expect, ans);
 }
 
 /**
@@ -87,7 +87,7 @@ void test_2(void) {
     int expect = -1;
 
     /* 比较结果 */
-    validateAnswer('2', expect, ans);
+    validateSingleValue('2', expect, ans);
 }
 
 /**
@@ -106,7 +106,7 @@ void test_3(void) {
     int expect = 4;
 
     /* 比较结果 */
-    validateAnswer('3', expect, ans);
+    validateSingleValue('3', expect, ans);
 }
 
 /**********************************************************************************/

@@ -49,7 +49,7 @@ void reverseString(char *s, int sSize){
  * @param {int} actual      实际
  * @return {void}
  */
-void validateAnswer(char testNum, int expect, int actual) {
+void validateSingleValue(char testNum, int expect, int actual) {
     if (expect == actual) {
         printf("✅ Test %c Passed\n", testNum);
     } else {
@@ -79,7 +79,7 @@ void test_1(void) {
     char *expect = "olleh";
 
     /* 比较结果 */
-    validateAnswer("1", expect, s);
+    validateSingleValue("1", expect, s);
 }
 
 /**
@@ -99,7 +99,7 @@ void test_2(void) {
     char *expect = "hannaH";
 
     /* 比较结果 */
-    validateAnswer("2", expect, s);
+    validateSingleValue("2", expect, s);
 }
 
 /**
@@ -119,7 +119,7 @@ void test_3(void) {
     char *expect = "1";
 
     /* 比较结果 */
-    validateAnswer("3", expect, s);
+    validateSingleValue("3", expect, s);
 }
 
 /**********************************************************************************/

@@ -90,7 +90,7 @@ void test_1(void) {
     int expect = 8;
 
     /* 比较结果 */
-    validateAnswer('1', expect, intersectNode->val);
+    validateSingleValue('1', expect, intersectNode->val);
 
     /* 释放内存 - A/B链表相互链接，不可 while 循环释放 */
     // freeList(listA);
@@ -126,7 +126,7 @@ void test_2(void) {
     int expect = 2;
 
     /* 比较结果 */
-    validateAnswer('2', expect, intersectNode->val);
+    validateSingleValue('2', expect, intersectNode->val);
 
     /* 释放内存 - A/B链表相互链接，不可 while 循环释放 */
 }

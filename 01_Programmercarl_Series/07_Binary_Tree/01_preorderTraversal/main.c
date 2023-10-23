@@ -112,7 +112,7 @@ void printArray(int *result, int returnSize) {
     printf("\r\n");
 }
 
-void validateAnswer(char testNum, int *expect, int *actual, int returnSize) {
+void validateSingleValue(char testNum, int *expect, int *actual, int returnSize) {
     for (int i = 0; i < returnSize; i++) {
         if (expect[i] != actual[i]) {
             printf("❌ Test %c Failed\n", testNum);

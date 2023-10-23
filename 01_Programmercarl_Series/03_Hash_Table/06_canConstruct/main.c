@@ -78,7 +78,7 @@ void test_1(void) {
     bool expect = false;
 
     /* 比较结果 */
-    validateAnswer('1', expect, actual);
+    validateSingleValue('1', expect, actual);
 }
 
 /**
@@ -98,7 +98,7 @@ void test_2(void) {
     bool expect = false;
 
     /* 比较结果 */
-    validateAnswer('2', expect, actual);
+    validateSingleValue('2', expect, actual);
 }
 
 /**
@@ -118,7 +118,7 @@ void test_3(void) {
     bool expect = true;
 
     /* 比较结果 */
-    validateAnswer('3', expect, actual);
+    validateSingleValue('3', expect, actual);
 }
 
 /**********************************************************************************/

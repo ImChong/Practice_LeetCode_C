@@ -103,7 +103,7 @@ void test_1(void) {
     int expect = 2;
 
     /* 比较结果 */
-    validateAnswer('1', expect, actual);
+    validateSingleValue('1', expect, actual);
 }
 
 /**
@@ -135,7 +135,7 @@ void test_2(void) {
     int expect = 8;
 
     /* 比较结果 */
-    validateAnswer('2', expect, actual);
+    validateSingleValue('2', expect, actual);
 }
 
 /**
@@ -157,7 +157,7 @@ void test_3(void) {
     int expect = 9;
 
     /* 比较结果 */
-    validateAnswer('3', expect, actual);
+    validateSingleValue('3', expect, actual);
 }
 
 /**
@@ -179,7 +179,7 @@ void test_4(void) {
     int expect = 1;
 
     /* 比较结果 */
-    validateAnswer('4', expect, actual);
+    validateSingleValue('4', expect, actual);
 }
 
 /**********************************************************************************/

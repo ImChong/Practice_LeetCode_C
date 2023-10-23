@@ -393,7 +393,7 @@ void print1DArray(int *array, int size) {
 /*                                 HELPER FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-void validateAnswer(char testNum, int expect, int actual) {
+void validateSingleValue(char testNum, int expect, int actual) {
     if (expect == actual) {
         printf("✅ Test %c Passed\n", testNum);
     } else {

@@ -48,7 +48,7 @@ void reverseString(char *s, int sSize) {
  * @param {int} actual      实际
  * @return {void}
  */
-void validateAnswer(char testNum, int expect, int actual) {
+void validateSingleValue(char testNum, int expect, int actual) {
     if (expect == actual) {
         printf("✅ Test %c Passed\n", testNum);
     } else {

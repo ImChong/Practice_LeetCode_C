@@ -68,7 +68,7 @@ void test_1(void) {
     int expectLen = 2;
 
     /* 比较结果 */
-    validateAnswer('1', expectLen, resultLen);
+    validateSingleValue('1', expectLen, resultLen);
 }
 
 /**
@@ -87,7 +87,7 @@ void test_2(void) {
     int expectLen = 0;
 
     /* 比较结果 */
-    validateAnswer('2', expectLen, resultLen);
+    validateSingleValue('2', expectLen, resultLen);
 }
 
 /**
@@ -106,7 +106,7 @@ void test_3(void) {
     int expectLen = 3;
 
     /* 比较结果 */
-    validateAnswer('3', expectLen, resultLen);
+    validateSingleValue('3', expectLen, resultLen);
 }
 
 /**********************************************************************************/
