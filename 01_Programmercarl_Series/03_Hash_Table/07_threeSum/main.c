@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 18:45:15
+ * @LastEditTime : 2023-10-23 18:50:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -162,17 +162,23 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    int nums[] = {0, 0, 0};
+    int numsSize = ARR_SIZE(nums);
+    int actualRtnSize = 0;
+    int *actualRtnColSize;
+    int **actual2DArr = threeSum(nums, numsSize, &actualRtnSize, &actualRtnColSize);
 
     /* 预期结果 */
+    int expectRtnSize = 1;
+    int expectRtnColSize[] = {3};
+    int *expect2DArr[] = {(int[]){0, 0, 0}};
 
     /* 比较结果 */
+    validateAnswer2DArray('3', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
 
-    // Test Case 3
-    int nums3[] = {1, 2, -2, -1};
-    int numsSize3 = 4;
-    int returnSize3 = 0;
-    int *expected3[] = {};
-    int expectedSizes3[] = {0};
+    /* 释放内存 */
+    free(actualRtnColSize);
+    free2DArray(actual2DArr, actualRtnSize);
 }
 
 /**********************************************************************************/
@@ -190,5 +196,6 @@ void test_3(void) {
 int main(int argc, const char *argv[]) {
     test_1();
     test_2();
+    test_3();
     return 0;
 }
