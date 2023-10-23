@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 15:20:07
+ * @LastEditTime : 2023-10-23 16:50:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -106,18 +106,19 @@ int **threeSum(int *arr, int arrSize, int *returnSize, int **returnColumnSizes) 
  */
 void test_1(void) {
     /* 实际结果 */
-    int nums = {-1, 0, 1, 2, -1, -4};
+    int nums[] = {-1, 0, 1, 2, -1, -4};
+    int numsSize = ARR_SIZE(nums);
+    int actualRtnSize = 0;
+    int *actualRtnColSize;
+    int **actual2DArr = threeSum(nums, numsSize, &actualRtnSize, &actualRtnColSize);
 
     /* 预期结果 */
+    int expectRtnSize = 2;
+    int expectRtnColSize[] = {3, 3};
+    int *expect2DArr[] = {(int[]){-1, -1, 2}, (int[]){-1, 0, 1}};
 
     /* 比较结果 */
-
-    // Test Case 1
-    int nums1[] = {-1, 0, 1, 2, -1, -4};
-    int numsSize1 = 6;
-    int returnSize1 = 0;
-    int *expected1[] = {(int[]){-1, -1, 2}, (int[]){-1, 0, 1}};
-    int expectedSizes1[] = {3, 3};
+    validateAnswer2DArray('1', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
 }
 
 /**
@@ -163,7 +164,6 @@ void test_3(void) {
     int returnSize3 = 0;
     int *expected3[] = {};
     int expectedSizes3[] = {0};
-    return 0;
 }
 
 /**********************************************************************************/
@@ -179,9 +179,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
+    test_1();
 
-
-
-
-
+    return 0;
 }
