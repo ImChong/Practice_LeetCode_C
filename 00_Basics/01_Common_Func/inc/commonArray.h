@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 10:41:47
+ * @LastEditTime : 2023-10-23 10:46:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -36,5 +36,6 @@ void free2DArray(int **result, int returnSize);
 void validateAnswerArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen);
 void validateAnswer2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
                                 int **actual2DArr, int actualRtnSize, int *actualRtnColSize);
+
 
 #endif  /* __COMMON_ARRAY_H */
