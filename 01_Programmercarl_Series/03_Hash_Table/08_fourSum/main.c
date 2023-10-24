@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 07:53:52
+ * @LastEditTime : 2023-10-24 08:10:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -113,9 +113,10 @@ void runTest(struct TestStruct *test) {
  */
 void test_1(void) {
     struct TestStruct test;
+    int inputArr[] = {1, 0, -1, 0, -2, 2};
     test.testNum = '1';
-    test.input.arr = (int[]){1, 0, -1, 0, -2, 2};
-    test.input.arrSize = 6;
+    test.input.arr = inputArr;
+    test.input.arrSize = ARR_SIZE(inputArr);
     test.input.target = 0;
     test.output.rtnSize = 3;
     test.output.rtnColSize = (int[]){4, 4, 4};
@@ -132,9 +133,10 @@ void test_1(void) {
  */
 void test_2(void) {
     struct TestStruct test;
+    int inputArr[] = {2, 2, 2, 2, 2};
     test.testNum = '2';
-    test.input.arr = (int[]){2, 2, 2, 2, 2};
-    test.input.arrSize = 6;
+    test.input.arr = inputArr;
+    test.input.arrSize = ARR_SIZE(inputArr);
     test.input.target = 8;
     test.output.rtnSize = 1;
     test.output.rtnColSize = (int[]){4};
@@ -151,9 +153,10 @@ void test_2(void) {
  */
 void test_3(void) {
     struct TestStruct test;
+    int inputArr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     test.testNum = '3';
-    test.input.arr = (int[]){1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    test.input.arrSize = 10;
+    test.input.arr = inputArr;
+    test.input.arrSize = ARR_SIZE(inputArr);
     test.input.target = 20;
     test.output.rtnSize = 9;
     test.output.rtnColSize = (int[]){4, 4, 4, 4, 4, 4, 4, 4, 4};
