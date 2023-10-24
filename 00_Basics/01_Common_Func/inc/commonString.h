@@ -17,15 +17,15 @@
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-void swapChar(char *a, char *b);
-void reverse(char* leftIndex, char* rightIndex);
+void swapChar(char *a, char *b);                        /* 交换字符 */
+void reverse(char* leftIndex, char* rightIndex);        /* 反转字符串 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void validateString(char testNum, char *expect, char *actual);
+void validateString(char testNum, char *expect, char *actual);      /* 验证字符串 */
 
 
 #endif  /* __COMMON_STRING_H */
