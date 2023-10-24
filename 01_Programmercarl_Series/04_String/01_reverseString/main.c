@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 10:21:48
+ * @LastEditTime : 2023-10-24 13:23:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -42,9 +42,14 @@ void swapChar(char *a, char *b) {
  * @param {int} sSize
  * @return {void}
  */
-void reverseString(char *s, int sSize){
-
-    return;
+void reverseString(char *s, int sSize) {
+    int left = 0;
+    int right = sSize - 1;
+    while (left < right) {
+        swapChar(s + left, s + right);
+        left++;
+        right--;
+    }
 }
 
 /**********************************************************************************/
@@ -54,8 +59,8 @@ void reverseString(char *s, int sSize){
 /**********************************************************************************/
 /**
  * @description: 测试 1
- * 输入：s = "hello"
- * 输出："olleh"
+ * 输入：s = ["h","e","l","l","o"]
+ * 输出：["o","l","l","e","h"]
  * =================================================================================
  * @return {void}
  */
@@ -74,8 +79,8 @@ void test_1(void) {
 
 /**
  * @description: 测试 2
- * 输入：s = "Hannah"
- * 输出："hannaH"
+ * 输入: s = ["H","a","n","n","a","h"]
+ * 输出：["h","a","n","n","a","H"]
  * =================================================================================
  * @return {void}
  */
@@ -94,8 +99,8 @@ void test_2(void) {
 
 /**
  * @description: 测试 3
- * 输入：s = "1"
- * 输出："1"
+ * 输入：s = ["1"]
+ * 输出：["1"]
  * =================================================================================
  * @return {void}
  */
