@@ -19,8 +19,8 @@
 /**********************************************************************************/
 /* 节点定义 */
 struct ListNode {
-    int val;
-    struct ListNode *next;
+    int val;                    /* 节点数值 */
+    struct ListNode *next;      /* 下一节点地址 */
 };
 
 /**********************************************************************************/
@@ -28,11 +28,11 @@ struct ListNode {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-struct ListNode *arrayToLinkedList(int *array, int size);
-struct ListNode *appendToList(struct ListNode *head, int val);
-struct ListNode *removeFromList(struct ListNode *head, int val);
-void printList(struct ListNode *head);
-void freeList(struct ListNode *head);
+struct ListNode *arrayToLinkedList(int *array, int size);       /* 将数组转换为链表 */
+struct ListNode *appendToList(struct ListNode *head, int val);      /* 在链表尾部添加一个节点 */
+struct ListNode *removeFromList(struct ListNode *head, int val);        /* 从链表中删除一个节点 */
+void printList(struct ListNode *head);      /* 打印链表 */
+void freeList(struct ListNode *head);       /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */
