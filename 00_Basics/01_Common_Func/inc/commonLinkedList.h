@@ -39,7 +39,7 @@ void freeList(struct ListNode *head);       /* 释放链表 */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNode *ansList);
+void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNode *ansList);       /* 验证链表 */
 
 
 #endif  /* __COMMON_LINKED_LIST_H */
