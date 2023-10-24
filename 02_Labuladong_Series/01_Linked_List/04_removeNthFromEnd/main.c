@@ -37,7 +37,7 @@ struct ListNode *createList(int *array, int size) {
 }
 
 /* 打印链表 */
-void printList(struct ListNode *listPtr) {
+void printLinkedList(struct ListNode *listPtr) {
     while (listPtr != NULL) {
         printf("%d ", listPtr->val);
         listPtr = listPtr->next;

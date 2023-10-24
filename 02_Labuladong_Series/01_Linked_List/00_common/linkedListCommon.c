@@ -17,7 +17,7 @@ struct ListNode *createList(int *array, int size) {
         struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));
         new_node->val = array[i];
         new_node->next = NULL;
-        
+
         /* 如果链表为空，则将新结点设置为头结点 */
         if (head == NULL) {
             head = new_node;
@@ -31,7 +31,7 @@ struct ListNode *createList(int *array, int size) {
 }
 
 /* 打印链表 */
-void printList(struct ListNode *listPtr) {
+void printLinkedList(struct ListNode *listPtr) {
     while (listPtr != NULL) {
         printf("%d ", listPtr->val);
         listPtr = listPtr->next;

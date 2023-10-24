@@ -28,10 +28,10 @@ void test_1(void) {
     struct ListNode *ansList = arrayToLinkedList(arr, arrSize);     /* 数组转链表 */
     printList(ansList);                                             /* 打印链表 */
 
-    ansList = appendToList(ansList, 6);                             /* 添加元素至链表末端 */
+    ansList = appendToLinkedList(ansList, 6);                             /* 添加元素至链表末端 */
     printList(ansList);                                             /* 打印链表 */
 
-    ansList = removeFromList(ansList, 2);                           /* 添加元素至链表末端 */
+    ansList = removeFromLinkedList(ansList, 2);                           /* 添加元素至链表末端 */
     printList(ansList);                                             /* 打印链表 */
 }
 

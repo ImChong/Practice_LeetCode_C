@@ -54,7 +54,7 @@ struct ListNode *arrayToLinkedList(int *array, int size) {
  * @param {int} val                     元素值
  * @return {struct ListNode} *head      头节点指针
  */
-struct ListNode *appendToList(struct ListNode *head, int val) {
+struct ListNode *appendToLinkedList(struct ListNode *head, int val) {
     struct ListNode *newNode = (struct ListNode *)malloc(sizeof(struct ListNode));
     newNode->val = val;
     newNode->next = NULL;
@@ -77,7 +77,7 @@ struct ListNode *appendToList(struct ListNode *head, int val) {
  * @param {int} val                     目标值
  * @return {struct ListNode} *head      返回链表虚拟头节点
  */
-struct ListNode *removeFromList(struct ListNode *head, int val) {
+struct ListNode *removeFromLinkedList(struct ListNode *head, int val) {
     struct ListNode dummy;                          /* 创建虚拟头节点 */
     dummy.next = head;                              /* 将传入链表接在虚拟头节点后面 */
 
@@ -100,7 +100,7 @@ struct ListNode *removeFromList(struct ListNode *head, int val) {
  * @param {ListNode} *head          头节点指针
  * @return {void}
  */
-void printList(struct ListNode *head) {
+void printLinkedList(struct ListNode *head) {
     printf("Linked List: ");
     while (head != NULL) {
         printf("%d ", head->val);
@@ -115,7 +115,7 @@ void printList(struct ListNode *head) {
  * @param {ListNode} *head          头节点指针
  * @return {void}
  */
-void freeList(struct ListNode *head) {
+void freeLinkedList(struct ListNode *head) {
     struct ListNode *tmp = NULL;
     while (head != NULL) {
         tmp = head;
