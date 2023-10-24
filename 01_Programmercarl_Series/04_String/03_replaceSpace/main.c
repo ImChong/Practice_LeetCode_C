@@ -45,7 +45,7 @@ char* pathEncryption(char* path) {
  */
 void test_1(void) {
     /* 实际结果 */
-    char *s = "a.aef.qerf.bb";
+    char s[] = "a.aef.qerf.bb";
     char *actual = replaceSpace(s);
 
     /* 预期结果 */
