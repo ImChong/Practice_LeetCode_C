@@ -24,12 +24,11 @@
 /**
  * @description: 替换空格
  * =================================================================================
- * @param {char} *s
- * @return {char} *ans
+ * @param {char} *path      字符串地址
+ * @return {char} *ans      修改后的字符串
  */
-char *replaceSpace(char *s) {
+char* pathEncryption(char* path) {
 
-    return 0;
 }
 
 /**********************************************************************************/
