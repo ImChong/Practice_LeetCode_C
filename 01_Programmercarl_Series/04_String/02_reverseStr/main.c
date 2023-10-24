@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 01:00:40
+ * @LastEditTime : 2023-10-24 18:18:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -23,7 +23,7 @@
 /**********************************************************************************/
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 反转字符串 II
  * =================================================================================
  * @param {char} *s
  * @param {int} k
@@ -48,7 +48,7 @@ char *reverseStr(char *s, int k){
  */
 void test_1(void) {
     /* 实际结果 */
-    char *s = "abcdefg";
+    char s[] = "abcdefg";
     int k = 2;
     char *actual = reverseStr(s, k);
 
@@ -68,7 +68,7 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
-    char *s = "abcd";
+    char s[] = "abcd";
     int k = 2;
     char *actual = reverseStr(s, k);
 
@@ -88,7 +88,7 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
-    char *s = "abcdefg";
+    char s[] = "abcdefg";
     int k = 4;
     char *actual = reverseStr(s, k);
 
