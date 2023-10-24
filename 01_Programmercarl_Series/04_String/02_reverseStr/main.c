@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 18:18:10
+ * @LastEditTime : 2023-10-25 00:28:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,9 +25,9 @@
 /**
  * @description: 反转字符串 II
  * =================================================================================
- * @param {char} *s
- * @param {int} k
- * @return {char} *ans
+ * @param {char} *s         字符串地址
+ * @param {int} k           反转长度
+ * @return {char} *ans      反转后的字符串
  */
 char *reverseStr(char *s, int k){
 
