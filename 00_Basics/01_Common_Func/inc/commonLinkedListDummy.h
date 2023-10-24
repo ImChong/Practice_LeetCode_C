@@ -32,28 +32,28 @@ typedef struct {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-MyLinkedList *myLinkedListCreate(void);
-int myLinkedListGet(MyLinkedList *dummyHead, int index);
-void myLinkedListAddAtHead(MyLinkedList *dummyHead, int val);
-void myLinkedListAddAtTail(MyLinkedList *dummyHead, int val);
-void myLinkedListAddAtIndex(MyLinkedList *dummyHead, int index, int val);
-void myLinkedListDeleteAtIndex(MyLinkedList *dummyHead, int index);
-void myLinkedListFree(MyLinkedList *dummyHead);
+MyLinkedList *myLinkedListCreate(void);     /* 创建链表 */
+int myLinkedListGet(MyLinkedList *dummyHead, int index);        /* 获取链表中第index个节点的值 */
+void myLinkedListAddAtHead(MyLinkedList *dummyHead, int val);       /* 在链表头部添加一个节点 */
+void myLinkedListAddAtTail(MyLinkedList *dummyHead, int val);       /* 在链表尾部添加一个节点 */
+void myLinkedListAddAtIndex(MyLinkedList *dummyHead, int index, int val);       /* 在链表中第index个节点之前添加一个值为val的节点 */
+void myLinkedListDeleteAtIndex(MyLinkedList *dummyHead, int index);     /* 删除链表中第index个节点 */
+void myLinkedListFree(MyLinkedList *dummyHead);     /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void arrayToMyLinkedList(MyLinkedList *dummyHead, int *nums, int numsSize);
-void printLinkedList(MyLinkedList *dummyHead);
+void arrayToMyLinkedList(MyLinkedList *dummyHead, int *nums, int numsSize);     /* 将数组转换为链表 */
+void printLinkedList(MyLinkedList *dummyHead);      /* 打印链表 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void validateMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual);
+void validateMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual);        /* 验证链表 */
 
 
 #endif  /* __COMMON_LINKED_LIST_DUMMY_H */
