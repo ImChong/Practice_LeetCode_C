@@ -38,7 +38,7 @@ void swapChar(char *a, char *b) {
  * @param {char*} rightIndex    右索引
  * @return {void}
  */
-void reverse(char* leftIndex, char* rightIndex) {
+void reverseString(char* leftIndex, char* rightIndex) {
     while (leftIndex < rightIndex) {            /* 左索引小于右索引 */
         swapChar(leftIndex++, rightIndex--);        /* 交换左右索引的字符 */
     }

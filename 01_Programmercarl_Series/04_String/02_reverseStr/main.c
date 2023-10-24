@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-25 00:31:49
+ * @LastEditTime : 2023-10-25 00:44:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,7 @@
  */
 #include <stdio.h>
 #include <string.h>
+#include "commonHelper.h"
 #include "commonString.h"
 
 /**********************************************************************************/
@@ -30,7 +31,18 @@
  * @return {char} *ans      反转后的字符串
  */
 char *reverseStr(char *s, int k){
-
+    int sLen = strlen(s);
+    for (int i = 0; i < sLen; i += 2 * k) {
+        int left = i;
+        int right = (i + k - 1 < sLen) ? i + k - 1 : sLen - 1;
+        while (left < right) {
+            char tmp = s[left];
+            s[left] = s[right];
+            s[right] = tmp;
+            left++;
+            right--;
+        }
+    }
     return NULL;
 }
 
