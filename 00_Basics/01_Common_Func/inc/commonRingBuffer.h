@@ -31,10 +31,10 @@ typedef struct {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte);
-int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte);
-void RingBuffer_Print(RingBufferSt *pRing);
-int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen);
+int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte);      /* 向环形buffer中添加一个字节 */
+int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte);        /* 从环形buffer中取出一个字节 */
+void RingBuffer_Print(RingBufferSt *pRing);     /* 打印环形buffer中的数据 */
+int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen);      /* 初始化环形buffer */
 
 /**********************************************************************************/
 /*                                                                                */
