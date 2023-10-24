@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 16:07:11
+ * @LastEditTime : 2023-10-25 00:27:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -26,21 +26,21 @@
 /**
  * @description: 交换字符
  * =================================================================================
- * @param {char} *a
- * @param {char} *b
+ * @param {char} *a     a字符地址
+ * @param {char} *b     b字符地址
  * @return {void}
  */
 void swapChar(char *a, char *b) {
-    char tmp = *a;
-    *a = *b;
-    *b = tmp;
+    char tmp = *a;      /* 保存a字符 */
+    *a = *b;            /* 将b字符赋值给a字符 */
+    *b = tmp;           /* 将保存的a字符赋值给b字符 */
 }
 
 /**
  * @description: 反转字符串
  * =================================================================================
- * @param {char} *s
- * @param {int} sSize
+ * @param {char} *s         字符串地址
+ * @param {int} sSize       字符串长度
  * @return {void}
  */
 void reverseString(char *s, int sSize) {
