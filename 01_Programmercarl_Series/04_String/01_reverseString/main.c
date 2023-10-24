@@ -71,7 +71,7 @@ void test_1(void) {
     char s[] = "hello";                                 /* strlen: 5, ARR_SIZE: 6 */
     // char s[6] = {'h', 'e', 'l', 'l', 'o', '\0'};        /* strlen: 5, ARR_SIZE: 6 */
     int sSize = strlen(s);
-    printf("strlen: %d, ARR_SIZE: %d\n", strlen(s), ARR_SIZE(s));
+    // printf("strlen: %d, ARR_SIZE: %d\n", strlen(s), ARR_SIZE(s));
     reverseString(s, sSize);
 
     /* 预期结果 */
@@ -90,7 +90,7 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
-    char *s = "Hannah";
+    char s[] = "Hannah";
     int sSize = strlen(s);
     reverseString(s, sSize);
 
@@ -110,7 +110,7 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
-    char *s = "1";
+    char s[] = "1";
     int sSize = strlen(s);
     reverseString(s, sSize);
 
@@ -135,7 +135,7 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
-    // test_2();
-    // test_3();
+    test_2();
+    test_3();
     return 0;
 }
