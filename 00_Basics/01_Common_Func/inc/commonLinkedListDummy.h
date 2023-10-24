@@ -32,7 +32,7 @@ typedef struct {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-MyLinkedList *myLinkedListCreate(void);     /* 创建链表 */
+MyLinkedList *myLinkedListCreate(void);     /* 创建使用虚拟头节点的链表 */
 int myLinkedListGet(MyLinkedList *dummyHead, int index);        /* 获取链表中第index个节点的值 */
 void myLinkedListAddAtHead(MyLinkedList *dummyHead, int val);       /* 在链表头部添加一个节点 */
 void myLinkedListAddAtTail(MyLinkedList *dummyHead, int val);       /* 在链表尾部添加一个节点 */
