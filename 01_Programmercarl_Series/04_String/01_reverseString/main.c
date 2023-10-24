@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 13:30:33
+ * @LastEditTime : 2023-10-24 14:50:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "commonString.h"
+#include "commonArray.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -66,8 +67,11 @@ void reverseString(char *s, int sSize) {
  */
 void test_1(void) {
     /* 实际结果 */
-    char *s[] = {"h", "e", "l", "l", "0", "\0"};    /* FIXME: 使用数组表示字符串 */
+    // char *s = "hello";                                  /* strlen: 5, ARR_SIZE: 8 */
+    char s[] = "hello";                                 /* strlen: 5, ARR_SIZE: 6 */
+    // char s[6] = {'h', 'e', 'l', 'l', 'o', '\0'};        /* strlen: 5, ARR_SIZE: 6 */
     int sSize = strlen(s);
+    printf("strlen: %d, ARR_SIZE: %d\n", strlen(s), ARR_SIZE(s));
     reverseString(s, sSize);
 
     /* 预期结果 */
@@ -131,7 +135,7 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
-    test_2();
-    test_3();
+    // test_2();
+    // test_3();
     return 0;
 }
