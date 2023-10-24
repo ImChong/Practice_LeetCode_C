@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 13:23:33
+ * @LastEditTime : 2023-10-24 13:30:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -66,7 +66,7 @@ void reverseString(char *s, int sSize) {
  */
 void test_1(void) {
     /* 实际结果 */
-    char *s = "hello";
+    char *s[] = {"h", "e", "l", "l", "0", "\0"};    /* FIXME: 使用数组表示字符串 */
     int sSize = strlen(s);
     reverseString(s, sSize);
 
