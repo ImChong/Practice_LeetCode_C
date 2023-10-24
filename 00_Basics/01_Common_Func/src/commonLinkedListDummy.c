@@ -192,7 +192,7 @@ void arrayToMyLinkedList(MyLinkedList *list, int *nums, int numsSize) {
  * @param {MyLinkedList} *list      虚拟头节点
  * @return {void}
  */
-void printLinkedList(MyLinkedList *list) {
+void printMyLinkedList(MyLinkedList *list) {
     printf("linked list (size: %d): ", list->size);     /* 打印链表长度 */
     for (int i = 0; i < list->size; i++) {              /* 循环打印链表节点数值 */
         printf("%d ", myLinkedListGet(list, i));            /* 打印链表节点数值 */

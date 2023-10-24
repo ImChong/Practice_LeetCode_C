@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 19:09:53
+ * @LastEditTime : 2023-10-25 00:50:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -46,7 +46,7 @@ void myLinkedListFree(MyLinkedList *dummyHead);     /* 释放链表 */
 /*                                                                                */
 /**********************************************************************************/
 void arrayToMyLinkedList(MyLinkedList *dummyHead, int *nums, int numsSize);     /* 将数组转换为链表 */
-void printLinkedList(MyLinkedList *dummyHead);      /* 打印链表 */
+void printMyLinkedList(MyLinkedList *dummyHead);      /* 打印链表 */
 
 /**********************************************************************************/
 /*                                                                                */
