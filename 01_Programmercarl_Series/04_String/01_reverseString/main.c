@@ -67,7 +67,7 @@ void reverseString(char *s, int sSize) {
  */
 void test_1(void) {
     /* 实际结果 */
-    // char *s = "hello";                                  /* strlen: 5, ARR_SIZE: 8 */
+    // char *s = "hello";                                  /* strlen: 5, ARR_SIZE: 8, 字符串不可修改 */
     char s[] = "hello";                                 /* strlen: 5, ARR_SIZE: 6 */
     // char s[6] = {'h', 'e', 'l', 'l', 'o', '\0'};        /* strlen: 5, ARR_SIZE: 6 */
     int sSize = strlen(s);
