@@ -113,8 +113,8 @@ void runTest(struct TestStruct *test) {
  */
 void test_1(void) {
     struct TestStruct test;
-    int inputArr[] = {1, 0, -1, 0, -2, 2};
     test.testNum = '1';
+    int inputArr[] = {1, 0, -1, 0, -2, 2};
     test.input.arr = inputArr;
     test.input.arrSize = ARR_SIZE(inputArr);
     test.input.target = 0;
@@ -133,8 +133,8 @@ void test_1(void) {
  */
 void test_2(void) {
     struct TestStruct test;
-    int inputArr[] = {2, 2, 2, 2, 2};
     test.testNum = '2';
+    int inputArr[] = {2, 2, 2, 2, 2};
     test.input.arr = inputArr;
     test.input.arrSize = ARR_SIZE(inputArr);
     test.input.target = 8;
@@ -153,8 +153,8 @@ void test_2(void) {
  */
 void test_3(void) {
     struct TestStruct test;
-    int inputArr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     test.testNum = '3';
+    int inputArr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     test.input.arr = inputArr;
     test.input.arrSize = ARR_SIZE(inputArr);
     test.input.target = 20;
