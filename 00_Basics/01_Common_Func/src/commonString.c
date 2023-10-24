@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 01:00:27
+ * @LastEditTime : 2023-10-25 00:34:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,6 +29,19 @@ void swapChar(char *a, char *b) {
     char tmp = *a;      /* 保存a字符 */
     *a = *b;            /* 将b字符赋值给a字符 */
     *b = tmp;           /* 将保存的a字符赋值给b字符 */
+}
+
+/**
+ * @description: 反转字符串
+ * =================================================================================
+ * @param {char*} leftIndex     左索引
+ * @param {char*} rightIndex    右索引
+ * @return {void}
+ */
+void reverse(char* leftIndex, char* rightIndex) {
+    while (leftIndex < rightIndex) {            /* 左索引小于右索引 */
+        swapChar(leftIndex++, rightIndex--);        /* 交换左右索引的字符 */
+    }
 }
 
 /**********************************************************************************/
