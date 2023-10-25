@@ -19,6 +19,8 @@
 /**********************************************************************************/
 void swapChar(char *a, char *b);        /* 交换字符 */
 void reverseString(char* leftIndex, char* rightIndex);        /* 反转字符串 */
+void printString(char *s);              /* 打印字符串 */
+void freeString(char *s);               /* 释放字符串 */
 
 /**********************************************************************************/
 /*                                                                                */

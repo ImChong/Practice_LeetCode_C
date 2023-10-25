@@ -3,13 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-25 00:34:18
+ * @LastEditTime : 2023-10-26 01:30:49
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用字符串源文件
  */
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "commonString.h"
 
@@ -41,6 +42,29 @@ void swapChar(char *a, char *b) {
 void reverseString(char* leftIndex, char* rightIndex) {
     while (leftIndex < rightIndex) {            /* 左索引小于右索引 */
         swapChar(leftIndex++, rightIndex--);        /* 交换左右索引的字符 */
+    }
+}
+
+/**
+ * @description: 打印字符串
+ * =================================================================================
+ * @param {char} *s     字符串地址
+ * @return {void}
+ */
+void printString(char *s) {
+    printf("Str: %s\n", s);
+}
+
+/**
+ * @description: 释放字符串
+ * =================================================================================
+ * @param {char} *s     字符串地址
+ * @return {void}
+ */
+void freeString(char *s) {
+    if (s != NULL) {        /* 字符串不为空 */
+        free(s);                /* 释放字符串 */
+        s = NULL;               /* 字符串指针置空 */
     }
 }
 
