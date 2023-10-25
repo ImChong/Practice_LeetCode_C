@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 01:06:43
+ * @LastEditTime : 2023-10-26 01:48:16
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,11 +22,11 @@
 /**********************************************************************************/
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 动态口令
  * =================================================================================
- * @param {char} *password
- * @param {int} target
- * @return {char} *ans
+ * @param {char} *password      字符串地址
+ * @param {int} target          目标位置
+ * @return {char} *ans          修改后的字符串
  */
 char *dynamicPassword(char *password, int target) {
 
@@ -39,6 +39,8 @@ char *dynamicPassword(char *password, int target) {
 /**********************************************************************************/
 /**
  * @description: 测试 1
+ * 输入: password = "s3cur1tyC0d3", target = 4
+ * 输出: "r1tyC0d3s3cu"
  * =================================================================================
  * @return {void}
  */
@@ -53,6 +55,8 @@ void test_1(void) {
 
 /**
  * @description: 测试 2
+ * 输入: password = "lrloseumgh", target = 6
+ * 输出: "umghlrlose"
  * =================================================================================
  * @return {void}
  */
@@ -67,6 +71,8 @@ void test_2(void) {
 
 /**
  * @description: 测试 3
+ * 输入：password = "leetcode", target = 4
+ * 输出："codeleet"
  * =================================================================================
  * @return {void}
  */
