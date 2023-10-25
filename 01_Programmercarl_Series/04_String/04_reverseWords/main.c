@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-26 01:44:04
+ * @LastEditTime : 2023-10-26 01:44:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -72,11 +72,17 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    char s[] = "  hello world  ";
+    char *actual = reverseWords(s);
 
     /* 预期结果 */
+    char *expect = "world hello";
 
     /* 比较结果 */
+    validateString('2', expect, actual);
 
+    /* 释放内存 */
+    freeString(actual);
 }
 
 /**
@@ -109,5 +115,6 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
+    test_2();
     return 0;
 }
