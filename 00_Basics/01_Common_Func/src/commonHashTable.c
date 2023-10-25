@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:39:17
+ * @LastEditTime : 2023-10-25 22:16:49
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -52,7 +52,7 @@ int getHashSlot(struct HashTable *table, int key) {
  * @param {int} key                 键
  * @return {void}
  */
-void insertHashTable(struct HashTable *table, int key) {
+void insertHashNode(struct HashTable *table, int key) {
     int slot = getHashSlot(table, key);                                                    /* 计算哈希码 */
     struct HashNode *currentNode = table->table[slot];                                  /* 获取哈希表的哈希节点 */
     while (currentNode) {                                                               /* 遍历哈希节点 */
