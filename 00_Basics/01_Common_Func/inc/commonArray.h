@@ -24,19 +24,19 @@
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-void printArray(int *arr, int arrSize);
-void print2DArray(int **result, int returnSize, int *returnColumnSizes);
-void freeArray(int *result);
-void free2DArray(int **result, int returnSize);
+void printArray(int *arr, int arrSize);     /* 打印数组 */
+void print2DArray(int **result, int returnSize, int *returnColumnSizes);        /* 打印二维数组 */
+void freeArray(int *result);        /* 释放数组 */
+void free2DArray(int **result, int returnSize);     /* 释放二维数组 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen);
+void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen);     /* 验证数组 */
 void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
-                                int **actual2DArr, int actualRtnSize, int *actualRtnColSize);
+                                int **actual2DArr, int actualRtnSize, int *actualRtnColSize);       /* 验证二维数组 */
 
 
 #endif  /* __COMMON_ARRAY_H */

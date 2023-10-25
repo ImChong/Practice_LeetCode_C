@@ -17,6 +17,6 @@
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-void printCommandInfo(int argc, char *argv[]);
+void printCommandInfo(int argc, char *argv[]);      /* 打印命令行信息 */
 
 #endif  /* __COMMON_CMD_H */
