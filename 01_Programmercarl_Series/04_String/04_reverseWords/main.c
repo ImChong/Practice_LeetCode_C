@@ -94,11 +94,17 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    char s[] = "a good   example";
+    char *actual = reverseWords(s);
 
     /* 预期结果 */
+    char *expect = "example good a";
 
     /* 比较结果 */
+    validateString('3', expect, actual);
 
+    /* 释放内存 */
+    freeString(actual);
 }
 
 /**********************************************************************************/
@@ -116,5 +122,6 @@ void test_3(void) {
 int main(int argc, const char *argv[]) {
     test_1();
     test_2();
+    test_3();
     return 0;
 }
