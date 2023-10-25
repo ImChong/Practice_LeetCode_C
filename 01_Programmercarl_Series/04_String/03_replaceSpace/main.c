@@ -27,7 +27,7 @@
  * @param {char} *path      字符串地址
  * @return {char} *ans      修改后的字符串
  */
-char* pathEncryption(char* path) {
+char *pathEncryption(char *path) {
 
 }
 
