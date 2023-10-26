@@ -13,6 +13,7 @@
         "*.excalidraw": "json",
         "*.excalidrawlib": "json",
         "commonstring.h": "c",
-        "mystack_double_queue.h": "c"
+        "mystack_double_queue.h": "c",
+        "commonstack.h": "c"
     }
 }

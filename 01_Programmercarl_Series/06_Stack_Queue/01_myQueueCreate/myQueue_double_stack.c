@@ -1,20 +1,20 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\06_Stack_Queue\01_myQueueCreate\main_double_stack.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\06_Stack_Queue\01_myQueueCreate\myQueue_double_stack.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:06:48
+ * @LastEditTime : 2023-10-27 01:11:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 232. 用栈实现队列：https://leetcode.cn/problems/implement-queue-using-stacks/
- * https://programmercarl.com/0232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97.html
- * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97.md
+ * @Description  : 用两个栈实现队列：入队栈 和 出队栈
+ * 每次读取数据的时候将入队栈元素全部压入出队栈，并读取出队栈的栈顶元素
  */
 #include <stdio.h>
-#include <stdbool.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "commonStack.h"
+#include "myQueue_double_stack.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -23,16 +23,6 @@
 /***                                                                            ***/
 /**********************************************************************************/
 /**********************************************************************************/
-/* 用两个栈实现队列：入队栈 和 出队栈 */
-/* 每次读取数据的时候将入队栈元素全部压入出队栈，并读取出队栈的栈顶元素 */
-/* ============================================================================== */
-/* ============================================================================== */
-/* 队列结构体 */
-typedef struct {
-    Stack *inStack;     /* 入队栈 */
-    Stack *outStack;    /* 出队栈 */
-} MyQueue;              /* 重命名结构体为 MyQueue */
-
 /**
  * @description: 创建队列
  * =================================================================================
@@ -118,75 +108,3 @@ void myQueueFree(MyQueue* obj) {
     stackFree(obj->outStack);                               /* 释放出队栈空间 */
 }
 
-/**********************************************************************************/
-/*                                                                                */
-/*                                  TEST FUNCTION                                 */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 测试 1
- * =================================================================================
- * @return {void}
- */
-void test_1(void) {
-    /* 实际结果 */
-
-    /* 预期结果 */
-
-    /* 比较结果 */
-
-    /* Test case 1 */
-    printf("======== Case 1 ======== \n");
-    MyQueue *myQueue = myQueueCreate();
-    myQueuePush(myQueue, 1);
-    myQueuePush(myQueue, 2);
-    printf("myQueuePeek: %d \n", myQueuePeek(myQueue));
-    printf("myQueuePop: %d \n", myQueuePop(myQueue));
-    printf("myQueueEmpty: %d \n", myQueueEmpty(myQueue));
-    myQueueFree(myQueue);
-}
-
-/**
- * @description: 测试 2
- * =================================================================================
- * @return {void}
- */
-void test_2(void) {
-    /* 实际结果 */
-
-    /* 预期结果 */
-
-    /* 比较结果 */
-
-}
-
-/**
- * @description: 测试 3
- * =================================================================================
- * @return {void}
- */
-void test_3(void) {
-    /* 实际结果 */
-
-    /* 预期结果 */
-
-    /* 比较结果 */
-
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                  MAIN FUNCTION                                 */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 主函数
- * =================================================================================
- * @param {int} argc        程序入参个数
- * @param {char} *argv[]    程序入参字符串数组
- * @return {int}            程序运行状态
- */
-int main(int argc, const char *argv[]) {
-    test_1();
-    return 0;
-}
