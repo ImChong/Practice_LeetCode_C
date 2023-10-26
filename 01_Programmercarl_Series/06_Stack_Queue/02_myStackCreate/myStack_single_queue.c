@@ -3,12 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:49:56
+ * @LastEditTime : 2023-10-27 00:59:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 用一个链表实现栈
  */
+#if SINGLE_QUEUE_METHOD
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
@@ -93,3 +95,5 @@ void myStackFree(MyStack *obj) {
     }
     free(obj);                          /* 释放栈空间 */
 }
+
+#endif  /* SINGLE_QUEUE_METHOD */

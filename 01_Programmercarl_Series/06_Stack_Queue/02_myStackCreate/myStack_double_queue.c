@@ -3,12 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:45:19
+ * @LastEditTime : 2023-10-27 00:59:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 用两个队列实现栈
  */
+#if DOUBLE_QUEUE_METHOD
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -107,3 +109,4 @@ void myStackFree(MyStack* obj) {
     obj = NULL;                     /* 将栈指针指向 NULL */
 }
 
+#endif  /* DOUBLE_QUEUE_METHOD */

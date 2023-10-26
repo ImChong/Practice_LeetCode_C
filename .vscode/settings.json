@@ -12,6 +12,7 @@
     "files.associations": {
         "*.excalidraw": "json",
         "*.excalidrawlib": "json",
-        "commonstring.h": "c"
+        "commonstring.h": "c",
+        "mystack_double_queue.h": "c"
     }
 }
