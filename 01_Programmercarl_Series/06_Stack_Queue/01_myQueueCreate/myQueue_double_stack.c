@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 01:21:53
+ * @LastEditTime : 2023-10-27 01:23:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,8 +30,8 @@
  */
 MyQueue *myQueueCreate(void) {
     MyQueue *ret = (MyQueue *)malloc(sizeof(MyQueue));  /* 为队列结构体分配空间 */
-    ret->inStack = stackCreate(100);                    /* 入队栈初始化可容纳 100 数据 */
-    ret->outStack = stackCreate(100);                   /* 出队栈初始化可容纳 100 数据 */
+    ret->inStack = stackCreate(LEN);                    /* 入队栈初始化可容纳 LEN 数据 */
+    ret->outStack = stackCreate(LEN);                   /* 出队栈初始化可容纳 LEN 数据 */
     return ret;                                         /* 返回创建的队列结构体 */
 }
 
