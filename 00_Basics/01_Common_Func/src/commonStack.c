@@ -3,12 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:36:54
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:00:20
+ * @LastEditTime : 2023-10-27 02:26:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用栈源文件
  */
+#include "compileCfg.h"
+
+#if STACK_MODULE_EN
 #include <stdlib.h>
 #include <stdbool.h>
 #include "commonStack.h"
@@ -82,3 +85,6 @@ bool stackEmpty(Stack *obj) {
 void stackFree(Stack *obj) {
     free(obj->stk);                                     /* 释放栈结构体内 stk 数组的空间 */
 }
+
+
+#endif /* STACK_MODULE_EN */

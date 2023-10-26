@@ -3,26 +3,26 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-27 01:30:54
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 01:39:13
+ * @LastEditTime : 2023-10-27 02:29:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用模块定义头文件
+ * @Description  : 通用模块编译开关宏定义
  */
 #ifndef __COMMON_MODULE_DEF_H
 #define __COMMON_MODULE_DEF_H
 
-#define CMD_MODULE_EN                   0
-#define HELPER_MODULE_EN                0
-#define RING_BUFFER_MODULE_EN           0
-#define ARRAY_MODULE_EN                 0
-#define LINKED_LIST_MODULE_EN           0
-#define LINKED_LIST_DUMMY_MODULE_EN     0
-#define HASH_TABLE_MODULE_EN            0
-#define STRING_MODULE_EN                0
-#define STACK_MODULE_EN                 0
-#define QUEUE_MODULE_EN                 0
-#define BINARY_TREE_MODULE_EN           0
+#define CMD_MODULE_EN                   1
+#define HELPER_MODULE_EN                1
+#define RING_BUFFER_MODULE_EN           1
+#define ARRAY_MODULE_EN                 1
+#define LINKED_LIST_MODULE_EN           1
+#define LINKED_LIST_DUMMY_MODULE_EN     1
+#define HASH_TABLE_MODULE_EN            1
+#define STRING_MODULE_EN                1
+#define STACK_MODULE_EN                 1
+#define QUEUE_MODULE_EN                 1
+#define BINARY_TREE_MODULE_EN           1
 
 
 #endif  /* __COMMON_MODULE_DEF_H */
