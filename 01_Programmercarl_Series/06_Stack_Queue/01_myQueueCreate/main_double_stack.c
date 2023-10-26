@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:05:12
+ * @LastEditTime : 2023-10-27 00:06:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -120,27 +120,6 @@ void myQueueFree(MyQueue* obj) {
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
- */
-void validateSingleValue(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
-}
-
-/**********************************************************************************/
-/*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
@@ -156,6 +135,15 @@ void test_1(void) {
 
     /* 比较结果 */
 
+    /* Test case 1 */
+    printf("======== Case 1 ======== \n");
+    MyQueue *myQueue = myQueueCreate();
+    myQueuePush(myQueue, 1);
+    myQueuePush(myQueue, 2);
+    printf("myQueuePeek: %d \n", myQueuePeek(myQueue));
+    printf("myQueuePop: %d \n", myQueuePop(myQueue));
+    printf("myQueueEmpty: %d \n", myQueueEmpty(myQueue));
+    myQueueFree(myQueue);
 }
 
 /**
@@ -194,19 +182,11 @@ void test_3(void) {
 /**
  * @description: 主函数
  * =================================================================================
- * @param {int} argc
- * @param {char*} argv[]
- * @return {int}
+ * @param {int} argc        程序入参个数
+ * @param {char} *argv[]    程序入参字符串数组
+ * @return {int}            程序运行状态
  */
-int main(int argc, const char* argv[]) {
-    /* Test case 1 */
-    printf("======== Case 1 ======== \n");
-    MyQueue *myQueue = myQueueCreate();
-    myQueuePush(myQueue, 1);
-    myQueuePush(myQueue, 2);
-    printf("myQueuePeek: %d \n", myQueuePeek(myQueue));
-    printf("myQueuePop: %d \n", myQueuePop(myQueue));
-    printf("myQueueEmpty: %d \n", myQueueEmpty(myQueue));
-    myQueueFree(myQueue);
+int main(int argc, const char *argv[]) {
+    test_1();
     return 0;
 }
