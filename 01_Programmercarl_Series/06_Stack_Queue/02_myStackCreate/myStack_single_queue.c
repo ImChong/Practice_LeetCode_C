@@ -11,7 +11,7 @@
  */
 #include "methodCfg.h"
 
-#if SINGLE_QUEUE_METHOD
+#if SINGLE_QUEUE_METHOD_EN
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>

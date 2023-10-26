@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-27 00:35:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 02:53:09
+ * @LastEditTime : 2023-10-27 02:55:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,9 +13,9 @@
  */
 #include <stdio.h>
 #include "methodCfg.h"
-#if SINGLE_QUEUE_METHOD
+#if SINGLE_QUEUE_METHOD_EN
 #include "myStack_single_queue.h"
-#elif DOUBLE_QUEUE_METHOD
+#elif DOUBLE_QUEUE_METHOD_EN
 #include "myStack_double_queue.h"
 #endif
 

@@ -12,7 +12,7 @@
 #ifndef __METHOD_CFG_H
 #define __METHOD_CFG_H
 
-#define SINGLE_QUEUE_METHOD     0       /* 用一个队列实现栈 */
-#define DOUBLE_QUEUE_METHOD     1       /* 用两个队列实现栈 */
+#define SINGLE_QUEUE_METHOD_EN      0       /* 用一个队列实现栈 */
+#define DOUBLE_QUEUE_METHOD_EN      1       /* 用两个队列实现栈 */
 
 #endif  /* __METHOD_CFG_H  */

@@ -11,7 +11,7 @@
  */
 #include "methodCfg.h"
 
-#if DOUBLE_QUEUE_METHOD
+#if DOUBLE_QUEUE_METHOD_EN
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
