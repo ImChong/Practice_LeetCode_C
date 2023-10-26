@@ -11,7 +11,7 @@
  */
 #include "compileCfg.h"
 
-#if STACK_MODULE_EN
+#if COMMON_STACK_EN
 #include <stdlib.h>
 #include <stdbool.h>
 #include "commonStack.h"
@@ -87,4 +87,4 @@ void stackFree(Stack *obj) {
 }
 
 
-#endif /* STACK_MODULE_EN */
+#endif /* COMMON_STACK_EN */

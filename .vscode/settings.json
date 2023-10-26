@@ -14,6 +14,8 @@
         "*.excalidrawlib": "json",
         "commonstack.h": "c",
         "stdbool.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "compilecfg.h": "c",
+        "commoncmd.h": "c"
     }
 }

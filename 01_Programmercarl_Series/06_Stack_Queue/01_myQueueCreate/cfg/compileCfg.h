@@ -3,15 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-27 02:14:55
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 02:31:28
+ * @LastEditTime : 2023-10-27 02:41:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用模块编译配置文件
  */
-#ifndef __MODULE_CFG_H
-#define __MODULE_CFG_H
+#ifndef __COMPILE_CFG_H
+#define __COMPILE_CFG_H
 
-#define STACK_MODULE_EN     1
+#define COMMON_STACK_EN     1
 
-#endif  /* __MODULE_CFG_H */
+#endif  /* __COMPILE_CFG_H */
