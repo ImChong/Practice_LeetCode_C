@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:38:47
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:11:18
+ * @LastEditTime : 2023-10-27 00:27:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,6 +29,9 @@ typedef struct {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-
+Queue *initQueue(int k);
+void enQueue(Queue *obj, int x);
+int deQueue(Queue *obj);
+int isQueueEmpty(Queue *obj);
 
 #endif  /* __COMMON_QUEUE_H */
