@@ -1,36 +1,18 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\06_Stack_Queue\02_myStackCreate\main_single_queue.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\06_Stack_Queue\02_myStackCreate\myStack_single_queue.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:08:52
+ * @LastEditTime : 2023-10-27 00:49:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 225. 用队列实现栈：https://leetcode.cn/problems/implement-stack-using-queues/
- * https://programmercarl.com/0225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.html
- * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.md
- *
- * 方法二：用一个链表实现栈
- *
+ * @Description  : 用一个链表实现栈
  */
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 GLOBAL VARIABLES                               */
-/*                                                                                */
-/**********************************************************************************/
-typedef struct tagListNode {
-    struct tagListNode *next;   /* 指向下一个链表元素的指针 */
-    int val;                    /* 元素数值 */
-} ListNode;                     /* 链表节点结构体 */
-
-typedef struct {
-    ListNode *top;              /* 栈顶节点指针 */
-} MyStack;                      /* 栈结构体 */
+#include "myStack_single_queue.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
