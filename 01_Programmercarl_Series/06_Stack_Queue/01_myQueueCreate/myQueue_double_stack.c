@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 01:11:35
+ * @LastEditTime : 2023-10-27 01:21:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -26,7 +26,7 @@
 /**
  * @description: 创建队列
  * =================================================================================
- * @return {MyQueue *} ret
+ * @return {MyQueue *} ret      返回创建的队列结构体
  */
 MyQueue *myQueueCreate(void) {
     MyQueue *ret = (MyQueue *)malloc(sizeof(MyQueue));  /* 为队列结构体分配空间 */
@@ -38,7 +38,7 @@ MyQueue *myQueueCreate(void) {
 /**
  * @description: 从入队栈反向并移动至出队栈
  * =================================================================================
- * @param {MyQueue *} obj
+ * @param {MyQueue *} obj       队列结构体
  * @return {void}
  */
 void in2out(MyQueue *obj) {
@@ -51,8 +51,8 @@ void in2out(MyQueue *obj) {
 /**
  * @description: 入队
  * =================================================================================
- * @param {MyQueue *} obj
- * @param {int} x
+ * @param {MyQueue} *obj        队列结构体
+ * @param {int} x               入队元素
  * @return {void}
  */
 void myQueuePush(MyQueue *obj, int x) {
@@ -62,8 +62,8 @@ void myQueuePush(MyQueue *obj, int x) {
 /**
  * @description: 出队
  * =================================================================================
- * @param {MyQueue *} obj
- * @return {int} x
+ * @param {MyQueue} *obj        队列结构体
+ * @return {int} x              出队元素
  */
 int myQueuePop(MyQueue *obj) {
     if (stackEmpty(obj->outStack)) {                        /* 如果出队栈为空 */
@@ -77,8 +77,8 @@ int myQueuePop(MyQueue *obj) {
 /**
  * @description: 查看队首元素
  * =================================================================================
- * @param {MyQueue *} obj
- * @return {int} 队首元素
+ * @param {MyQueue *} obj       队列结构体
+ * @return {int} x              队首元素
  */
 int myQueuePeek(MyQueue *obj) {
     if (stackEmpty(obj->outStack)) {                        /* 如果出队栈为空 */
@@ -90,8 +90,8 @@ int myQueuePeek(MyQueue *obj) {
 /**
  * @description: 确认队列是否为空
  * =================================================================================
- * @param {MyQueue *} obj
- * @return {bool} 队列是否为空
+ * @param {MyQueue *} obj       队列结构体
+ * @return {bool}               队列是否为空
  */
 bool myQueueEmpty(MyQueue* obj) {
     return (stackEmpty(obj->inStack) && stackEmpty(obj->outStack));     /* 返回入队栈和出队栈是否都为空 */
@@ -100,8 +100,8 @@ bool myQueueEmpty(MyQueue* obj) {
 /**
  * @description: 释放队列空间
  * =================================================================================
- * @param {MyQueue *} obj
- * @return {*}
+ * @param {MyQueue *} obj       队列结构体
+ * @return {void}
  */
 void myQueueFree(MyQueue* obj) {
     stackFree(obj->inStack);                                /* 释放入队栈空间 */
