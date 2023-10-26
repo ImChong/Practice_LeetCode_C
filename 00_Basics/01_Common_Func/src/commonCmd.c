@@ -3,15 +3,12 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-04 08:56:01
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 02:35:06
+ * @LastEditTime : 2023-10-27 02:51:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用命令行指令源文件
  */
-#include "compileCfg.h"
-
-#if COMMON_CMD_EN
 #include "commonPrintDef.h"     /* 00_Basics\01_Common_Func\inc\commonDef\commonPrintDef.h */
 #include "commonHelper.h"       /* 00_Basics\01_Common_Func\inc\commonHelper.h */
 #include "commonCmd.h"          /* 00_Basics\01_Common_Func\inc\commonCmd.h */
@@ -46,6 +43,3 @@ void printCommandInfo(int argc, char *argv[]) {
         INFO("%d -> %s", i, argv[i]);
     }
 }
-
-
-#endif  /* COMMON_CMD_EN */

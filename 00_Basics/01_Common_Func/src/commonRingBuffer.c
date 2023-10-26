@@ -3,15 +3,12 @@
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 02:38:15
+ * @LastEditTime : 2023-10-27 02:51:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用环形缓冲区源文件
  */
-#include "compileCfg.h"
-
-#if COMMON_RING_BUFFER_EN
 #include <stdio.h>
 #include <stdint.h>
 #include "commonTypeDef.h"
@@ -179,6 +176,3 @@ void Test_RingBuffer(void) {
     RingBuffer_GetByte(&g_rxRing, &data);
     RingBuffer_Print(&g_rxRing);
 }
-
-
-#endif  /* COMMON_RING_BUFFER_EN */
