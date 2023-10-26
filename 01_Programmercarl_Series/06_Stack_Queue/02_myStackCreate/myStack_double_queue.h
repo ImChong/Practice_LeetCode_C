@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-27 00:38:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:57:39
+ * @LastEditTime : 2023-10-27 01:05:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,9 @@
 #ifndef __MY_STACK_DOUBLE_QUEUE_H
 #define __MY_STACK_DOUBLE_QUEUE_H
 
+#include "methodCfg.h"
+
+#if DOUBLE_QUEUE_METHOD
 #include <stdbool.h>
 #include "commonQueue.h"
 
@@ -46,5 +49,6 @@ int myStackTop(MyStack* obj);               /* 获取栈顶元素 */
 bool myStackEmpty(MyStack *obj);            /* 判断栈是否为空 */
 void myStackFree(MyStack* obj);             /* 释放栈 */
 
+#endif  /* DOUBLE_QUEUE_METHOD */
 
 #endif  /* __MY_STACK_DOUBLE_QUEUE_H */

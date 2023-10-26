@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-27 00:38:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:51:04
+ * @LastEditTime : 2023-10-27 01:06:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,10 @@
  */
 #ifndef __MY_STACK_SINGLE_QUEUE_H
 #define __MY_STACK_SINGLE_QUEUE_H
+
+#include "methodCfg.h"
+
+#if SINGLE_QUEUE_METHOD
 
 /**********************************************************************************/
 /*                                                                                */
@@ -40,5 +44,6 @@ int myStackTop(MyStack *obj);               /* 获取栈顶元素 */
 bool myStackEmpty(MyStack* obj);            /* 判断栈是否为空 */
 void myStackFree(MyStack* obj);             /* 释放栈 */
 
+#endif  /* SINGLE_QUEUE_METHOD */
 
 #endif  /* __MY_STACK_SINGLE_QUEUE_H */

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-27 00:35:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:58:06
+ * @LastEditTime : 2023-10-27 01:04:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,10 +11,9 @@
  * https://programmercarl.com/0225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.html
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.md
  */
-#define SINGLE_QUEUE_METHOD     0       /* 用一个队列实现栈 */
-#define DOUBLE_QUEUE_METHOD     1       /* 用两个队列实现栈 */
-
 #include <stdio.h>
+#include "methodCfg.h"
+
 #if SINGLE_QUEUE_METHOD
 #include "myStack_single_queue.h"
 #elif DOUBLE_QUEUE_METHOD

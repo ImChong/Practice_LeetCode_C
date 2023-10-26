@@ -9,8 +9,9 @@
  * =================================================================================
  * @Description  : 用一个链表实现栈
  */
-#if SINGLE_QUEUE_METHOD
+#include "methodCfg.h"
 
+#if SINGLE_QUEUE_METHOD
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
