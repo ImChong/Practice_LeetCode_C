@@ -29,9 +29,11 @@ typedef struct {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-Queue *initQueue(int k);
-void enQueue(Queue *obj, int x);
-int deQueue(Queue *obj);
-int isQueueEmpty(Queue *obj);
+Queue *initQueue(int k);            /* 初始化队列 */
+void enQueue(Queue *obj, int x);    /* 入队 */
+int deQueue(Queue *obj);            /* 出队 */
+int isQueueEmpty(Queue *obj);       /* 判断队列是否为空 */
+void freeQueue(Queue *obj);         /* 释放队列 */
+
 
 #endif  /* __COMMON_QUEUE_H */

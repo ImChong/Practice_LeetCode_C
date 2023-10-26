@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:40:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:27:28
+ * @LastEditTime : 2023-10-27 00:29:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -71,4 +71,15 @@ int deQueue(Queue *obj) {
  */
 int isQueueEmpty(Queue *obj) {
     return obj->head == -1;                     /* 判断队列头是否为 -1，若队列头为 -1 则队列为空 */
+}
+
+/**
+ * @description: 释放队列空间
+ * =================================================================================
+ * @param {Queue} *obj      队列指针
+ * @return {void}
+ */
+void freeQueue(Queue *obj) {
+    free(obj->data);                            /* 释放队列内数组空间 */
+    free(obj);                                  /* 释放队列空间 */
 }
