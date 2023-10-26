@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-17 23:26:21
+ * @LastEditTime : 2023-10-27 00:11:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -15,8 +15,9 @@
  *
  */
 #include <stdio.h>
-#include <stdbool.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include "commonQueue.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -30,12 +31,7 @@
 /*                                 GLOBAL VARIABLES                               */
 /*                                                                                */
 /**********************************************************************************/
-typedef struct {
-    int *data;      /* 数据 */
-    int head;       /* 队列头 */
-    int tail;       /* 队列尾 */
-    int size;       /* 队列大小 */
-} Queue;            /* 队列结构体 */
+
 
 typedef struct {
     Queue *queue1;  /* 队列 1 */

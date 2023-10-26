@@ -12,6 +12,8 @@
 #ifndef __COMMON_STACK_H
 #define __COMMON_STACK_H
 
+#include <stdbool.h>
+
 /**********************************************************************************/
 /*                                                                                */
 /*                                 GLOBAL VARIABLES                               */
