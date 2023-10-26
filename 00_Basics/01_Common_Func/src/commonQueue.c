@@ -3,12 +3,13 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:40:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:29:14
+ * @LastEditTime : 2023-10-27 00:32:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用队列源文件
  */
+#include <stdlib.h>
 #include "commonQueue.h"
 
 /**********************************************************************************/
@@ -81,5 +82,7 @@ int isQueueEmpty(Queue *obj) {
  */
 void freeQueue(Queue *obj) {
     free(obj->data);                            /* 释放队列内数组空间 */
+    obj->data = NULL;                           /* 将队列内数组指针置空 */
     free(obj);                                  /* 释放队列空间 */
+    obj = NULL;                                 /* 将队列指针置空 */
 }

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-25 20:30:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:28:27
+ * @LastEditTime : 2023-10-27 00:31:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -122,14 +122,8 @@ bool myStackEmpty(MyStack *obj) {
  * @return {void}
  */
 void myStackFree(MyStack* obj) {
-    free(obj->queue1->data);        /* 释放栈内队列 1 的数组内存空间 */
-    obj->queue1->data = NULL;       /* 将栈内队列 1 的数组指针指向 NULL */
-    free(obj->queue1);              /* 释放栈内队列 1 的内存空间 */
-    obj->queue1 = NULL;             /* 将栈内队列 1 的指针指向 NULL */
-    free(obj->queue2->data);        /* 释放栈内队列 2 的数组内存空间 */
-    obj->queue2->data = NULL;       /* 将栈内队列 2 的数组指针指向 NULL */
-    free(obj->queue2);              /* 释放栈内队列 2 的内存空间 */
-    obj->queue2 = NULL;             /* 将栈内队列 2 的指针指向 NULL */
+    freeQueue(obj->queue1);         /* 释放队列 1 空间 */
+    freeQueue(obj->queue2);         /* 释放队列 2 空间 */
     free(obj);                      /* 释放栈内存 */
     obj = NULL;                     /* 将栈指针指向 NULL */
 }
