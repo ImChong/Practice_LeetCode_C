@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-25 00:49:01
+ * @LastEditTime : 2023-10-28 00:21:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,11 +31,11 @@
  * @return {char} *ans      反转后的字符串
  */
 char *reverseStr(char *s, int k){
-    int sLen = strlen(s);                                       /* 字符串长度 */
-    for (int i = 0; i < sLen; i += 2 * k) {                     /* 每隔 2k 个字符反转 k 个字符 */
-        reverseString(&s[i], &s[MIN(i + k - 1, sLen - 1)]);         /* 反转字符串 */
+    int sLen = strlen(s);                                               /* 字符串长度 */
+    for (int i = 0; i < sLen; i += 2 * k) {                             /* 每隔 2k 个字符反转 k 个字符 */
+        reverseStringSection(&s[i], &s[MIN(i + k - 1, sLen - 1)]);          /* 反转字符串 */
     }
-    return s;                                                   /* 返回反转后的字符串 */
+    return s;                                                           /* 返回反转后的字符串 */
 }
 
 /**********************************************************************************/

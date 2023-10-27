@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-28 00:16:02
+ * @LastEditTime : 2023-10-28 00:18:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,9 @@
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0344.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.md
  */
 #include <stdio.h>
+#include <string.h>
+#include "commonString.h"
+#include "commonArray.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -21,16 +24,20 @@
 /**********************************************************************************/
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 反转字符串
  * =================================================================================
- * @param {char} *s
- * @param {int} sSize
+ * @param {char} *s         字符串地址
+ * @param {int} sSize       字符串长度
  * @return {void}
  */
 void reverseString(char *s, int sSize) {
-
-    /* TODO */
-
+    int left = 0;
+    int right = sSize - 1;
+    while (left < right) {
+        swapChar(s + left, s + right);
+        left++;
+        right--;
+    }
 }
 
 /**********************************************************************************/
@@ -40,44 +47,65 @@ void reverseString(char *s, int sSize) {
 /**********************************************************************************/
 /**
  * @description: 测试 1
+ * 输入：s = ["h","e","l","l","o"]
+ * 输出：["o","l","l","e","h"]
  * =================================================================================
  * @return {void}
  */
 void test_1(void) {
     /* 实际结果 */
+    // char *s = "hello";                                  /* strlen: 5, ARR_SIZE: 8, 字符串不可修改 */
+    char s[] = "hello";                                 /* strlen: 5, ARR_SIZE: 6, 字符串可修改 */
+    // char s[6] = {'h', 'e', 'l', 'l', 'o', '\0'};        /* strlen: 5, ARR_SIZE: 6, 字符串可修改 */
+    int sSize = strlen(s);
+    // printf("strlen: %d, ARR_SIZE: %d\n", strlen(s), ARR_SIZE(s));
+    reverseString(s, sSize);
 
     /* 预期结果 */
+    char *expect = "olleh";
 
     /* 比较结果 */
-
+    validateString('1', expect, s);
 }
 
 /**
  * @description: 测试 2
+ * 输入: s = ["H","a","n","n","a","h"]
+ * 输出：["h","a","n","n","a","H"]
  * =================================================================================
  * @return {void}
  */
 void test_2(void) {
     /* 实际结果 */
+    char s[] = "Hannah";
+    int sSize = strlen(s);
+    reverseString(s, sSize);
 
     /* 预期结果 */
+    char *expect = "hannaH";
 
     /* 比较结果 */
-
+    validateString('2', expect, s);
 }
 
 /**
  * @description: 测试 3
+ * 输入：s = ["1"]
+ * 输出：["1"]
  * =================================================================================
  * @return {void}
  */
 void test_3(void) {
     /* 实际结果 */
+    char s[] = "1";
+    int sSize = strlen(s);
+    reverseString(s, sSize);
 
     /* 预期结果 */
+    char *expect = "1";
 
     /* 比较结果 */
-
+    validateString('3', expect, s);
 }
 
 /**********************************************************************************/
@@ -94,5 +122,7 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
+    test_2();
+    test_3();
     return 0;
 }

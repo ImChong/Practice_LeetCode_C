@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-26 01:30:49
+ * @LastEditTime : 2023-10-28 00:21:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -39,7 +39,7 @@ void swapChar(char *a, char *b) {
  * @param {char*} rightIndex    右索引
  * @return {void}
  */
-void reverseString(char* leftIndex, char* rightIndex) {
+void reverseStringSection(char* leftIndex, char* rightIndex) {
     while (leftIndex < rightIndex) {            /* 左索引小于右索引 */
         swapChar(leftIndex++, rightIndex--);        /* 交换左右索引的字符 */
     }
