@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 23:52:43
+ * @LastEditTime : 2023-10-28 00:14:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,7 @@
  */
 #include <stdio.h>
 #include "commonHelper.h"
+#include "commonArray.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -50,11 +51,17 @@ int removeElement(int *nums, int numsSize, int val){
  */
 void test_1(void) {
     /* 实际结果 */
+    int nums[] = {3, 2, 2, 3};
+    int numsSize = ARR_SIZE(nums);
+    int val = 3;
+    int actualSize = removeElement(nums, numsSize, val);
 
     /* 预期结果 */
+    int expectSize = 2;
+    int expectNums[] = {2, 2};
 
     /* 比较结果 */
-
+    validateArray('1', expectNums, expectSize, nums, actualSize);
 }
 
 /**
@@ -66,11 +73,17 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    int nums[] = {0, 1, 2, 2, 3, 0, 4, 2};
+    int numsSize = ARR_SIZE(nums);
+    int val = 2;
+    int actualSize = removeElement(nums, numsSize, val);
 
     /* 预期结果 */
+    int expectSize = 5;
+    int expectNums[] = {0, 1, 4, 0, 3};
 
     /* 比较结果 */
-
+    validateArray('2', expectNums, expectSize, nums, actualSize);
 }
 
 /**
@@ -82,11 +95,17 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    int nums[] = {3, 3};
+    int numsSize = ARR_SIZE(nums);
+    int val = 3;
+    int actualSize = removeElement(nums, numsSize, val);
 
     /* 预期结果 */
+    int expectSize = 0;
+    int expectNums[] = {};
 
     /* 比较结果 */
-
+    validateArray('3', expectNums, expectSize, nums, actualSize);
 }
 
 /**********************************************************************************/
