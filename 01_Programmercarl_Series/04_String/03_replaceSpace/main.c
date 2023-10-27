@@ -45,37 +45,7 @@ char *pathEncryption(char *path) {
     return ans;
 }
 
-/**
- * @description: 剑指 Offer 05. 替换空格
- * 请实现一个函数，把字符串 s 中的每个空格替换成"%20"。
- * =================================================================================
- * @param {char} *s         字符串地址
- * @return {char} *ans      修改后的字符串
- */
-char *replaceSpace(char *s) {
-    int count = 0;
-    int len = strlen(s);
-    for (int i = 0; i < len; i++) {
-        if (s[i] == ' ') {
-            count++;
-        }
-    }
 
-    int newLen = len + count * 2;
-    char *result = malloc(sizeof(char) * newLen + 1);
-
-    for (int i = len - 1, j = newLen - 1; i >= 0; i--, j--) {
-        if (s[i] != ' ') {
-            result[j] = s[i];
-        } else {
-            result[j--] = '0';
-            result[j--] = '2';
-            result[j] = '%';
-        }
-    }
-    result[newLen] = '\0';
-    return result;
-}
 
 /**********************************************************************************/
 /*                                                                                */

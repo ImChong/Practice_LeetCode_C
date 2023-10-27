@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 20:02:52
+ * @LastEditTime : 2023-10-28 00:25:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 题目：剑指Offer 05.替换空格: https://leetcode.cn/problems/ti-huan-kong-ge-lcof/
+ * @Description  : 剑指Offer 05.替换空格: https://leetcode.cn/problems/ti-huan-kong-ge-lcof/
  * https://programmercarl.com/%E5%89%91%E6%8C%87Offer05.%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.html
  */
 #include <stdio.h>
@@ -19,32 +19,36 @@
 /***                                                                            ***/
 /**********************************************************************************/
 /**********************************************************************************/
-/* TODO: 目标函数 */
-
-/* ============================================================================== */
-/* ============================================================================== */
-
-
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
 /**
- * @description: 验证答案
+ * @description: 剑指 Offer 05. 替换空格
+ * 请实现一个函数，把字符串 s 中的每个空格替换成"%20"。
  * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
+ * @param {char} *s         字符串地址
+ * @return {char} *ans      修改后的字符串
  */
-void validateSingleValue(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
+char *replaceSpace(char *s) {
+    int count = 0;
+    int len = strlen(s);
+    for (int i = 0; i < len; i++) {
+        if (s[i] == ' ') {
+            count++;
+        }
     }
+
+    int newLen = len + count * 2;
+    char *result = malloc(sizeof(char) * newLen + 1);
+
+    for (int i = len - 1, j = newLen - 1; i >= 0; i--, j--) {
+        if (s[i] != ' ') {
+            result[j] = s[i];
+        } else {
+            result[j--] = '0';
+            result[j--] = '2';
+            result[j] = '%';
+        }
+    }
+    result[newLen] = '\0';
+    return result;
 }
 
 /**********************************************************************************/
@@ -108,5 +112,7 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
+    test_2();
+    test_3();
     return 0;
 }
