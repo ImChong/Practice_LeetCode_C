@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-26 01:59:09
+ * @LastEditTime : 2023-10-27 23:47:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -26,9 +26,11 @@
  * @description: 重复的子字符串
  * =================================================================================
  * @param {char} *s     字符串地址
- * @return {bool}
+ * @return {bool}       
  */
 bool repeatedSubstringPattern(char *s){
+
+    /* TODO */
 
     return 0;
 }
