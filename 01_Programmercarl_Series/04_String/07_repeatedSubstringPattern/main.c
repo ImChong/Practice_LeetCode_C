@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 23:47:15
+ * @LastEditTime : 2023-10-27 23:48:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -49,11 +49,14 @@ bool repeatedSubstringPattern(char *s){
  */
 void test_1(void) {
     /* 实际结果 */
+    char *s = "abab";
+    bool actual = repeatedSubstringPattern(s);
 
     /* 预期结果 */
+    bool expect = true;
 
     /* 比较结果 */
-
+    validateSingleValue('1', expect, actual);
 }
 
 /**
@@ -65,11 +68,14 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    char *s = "aba";
+    bool actual = repeatedSubstringPattern(s);
 
     /* 预期结果 */
+    bool expect = false;
 
     /* 比较结果 */
-
+    validateSingleValue('2', expect, actual);
 }
 
 /**
