@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 20:04:05
+ * @LastEditTime : 2023-10-28 00:32:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,36 +13,24 @@
 #include <stdio.h>
 
 /**********************************************************************************/
-/*                                                                                */
-/*                                 TARGET FUNCTION                                */
-/*                                                                                */
 /**********************************************************************************/
-/* TODO: 目标函数 */
-
-/* ============================================================================== */
-/* ============================================================================== */
-
-
-
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
 /**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 验证答案
+ * @description:
  * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
+ * @param {int} *nums
+ * @param {int} numsSize
+ * @param {int} target
+ * @param {int} *returnSize
+ * @param {int} **returnColumnSizes
+ * @return {int} **ans
  */
-void validateSingleValue(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
+int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **returnColumnSizes) {
+
 }
 
 /**********************************************************************************/
