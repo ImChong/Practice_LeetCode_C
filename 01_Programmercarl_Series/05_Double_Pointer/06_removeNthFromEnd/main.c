@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 20:03:19
+ * @LastEditTime : 2023-10-28 00:28:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,32 +17,15 @@
 /*                                 TARGET FUNCTION                                */
 /*                                                                                */
 /**********************************************************************************/
-/* TODO: 目标函数 */
-
-/* ============================================================================== */
-/* ============================================================================== */
-
-
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
 /**
- * @description: 验证答案
+ * @description:
  * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
+ * @param {struct ListNode} *head
+ * @param {int} n
+ * @return {struct ListNode} *ans
  */
-void validateSingleValue(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
+struct ListNode *removeNthFromEnd(struct ListNode *head, int n) {
+
 }
 
 /**********************************************************************************/
