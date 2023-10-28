@@ -32,7 +32,14 @@ void swapChar(char *a, char *b) {
     *b = tmp;           /* 将保存的a字符赋值给b字符 */
 }
 
-
+/**
+ * @description: 反转字符串
+ * =================================================================================
+ * @param {char} *s             字符串地址
+ * @param {int} leftIndex       左指针
+ * @param {int} rightIndex      右指针
+ * @return {void}
+ */
 void reverseStringSection(char *s, int leftIndex, int rightIndex) {
     while (leftIndex < rightIndex) {        /* 左右指针未相遇 */
         swapChar(&s[leftIndex], &s[rightIndex]);     /* 交换字符 */
