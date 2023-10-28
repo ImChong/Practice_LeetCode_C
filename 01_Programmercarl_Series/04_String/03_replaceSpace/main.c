@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-28 22:32:49
+ * @LastEditTime : 2023-10-28 23:17:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -32,17 +32,17 @@
  * @return {char} *ans      修改后的字符串
  */
 char *pathEncryption(char *path) {
-    int sLen = strlen(path);
-    char *ans = (char *)malloc(sizeof(char) * sLen + 1);
-    for (int i = 0; i < sLen; i++) {
-        if (path[i] == '.') {
-            ans[i] = ' ';
-        } else {
-            ans[i] = path[i];
+    int sLen = strlen(path);                                    /* 字符串长度 */
+    char *ans = (char *)malloc(sizeof(char) * sLen + 1);        /* 申请内存: +1 为 '\0' */
+    for (int i = 0; i < sLen; i++) {                            /* 遍历字符串 */
+        if (path[i] == '.') {                                       /* 如果 path[i] 字符为 '.' */
+            ans[i] = ' ';                                               /* ans[i] 替换为空格 */
+        } else {                                                    /* 如果 path[i] 字符不为 '.' */
+            ans[i] = path[i];                                           /* ans[i] 不变 */
         }
     }
-    ans[sLen] = '\0';
-    return ans;
+    ans[sLen] = '\0';                                           /* 字符串末尾添加 '\0' */
+    return ans;                                                 /* 返回修改后的字符串 */
 }
 
 /**********************************************************************************/
