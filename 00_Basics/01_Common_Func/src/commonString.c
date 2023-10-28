@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-28 23:27:36
+ * @LastEditTime : 2023-10-28 23:28:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -41,10 +41,8 @@ void swapChar(char *a, char *b) {
  * @return {void}
  */
 void reverseStringSection(char *s, int leftIndex, int rightIndex) {
-    while (leftIndex < rightIndex) {                /* 左右指针未相遇 */
-        swapChar(&s[leftIndex], &s[rightIndex]);        /* 交换字符 */
-        leftIndex++;                                    /* 左指针右移 */
-        rightIndex--;                                   /* 右指针左移 */
+    while (leftIndex < rightIndex) {                    /* 左右指针未相遇 */
+        swapChar(&s[leftIndex++], &s[rightIndex--]);        /* 交换字符，左指针右移，右指针左移 */
     }
 }
 
