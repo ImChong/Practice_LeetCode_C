@@ -13,6 +13,7 @@
         "*.excalidraw": "json",
         "*.excalidrawlib": "json",
         "commonstring.h": "c",
-        "commonarray.h": "c"
+        "commonarray.h": "c",
+        "intersection_double_pointer.h": "c"
     }
 }
