@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 10:44:48
+ * @LastEditTime : 2023-10-29 11:11:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,18 +30,18 @@
  * @return {bool}       是否为重复的子字符串
  */
 bool repeatedSubstringPattern(char *s){
-    int sLen = strlen(s);
-    for (int i = 1; i * 2 <= sLen; i++) {
-        if (sLen % i == 0) {
-            bool match = true;
-            for (int j = i; j < sLen; j++) {
-                if (s[j] != s[j - i]) {
-                    match = false;
-                    break;
+    int sLen = strlen(s);                       /* 字符串长度 */
+    for (int i = 1; i * 2 <= sLen; i++) {       /* 遍历字符串长度的一半 */
+        if (sLen % i == 0) {                        /* 字符串长度为 i 的倍数 */
+            bool match = true;                          /* 是否匹配 */
+            for (int j = i; j < sLen; j++) {            /* 遍历字符串 */
+                if (s[j] != s[j - i]) {                     /* 字符串不匹配 */
+                    match = false;                              /* 不匹配 */
+                    break;                                      /* 跳出循环 */
                 }
             }
-            if (match) {
-                return true;
+            if (match) {                                /* 匹配 */
+                return true;                                /* 返回 true */
             }
         }
     }
