@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : 两个数组的交集 - 双指针解法头文件
  */
 #ifndef __INTERSECTION_DOUBLE_POINTER_H
 #define __INTERSECTION_DOUBLE_POINTER_H

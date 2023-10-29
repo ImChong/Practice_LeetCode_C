@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:31
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-30 00:30:32
+ * @LastEditTime : 2023-10-30 00:31:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : 两个数组的交集 - 双指针解法源文件
  */
 #include <stdlib.h>
 #include "methodCfg.h"
