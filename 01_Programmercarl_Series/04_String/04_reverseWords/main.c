@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 09:38:35
+ * @LastEditTime : 2023-10-29 09:46:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -55,11 +55,16 @@ void removeExtraSpace(char *s) {
  * @return {char} *ans      修改后的字符串
  */
 char *reverseWords(char *s) {
-    return NULL;
-
-
-    /* TODO */
-
+    removeExtraSpace(s);
+    reverseStringSection(s, 0, strlen(s) - 1);
+    int slow = 0;
+    for (int i = 0; i < strlen(s); i++) {
+        if (s[i] == ' ' || s[i] == '\0') {
+            reverseStringSection(s, slow, i - 1);
+            slow = i + 1;
+        }
+    }
+    return s;
 }
 
 /**********************************************************************************/
@@ -84,9 +89,6 @@ void test_1(void) {
 
     /* 比较结果 */
     validateString('1', expect, actual);
-
-    /* 释放内存 */
-    freeString(actual);
 }
 
 /**
@@ -106,9 +108,6 @@ void test_2(void) {
 
     /* 比较结果 */
     validateString('2', expect, actual);
-
-    /* 释放内存 */
-    freeString(actual);
 }
 
 /**
@@ -128,9 +127,6 @@ void test_3(void) {
 
     /* 比较结果 */
     validateString('3', expect, actual);
-
-    /* 释放内存 */
-    freeString(actual);
 }
 
 /**********************************************************************************/
