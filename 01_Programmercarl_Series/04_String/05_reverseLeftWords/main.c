@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-26 01:50:43
+ * @LastEditTime : 2023-10-29 10:22:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,17 +31,17 @@
  * @return {char} *ans          修改后的字符串
  */
 char *dynamicPassword(char *password, int target) {
-    int sLen = strlen(password);
-    char *ans = (char *)malloc(sizeof(char) * sLen + 1);
-    int index = 0;
-    for (int i = target; i < sLen; i++) {
-        ans[index++] = password[i];
+    int sLen = strlen(password);                            /* 字符串长度 */
+    char *ans = (char *)malloc(sizeof(char) * sLen + 1);    /* 申请内存 */
+    int index = 0;                                          /* 索引指针 */
+    for (int i = target; i < sLen; i++) {                   /* 遍历字符串 */
+        ans[index++] = password[i];                             /* 将当前字符赋值给 ans */
     }
-    for (int i = 0; i < target; i++) {
-        ans[index++] = password[i];
+    for (int i = 0; i < target; i++) {                      /* 遍历字符串 */
+        ans[index++] = password[i];                             /* 将当前字符赋值给 ans */
     }
-    ans[sLen] = '\0';
-    return ans;
+    ans[sLen] = '\0';                                       /* 将 ans 最后一位赋值为字符串结束符 */
+    return ans;                                             /* 返回修改后的字符串 */
 }
 
 /**********************************************************************************/
