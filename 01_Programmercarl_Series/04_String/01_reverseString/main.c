@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-21 22:14:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-25 00:31:18
+ * @LastEditTime : 2023-10-29 10:43:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,12 +31,12 @@
  * @return {void}
  */
 void reverseString(char *s, int sSize) {
-    int left = 0;
-    int right = sSize - 1;
-    while (left < right) {
-        swapChar(s + left, s + right);
-        left++;
-        right--;
+    int left = 0;                           /* 左指针 */
+    int right = sSize - 1;                  /* 右指针 */
+    while (left < right) {                  /* 左右指针交换 */
+        swapChar(s + left, s + right);          /* 交换字符 */
+        left++;                                 /* 左指针右移 */
+        right--;                                /* 右指针左移 */
     }
 }
 
