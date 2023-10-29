@@ -96,6 +96,6 @@ void validateString(char testNum, char *expect, char *actual) {
         printf("❌ Test %c Failed\n", testNum);
     }
 
-    printf("    - expect: %s\n", expect);
-    printf("    - actual: %s\n", actual);
+    printf("    - Expect: %s\n", expect);
+    printf("    - Actual: %s\n", actual);
 }

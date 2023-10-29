@@ -221,4 +221,7 @@ void validateMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actu
         }
     }
     printf("✅ Test %c Passed\n", testNum);
+
+    printf("    - Expect: "); printMyLinkedList(expect);
+    printf("    - Actual: "); printMyLinkedList(actual);
 }
