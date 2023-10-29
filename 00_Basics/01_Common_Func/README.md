@@ -25,7 +25,7 @@
   - [commonBinaryTree.c](./src/commonBinaryTree.c) - 通用二叉树源文件
 -
 
-```shell
+
 - .
 - │  [main.c](main.c) - 主程序(测试用途)
 - │  README.md - 本文件
@@ -59,4 +59,3 @@
 -         commonRingBuffer.c
 -         commonStack.c
 -         commonString.c
-```
