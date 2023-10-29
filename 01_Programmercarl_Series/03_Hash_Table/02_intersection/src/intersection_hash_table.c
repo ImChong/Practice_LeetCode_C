@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\intersection_hash_table.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\src\intersection_hash_table.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-30 00:23:29
+ * @LastEditTime : 2023-10-30 01:36:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,5 +14,18 @@
 #if HASH_TABLE_METHOD_EN
 #include "intersection_hash_table.h"
 
+/**
+ * @description: 两个数组的交集
+ * =================================================================================
+ * @param {int} *numsA          数组1
+ * @param {int} numsASize       数组1大小
+ * @param {int} *numsB          数组2
+ * @param {int} numsBSize       数组2大小
+ * @param {int} *returnSize     返回数组大小
+ * @return {int} *res           返回结果数组
+ */
+int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *returnSize) {
+
+}
 
 #endif  /* HASH_TABLE_METHOD_EN */
