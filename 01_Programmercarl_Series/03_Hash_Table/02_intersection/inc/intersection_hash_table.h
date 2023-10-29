@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:37:56
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-30 00:17:50
+ * @LastEditTime : 2023-10-30 00:31:38
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : 两个数组的交集 - 哈希表解法头文件
  */
 #ifndef __INTERSECTION_HASH_TABLE_H
 #define __INTERSECTION_HASH_TABLE_H
