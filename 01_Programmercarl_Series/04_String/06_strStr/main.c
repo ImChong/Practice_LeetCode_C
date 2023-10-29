@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 10:31:25
+ * @LastEditTime : 2023-10-29 10:40:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,18 +35,18 @@ int strStr(char *haystack, char *needle){
     int hLen = strlen(haystack);                    /* haystack长度 */
     int nLen = strlen(needle);                      /* needle长度 */
 
-    for (int i = 0; i + nLen <= hLen; i++) {
-        int j = 0;
-        for (; j < nLen; j++) {
-            if (haystack[i + j] != needle[j]) {
+    for (int i = 0; i + nLen <= hLen; i++) {        /* 遍历 haystack */
+        int j = 0;                                      /* 初始化 needle 下标 */
+        for (; j < nLen; j++) {                         /* 遍历 needle */
+            if (haystack[i + j] != needle[j]) {             /* 不匹配则退出 */
                 break;
             }
         }
-        if (j == nLen) {
+        if (j == nLen) {                                /* 匹配则返回 haystack 下标 */
             return i;
         }
     }
-    return -1;
+    return -1;                                      /* 未匹配则返回 -1 */
 }
 
 /**********************************************************************************/
