@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 10:30:45
+ * @LastEditTime : 2023-10-29 10:31:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -32,18 +32,18 @@
  * @return {int} index          匹配项下标
  */
 int strStr(char *haystack, char *needle){
-    int hLen = strlen(haystack);        /* haystack长度 */
-    int nLen = strlen(needle);          /* needle长度 */
+    int hLen = strlen(haystack);                    /* haystack长度 */
+    int nLen = strlen(needle);                      /* needle长度 */
 
-    for (int i = 0; i + nLen <= hLen; i++) {    /* 遍历字符串 */
-        int j = 0;                              /* 匹配指针 */
-        for (; j < nLen; j++) {                 /* 遍历匹配字符串 */
-            if (haystack[i + j] != needle[j]) {     /* 当前字符不匹配 */
-                break;                                  /* 跳出循环 */
+    for (int i = 0; i + nLen <= hLen; i++) {
+        int j = 0;
+        for (; j < nLen; j++) {
+            if (haystack[i + j] != needle[j]) {
+                break;
             }
         }
-        if (j == nLen) {                        /* 匹配指针指向匹配字符串的最后一位 */
-            return i;                               /* 返回匹配项下标 */
+        if (j == nLen) {
+            return i;
         }
     }
     return -1;
