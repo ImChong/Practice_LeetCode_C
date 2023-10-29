@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 10:15:06
+ * @LastEditTime : 2023-10-29 10:18:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -26,26 +26,26 @@
 /**
  * @description: 删除字符串中多余的空格
  * =================================================================================
- * @param {char} *s
+ * @param {char} *s     字符串地址
  * @return {void}
  */
 void removeExtraSpace(char *s) {
-    int start = 0;
-    int end = strlen(s) - 1;
-    while (s[start] == ' ') {
-        start++;
+    int start = 0;                                  /* 左指针 */
+    int end = strlen(s) - 1;                        /* 右指针 */
+    while (s[start] == ' ') {                       /* 左指针指向空格 */
+        start++;                                        /* 左指针右移 */
     }
-    while (s[end] == ' ') {
-        end--;
+    while (s[end] == ' ') {                         /* 右指针指向空格 */
+        end--;                                          /* 右指针左移 */
     }
-    int slow = 0;
-    for (int i = start; i <= end; i++) {
-        if (s[i] == ' ' && s[i + 1] == ' ') {
-            continue;
+    int slow = 0;                                   /* 慢指针 */
+    for (int i = start; i <= end; i++) {            /* 遍历字符串 */
+        if (s[i] == ' ' && s[i + 1] == ' ') {           /* 当前字符为空格，且下一个字符也为空格 */
+            continue;                                       /* 跳过当前字符 */
         }
-        s[slow++] = s[i];
+        s[slow++] = s[i];                               /* 将当前字符赋值给慢指针指向的字符，慢指针 + 1 */
     }
-    s[slow] = '\0';
+    s[slow] = '\0';                                 /* 将慢指针指向的字符赋值为字符串结束符 */
 }
 
 /**
