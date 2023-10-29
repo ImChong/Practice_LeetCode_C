@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:19:41
+ * @LastEditTime : 2023-10-29 11:30:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,9 +25,9 @@
 /**
  * @description: 删除链表的倒数第 N 个结点
  * =================================================================================
- * @param {ListNode*} head
- * @param {int} n
- * @return {struct ListNode} *head
+ * @param {struct ListNode*} head       链表头节点
+ * @param {int} n                       倒数第 n 个节点
+ * @return {struct ListNode} *head      返回链表头节点
  */
 struct ListNode *removeNthFromEnd(struct ListNode* head, int n){
     if (!head || n <= 0) {                      /* 如果头节点不存在 或 n <= 0 时 */
