@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 09:55:54
+ * @LastEditTime : 2023-10-29 10:15:06
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -58,7 +58,7 @@ char *reverseWords(char *s) {
     removeExtraSpace(s);
     reverseStringSection(s, 0, strlen(s) - 1);
     int slow = 0;
-    for (int i = 0; i < strlen(s); i++) {
+    for (int i = 0; i <= strlen(s); i++) {
         if (s[i] == ' ' || s[i] == '\0') {
             reverseStringSection(s, slow, i - 1);
             slow = i + 1;
