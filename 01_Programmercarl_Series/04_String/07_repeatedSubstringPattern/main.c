@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 23:49:40
+ * @LastEditTime : 2023-10-29 10:44:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,7 @@
  */
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 #include "commonHelper.h"
 
 /**********************************************************************************/
@@ -29,8 +30,21 @@
  * @return {bool}       是否为重复的子字符串
  */
 bool repeatedSubstringPattern(char *s){
-
-    /* TODO */
+    int sLen = strlen(s);
+    for (int i = 1; i * 2 <= sLen; i++) {
+        if (sLen % i == 0) {
+            bool match = true;
+            for (int j = i; j < sLen; j++) {
+                if (s[j] != s[j - i]) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) {
+                return true;
+            }
+        }
+    }
 
     return 0;
 }
