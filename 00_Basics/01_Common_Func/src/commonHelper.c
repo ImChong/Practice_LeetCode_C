@@ -31,4 +31,7 @@ void validateSingleValue(char testNum, int expect, int actual) {
     } else {
         printf("❌ Test %c Failed\n", testNum);
     }
+
+    printf("    - Expect: %d\n", expect);
+    printf("    - Actual: %d\n", actual);
 }
