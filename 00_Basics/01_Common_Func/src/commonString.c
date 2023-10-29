@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-28 23:28:53
+ * @LastEditTime : 2023-10-29 09:57:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -95,4 +95,7 @@ void validateString(char testNum, char *expect, char *actual) {
     } else {
         printf("❌ Test %c Failed\n", testNum);
     }
+
+    printf("    - expect: %s\n", expect);
+    printf("    - actual: %s\n", actual);
 }
