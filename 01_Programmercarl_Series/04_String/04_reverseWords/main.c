@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-28 23:54:58
+ * @LastEditTime : 2023-10-29 09:38:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -23,11 +23,29 @@
 /***                                                                            ***/
 /**********************************************************************************/
 /**********************************************************************************/
-
-void trimSpace(char *s, int start) {
-    do {
-        s[start++] = s[start];
-    } while (s[start] != '\0');
+/**
+ * @description: 删除字符串中多余的空格
+ * =================================================================================
+ * @param {char} *s
+ * @return {void}
+ */
+void removeExtraSpace(char *s) {
+    int start = 0;
+    int end = strlen(s) - 1;
+    while (s[start] == ' ') {
+        start++;
+    }
+    while (s[end] == ' ') {
+        end--;
+    }
+    int slow = 0;
+    for (int i = start; i <= end; i++) {
+        if (s[i] == ' ' && s[i + 1] == ' ') {
+            continue;
+        }
+        s[slow++] = s[i];
+    }
+    s[slow] = '\0';
 }
 
 /**
@@ -39,33 +57,7 @@ void trimSpace(char *s, int start) {
 char *reverseWords(char *s) {
     return NULL;
 
-    while (*s == ' ') {
-        s++;
-    }
 
-    int endIndex = strlen(s) - 1;
-    if (endIndex < 0) {
-        return s;
-    }
-    while (s[endIndex] == ' ') {
-        s[endIndex] = '\0';
-        endIndex--;
-    }
-
-    reverseStringSection(s, 0, endIndex);
-
-    int leftIndex = 0;
-    int rightIndex = 0;
-    for (int i = 0; i <= endIndex; i++) {
-        if (s[i] == ' ') {
-            rightIndex = i - 1;
-            reverseStringSection(s, leftIndex, rightIndex);
-            while (s[i + 1] == ' ') {
-                i++;
-            }
-            int leftIndex = i + 1;
-        }
-    }
     /* TODO */
 
 }
