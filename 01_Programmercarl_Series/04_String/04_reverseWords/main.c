@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 10:18:03
+ * @LastEditTime : 2023-10-29 10:20:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -55,16 +55,16 @@ void removeExtraSpace(char *s) {
  * @return {char} *ans      修改后的字符串
  */
 char *reverseWords(char *s) {
-    removeExtraSpace(s);
-    reverseStringSection(s, 0, strlen(s) - 1);
-    int slow = 0;
-    for (int i = 0; i <= strlen(s); i++) {
-        if (s[i] == ' ' || s[i] == '\0') {
-            reverseStringSection(s, slow, i - 1);
-            slow = i + 1;
+    removeExtraSpace(s);                                /* 删除多余的空格 */
+    reverseStringSection(s, 0, strlen(s) - 1);          /* 反转整个字符串 */
+    int slow = 0;                                       /* 慢指针 */
+    for (int i = 0; i <= strlen(s); i++) {              /* 遍历字符串，注意是 <=，包含了'\0'位 */
+        if (s[i] == ' ' || s[i] == '\0') {                  /* 当前字符为空格或者'\0'位 */
+            reverseStringSection(s, slow, i - 1);               /* 反转单词 */
+            slow = i + 1;                                       /* 慢指针指向下一个单词的起始位置 */
         }
     }
-    return s;
+    return s;                                           /* 返回修改后的字符串 */
 }
 
 /**********************************************************************************/
