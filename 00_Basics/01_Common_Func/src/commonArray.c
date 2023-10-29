@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 10:06:12
+ * @LastEditTime : 2023-10-29 11:20:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -27,11 +27,14 @@
  * @return {void}
  */
 void printArray(int *arr, int arrSize) {
-    printf("Arr: ");
+    printf("Arr: [");
     for (int i = 0; i < arrSize; i++) {
-        printf("%d ", arr[i]);
+        printf("%d", arr[i]);
+        if (i < arrSize - 1) {
+            printf(", ");
+        }
     }
-    printf("\n");
+    printf("]\n");
 }
 
 /**
