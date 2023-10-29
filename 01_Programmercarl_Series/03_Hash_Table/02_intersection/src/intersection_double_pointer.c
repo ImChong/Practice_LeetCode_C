@@ -53,12 +53,12 @@ int cmp(const void *a, const void *b) {
  * 函数使用快速排序算法对两个数组进行排序，然后使用三个索引i、j和k来遍历两个数组并找到相同的元素。
  * 最后，函数返回一个指向结果数组的指针，并将结果数组的大小存储在returnSize指针所指向的位置。
  * =================================================================================
- * @param {int} *numsA
- * @param {int} numsASize
- * @param {int} *numsB
- * @param {int} numsBSize
- * @param {int} *returnSize
- * @return {int} *res
+ * @param {int} *numsA          数组1
+ * @param {int} numsASize       数组1大小
+ * @param {int} *numsB          数组2
+ * @param {int} numsBSize       数组2大小
+ * @param {int} *returnSize     返回数组大小
+ * @return {int} *res           返回结果数组
  */
 int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *returnSize) {
     qsort(numsA, numsASize, sizeof(int), cmp);          /* 将数组1排序 */
