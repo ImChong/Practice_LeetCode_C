@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 22:50:46
+ * @LastEditTime : 2023-10-29 10:06:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -113,6 +113,9 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
         }
     }
     printf("✅ Test %c Passed\n", testNum);
+
+    printf("    - Expect: "); printArray(expectArr, expectLen);
+    printf("    - Actual: "); printArray(actualArr, actualLen);
 }
 
 /**
@@ -154,4 +157,7 @@ void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *ex
     } else {
         printf("❌ Test %c failed\n", testNum);
     }
+
+    printf("    - Expect: "); print2DArray(expect2DArr, expectRtnSize, expectRtnColSize);
+    printf("    - Actual: "); print2DArray(actual2DArr, actualRtnSize, actualRtnColSize);
 }
