@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-30 01:36:48
+ * @LastEditTime : 2023-10-31 00:18:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,7 +25,7 @@
  * @return {int} *res           返回结果数组
  */
 int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *returnSize) {
-
+    /* TODO */
 }
 
 #endif  /* HASH_TABLE_METHOD_EN */

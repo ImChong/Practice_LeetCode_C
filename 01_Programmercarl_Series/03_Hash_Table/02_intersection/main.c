@@ -3,15 +3,19 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-30 00:29:13
+ * @LastEditTime : 2023-10-31 00:16:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 349. 两个数组的交集：https://leetcode.cn/problems/intersection-of-two-arrays/
  * https://programmercarl.com/0349.%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86.html
  */
+/* 标准头文件 */
+#include <stdio.h>
 #include <stdlib.h>
-#include "commonArray.h"            /* 00_Basics\01_Common_Func\inc\commonArray.h */
+/* 通用头文件 */
+#include "commonArray.h"
+/* 解题方法配置文件 */
 #include "methodCfg.h"
 #if DOUBLE_POINTER_METHOD_EN
 #include "intersection_double_pointer.h"
@@ -118,6 +122,11 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
+#if DOUBLE_POINTER_METHOD_EN
+    printf("DOUBLE_POINTER_METHOD_EN\n");
+#elif HASH_TABLE_METHOD_EN
+    printf("HASH_TABLE_METHOD_EN\n");
+#endif
     test_1();
     test_2();
     test_3();
