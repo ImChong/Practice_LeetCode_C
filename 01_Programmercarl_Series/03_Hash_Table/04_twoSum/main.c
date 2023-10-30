@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-10 23:39:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:31:02
+ * @LastEditTime : 2023-10-31 00:34:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,9 +11,12 @@
  * https://programmercarl.com/0001.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.html
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0001.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.md
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
+/* 通用头文件 */
 #include "commonArray.h"
+/* 解题方法配置文件 */
 #include "methodCfg.h"
 #if DOUBLE_POINTER_METHOD_EN
 #include "twoSum_double_pointer.h"
