@@ -3,15 +3,22 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-30 23:45:33
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-31 00:00:13
+ * @LastEditTime : 2023-10-31 00:07:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 快乐数 - 双指针解法源文件
  */
+
+/* 解题方法配置文件 */
 #include "methodCfg.h"
 
 #if FAST_SLOW_POINTER_METHOD_EN
+/* 标准头文件 */
+#include <stdbool.h>
+/* 通用头文件 */
+#include "commonFunc.h"
+/* 本文件头文件 */
 #include "isHappy_double_pointer.h"
 
 /**********************************************************************************/
