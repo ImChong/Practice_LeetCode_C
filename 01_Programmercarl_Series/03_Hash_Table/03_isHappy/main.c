@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-30 23:52:08
+ * @LastEditTime : 2023-10-30 23:56:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,34 +22,13 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
+#include "commonFunc.h"
 #include "methodCfg.h"
 #if FAST_SLOW_POINTER_METHOD_EN
 #include "isHappy_double_pointer.h"
 #elif HASH_TABLE_METHOD_EN
 #include "isHappy_hash_table.h"
 #endif
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 UTILITY FUNCTIONS                              */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 获取下一数字
- * getNext函数用于计算一个数字各位数字平方和。
- * =================================================================================
- * @param {int} n       当前数字
- * @return {int}        下一数字
- */
-int getNext(int n) {
-    int sum = 0;            /* 计算总和 */
-    while (n > 0) {         /* 当数字大于0时保持循环 */
-        int d = n % 10;         /* 获取个位的数值 */
-        sum += d * d;           /* 总和加上个位数值的平方 */
-        n /= 10;                /* 去除个位的数字 */
-    }
-    return sum;             /* 返回总和 */
-}
 
 /**********************************************************************************/
 /**********************************************************************************/
