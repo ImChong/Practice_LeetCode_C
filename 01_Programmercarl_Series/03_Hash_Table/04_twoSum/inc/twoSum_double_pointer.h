@@ -3,9 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-31 00:22:58
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-31 00:23:47
+ * @LastEditTime : 2023-10-31 00:26:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 两数之和 - 双指针法头文件
  */
+#ifndef __TWO_SUM_DOUBLE_POINTER_H
+#define __TWO_SUM_DOUBLE_POINTER_H
+
+
+
+#endif  /* __TWO_SUM_DOUBLE_POINTER_H */

@@ -9,3 +9,9 @@
  * =================================================================================
  * @Description  : 两数之和 - 哈希表法头文件
  */
+#ifndef __TWO_SUM_HASH_TABLE_H
+#define __TWO_SUM_HASH_TABLE_H
+
+
+
+#endif  /* __TWO_SUM_HASH_TABLE_H */
