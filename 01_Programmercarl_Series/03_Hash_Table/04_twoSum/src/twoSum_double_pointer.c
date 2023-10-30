@@ -3,12 +3,13 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-31 00:23:15
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-31 00:34:26
+ * @LastEditTime : 2023-10-31 00:35:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 两数之和 - 双指针法源文件
  */
+/* 解题方法配置文件 */
 #include "methodCfg.h"
 #if DOUBLE_POINTER_METHOD_EN
 /* 标准头文件 */
