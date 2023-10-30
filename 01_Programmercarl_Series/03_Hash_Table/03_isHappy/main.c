@@ -21,7 +21,7 @@
  */
 #include <stdio.h>
 #include <stdbool.h>
-#include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
+#include "commonHelper.h"
 #include "commonFunc.h"
 #include "methodCfg.h"
 #if FAST_SLOW_POINTER_METHOD_EN
@@ -29,15 +29,6 @@
 #elif HASH_TABLE_METHOD_EN
 #include "isHappy_hash_table.h"
 #endif
-
-
-/* 快乐数 - 哈希表法 */
-/* ============================================================================== */
-/* ============================================================================== */
-#if HASH_TABLE_METHOD_EN
-
-#endif  /* HASH_TABLE_METHOD_EN */
-
 
 /**********************************************************************************/
 /*                                                                                */
