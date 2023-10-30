@@ -10,7 +10,6 @@
  * @Description  : 两个数组的交集 - 哈希表解法源文件
  */
 #include "methodCfg.h"
-
 #if HASH_TABLE_METHOD_EN
 #include "intersection_hash_table.h"
 

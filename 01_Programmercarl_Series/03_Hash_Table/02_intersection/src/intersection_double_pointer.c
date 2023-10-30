@@ -1,18 +1,20 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\intersection_double_pointer.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\src\intersection_double_pointer.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:31
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-30 00:31:08
+ * @LastEditTime : 2023-10-31 00:19:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 两个数组的交集 - 双指针解法源文件
  */
-#include <stdlib.h>
-#include "methodCfg.h"
 
+#include "methodCfg.h"
 #if DOUBLE_POINTER_METHOD_EN
+/* 标准头文件 */
+#include <stdlib.h>
+/* 本文件头文件 */
 #include "intersection_double_pointer.h"
 
 /**********************************************************************************/
