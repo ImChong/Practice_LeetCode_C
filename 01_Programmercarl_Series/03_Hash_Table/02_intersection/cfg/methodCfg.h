@@ -12,6 +12,11 @@
 #ifndef __METHOD_CFG_H
 #define __METHOD_CFG_H
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO CONSTANTS                                 */
+/*                                                                                */
+/**********************************************************************************/
 #define DOUBLE_POINTER_METHOD_EN    1      /* 双指针法求解  1: enable, 0: disable */
 #define HASH_TABLE_METHOD_EN        0      /* 哈希表法求解  1: enable, 0: disable */    /* TODO */
 
