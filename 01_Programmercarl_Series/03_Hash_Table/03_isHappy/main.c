@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:28:31
+ * @LastEditTime : 2023-10-30 23:52:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,15 +22,12 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                MACRO CONSTANTS                                 */
-/*                                                                                */
-/**********************************************************************************/
-/* 解法宏开关，一次只能开启一个，否则会报重复定义的编译错误 */
-#define HASH_TABLE_METHOD_EN            1   /* 哈希表法 */
-#define FAST_SLOW_POINTER_METHOD_EN     0   /* 快慢指针法 */
+#include "methodCfg.h"
+#if FAST_SLOW_POINTER_METHOD_EN
+#include "isHappy_double_pointer.h"
+#elif HASH_TABLE_METHOD_EN
+#include "isHappy_hash_table.h"
+#endif
 
 /**********************************************************************************/
 /*                                                                                */
