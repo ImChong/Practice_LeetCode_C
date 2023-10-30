@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-31 00:11:21
+ * @LastEditTime : 2023-10-31 00:12:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -109,6 +109,11 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
+#if FAST_SLOW_POINTER_METHOD_EN
+    printf("FAST_SLOW_POINTER_METHOD_EN\n");
+#elif HASH_TABLE_METHOD_EN
+    printf("HASH_TABLE_METHOD_EN\n");
+#endif
     test_1();
     test_2();
     test_3();
