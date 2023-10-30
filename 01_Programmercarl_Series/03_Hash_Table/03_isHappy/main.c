@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-31 00:00:19
+ * @LastEditTime : 2023-10-31 00:11:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,10 +19,13 @@
  * 然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。
  * 如果这个过程 结果为 1，那么这个数就是快乐数。
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdbool.h>
+/* 通用头文件 */
 #include "commonHelper.h"
 #include "commonFunc.h"
+/* 解题方法配置文件 */
 #include "methodCfg.h"
 #if FAST_SLOW_POINTER_METHOD_EN
 #include "isHappy_double_pointer.h"
