@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-30 23:42:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-30 23:44:19
+ * @LastEditTime : 2023-10-31 00:10:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,7 +17,7 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define HASH_TABLE_METHOD_EN            1   /* 哈希表法 */
-#define FAST_SLOW_POINTER_METHOD_EN     0   /* 快慢指针法 */
+#define HASH_TABLE_METHOD_EN            1       /* 哈希表法 */
+#define FAST_SLOW_POINTER_METHOD_EN     0       /* 快慢指针法 */
 
 #endif  /* __METHOD_CFG_H */
