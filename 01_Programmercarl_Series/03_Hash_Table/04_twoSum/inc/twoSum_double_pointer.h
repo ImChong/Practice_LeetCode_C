@@ -12,6 +12,6 @@
 #ifndef __TWO_SUM_DOUBLE_POINTER_H
 #define __TWO_SUM_DOUBLE_POINTER_H
 
-
+int *twoSum(int *nums, int numsSize, int target, int *returnSize);      /* 两数之和 - 双指针法 */
 
 #endif  /* __TWO_SUM_DOUBLE_POINTER_H */
