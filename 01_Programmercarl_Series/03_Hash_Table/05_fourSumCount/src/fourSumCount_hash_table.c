@@ -74,5 +74,4 @@ int fourSumCount(int *nums1, int nums1Size, int *nums2, int nums2Size,
     return count;                                                                   /* 返回计数器 */
 }
 
-
 #endif /* HASH_TABLE_METHOD_EN */
