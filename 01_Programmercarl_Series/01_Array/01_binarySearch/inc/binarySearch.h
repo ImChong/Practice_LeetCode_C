@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-31 11:54:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-31 11:55:25
+ * @LastEditTime : 2023-10-31 12:10:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,6 @@
 #ifndef __BINARY_SEARCH_H
 #define __BINARY_SEARCH_H
 
-int binarySearch(int *nums, int numsSize, int target);
+int binarySearch(int *nums, int numsSize, int target);      /* 二分查找 */
 
 #endif  /* __BINARY_SEARCH_H */
