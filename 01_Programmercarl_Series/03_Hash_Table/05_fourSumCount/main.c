@@ -56,7 +56,8 @@
  * @param {int} nums4Size       数组4大小
  * @return {int}                四元组之和为 0 的不同元组的个数
  */
-int fourSumCount(int *nums1, int nums1Size, int *nums2, int nums2Size, int *nums3, int nums3Size, int *nums4, int nums4Size) {
+int fourSumCount(int *nums1, int nums1Size, int *nums2, int nums2Size,
+                    int *nums3, int nums3Size, int *nums4, int nums4Size) {
     struct HashTable *hashTable = createHashTable(2 * nums1Size * nums2Size);       /* 创建哈希表 */
     for (int i = 0; i < nums1Size; i++) {                                           /* 遍历数组1 */
         for (int j = 0; j < nums2Size; j++) {                                           /* 遍历数组2 */
