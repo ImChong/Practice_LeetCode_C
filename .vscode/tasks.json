@@ -34,6 +34,18 @@
                 "${fileDirname}/main.exe"                                           /* "${fileDirname}/${fileBasenameNoExtension}.exe" */
             ]
         },
+        /* 使用 python 编译当前活跃文件 */
+        {
+            "label": "Build Current File - Python",
+            "detail": "Compile Current File by Python File.",
+            "type": "shell",
+            "linux": {
+                "command": "python ${workspaceFolder}/.vscode/build.py /usr/bin/gcc ${workspaceFolder} ${fileDirname}"
+            },
+            "windows": {
+                "command": "python ${workspaceFolder}/.vscode/build.py D:/Developments/msys64/mingw64/bin/gcc.exe ${workspaceFolder} ${fileDirname}"
+            }
+        },
         /* 运行当前活跃文件 */
         {
             "label": "Run Current File",                                            /* 任务名称 */
@@ -58,18 +70,6 @@
             ],
             "group": "build",                                                       /* 此处将此任务组设置为默认任务 */
             "detail": "Compile & Run Current File"                                  /* 任务描述 */
-        },
-        /* 使用 python 编译当前活跃文件 */
-        {
-            "label": "Build Current File - Python",
-            "detail": "Compile Current File by Python File.",
-            "type": "shell",
-            "linux": {
-                "command": "python ${workspaceFolder}/.vscode/build.py /usr/bin/gcc ${workspaceFolder} ${fileDirname}"
-            },
-            "windows": {
-                "command": "python ${workspaceFolder}/.vscode/build.py D:/Developments/msys64/mingw64/bin/gcc.exe ${workspaceFolder} ${fileDirname}"
-            }
         }
     ]
 }
