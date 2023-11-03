@@ -46,7 +46,7 @@
                 "command": "python ${workspaceFolder}/.vscode/build.py D:/Developments/msys64/mingw64/bin/gcc.exe ${workspaceFolder} ${fileDirname}"
             }
         },
-        /* 运行当前活跃文件 */
+        /* 运行当前活跃文件编译生成的可执行文件 */
         {
             "label": "Run Current File",                                            /* 任务名称 */
             "detail": "Run Current Files.",                                         /* 任务描述 */
@@ -60,7 +60,7 @@
                 "command": "${fileDirname}/main.exe"                                /* 指定运行文件 */
             }
         },
-        /* 编译并运行当前活跃文件 */
+        /* 编译并运行当前活跃文件编译生成的可执行文件 */
         {
             "label": "Build & Run Current File",                                    /* 任务名称 */
             "dependsOrder": "sequence",                                             /* 依赖顺序 */
