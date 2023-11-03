@@ -3,7 +3,7 @@
     "tasks": [
         /* 运行前请确保当前活跃文件为所期望运行的.c文件 */
 
-        /* 编译当前活跃文件 */
+        /* 使用 gcc 编译当前活跃文件 */
         {
             "label": "Build Current File",                                          /* 任务名称 */
             "detail": "Compile Current File.",                                      /* 任务描述 */
