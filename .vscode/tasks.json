@@ -60,6 +60,12 @@
             ],
             "group": "build",                                                       /* 此处将此任务组设置为默认任务 */
             "detail": "Compile & Run Current File"                                  /* 任务描述 */
+        },
+        {
+            "label": "Python Build Current File",
+            "command": "python ${workspaceFolder}/.vscode/build.py",
+            "type": "shell",
+            "detail": "Compile Current File by Python File.",
         }
     ]
 }
