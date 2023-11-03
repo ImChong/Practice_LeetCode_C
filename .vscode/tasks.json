@@ -43,10 +43,10 @@
                 "cwd": "${fileDirname}"                                             /* 指定工作目录 */
             },
             "detail": "Run Current Files.",                                         /* 任务描述 */
-            "linux": {        /* Linux下的运行指令 */
+            "linux": {          /* Linux下的运行指令 */
                 "command": "${fileDirname}/main.exe",                               /* 指定运行文件 */
             },
-            "windows": {    /* Windows下的运行指令 */
+            "windows": {        /* Windows下的运行指令 */
                 "command": "${fileDirname}/main.exe"                                /* 指定运行文件 */
             }
         },
