@@ -23,7 +23,8 @@
                     -o
                     main.exe
                     &&
-                    $dirmain.exe)
+                    $dirmain.exe
+                )
             else
                 (gcc
                     -I$workspaceRoot/00_Basics/01_Common_Func/inc/
@@ -33,7 +34,8 @@
                     -o
                     main.exe
                     &&
-                    $dirmain.exe)
+                    $dirmain.exe
+                )
         */
     }
 }
