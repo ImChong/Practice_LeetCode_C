@@ -7,7 +7,6 @@
         {
             "label": "Build Current File",                                          /* 任务名称 */
             "command": "",                                                          /* 初始化指令 */
-            "args": [],                                                             /* 初始化参数 */
             "options": {
                 "cwd": "${fileDirname}"                                             /* 指定工作目录 */
             },
@@ -17,38 +16,24 @@
             "detail": "Compile Current File.",                                      /* 任务描述 */
             "linux": {        /* Linux下的编译指令 */
                 "command": "/usr/bin/gcc",                                          /* 指定编译器：修改至指定地址 */
-                "args": [
-                    "-fdiagnostics-color=always",                                   /* 使gcc输出带颜色 */
-                    "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",           /* 常用头文件路径 */
-                    "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/commonDef/", /* 常用头文件路径 */
-                    "-I${fileDirname}/cfg/",                                        /* 当前活跃文件的配置文件所在目录 */
-                    "-I${fileDirname}/inc/",                                        /* 当前活跃文件的头文件所在目录 */
-                    "-I${fileDirname}",                                             /* 当前活跃文件所在目录 */
-                    "-g",                                                           /* 生成调试信息 */
-                    "${workspaceFolder}/00_Basics/01_Common_Func/src/*.c",          /* 将 Common_Func/src/ 目录下所有.c文件同步编译 */
-                    "${fileDirname}/src/*.c",                                       /* 将 src/ 目录下所有.c文件同步编译 */
-                    "main.c",                                                       /* 将当前 main.c 文件同步编译 */
-                    "-o",                                                           /* 指定输出文件名 */
-                    "${fileDirname}/main.exe"                                       /* 输出文件位置及文件名 */
-                ]
             },
             "windows": {    /* Windows下的编译指令 */
                 "command": "D:/Developments/msys64/mingw64/bin/gcc.exe",            /* 指定编译器：修改至指定地址 */
-                "args": [
-                    "-fdiagnostics-color=always",                                   /* 使gcc输出带颜色 */
-                    "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",           /* 常用头文件路径 */
-                    "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/commonDef/", /* 常用头文件路径 */
-                    "-I${fileDirname}/cfg/",                                        /* 当前活跃文件的配置文件所在目录 */
-                    "-I${fileDirname}/inc/",                                        /* 当前活跃文件的头文件所在目录 */
-                    "-I${fileDirname}",                                             /* 当前活跃文件所在目录 */
-                    "-g",                                                           /* 生成调试信息 */
-                    "${workspaceFolder}/00_Basics/01_Common_Func/src/*.c",          /* 将 Common_Func/src/ 目录下所有.c文件同步编译 */
-                    "${fileDirname}/src/*.c",                                       /* 将 src/ 目录下所有.c文件同步编译 */
-                    "main.c",                                                       /* 将当前 main.c 文件同步编译 */
-                    "-o",                                                           /* 指定输出文件名 */
-                    "${fileDirname}/main.exe"                                       /* "${fileDirname}/${fileBasenameNoExtension}.exe" */
-                ]
-            }
+            },
+            "args": [
+                "-fdiagnostics-color=always",                                       /* 使gcc输出带颜色 */
+                "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",               /* 常用头文件路径 */
+                "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/commonDef/",     /* 常用头文件路径 */
+                "-I${fileDirname}/cfg/",                                            /* 当前活跃文件的配置文件所在目录 */
+                "-I${fileDirname}/inc/",                                            /* 当前活跃文件的头文件所在目录 */
+                "-I${fileDirname}",                                                 /* 当前活跃文件所在目录 */
+                "-g",                                                               /* 生成调试信息 */
+                "${workspaceFolder}/00_Basics/01_Common_Func/src/*.c",              /* 将 Common_Func/src/ 目录下所有.c文件同步编译 */
+                "${fileDirname}/src/*.c",                                           /* 将 src/ 目录下所有.c文件同步编译 */
+                "main.c",                                                           /* 将当前 main.c 文件同步编译 */
+                "-o",                                                               /* 指定输出文件名 */
+                "${fileDirname}/main.exe"                                           /* "${fileDirname}/${fileBasenameNoExtension}.exe" */
+            ]
         },
         /* 运行当前活跃文件 */
         {
