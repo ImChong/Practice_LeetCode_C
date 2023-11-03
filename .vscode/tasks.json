@@ -59,7 +59,7 @@
             "group": "build",                                                       /* 此处将此任务组设置为默认任务 */
             "detail": "Compile & Run Current File"                                  /* 任务描述 */
         },
-        /* 使用python编译当前活跃文件 */
+        /* 使用 python 编译当前活跃文件 */
         {
             "label": "Build Current File - Python",
             "type": "shell",
