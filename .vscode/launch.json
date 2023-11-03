@@ -18,7 +18,7 @@
             "environment": [],                                                  /* 环境变量 */
             "externalConsole": false,                                           /* 是否使用外部控制台 */
             "MIMode": "gdb",                                                    /* 调试器类型 */
-            "preLaunchTask": "Build Current File",                              /* 运行前执行的任务 */
+            "preLaunchTask": "Build Current File - Python",                     /* 运行前执行的任务 */
             "miDebuggerPath": "",                                               /* 将此处修改为本地 gdb 地址*/
             "setupCommands": [                                                  /* 额外的调试器命令 */
                 {
