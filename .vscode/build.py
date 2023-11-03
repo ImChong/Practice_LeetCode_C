@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-11-04 01:07:58
+LastEditTime : 2023-11-04 01:11:54
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -13,7 +13,7 @@ import subprocess
 import sys
 
 if __name__ == "__main__":
-    print("Hello World!")
+    print("Start compiling main.c ...")
     print("argv: ", sys.argv)
 
     # 如果没有 ${fileDirname}/main.c 则报错
@@ -42,3 +42,5 @@ if __name__ == "__main__":
         #     "main.c",
         #     "-o",
         #     "${fileDirname}/main.exe"
+
+    print("Compile finished successfully!")
