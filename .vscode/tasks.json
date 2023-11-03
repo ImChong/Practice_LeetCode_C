@@ -33,7 +33,7 @@
                 "main.c",                                                           /* 将当前 main.c 文件同步编译 */
                 "-o",                                                               /* 指定输出文件名 */
                 "${fileDirname}/main.exe"                                           /* "${fileDirname}/${fileBasenameNoExtension}.exe" */
-            ],
+            ]
         },
         /* 运行当前活跃文件 */
         {
@@ -61,10 +61,17 @@
             "group": "build",                                                       /* 此处将此任务组设置为默认任务 */
             "detail": "Compile & Run Current File"                                  /* 任务描述 */
         },
+        /* 使用python编译当前活跃文件 */
         {
-            "label": "Python Build Current File",
-            "command": "python ${workspaceFolder}/.vscode/build.py",
+            "label": "Build Current File - Python",
             "type": "shell",
+            "command": "",
+            "linux": {
+                "command": "python ${workspaceFolder}/.vscode/build.py /usr/bin/gcc ${workspaceFolder} ${fileDirname}"
+            },
+            "windows": {
+                "command": "python ${workspaceFolder}/.vscode/build.py D:/Developments/msys64/mingw64/bin/gcc.exe ${workspaceFolder} ${fileDirname}"
+            },
             "detail": "Compile Current File by Python File.",
         }
     ]
