@@ -6,14 +6,13 @@
         /* 编译当前活跃文件 */
         {
             "label": "Build Current File",                                          /* 任务名称 */
-            "command": "",                                                          /* 初始化指令 */
+            "detail": "Compile Current File.",                                      /* 任务描述 */
             "options": {
                 "cwd": "${fileDirname}"                                             /* 指定工作目录 */
             },
             "problemMatcher": [
                 "$gcc"                                                              /* 指定错误匹配模式 */
             ],
-            "detail": "Compile Current File.",                                      /* 任务描述 */
             "linux": {
                 "command": "/usr/bin/gcc",                                          /* Linux下的编译器地址 */
             },
@@ -38,11 +37,10 @@
         /* 运行当前活跃文件 */
         {
             "label": "Run Current File",                                            /* 任务名称 */
-            "command": "",                                                          /* 初始化指令 */
+            "detail": "Run Current Files.",                                         /* 任务描述 */
             "options": {
                 "cwd": "${fileDirname}"                                             /* 指定工作目录 */
             },
-            "detail": "Run Current Files.",                                         /* 任务描述 */
             "linux": {          /* Linux下的运行指令 */
                 "command": "${fileDirname}/main.exe",                               /* 指定运行文件 */
             },
@@ -65,7 +63,6 @@
         {
             "label": "Build Current File - Python",
             "type": "shell",
-            "command": "",
             "linux": {
                 "command": "python ${workspaceFolder}/.vscode/build.py /usr/bin/gcc ${workspaceFolder} ${fileDirname}"
             },
