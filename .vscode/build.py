@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-11-04 20:20:24
+LastEditTime : 2023-11-04 20:21:33
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -25,8 +25,12 @@ if __name__ == "__main__":
 
     if os.path.isfile(filePath):
         print("main.c exists!")
+        print("Compile finished successfully!")
+
     else:
         print("main.c not exists!")
+        print("Compile failed!")
+
 
     # 如果没有 ${fileDirname}/main.c 则报错
 
@@ -55,4 +59,3 @@ if __name__ == "__main__":
         #     "-o",
         #     "${fileDirname}/main.exe"
 
-    print("Compile finished successfully!")
