@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 21:26:12
+ * @LastEditTime : 2023-11-05 21:41:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,6 +30,10 @@
  */
 void test_1(void) {
     /* 实际结果 */
+    int n = 3;
+    int returnSize = 0;
+    int *returnColumnSizes = NULL;
+    int **ans = generateMatrix(n, &returnSize, &returnColumnSizes);
 
     /* 期望结果 */
 
