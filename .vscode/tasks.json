@@ -44,9 +44,7 @@
             "windows": {
                 "command": "python ${workspaceFolder}/.vscode/build.py D:/Developments/msys64/mingw64/bin/gcc.exe ${workspaceFolder} ${fileDirname}"
             },
-            "problemMatcher": [
-                "$gcc"                                                              /* 指定错误匹配模式 */
-            ],
+            "problemMatcher": [],
         },
         /* 运行：运行当前活跃文件编译生成的可执行文件 */
         {
@@ -67,8 +65,8 @@
             "label": "Build & Run Current File",                                    /* 任务名称 */
             "dependsOrder": "sequence",                                             /* 依赖顺序 */
             "dependsOn": [
-                "Build Current File",       /* 编译当前活跃文件 */
-                "Run Current File"          /* 运行当前活跃文件 */
+                "Build Current File - Python",      /* 编译当前活跃文件 */
+                "Run Current File"                  /* 运行当前活跃文件 */
             ],
             "group": "build",                                                       /* 此处将此任务组设置为默认任务 */
             "detail": "Compile & Run Current File"                                  /* 任务描述 */
