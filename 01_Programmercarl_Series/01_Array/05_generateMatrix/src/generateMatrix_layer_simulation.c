@@ -9,7 +9,9 @@
  * =================================================================================
  * @Description  : 螺旋矩阵II头文件 - 按层模拟法
  */
+/* 解题方法配置文件 */
 #include "methodCfg.h"
+/* 题解头文件 */
 #include "generateMatrix.h"
 
 #if LAYER_SIMULATION_METHOD_EN
