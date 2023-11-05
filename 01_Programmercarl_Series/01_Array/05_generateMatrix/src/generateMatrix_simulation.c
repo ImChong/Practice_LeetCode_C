@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 22:24:48
+ * @LastEditTime : 2023-11-05 22:52:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,33 +30,33 @@
  * @return {int} **ans                  返回数组
  */
 int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
-    int maxNum = n * n;
-    int curNum = 1;
+    int maxNum = n * n;                                                                 /* 最大值 */
+    int curNum = 1;                                                                     /* 当前值 */
 
     /* 初始化二维数组 */
-    int **matrix = (int **)malloc(sizeof(int *) * n);
-    *returnSize = n;
-    *returnColumnSizes = (int *)malloc(sizeof(int) * n);
-    for (int i = 0; i < n; i++) {
-        matrix[i] = (int *)calloc(n, sizeof(int));
-        (*returnColumnSizes)[i] = n;
+    int **matrix = (int **)malloc(sizeof(int *) * n);                                   /* 二维数组 */
+    *returnSize = n;                                                                    /* 返回数组大小 */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * n);                                /* 返回数组列大小 */
+    for (int i = 0; i < n; i++) {                                                       /* 二维数组初始化 */
+        matrix[i] = (int *)calloc(n, sizeof(int));                                          /* 将每一行都初始化为0 */
+        (*returnColumnSizes)[i] = n;                                                        /* 将每一行的列大小都初始化为n */
     }
 
-    int row = 0, column = 0;
-    int directions[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};     /* 右下左上 */
-    int directionIndex = 0;
-    while (curNum <= maxNum) {
-        matrix[row][column] = curNum;
-        curNum++;
-        int nextRow = row + directions[directionIndex][0];
-        int nextColumn = column + directions[directionIndex][1];
-        if (nextRow < 0 || nextRow >= n || nextColumn < 0 || nextColumn >= n || matrix[nextRow][nextColumn] != 0) {
-            directionIndex = (directionIndex + 1) % 4;
+    int row = 0, column = 0;                                                            /* 行、列 */
+    int directions[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};                          /* 方向 */
+    int directionIndex = 0;                                                             /* 方向索引 */
+    while (curNum <= maxNum) {                                                          /* 当前值小于等于最大值 */
+        matrix[row][column] = curNum;                                                       /* 赋值 */
+        curNum++;                                                                           /* 当前值自增 */
+        int nextRow = row + directions[directionIndex][0];                                  /* 下一行 */
+        int nextColumn = column + directions[directionIndex][1];                            /* 下一列 */
+        if (nextRow < 0 || nextRow >= n || nextColumn < 0 || nextColumn >= n || matrix[nextRow][nextColumn] != 0) {     /* 越界或者已经赋值 */
+            directionIndex = (directionIndex + 1) % 4;                                          /* 方向索引自增 */
         }
-        row = row + directions[directionIndex][0];
-        column = column + directions[directionIndex][1];
+        row = row + directions[directionIndex][0];                                          /* 行自增 */
+        column = column + directions[directionIndex][1];                                    /* 列自增 */
     }
-    return matrix;
+    return matrix;                                                                      /* 返回二维数组 */
 }
 
 #endif /* SIMULATION_METHOD_EN */
