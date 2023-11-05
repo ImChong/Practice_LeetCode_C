@@ -3,13 +3,16 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:24
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 13:19:58
+ * @LastEditTime : 2023-11-05 13:33:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  :
  */
+#include "methodCfg.h"
+#include "generateMatrix.h"
 
+#if LAYER_SIMULATION_METHOD_EN
 /**********************************************************************************/
 /**********************************************************************************/
 /***                                                                            ***/
@@ -29,3 +32,5 @@ int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
     /* TODO */
     return 0;
 }
+
+#endif /* LAYER_SIMULATION_METHOD_EN */
