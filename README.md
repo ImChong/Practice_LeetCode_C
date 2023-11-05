@@ -34,7 +34,7 @@ C language leetcode practice guide:
 > Ctrl+Shift+B
 > ```
 >
-> for the code to accomplish the above behavior please see [source code](.vscode/tasks.json).
+> for the code to accomplish the above behavior please see [source code](.vscode/tasks.json) and [python gcc build code](.vscode/build.py).
 
 ### VSCode Extension - Code Runner
 
