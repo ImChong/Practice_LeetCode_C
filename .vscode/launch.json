@@ -11,7 +11,7 @@
             "name": "(gdb) Debug Main",                                         /* 任务名称 */
             "type": "cppdbg",                                                   /* 调试器类型 */
             "request": "launch",                                                /* 请求类型 */
-            "program": "",                                                      /* 指定运行文件 */
+            "program": "${fileDirname}/main.exe",                               /* 指定运行文件 */
             "args": [],                                                         /* 运行参数 */
             "stopAtEntry": true,                                                /* 运行后是否停在入口处 */
             "cwd": "${fileDirname}",                                            /* 指定工作目录 */
@@ -28,11 +28,9 @@
                 }
             ],
             "linux": {      /* Linux下的运行指令 */
-                "program": "${fileDirname}/main.exe",
                 "miDebuggerPath": "/usr/bin/gdb"
             },
             "windows": {    /* Windows下的运行指令 */
-                "program": "${fileDirname}/main.exe",
                 "miDebuggerPath": "D:/Developments/msys64/mingw64/bin/gdb.exe"
             },
         }
