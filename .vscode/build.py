@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-11-05 11:59:08
+LastEditTime : 2023-11-05 12:28:07
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -16,16 +16,11 @@ import subprocess
 if __name__ == "__main__":
     print("Start compiling main.c ...")
 
-    # print("sys.argv = ", sys.argv)
     # sys.argv[0] = ${workspaceFolder}/.vscode/build.py
-    # sys.argv[1] = gcc path
-    # sys.argv[2] = ${workspaceFolder}
-    # sys.argv[3] = ${fileDirname}
-
-    gccPath = sys.argv[1]
-    workspacePath = sys.argv[2]
-    filePath = sys.argv[3]
-    mainPath = filePath + "/main.c"
+    gccPath = sys.argv[1]               # sys.argv[1] = gcc path
+    workspacePath = sys.argv[2]         # sys.argv[2] = ${workspaceFolder}
+    filePath = sys.argv[3]              # sys.argv[3] = ${fileDirname}
+    mainPath = filePath + "/main.c"     # ${fileDirname}/main.c
 
     if not os.path.isfile(mainPath):                                # 如果没有 ${fileDirname}/main.c 则报错
         print("[" + mainPath + "] not exists")
