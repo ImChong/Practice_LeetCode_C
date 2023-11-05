@@ -216,11 +216,11 @@ void printMyLinkedList(MyLinkedList *list) {
 void validateMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
     for (int i = 0; i < expect->size; i++) {
         if (myLinkedListGet(expect, i) != myLinkedListGet(actual, i)) {
-            printf("❌ Test %c Failed\n", testNum);
+            printf("❌ Test %c Failed ==========\n", testNum);
             return;
         }
     }
-    printf("✅ Test %c Passed\n", testNum);
+    printf("✅ Test %c Passed ==========\n", testNum);
 
     printf("    - Expect: "); printMyLinkedList(expect);
     printf("    - Actual: "); printMyLinkedList(actual);

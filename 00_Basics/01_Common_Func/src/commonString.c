@@ -84,16 +84,16 @@ void freeString(char *s) {
  */
 void validateString(char testNum, char *expect, char *actual) {
     if (expect == NULL && actual == NULL) {
-        printf("✅ Test %c Passed\n", testNum);
+        printf("✅ Test %c Passed ==========\n", testNum);
         return;
     } else if (expect == NULL || actual == NULL) {
-        printf("❌ Test %c Failed\n", testNum);
+        printf("❌ Test %c Failed ==========\n", testNum);
         return;
     }
     if (strcmp(expect, actual) == 0) {
-        printf("✅ Test %c Passed\n", testNum);
+        printf("✅ Test %c Passed ==========\n", testNum);
     } else {
-        printf("❌ Test %c Failed\n", testNum);
+        printf("❌ Test %c Failed ==========\n", testNum);
     }
 
     printf("    - Expect: %s\n", expect);

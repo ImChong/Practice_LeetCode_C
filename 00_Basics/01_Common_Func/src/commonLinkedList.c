@@ -141,16 +141,16 @@ void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNo
     struct ListNode *curr1 = expectList, *curr2 = actualList;
     while (curr1 != NULL && curr2 != NULL) {
         if (curr1->val != curr2->val) {
-            printf("❌ Test %c Failed\n", testNum);
+            printf("❌ Test %c Failed ==========\n", testNum);
             return;
         }
         curr1 = curr1->next;
         curr2 = curr2->next;
     }
     if (curr1 == NULL && curr2 == NULL) {
-        printf("✅ Test %c Passed\n", testNum);
+        printf("✅ Test %c Passed ==========\n", testNum);
     } else {
-        printf("❌ Test %c Failed\n", testNum);
+        printf("❌ Test %c Failed ==========\n", testNum);
     }
 
     printf("    - Expect: "); printLinkedList(expectList);

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 11:20:40
+ * @LastEditTime : 2023-11-05 22:30:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -108,14 +108,14 @@ void free2DArray(int **arr, int arrSize) {
  */
 void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen) {
     if (expectLen != actualLen) {
-        printf("❌ Test %c Failed\n", testNum);
+        printf("❌ Test %c Failed ==========\n", testNum);
     }
     for (int i = 0; i < expectLen; i++) {
         if (expectArr[i] != actualArr[i]) {
-            printf("❌ Test %c Failed\n", testNum);
+            printf("❌ Test %c Failed ==========\n", testNum);
         }
     }
-    printf("✅ Test %c Passed\n", testNum);
+    printf("✅ Test %c Passed ==========\n", testNum);
 
     printf("    - Expect: "); printArray(expectArr, expectLen);
     printf("    - Actual: "); printArray(actualArr, actualLen);
@@ -156,9 +156,9 @@ void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *ex
     }
 
     if (isSuccess) {
-        printf("✅ Test %c passed\n", testNum);
+        printf("✅ Test %c passed ==========\n", testNum);
     } else {
-        printf("❌ Test %c failed\n", testNum);
+        printf("❌ Test %c failed ==========\n", testNum);
     }
 
     printf("    - Expect: "); print2DArray(expect2DArr, expectRtnSize, expectRtnColSize);

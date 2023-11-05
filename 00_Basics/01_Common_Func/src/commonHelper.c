@@ -27,9 +27,9 @@
  */
 void validateSingleValue(char testNum, int expect, int actual) {
     if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
+        printf("✅ Test %c Passed ==========\n", testNum);
     } else {
-        printf("❌ Test %c Failed\n", testNum);
+        printf("❌ Test %c Failed ==========\n", testNum);
     }
 
     printf("    - Expect: %d\n", expect);
