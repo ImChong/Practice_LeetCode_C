@@ -17,7 +17,7 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define SIMULATION_METHOD_EN            1
-#define LAYER_SIMULATION_METHOD_EN      0
+#define SIMULATION_METHOD_EN            0
+#define LAYER_SIMULATION_METHOD_EN      1
 
 #endif  /* __METHOD_CFG_H */
