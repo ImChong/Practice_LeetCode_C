@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-11-04 20:33:11
+LastEditTime : 2023-11-05 09:46:47
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -26,13 +26,14 @@ if __name__ == "__main__":
     workspacePath = sys.argv[2]
     mainPath = sys.argv[3] + "/main.c"
 
-    if os.path.isfile(mainPath):                    # 如果存在 main.c
-        print("main.c exists!")
-        print("Compile finished successfully!")
-
-    else:                                           # 如果不存在 main.c
+    if not os.path.isfile(mainPath):                # 如果不存在 main.c
         print("[" + mainPath + "] not exists")
         print("Compile failed!")
+    else:
+        print("main.c exists!")                     # 如果存在 main.c
+
+        
+        print("Compile finished successfully!")
 
 
     # 如果没有 ${fileDirname}/main.c 则报错
