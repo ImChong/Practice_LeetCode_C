@@ -17,7 +17,7 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define SIMULATION_METHOD_EN            0
-#define LAYER_SIMULATION_METHOD_EN      1
+#define SIMULATION_METHOD_EN            0       /* 模拟法 */
+#define LAYER_SIMULATION_METHOD_EN      1       /* 按层模拟法 */
 
 #endif  /* __METHOD_CFG_H */
