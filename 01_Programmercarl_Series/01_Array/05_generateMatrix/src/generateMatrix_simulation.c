@@ -3,12 +3,13 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 19:38:33
+ * @LastEditTime : 2023-11-05 19:40:38
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 螺旋矩阵II头文件 - 模拟法
  */
+#include <stdlib.h>
 #include "methodCfg.h"
 #include "generateMatrix.h"
 
@@ -31,6 +32,9 @@
 int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
     int maxNum = n * n;
     int curNum = 1;
+    int **matrix = (int **)malloc(sizeof(int *) * n);
+    *returnSize = n;
+    *returnColumnSizes = (int *)malloc(sizeof(int) * n);
 }
 
 #endif /* SIMULATION_METHOD_EN */
