@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-11-05 09:53:45
+LastEditTime : 2023-11-05 11:59:08
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -27,44 +27,45 @@ if __name__ == "__main__":
     filePath = sys.argv[3]
     mainPath = filePath + "/main.c"
 
-    if not os.path.isfile(mainPath):                # 如果不存在 main.c
+    if not os.path.isfile(mainPath):                                # 如果没有 ${fileDirname}/main.c 则报错
         print("[" + mainPath + "] not exists")
-        print("Compile failed!")
-    else:                                           # 如果存在 main.c
-        print("main.c exists!")
-
-        if os.path.isdir(filePath + "/src"):         # 如果存在 src 文件夹
-            print("src folder exists!")
-        else:                                           # 如果不存在 src 文件夹
-            print("src folder not exists!")
-
-        print("Compile finished successfully!")
-
-
-    # 如果没有 ${fileDirname}/main.c 则报错
-
-    # 如果有 ${fileDirname}/src 文件夹则编译
-        # gcc
-        #     "-fdiagnostics-color=always",
-        #     "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",
-        #     "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/commonDef/",
-        #     "-I${fileDirname}/cfg/",
-        #     "-I${fileDirname}/inc/",
-        #     "-g",
-        #     "${workspaceFolder}/00_Basics/01_Common_Func/src/*.c",
-        #     "${fileDirname}/src/*.c",
-        #     "main.c",
-        #     "-o",
-        #     "${fileDirname}/main.exe"
-
-    # 如果没有 ${fileDirname}/src 文件夹则编译
-        # gcc
-        #     "-fdiagnostics-color=always",
-        #     "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/",
-        #     "-I${workspaceFolder}/00_Basics/01_Common_Func/inc/commonDef/",
-        #     "-g",
-        #     "${fileDirname}/src/*.c",
-        #     "main.c",
-        #     "-o",
-        #     "${fileDirname}/main.exe"
-
+        print("compilation failed!")
+    else:                                                           # 如果存在 ${fileDirname}/main.c
+        print("main.c exists. continue...")
+        cmd = []
+        if os.path.isdir(filePath + "/src"):                            # 如果存在 ${fileDirname}/src 文件夹
+            print("src folder exists. continue...")
+            cmd = [
+                gccPath,
+                "-fdiagnostics-color=always",
+                "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/",
+                "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/commonDef/",
+                "-I" + filePath + "/cfg/",
+                "-I" + filePath + "/inc/",
+                "-g",
+                workspacePath + "/00_Basics/01_Common_Func/src/*.c",
+                filePath + "/src/*.c",
+                mainPath,
+                "-o",
+                filePath + "/main.exe"
+            ]
+        else:                                                           # 如果不存在 ${fileDirname}/src 文件夹
+            print("src folder not exists. continue...")
+            cmd = [
+                gccPath,
+                "-fdiagnostics-color=always",
+                "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/",
+                "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/commonDef/",
+                "-I" + filePath + "/cfg/",
+                "-g",
+                workspacePath + "/00_Basics/01_Common_Func/src/*.c",
+                mainPath,
+                "-o",
+                filePath + "/main.exe"
+            ]
+        result = subprocess.run(cmd, capture_output=True, text=True)    # 执行编译指令
+        if result.returncode != 0:                                      # 如果编译失败
+            print(result.stderr)
+            print("compilation failed!")
+        else:                                                           # 如果编译成功
+            print("compilation finished successfully!")
