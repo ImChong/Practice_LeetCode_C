@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 21:41:12
+ * @LastEditTime : 2023-11-05 22:12:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,7 +13,8 @@
  * 给一个正整数 n ，生成一个包含 1 到 n2 所有元素，且元素按顺时针顺序螺旋排列的 n x n 正方形矩阵 matrix 。
  *
  */
-#include <stdio.h>
+#include <stdlib.h>
+#include "commonArray.h"
 #include "generateMatrix.h"
 
 /**********************************************************************************/
@@ -31,14 +32,25 @@
 void test_1(void) {
     /* 实际结果 */
     int n = 3;
-    int returnSize = 0;
-    int *returnColumnSizes = NULL;
-    int **ans = generateMatrix(n, &returnSize, &returnColumnSizes);
+    int actualRtnSize = 0;
+    int *actualRtnColSize = NULL;
+    int **actual2DArr = generateMatrix(n, &actualRtnSize, &actualRtnColSize);
 
     /* 期望结果 */
+    int expectRtnSize = 3;
+    int expectRtnColSize[] = {3, 3, 3};
+    int *expect2DArr[] = {
+        (int[]){1, 2, 3},
+        (int[]){8, 9, 4},
+        (int[]){7, 6, 5}
+    };
 
     /* 测试结果 */
+    validate2DArray('1', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
 
+    /* 释放内存 */
+    free2DArray(actual2DArr, actualRtnSize);
+    free(actualRtnColSize);
 }
 
 /**
