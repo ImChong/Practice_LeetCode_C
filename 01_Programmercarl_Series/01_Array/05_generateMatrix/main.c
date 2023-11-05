@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 13:34:21
+ * @LastEditTime : 2023-11-05 13:37:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -61,6 +61,13 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-
+#if LAYER_SIMULATION_METHOD_EN
+    printf("LAYER_SIMULATION_METHOD_EN\n");
+#elif SIMULATION_METHOD_EN
+    printf("SIMULATION_METHOD_EN\n");
+#endif
+    test_1();
+    test_2();
+    test_3();
     return 0;
 }
