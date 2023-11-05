@@ -38,11 +38,22 @@
             "label": "Build Current File - Python",
             "detail": "Compile Current File by Python File.",
             "type": "shell",
+            "command": "python",
             "linux": {
-                "command": "python ${workspaceFolder}/.vscode/build.py /usr/bin/gcc ${workspaceFolder} ${fileDirname}"
+                "args": [
+                    "${workspaceFolder}/.vscode/build.py",
+                    "/usr/bin/gcc",                                                 /* Linux下的编译器地址 */
+                    "${workspaceFolder}",
+                    "${fileDirname}"
+                ]
             },
             "windows": {
-                "command": "python ${workspaceFolder}/.vscode/build.py D:/Developments/msys64/mingw64/bin/gcc.exe ${workspaceFolder} ${fileDirname}"
+                "args": [
+                    "${workspaceFolder}/.vscode/build.py",
+                    "D:/Developments/msys64/mingw64/bin/gcc.exe",                   /* Windows下的编译器地址 */
+                    "${workspaceFolder}",
+                    "${fileDirname}"
+                ]
             },
             "problemMatcher": [],
         },
