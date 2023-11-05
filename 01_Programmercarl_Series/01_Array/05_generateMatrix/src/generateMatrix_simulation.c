@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 21:18:16
+ * @LastEditTime : 2023-11-05 21:21:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,6 +35,10 @@ int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
     int **matrix = (int **)malloc(sizeof(int *) * n);
     *returnSize = n;
     *returnColumnSizes = (int *)malloc(sizeof(int) * n);
+    for (int i = 0; i < n; i++) {
+        matrix[i] = (int *)calloc(n, sizeof(int));
+        (*returnColumnSizes)[i] = n;
+    }
 }
 
 #endif /* SIMULATION_METHOD_EN */
