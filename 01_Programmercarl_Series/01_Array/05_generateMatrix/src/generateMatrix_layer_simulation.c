@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:24
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 13:33:57
+ * @LastEditTime : 2023-11-05 13:35:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : 螺旋矩阵II头文件 - 按层模拟法
  */
 #include "methodCfg.h"
 #include "generateMatrix.h"

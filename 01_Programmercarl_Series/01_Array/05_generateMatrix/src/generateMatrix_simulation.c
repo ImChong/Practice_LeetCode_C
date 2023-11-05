@@ -7,9 +7,12 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : 螺旋矩阵II头文件 - 模拟法
  */
+#include "methodCfg.h"
+#include "generateMatrix.h"
 
+#if SIMULATION_METHOD_EN
 /**********************************************************************************/
 /**********************************************************************************/
 /***                                                                            ***/
@@ -29,3 +32,5 @@ int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
     /* TODO */
     return 0;
 }
+
+#endif /* SIMULATION_METHOD_EN */
