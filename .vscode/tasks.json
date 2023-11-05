@@ -43,7 +43,10 @@
             },
             "windows": {
                 "command": "python ${workspaceFolder}/.vscode/build.py D:/Developments/msys64/mingw64/bin/gcc.exe ${workspaceFolder} ${fileDirname}"
-            }
+            },
+            "problemMatcher": [
+                "$gcc"                                                              /* 指定错误匹配模式 */
+            ],
         },
         /* 运行：运行当前活跃文件编译生成的可执行文件 */
         {
