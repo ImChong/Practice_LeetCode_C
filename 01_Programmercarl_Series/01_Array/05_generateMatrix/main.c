@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 22:12:31
+ * @LastEditTime : 2023-11-05 22:18:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -62,11 +62,24 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    int n = 1;
+    int actualRtnSize = 0;
+    int *actualRtnColSize = NULL;
+    int **actual2DArr = generateMatrix(n, &actualRtnSize, &actualRtnColSize);
 
     /* 期望结果 */
+    int expectRtnSize = 1;
+    int expectRtnColSize[] = {1};
+    int *expect2DArr[] = {
+        (int[]){1}
+    };
 
     /* 测试结果 */
+    validate2DArray('2', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
 
+    /* 释放内存 */
+    free2DArray(actual2DArr, actualRtnSize);
+    free(actualRtnColSize);
 }
 
 /**
@@ -78,11 +91,26 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    int n = 4;
+    int actualRtnSize = 0;
+    int *actualRtnColSize = NULL;
+    int **actual2DArr = generateMatrix(n, &actualRtnSize, &actualRtnColSize);
 
     /* 期望结果 */
+    int expectRtnSize = 4;
+    int expectRtnColSize[] = {4, 4, 4, 4};
+    int *expect2DArr[] = {
+        (int[]){1,  2,  3,  4},
+        (int[]){12, 13, 14, 5},
+        (int[]){11, 16, 15, 6},
+        (int[]){10, 9,  8,  7}
+    };
 
     /* 测试结果 */
+    validate2DArray('3', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
 
+    /* 释放内存 */
+    free2DArray(actual2DArr, actualRtnSize);
 }
 
 /**********************************************************************************/
