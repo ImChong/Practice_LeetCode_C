@@ -31,7 +31,8 @@
                 "main.c",                                                           /* 将当前 main.c 文件同步编译 */
                 "-o",                                                               /* 指定输出文件名 */
                 "${fileDirname}/main.exe"                                           /* "${fileDirname}/${fileBasenameNoExtension}.exe" */
-            ]
+            ],
+            "hide": true                                                            /* 隐藏该任务 */
         },
         /* 编译：使用 python 编译当前活跃文件 */
         {
@@ -55,7 +56,7 @@
                     "${fileDirname}"
                 ]
             },
-            "problemMatcher": [],
+            "problemMatcher": []
         },
         /* 运行：运行当前活跃文件编译生成的可执行文件 */
         {
@@ -69,7 +70,8 @@
             },
             "windows": {        /* Windows下的运行指令 */
                 "command": "${fileDirname}/main.exe"                                /* 指定运行文件 */
-            }
+            },
+            "hide": true                                                            /* 隐藏该任务 */
         },
         /* 编译并运行：编译并运行当前活跃文件编译生成的可执行文件 */
         {
