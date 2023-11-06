@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 10:35:40
+ * @LastEditTime : 2023-11-07 00:17:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,7 @@
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 /* 常用头文件 */
 #include "commonLinkedListDummy.h"
 
@@ -217,14 +218,19 @@ void printMyLinkedList(MyLinkedList *list) {
  */
 void validateMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
     printf("=========================\n");
+    int isSuccess = true;
+
     for (int i = 0; i < expect->size; i++) {
         if (myLinkedListGet(expect, i) != myLinkedListGet(actual, i)) {
-            printf(" - ❌ Test %c Failed\n", testNum);
-            return;
+            isSuccess = false;
+            break;
         }
     }
-    printf(" - ✅ Test %c Passed\n", testNum);
-
+    if (isSuccess) {
+        printf(" - ✅ Test %c Passed\n", testNum);
+    } else {
+        printf(" - ❌ Test %c Failed\n", testNum);
+    }
     printf("=========================\n");
     printf("- Expect: "); printMyLinkedList(expect);
     printf("- Actual: "); printMyLinkedList(actual);
