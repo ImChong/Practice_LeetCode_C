@@ -10,6 +10,7 @@
  * @Description  : 螺旋矩阵II头文件 - 按层模拟法
  */
 /* 标准头文件 */
+#include <stdio.h>
 #include <stdlib.h>
 /* 解题方法配置文件 */
 #include "methodCfg.h"
@@ -34,6 +35,7 @@
  * @return {int} **ans                  返回数组
  */
 int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
+    printf("LAYER_SIMULATION_METHOD_EN\n");
     int num = 1;
 
     /* 初始化矩阵，矩阵内数值均为 0 */
