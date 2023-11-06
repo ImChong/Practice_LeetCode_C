@@ -3,14 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:03:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 02:36:48
+ * @LastEditTime : 2023-11-06 10:37:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 主函数
  */
-#include "commonPrintDef.h"         /* 00_Basics\01_Common_Func\inc\commonDef\commonPrintDef.h */
-#include "commonCmd.h"              /* 00_Basics\01_Common_Func\inc\commonCmd.h */
+/* 常用头文件 */
+#include "commonPrintDef.h"
+#include "commonCmd.h"
 #include "commonRingBuffer.h"
 
 /**********************************************************************************/
