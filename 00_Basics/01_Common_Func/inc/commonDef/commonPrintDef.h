@@ -12,6 +12,7 @@
 #ifndef __COMMON_PRINT_DEF_H
 #define __COMMON_PRINT_DEF_H
 
+/* 标准头文件 */
 #include <stdio.h>
 
 /**********************************************************************************/
