@@ -36,6 +36,7 @@
  * @return {int} **ans                  返回数组
  */
 int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
+    printf("SIMULATION_METHOD_EN\n");
     int maxNum = n * n;                                                                 /* 最大值 */
     int curNum = 1;                                                                     /* 当前值 */
 
