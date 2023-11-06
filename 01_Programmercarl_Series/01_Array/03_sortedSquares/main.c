@@ -3,16 +3,18 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:08:07
+ * @LastEditTime : 2023-11-07 00:06:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 977.有序数组的平方：https://leetcode.cn/problems/squares-of-a-sorted-array/
  * https://programmercarl.com/0977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.html
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
-#include "commonArray.h"        /* 00_Basics\01_Common_Func\inc\commonArray.h */
+/* 通用头文件 */
+#include "commonArray.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
