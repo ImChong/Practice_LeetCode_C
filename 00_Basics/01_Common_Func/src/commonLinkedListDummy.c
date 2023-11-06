@@ -73,7 +73,7 @@ void dummyLinkedListAddAtHead(DummyLinkedList *dummyHead, int val) {
  * @param {int} val                 新节点数值
  * @return {void}
  */
-void myLinkedListAddAtTail(DummyLinkedList *dummyHead, int val) {
+void dummyLinkedListAddAtTail(DummyLinkedList *dummyHead, int val) {
     struct ListNode *newTail = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新尾节点分配空间*/
     newTail->val = val;                         /* 为链表新尾节点赋值 */
     newTail->next = NULL;                       /* 将链表新尾节点的下一节点设置为NULL */
@@ -109,7 +109,7 @@ void myLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val) {
     }
 
     if (index == dummyHead->size) {                   /* 插入新尾节点 */
-        myLinkedListAddAtTail(dummyHead, val);
+        dummyLinkedListAddAtTail(dummyHead, val);
         return;
     }
 
@@ -185,7 +185,7 @@ void myLinkedListFree(DummyLinkedList *dummyHead) {
  */
 void arrayToMyLinkedList(DummyLinkedList *list, int *nums, int numsSize) {
     for (int i = 0; i < numsSize; i++) {
-        myLinkedListAddAtTail(list, nums[i]);
+        dummyLinkedListAddAtTail(list, nums[i]);
     }
 }
 

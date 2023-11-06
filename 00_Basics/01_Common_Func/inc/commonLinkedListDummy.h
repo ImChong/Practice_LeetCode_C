@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 01:18:15
+ * @LastEditTime : 2023-11-07 01:18:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,7 +35,7 @@ typedef struct {
 DummyLinkedList *myLinkedListCreate(void);     /* 创建使用虚拟头节点的链表 */
 int dummyLinkedListGet(DummyLinkedList *dummyHead, int index);        /* 获取链表中第index个节点的值 */
 void dummyLinkedListAddAtHead(DummyLinkedList *dummyHead, int val);       /* 在链表头部添加一个节点 */
-void myLinkedListAddAtTail(DummyLinkedList *dummyHead, int val);       /* 在链表尾部添加一个节点 */
+void dummyLinkedListAddAtTail(DummyLinkedList *dummyHead, int val);       /* 在链表尾部添加一个节点 */
 void myLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val);       /* 在链表中第index个节点之前添加一个值为val的节点 */
 void myLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index);     /* 删除链表中第index个节点 */
 void myLinkedListDeleteElement(DummyLinkedList *dummyHead, int val);       /* TODO */ /* 从链表中删除第一个值为val的节点 */
