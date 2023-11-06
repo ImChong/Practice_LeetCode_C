@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 00:18:59
+ * @LastEditTime : 2023-11-07 00:23:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -219,7 +219,6 @@ void printMyLinkedList(MyLinkedList *list) {
 void validateMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
     printf("=========================\n");
     int isSuccess = true;
-
     for (int i = 0; i < expect->size; i++) {
         if (myLinkedListGet(expect, i) != myLinkedListGet(actual, i)) {
             isSuccess = false;
