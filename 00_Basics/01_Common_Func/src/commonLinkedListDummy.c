@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 12:20:48
+ * @LastEditTime : 2023-11-06 10:35:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -214,14 +214,16 @@ void printMyLinkedList(MyLinkedList *list) {
  * @return {void}
  */
 void validateMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
+    printf("=========================\n");
     for (int i = 0; i < expect->size; i++) {
         if (myLinkedListGet(expect, i) != myLinkedListGet(actual, i)) {
-            printf("❌ Test %c Failed ==========\n", testNum);
+            printf(" - ❌ Test %c Failed\n", testNum);
             return;
         }
     }
-    printf("✅ Test %c Passed ==========\n", testNum);
+    printf(" - ✅ Test %c Passed\n", testNum);
 
-    printf("    - Expect: "); printMyLinkedList(expect);
-    printf("    - Actual: "); printMyLinkedList(actual);
+    printf("=========================\n");
+    printf("- Expect: "); printMyLinkedList(expect);
+    printf("- Actual: "); printMyLinkedList(actual);
 }
