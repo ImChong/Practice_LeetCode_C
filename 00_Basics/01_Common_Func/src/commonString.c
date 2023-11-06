@@ -28,7 +28,7 @@
  * @param {char} *b     b字符地址
  * @return {void}
  */
-void swapChar(char *a, char *b) {
+void charSwap(char *a, char *b) {
     char tmp = *a;      /* 保存a字符 */
     *a = *b;            /* 将b字符赋值给a字符 */
     *b = tmp;           /* 将保存的a字符赋值给b字符 */
@@ -42,9 +42,9 @@ void swapChar(char *a, char *b) {
  * @param {int} rightIndex      右指针
  * @return {void}
  */
-void reverseStringSection(char *s, int leftIndex, int rightIndex) {
+void stringSectionReverse(char *s, int leftIndex, int rightIndex) {
     while (leftIndex < rightIndex) {                    /* 左右指针未相遇 */
-        swapChar(&s[leftIndex++], &s[rightIndex--]);        /* 交换字符，左指针右移，右指针左移 */
+        charSwap(&s[leftIndex++], &s[rightIndex--]);        /* 交换字符，左指针右移，右指针左移 */
     }
 }
 
@@ -54,7 +54,7 @@ void reverseStringSection(char *s, int leftIndex, int rightIndex) {
  * @param {char} *s     字符串地址
  * @return {void}
  */
-void printString(char *s) {
+void stringPrint(char *s) {
     printf("Str: %s\n", s);
 }
 
@@ -64,7 +64,7 @@ void printString(char *s) {
  * @param {char} *s     字符串地址
  * @return {void}
  */
-void freeString(char *s) {
+void stringFree(char *s) {
     if (s != NULL) {        /* 字符串不为空 */
         free(s);                /* 释放字符串 */
         s = NULL;               /* 字符串指针置空 */
