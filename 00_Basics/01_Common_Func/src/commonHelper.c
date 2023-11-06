@@ -3,13 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 11:55:54
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:05:40
+ * @LastEditTime : 2023-11-06 10:21:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用通用辅助函数源文件
  */
+/* 标准头文件 */
 #include <stdio.h>
+/* 常用头文件 */
 #include "commonHelper.h"
 
 /**********************************************************************************/
@@ -26,12 +28,14 @@
  * @return {void}
  */
 void validateSingleValue(char testNum, int expect, int actual) {
+    printf("=========================\n");
     if (expect == actual) {
-        printf("✅ Test %c Passed ==========\n", testNum);
+        printf(" - ✅ Test %c Passed\n", testNum);
     } else {
-        printf("❌ Test %c Failed ==========\n", testNum);
+        printf(" - ❌ Test %c Failed\n", testNum);
     }
 
-    printf("    - Expect: %d\n", expect);
-    printf("    - Actual: %d\n", actual);
+    printf("=========================\n");
+    printf("- Expect: %d\n", expect);
+    printf("- Actual: %d\n", actual);
 }
