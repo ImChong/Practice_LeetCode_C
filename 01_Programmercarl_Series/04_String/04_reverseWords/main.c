@@ -56,11 +56,11 @@ void removeExtraSpace(char *s) {
  */
 char *reverseWords(char *s) {
     removeExtraSpace(s);                                /* 删除多余的空格 */
-    stringSectionReverse(s, 0, strlen(s) - 1);          /* 反转整个字符串 */
+    reverseStringSection(s, 0, strlen(s) - 1);          /* 反转整个字符串 */
     int slow = 0;                                       /* 慢指针 */
     for (int i = 0; i <= strlen(s); i++) {              /* 遍历字符串，注意是 <=，包含了'\0'位 */
         if (s[i] == ' ' || s[i] == '\0') {                  /* 当前字符为空格或者'\0'位 */
-            stringSectionReverse(s, slow, i - 1);               /* 反转单词 */
+            reverseStringSection(s, slow, i - 1);               /* 反转单词 */
             slow = i + 1;                                       /* 慢指针指向下一个单词的起始位置 */
         }
     }

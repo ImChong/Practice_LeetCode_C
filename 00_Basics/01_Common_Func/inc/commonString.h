@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 01:36:21
+ * @LastEditTime : 2023-11-07 01:38:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,10 +17,10 @@
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-void charSwap(char *a, char *b);                                    /* 交换字符 */
-void stringSectionReverse(char *s, int leftIndex, int rightIndex);  /* 反转字符串 */
-void stringPrint(char *s);                                          /* 打印字符串 */
-void stringFree(char *s);                                           /* 释放字符串 */
+void swapChar(char *a, char *b);                                    /* 交换字符 */
+void reverseStringSection(char *s, int leftIndex, int rightIndex);  /* 反转字符串 */
+void printString(char *s);                                          /* 打印字符串 */
+void freeString(char *s);                                           /* 释放字符串 */
 
 /**********************************************************************************/
 /*                                                                                */

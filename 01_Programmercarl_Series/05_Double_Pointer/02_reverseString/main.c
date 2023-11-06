@@ -34,7 +34,7 @@ void reverseString(char *s, int sSize) {
     int left = 0;
     int right = sSize - 1;
     while (left < right) {
-        charSwap(s + left, s + right);
+        swapChar(s + left, s + right);
         left++;
         right--;
     }
