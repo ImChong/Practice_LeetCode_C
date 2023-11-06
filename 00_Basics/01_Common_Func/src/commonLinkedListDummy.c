@@ -40,7 +40,7 @@ DummyLinkedList *myLinkedListCreate(void) {
  * @param {int} index                   索引
  * @return {int} ans                    返回指定索引的节点数值
  */
-int myLinkedListGet(DummyLinkedList *dummyHead, int index) {
+int dummyLinkedListGet(DummyLinkedList *dummyHead, int index) {
     if (index < 0 || index >= dummyHead->size) {      /* 输入校验 */
         return -1;                                  /* 返回 -1 */
     }
@@ -58,7 +58,7 @@ int myLinkedListGet(DummyLinkedList *dummyHead, int index) {
  * @param {int} val                 新节点数值
  * @return {void}
  */
-void myLinkedListAddAtHead(DummyLinkedList *dummyHead, int val) {
+void dummyLinkedListAddAtHead(DummyLinkedList *dummyHead, int val) {
     struct ListNode *newHead = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新头节点分配空间*/
     newHead->val = val;             /* 为链表新头节点赋值 */
     newHead->next = dummyHead->head;      /* 将链表新头节点的下一节点设置为链表旧头节点 */
@@ -104,7 +104,7 @@ void myLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val) {
     }
 
     if (index == 0) {                           /* 插入新头节点 */
-        myLinkedListAddAtHead(dummyHead, val);
+        dummyLinkedListAddAtHead(dummyHead, val);
         return;
     }
 
@@ -199,7 +199,7 @@ void printMyLinkedList(DummyLinkedList *list) {
     printf("linked list (size: %d): Dummy -> ", list->size);    /* 打印链表长度 */
 
     for (int i = 0; i < list->size; i++) {                              /* 循环打印链表节点数值 */
-        printf("%d ", myLinkedListGet(list, i));                            /* 打印链表节点数值 */
+        printf("%d ", dummyLinkedListGet(list, i));                            /* 打印链表节点数值 */
         if (i < list->size - 1) {                                           /* 如果不是最后一个节点 */
             printf("-> ");                                                      /* 打印箭头 */
         }
@@ -225,7 +225,7 @@ void validateMyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList
     int isSuccess = true;
 
     for (int i = 0; i < expect->size; i++) {
-        if (myLinkedListGet(expect, i) != myLinkedListGet(actual, i)) {
+        if (dummyLinkedListGet(expect, i) != dummyLinkedListGet(actual, i)) {
             isSuccess = false;
             break;
         }
