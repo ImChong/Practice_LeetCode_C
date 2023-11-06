@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 10:22:18
+ * @LastEditTime : 2023-11-07 00:08:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -110,16 +110,23 @@ void free2DArray(int **arr, int arrSize) {
  */
 void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen) {
     printf("=========================\n");
+    int isSuccess = true;
+
     if (expectLen != actualLen) {
-        printf(" - ❌ Test %c Failed\n", testNum);
-    }
-    for (int i = 0; i < expectLen; i++) {
-        if (expectArr[i] != actualArr[i]) {
-            printf(" - ❌ Test %c Failed\n", testNum);
+        isSuccess = false;
+    } else {
+        for (int i = 0; i < expectLen; i++) {
+            if (expectArr[i] != actualArr[i]) {
+                isSuccess = false;
+                break;
+            }
         }
     }
-    printf(" - ✅ Test %c Passed\n", testNum);
-
+    if (isSuccess) {
+        printf(" - ✅ Test %c passed\n", testNum);
+    } else {
+        printf(" - ❌ Test %c failed\n", testNum);
+    }
     printf("=========================\n");
     printf("- Expect: "); printArray(expectArr, expectLen);
     printf("- Actual: "); printArray(actualArr, actualLen);
