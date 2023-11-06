@@ -220,7 +220,7 @@ void dummyLinkedListPrint(DummyLinkedList *list) {
  * @param {DummyLinkedList} *actual    实际
  * @return {void}
  */
-void validateMyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual) {
+void validateDummyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual) {
     printf("=========================\n");
     int isSuccess = true;
 

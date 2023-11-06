@@ -42,7 +42,7 @@ void test_1(void) {
     dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateMyLinkedList('1', expectDummy, actualDummy);
+    validateDummyLinkedList('1', expectDummy, actualDummy);
 
     /* 释放内存空间 */
     dummyLinkedListFree(actualDummy);

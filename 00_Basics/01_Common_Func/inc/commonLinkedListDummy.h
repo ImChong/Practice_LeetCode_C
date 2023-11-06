@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 01:23:46
+ * @LastEditTime : 2023-11-07 01:24:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -56,7 +56,7 @@ void dummyLinkedListFree(DummyLinkedList *dummyHead);     /* 释放链表 */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void validateMyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual);        /* 验证链表 */
+void validateDummyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual);        /* 验证链表 */
 
 
 #endif  /* __COMMON_LINKED_LIST_DUMMY_H */
