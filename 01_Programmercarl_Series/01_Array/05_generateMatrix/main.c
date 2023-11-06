@@ -117,6 +117,7 @@ void test_3(void) {
 
     /* 释放内存 */
     free2DArray(actual2DArr, actualRtnSize);
+    free(actualRtnColSize);
 }
 
 /**********************************************************************************/
