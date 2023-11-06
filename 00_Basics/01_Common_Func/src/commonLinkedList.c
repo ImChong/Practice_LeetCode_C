@@ -121,7 +121,7 @@ void printLinkedList(struct ListNode *head) {
  * @param {ListNode} *head          头节点指针
  * @return {void}
  */
-void freeLinkedList(struct ListNode *head) {
+void linkedListFree(struct ListNode *head) {
     struct ListNode *tmp = NULL;
     while (head != NULL) {
         tmp = head;

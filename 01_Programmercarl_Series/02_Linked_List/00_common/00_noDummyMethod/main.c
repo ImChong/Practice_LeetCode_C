@@ -43,8 +43,8 @@ void test_1(void) {
     validateLinkedList('1', expectList, actualList);
 
     /* 释放内存空间 */
-    freeLinkedList(actualList);
-    freeLinkedList(expectList);
+    linkedListFree(actualList);
+    linkedListFree(expectList);
 }
 
 /**********************************************************************************/
