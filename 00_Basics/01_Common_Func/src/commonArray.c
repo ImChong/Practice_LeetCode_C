@@ -3,15 +3,17 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 10:20:31
+ * @LastEditTime : 2023-11-06 10:22:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用数组源文件
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+/* 常用头文件 */
 #include "commonArray.h"
 
 /**********************************************************************************/
