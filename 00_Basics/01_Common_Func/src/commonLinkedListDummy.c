@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 01:13:22
+ * @LastEditTime : 2023-11-07 01:42:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -205,6 +205,22 @@ void dummyLinkedListPrint(DummyLinkedList *list) {
         }
     }
     printf("\n");                                                       /* 换行 */
+}
+
+/**
+ * @description: 释放链表内存空间
+ * =================================================================================
+ * @param {DummyLinkedList} *dummyHead
+ * @return {void}
+ */
+void dummyLinkedListFree(DummyLinkedList *dummyHead) {
+    struct ListNode *curr = dummyHead->head;        /* 获取当前链表头节点的指针 */
+    while (curr != NULL) {                          /* 当指针所指的节点不为NULL时 */
+        struct ListNode *tmp = curr;                    /* 获取当前节点的指针 */
+        curr = curr->next;                              /* 指针向后移动一位 */
+        free(tmp);                                      /* 释放当前指针所指节点的内存空间 */
+    }
+    free(dummyHead);                                /* 释放虚拟头节点的内存空间 */
 }
 
 /**********************************************************************************/
