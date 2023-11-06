@@ -3,18 +3,20 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:08:41
+ * @LastEditTime : 2023-11-07 00:09:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 209.长度最小的子数组：https://leetcode.cn/problems/minimum-size-subarray-sum/
  * https://programmercarl.com/0209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.html
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-#include "commonHelper.h"       /* 00_Basics\01_Common_Func\inc\commonHelper.h */
-#include "commonArray.h"        /* 00_Basics\01_Common_Func\inc\commonArray.h */
+/* 通用头文件 */
+#include "commonHelper.h"
+#include "commonArray.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
