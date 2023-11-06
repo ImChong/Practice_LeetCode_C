@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 00:48:14
+ * @LastEditTime : 2023-11-07 01:13:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -196,7 +196,7 @@ void arrayToMyLinkedList(MyLinkedList *list, int *nums, int numsSize) {
  * @return {void}
  */
 void printMyLinkedList(MyLinkedList *list) {
-    printf("(Dummy) linked list (size: %d): Dummy -> ", list->size);    /* 打印链表长度 */
+    printf("linked list (size: %d): Dummy -> ", list->size);    /* 打印链表长度 */
 
     for (int i = 0; i < list->size; i++) {                              /* 循环打印链表节点数值 */
         printf("%d ", myLinkedListGet(list, i));                            /* 打印链表节点数值 */
