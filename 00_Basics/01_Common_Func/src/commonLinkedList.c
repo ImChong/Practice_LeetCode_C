@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 10:03:35
+ * @LastEditTime : 2023-11-06 10:34:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -138,21 +138,23 @@ void freeLinkedList(struct ListNode *head) {
  * @return {void}
  */
 void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList) {
+    printf("=========================\n");
     struct ListNode *curr1 = expectList, *curr2 = actualList;
     while (curr1 != NULL && curr2 != NULL) {
         if (curr1->val != curr2->val) {
-            printf("❌ Test %c Failed ==========\n", testNum);
+            printf(" - ❌ Test %c Failed\n", testNum);
             return;
         }
         curr1 = curr1->next;
         curr2 = curr2->next;
     }
     if (curr1 == NULL && curr2 == NULL) {
-        printf("✅ Test %c Passed ==========\n", testNum);
+        printf(" - ✅ Test %c Passed\n", testNum);
     } else {
-        printf("❌ Test %c Failed ==========\n", testNum);
+        printf(" - ❌ Test %c Failed\n", testNum);
     }
 
-    printf("    - Expect: "); printLinkedList(expectList);
-    printf("    - Actual: "); printLinkedList(actualList);
+    printf("=========================\n");
+    printf("- Expect: "); printLinkedList(expectList);
+    printf("- Actual: "); printLinkedList(actualList);
 }
