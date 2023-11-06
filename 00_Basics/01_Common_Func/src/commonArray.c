@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 22:32:48
+ * @LastEditTime : 2023-11-06 10:19:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -117,8 +117,8 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
     }
     printf("✅ Test %c Passed ==========\n", testNum);
 
-    printf("    - Expect: "); printArray(expectArr, expectLen);
-    printf("    - Actual: "); printArray(actualArr, actualLen);
+    printf("- Expect: "); printArray(expectArr, expectLen);
+    printf("- Actual: "); printArray(actualArr, actualLen);
 }
 
 /**
@@ -135,7 +135,7 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
  */
 void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
                                 int **actual2DArr, int actualRtnSize, int *actualRtnColSize) {
-
+    printf("=========================\n");
     bool isSuccess = true;
 
     if (actualRtnSize != expectRtnSize) {
@@ -156,11 +156,12 @@ void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *ex
     }
 
     if (isSuccess) {
-        printf("✅ Test %c passed ==========\n", testNum);
+        printf(" - ✅ Test %c passed\n", testNum);
     } else {
-        printf("❌ Test %c failed ==========\n", testNum);
+        printf(" - ❌ Test %c failed\n", testNum);
     }
 
-    printf("    - Expect: "); print2DArray(expect2DArr, expectRtnSize, expectRtnColSize);
-    printf("    - Actual: "); print2DArray(actual2DArr, actualRtnSize, actualRtnColSize);
+    printf("=========================\n");
+    printf("- Expect: "); print2DArray(expect2DArr, expectRtnSize, expectRtnColSize);
+    printf("- Actual: "); print2DArray(actual2DArr, actualRtnSize, actualRtnColSize);
 }
