@@ -30,10 +30,10 @@
 void test_1(void) {
     /* 实际结果 */
     struct ListNode *actualList = NULL;
-    actualList = appendToLinkedList(actualList, 1);
-    actualList = appendToLinkedList(actualList, 2);
-    actualList = appendToLinkedList(actualList, 3);
-    actualList = removeFromLinkedList(actualList, 1);
+    actualList = linkedListAddAtTail(actualList, 1);
+    actualList = linkedListAddAtTail(actualList, 2);
+    actualList = linkedListAddAtTail(actualList, 3);
+    actualList = linkedListDeleteElement(actualList, 1);
 
     /* 预期结果 */
     int nums[] = {2, 3};

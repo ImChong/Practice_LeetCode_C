@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 00:51:42
+ * @LastEditTime : 2023-11-07 00:54:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,8 +28,8 @@ struct ListNode {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-struct ListNode *appendToLinkedList(struct ListNode *head, int val);        /* 在链表尾部添加一个节点 */
-struct ListNode *removeFromLinkedList(struct ListNode *head, int val);      /* 从链表中删除一个节点 */
+struct ListNode *linkedListAddAtTail(struct ListNode *head, int val);        /* 在链表尾部添加一个节点 */
+struct ListNode *linkedListDeleteElement(struct ListNode *head, int val);      /* 从链表中删除一个节点 */
 
 /**********************************************************************************/
 /*                                                                                */
