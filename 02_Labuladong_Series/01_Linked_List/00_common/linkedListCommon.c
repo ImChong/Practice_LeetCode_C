@@ -44,6 +44,6 @@ int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
     struct ListNode *ansList = createList(arr, 5);
-    printList(ansList);
+    printLinkedList(ansList);
     return 0;
 }
