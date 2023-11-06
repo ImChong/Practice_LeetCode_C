@@ -133,7 +133,7 @@ void dummyLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val) {
  * @param {int} index               索引
  * @return {void}
  */
-void myLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index) {
+void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index) {
     if (index < 0 || index >= dummyHead->size) {      /* 输入校验 */
         return;
     }
@@ -160,7 +160,7 @@ void myLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index) {
  * @param {DummyLinkedList} *dummyHead       虚拟头节点
  * @return {void}
  */
-void myLinkedListFree(DummyLinkedList *dummyHead) {
+void dummyLinkedListFree(DummyLinkedList *dummyHead) {
     struct ListNode *curr = dummyHead->head;      /* 获取当前链表头节点的指针 */
     while (curr != NULL) {                  /* 当指针所指的节点不为NULL时 */
         struct ListNode *tmp = curr;            /* 获取当前节点的指针 */

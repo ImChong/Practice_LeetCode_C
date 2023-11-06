@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 01:19:00
+ * @LastEditTime : 2023-11-07 01:19:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -37,11 +37,11 @@ int dummyLinkedListGet(DummyLinkedList *dummyHead, int index);        /* 获取�
 void dummyLinkedListAddAtHead(DummyLinkedList *dummyHead, int val);       /* 在链表头部添加一个节点 */
 void dummyLinkedListAddAtTail(DummyLinkedList *dummyHead, int val);       /* 在链表尾部添加一个节点 */
 void dummyLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val);       /* 在链表中第index个节点之前添加一个值为val的节点 */
-void myLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index);     /* 删除链表中第index个节点 */
-void myLinkedListDeleteElement(DummyLinkedList *dummyHead, int val);       /* TODO */ /* 从链表中删除第一个值为val的节点 */
-void myLinkedListDeleteElementAll(DummyLinkedList *dummyHead, int val);    /* TODO */ /* 从链表中删除所有值为val的节点 */
-int *myLinkedListGetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize);     /* TODO */ /* 获取链表中值为val的所有节点的索引 */
-void myLinkedListFree(DummyLinkedList *dummyHead);     /* 释放链表 */
+void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index);     /* 删除链表中第index个节点 */
+void dummyLinkedListDeleteElement(DummyLinkedList *dummyHead, int val);       /* TODO */ /* 从链表中删除第一个值为val的节点 */
+void dummyLinkedListDeleteElementAll(DummyLinkedList *dummyHead, int val);    /* TODO */ /* 从链表中删除所有值为val的节点 */
+int *dummyLinkedListGetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize);     /* TODO */ /* 获取链表中值为val的所有节点的索引 */
+void dummyLinkedListFree(DummyLinkedList *dummyHead);     /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */

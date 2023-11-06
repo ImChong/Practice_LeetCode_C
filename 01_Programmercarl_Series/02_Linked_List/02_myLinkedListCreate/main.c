@@ -33,7 +33,7 @@ void test_1(void) {
     dummyLinkedListAddAtHead(actualDummy, 1);
     dummyLinkedListAddAtTail(actualDummy, 3);
     dummyLinkedListAddAtIndex(actualDummy, 1, 2);
-    myLinkedListDeleteAtIndex(actualDummy, 0);
+    dummyLinkedListDeleteAtIndex(actualDummy, 0);
     printLinkedList(actualDummy);
 
     /* 预期结果 */
@@ -45,7 +45,7 @@ void test_1(void) {
     validateMyLinkedList('1', expectDummy, actualDummy);
 
     /* 释放内存空间 */
-    myLinkedListFree(actualDummy);
+    dummyLinkedListFree(actualDummy);
 }
 
 /**
@@ -59,7 +59,7 @@ void test_2(void) {
     /* [[],[2],[1],[2],[7],[3],[2],[5],[5],[5],[6],[4]] */
     DummyLinkedList *actualDummy = myLinkedListCreate();      /* DummyLinkedList     [] */
     dummyLinkedListAddAtHead(actualDummy, 2);                 /* addAtHead        [2] */
-    myLinkedListDeleteAtIndex(actualDummy, 1);             /* deleteAtIndex    [1] */
+    dummyLinkedListDeleteAtIndex(actualDummy, 1);             /* deleteAtIndex    [1] */
     dummyLinkedListAddAtHead(actualDummy, 2);                 /* addAtHead        [2] */
     dummyLinkedListAddAtHead(actualDummy, 7);                 /* addAtHead        [7] */
     dummyLinkedListAddAtHead(actualDummy, 3);                 /* addAtHead        [3] */
@@ -67,8 +67,8 @@ void test_2(void) {
     dummyLinkedListAddAtHead(actualDummy, 5);                 /* addAtHead        [5] */
     dummyLinkedListAddAtTail(actualDummy, 5);                 /* addAtTail        [5] */
     dummyLinkedListGet(actualDummy, 5);                       /* get              [5] */
-    myLinkedListDeleteAtIndex(actualDummy, 6);             /* deleteAtIndex    [6] */
-    myLinkedListDeleteAtIndex(actualDummy, 4);             /* deleteAtIndex    [4] */
+    dummyLinkedListDeleteAtIndex(actualDummy, 6);             /* deleteAtIndex    [6] */
+    dummyLinkedListDeleteAtIndex(actualDummy, 4);             /* deleteAtIndex    [4] */
     printLinkedList(actualDummy);
 
     /* 预期结果 */
@@ -80,7 +80,7 @@ void test_2(void) {
     validateMyLinkedList('2', expectDummy, actualDummy);
 
     /* 释放内存空间 */
-    myLinkedListFree(actualDummy);
+    dummyLinkedListFree(actualDummy);
 }
 
 /**
@@ -97,10 +97,10 @@ void test_3(void) {
     dummyLinkedListAddAtHead(actualDummy, 4);             /* addAtHead        [4] */
     dummyLinkedListAddAtHead(actualDummy, 1);             /* addAtHead        [1] */
     dummyLinkedListAddAtHead(actualDummy, 2);             /* addAtHead        [2] */
-    myLinkedListDeleteAtIndex(actualDummy, 3);         /* deleteAtIndex    [3] */
+    dummyLinkedListDeleteAtIndex(actualDummy, 3);         /* deleteAtIndex    [3] */
     dummyLinkedListAddAtHead(actualDummy, 7);             /* addAtHead        [7] */
     dummyLinkedListAddAtHead(actualDummy, 1);             /* addAtHead        [1] */
-    myLinkedListDeleteAtIndex(actualDummy, 4);         /* deleteAtIndex    [4] */
+    dummyLinkedListDeleteAtIndex(actualDummy, 4);         /* deleteAtIndex    [4] */
     printLinkedList(actualDummy);
 
     /* 预期结果 */
@@ -112,7 +112,7 @@ void test_3(void) {
     validateMyLinkedList('3', expectDummy, actualDummy);
 
     /* 释放内存空间 */
-    myLinkedListFree(actualDummy);
+    dummyLinkedListFree(actualDummy);
 }
 
 /**********************************************************************************/

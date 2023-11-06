@@ -34,7 +34,7 @@ void test_1(void) {
     dummyLinkedListAddAtHead(actualDummy, 1);
     dummyLinkedListAddAtTail(actualDummy, 3);
     dummyLinkedListAddAtIndex(actualDummy, 1, 2);
-    myLinkedListDeleteAtIndex(actualDummy, 0);
+    dummyLinkedListDeleteAtIndex(actualDummy, 0);
 
     /* 预期结果 */
     DummyLinkedList *expectDummy = myLinkedListCreate();
@@ -45,7 +45,7 @@ void test_1(void) {
     validateMyLinkedList('1', expectDummy, actualDummy);
 
     /* 释放内存空间 */
-    myLinkedListFree(actualDummy);
+    dummyLinkedListFree(actualDummy);
 }
 
 /**********************************************************************************/
