@@ -3,14 +3,13 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 22:56:11
+ * @LastEditTime : 2023-11-06 10:12:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 螺旋矩阵II头文件 - 模拟法
  */
 /* 标准头文件 */
-#include <stdio.h>
 #include <stdlib.h>
 /* 解题方法配置文件 */
 #include "methodCfg.h"
@@ -37,7 +36,6 @@
  * @return {int} **ans                  返回数组
  */
 int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
-    printf("SIMULATION_METHOD_EN\n");
     int maxNum = n * n;                                                                 /* 最大值 */
     int curNum = 1;                                                                     /* 当前值 */
 
