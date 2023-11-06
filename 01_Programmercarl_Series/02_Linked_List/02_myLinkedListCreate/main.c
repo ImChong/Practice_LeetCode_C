@@ -3,17 +3,19 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 09:56:25
+ * @LastEditTime : 2023-11-06 13:11:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 707. 设计链表：https://leetcode.cn/problems/design-linked-list/
  * https://programmercarl.com/0707.%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
-#include "commonArray.h"                /* 00_Basics\01_Common_Func\inc\commonArray.h */
-#include "commonLinkedListDummy.h"      /* 00_Basics\01_Common_Func\inc\commonLinkedListDummy.h */
+/* 通用头文件 */
+#include "commonArray.h"
+#include "commonLinkedListDummy.h"
 
 /**********************************************************************************/
 /*                                                                                */
