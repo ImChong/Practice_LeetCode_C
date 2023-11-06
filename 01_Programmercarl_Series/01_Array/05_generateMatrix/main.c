@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-05 22:56:16
+ * @LastEditTime : 2023-11-06 10:05:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,7 +14,6 @@
  *
  */
 /* 标准头文件 */
-#include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */
 #include "commonArray.h"
@@ -132,11 +131,6 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-#if LAYER_SIMULATION_METHOD_EN
-    printf("LAYER_SIMULATION_METHOD_EN\n");
-#elif SIMULATION_METHOD_EN
-    printf("SIMULATION_METHOD_EN\n");
-#endif
     test_1();
     test_2();
     test_3();
