@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 00:59:00
+ * @LastEditTime : 2023-11-07 01:08:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,12 +28,15 @@ struct ListNode {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
+struct ListNode *linkedListCreate(void);     /* TODO */ /* 创建链表 */
 int linkedListGet(struct ListNode *head, int index);    /* TODO */ /* 获取链表中第index个节点的值 */
 struct ListNode *linkedListAddAtHead(struct ListNode *head, int val);   /* TODO */ /* 在链表头部添加一个节点 */
 struct ListNode *linkedListAddAtTail(struct ListNode *head, int val);           /* 在链表尾部添加一个节点 */
 struct ListNode *linkedListAddAtIndex(struct ListNode *head, int index, int val);   /* TODO */ /* 在链表中第index个节点之前添加一个值为val的节点 */
 struct ListNode *linkedListDeleteAtIndex(struct ListNode *head, int index);    /* TODO */ /* 删除链表中第index个节点 */
-struct ListNode *linkedListDeleteElement(struct ListNode *head, int val);       /* 从链表中删除一个节点 */
+struct ListNode *linkedListDeleteElement(struct ListNode *head, int val);       /* 从链表中删除第一个值为val的节点 */
+struct ListNode *linkedListDeleteElementAll(struct ListNode *head, int val);    /* TODO */ /* 从链表中删除所有值为val的节点 */
+int *linkedListGetIndexes(struct ListNode *head, int val, int *returnSize);     /* TODO */ /* 获取链表中值为val的所有节点的索引 */
 void linkedListFree(struct ListNode *head);         /* 释放链表 */
 
 /**********************************************************************************/
