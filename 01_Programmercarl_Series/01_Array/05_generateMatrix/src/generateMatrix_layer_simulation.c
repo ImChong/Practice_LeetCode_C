@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:24
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 10:12:12
+ * @LastEditTime : 2023-11-06 10:45:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,7 +34,7 @@
  * @return {int} **ans                  返回数组
  */
 int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
-    int num = 1;
+    int num = 1;                                                            /* 当前值 */
 
     /* 初始化矩阵，矩阵内数值均为 0 */
     int **matrix = (int **)malloc(sizeof(int *) * n);
@@ -45,8 +45,8 @@ int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
         (*returnColumnSizes)[i] = n;
     }
 
-    int left = 0, right = n - 1, top = 0, bottom = n - 1;
-    while (left <= right && top <= bottom) {
+    int left = 0, right = n - 1, top = 0, bottom = n - 1;                   /* 左、右、上、下 */
+    while (left <= right && top <= bottom) {                                /* 当左小于等于右 且 上小于等于下 */
         /* 从左到右 */
         for (int column = left; column <= right; column++) {
             matrix[top][column] = num++;
@@ -63,12 +63,12 @@ int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
         for (int row = bottom - 1; row > top; row--) {
             matrix[row][left] = num++;
         }
-        left++;
-        right--;
-        top++;
-        bottom--;
+        left++;                                                             /* 左自增 */
+        right--;                                                            /* 右自减 */
+        top++;                                                              /* 上自增 */
+        bottom--;                                                           /* 下自减 */
     }
-    return matrix;
+    return matrix;                                                          /* 返回二维数组 */
 }
 
 #endif /* LAYER_SIMULATION_METHOD_EN */
