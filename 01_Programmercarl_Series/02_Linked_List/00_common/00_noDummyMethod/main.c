@@ -3,14 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:09:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 11:03:06
+ * @LastEditTime : 2023-11-07 00:10:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 运行链表公共函数 - 未使用虚拟头节点
  */
-#include "commonArray.h"            /* 00_Basics\01_Common_Func\inc\commonArray.h */
-#include "commonLinkedList.h"       /* 00_Basics\01_Common_Func\inc\commonLinkedList.h */
+/* 通用头文件 */
+#include "commonArray.h"
+#include "commonLinkedList.h"
 
 /**********************************************************************************/
 /*                                                                                */
