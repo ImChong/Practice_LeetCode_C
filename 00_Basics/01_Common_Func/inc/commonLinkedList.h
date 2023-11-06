@@ -34,6 +34,7 @@ struct ListNode *linkedListAddAtTail(struct ListNode *head, int val);           
 struct ListNode *linkedListAddAtIndex(struct ListNode *head, int index, int val);   /* TODO */ /* 在链表中第index个节点之前添加一个值为val的节点 */
 struct ListNode *linkedListDeleteAtIndex(struct ListNode *head, int index);    /* TODO */ /* 删除链表中第index个节点 */
 struct ListNode *linkedListDeleteElement(struct ListNode *head, int val);       /* 从链表中删除一个节点 */
+void linkedListFree(struct ListNode *head);         /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -42,7 +43,6 @@ struct ListNode *linkedListDeleteElement(struct ListNode *head, int val);       
 /**********************************************************************************/
 struct ListNode *arrayToLinkedList(int *array, int size);       /* 将数组转换为链表 */
 void printLinkedList(struct ListNode *head);        /* 打印链表 */
-void linkedListFree(struct ListNode *head);         /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */
