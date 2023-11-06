@@ -29,7 +29,7 @@
  */
 void test_1(void) {
     /* 实际结果 */
-    MyLinkedList *actualDummy = myLinkedListCreate();
+    DummyLinkedList *actualDummy = myLinkedListCreate();
     myLinkedListAddAtHead(actualDummy, 1);
     myLinkedListAddAtTail(actualDummy, 3);
     myLinkedListAddAtIndex(actualDummy, 1, 2);
@@ -37,7 +37,7 @@ void test_1(void) {
     printLinkedList(actualDummy);
 
     /* 预期结果 */
-    MyLinkedList *expectDummy = myLinkedListCreate();
+    DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {2, 3};
     arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
@@ -55,9 +55,9 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
-    /* ["MyLinkedList","addAtHead","deleteAtIndex","addAtHead","addAtHead","addAtHead","addAtHead","addAtHead","addAtTail","get","deleteAtIndex","deleteAtIndex"] */
+    /* ["DummyLinkedList","addAtHead","deleteAtIndex","addAtHead","addAtHead","addAtHead","addAtHead","addAtHead","addAtTail","get","deleteAtIndex","deleteAtIndex"] */
     /* [[],[2],[1],[2],[7],[3],[2],[5],[5],[5],[6],[4]] */
-    MyLinkedList *actualDummy = myLinkedListCreate();      /* MyLinkedList     [] */
+    DummyLinkedList *actualDummy = myLinkedListCreate();      /* DummyLinkedList     [] */
     myLinkedListAddAtHead(actualDummy, 2);                 /* addAtHead        [2] */
     myLinkedListDeleteAtIndex(actualDummy, 1);             /* deleteAtIndex    [1] */
     myLinkedListAddAtHead(actualDummy, 2);                 /* addAtHead        [2] */
@@ -72,7 +72,7 @@ void test_2(void) {
     printLinkedList(actualDummy);
 
     /* 预期结果 */
-    MyLinkedList *expectDummy = myLinkedListCreate();
+    DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {5, 2, 3, 7, 2};
     arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 
@@ -90,10 +90,10 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
-    /* ["MyLinkedList","addAtHead","get","addAtHead","addAtHead","deleteAtIndex","addAtHead","get","get","get","addAtHead","deleteAtIndex"] */
+    /* ["DummyLinkedList","addAtHead","get","addAtHead","addAtHead","deleteAtIndex","addAtHead","get","get","get","addAtHead","deleteAtIndex"] */
     /* [[],[4],[1],[1],[5],[3],[7],[3],[3],[3],[1],[4]] */
     /* [null,null,-1,null,null,null,null,4,4,4,null,null] */
-    MyLinkedList *actualDummy = myLinkedListCreate();  /* MyLinkedList     [ ] */
+    DummyLinkedList *actualDummy = myLinkedListCreate();  /* DummyLinkedList     [ ] */
     myLinkedListAddAtHead(actualDummy, 4);             /* addAtHead        [4] */
     myLinkedListAddAtHead(actualDummy, 1);             /* addAtHead        [1] */
     myLinkedListAddAtHead(actualDummy, 2);             /* addAtHead        [2] */
@@ -104,7 +104,7 @@ void test_3(void) {
     printLinkedList(actualDummy);
 
     /* 预期结果 */
-    MyLinkedList *expectDummy = myLinkedListCreate();
+    DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {1, 7, 2, 1};
     arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 

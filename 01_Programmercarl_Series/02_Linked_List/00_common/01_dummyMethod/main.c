@@ -30,14 +30,14 @@
  */
 void test_1(void) {
     /* 实际结果 */
-    MyLinkedList *actualDummy = myLinkedListCreate();
+    DummyLinkedList *actualDummy = myLinkedListCreate();
     myLinkedListAddAtHead(actualDummy, 1);
     myLinkedListAddAtTail(actualDummy, 3);
     myLinkedListAddAtIndex(actualDummy, 1, 2);
     myLinkedListDeleteAtIndex(actualDummy, 0);
 
     /* 预期结果 */
-    MyLinkedList *expectDummy = myLinkedListCreate();
+    DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {2, 3};
     arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
 

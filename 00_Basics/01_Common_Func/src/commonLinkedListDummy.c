@@ -24,10 +24,10 @@
 /**
  * @description: 创建链表
  * =================================================================================
- * @return {MyLinkedList} *dummyHead    返回虚拟头节点
+ * @return {DummyLinkedList} *dummyHead    返回虚拟头节点
  */
-MyLinkedList *myLinkedListCreate(void) {
-    MyLinkedList *dummyHead = (MyLinkedList*)malloc(sizeof(MyLinkedList));    /* 为虚拟头节点分配空间 */
+DummyLinkedList *myLinkedListCreate(void) {
+    DummyLinkedList *dummyHead = (DummyLinkedList*)malloc(sizeof(DummyLinkedList));    /* 为虚拟头节点分配空间 */
     dummyHead->head = NULL;       /* 初始化链表头 */
     dummyHead->size = 0;          /* 初始化链表长度 */
     return dummyHead;             /* 返回虚拟头节点 */
@@ -36,11 +36,11 @@ MyLinkedList *myLinkedListCreate(void) {
 /**
  * @description: 获取指定索引的节点数值
  * =================================================================================
- * @param {MyLinkedList} *dummyHead     虚拟头节点
+ * @param {DummyLinkedList} *dummyHead     虚拟头节点
  * @param {int} index                   索引
  * @return {int} ans                    返回指定索引的节点数值
  */
-int myLinkedListGet(MyLinkedList *dummyHead, int index) {
+int myLinkedListGet(DummyLinkedList *dummyHead, int index) {
     if (index < 0 || index >= dummyHead->size) {      /* 输入校验 */
         return -1;                                  /* 返回 -1 */
     }
@@ -54,11 +54,11 @@ int myLinkedListGet(MyLinkedList *dummyHead, int index) {
 /**
  * @description: 在链表头部添加新节点
  * =================================================================================
- * @param {MyLinkedList} *dummyHead       虚拟头节点
+ * @param {DummyLinkedList} *dummyHead       虚拟头节点
  * @param {int} val                 新节点数值
  * @return {void}
  */
-void myLinkedListAddAtHead(MyLinkedList *dummyHead, int val) {
+void myLinkedListAddAtHead(DummyLinkedList *dummyHead, int val) {
     struct ListNode *newHead = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新头节点分配空间*/
     newHead->val = val;             /* 为链表新头节点赋值 */
     newHead->next = dummyHead->head;      /* 将链表新头节点的下一节点设置为链表旧头节点 */
@@ -69,11 +69,11 @@ void myLinkedListAddAtHead(MyLinkedList *dummyHead, int val) {
 /**
  * @description: 在链表尾部添加新节点
  * =================================================================================
- * @param {MyLinkedList} *dummyHead       虚拟头节点
+ * @param {DummyLinkedList} *dummyHead       虚拟头节点
  * @param {int} val                 新节点数值
  * @return {void}
  */
-void myLinkedListAddAtTail(MyLinkedList *dummyHead, int val) {
+void myLinkedListAddAtTail(DummyLinkedList *dummyHead, int val) {
     struct ListNode *newTail = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新尾节点分配空间*/
     newTail->val = val;                         /* 为链表新尾节点赋值 */
     newTail->next = NULL;                       /* 将链表新尾节点的下一节点设置为NULL */
@@ -93,12 +93,12 @@ void myLinkedListAddAtTail(MyLinkedList *dummyHead, int val) {
 /**
  * @description: 在指定索引处插入新节点
  * =================================================================================
- * @param {MyLinkedList} *dummyHead       虚拟头节点
+ * @param {DummyLinkedList} *dummyHead       虚拟头节点
  * @param {int} index               索引
  * @param {int} val                 新节点数值
  * @return {void}
  */
-void myLinkedListAddAtIndex(MyLinkedList *dummyHead, int index, int val) {
+void myLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val) {
     if (index < 0 || index > dummyHead->size) {       /* 输入校验 */
         return;
     }
@@ -129,11 +129,11 @@ void myLinkedListAddAtIndex(MyLinkedList *dummyHead, int index, int val) {
 /**
  * @description: 删除指定索引的节点
  * =================================================================================
- * @param {MyLinkedList} *dummyHead       虚拟头节点
+ * @param {DummyLinkedList} *dummyHead       虚拟头节点
  * @param {int} index               索引
  * @return {void}
  */
-void myLinkedListDeleteAtIndex(MyLinkedList *dummyHead, int index) {
+void myLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index) {
     if (index < 0 || index >= dummyHead->size) {      /* 输入校验 */
         return;
     }
@@ -157,10 +157,10 @@ void myLinkedListDeleteAtIndex(MyLinkedList *dummyHead, int index) {
 /**
  * @description: 释放链表内存空间
  * =================================================================================
- * @param {MyLinkedList} *dummyHead       虚拟头节点
+ * @param {DummyLinkedList} *dummyHead       虚拟头节点
  * @return {void}
  */
-void myLinkedListFree(MyLinkedList *dummyHead) {
+void myLinkedListFree(DummyLinkedList *dummyHead) {
     struct ListNode *curr = dummyHead->head;      /* 获取当前链表头节点的指针 */
     while (curr != NULL) {                  /* 当指针所指的节点不为NULL时 */
         struct ListNode *tmp = curr;            /* 获取当前节点的指针 */
@@ -178,12 +178,12 @@ void myLinkedListFree(MyLinkedList *dummyHead) {
 /**
  * @description: 将数组转换为链表
  * =================================================================================
- * @param {MyLinkedList} *list      虚拟头节点
+ * @param {DummyLinkedList} *list      虚拟头节点
  * @param {int} *nums               数组
  * @param {int} numsSize            数组大小
  * @return {void}
  */
-void arrayToMyLinkedList(MyLinkedList *list, int *nums, int numsSize) {
+void arrayToMyLinkedList(DummyLinkedList *list, int *nums, int numsSize) {
     for (int i = 0; i < numsSize; i++) {
         myLinkedListAddAtTail(list, nums[i]);
     }
@@ -192,10 +192,10 @@ void arrayToMyLinkedList(MyLinkedList *list, int *nums, int numsSize) {
 /**
  * @description: 打印链表
  * =================================================================================
- * @param {MyLinkedList} *list      虚拟头节点
+ * @param {DummyLinkedList} *list      虚拟头节点
  * @return {void}
  */
-void printMyLinkedList(MyLinkedList *list) {
+void printMyLinkedList(DummyLinkedList *list) {
     printf("linked list (size: %d): Dummy -> ", list->size);    /* 打印链表长度 */
 
     for (int i = 0; i < list->size; i++) {                              /* 循环打印链表节点数值 */
@@ -216,11 +216,11 @@ void printMyLinkedList(MyLinkedList *list) {
  * @description: 验证答案
  * =================================================================================
  * @param {char} testNum            测试编号
- * @param {MyLinkedList} *expect    预期
- * @param {MyLinkedList} *actual    实际
+ * @param {DummyLinkedList} *expect    预期
+ * @param {DummyLinkedList} *actual    实际
  * @return {void}
  */
-void validateMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actual) {
+void validateMyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual) {
     printf("=========================\n");
     int isSuccess = true;
 
