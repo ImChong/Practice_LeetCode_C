@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 01:20:05
+ * @LastEditTime : 2023-11-07 01:23:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -41,15 +41,15 @@ void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index);     /*
 void dummyLinkedListDeleteElement(DummyLinkedList *dummyHead, int val);       /* TODO */ /* 从链表中删除第一个值为val的节点 */
 void dummyLinkedListDeleteElementAll(DummyLinkedList *dummyHead, int val);    /* TODO */ /* 从链表中删除所有值为val的节点 */
 int *dummyLinkedListGetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize);     /* TODO */ /* 获取链表中值为val的所有节点的索引 */
-void dummyLinkedListFree(DummyLinkedList *dummyHead);     /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void arrayToMyLinkedList(DummyLinkedList *dummyHead, int *nums, int numsSize);     /* 将数组转换为链表 */
-void printMyLinkedList(DummyLinkedList *dummyHead);      /* 打印链表 */
+void dummyLinkedListFromArray(DummyLinkedList *dummyHead, int *nums, int numsSize);     /* 将数组转换为链表 */
+void dummyLinkedListPrint(DummyLinkedList *dummyHead);      /* 打印链表 */
+void dummyLinkedListFree(DummyLinkedList *dummyHead);     /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */

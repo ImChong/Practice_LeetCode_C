@@ -39,7 +39,7 @@ void test_1(void) {
     /* 预期结果 */
     DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {2, 3};
-    arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
+    dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateMyLinkedList('1', expectDummy, actualDummy);

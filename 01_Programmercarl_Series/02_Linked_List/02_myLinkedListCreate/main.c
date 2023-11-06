@@ -34,12 +34,12 @@ void test_1(void) {
     dummyLinkedListAddAtTail(actualDummy, 3);
     dummyLinkedListAddAtIndex(actualDummy, 1, 2);
     dummyLinkedListDeleteAtIndex(actualDummy, 0);
-    printLinkedList(actualDummy);
+    linkedListPrint(actualDummy);
 
     /* 预期结果 */
     DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {2, 3};
-    arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
+    dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateMyLinkedList('1', expectDummy, actualDummy);
@@ -69,12 +69,12 @@ void test_2(void) {
     dummyLinkedListGet(actualDummy, 5);                       /* get              [5] */
     dummyLinkedListDeleteAtIndex(actualDummy, 6);             /* deleteAtIndex    [6] */
     dummyLinkedListDeleteAtIndex(actualDummy, 4);             /* deleteAtIndex    [4] */
-    printLinkedList(actualDummy);
+    linkedListPrint(actualDummy);
 
     /* 预期结果 */
     DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {5, 2, 3, 7, 2};
-    arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
+    dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateMyLinkedList('2', expectDummy, actualDummy);
@@ -101,12 +101,12 @@ void test_3(void) {
     dummyLinkedListAddAtHead(actualDummy, 7);             /* addAtHead        [7] */
     dummyLinkedListAddAtHead(actualDummy, 1);             /* addAtHead        [1] */
     dummyLinkedListDeleteAtIndex(actualDummy, 4);         /* deleteAtIndex    [4] */
-    printLinkedList(actualDummy);
+    linkedListPrint(actualDummy);
 
     /* 预期结果 */
     DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {1, 7, 2, 1};
-    arrayToMyLinkedList(expectDummy, nums, ARR_SIZE(nums));
+    dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateMyLinkedList('3', expectDummy, actualDummy);

@@ -31,7 +31,7 @@ struct ListNode *createList(int *array, int size) {
 }
 
 /* 打印链表 */
-void printLinkedList(struct ListNode *listPtr) {
+void linkedListPrint(struct ListNode *listPtr) {
     while (listPtr != NULL) {
         printf("%d ", listPtr->val);
         listPtr = listPtr->next;
@@ -44,6 +44,6 @@ int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
     struct ListNode *ansList = createList(arr, 5);
-    printLinkedList(ansList);
+    linkedListPrint(ansList);
     return 0;
 }

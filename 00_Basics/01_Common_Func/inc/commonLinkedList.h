@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 01:08:58
+ * @LastEditTime : 2023-11-07 01:23:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -37,15 +37,15 @@ struct ListNode *linkedListDeleteAtIndex(struct ListNode *head, int index);    /
 struct ListNode *linkedListDeleteElement(struct ListNode *head, int val);       /* 从链表中删除第一个值为val的节点 */
 struct ListNode *linkedListDeleteElementAll(struct ListNode *head, int val);    /* TODO */ /* 从链表中删除所有值为val的节点 */
 int *linkedListGetIndexes(struct ListNode *head, int val, int *returnSize);     /* TODO */ /* 获取链表中值为val的所有节点的索引 */
-void linkedListFree(struct ListNode *head);         /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-struct ListNode *arrayToLinkedList(int *array, int size);       /* 将数组转换为链表 */
-void printLinkedList(struct ListNode *head);        /* 打印链表 */
+struct ListNode *linkedListFromArray(int *array, int size);       /* 将数组转换为链表 */
+void linkedListPrint(struct ListNode *head);        /* 打印链表 */
+void linkedListFree(struct ListNode *head);         /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */

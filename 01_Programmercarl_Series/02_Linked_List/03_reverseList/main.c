@@ -56,13 +56,13 @@ void test_1(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5};
     int arrSize = ARR_SIZE(arr);
-    struct ListNode *arrList = arrayToLinkedList(arr, arrSize);
+    struct ListNode *arrList = linkedListFromArray(arr, arrSize);
     struct ListNode *ansList = reverseList(arrList);
 
     /* 预期结果 */
     int expect[] = {5, 4, 3, 2, 1};
     int expectSize = ARR_SIZE(expect);
-    struct ListNode *expectList = arrayToLinkedList(expect, expectSize);
+    struct ListNode *expectList = linkedListFromArray(expect, expectSize);
 
     /* 比较结果 */
     validateLinkedList('1', expectList, ansList);
@@ -81,13 +81,13 @@ void test_2(void) {
     /* 实际结果 */
     int arr[] = {1};
     int arrSize = ARR_SIZE(arr);
-    struct ListNode *arrList = arrayToLinkedList(arr, arrSize);
+    struct ListNode *arrList = linkedListFromArray(arr, arrSize);
     struct ListNode *ansList = reverseList(arrList);
 
     /* 预期结果 */
     int expect[] = {1};
     int expectSize = ARR_SIZE(expect);
-    struct ListNode *expectList = arrayToLinkedList(expect, expectSize);
+    struct ListNode *expectList = linkedListFromArray(expect, expectSize);
 
     /* 比较结果 */
     validateLinkedList('2', expectList, ansList);
@@ -106,13 +106,13 @@ void test_3(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int arrSize = ARR_SIZE(arr);
-    struct ListNode *arrList = arrayToLinkedList(arr, arrSize);
+    struct ListNode *arrList = linkedListFromArray(arr, arrSize);
     struct ListNode *ansList = reverseList(arrList);
 
     /* 预期结果 */
     int expect[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     int expectSize = ARR_SIZE(expect);
-    struct ListNode *expectList = arrayToLinkedList(expect, expectSize);
+    struct ListNode *expectList = linkedListFromArray(expect, expectSize);
 
     /* 比较结果 */
     validateLinkedList('3', expectList, ansList);

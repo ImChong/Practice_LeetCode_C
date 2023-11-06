@@ -183,7 +183,7 @@ void dummyLinkedListFree(DummyLinkedList *dummyHead) {
  * @param {int} numsSize            数组大小
  * @return {void}
  */
-void arrayToMyLinkedList(DummyLinkedList *list, int *nums, int numsSize) {
+void dummyLinkedListFromArray(DummyLinkedList *list, int *nums, int numsSize) {
     for (int i = 0; i < numsSize; i++) {
         dummyLinkedListAddAtTail(list, nums[i]);
     }
@@ -195,7 +195,7 @@ void arrayToMyLinkedList(DummyLinkedList *list, int *nums, int numsSize) {
  * @param {DummyLinkedList} *list      虚拟头节点
  * @return {void}
  */
-void printMyLinkedList(DummyLinkedList *list) {
+void dummyLinkedListPrint(DummyLinkedList *list) {
     printf("linked list (size: %d): Dummy -> ", list->size);    /* 打印链表长度 */
 
     for (int i = 0; i < list->size; i++) {                              /* 循环打印链表节点数值 */
@@ -237,6 +237,6 @@ void validateMyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList
     }
 
     printf("=========================\n");
-    printf("- Expect: "); printMyLinkedList(expect);
-    printf("- Actual: "); printMyLinkedList(actual);
+    printf("- Expect: "); dummyLinkedListPrint(expect);
+    printf("- Actual: "); dummyLinkedListPrint(actual);
 }

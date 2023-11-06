@@ -37,7 +37,7 @@ void test_1(void) {
 
     /* 预期结果 */
     int nums[] = {2, 3};
-    struct ListNode *expectList = arrayToLinkedList(nums, ARR_SIZE(nums));
+    struct ListNode *expectList = linkedListFromArray(nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateLinkedList('1', expectList, actualList);

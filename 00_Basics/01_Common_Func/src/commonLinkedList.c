@@ -28,7 +28,7 @@
  * @param {int} size                    数组大小
  * @return {struct ListNode} *head      头节点指针
  */
-struct ListNode *arrayToLinkedList(int *array, int size) {
+struct ListNode *linkedListFromArray(int *array, int size) {
     struct ListNode *head = NULL;       /* 头节点指针 */
     struct ListNode *current = NULL;    /* 当前节点指针 */
 
@@ -103,7 +103,7 @@ struct ListNode *linkedListDeleteElement(struct ListNode *head, int val) {
  * @param {ListNode} *head          头节点指针
  * @return {void}
  */
-void printLinkedList(struct ListNode *head) {
+void linkedListPrint(struct ListNode *head) {
     printf("Linked List: ");
     while (head != NULL) {
         printf("%d ", head->val);
@@ -167,6 +167,6 @@ void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNo
     }
 
     printf("=========================\n");
-    printf("- Expect: "); printLinkedList(expectList);
-    printf("- Actual: "); printLinkedList(actualList);
+    printf("- Expect: "); linkedListPrint(expectList);
+    printf("- Actual: "); linkedListPrint(actualList);
 }
