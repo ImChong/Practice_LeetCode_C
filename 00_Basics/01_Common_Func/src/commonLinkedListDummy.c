@@ -197,6 +197,7 @@ void arrayToMyLinkedList(MyLinkedList *list, int *nums, int numsSize) {
  */
 void printMyLinkedList(MyLinkedList *list) {
     printf("linked list (size: %d): ", list->size);     /* 打印链表长度 */
+
     for (int i = 0; i < list->size; i++) {              /* 循环打印链表节点数值 */
         printf("%d ", myLinkedListGet(list, i));            /* 打印链表节点数值 */
     }
@@ -231,7 +232,7 @@ void validateMyLinkedList(char testNum, MyLinkedList *expect, MyLinkedList *actu
     } else {
         printf(" - ❌ Test %c Failed\n", testNum);
     }
-    
+
     printf("=========================\n");
     printf("- Expect: "); printMyLinkedList(expect);
     printf("- Actual: "); printMyLinkedList(actual);
