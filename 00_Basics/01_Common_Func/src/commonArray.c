@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 00:08:30
+ * @LastEditTime : 2023-11-07 00:23:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -92,7 +92,6 @@ void free2DArray(int **arr, int arrSize) {
     free(arr);
 }
 
-
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
@@ -148,7 +147,6 @@ void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *ex
                                 int **actual2DArr, int actualRtnSize, int *actualRtnColSize) {
     printf("=========================\n");
     bool isSuccess = true;
-
     if (actualRtnSize != expectRtnSize) {
         isSuccess = false;
     } else {
@@ -165,13 +163,11 @@ void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *ex
             }
         }
     }
-
     if (isSuccess) {
         printf(" - ✅ Test %c passed\n", testNum);
     } else {
         printf(" - ❌ Test %c failed\n", testNum);
     }
-
     printf("=========================\n");
     printf("- Expect: "); print2DArray(expect2DArr, expectRtnSize, expectRtnColSize);
     printf("- Actual: "); print2DArray(actual2DArr, actualRtnSize, actualRtnColSize);
