@@ -13,8 +13,8 @@
 /* 标准头文件 */
 #include <stdio.h>
 /* 通用头文件 */
-#include "commonHelper.h"       /* 00_Basics\01_Common_Func\inc\commonHelper.h */
-#include "commonArray.h"        /* 00_Basics\01_Common_Func\inc\commonArray.h */
+#include "commonHelper.h"
+#include "commonArray.h"
 /* 题解头文件 */
 #include "binarySearch.h"
 
