@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:24
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 09:58:38
+ * @LastEditTime : 2023-11-06 10:02:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -36,7 +36,7 @@
 int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
     int num = 1;
 
-    /* 初始化矩阵 */
+    /* 初始化矩阵，矩阵内数值均为 0 */
     int **matrix = (int **)malloc(sizeof(int *) * n);
     *returnSize = n;
     *returnColumnSizes = (int *)malloc(sizeof(int) * n);
@@ -44,8 +44,31 @@ int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
         matrix[i] = (int *)calloc(n, sizeof(int));
         (*returnColumnSizes)[i] = n;
     }
-    /* TODO */
-    return 0;
+
+    int left = 0, right = n - 1, top = 0, bottom = n - 1;
+    while (left <= right && top <= bottom) {
+        /* 从左到右 */
+        for (int column = left; column <= right; column++) {
+            matrix[top][column] = num++;
+        }
+        /* 从上到下 */
+        for (int row = top + 1; row <= bottom; row++) {
+            matrix[row][right] = num++;
+        }
+        /* 从右到左 */
+        for (int column = right - 1; column >= left; column--) {
+            matrix[bottom][column] = num++;
+        }
+        /* 从下到上 */
+        for (int row = bottom - 1; row > top; row--) {
+            matrix[row][left] = num++;
+        }
+        left++;
+        right--;
+        top++;
+        bottom--;
+    }
+    return matrix;
 }
 
 #endif /* LAYER_SIMULATION_METHOD_EN */
