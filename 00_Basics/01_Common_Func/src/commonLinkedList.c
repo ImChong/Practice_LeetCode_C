@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 00:47:43
+ * @LastEditTime : 2023-11-07 01:11:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -104,7 +104,7 @@ struct ListNode *linkedListDeleteElement(struct ListNode *head, int val) {
  * @return {void}
  */
 void printLinkedList(struct ListNode *head) {
-    printf("(no Dummy) Linked List: ");
+    printf("Linked List: ");
     while (head != NULL) {
         printf("%d ", head->val);
         if (head->next != NULL) {
