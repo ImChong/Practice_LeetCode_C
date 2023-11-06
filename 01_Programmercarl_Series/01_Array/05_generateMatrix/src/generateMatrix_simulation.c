@@ -10,6 +10,7 @@
  * @Description  : 螺旋矩阵II头文件 - 模拟法
  */
 /* 标准头文件 */
+#include <stdio.h>
 #include <stdlib.h>
 /* 解题方法配置文件 */
 #include "methodCfg.h"
