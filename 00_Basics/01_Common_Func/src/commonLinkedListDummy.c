@@ -270,22 +270,22 @@ void dummyLinkedListFree(DummyLinkedList *dummyHead) {
  * @return {void}
  */
 void validateDummyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual) {
-    printf("=========================\n");
-    int isSuccess = true;
+    printf("=========================\n");                                      /* 打印分割线 */
+    int isSuccess = true;                                                       /* 是否通过测试 */
 
-    for (int i = 0; i < expect->size; i++) {
-        if (dummyLinkedListGet(expect, i) != dummyLinkedListGet(actual, i)) {
-            isSuccess = false;
-            break;
+    for (int i = 0; i < expect->size; i++) {                                    /* 循环比较每个节点的数值 */
+        if (dummyLinkedListGet(expect, i) != dummyLinkedListGet(actual, i)) {       /* 如果节点数值不相等 */
+            isSuccess = false;                                                          /* 未通过测试 */
+            break;                                                                      /* 跳出循环 */
         }
     }
-    if (isSuccess) {
-        printf(" - ✅ Test %c Passed\n", testNum);
-    } else {
-        printf(" - ❌ Test %c Failed\n", testNum);
+    if (isSuccess) {                                                            /* 如果通过测试 */
+        printf(" - ✅ Test %c Passed\n", testNum);                                  /* 打印通过信息 */
+    } else {                                                                    /* 如果未通过测试 */
+        printf(" - ❌ Test %c Failed\n", testNum);                                  /* 打印未通过信息 */
     }
 
-    printf("=========================\n");
-    printf("- Expect: "); dummyLinkedListPrint(expect);
-    printf("- Actual: "); dummyLinkedListPrint(actual);
+    printf("=========================\n");                                      /* 打印分割线 */
+    printf("- Expect: "); dummyLinkedListPrint(expect);                         /* 打印预期结果 */
+    printf("- Actual: "); dummyLinkedListPrint(actual);                         /* 打印实际结果 */
 }
