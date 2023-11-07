@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 23:07:26
+ * @LastEditTime : 2023-11-07 23:09:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,6 +35,21 @@ int linkedListGet(struct ListNode *head, int index) {
     }
     return curr->val;
 }
+
+/**
+ * @description: 在链表头部添加一个节点
+ * =================================================================================
+ * @param {ListNode *} head     头节点指针
+ * @param {int} val             目标节点值
+ * @return {ListNode *} head    头节点指针
+ */
+struct ListNode *linkedListAddAtHead(struct ListNode *head, int val) {
+    struct ListNode *newNode = (struct ListNode *)malloc(sizeof(struct ListNode));
+    newNode->val = val;
+    newNode->next = head;
+    return newNode;
+}
+
 
 /**
  * @description: 添加元素至链表 - 不使用虚拟头结点
