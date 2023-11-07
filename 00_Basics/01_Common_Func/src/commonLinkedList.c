@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 23:04:30
+ * @LastEditTime : 2023-11-07 23:07:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,38 +22,24 @@
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 创建链表 - 不使用虚拟头结点
+ * @description: 获取链表中第index个节点的值
  * =================================================================================
- * @param {int} *array                  数组
- * @param {int} size                    数组大小
- * @return {struct ListNode} *head      头节点指针
+ * @param {ListNode *} head     头节点指针
+ * @param {int} index           目标节点索引
+ * @return {int}                目标节点值
  */
-struct ListNode *linkedListFromArray(int *array, int size) {
-    struct ListNode *head = NULL;       /* 头节点指针 */
-    struct ListNode *current = NULL;    /* 当前节点指针 */
-
-    for (int i = 0; i < size; i++) {
-        /* 创建新结点 */
-        struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));
-        new_node->val = array[i];
-        new_node->next = NULL;
-
-        /* 如果链表为空，则将新结点设置为头结点 */
-        if (head == NULL) {
-            head = new_node;
-        } else {
-            /* 否则，将新结点追加到链表末尾 */
-            current->next = new_node;
-        }
-        current = new_node;
+int linkedListGet(struct ListNode *head, int index) {
+    struct ListNode *curr = head;
+    while (index--) {
+        curr = curr->next;
     }
-    return head;
+    return curr->val;
 }
 
 /**
  * @description: 添加元素至链表 - 不使用虚拟头结点
  * =================================================================================
- * @param {ListNode} *head              头节点指针
+ * @param {ListNode *} head             头节点指针
  * @param {int} val                     元素值
  * @return {struct ListNode} *head      头节点指针
  */
@@ -95,6 +81,40 @@ struct ListNode *linkedListDeleteElement(struct ListNode *head, int val) {
         }
     }
     return dummy.next;                              /* 返回链表虚拟头节点 */
+}
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                HELPER FUNCTIONS                                */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 创建链表 - 不使用虚拟头结点
+ * =================================================================================
+ * @param {int} *array                  数组
+ * @param {int} size                    数组大小
+ * @return {struct ListNode} *head      头节点指针
+ */
+struct ListNode *linkedListFromArray(int *array, int size) {
+    struct ListNode *head = NULL;       /* 头节点指针 */
+    struct ListNode *current = NULL;    /* 当前节点指针 */
+
+    for (int i = 0; i < size; i++) {
+        /* 创建新结点 */
+        struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));
+        new_node->val = array[i];
+        new_node->next = NULL;
+
+        /* 如果链表为空，则将新结点设置为头结点 */
+        if (head == NULL) {
+            head = new_node;
+        } else {
+            /* 否则，将新结点追加到链表末尾 */
+            current->next = new_node;
+        }
+        current = new_node;
+    }
+    return head;
 }
 
 /**
