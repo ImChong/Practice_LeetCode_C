@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 00:45:22
+ * @LastEditTime : 2023-11-07 22:50:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -23,8 +23,6 @@
 /**********************************************************************************/
 /**
  * @description: 测试 1
- * 输入：{1, 2, 3}
- * 输出：{2, 3}
  * =================================================================================
  * @return {void}
  */
@@ -48,6 +46,27 @@ void test_1(void) {
     dummyLinkedListFree(actualDummy);
 }
 
+/**
+ * @description: 测试 2
+ * =================================================================================
+ * @return {void}
+ */
+void test_2(void) {
+    /* 实际结果 */
+    DummyLinkedList *actualDummy = myLinkedListCreate();
+    dummyLinkedListAddAtHead(actualDummy, 1);
+    dummyLinkedListDeleteAtIndex(actualDummy, 0);
+
+    /* 预期结果 */
+    DummyLinkedList *expectDummy = myLinkedListCreate();
+
+    /* 比较结果 */
+    validateDummyLinkedList('2', expectDummy, actualDummy);
+
+    /* 释放内存空间 */
+    dummyLinkedListFree(actualDummy);
+}
+
 /**********************************************************************************/
 /*                                                                                */
 /*                                  MAIN FUNCTION                                 */
@@ -62,5 +81,6 @@ void test_1(void) {
  */
 int main(int argc, const char *argv[]) {
     test_1();
+    test_2();
     return 0;
 }
