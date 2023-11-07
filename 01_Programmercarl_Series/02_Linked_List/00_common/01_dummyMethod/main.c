@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 22:53:10
+ * @LastEditTime : 2023-11-07 22:56:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,7 @@
  */
 /* 标准头文件 */
 #include <stdio.h>
+#include <stdlib.h>
 /* 通用头文件 */
 #include "commonArray.h"
 #include "commonLinkedListDummy.h"
@@ -95,6 +96,29 @@ void test_3(void) {
     dummyLinkedListFree(actualDummy);
 }
 
+void test_4(void) {
+    /* 实际结果 */
+    DummyLinkedList *actualDummy = myLinkedListCreate();
+    dummyLinkedListAddAtTail(actualDummy, 1);
+    dummyLinkedListAddAtTail(actualDummy, 2);
+    dummyLinkedListAddAtTail(actualDummy, 1);
+    dummyLinkedListAddAtTail(actualDummy, 2);
+    dummyLinkedListAddAtTail(actualDummy, 1);
+    dummyLinkedListAddAtTail(actualDummy, 2);
+    int actualReturnSize = 0;
+    int *actualIndexes = dummyLinkedListGetIndexes(actualDummy, 2, &actualReturnSize);
+
+    /* 预期结果 */
+    int expectIndexes[] = {1, 3, 5};
+
+    /* 比较结果 */
+    validateArray('4', expectIndexes, ARR_SIZE(expectIndexes), actualIndexes, actualReturnSize);
+
+    /* 释放内存空间 */
+    dummyLinkedListFree(actualDummy);
+    free(actualIndexes);
+}
+
 /**********************************************************************************/
 /*                                                                                */
 /*                                  MAIN FUNCTION                                 */
@@ -111,5 +135,6 @@ int main(int argc, const char *argv[]) {
     test_1();
     test_2();
     test_3();
+    test_4();
     return 0;
 }
