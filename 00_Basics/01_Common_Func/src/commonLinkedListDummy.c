@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 22:39:40
+ * @LastEditTime : 2023-11-07 22:46:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -184,21 +184,23 @@ void dummyLinkedListDeleteElement(DummyLinkedList *dummyHead, int val) {
  * =================================================================================
  * @param {DummyLinkedList *} dummyHead     虚拟头节点
  * @param {int} val                         目标值
- * @param {int *} returnSize
- * @return {*}
+ * @param {int *} returnSize                返回索引数组的大小 / 值为val的节点个数
+ * @return {int *} indexes                  返回索引数组
  */
 int *dummyLinkedListGetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize) {
-    int *indexes = (int *)malloc(sizeof(int) * dummyHead->size);    /* 为索引数组分配空间 */
-    int index = 0;                                                  /* 索引数组下标 */
-    struct ListNode *curr = dummyHead->head;                        /* 获取当前链表头节点的指针 */
-    while (curr != NULL) {                                          /* 当指针所指的节点不为NULL时 */
-        if (curr->val == val) {                                         /* 当前节点的值等于目标值 */
-            indexes[index++] = curr->val;                                   /* 将当前节点的索引添加至索引数组 */
+    int *indexes = (int *)malloc(sizeof(int) * dummyHead->size);
+    int listIndex = 0;
+    int elementIndex = 0;
+    struct ListNode *curr = dummyHead->head;
+    while (curr != NULL) {
+        if (curr->val == val) {
+            indexes[elementIndex++] = listIndex;
         }
-        curr = curr->next;                                              /* 指针向后移动一位 */
+        curr = curr->next;
+        listIndex++;
     }
-    *returnSize = index;                                            /* 将索引数组长度赋值给returnSize */
-    return indexes;                                                 /* 返回索引数组 */
+    *returnSize = elementIndex;
+    return indexes;
 }
 
 /**********************************************************************************/
