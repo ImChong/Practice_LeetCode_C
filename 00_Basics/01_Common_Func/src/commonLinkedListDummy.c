@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 01:42:50
+ * @LastEditTime : 2023-11-07 22:35:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -129,8 +129,8 @@ void dummyLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val) {
 /**
  * @description: 删除指定索引的节点
  * =================================================================================
- * @param {DummyLinkedList} *dummyHead       虚拟头节点
- * @param {int} index               索引
+ * @param {DummyLinkedList} *dummyHead      虚拟头节点
+ * @param {int} index                       索引
  * @return {void}
  */
 void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index) {
@@ -155,21 +155,29 @@ void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index) {
 }
 
 /**
- * @description: 释放链表内存空间
+ * @description: 从链表中删除第一个值为val的节点
  * =================================================================================
- * @param {DummyLinkedList} *dummyHead       虚拟头节点
+ * @param {DummyLinkedList} *dummyHead      虚拟头节点
+ * @param {int} val                         目标值
  * @return {void}
  */
-void dummyLinkedListFree(DummyLinkedList *dummyHead) {
-    struct ListNode *curr = dummyHead->head;      /* 获取当前链表头节点的指针 */
-    while (curr != NULL) {                  /* 当指针所指的节点不为NULL时 */
-        struct ListNode *tmp = curr;            /* 获取当前节点的指针 */
-        curr = curr->next;                      /* 指针向后移动一位 */
-        free(tmp);                              /* 释放当前指针所指节点的内存空间 */
-    }
-    free(dummyHead);                              /* 释放虚拟头节点的内存空间 */
-}
+void dummyLinkedListDeleteElement(DummyLinkedList *dummyHead, int val) {
+    struct ListNode dummy;                          /* 创建虚拟头节点 */
+    dummy.next = dummyHead->head;                   /* 将传入链表接在虚拟头节点后面 */
 
+    struct ListNode *curr = &dummy;                 /* 创建指针：用于遍历列表 */
+    while (curr->next != NULL) {                    /* 遍历链表 */
+        if (curr->next->val == val) {                   /* 当前节点的下一个节点的值等于目标值 */
+            struct ListNode *tmp = curr->next;              /* 保存当前节点的下一个节点 */
+            curr->next = curr->next->next;                  /* 当前节点的下一个节点指向下下个节点 */
+            free(tmp);                                      /* 释放当前节点的下一个节点 */
+            dummyHead->size--;                              /* 链表长度 - 1 */
+        } else {                                        /* 当前节点的下一个节点的值不等于目标值 */
+            curr = curr->next;                              /* 指针向后移动一位 */
+        }
+    }
+    dummyHead->head = dummy.next;                   /* 将虚拟头节点指向的链表头节点设置为链表新头节点 */
+}
 /**********************************************************************************/
 /*                                                                                */
 /*                                 HELPER FUNCTIONS                               */
