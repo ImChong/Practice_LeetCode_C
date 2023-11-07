@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 22:35:13
+ * @LastEditTime : 2023-11-07 22:37:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -155,7 +155,7 @@ void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index) {
 }
 
 /**
- * @description: 从链表中删除第一个值为val的节点
+ * @description: 从链表中删除值为val的所有节点
  * =================================================================================
  * @param {DummyLinkedList} *dummyHead      虚拟头节点
  * @param {int} val                         目标值
