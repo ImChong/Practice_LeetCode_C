@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 22:46:24
+ * @LastEditTime : 2023-11-07 22:59:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -188,19 +188,19 @@ void dummyLinkedListDeleteElement(DummyLinkedList *dummyHead, int val) {
  * @return {int *} indexes                  返回索引数组
  */
 int *dummyLinkedListGetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize) {
-    int *indexes = (int *)malloc(sizeof(int) * dummyHead->size);
-    int listIndex = 0;
-    int elementIndex = 0;
-    struct ListNode *curr = dummyHead->head;
-    while (curr != NULL) {
-        if (curr->val == val) {
-            indexes[elementIndex++] = listIndex;
+    int *indexes = (int *)malloc(sizeof(int) * dummyHead->size);    /* 为索引数组分配空间 */
+    int listIndex = 0;                                              /* 链表索引 */
+    int elementIndex = 0;                                           /* 元素索引 */
+    struct ListNode *curr = dummyHead->head;                        /* 获取当前链表头节点的指针 */
+    while (curr != NULL) {                                          /* 当指针所指的节点不为NULL时 */
+        if (curr->val == val) {                                         /* 当前节点的值等于目标值 */
+            indexes[elementIndex++] = listIndex;                            /* 将当前节点的索引添加到索引数组中 */
         }
-        curr = curr->next;
-        listIndex++;
+        curr = curr->next;                                              /* 指针向后移动一位 */
+        listIndex++;                                                    /* 链表索引 + 1 */
     }
-    *returnSize = elementIndex;
-    return indexes;
+    *returnSize = elementIndex;                                     /* 返回索引数组的大小 */
+    return indexes;                                                 /* 返回索引数组 */
 }
 
 /**********************************************************************************/
