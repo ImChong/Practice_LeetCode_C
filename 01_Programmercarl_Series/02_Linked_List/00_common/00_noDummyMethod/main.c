@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:09:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 23:33:24
+ * @LastEditTime : 2023-11-07 23:35:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -91,6 +91,28 @@ void test_3(void) {
     linkedListFree(expectList);
 }
 
+void test_4(void) {
+    /* 实际结果 */
+    struct ListNode *actualList = NULL;
+    actualList = linkedListAddAtTail(actualList, 1);
+    actualList = linkedListAddAtTail(actualList, 2);
+    actualList = linkedListAddAtTail(actualList, 1);
+    actualList = linkedListAddAtTail(actualList, 2);
+    actualList = linkedListAddAtTail(actualList, 1);
+    actualList = linkedListAddAtTail(actualList, 2);
+    int actualReturnSize = 0;
+    int *actualIndexes = linkedListGetIndexes(actualList, 2, &actualReturnSize);
+
+    /* 预期结果 */
+    int expectIndexes[] = {1, 3, 5};
+
+    /* 比较结果 */
+    validateArray('4', expectIndexes, ARR_SIZE(expectIndexes), actualIndexes, actualReturnSize);
+
+    /* 释放内存空间 */
+    linkedListFree(actualList);
+}
+
 /**********************************************************************************/
 /*                                                                                */
 /*                                  MAIN FUNCTION                                 */
@@ -107,5 +129,6 @@ int main(int argc, const char *argv[]) {
     test_1();
     test_2();
     test_3();
+    test_4();
     return 0;
 }
