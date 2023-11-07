@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 22:37:34
+ * @LastEditTime : 2023-11-07 22:39:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -24,7 +24,7 @@
 /**
  * @description: 创建链表
  * =================================================================================
- * @return {DummyLinkedList} *dummyHead    返回虚拟头节点
+ * @return {DummyLinkedList *} dummyHead    返回虚拟头节点
  */
 DummyLinkedList *myLinkedListCreate(void) {
     DummyLinkedList *dummyHead = (DummyLinkedList*)malloc(sizeof(DummyLinkedList));    /* 为虚拟头节点分配空间 */
@@ -36,9 +36,9 @@ DummyLinkedList *myLinkedListCreate(void) {
 /**
  * @description: 获取指定索引的节点数值
  * =================================================================================
- * @param {DummyLinkedList} *dummyHead     虚拟头节点
- * @param {int} index                   索引
- * @return {int} ans                    返回指定索引的节点数值
+ * @param {DummyLinkedList *} dummyHead     虚拟头节点
+ * @param {int} index                       索引
+ * @return {int} ans                        返回指定索引的节点数值
  */
 int dummyLinkedListGet(DummyLinkedList *dummyHead, int index) {
     if (index < 0 || index >= dummyHead->size) {      /* 输入校验 */
@@ -54,8 +54,8 @@ int dummyLinkedListGet(DummyLinkedList *dummyHead, int index) {
 /**
  * @description: 在链表头部添加新节点
  * =================================================================================
- * @param {DummyLinkedList} *dummyHead       虚拟头节点
- * @param {int} val                 新节点数值
+ * @param {DummyLinkedList *} dummyHead     虚拟头节点
+ * @param {int} val                         新节点数值
  * @return {void}
  */
 void dummyLinkedListAddAtHead(DummyLinkedList *dummyHead, int val) {
@@ -69,8 +69,8 @@ void dummyLinkedListAddAtHead(DummyLinkedList *dummyHead, int val) {
 /**
  * @description: 在链表尾部添加新节点
  * =================================================================================
- * @param {DummyLinkedList} *dummyHead       虚拟头节点
- * @param {int} val                 新节点数值
+ * @param {DummyLinkedList *} dummyHead     虚拟头节点
+ * @param {int} val                         新节点数值
  * @return {void}
  */
 void dummyLinkedListAddAtTail(DummyLinkedList *dummyHead, int val) {
@@ -93,9 +93,9 @@ void dummyLinkedListAddAtTail(DummyLinkedList *dummyHead, int val) {
 /**
  * @description: 在指定索引处插入新节点
  * =================================================================================
- * @param {DummyLinkedList} *dummyHead       虚拟头节点
- * @param {int} index               索引
- * @param {int} val                 新节点数值
+ * @param {DummyLinkedList *} dummyHead     虚拟头节点
+ * @param {int} index                       索引
+ * @param {int} val                         新节点数值
  * @return {void}
  */
 void dummyLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val) {
@@ -129,7 +129,7 @@ void dummyLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val) {
 /**
  * @description: 删除指定索引的节点
  * =================================================================================
- * @param {DummyLinkedList} *dummyHead      虚拟头节点
+ * @param {DummyLinkedList *} dummyHead     虚拟头节点
  * @param {int} index                       索引
  * @return {void}
  */
@@ -157,7 +157,7 @@ void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index) {
 /**
  * @description: 从链表中删除值为val的所有节点
  * =================================================================================
- * @param {DummyLinkedList} *dummyHead      虚拟头节点
+ * @param {DummyLinkedList *} dummyHead     虚拟头节点
  * @param {int} val                         目标值
  * @return {void}
  */
@@ -178,6 +178,29 @@ void dummyLinkedListDeleteElement(DummyLinkedList *dummyHead, int val) {
     }
     dummyHead->head = dummy.next;                   /* 将虚拟头节点指向的链表头节点设置为链表新头节点 */
 }
+
+/**
+ * @description: 获取链表中值为val的所有节点的索引
+ * =================================================================================
+ * @param {DummyLinkedList *} dummyHead     虚拟头节点
+ * @param {int} val                         目标值
+ * @param {int *} returnSize
+ * @return {*}
+ */
+int *dummyLinkedListGetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize) {
+    int *indexes = (int *)malloc(sizeof(int) * dummyHead->size);    /* 为索引数组分配空间 */
+    int index = 0;                                                  /* 索引数组下标 */
+    struct ListNode *curr = dummyHead->head;                        /* 获取当前链表头节点的指针 */
+    while (curr != NULL) {                                          /* 当指针所指的节点不为NULL时 */
+        if (curr->val == val) {                                         /* 当前节点的值等于目标值 */
+            indexes[index++] = curr->val;                                   /* 将当前节点的索引添加至索引数组 */
+        }
+        curr = curr->next;                                              /* 指针向后移动一位 */
+    }
+    *returnSize = index;                                            /* 将索引数组长度赋值给returnSize */
+    return indexes;                                                 /* 返回索引数组 */
+}
+
 /**********************************************************************************/
 /*                                                                                */
 /*                                 HELPER FUNCTIONS                               */
