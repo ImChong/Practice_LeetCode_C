@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 23:19:02
+ * @LastEditTime : 2023-11-07 23:23:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -139,6 +139,29 @@ struct ListNode *linkedListDeleteElement(struct ListNode *head, int val) {
         }
     }
     return dummy.next;                              /* 返回链表虚拟头节点 */
+}
+
+/**
+ * @description: 获取链表中值为val的所有节点的索引
+ * =================================================================================
+ * @param {ListNode} *head      链表头节点
+ * @param {int} val             目标值
+ * @param {int *} returnSize    返回数组大小
+ * @return {int *} indexes      返回索引数组
+ */
+int *linkedListGetIndexes(struct ListNode *head, int val, int *returnSize) {
+    int *indexes = (int *)malloc(sizeof(int) * 1000);
+    int listIndex = 0;
+    int elementIndex = 0;
+    while (head != NULL) {
+        if (head->val == val) {
+            indexes[elementIndex++] = listIndex;
+        }
+        head = head->next;
+        listIndex++;
+    }
+    *returnSize = elementIndex;
+    return indexes;
 }
 
 /**********************************************************************************/
