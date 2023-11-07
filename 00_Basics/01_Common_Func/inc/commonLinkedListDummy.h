@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 01:41:06
+ * @LastEditTime : 2023-11-07 22:35:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,7 +38,7 @@ void dummyLinkedListAddAtHead(DummyLinkedList *dummyHead, int val);       /* 在
 void dummyLinkedListAddAtTail(DummyLinkedList *dummyHead, int val);       /* 在链表尾部添加一个节点 */
 void dummyLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val);       /* 在链表中第index个节点之前添加一个值为val的节点 */
 void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index);     /* 删除链表中第index个节点 */
-void dummyLinkedListDeleteElement(DummyLinkedList *dummyHead, int val);       /* TODO */ /* 从链表中删除第一个值为val的节点 */
+void dummyLinkedListDeleteElement(DummyLinkedList *dummyHead, int val);       /* 从链表中删除值为val的所有节点 */
 int *dummyLinkedListGetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize);     /* TODO */ /* 获取链表中值为val的所有节点的索引 */
 
 /**********************************************************************************/
