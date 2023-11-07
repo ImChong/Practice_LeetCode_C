@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 23:17:48
+ * @LastEditTime : 2023-11-07 23:19:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -96,6 +96,24 @@ struct ListNode *linkedListAddAtIndex(struct ListNode *head, int index, int val)
     }
     newNode->next = curr->next;
     curr->next = newNode;
+    return head;
+}
+
+/**
+ * @description: 删除链表中第index个节点
+ * =================================================================================
+ * @param {ListNode *} head     头节点指针
+ * @param {int} index           目标节点索引
+ * @return {ListNode *} head    头节点指针
+ */
+struct ListNode *linkedListDeleteAtIndex(struct ListNode *head, int index) {
+    struct ListNode *curr = head;
+    while (index--) {
+        curr = curr->next;
+    }
+    struct ListNode *tmp = curr->next;
+    curr->next = curr->next->next;
+    free(tmp);
     return head;
 }
 
