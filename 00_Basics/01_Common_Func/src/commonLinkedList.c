@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 23:23:07
+ * @LastEditTime : 2023-11-07 23:29:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -107,14 +107,16 @@ struct ListNode *linkedListAddAtIndex(struct ListNode *head, int index, int val)
  * @return {ListNode *} head    头节点指针
  */
 struct ListNode *linkedListDeleteAtIndex(struct ListNode *head, int index) {
-    struct ListNode *curr = head;
+    struct ListNode *dummy = (struct ListNode *)malloc(sizeof(struct ListNode));
+    dummy->next = head;
+    struct ListNode *curr = dummy;
     while (index--) {
         curr = curr->next;
     }
     struct ListNode *tmp = curr->next;
     curr->next = curr->next->next;
     free(tmp);
-    return head;
+    return dummy->next;
 }
 
 /**

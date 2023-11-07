@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:09:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 00:42:02
+ * @LastEditTime : 2023-11-07 23:24:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,8 +22,6 @@
 /**********************************************************************************/
 /**
  * @description: 测试 1
- * 输入：{1, 2, 3}
- * 输出：{2, 3}
  * =================================================================================
  * @return {void}
  */
@@ -33,7 +31,7 @@ void test_1(void) {
     actualList = linkedListAddAtTail(actualList, 1);
     actualList = linkedListAddAtTail(actualList, 2);
     actualList = linkedListAddAtTail(actualList, 3);
-    actualList = linkedListDeleteElement(actualList, 1);
+    actualList = linkedListDeleteAtIndex(actualList, 0);
 
     /* 预期结果 */
     int nums[] = {2, 3};
