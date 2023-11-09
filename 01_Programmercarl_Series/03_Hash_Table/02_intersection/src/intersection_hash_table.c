@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-10 00:11:11
+ * @LastEditTime : 2023-11-10 00:12:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -85,7 +85,10 @@ int searchHashTable(HashTable *hashTable, int key) {
  * @return {int} *res           返回结果数组
  */
 int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *returnSize) {
-    /* TODO */
+    HashTable *hashTable = createHashTable();
+    for (int i = 0; i < numsASize; i++) {
+        insertHashTable(hashTable, numsA[i]);
+    }
 }
 
 #endif  /* HASH_TABLE_METHOD_EN */
