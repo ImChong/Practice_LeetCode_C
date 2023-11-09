@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-10 00:13:20
+ * @LastEditTime : 2023-11-10 00:14:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,7 +44,7 @@ struct HashTable *createHashTable(int size) {
  * @return {int}                    哈希码
  */
 int getHashSlot(struct HashTable *table, int key) {
-    return (key & 0x7fffffff) % table->size;        /* 0x7fffffff 是一个十六进制数，等于 2^31 - 1，即 2147483647 */
+    return abs(key) % table->size;
 }
 
 /**
