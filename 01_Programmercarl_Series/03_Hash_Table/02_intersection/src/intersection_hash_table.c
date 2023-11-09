@@ -3,14 +3,16 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-31 00:18:18
+ * @LastEditTime : 2023-11-09 23:40:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 两个数组的交集 - 哈希表解法源文件
  */
+/* 解题方法配置文件 */
 #include "methodCfg.h"
 #if HASH_TABLE_METHOD_EN
+/* 本文件头文件 */
 #include "intersection_hash_table.h"
 
 /**
