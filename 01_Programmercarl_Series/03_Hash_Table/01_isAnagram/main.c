@@ -3,16 +3,18 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 18:51:44
+ * @LastEditTime : 2023-11-09 23:25:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 242. 有效的字母异位词：https://leetcode.cn/problems/valid-anagram/
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-#include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
+/* 常用头文件 */
+#include "commonHelper.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
