@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-10 00:12:25
+ * @LastEditTime : 2023-11-10 00:19:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,7 @@
 #if HASH_TABLE_METHOD_EN
 /* 标准头文件 */
 #include <stdlib.h>
+#include <string.h>
 /* 本文件头文件 */
 #include "intersection_hash_table.h"
 
@@ -28,7 +29,7 @@
  * @return {HashTable *} hashTable      哈希表
  */
 HashTable *createHashTable(void) {
-    HashTable *hashTable = (HashTable *)malloc(sizeof(HashTable));
+    HashTable *hashTable = (HashTable *)malloc(sizeof(HashTable) * HASH_SIZE);
     memset(hashTable, 0, sizeof(HashTable) * HASH_SIZE);
     return hashTable;
 }
@@ -82,13 +83,22 @@ int searchHashTable(HashTable *hashTable, int key) {
  * @param {int} *numsB          数组2
  * @param {int} numsBSize       数组2大小
  * @param {int} *returnSize     返回数组大小
- * @return {int} *res           返回结果数组
+ * @return {int} *result        返回结果数组
  */
 int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *returnSize) {
     HashTable *hashTable = createHashTable();
     for (int i = 0; i < numsASize; i++) {
         insertHashTable(hashTable, numsA[i]);
     }
+    int *result = (int *)malloc(sizeof(int) * (numsASize < numsBSize ? numsASize : numsBSize));
+    *returnSize = 0;
+    for (int i = 0; i < numsBSize; i++) {
+        if (searchHashTable(hashTable, numsB[i])) {
+            result[(*returnSize)++] = numsB[i];
+            hashTable->hashList[abs(numsB[i]) % HASH_SIZE] = NULL;
+        }
+    }
+    return result;
 }
 
 #endif  /* HASH_TABLE_METHOD_EN */
