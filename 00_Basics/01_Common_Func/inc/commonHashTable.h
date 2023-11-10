@@ -27,7 +27,7 @@ struct HashNode {
 /* 哈希表 */
 struct HashTable {
     int size;                   /* 哈希表大小 */
-    struct HashNode **table;    /* 哈希表 */
+    struct HashNode **hashList;    /* 哈希表 */
 };
 
 /**********************************************************************************/
