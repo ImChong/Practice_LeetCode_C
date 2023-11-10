@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-10 23:14:43
+ * @LastEditTime : 2023-11-10 23:32:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -37,25 +37,25 @@ struct HashTable *createHashTable(int size) {
 }
 
 /**
- * @description: 哈希码 - 获取键在哈希表中的槽位
+ * @description: 哈希码 - 获取值在哈希表中的键位
  * =================================================================================
  * @param {HashTable} *table        哈希表
- * @param {int} key                 键
- * @return {int}                    哈希码
+ * @param {int} val                 值
+ * @return {int} key                哈希码
  */
-int getHashSlot(struct HashTable *table, int key) {
-    return abs(key) % table->size;
+int getHashKey(struct HashTable *table, int val) {
+    return abs(val) % table->size;
 }
 
 /**
  * @description: 插入哈希元素
  * =================================================================================
  * @param {HashTable} *table        哈希表
- * @param {int} key                 键
+ * @param {int} val                 键
  * @return {void}
  */
 void insertHashNode(struct HashTable *table, int key) {
-    int slot = getHashSlot(table, key);                                                    /* 计算哈希码 */
+    int slot = getHashKey(table, key);                                                    /* 计算哈希码 */
     struct HashNode *currentNode = table->hashList[slot];                                  /* 获取哈希表的哈希节点 */
     while (currentNode) {                                                               /* 遍历哈希节点 */
         if (currentNode->key == key) {                                                      /* 如果哈希节点的键等于 key */
@@ -79,7 +79,7 @@ void insertHashNode(struct HashTable *table, int key) {
  * @return {int}                    值
  */
 int searchHashTable(struct HashTable *table, int key) {
-    int slot = getHashSlot(table, key);                                                    /* 计算哈希码 */
+    int slot = getHashKey(table, key);                                                    /* 计算哈希码 */
     struct HashNode *currentNode = table->hashList[slot];                                  /* 获取哈希表的哈希节点 */
     while (currentNode) {                                                               /* 遍历哈希节点 */
         if (currentNode->key == key) {                                                      /* 如果哈希节点的键等于 key */

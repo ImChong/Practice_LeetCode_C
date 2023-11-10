@@ -15,6 +15,8 @@
 /* 标准头文件 */
 #include <stdlib.h>
 #include <string.h>
+/* 通用头文件 */
+#include "commonHashTable.h"
 /* 本文件头文件 */
 #include "intersection_hash_table.h"
 
