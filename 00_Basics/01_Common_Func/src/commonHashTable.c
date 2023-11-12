@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-11 22:39:42
+ * @LastEditTime : 2023-11-12 23:18:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -72,7 +72,7 @@ void insertHashNode(struct HashTable *table, int key) {
 }
 
 /**
- * @description: 查找哈希元素
+ * @description:  查找哈希元素
  * =================================================================================
  * @param {HashTable} *table        哈希表
  * @param {int} key                 键
