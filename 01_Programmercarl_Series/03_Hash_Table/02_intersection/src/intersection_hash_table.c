@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-10 00:19:47
+ * @LastEditTime : 2023-11-13 23:34:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,11 +30,11 @@
  * =================================================================================
  * @return {HashTable *} hashTable      哈希表
  */
-HashTable *createHashTable(void) {
-    HashTable *hashTable = (HashTable *)malloc(sizeof(HashTable) * HASH_SIZE);
-    memset(hashTable, 0, sizeof(HashTable) * HASH_SIZE);
-    return hashTable;
-}
+// HashTable *createHashTable(void) {
+//     HashTable *hashTable = (HashTable *)malloc(sizeof(HashTable) * HASH_SIZE);
+//     memset(hashTable, 0, sizeof(HashTable) * HASH_SIZE);
+//     return hashTable;
+// }
 
 /**
  * @description: 在哈希表中插入元素
@@ -43,13 +43,13 @@ HashTable *createHashTable(void) {
  * @param {int} key                     插入的元素值
  * @return {void}
  */
-void insertHashTable(HashTable *hashTable, int key) {
-    int hashKey = abs(key) % HASH_SIZE;
-    HashNode *node = (HashNode *)malloc(sizeof(HashNode));
-    node->key = key;
-    node->next = hashTable->hashList[hashKey];
-    hashTable->hashList[hashKey] = node;
-}
+// void insertHashTable(HashTable *hashTable, int key) {
+//     int hashKey = abs(key) % HASH_SIZE;
+//     HashNode *node = (HashNode *)malloc(sizeof(HashNode));
+//     node->key = key;
+//     node->next = hashTable->hashList[hashKey];
+//     hashTable->hashList[hashKey] = node;
+// }
 
 /**
  * @description: 在哈希表中查找元素
@@ -58,17 +58,17 @@ void insertHashTable(HashTable *hashTable, int key) {
  * @param {int} key
  * @return {*}
  */
-int searchHashTable(HashTable *hashTable, int key) {
-    int hashKey = abs(key) % HASH_SIZE;
-    HashNode *node = hashTable->hashList[hashKey];
-    while (node) {
-        if (node->key == key) {
-            return 1;
-        }
-        node = node->next;
-    }
-    return 0;
-}
+// int searchHashTable(HashTable *hashTable, int key) {
+//     int hashKey = abs(key) % HASH_SIZE;
+//     HashNode *node = hashTable->hashList[hashKey];
+//     while (node) {
+//         if (node->key == key) {
+//             return 1;
+//         }
+//         node = node->next;
+//     }
+//     return 0;
+// }
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -88,7 +88,7 @@ int searchHashTable(HashTable *hashTable, int key) {
  * @return {int} *result        返回结果数组
  */
 int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *returnSize) {
-    HashTable *hashTable = createHashTable();
+    struct HashTable *hashTable = createHashTable(HASH_SIZE);
     for (int i = 0; i < numsASize; i++) {
         insertHashTable(hashTable, numsA[i]);
     }

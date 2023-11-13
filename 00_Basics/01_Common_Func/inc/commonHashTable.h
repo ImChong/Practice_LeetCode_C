@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-25 22:16:58
+ * @LastEditTime : 2023-11-13 23:35:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -37,7 +37,7 @@ struct HashTable {
 /**********************************************************************************/
 struct HashTable *createHashTable(int size);        /* 创建哈希表 */
 int getHashSlot(struct HashTable *table, int key);      /* 获取哈希槽位 */
-void insertHashNode(struct HashTable *table, int key);     /* 插入哈希节点 */
+void insertHashTable(struct HashTable *table, int key);     /* 插入哈希节点 */
 int searchHashTable(struct HashTable *table, int key);      /* 查找哈希表 */
 void freeHashTable(struct HashTable *table);        /* 释放哈希表 */
 

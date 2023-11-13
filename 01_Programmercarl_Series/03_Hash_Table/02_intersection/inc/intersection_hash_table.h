@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:37:56
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-09 23:45:26
+ * @LastEditTime : 2023-11-13 23:32:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,24 +25,24 @@
 /*                                                                                */
 /**********************************************************************************/
 /* 哈希表结点 */
-typedef struct hashNode {
-    int key;
-    struct hashNode *next;
-} HashNode;
+// typedef struct hashNode {
+//     int key;
+//     struct hashNode *next;
+// } HashNode;
 
 /* 哈希表 */
-typedef struct hashTable {
-    HashNode *hashList[HASH_SIZE];
-} HashTable;
+// typedef struct hashTable {
+//     HashNode *hashList[HASH_SIZE];
+// } HashTable;
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-HashTable *createHashTable(void);       /* 创建哈希表 */
-void insertHashTable(HashTable *hashTable, int key);       /* 向哈希表中插入元素 */
-int searchHashTable(HashTable *hashTable, int key);        /* 在哈希表中查找元素 */
+// HashTable *createHashTable(void);       /* 创建哈希表 */
+// void insertHashTable(HashTable *hashTable, int key);       /* 向哈希表中插入元素 */
+// int searchHashTable(HashTable *hashTable, int key);        /* 在哈希表中查找元素 */
 
 /**********************************************************************************/
 /**********************************************************************************/
