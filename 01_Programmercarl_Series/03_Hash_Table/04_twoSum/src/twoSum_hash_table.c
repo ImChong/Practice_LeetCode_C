@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-31 00:23:15
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-13 23:42:40
+ * @LastEditTime : 2023-11-13 23:43:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,8 +12,6 @@
 /* 解题方法配置文件 */
 #include "methodCfg.h"
 #if HASH_TABLE_METHOD_EN
-/* 标准头文件 */
-#include <stdio.h>
 /* 本文件头文件 */
 #include "twoSum_hash_table.h"
 
