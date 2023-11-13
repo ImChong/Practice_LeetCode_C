@@ -3,13 +3,12 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-10 00:21:46
+ * @LastEditTime : 2023-11-13 23:36:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 349. 两个数组的交集：https://leetcode.cn/problems/intersection-of-two-arrays/
  * https://programmercarl.com/0349.%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86.html
- * BUG: 重定义了哈希表函数
  */
 /* 标准头文件 */
 #include <stdio.h>

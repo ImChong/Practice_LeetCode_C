@@ -21,56 +21,6 @@
 #include "intersection_hash_table.h"
 
 /**********************************************************************************/
-/*                                                                                */
-/*                                UTILITY FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 创建哈希表
- * =================================================================================
- * @return {HashTable *} hashTable      哈希表
- */
-// HashTable *createHashTable(void) {
-//     HashTable *hashTable = (HashTable *)malloc(sizeof(HashTable) * HASH_SIZE);
-//     memset(hashTable, 0, sizeof(HashTable) * HASH_SIZE);
-//     return hashTable;
-// }
-
-/**
- * @description: 在哈希表中插入元素
- * =================================================================================
- * @param {HashTable *} hashTable       哈希表
- * @param {int} key                     插入的元素值
- * @return {void}
- */
-// void insertHashTable(HashTable *hashTable, int key) {
-//     int hashKey = abs(key) % HASH_SIZE;
-//     HashNode *node = (HashNode *)malloc(sizeof(HashNode));
-//     node->key = key;
-//     node->next = hashTable->hashList[hashKey];
-//     hashTable->hashList[hashKey] = node;
-// }
-
-/**
- * @description: 在哈希表中查找元素
- * =================================================================================
- * @param {HashTable *} hashTable
- * @param {int} key
- * @return {*}
- */
-// int searchHashTable(HashTable *hashTable, int key) {
-//     int hashKey = abs(key) % HASH_SIZE;
-//     HashNode *node = hashTable->hashList[hashKey];
-//     while (node) {
-//         if (node->key == key) {
-//             return 1;
-//         }
-//         node = node->next;
-//     }
-//     return 0;
-// }
-
-/**********************************************************************************/
 /**********************************************************************************/
 /***                                                                            ***/
 /***                               TARGET FUNCTION                              ***/
