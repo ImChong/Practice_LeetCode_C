@@ -48,18 +48,6 @@
  * @return {bool}       是否为快乐数
  */
 bool isHappy(int n) {
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-
     int visited[163] = { 0 };
     int sum = getNext(getNext(n));
     int next_n = sum;
