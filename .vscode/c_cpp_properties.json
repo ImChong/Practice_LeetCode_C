@@ -3,6 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
+                "${workspaceFolder}/01_Programmercarl_Series/03_Hash_Table/02_intersection/cfg",
                 "${workspaceFolder}/**"
             ],
             "defines": [],
@@ -14,6 +15,7 @@
         {
             "name": "Windows",
             "includePath": [
+                "${workspaceFolder}/01_Programmercarl_Series/03_Hash_Table/02_intersection/cfg",
                 "${workspaceFolder}/**"
             ],
             "defines": [
