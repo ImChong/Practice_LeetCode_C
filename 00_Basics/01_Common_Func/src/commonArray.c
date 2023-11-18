@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 00:24:25
+ * @LastEditTime : 2023-11-18 10:19:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 /* 常用头文件 */
+#include "commonTypeDef.h"
 #include "commonArray.h"
 
 /**********************************************************************************/
@@ -97,6 +98,10 @@ void free2DArray(int **arr, int arrSize) {
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
+STATIC_FUNC int compare(const void *a, const void *b) {
+    return (*(int*)a - *(int*)b);
+}
+
 /**
  * @description: 验证数组答案
  * =================================================================================
@@ -108,8 +113,9 @@ void free2DArray(int **arr, int arrSize) {
  * @return {void}
  */
 void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen) {
-    printf("=========================\n");
     int isSuccess = true;
+    qsort(expectArr, expectLen, sizeof(int), compare);
+    qsort(actualArr, actualLen, sizeof(int), compare);
 
     if (expectLen != actualLen) {
         isSuccess = false;
@@ -121,12 +127,13 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
             }
         }
     }
+
+    printf("=========================\n");
     if (isSuccess) {
         printf(" - ✅ Test %c passed\n", testNum);
     } else {
         printf(" - ❌ Test %c failed\n", testNum);
     }
-
     printf("=========================\n");
     printf("- Expect: "); printArray(expectArr, expectLen);
     printf("- Actual: "); printArray(actualArr, actualLen);
