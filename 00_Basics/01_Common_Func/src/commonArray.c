@@ -153,7 +153,7 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
  */
 void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
                                 int **actual2DArr, int actualRtnSize, int *actualRtnColSize) {
-    printf("=========================\n");
+
     bool isSuccess = true;
 
     if (actualRtnSize != expectRtnSize) {
@@ -172,12 +172,13 @@ void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *ex
             }
         }
     }
+
+    printf("=========================\n");
     if (isSuccess) {
         printf(" - ✅ Test %c passed\n", testNum);
     } else {
         printf(" - ❌ Test %c failed\n", testNum);
     }
-
     printf("=========================\n");
     printf("- Expect: "); print2DArray(expect2DArr, expectRtnSize, expectRtnColSize);
     printf("- Actual: "); print2DArray(actual2DArr, actualRtnSize, actualRtnColSize);
