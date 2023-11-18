@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 15:40:51
+ * @LastEditTime : 2023-11-18 15:48:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -39,9 +39,9 @@ struct HashTable *createHashTable(int size) {
 /**
  * @description: 获取元素值在哈希表中的槽位
  * =================================================================================
- * @param {HashTable} *table        哈希表
- * @param {int} val                 元素值
- * @return {int} slot               槽位
+ * @param {HashTable} *table    哈希表
+ * @param {int} val             元素值
+ * @return {int} slot           槽位
  */
 int getHashSlot(struct HashTable *table, int val) {
     return abs(val) % table->size;                                                      /* 获取元素值在哈希表中的槽位 */
@@ -50,8 +50,8 @@ int getHashSlot(struct HashTable *table, int val) {
 /**
  * @description: 插入哈希元素
  * =================================================================================
- * @param {HashTable} *table        哈希表
- * @param {int} val                 元素值
+ * @param {HashTable} *table    哈希表
+ * @param {int} val             元素值
  * @return {void}
  */
 void insertHashTable(struct HashTable *table, int val) {
@@ -74,9 +74,9 @@ void insertHashTable(struct HashTable *table, int val) {
 /**
  * @description: 查找哈希元素
  * =================================================================================
- * @param {HashTable} *table        哈希表
- * @param {int} val                 元素值
- * @return {int} counter            元素个数
+ * @param {HashTable} *table    哈希表
+ * @param {int} val             元素值
+ * @return {int} counter        元素个数
  */
 int searchHashTable(struct HashTable *table, int val) {
     int slot = getHashSlot(table, val);                                                 /* 获取元素值在哈希表中的槽位 */
@@ -93,7 +93,7 @@ int searchHashTable(struct HashTable *table, int val) {
 /**
  * @description: 释放哈希表
  * =================================================================================
- * @param {HashTable} *table        哈希表
+ * @param {HashTable} *table    哈希表
  * @return {void}
  */
 void freeHashTable(struct HashTable *table) {
@@ -107,4 +107,24 @@ void freeHashTable(struct HashTable *table) {
     }
     free(table->hashList);                                                              /* 释放哈希表的哈希列表 */
     free(table);                                                                        /* 释放哈希表 */
+}
+
+/**
+ * @description: 打印哈希表
+ * =================================================================================
+ * @param {HashTable} *table    哈希表
+ * @return {void}
+ */
+void printHashTable(struct HashTable *table) {
+    for (int i = 0; i < table->size; i++) {
+        printf("Hash Slot [%d]: ", i);
+        struct HashNode *currentNode = table->hashList[i];
+        while (currentNode) {
+            printf("%d (count: %d)", currentNode->val, currentNode->counter);
+            printf("-> ");
+            currentNode = currentNode->next;
+        }
+        printf("Null\n");
+    }
+    printf("\n");
 }
