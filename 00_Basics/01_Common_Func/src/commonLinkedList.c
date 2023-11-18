@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 23:29:07
+ * @LastEditTime : 2023-11-18 13:45:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,8 +12,8 @@
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 /* 常用头文件 */
+#include "commonTypeDef.h"
 #include "commonLinkedList.h"
 
 /**********************************************************************************/
@@ -247,28 +247,29 @@ void linkedListFree(struct ListNode *head) {
  * @return {void}
  */
 void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList) {
-    printf("=========================\n");
-    int isSuccess = true;
+
+    int isSuccess = COMMON_TRUE;
 
     struct ListNode *curr1 = expectList, *curr2 = actualList;
     if (curr1 == NULL && curr2 == NULL) {
-        isSuccess = true;
+        isSuccess = COMMON_TRUE;
     } else {
         while (curr1 != NULL && curr2 != NULL) {
             if (curr1->val != curr2->val) {
-                isSuccess = false;
+                isSuccess = COMMON_FALSE;
                 break;
             }
             curr1 = curr1->next;
             curr2 = curr2->next;
         }
     }
+
+    printf("=========================\n");
     if (isSuccess) {
         printf(" - ✅ Test %c Passed\n", testNum);
     } else {
         printf(" - ❌ Test %c Failed\n", testNum);
     }
-
     printf("=========================\n");
     printf("- Expect: "); linkedListPrint(expectList);
     printf("- Actual: "); linkedListPrint(actualList);
