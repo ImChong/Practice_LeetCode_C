@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:29:40
+ * @LastEditTime : 2023-11-18 13:31:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -161,12 +161,15 @@ void sort2DArray(int **arr, int arrSize, int *arrColSizes) {
  * @param {int} expectLen       预期结果长度
  * @param {int} *actualArr      实际结果
  * @param {int} actualLen       实际结果长度
+ * @param {int} needSort        是否排序
  * @return {void}
  */
 void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen, int needSort) {
 
-    qsort(expectArr, expectLen, sizeof(int), compareElements);
-    qsort(actualArr, actualLen, sizeof(int), compareElements);
+    if (needSort == COMMON_TRUE) {
+        sortArray(expectArr, expectLen);
+        sortArray(actualArr, actualLen);
+    }
 
     int isSuccess = true;
     if (expectLen != actualLen) {
