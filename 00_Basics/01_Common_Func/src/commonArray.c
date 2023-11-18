@@ -157,13 +157,13 @@ void sort2DArray(int **arr, int arrSize, int *arrColSizes) {
  * @return {void}
  */
 void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen, int needSort) {
-
     if (needSort == COMMON_TRUE) {
         sortArray(expectArr, expectLen);
         sortArray(actualArr, actualLen);
     }
 
     int isSuccess = COMMON_TRUE;
+
     if (expectLen != actualLen) {
         isSuccess = COMMON_FALSE;
     } else {
@@ -203,7 +203,6 @@ void validate2DArray(char testNum,
                             int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
                             int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
                             int needSort) {
-
     if (needSort == COMMON_TRUE) {
         sort2DArray(expect2DArr, expectRtnRowSize, expectRtnColSize);
         sort2DArray(actual2DArr, actualRtnRowSize, actualRtnColSize);
