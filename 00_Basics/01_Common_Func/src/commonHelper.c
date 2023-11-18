@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 11:55:54
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 10:21:27
+ * @LastEditTime : 2023-11-18 13:44:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,7 +34,6 @@ void validateSingleValue(char testNum, int expect, int actual) {
     } else {
         printf(" - ❌ Test %c Failed\n", testNum);
     }
-
     printf("=========================\n");
     printf("- Expect: %d\n", expect);
     printf("- Actual: %d\n", actual);
