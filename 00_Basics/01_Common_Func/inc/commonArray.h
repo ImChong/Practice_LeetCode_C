@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 10:51:31
+ * @LastEditTime : 2023-11-18 13:25:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,6 +35,8 @@ void sort2DArray(int **arr, int arrSize, int *arrColSizes);       /* 排序二�
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
+int compareElements(const void *a, const void *b);
+int compareRows(const void *a, const void *b);
 void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen);     /* 验证数组 */
 void validate2DArray(char testNum,
                             int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
