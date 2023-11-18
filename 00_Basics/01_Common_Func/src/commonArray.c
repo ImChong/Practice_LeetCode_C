@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 10:45:36
+ * @LastEditTime : 2023-11-18 11:21:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -188,19 +188,19 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
  * @param {int} **actual2DArr           实际结果
  * @param {int} actualRtnSize           实际结果大小
  * @param {int} *actualRtnColSize       实际结果列大小
- * @param {int} isSort                  是否排序
+ * @param {int} needSort                  是否排序
  * @return {void}
  */
 void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
-                                int **actual2DArr, int actualRtnSize, int *actualRtnColSize, int isSort) {
+                                int **actual2DArr, int actualRtnSize, int *actualRtnColSize, int needSort) {
 
-    if (isSort == COMMON_TRUE) {
+    if (needSort == COMMON_TRUE) {
         sort2DArray(expect2DArr, expectRtnSize, expectRtnColSize);
         sort2DArray(actual2DArr, actualRtnSize, actualRtnColSize);
     }
 
     bool isSuccess = true;
-    
+
     if (actualRtnSize != expectRtnSize) {
         isSuccess = false;
     } else {

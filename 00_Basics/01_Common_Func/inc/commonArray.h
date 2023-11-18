@@ -39,7 +39,7 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
 void validate2DArray(char testNum,
                             int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
                             int **actual2DArr, int actualRtnSize, int *actualRtnColSize,
-                            int isSort);        /* 验证二维数组 */
+                            int needSort);        /* 验证二维数组 */
 
 
 #endif  /* __COMMON_ARRAY_H */
