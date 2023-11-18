@@ -188,6 +188,7 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
  * @param {int} **actual2DArr           实际结果
  * @param {int} actualRtnSize           实际结果大小
  * @param {int} *actualRtnColSize       实际结果列大小
+ * @param {int} isSort                  是否排序
  * @return {void}
  */
 void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
@@ -197,8 +198,9 @@ void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *ex
         sort2DArray(expect2DArr, expectRtnSize, expectRtnColSize);
         sort2DArray(actual2DArr, actualRtnSize, actualRtnColSize);
     }
-    bool isSuccess = true;
 
+    bool isSuccess = true;
+    
     if (actualRtnSize != expectRtnSize) {
         isSuccess = false;
     } else {

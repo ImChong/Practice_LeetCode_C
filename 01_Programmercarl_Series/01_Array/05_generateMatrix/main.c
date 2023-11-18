@@ -53,7 +53,10 @@ void test_1(void) {
     };
 
     /* 测试结果 */
-    validate2DArray('1', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize, COMMON_FALSE);
+    validate2DArray('1',
+                        expect2DArr, expectRtnSize, expectRtnColSize,
+                        actual2DArr, actualRtnSize, actualRtnColSize,
+                        COMMON_FALSE);
 
     /* 释放内存 */
     free2DArray(actual2DArr, actualRtnSize);
