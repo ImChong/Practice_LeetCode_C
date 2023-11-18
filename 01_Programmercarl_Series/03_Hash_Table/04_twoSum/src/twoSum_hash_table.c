@@ -33,7 +33,7 @@
  */
 int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
     /* TODO */
-    return NULL;                                                    /* 返回 NULL*/
+    return 0;                                                    /* 返回 NULL*/
 }
 
 #endif  /* HASH_TABLE_METHOD_EN */

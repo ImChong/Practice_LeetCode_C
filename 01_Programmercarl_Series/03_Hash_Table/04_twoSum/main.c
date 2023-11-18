@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-10 23:39:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 19:29:00
+ * @LastEditTime : 2023-11-18 19:31:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,11 +19,8 @@
 #include "commonArray.h"
 /* 解题方法配置文件 */
 #include "methodCfg.h"
-#if DOUBLE_POINTER_METHOD_EN
-#include "twoSum_double_pointer.h"
-#elif HASH_TABLE_METHOD_EN
-#include "twoSum_hash_table.h"
-#endif
+/* 本文件头文件 */
+#include "twoSum.h"
 
 /**********************************************************************************/
 /*                                                                                */
