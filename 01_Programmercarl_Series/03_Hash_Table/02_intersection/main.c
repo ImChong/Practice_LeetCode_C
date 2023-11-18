@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:40:19
+ * @LastEditTime : 2023-11-18 13:40:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -50,7 +50,7 @@ void test_1(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateArray('1', expect, expectSize, ans, returnSize, COMMON_FALSE);
+    validateArray('1', expect, expectSize, ans, returnSize, COMMON_TRUE);
 
     /* 释放内存 */
     free(ans);
@@ -77,7 +77,7 @@ void test_2(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateArray('2', expect, expectSize, ans, returnSize, COMMON_FALSE);
+    validateArray('2', expect, expectSize, ans, returnSize, COMMON_TRUE);
 
     /* 释放内存 */
     free(ans);
@@ -104,7 +104,7 @@ void test_3(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateArray('3', expect, expectSize, ans, returnSize, COMMON_FALSE);
+    validateArray('3', expect, expectSize, ans, returnSize, COMMON_TRUE);
 
     /* 释放内存 */
     free(ans);
