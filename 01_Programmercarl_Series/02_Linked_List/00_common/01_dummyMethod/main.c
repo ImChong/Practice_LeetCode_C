@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 22:56:54
+ * @LastEditTime : 2023-11-18 14:31:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */
+#include "commonTypeDef.h"
 #include "commonArray.h"
 #include "commonLinkedListDummy.h"
 
@@ -112,7 +113,7 @@ void test_4(void) {
     int expectIndexes[] = {1, 3, 5};
 
     /* 比较结果 */
-    validateArray('4', expectIndexes, ARR_SIZE(expectIndexes), actualIndexes, actualReturnSize);
+    validateArray('4', expectIndexes, ARR_SIZE(expectIndexes), actualIndexes, actualReturnSize, COMMON_FALSE);
 
     /* 释放内存空间 */
     dummyLinkedListFree(actualDummy);
