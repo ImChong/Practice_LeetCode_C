@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 00:09:15
+ * @LastEditTime : 2023-11-18 14:28:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */
+#include "commonTypeDef.h"
 #include "commonArray.h"
 
 /**********************************************************************************/
@@ -77,7 +78,7 @@ void test_1(void) {
     int expectSize = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateArray('1', expectNums, expectSize, returnNums, returnSize);
+    validateArray('1', expectNums, expectSize, returnNums, returnSize, COMMON_FALSE);
 
     /* 释放内存 */
     free(returnNums);
@@ -100,7 +101,7 @@ void test_2(void) {
     int expectSize = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateArray('2', expectNums, expectSize, returnNums, returnSize);
+    validateArray('2', expectNums, expectSize, returnNums, returnSize, COMMON_FALSE);
 
     /* 释放内存 */
     free(returnNums);
@@ -123,7 +124,7 @@ void test_3(void) {
     int expectSize = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateArray('3', expectNums, expectSize, returnNums, returnSize);
+    validateArray('3', expectNums, expectSize, returnNums, returnSize, COMMON_FALSE);
 
     /* 释放内存 */
     free(returnNums);
