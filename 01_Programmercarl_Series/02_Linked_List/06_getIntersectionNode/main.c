@@ -3,18 +3,20 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:21:24
+ * @LastEditTime : 2023-11-18 14:42:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 面试题 02.07. 链表相交：https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/
  * https://programmercarl.com/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4.html
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
-#include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
-#include "commonArray.h"            /* 00_Basics\01_Common_Func\inc\commonArray.h */
-#include "commonLinkedList.h"       /* 00_Basics\01_Common_Func\inc\commonLinkedList.h */
+/* 通用头文件 */
+#include "commonHelper.h"
+#include "commonArray.h"
+#include "commonLinkedList.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -93,8 +95,8 @@ void test_1(void) {
     validateSingleValue('1', expect, intersectNode->val);
 
     /* 释放内存 - A/B链表相互链接，不可 while 循环释放 */
-    // freeList(listA);
-    // freeList(listB);
+    // linkedListFree(listA);
+    // linkedListFree(listB);
 }
 
 /**
@@ -154,15 +156,11 @@ void test_3(void) {
     struct ListNode *expect = NULL;
 
     /* 比较结果 */
-    if (expect == intersectNode) {
-        printf("✅ Test 3 Passed\n");
-    } else {
-        printf("❌ Test 3 Failed\n");
-    }
+    validateLinkedList('3', expect, intersectNode);
 
     /* 释放内存 */
-    freeList(listA);
-    freeList(listB);
+    linkedListFree(listA);
+    linkedListFree(listB);
 }
 
 /**********************************************************************************/
