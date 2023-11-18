@@ -3,18 +3,20 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 11:31:23
+ * @LastEditTime : 2023-11-18 14:45:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 142. 环形链表 II：https://leetcode.cn/problems/linked-list-cycle-ii/
  * https://programmercarl.com/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.html
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
-#include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
-#include "commonArray.h"            /* 00_Basics\01_Common_Func\inc\commonArray.h */
-#include "commonLinkedList.h"       /* 00_Basics\01_Common_Func\inc\commonLinkedList.h */
+/* 通用头文件 */
+#include "commonHelper.h"
+#include "commonArray.h"
+#include "commonLinkedList.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -116,14 +118,10 @@ void test_3(void) {
     struct ListNode *expect = NULL;
 
     /* 比较结果 */
-    if (actual == expect) {
-        printf("✅ Test 3 Passed\n");
-    } else {
-        printf("❌ Test 3 Failed\n");
-    }
+    validateLinkedList('3', expect, actual);
 
     /* 释放内存 */
-    freeList(arrList);
+    linkedListFree(arrList);
 }
 
 /**********************************************************************************/
