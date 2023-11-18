@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-13 23:35:09
+ * @LastEditTime : 2023-11-18 15:29:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,15 +19,15 @@
 /**********************************************************************************/
 /* 哈希节点 */
 struct HashNode {
-    int key;                    /* 键 */
-    int val;                    /* 值 */
+    int val;                    /* 元素值 */
+    int counter;                /* 元素个数 */
     struct HashNode *next;      /* 下一个节点 */
 };
 
 /* 哈希表 */
 struct HashTable {
-    int size;                   /* 哈希表大小 */
-    struct HashNode **hashList;    /* 哈希表 */
+    int size;                       /* 哈希表大小 */
+    struct HashNode **hashList;     /* 哈希表 */
 };
 
 /**********************************************************************************/
