@@ -107,4 +107,5 @@ void validateString(char testNum, char *expect, char *actual) {
     printf("=========================\n");
     printf("    - Expect: %s\n", expect);
     printf("    - Actual: %s\n", actual);
+    printf("\n");
 }
