@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-09 23:25:17
+ * @LastEditTime : 2023-11-18 14:48:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,7 @@
 #include <stdbool.h>
 #include <string.h>
 /* 常用头文件 */
+#include "commonTypeDef.h"
 #include "commonHelper.h"
 
 /**********************************************************************************/
@@ -37,13 +38,13 @@
  * =================================================================================
  * @param {char} *s         s字符串
  * @param {char} *t         t字符串
- * @return {bool} status    返回状态
+ * @return {int} status    返回状态
  */
-bool isAnagram(char *s, char *t) {
+int isAnagram(char *s, char *t) {
     int sLen = strlen(s);               /* 获得s的长度 */
     int tLen = strlen(t);               /* 获得t的长度 */
     if (sLen != tLen) {                 /* 如果s和t的长度不相等则返回false */
-        return false;
+        return COMMON_FALSE;
     }
 
     int count[26] = {0};                /* 初始化计数列表 */
@@ -53,10 +54,10 @@ bool isAnagram(char *s, char *t) {
     }
     for (int i = 0; i < 26; i++) {      /* 遍历计数列表 */
         if (count[i] != 0) {                /* 如果计数不为0 */
-            return false;                       /* 返回false */
+            return COMMON_FALSE;                       /* 返回false */
         }
     }
-    return true;                        /* 计数都为0则返回true */
+    return COMMON_TRUE;                        /* 计数都为0则返回true */
 }
 
 /**********************************************************************************/
@@ -75,10 +76,10 @@ void test_1(void) {
     /* 实际结果 */
     char s[] = "anagram";
     char t[] = "nagaram";
-    bool actual = isAnagram(s, t);
+    int actual = isAnagram(s, t);
 
     /* 预期结果 */
-    bool expect = true;
+    int expect = COMMON_TRUE;
 
     /* 比较结果 */
     validateSingleValue('1', expect, actual);
@@ -95,10 +96,10 @@ void test_2(void) {
     /* 实际结果 */
     char s[] = "rat";
     char t[] = "car";
-    bool actual = isAnagram(s, t);
+    int actual = isAnagram(s, t);
 
     /* 预期结果 */
-    bool expect = false;
+    int expect = COMMON_FALSE;
 
     /* 比较结果 */
     validateSingleValue('2', expect, actual);
@@ -115,10 +116,10 @@ void test_3(void) {
     /* 实际结果 */
     char s[] = "";
     char t[] = "";
-    bool actual = isAnagram(s, t);
+    int actual = isAnagram(s, t);
 
     /* 预期结果 */
-    bool expect = true;
+    int expect = COMMON_TRUE;
 
     /* 比较结果 */
     validateSingleValue('3', expect, actual);
