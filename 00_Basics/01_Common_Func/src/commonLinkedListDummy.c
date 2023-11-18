@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:47:40
+ * @LastEditTime : 2023-11-18 13:48:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -270,7 +270,7 @@ void dummyLinkedListFree(DummyLinkedList *dummyHead) {
  * @return {void}
  */
 void validateDummyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual) {
-    int isSuccess = COMMON_TRUE;                                                       /* 是否通过测试 */
+    int isSuccess = COMMON_TRUE;                                                /* 是否通过测试 */
 
     for (int i = 0; i < expect->size; i++) {                                    /* 循环比较每个节点的数值 */
         if (dummyLinkedListGet(expect, i) != dummyLinkedListGet(actual, i)) {       /* 如果节点数值不相等 */
