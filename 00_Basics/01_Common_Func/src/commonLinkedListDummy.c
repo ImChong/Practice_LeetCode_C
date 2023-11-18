@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:46:05
+ * @LastEditTime : 2023-11-18 13:47:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* 常用头文件 */
+#include "commonTypeDef.h"
 #include "commonLinkedListDummy.h"
 
 /**********************************************************************************/
@@ -269,21 +270,21 @@ void dummyLinkedListFree(DummyLinkedList *dummyHead) {
  * @return {void}
  */
 void validateDummyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual) {
-    printf("=========================\n");                                      /* 打印分割线 */
-    int isSuccess = true;                                                       /* 是否通过测试 */
+    int isSuccess = COMMON_TRUE;                                                       /* 是否通过测试 */
 
     for (int i = 0; i < expect->size; i++) {                                    /* 循环比较每个节点的数值 */
         if (dummyLinkedListGet(expect, i) != dummyLinkedListGet(actual, i)) {       /* 如果节点数值不相等 */
-            isSuccess = false;                                                          /* 未通过测试 */
+            isSuccess = COMMON_FALSE;                                                   /* 未通过测试 */
             break;                                                                      /* 跳出循环 */
         }
     }
+
+    printf("=========================\n");                                      /* 打印分割线 */
     if (isSuccess) {                                                            /* 如果通过测试 */
         printf(" - ✅ Test %c Passed\n", testNum);                                  /* 打印通过信息 */
     } else {                                                                    /* 如果未通过测试 */
         printf(" - ❌ Test %c Failed\n", testNum);                                  /* 打印未通过信息 */
     }
-
     printf("=========================\n");                                      /* 打印分割线 */
     printf("- Expect: "); dummyLinkedListPrint(expect);                         /* 打印预期结果 */
     printf("- Actual: "); dummyLinkedListPrint(actual);                         /* 打印实际结果 */
