@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-13 23:36:58
+ * @LastEditTime : 2023-11-18 13:40:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */
+#include "commonTypeDef.h"
 #include "commonArray.h"
 /* 解题方法配置文件 */
 #include "methodCfg.h"
@@ -49,7 +50,7 @@ void test_1(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateArray('1', expect, expectSize, ans, returnSize);
+    validateArray('1', expect, expectSize, ans, returnSize, COMMON_FALSE);
 
     /* 释放内存 */
     free(ans);
@@ -76,7 +77,7 @@ void test_2(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateArray('2', expect, expectSize, ans, returnSize);
+    validateArray('2', expect, expectSize, ans, returnSize, COMMON_FALSE);
 
     /* 释放内存 */
     free(ans);
@@ -103,7 +104,7 @@ void test_3(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateArray('3', expect, expectSize, ans, returnSize);
+    validateArray('3', expect, expectSize, ans, returnSize, COMMON_FALSE);
 
     /* 释放内存 */
     free(ans);
