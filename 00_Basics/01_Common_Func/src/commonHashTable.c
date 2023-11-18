@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 18:42:33
+ * @LastEditTime : 2023-11-18 16:07:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -98,15 +98,15 @@ int searchHashTable(struct HashTable *table, int val) {
  * @return {void}
  */
 void removeHashTable(struct HashTable *table, int val) {
-    int slotIndex = getHashSlot(table, val);                                            /* 获取元素值在哈希表中的槽位 */
-    struct HashNode *currentNode = table->hashSlots[slotIndex];                         /* 获取哈希表的哈希节点 */
+    int slot = getHashSlot(table, val);                                                 /* 获取元素值在哈希表中的槽位 */
+    struct HashNode *currentNode = table->hashSlots[slot];                               /* 获取哈希表的哈希节点 */
     struct HashNode *prevNode = NULL;                                                   /* 前一个节点 */
     while (currentNode) {                                                               /* 如果存在哈希节点，则遍历哈希节点 */
         if (currentNode->val == val) {                                                      /* 如果哈希节点的键等于 val */
             if (prevNode) {                                                                     /* 如果前一个节点存在 */
-                prevNode->next = currentNode->next;                                                 /* 将前一个节点的下一个节点指向当前节点的下一个节点 */
+                prevNode->next = currentNode->next;                                                /* 将前一个节点的下一个节点指向当前节点的下一个节点 */
             } else {                                                                            /* 如果前一个节点不存在 */
-                table->hashSlots[slotIndex] = currentNode->next;                                    /* 将哈希表的哈希节点设置为当前节点的下一个节点 */
+                table->hashSlots[slot] = currentNode->next;                                        /* 将哈希表的哈希节点设置为当前节点的下一个节点 */
             }
             free(currentNode);                                                                  /* 释放当前节点 */
             return;                                                                             /* 返回 */
