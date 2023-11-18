@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 13:11:15
+ * @LastEditTime : 2023-11-18 14:38:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,7 +34,6 @@ void test_1(void) {
     dummyLinkedListAddAtTail(actualDummy, 3);
     dummyLinkedListAddAtIndex(actualDummy, 1, 2);
     dummyLinkedListDeleteAtIndex(actualDummy, 0);
-    linkedListPrint(actualDummy);
 
     /* 预期结果 */
     DummyLinkedList *expectDummy = myLinkedListCreate();
@@ -69,7 +68,6 @@ void test_2(void) {
     dummyLinkedListGet(actualDummy, 5);                       /* get              [5] */
     dummyLinkedListDeleteAtIndex(actualDummy, 6);             /* deleteAtIndex    [6] */
     dummyLinkedListDeleteAtIndex(actualDummy, 4);             /* deleteAtIndex    [4] */
-    linkedListPrint(actualDummy);
 
     /* 预期结果 */
     DummyLinkedList *expectDummy = myLinkedListCreate();
@@ -101,7 +99,6 @@ void test_3(void) {
     dummyLinkedListAddAtHead(actualDummy, 7);             /* addAtHead        [7] */
     dummyLinkedListAddAtHead(actualDummy, 1);             /* addAtHead        [1] */
     dummyLinkedListDeleteAtIndex(actualDummy, 4);         /* deleteAtIndex    [4] */
-    linkedListPrint(actualDummy);
 
     /* 预期结果 */
     DummyLinkedList *expectDummy = myLinkedListCreate();
