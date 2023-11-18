@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 15:59:12
+ * @LastEditTime : 2023-11-18 16:07:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -88,6 +88,32 @@ int searchHashTable(struct HashTable *table, int val) {
         currentNode = currentNode->next;                                                    /* 否则，将哈希节点指向下一个节点 */
     }
     return 0;                                                                           /* 如果没有找到，返回 0 */
+}
+
+/**
+ * @description: 删除哈希元素
+ * =================================================================================
+ * @param {HashTable} *table    哈希表
+ * @param {int} val             元素值
+ * @return {void}
+ */
+void removeHashTable(struct HashTable *table, int val) {
+    int slot = getHashSlot(table, val);                                                 /* 获取元素值在哈希表中的槽位 */
+    struct HashNode *currentNode = table->hashList[slot];                               /* 获取哈希表的哈希节点 */
+    struct HashNode *prevNode = NULL;                                                   /* 前一个节点 */
+    while (currentNode) {                                                               /* 如果存在哈希节点，则遍历哈希节点 */
+        if (currentNode->val == val) {                                                      /* 如果哈希节点的键等于 val */
+            if (prevNode) {                                                                     /* 如果前一个节点存在 */
+                prevNode->next = currentNode->next;                                                /* 将前一个节点的下一个节点指向当前节点的下一个节点 */
+            } else {                                                                            /* 如果前一个节点不存在 */
+                table->hashList[slot] = currentNode->next;                                        /* 将哈希表的哈希节点设置为当前节点的下一个节点 */
+            }
+            free(currentNode);                                                                  /* 释放当前节点 */
+            return;                                                                             /* 返回 */
+        }
+        prevNode = currentNode;                                                             /* 将前一个节点指向当前节点 */
+        currentNode = currentNode->next;                                                    /* 将哈希节点指向下一个节点 */
+    }
 }
 
 /**

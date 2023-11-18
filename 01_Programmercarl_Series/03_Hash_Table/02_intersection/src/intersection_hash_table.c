@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 16:03:55
+ * @LastEditTime : 2023-11-18 16:09:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,14 +43,14 @@ int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *ret
         insertHashTable(hashTable, numsA[i]);
     }
 
-    printHashTable(hashTable);
+    // printHashTable(hashTable);
 
     int *result = (int *)malloc(sizeof(int) * (numsASize < numsBSize ? numsASize : numsBSize));
     *returnSize = 0;
     for (int i = 0; i < numsBSize; i++) {
         if (searchHashTable(hashTable, numsB[i])) {
             result[(*returnSize)++] = numsB[i];
-            hashTable->hashList[abs(numsB[i]) % HASH_SLOT_SIZE] = NULL;
+            removeHashTable(hashTable, numsB[i]);
         }
     }
     return result;
