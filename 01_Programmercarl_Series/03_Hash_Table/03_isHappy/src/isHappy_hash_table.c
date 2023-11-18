@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-30 23:45:15
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 19:19:16
+ * @LastEditTime : 2023-11-18 19:20:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,7 +44,7 @@
  */
 bool isHappy(int n) {
     int visited[HASH_SIZE] = {0};               /* 初始化哈希表 */
-    int sum = getNext(getNext(n));              /* 初始化总和 */
+    int sum = getNext(getNext(n));              /* 初始化总和，获取下一数字的下一数字 */
     int next_n = sum;                           /* 初始化下一数字 */
 
     while (next_n != 1) {                       /* 当下一数字不为 1 时，保持循环 */
