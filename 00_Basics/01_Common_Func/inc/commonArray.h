@@ -24,10 +24,10 @@
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void printArray(int *arr, int arrSize);     /* 打印数组 */
-void print2DArray(int **result, int returnSize, int *returnColumnSizes);        /* 打印二维数组 */
-void freeArray(int *result);        /* 释放数组 */
-void free2DArray(int **result, int returnSize);     /* 释放二维数组 */
+void printArray(int *arr, int arrSize);                                     /* 打印数组 */
+void print2DArray(int **result, int returnSize, int *returnColumnSizes);    /* 打印二维数组 */
+void freeArray(int *result);                                                /* 释放数组 */
+void free2DArray(int **result, int returnSize);                             /* 释放二维数组 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -45,7 +45,7 @@ void validateArray(char testNum,
 void validate2DArray(char testNum,
                         int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
                         int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
-                        int needSort);                      /* 验证二维数组 */
+                        int needSort);                          /* 验证二维数组 */
 
 
 #endif  /* __COMMON_ARRAY_H */
