@@ -3,17 +3,19 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 11:29:28
+ * @LastEditTime : 2023-11-18 14:33:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 203. 移除链表元素：https://leetcode.cn/problems/remove-linked-list-elements/
  * https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
-#include "commonArray.h"        /* 00_Basics\01_Common_Func\inc\commonArray.h */
-#include "commonLinkedList.h"   /* 00_Basics\01_Common_Func\inc\commonLinkedList.h */
+/* 通用头文件 */
+#include "commonArray.h"
+#include "commonLinkedList.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -74,8 +76,8 @@ void test_1(void) {
     validateLinkedList('1', expectList, ansList);
 
     /* 释放内存 */
-    freeList(head);
-    freeList(expectList);
+    linkedListFree(head);
+    linkedListFree(expectList);
 }
 
 /**
@@ -100,8 +102,8 @@ void test_2(void) {
     validateLinkedList('2', expectList, ansList);
 
     /* 释放内存 */
-    // freeList(head);      /* head 内存已被 removeElements 释放，故无需再释放 */
-    freeList(expectList);
+    // linkedListFree(head);      /* head 内存已被 removeElements 释放，故无需再释放 */
+    linkedListFree(expectList);
 }
 
 /**
@@ -126,8 +128,8 @@ void test_3(void) {
     validateLinkedList('3', expectList, ansList);
 
     /* 释放内存 */
-    freeList(head);
-    freeList(expectList);
+    linkedListFree(head);
+    linkedListFree(expectList);
 }
 
 /**********************************************************************************/
