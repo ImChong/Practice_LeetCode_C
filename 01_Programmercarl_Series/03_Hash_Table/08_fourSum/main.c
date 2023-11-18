@@ -87,21 +87,21 @@ void runTest(struct TestStruct *test) {
     int *nums = test->input.arr;
     int numsSize = test->input.arrSize;
     int target = test->input.target;
-    int actualRtnSize = 0;
+    int actualRtnRowSize = 0;
     int *actualRtnColSize = NULL;
-    int **actual2DArr = fourSum(nums, numsSize, target, &actualRtnSize, &actualRtnColSize);
+    int **actual2DArr = fourSum(nums, numsSize, target, &actualRtnRowSize, &actualRtnColSize);
 
     /* 预期结果 */
-    int expectRtnSize = test->output.rtnSize;
+    int expectRtnRowSize = test->output.rtnSize;
     int *expectRtnColSize = test->output.rtnColSize;
     int **expect2DArr = test->output.arr;
 
     /* 比较结果 */
-    validate2DArray(test->testNum, expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
+    validate2DArray(test->testNum, expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize);
 
     /* 释放内存 */
     freeArray(actualRtnColSize);
-    free2DArray(actual2DArr, actualRtnSize);
+    free2DArray(actual2DArr, actualRtnRowSize);
 }
 
 /**

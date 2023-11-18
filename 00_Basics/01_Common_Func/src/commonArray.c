@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:31:18
+ * @LastEditTime : 2023-11-18 13:34:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -199,30 +199,30 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
  * =================================================================================
  * @param {char} testNum                测试编号
  * @param {int} **expect2DArr           预期结果
- * @param {int} expectRtnSize           预期结果大小
+ * @param {int} expectRtnRowSize           预期结果大小
  * @param {int} *expectRtnColSize       预期结果列大小
  * @param {int} **actual2DArr           实际结果
- * @param {int} actualRtnSize           实际结果大小
+ * @param {int} actualRtnRowSize           实际结果大小
  * @param {int} *actualRtnColSize       实际结果列大小
  * @param {int} needSort                  是否排序
  * @return {void}
  */
 void validate2DArray(char testNum,
-                            int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
-                            int **actual2DArr, int actualRtnSize, int *actualRtnColSize,
+                            int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
+                            int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
                             int needSort) {
 
     if (needSort == COMMON_TRUE) {
-        sort2DArray(expect2DArr, expectRtnSize, expectRtnColSize);
-        sort2DArray(actual2DArr, actualRtnSize, actualRtnColSize);
+        sort2DArray(expect2DArr, expectRtnRowSize, expectRtnColSize);
+        sort2DArray(actual2DArr, actualRtnRowSize, actualRtnColSize);
     }
 
     bool isSuccess = true;
 
-    if (actualRtnSize != expectRtnSize) {
+    if (actualRtnRowSize != expectRtnRowSize) {
         isSuccess = false;
     } else {
-        for (int i = 0; i < expectRtnSize; i++) {
+        for (int i = 0; i < expectRtnRowSize; i++) {
             if (actualRtnColSize[i] != expectRtnColSize[i]) {
                 isSuccess = false;
                 break;
@@ -243,6 +243,6 @@ void validate2DArray(char testNum,
         printf(" - ❌ Test %c failed\n", testNum);
     }
     printf("=========================\n");
-    printf("- Expect: "); print2DArray(expect2DArr, expectRtnSize, expectRtnColSize);
-    printf("- Actual: "); print2DArray(actual2DArr, actualRtnSize, actualRtnColSize);
+    printf("- Expect: "); print2DArray(expect2DArr, expectRtnRowSize, expectRtnColSize);
+    printf("- Actual: "); print2DArray(actual2DArr, actualRtnRowSize, actualRtnColSize);
 }

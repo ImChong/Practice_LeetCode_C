@@ -108,21 +108,21 @@ void test_1(void) {
     /* 实际结果 */
     int nums[] = {-1, 0, 1, 2, -1, -4};
     int numsSize = ARR_SIZE(nums);
-    int actualRtnSize = 0;
+    int actualRtnRowSize = 0;
     int *actualRtnColSize;
-    int **actual2DArr = threeSum(nums, numsSize, &actualRtnSize, &actualRtnColSize);
+    int **actual2DArr = threeSum(nums, numsSize, &actualRtnRowSize, &actualRtnColSize);
 
     /* 预期结果 */
-    int expectRtnSize = 2;
+    int expectRtnRowSize = 2;
     int expectRtnColSize[] = {3, 3};
     int *expect2DArr[] = {(int[]){-1, -1, 2}, (int[]){-1, 0, 1, 2}};    /* *expect2DArr[] 内数组可以不同长度 */
 
     /* 比较结果 */
-    validate2DArray('1', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
+    validate2DArray('1', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize);
 
     /* 释放内存 */
     free(actualRtnColSize);
-    free2DArray(actual2DArr, actualRtnSize);
+    free2DArray(actual2DArr, actualRtnRowSize);
 }
 
 /**
@@ -136,21 +136,21 @@ void test_2(void) {
     /* 实际结果 */
     int nums[] = {0, 1, 1};
     int numsSize = ARR_SIZE(nums);
-    int actualRtnSize = 0;
+    int actualRtnRowSize = 0;
     int *actualRtnColSize;
-    int **actual2DArr = threeSum(nums, numsSize, &actualRtnSize, &actualRtnColSize);
+    int **actual2DArr = threeSum(nums, numsSize, &actualRtnRowSize, &actualRtnColSize);
 
     /* 预期结果 */
-    int expectRtnSize = 0;
+    int expectRtnRowSize = 0;
     int expectRtnColSize[] = {};
     int *expect2DArr[] = {};
 
     /* 比较结果 */
-    validate2DArray('2', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
+    validate2DArray('2', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize);
 
     /* 释放内存 */
     free(actualRtnColSize);
-    free2DArray(actual2DArr, actualRtnSize);
+    free2DArray(actual2DArr, actualRtnRowSize);
 }
 
 /**
@@ -164,21 +164,21 @@ void test_3(void) {
     /* 实际结果 */
     int nums[] = {0, 0, 0};
     int numsSize = ARR_SIZE(nums);
-    int actualRtnSize = 0;
+    int actualRtnRowSize = 0;
     int *actualRtnColSize;
-    int **actual2DArr = threeSum(nums, numsSize, &actualRtnSize, &actualRtnColSize);
+    int **actual2DArr = threeSum(nums, numsSize, &actualRtnRowSize, &actualRtnColSize);
 
     /* 预期结果 */
-    int expectRtnSize = 1;
+    int expectRtnRowSize = 1;
     int expectRtnColSize[] = {3};
     int *expect2DArr[] = {(int[]){0, 0, 0}};
 
     /* 比较结果 */
-    validate2DArray('3', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
+    validate2DArray('3', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize);
 
     /* 释放内存 */
     free(actualRtnColSize);
-    free2DArray(actual2DArr, actualRtnSize);
+    free2DArray(actual2DArr, actualRtnRowSize);
 }
 
 /**********************************************************************************/

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:30:43
+ * @LastEditTime : 2023-11-18 13:33:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,8 +43,8 @@ void validateArray(char testNum,
                         int *actualArr, int actualLen,
                         int needSort);                          /* 验证数组 */
 void validate2DArray(char testNum,
-                        int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
-                        int **actual2DArr, int actualRtnSize, int *actualRtnColSize,
+                        int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
+                        int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
                         int needSort);                      /* 验证二维数组 */
 
 
