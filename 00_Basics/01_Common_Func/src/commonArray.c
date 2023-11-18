@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 10:40:50
+ * @LastEditTime : 2023-11-18 10:45:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -120,6 +120,21 @@ void free2DArray(int **arr, int arrSize) {
     free(arr);
 }
 
+/**
+ * @description: 二维数组排序
+ * =================================================================================
+ * @param {int} **arr           返回数组
+ * @param {int} arrSize         返回数组大小
+ * @param {int} *arrColSizes    返回数组列大小
+ * @return {void}
+ */
+void sort2DArray(int **arr, int arrSize, int *arrColSizes) {
+    for (int i = 0; i < arrSize; i++) {
+        qsort(arr[i], arrColSizes[i], sizeof(int), compareElements);
+    }
+
+    qsort(arr, arrSize, sizeof(int *), compareRows);
+}
 
 /**********************************************************************************/
 /*                                                                                */
@@ -176,8 +191,12 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
  * @return {void}
  */
 void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
-                                int **actual2DArr, int actualRtnSize, int *actualRtnColSize) {
+                                int **actual2DArr, int actualRtnSize, int *actualRtnColSize, int isSort) {
 
+    if (isSort == COMMON_TRUE) {
+        sort2DArray(expect2DArr, expectRtnSize, expectRtnColSize);
+        sort2DArray(actual2DArr, actualRtnSize, actualRtnColSize);
+    }
     bool isSuccess = true;
 
     if (actualRtnSize != expectRtnSize) {
