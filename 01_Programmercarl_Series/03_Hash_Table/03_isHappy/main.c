@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-31 00:12:54
+ * @LastEditTime : 2023-11-18 19:00:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -24,14 +24,9 @@
 #include <stdbool.h>
 /* 通用头文件 */
 #include "commonHelper.h"
-#include "commonFunc.h"
 /* 解题方法配置文件 */
 #include "methodCfg.h"
-#if FAST_SLOW_POINTER_METHOD_EN
-#include "isHappy_double_pointer.h"
-#elif HASH_TABLE_METHOD_EN
-#include "isHappy_hash_table.h"
-#endif
+#include "isHappy.h"
 
 /**********************************************************************************/
 /*                                                                                */
