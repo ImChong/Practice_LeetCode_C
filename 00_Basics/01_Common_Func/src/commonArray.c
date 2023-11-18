@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:26:39
+ * @LastEditTime : 2023-11-18 13:28:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -150,7 +150,6 @@ void sort2DArray(int **arr, int arrSize, int *arrColSizes) {
     for (int i = 0; i < arrSize; i++) {
         qsort(arr[i], arrColSizes[i], sizeof(int), compareElements);
     }
-
     qsort(arr, arrSize, sizeof(int *), compareRows);
 }
 
