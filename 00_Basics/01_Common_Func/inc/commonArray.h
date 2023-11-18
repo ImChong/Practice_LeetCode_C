@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:25:54
+ * @LastEditTime : 2023-11-18 13:27:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,15 +28,15 @@ void printArray(int *arr, int arrSize);     /* 打印数组 */
 void print2DArray(int **result, int returnSize, int *returnColumnSizes);        /* 打印二维数组 */
 void freeArray(int *result);        /* 释放数组 */
 void free2DArray(int **result, int returnSize);     /* 释放二维数组 */
-void sort2DArray(int **arr, int arrSize, int *arrColSizes);       /* 排序二维数组 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-int compareElements(const void *a, const void *b);
-int compareRows(const void *a, const void *b);
+int compareElements(const void *a, const void *b);              /* 比较元素 */
+int compareRows(const void *a, const void *b);                  /* 比较行 */
+void sort2DArray(int **arr, int arrSize, int *arrColSizes);       /* 排序二维数组 */
 void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen);     /* 验证数组 */
 void validate2DArray(char testNum,
                             int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
