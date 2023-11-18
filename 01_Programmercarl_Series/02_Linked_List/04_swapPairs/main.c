@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 13:18:27
+ * @LastEditTime : 2023-11-18 14:40:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -46,7 +46,6 @@ struct ListNode *swapPairs(struct ListNode* head){
         if (prev) {                                     /* 如果前一节点指针不为空 */
             prev->next = second;                            /* 改变链表指向：将前一节点指针指向第二个节点 */
         }
-
         prev = first;                                   /* 位移指针：将前一节点指针设置为第一个节点指针 */
         head = first->next;                             /* 位移指针：将头结点指针设置为第三个节点指针 */
     }
@@ -79,8 +78,8 @@ void test_1(void) {
     validateLinkedList('1', expectList, ansList);
 
     /* 释放内存 */
-    freeList(arrList);
-    freeList(expectList);
+    linkedListFree(arrList);
+    linkedListFree(expectList);
 }
 
 /**
@@ -104,8 +103,8 @@ void test_2(void) {
     validateLinkedList('2', expectList, ansList);
 
     /* 释放内存 */
-    freeList(arrList);
-    freeList(expectList);
+    linkedListFree(arrList);
+    linkedListFree(expectList);
 }
 
 /**
@@ -129,8 +128,8 @@ void test_3(void) {
     validateLinkedList('3', expectList, ansList);
 
     /* 释放内存 */
-    freeList(arrList);
-    freeList(expectList);
+    linkedListFree(arrList);
+    linkedListFree(expectList);
 }
 
 /**********************************************************************************/
