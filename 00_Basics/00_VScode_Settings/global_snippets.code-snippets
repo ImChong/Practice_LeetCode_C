@@ -80,6 +80,17 @@
 		],
 		"description": "helper functions."
 	},
+	"static_functions": {
+		"prefix": "StaicFunctions",
+		"body": [
+			"/**********************************************************************************/",
+			"/*                                                                                */",
+			"/*                                STATIC FUNCTIONS                                */",
+			"/*                                                                                */",
+			"/**********************************************************************************/"
+		],
+		"description": "static functions."
+	},
 	"utility_functions": {
 		"prefix": "UtilityFunctions",
 		"body": [
