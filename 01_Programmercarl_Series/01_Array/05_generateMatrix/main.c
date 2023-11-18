@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 15:56:11
+ * @LastEditTime : 2023-11-18 10:46:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */
+#include "commonTypeDef.h"
 #include "commonArray.h"
 /* 解题方法配置文件 */
 #include "methodCfg.h"
@@ -52,7 +53,7 @@ void test_1(void) {
     };
 
     /* 测试结果 */
-    validate2DArray('1', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
+    validate2DArray('1', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize, COMMON_FALSE);
 
     /* 释放内存 */
     free2DArray(actual2DArr, actualRtnSize);
@@ -81,7 +82,7 @@ void test_2(void) {
     };
 
     /* 测试结果 */
-    validate2DArray('2', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
+    validate2DArray('2', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize, COMMON_FALSE);
 
     /* 释放内存 */
     free2DArray(actual2DArr, actualRtnSize);
@@ -113,7 +114,7 @@ void test_3(void) {
     };
 
     /* 测试结果 */
-    validate2DArray('3', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize);
+    validate2DArray('3', expect2DArr, expectRtnSize, expectRtnColSize, actual2DArr, actualRtnSize, actualRtnColSize, COMMON_FALSE);
 
     /* 释放内存 */
     free2DArray(actual2DArr, actualRtnSize);
