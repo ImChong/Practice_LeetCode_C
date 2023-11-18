@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 10:19:43
+ * @LastEditTime : 2023-11-18 10:26:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -98,6 +98,13 @@ void free2DArray(int **arr, int arrSize) {
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
+/**
+ * @description: 比较函数
+ * =================================================================================
+ * @param {void} *a             数组元素a
+ * @param {void} *b             数组元素b
+ * @return {STATIC_FUNC int}    比较结果
+ */
 STATIC_FUNC int compare(const void *a, const void *b) {
     return (*(int*)a - *(int*)b);
 }
