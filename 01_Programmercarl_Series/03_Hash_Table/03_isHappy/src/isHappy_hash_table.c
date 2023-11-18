@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-30 23:45:15
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 19:14:39
+ * @LastEditTime : 2023-11-18 19:16:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -42,17 +42,19 @@
  * @return {bool}       是否为快乐数
  */
 bool isHappy(int n) {
-    int visited[HASH_SIZE] = {0};
-    int sum = getNext(getNext(n));
-    int next_n = sum;
+    int visited[HASH_SIZE] = {0};               /* 初始化哈希表 */
+    int sum = getNext(getNext(n));              /* 初始化总和 */
+    int next_n = sum;                           /* 初始化下一数字 */
 
-    while (next_n != 1) {
-        sum = getNext(next_n);
+    while (next_n != 1) {                       /* 当下一数字不为 1 时，保持循环 */
+        sum = getNext(next_n);                      /* 计算总和 */
 
-        if (visited[sum]) return false;
+        if (visited[sum]) {                         /* 如果总和已经在哈希表中存在，则返回 false */
+            return false;
+        }
 
-        visited[sum] = 1;
-        next_n = sum;
+        visited[sum] = 1;                           /* 将总和加入哈希表 */
+        next_n = sum;                               /* 更新下一数字 */
     };
 
     return true;
