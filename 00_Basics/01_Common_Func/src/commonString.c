@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:52:18
+ * @LastEditTime : 2023-11-18 13:53:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -81,12 +81,11 @@ void freeString(char *s) {
  * @description: 验证字符串
  * =================================================================================
  * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
+ * @param {int} expect      预期字符串
+ * @param {int} actual      实际字符串
  * @return {void}
  */
 void validateString(char testNum, char *expect, char *actual) {
-
     int isSuccess = COMMON_TRUE;
 
     if (expect == NULL && actual == NULL) {
