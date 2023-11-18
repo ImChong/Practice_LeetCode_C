@@ -42,8 +42,8 @@ bool isHappy(int n) {
     int slow = n;                           /* 初始化慢指针：指向当前数值 */
     int fast = getNext(n);                  /* 初始化快指针：指向下一数值 */
     while (fast != 1 && slow != fast) {     /* 当快指针的值不为 1 或快指针与慢指针指向的值不相同时，保持循环 */
-        slow = getNext(slow);               /* 慢指针一次移动一位 */
-        fast = getNext(getNext(fast));      /* 快指针一次移动两位 */
+        slow = getNext(slow);                   /* 慢指针一次移动一位 */
+        fast = getNext(getNext(fast));          /* 快指针一次移动两位 */
     }
     return fast == 1;                       /* 当开始循环且快慢指针指向的值都为 1 时，返回 true */
 }
