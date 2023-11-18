@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 23:01:41
+ * @LastEditTime : 2023-11-18 13:46:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,7 +12,6 @@
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 /* 常用头文件 */
 #include "commonLinkedListDummy.h"
 
