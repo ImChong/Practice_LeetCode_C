@@ -116,6 +116,7 @@ void freeHashTable(struct HashTable *table) {
  * @return {void}
  */
 void printHashTable(struct HashTable *table) {
+    printf("Hash Table:\n");
     for (int i = 0; i < table->size; i++) {
         printf("Hash Slot [%d]: ", i);
         struct HashNode *currentNode = table->hashList[i];
