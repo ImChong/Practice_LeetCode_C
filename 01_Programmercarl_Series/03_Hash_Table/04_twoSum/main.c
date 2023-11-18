@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-10 23:39:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 19:31:42
+ * @LastEditTime : 2023-11-18 19:55:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -142,9 +142,9 @@ void test_4(void) {
  */
 int main(int argc, char const *argv[]) {
 #if DOUBLE_POINTER_METHOD_EN
-    printf("DOUBLE_POINTER_METHOD_EN\n");
+    printf("DOUBLE_POINTER_METHOD_EN\r\n");
 #elif HASH_TABLE_METHOD_EN
-    printf("HASH_TABLE_METHOD_EN\n");
+    printf("HASH_TABLE_METHOD_EN\r\n");
 #endif
     test_1();
     test_2();
