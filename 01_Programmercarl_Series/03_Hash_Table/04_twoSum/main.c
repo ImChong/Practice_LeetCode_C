@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-10 23:39:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-31 00:34:04
+ * @LastEditTime : 2023-11-18 19:29:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */
+#include "commonTypeDef.h"
 #include "commonArray.h"
 /* 解题方法配置文件 */
 #include "methodCfg.h"
@@ -49,7 +50,7 @@ void test_1(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateArray('1', expect, expectSize, actual, actualSize);
+    validateArray('1', expect, expectSize, actual, actualSize, COMMON_FALSE);
 
     /* 释放内存 */
     free(actual);
@@ -75,7 +76,7 @@ void test_2(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateArray('2', expect, expectSize, actual, actualSize);
+    validateArray('2', expect, expectSize, actual, actualSize, COMMON_FALSE);
 
     /* 释放内存 */
     free(actual);
@@ -101,7 +102,7 @@ void test_3(void) {
     int expectSize = ARR_SIZE(expect);
 
     /* 比较结果 */
-    validateArray('3', expect, expectSize, actual, actualSize);
+    validateArray('3', expect, expectSize, actual, actualSize, COMMON_FALSE);
 
     /* 释放内存 */
     free(actual);
@@ -127,7 +128,7 @@ void test_4(void) {
     int expectSize = 0;
 
     /* 比较结果 */
-    validateArray('4', expect, expectSize, actual, actualSize);
+    validateArray('4', expect, expectSize, actual, actualSize, COMMON_FALSE);
 }
 
 /**********************************************************************************/
