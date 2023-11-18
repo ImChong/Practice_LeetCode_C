@@ -50,6 +50,7 @@ int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *ret
             hashTable->hashList[abs(numsB[i]) % HASH_SIZE] = NULL;
         }
     }
+    printHashTable(hashTable);
     return result;
 }
 
