@@ -288,4 +288,5 @@ void validateDummyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedL
     printf("=========================\n");                                      /* 打印分割线 */
     printf("- Expect: "); dummyLinkedListPrint(expect);                         /* 打印预期结果 */
     printf("- Actual: "); dummyLinkedListPrint(actual);                         /* 打印实际结果 */
+    printf("\n");
 }

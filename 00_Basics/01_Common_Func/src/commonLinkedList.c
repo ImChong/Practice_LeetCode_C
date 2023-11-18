@@ -273,4 +273,5 @@ void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNo
     printf("=========================\n");
     printf("- Expect: "); linkedListPrint(expectList);
     printf("- Actual: "); linkedListPrint(actualList);
+    printf("\n");
 }

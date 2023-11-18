@@ -37,4 +37,5 @@ void validateSingleValue(char testNum, int expect, int actual) {
     printf("=========================\n");
     printf("- Expect: %d\n", expect);
     printf("- Actual: %d\n", actual);
+    printf("\n");
 }
