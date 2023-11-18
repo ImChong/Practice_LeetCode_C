@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:28:48
+ * @LastEditTime : 2023-11-18 13:29:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -163,11 +163,12 @@ void sort2DArray(int **arr, int arrSize, int *arrColSizes) {
  * @param {int} actualLen       实际结果长度
  * @return {void}
  */
-void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen) {
-    int isSuccess = true;
+void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen, int needSort) {
+
     qsort(expectArr, expectLen, sizeof(int), compareElements);
     qsort(actualArr, actualLen, sizeof(int), compareElements);
 
+    int isSuccess = true;
     if (expectLen != actualLen) {
         isSuccess = false;
     } else {
@@ -203,8 +204,10 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
  * @param {int} needSort                  是否排序
  * @return {void}
  */
-void validate2DArray(char testNum, int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
-                                int **actual2DArr, int actualRtnSize, int *actualRtnColSize, int needSort) {
+void validate2DArray(char testNum,
+                            int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
+                            int **actual2DArr, int actualRtnSize, int *actualRtnColSize,
+                            int needSort) {
 
     if (needSort == COMMON_TRUE) {
         sort2DArray(expect2DArr, expectRtnSize, expectRtnColSize);

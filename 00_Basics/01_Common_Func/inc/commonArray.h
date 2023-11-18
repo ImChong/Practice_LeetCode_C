@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:28:37
+ * @LastEditTime : 2023-11-18 13:30:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,11 +38,14 @@ int compareElements(const void *a, const void *b);              /* 比较元素 
 int compareRows(const void *a, const void *b);                  /* 比较行 */
 void sortArray(int *arr, int arrSize);                          /* 排序数组 */
 void sort2DArray(int **arr, int arrSize, int *arrColSizes);     /* 排序二维数组 */
-void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen);     /* 验证数组 */
+void validateArray(char testNum,
+                        int *expectArr, int expectLen,
+                        int *actualArr, int actualLen,
+                        int needSort);                          /* 验证数组 */
 void validate2DArray(char testNum,
-                            int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
-                            int **actual2DArr, int actualRtnSize, int *actualRtnColSize,
-                            int needSort);        /* 验证二维数组 */
+                        int **expect2DArr, int expectRtnSize, int *expectRtnColSize,
+                        int **actual2DArr, int actualRtnSize, int *actualRtnColSize,
+                        int needSort);                      /* 验证二维数组 */
 
 
 #endif  /* __COMMON_ARRAY_H */
