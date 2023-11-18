@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 15:18:36
+ * @LastEditTime : 2023-11-18 15:50:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -42,6 +42,9 @@ int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *ret
     for (int i = 0; i < numsASize; i++) {
         insertHashTable(hashTable, numsA[i]);
     }
+
+    printHashTable(hashTable);
+
     int *result = (int *)malloc(sizeof(int) * (numsASize < numsBSize ? numsASize : numsBSize));
     *returnSize = 0;
     for (int i = 0; i < numsBSize; i++) {
@@ -50,7 +53,6 @@ int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *ret
             hashTable->hashList[abs(numsB[i]) % HASH_SIZE] = NULL;
         }
     }
-    printHashTable(hashTable);
     return result;
 }
 
