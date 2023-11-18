@@ -44,7 +44,7 @@
  */
 bool isHappy(int n) {
     int visited[HASH_SIZE] = {0};               /* 初始化哈希表 */
-    int sum = getNext(getNext(n));              /* 初始化总和，获取下一数字的下一数字 */
+    int sum = getNext(n);                       /* 初始化总和，获取下一数字的下一数字 */
     int next_n = sum;                           /* 初始化下一数字 */
 
     while (next_n != 1) {                       /* 当下一数字不为 1 时，保持循环 */
