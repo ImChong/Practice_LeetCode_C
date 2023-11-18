@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 16:05:25
+ * @LastEditTime : 2023-11-18 18:40:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -27,7 +27,7 @@ struct HashNode {
 /* 哈希表 */
 struct HashTable {
     int size;                       /* 哈希表大小 */
-    struct HashNode **hashList;     /* 哈希列表 */
+    struct HashNode **hashSlots;    /* 哈希槽位 */
 };
 
 /**********************************************************************************/
