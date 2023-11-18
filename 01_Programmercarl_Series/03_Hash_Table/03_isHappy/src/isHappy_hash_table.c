@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-30 23:45:15
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 19:20:45
+ * @LastEditTime : 2023-11-18 19:20:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -49,7 +49,6 @@ bool isHappy(int n) {
 
     while (next_n != 1) {                       /* 当下一数字不为 1 时，保持循环 */
         sum = getNext(next_n);                      /* 计算总和 */
-        printf("sum = %d\n", sum);
         if (visited[sum]) {                         /* 如果总和已经在哈希表中存在，则返回 false */
             return false;
         }
