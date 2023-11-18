@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-29 11:30:34
+ * @LastEditTime : 2023-11-18 14:40:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -93,8 +93,8 @@ void test_1(void) {
     validateLinkedList('1', expectList, ansList);
 
     /* 释放内存 */
-    freeList(newList);
-    freeList(expectList);
+    linkedListFree(newList);
+    linkedListFree(expectList);
 }
 
 /**
@@ -122,8 +122,8 @@ void test_2(void) {
     validateLinkedList('2', expectList, ansList);
 
     /* 释放内存 */
-    freeList(newList);
-    freeList(expectList);
+    linkedListFree(newList);
+    linkedListFree(expectList);
 }
 
 /**
@@ -179,8 +179,8 @@ void test_4(void) {
     validateLinkedList('4', expectList, ansList);
 
     /* 释放内存 */
-    freeList(ansList);        /* newList 的链表头已被释放内存 */
-    freeList(expectList);
+    linkedListFree(ansList);        /* newList 的链表头已被释放内存 */
+    linkedListFree(expectList);
 }
 
 /**********************************************************************************/
