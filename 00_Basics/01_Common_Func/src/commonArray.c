@@ -128,6 +128,17 @@ int compareRows(const void *a, const void *b) {
 }
 
 /**
+ * @description: 数组排序
+ * =================================================================================
+ * @param {int} *arr            数组
+ * @param {int} arrSize         数组大小
+ * @return {void}
+ */
+void sortArray(int *arr, int arrSize) {
+    qsort(arr, arrSize, sizeof(int), compareElements);
+}
+
+/**
  * @description: 二维数组排序
  * =================================================================================
  * @param {int} **arr           返回数组
