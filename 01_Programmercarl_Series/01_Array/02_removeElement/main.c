@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 00:06:05
+ * @LastEditTime : 2023-11-18 13:55:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,7 @@
 /* 标准头文件 */
 #include <stdio.h>
 /* 通用头文件 */
+#include "commonTypeDef.h"
 #include "commonArray.h"
 
 /**********************************************************************************/
@@ -62,7 +63,7 @@ void test_1(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateArray('1', expectNums, expectLen, nums, resultLen);
+    validateArray('1', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
 }
 
 /**
@@ -81,7 +82,7 @@ void test_2(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateArray('2', expectNums, expectLen, nums, resultLen);
+    validateArray('2', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
 }
 
 /**
@@ -100,7 +101,7 @@ void test_3(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateArray('3', expectNums, expectLen, nums, resultLen);
+    validateArray('3', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
 }
 
 /**
@@ -119,7 +120,7 @@ void test_4(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    validateArray('4', expectNums, expectLen, nums, resultLen);
+    validateArray('4', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
 }
 
 /**********************************************************************************/
