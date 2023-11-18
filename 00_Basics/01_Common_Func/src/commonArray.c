@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:34:02
+ * @LastEditTime : 2023-11-18 13:35:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,7 +12,6 @@
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 /* 常用头文件 */
 #include "commonTypeDef.h"
 #include "commonArray.h"
@@ -171,13 +170,13 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
         sortArray(actualArr, actualLen);
     }
 
-    int isSuccess = true;
+    int isSuccess = COMMON_TRUE;
     if (expectLen != actualLen) {
-        isSuccess = false;
+        isSuccess = COMMON_FALSE;
     } else {
         for (int i = 0; i < expectLen; i++) {
             if (expectArr[i] != actualArr[i]) {
-                isSuccess = false;
+                isSuccess = COMMON_FALSE;
                 break;
             }
         }
@@ -217,19 +216,19 @@ void validate2DArray(char testNum,
         sort2DArray(actual2DArr, actualRtnRowSize, actualRtnColSize);
     }
 
-    bool isSuccess = true;
+    int isSuccess = COMMON_TRUE;
 
     if (actualRtnRowSize != expectRtnRowSize) {
-        isSuccess = false;
+        isSuccess = COMMON_FALSE;
     } else {
         for (int i = 0; i < expectRtnRowSize; i++) {
             if (actualRtnColSize[i] != expectRtnColSize[i]) {
-                isSuccess = false;
+                isSuccess = COMMON_FALSE;
                 break;
             }
             for (int j = 0; j < expectRtnColSize[i]; j++) {
                 if (actual2DArr[i][j] != expect2DArr[i][j]) {
-                    isSuccess = false;
+                    isSuccess = COMMON_FALSE;
                     break;
                 }
             }
