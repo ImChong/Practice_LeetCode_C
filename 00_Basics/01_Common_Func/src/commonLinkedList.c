@@ -209,9 +209,9 @@ struct ListNode *linkedListFromArray(int *array, int size) {
 void linkedListPrint(struct ListNode *head) {
     printf("Linked List: ");
     while (head != NULL) {
-        printf("%d ", head->val);
+        printf("%d", head->val);
         if (head->next != NULL) {
-            printf("-> ");
+            printf(" -> ");
         }
         head = head->next;
     }

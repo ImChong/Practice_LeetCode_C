@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:48:03
+ * @LastEditTime : 2023-11-18 15:58:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -232,9 +232,9 @@ void dummyLinkedListPrint(DummyLinkedList *list) {
     printf("linked list (size: %d): Dummy -> ", list->size);    /* 打印链表长度 */
 
     for (int i = 0; i < list->size; i++) {                      /* 循环打印链表节点数值 */
-        printf("%d ", dummyLinkedListGet(list, i));                 /* 打印链表节点数值 */
+        printf("%d", dummyLinkedListGet(list, i));                  /* 打印链表节点数值 */
         if (i < list->size - 1) {                                   /* 如果不是最后一个节点 */
-            printf("-> ");                                              /* 打印箭头 */
+            printf(" -> ");                                             /* 打印箭头 */
         }
     }
     printf("\n");                                               /* 换行 */

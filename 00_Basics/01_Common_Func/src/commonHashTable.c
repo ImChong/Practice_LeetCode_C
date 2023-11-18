@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 15:52:17
+ * @LastEditTime : 2023-11-18 15:56:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -116,13 +116,13 @@ void freeHashTable(struct HashTable *table) {
  * @return {void}
  */
 void printHashTable(struct HashTable *table) {
-    printf("Hash Table:\n");
+    printf("Hash Table (slot size: %d):\n", table->size);
     for (int i = 0; i < table->size; i++) {
-        printf("Hash Slot [%d]: ", i);
+        printf("    Hash Slot [%d]: ", i);
         struct HashNode *currentNode = table->hashList[i];
         while (currentNode) {
             printf("%d (count: %d)", currentNode->val, currentNode->counter);
-            printf("-> ");
+            printf(" -> ");
             currentNode = currentNode->next;
         }
         printf("Null\n");
