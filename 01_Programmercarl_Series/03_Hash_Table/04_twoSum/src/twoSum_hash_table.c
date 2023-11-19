@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-31 00:23:15
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-19 21:14:07
+ * @LastEditTime : 2023-11-19 21:20:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -54,7 +54,7 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
         }
         insertHashTable(table, nums[i], i);
     }
-    printHashTable(table);
+    // printHashTable(table);
     *returnSize = 0;
     return NULL;
 }
