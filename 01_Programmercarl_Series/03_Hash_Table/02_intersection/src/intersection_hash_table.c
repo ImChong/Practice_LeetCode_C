@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 16:26:48
+ * @LastEditTime : 2023-11-19 21:22:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,7 +40,7 @@
 int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *returnSize) {
     struct HashTable *hashTable = createHashTable(HASH_SIZE);
     for (int i = 0; i < numsASize; i++) {
-        insertHashTable(hashTable, numsA[i]);
+        insertHashTable(hashTable, numsA[i], -1);
     }
 
     // printHashTable(hashTable);
