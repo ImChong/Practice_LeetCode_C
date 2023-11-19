@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-19 20:55:45
+ * @LastEditTime : 2023-11-19 21:19:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -20,8 +20,8 @@
 /* 哈希节点 */
 struct HashNode {
     int val;                    /* 元素值 */
-    int counter;                /* 元素个数（用于记载元素重复次数） */
-    int index;                  /* 元素索引（用于x数之和中元素位于原数组的索引） */
+    int counter;                /* 元素个数（如果需要索引，此项则默认为 1） */
+    int index;                  /* 元素索引（如果不需要索引，此项可以设置为 -1） */
     struct HashNode *next;      /* 下一个节点 */
 };
 
