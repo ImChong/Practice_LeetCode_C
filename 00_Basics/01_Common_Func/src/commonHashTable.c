@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-19 21:11:55
+ * @LastEditTime : 2023-11-19 21:13:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -150,7 +150,7 @@ void printHashTable(struct HashTable *table) {
         printf("    Hash Slot [%d]: ", i);
         struct HashNode *currentNode = table->hashSlots[i];
         while (currentNode) {
-            printf("%d (count: %d)", currentNode->val, currentNode->counter);
+            printf("%d (count: %d)(index: %d)", currentNode->val, currentNode->counter, currentNode->index);
             printf(" -> ");
             currentNode = currentNode->next;
         }
