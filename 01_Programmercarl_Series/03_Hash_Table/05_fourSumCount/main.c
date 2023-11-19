@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-31 12:23:11
+ * @LastEditTime : 2023-11-19 21:31:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,14 +11,16 @@
  * https://programmercarl.com/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.html
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.md
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
+/* 通用头文件 */
 #include "commonHelper.h"
 #include "commonArray.h"
+/* 解题方法配置文件 */
 #include "methodCfg.h"
-#if HASH_TABLE_METHOD_EN
-#include "fourSumCount_hash_table.h"
-#endif
+/* 本文件头文件 */
+#include "fourSumCount.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -140,6 +142,11 @@ void test_4(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, char const *argv[]) {
+#if DOUBLE_POINTER_METHOD_EN
+    printf("DOUBLE_POINTER_METHOD_EN\r\n");
+#elif HASH_TABLE_METHOD_EN
+    printf("HASH_TABLE_METHOD_EN\r\n");
+#endif
     test_1();
     test_2();
     test_3();

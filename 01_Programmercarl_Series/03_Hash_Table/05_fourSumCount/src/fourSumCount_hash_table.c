@@ -3,17 +3,19 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-31 12:15:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-31 12:24:11
+ * @LastEditTime : 2023-11-19 21:26:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 四数相加 - 哈希表法源文件
  */
+/* 解题方法配置文件 */
 #include "methodCfg.h"
 #if HASH_TABLE_METHOD_EN
-#include "fourSumCount_hash_table.h"
-/* */
+/* 通用头文件 */
 #include "commonHashTable.h"
+/* 本文件头文件 */
+#include "fourSumCount.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -59,7 +61,7 @@ int fourSumCount(int *nums1, int nums1Size, int *nums2, int nums2Size,
     struct HashTable *hashTable = createHashTable(2 * nums1Size * nums2Size);       /* 创建哈希表 */
     for (int i = 0; i < nums1Size; i++) {                                           /* 遍历数组1 */
         for (int j = 0; j < nums2Size; j++) {                                           /* 遍历数组2 */
-            insertHashTable(hashTable, nums1[i] + nums2[j]);                                         /* 将数组1和数组2的和插入哈希表 */
+            insertHashTable(hashTable, nums1[i] + nums2[j], -1);                            /* 将数组1和数组2的和插入哈希表 */
         }
     }
 
