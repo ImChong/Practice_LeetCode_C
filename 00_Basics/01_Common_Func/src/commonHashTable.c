@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 18:44:33
+ * @LastEditTime : 2023-11-19 21:00:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -52,13 +52,14 @@ int getHashSlot(struct HashTable *table, int val) {
  * =================================================================================
  * @param {HashTable} *table    哈希表
  * @param {int} val             元素值
+ * @param {int} index           元素索引
  * @return {void}
  */
-void insertHashTable(struct HashTable *table, int val) {
+void insertHashTable(struct HashTable *table, int val, int index) {
     int slot = getHashSlot(table, val);                                                 /* 获取元素值在哈希表中的槽位 */
     struct HashNode *currentNode = table->hashSlots[slot];                              /* 获取哈希表的哈希节点 */
     while (currentNode) {                                                               /* 如果存在哈希节点，则遍历哈希节点 */
-        if (currentNode->val == val) {                                                      /* 如果哈希节点的键等于 val */
+        if (currentNode->val == val && currentNode->index == index) {                       /* 如果哈希节点的键等于 val */
             currentNode->counter++;                                                             /* 元素个数 + 1 */
             return;                                                                             /* 返回 */
         }
@@ -67,6 +68,7 @@ void insertHashTable(struct HashTable *table, int val) {
     struct HashNode *newNode = (struct HashNode *)malloc(sizeof(struct HashNode));      /* 如果不存在哈希节点，为新节点分配空间 */
     newNode->val = val;                                                                 /* 设置新节点的值 */
     newNode->counter = 1;                                                               /* 元素个数初始化为 1 */
+    newNode->index = index;                                                             /* 设置新节点的索引 */
     newNode->next = table->hashSlots[slot];                                             /* 将新节点的下一个节点指向哈希表的哈希节点 */
     table->hashSlots[slot] = newNode;                                                   /* 将哈希表的哈希节点设置为新节点 */
 }

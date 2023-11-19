@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 18:40:53
+ * @LastEditTime : 2023-11-19 20:55:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -20,7 +20,8 @@
 /* 哈希节点 */
 struct HashNode {
     int val;                    /* 元素值 */
-    int counter;                /* 元素个数 */
+    int counter;                /* 元素个数（用于记载元素重复次数） */
+    int index;                  /* 元素索引（用于x数之和中元素位于原数组的索引） */
     struct HashNode *next;      /* 下一个节点 */
 };
 
@@ -35,12 +36,12 @@ struct HashTable {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-struct HashTable *createHashTable(int size);                /* 创建哈希表 */
-int getHashSlot(struct HashTable *table, int val);          /* 获取哈希槽位 */
-void insertHashTable(struct HashTable *table, int val);     /* 插入哈希节点 */
-int searchHashTable(struct HashTable *table, int val);      /* 查找哈希表 */
-void removeHashTable(struct HashTable *table, int val);     /* 删除哈希节点 */
-void freeHashTable(struct HashTable *table);                /* 释放哈希表 */
-void printHashTable(struct HashTable *table);               /* 打印哈希表 */
+struct HashTable *createHashTable(int size);                            /* 创建哈希表 */
+int getHashSlot(struct HashTable *table, int val);                      /* 获取哈希槽位 */
+void insertHashTable(struct HashTable *table, int val, int index);      /* 插入哈希节点 */
+int searchHashTable(struct HashTable *table, int val);                  /* 查找哈希表（返回元素个数） */
+void removeHashTable(struct HashTable *table, int val);                 /* 删除哈希节点 */
+void freeHashTable(struct HashTable *table);                            /* 释放哈希表 */
+void printHashTable(struct HashTable *table);                           /* 打印哈希表 */
 
 #endif  /* __COMMON_HASH_TABLE_H */
