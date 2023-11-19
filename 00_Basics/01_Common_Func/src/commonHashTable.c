@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-19 21:00:11
+ * @LastEditTime : 2023-11-19 21:11:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -52,7 +52,7 @@ int getHashSlot(struct HashTable *table, int val) {
  * =================================================================================
  * @param {HashTable} *table    哈希表
  * @param {int} val             元素值
- * @param {int} index           元素索引
+ * @param {int} index           元素索引（输入-1如果不需要索引）
  * @return {void}
  */
 void insertHashTable(struct HashTable *table, int val, int index) {
@@ -83,13 +83,14 @@ void insertHashTable(struct HashTable *table, int val, int index) {
 int searchHashTable(struct HashTable *table, int val) {
     int slot = getHashSlot(table, val);                                                 /* 获取元素值在哈希表中的槽位 */
     struct HashNode *currentNode = table->hashSlots[slot];                              /* 获取哈希表的哈希节点 */
+    int counter = 0;                                                                    /* 元素个数 */
     while (currentNode) {                                                               /* 如果存在哈希节点，则遍历哈希节点 */
         if (currentNode->val == val) {                                                      /* 如果哈希节点的键等于 val */
-            return currentNode->counter;                                                        /* 返回哈希节点的元素个数 */
+            counter += currentNode->counter;                                                    /* 计算元素个数 */
         }
         currentNode = currentNode->next;                                                    /* 否则，将哈希节点指向下一个节点 */
     }
-    return 0;                                                                           /* 如果没有找到，返回 0 */
+    return counter;                                                                     /* 如果没有找到，返回 0 */
 }
 
 /**
