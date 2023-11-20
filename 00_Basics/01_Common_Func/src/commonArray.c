@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 16:00:54
+ * @LastEditTime : 2023-11-21 00:07:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,7 @@
 #include <stdlib.h>
 /* 常用头文件 */
 #include "commonTypeDef.h"
+#include "commonHelper.h"
 #include "commonArray.h"
 
 /**********************************************************************************/
@@ -116,7 +117,15 @@ int compareElements(const void *a, const void *b) {
  * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
  */
 int compareRows(const void *a, const void *b) {
-    return (**(int**)a - **(int**)b);
+    int *arrA = *(int **)a;
+    int *arrB = *(int **)b;
+    int arrSize = MIN(ARR_SIZE(arrA), ARR_SIZE(arrB));
+    for (int i = 0; i < arrSize; i++) {
+        if (arrA[i] != arrB[i]) {
+            return (arrA[i] - arrB[i]);
+        }
+    }
+    return 0;
 }
 
 /**
