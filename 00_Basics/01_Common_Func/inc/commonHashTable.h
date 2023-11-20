@@ -20,8 +20,8 @@
 /* 哈希节点 */
 struct HashNode {
     int val;                    /* 元素值 */
-    int counter;                /* 元素个数（如果需要索引，此项则默认为 1） */
     int index;                  /* 元素索引（如果不需要索引，此项可以设置为 -1） */
+    int counter;                /* 元素个数（如果需要索引，此项则默认为 1） */
     struct HashNode *next;      /* 下一个节点 */
 };
 
