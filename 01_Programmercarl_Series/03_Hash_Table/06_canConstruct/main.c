@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 22:32:39
+ * @LastEditTime : 2023-11-20 23:14:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,8 +14,10 @@
  * 给两个字符串：ransomNote 和 magazine ，判断 ransomNote 能不能由 magazine 里面的字符构成。
  *
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdbool.h>
+/* 常用头文件 */
 #include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
 
 /**********************************************************************************/
