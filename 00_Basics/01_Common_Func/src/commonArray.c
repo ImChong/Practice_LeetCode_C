@@ -201,12 +201,12 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
  * =================================================================================
  * @param {char} testNum                测试编号
  * @param {int} **expect2DArr           预期结果
- * @param {int} expectRtnRowSize           预期结果大小
+ * @param {int} expectRtnRowSize        预期结果大小
  * @param {int} *expectRtnColSize       预期结果列大小
  * @param {int} **actual2DArr           实际结果
- * @param {int} actualRtnRowSize           实际结果大小
+ * @param {int} actualRtnRowSize        实际结果大小
  * @param {int} *actualRtnColSize       实际结果列大小
- * @param {int} needSort                  是否排序
+ * @param {int} needSort                是否排序
  * @return {void}
  */
 void validate2DArray(char testNum,
