@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 14:48:10
+ * @LastEditTime : 2023-11-20 23:22:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -47,7 +47,7 @@ int isAnagram(char *s, char *t) {
         return COMMON_FALSE;
     }
 
-    int count[26] = {0};                /* 初始化计数列表 */
+    int count[26] = {0};                /* 初始化哈希表 */
     for (int i = 0; i < sLen; i++) {    /* 遍历字符串 */
         count[s[i] - 'a']++;                /* 给s对应字符的值 + 1 */
         count[t[i] - 'a']--;                /* 给t对应字符的值 - 1 */
