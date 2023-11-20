@@ -18,7 +18,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 /* 常用头文件 */
-#include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
+#include "commonHelper.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
