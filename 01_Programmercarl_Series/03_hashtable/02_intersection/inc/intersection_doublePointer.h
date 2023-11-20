@@ -1,5 +1,5 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\inc\intersection_double_pointer.h
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\inc\intersection_doublePointer.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:37:46
  * @LastEditors  : Chong Liu

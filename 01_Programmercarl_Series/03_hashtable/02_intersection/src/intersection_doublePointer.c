@@ -15,7 +15,7 @@
 /* 标准头文件 */
 #include <stdlib.h>
 /* 本文件头文件 */
-#include "intersection_double_pointer.h"
+#include "intersection_doublePointer.h"
 
 /**********************************************************************************/
 /*                                                                                */
