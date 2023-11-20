@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-20 23:39:26
+ * @LastEditTime : 2023-11-20 23:56:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -50,7 +50,7 @@ void test_1(void) {
     int *expect2DArr[] = {(int[]){-1, -1, 2}, (int[]){-1, 0, 1, 2}};    /* *expect2DArr[] 内数组可以不同长度 */
 
     /* 比较结果 */
-    validate2DArray('1', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_FALSE);
+    validate2DArray('1', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
     /* 释放内存 */
     free(actualRtnColSize);
@@ -78,7 +78,7 @@ void test_2(void) {
     int *expect2DArr[] = {};
 
     /* 比较结果 */
-    validate2DArray('2', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_FALSE);
+    validate2DArray('2', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
     /* 释放内存 */
     free(actualRtnColSize);
@@ -106,7 +106,7 @@ void test_3(void) {
     int *expect2DArr[] = {(int[]){0, 0, 0}};
 
     /* 比较结果 */
-    validate2DArray('3', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_FALSE);
+    validate2DArray('3', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
     /* 释放内存 */
     free(actualRtnColSize);
