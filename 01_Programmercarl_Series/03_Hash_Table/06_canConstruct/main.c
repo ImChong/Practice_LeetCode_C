@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-20 23:14:51
+ * @LastEditTime : 2023-11-20 23:15:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -41,7 +41,7 @@
  * @param {char} *magazine          杂志
  * @return {bool}                   是否可以构造
  */
-bool canConstruct(char *ransomNote, char *magazine){
+bool canConstruct(char *ransomNote, char *magazine) {
     int counter[26] = {0};                              /* 计数器 */
 
     for (int i = 0; magazine[i] != '\0'; i++) {         /* 统计杂志中的字符出现的次数 */
