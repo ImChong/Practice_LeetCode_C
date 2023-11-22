@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 01:25:09
+ * @LastEditTime : 2023-11-23 01:44:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,7 +17,7 @@
 /* 常用头文件 */
 #include "commonHashTable.h"
 
-#if COMMON_HASH_TABLE_EN
+#if COMMON_HASH_TABLE_EN    /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /**********************************************************************************/
 /*                                                                                */
 /*                                UTILITY FUNCTIONS                               */
