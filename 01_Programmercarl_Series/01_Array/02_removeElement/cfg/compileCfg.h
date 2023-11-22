@@ -17,7 +17,7 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define COMMON_ARRAY_EN                 0           /* 通用数组编译使能  1: enable, 0: disable */
+#define COMMON_ARRAY_EN                 1           /* 通用数组编译使能  1: enable, 0: disable */
 #define COMMON_BINARY_TREE_EN           0           /* 通用二叉树编译使能  1: enable, 0: disable */
 #define COMMON_CMD_EN                   0           /* 通用命令行编译使能  1: enable, 0: disable */
 #define COMMON_HASH_TABLE_EN            0           /* 通用哈希表编译使能  1: enable, 0: disable */
