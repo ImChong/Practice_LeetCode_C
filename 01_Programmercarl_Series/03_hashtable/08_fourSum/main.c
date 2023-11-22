@@ -19,9 +19,11 @@
  *
  * 可以按 任意顺序 返回答案
  */
+/* 标准头文件 */
 #include <stdio.h>
-#include "commonHelper.h"           /* 00_Basics\01_Common_Func\inc\commonHelper.h */
-#include "commonArray.h"            /* 00_Basics\01_Common_Func\inc\commonArray.h */
+/* 通用头文件 */
+#include "commonHelper.h"
+#include "commonArray.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
