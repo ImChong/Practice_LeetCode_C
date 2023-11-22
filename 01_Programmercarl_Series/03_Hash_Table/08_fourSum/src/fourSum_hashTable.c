@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-22 10:12:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-22 23:56:48
+ * @LastEditTime : 2023-11-23 00:16:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,18 +11,13 @@
  */
 #include "methodCfg.h"
 #if HASH_TABLE_METHOD_EN
-/* 标准头文件 */
-#include <stdlib.h>
-/* 通用头文件 */
-#include "commonArray.h"
-#include "commonHashTable.h"
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define HASH_SIZE     1000
+#define HASH_SIZE     100
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -42,8 +37,7 @@
  * @return {int} **ans                  返回数组
  */
 int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **returnColumnSizes) {
-    qsort(nums, numsSize, sizeof(int), compareElements);
-
+    /* TODO */
     return 0;
 }
 
