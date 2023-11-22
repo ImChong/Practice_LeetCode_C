@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-22 10:12:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 00:27:52
+ * @LastEditTime : 2023-11-23 00:47:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 四数之和 - 双指针
+ * @Description  : 四数之和 - 双指针: https://leetcode.cn/problems/4sum/solutions/436368/si-shu-zhi-he-by-leetcode-solution/
  */
 #include "methodCfg.h"
 #if DOUBLE_POINTER_METHOD_EN
