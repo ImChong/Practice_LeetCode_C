@@ -11,8 +11,10 @@
  * https://programmercarl.com/0344.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0078.%E5%AD%90%E9%9B%86.md
  */
+/* 标准头文件 */
 #include <stdio.h>
 #include <string.h>
+/* 通用头文件 */
 #include "commonString.h"
 #include "commonArray.h"
 
