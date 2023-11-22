@@ -3,9 +3,36 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-22 10:12:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-22 23:33:12
+ * @LastEditTime : 2023-11-22 23:35:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 四数之和 - 哈希表
  */
+#include "methodCfg.h"
+#if HASH_TABLE_METHOD_EN
+
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
+/**
+ * @description: 四数之和
+ * =================================================================================
+ * @param {int} *nums                   数组
+ * @param {int} numsSize                数组大小
+ * @param {int} target                  目标值
+ * @param {int} *returnSize             返回数组大小
+ * @param {int} **returnColumnSizes     返回数组列大小
+ * @return {int} **ans                  返回数组
+ */
+int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **returnColumnSizes) {
+    /* TODO */
+    return 0;
+}
+
+
+#endif /* HASH_TABLE_METHOD_EN */
