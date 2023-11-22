@@ -12,6 +12,8 @@
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
+/* 解题方法配置文件 */
+#include "methodCfg.h"
 /* 常用头文件 */
 #include "commonHashTable.h"
 
