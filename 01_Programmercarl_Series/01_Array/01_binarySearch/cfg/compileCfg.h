@@ -22,7 +22,6 @@
 #define COMMON_CMD_EN                   0           /* 通用命令行编译使能  1: enable, 0: disable */
 #define COMMON_HASH_TABLE_EN            0           /* 通用哈希表编译使能  1: enable, 0: disable */
 #define COMMON_HELPER_EN                0           /* 通用辅助编译使能  1: enable, 0: disable */
-#define COMMON_HEAP_EN                  0           /* 通用堆编译使能  1: enable, 0: disable */
 #define COMMON_LINKED_LIST_EN           0           /* 通用链表编译使能  1: enable, 0: disable */
 #define COMMON_LINKED_LIST_DUMMY_EN     0           /* 通用虚拟头节点链表编译使能  1: enable, 0: disable */
 #define COMMON_QUEUE_EN                 0           /* 通用队列编译使能  1: enable, 0: disable */
