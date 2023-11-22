@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 01:54:37
+ * @LastEditTime : 2023-11-23 01:58:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,7 +21,7 @@
 #define COMMON_BINARY_TREE_EN           0           /* 通用二叉树编译使能  1: enable, 0: disable */
 #define COMMON_CMD_EN                   0           /* 通用命令行编译使能  1: enable, 0: disable */
 #define COMMON_HASH_TABLE_EN            0           /* 通用哈希表编译使能  1: enable, 0: disable */
-#define COMMON_HELPER_EN                0           /* 通用辅助编译使能  1: enable, 0: disable */
+#define COMMON_SINGLE_VALUE_EN          0           /* 通用单值函数编译使能  1: enable, 0: disable */
 #define COMMON_LINKED_LIST_EN           0           /* 通用链表编译使能  1: enable, 0: disable */
 #define COMMON_LINKED_LIST_DUMMY_EN     0           /* 通用虚拟头节点链表编译使能  1: enable, 0: disable */
 #define COMMON_QUEUE_EN                 0           /* 通用队列编译使能  1: enable, 0: disable */
