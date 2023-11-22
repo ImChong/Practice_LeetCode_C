@@ -9,3 +9,9 @@
  * =================================================================================
  * @Description  : 四数之和头文件
  */
+#ifndef __FOUR_SUM_H
+#define __FOUR_SUM_H
+
+int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **returnColumnSizes);
+
+#endif  /* __FOUR_SUM_H */
