@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-31 00:22:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 01:14:45
+ * @LastEditTime : 2023-11-23 01:20:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,9 +17,8 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define DOUBLE_POINTER_METHOD_EN    0      /* 双指针法求解  1: enable, 0: disable */
-#define HASH_TABLE_METHOD_EN        1      /* 哈希表法求解  1: enable, 0: disable */
-
-#define COMMON_HASH_TABLE_EN        HASH_TABLE_METHOD_EN
+#define HASH_TABLE_METHOD_EN        1                       /* 哈希表法求解  1: enable, 0: disable */
+#define COMMON_HASH_TABLE_EN        HASH_TABLE_METHOD_EN    /* 通用哈希表法求解  1: enable, 0: disable */
+#define DOUBLE_POINTER_METHOD_EN    !HASH_TABLE_METHOD_EN   /* 双指针法求解  1: enable, 0: disable */
 
 #endif  /* __METHOD_CFG_H */
