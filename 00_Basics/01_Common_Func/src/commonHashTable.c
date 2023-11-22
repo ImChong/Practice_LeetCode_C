@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-19 21:17:54
+ * @LastEditTime : 2023-11-23 01:25:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,8 +12,8 @@
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
-/* 解题方法配置文件 */
-#include "methodCfg.h"
+/* 编译配置文件 */
+#include "compileCfg.h"
 /* 常用头文件 */
 #include "commonHashTable.h"
 
