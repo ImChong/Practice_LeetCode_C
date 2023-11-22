@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 14:27:59
+ * @LastEditTime : 2023-11-23 02:01:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,6 +12,8 @@
  */
 /* 标准头文件 */
 #include <stdio.h>
+/* 编译配置文件 */
+#include "compileCfg.h"
 /* 通用头文件 */
 #include "commonTypeDef.h"
 #include "commonArray.h"
