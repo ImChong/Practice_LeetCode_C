@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 00:23:33
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 00:41:44
+ * @LastEditTime : 2023-11-23 00:43:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -53,7 +53,7 @@ int getHashSlot(struct HashTable *table, int val) {
  * @param {int} val             元素值
  * @param {int} index1          索引1
  * @param {int} index2          索引2
- * @return {*}
+ * @return {void}
  */
 void insertHashTable(struct HashTable *table, int val, int index1, int index2) {
     int slot = getHashSlot(table, val);                                                 /* 获取元素值在哈希表中的槽位 */
@@ -63,4 +63,23 @@ void insertHashTable(struct HashTable *table, int val, int index1, int index2) {
     newNode->index2 = index2;                                                           /* 设置哈希节点的索引2 */
     newNode->next = table->hashSlots[slot];                                             /* 设置哈希节点的下一个节点 */
     table->hashSlots[slot] = newNode;                                                   /* 设置哈希表的哈希节点 */
+}
+
+/**
+ * @description: 查找哈希表
+ * =================================================================================
+ * @param {HashTable} *table                哈希表
+ * @param {int} val                         元素值
+ * @return {struct HashNode} *currentNode   哈希节点
+ */
+struct HashNode *searchHashTable(struct HashTable *table, int val)  {
+    int slot = getHashSlot(table, val);                                                 /* 获取元素值在哈希表中的槽位 */
+    struct HashNode *currentNode = table->hashSlots[slot];                              /* 获取哈希表的哈希节点 */
+    while (currentNode) {                                                               /* 如果存在哈希节点，则遍历哈希节点 */
+        if (currentNode->sum == val) {                                                      /* 如果哈希节点的键等于 val */
+            return currentNode;                                                                 /* 返回哈希节点 */
+        }
+        currentNode = currentNode->next;                                                    /* 否则，将哈希节点指向下一个节点 */
+    }
+    return NULL;                                                                        /* 如果不存在哈希节点，返回 NULL */
 }
