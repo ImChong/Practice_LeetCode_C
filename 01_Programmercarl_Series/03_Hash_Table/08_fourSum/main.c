@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-24 08:51:51
+ * @LastEditTime : 2023-11-22 23:32:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,8 +22,11 @@
 /* 标准头文件 */
 #include <stdio.h>
 /* 通用头文件 */
+#include "commonTypeDef.h"
 #include "commonHelper.h"
 #include "commonArray.h"
+/* 解题方法配置文件 */
+#include "methodCfg.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -99,7 +102,7 @@ void runTest(struct TestStruct *test) {
     int **expect2DArr = test->output.arr;
 
     /* 比较结果 */
-    validate2DArray(test->testNum, expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize);
+    validate2DArray(test->testNum, expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
     /* 释放内存 */
     freeArray(actualRtnColSize);
@@ -187,6 +190,11 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char* argv[]) {
+#if DOUBLE_POINTER_METHOD_EN
+    printf("DOUBLE_POINTER_METHOD_EN\r\n");
+#elif HASH_TABLE_METHOD_EN
+    printf("HASH_TABLE_METHOD_EN\r\n");
+#endif
     test_1();
     test_2();
     test_3();
