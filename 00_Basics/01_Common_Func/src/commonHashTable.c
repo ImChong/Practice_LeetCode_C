@@ -9,15 +9,15 @@
  * =================================================================================
  * @Description  : 通用哈希表源文件
  */
+/* 编译配置文件 */
+#include "compileCfg.h"
+#if COMMON_HASH_TABLE_EN    /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
-/* 编译配置文件 */
-#include "compileCfg.h"
 /* 常用头文件 */
 #include "commonHashTable.h"
 
-#if COMMON_HASH_TABLE_EN    /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /**********************************************************************************/
 /*                                                                                */
 /*                                UTILITY FUNCTIONS                               */

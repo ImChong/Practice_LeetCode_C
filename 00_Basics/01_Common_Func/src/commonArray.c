@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 02:03:33
+ * @LastEditTime : 2023-11-23 02:04:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,7 +12,7 @@
 
 /* 编译配置文件 */
 #include "compileCfg.h"
-#if COMMON_ARRAY_EN
+#if COMMON_ARRAY_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
