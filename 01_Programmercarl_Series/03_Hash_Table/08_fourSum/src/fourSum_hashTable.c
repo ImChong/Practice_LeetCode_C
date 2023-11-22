@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-22 10:12:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 00:16:45
+ * @LastEditTime : 2023-11-23 00:33:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,8 @@
  */
 #include "methodCfg.h"
 #if HASH_TABLE_METHOD_EN
+/* 特殊头文件 */
+#include "specialHashTable.h"
 /* 本文件头文件 */
 #include "fourSum.h"
 
