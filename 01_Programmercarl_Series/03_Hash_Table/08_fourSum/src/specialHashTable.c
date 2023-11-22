@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 00:23:33
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 00:35:54
+ * @LastEditTime : 2023-11-23 00:41:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,4 +44,23 @@ struct HashTable *createHashTable(int size) {
  */
 int getHashSlot(struct HashTable *table, int val) {
     return abs(val) % table->size;                                                      /* 获取元素值在哈希表中的槽位 */
+}
+
+/**
+ * @description: 插入哈希元素
+ * =================================================================================
+ * @param {HashTable} *table    哈希表
+ * @param {int} val             元素值
+ * @param {int} index1          索引1
+ * @param {int} index2          索引2
+ * @return {*}
+ */
+void insertHashTable(struct HashTable *table, int val, int index1, int index2) {
+    int slot = getHashSlot(table, val);                                                 /* 获取元素值在哈希表中的槽位 */
+    struct HashNode *newNode = (struct HashNode *)malloc(sizeof(struct HashNode));      /* 为哈希节点分配空间 */
+    newNode->sum = val;                                                                 /* 设置哈希节点的元素值 */
+    newNode->index1 = index1;                                                           /* 设置哈希节点的索引1 */
+    newNode->index2 = index2;                                                           /* 设置哈希节点的索引2 */
+    newNode->next = table->hashSlots[slot];                                             /* 设置哈希节点的下一个节点 */
+    table->hashSlots[slot] = newNode;                                                   /* 设置哈希表的哈希节点 */
 }
