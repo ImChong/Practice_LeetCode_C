@@ -18,7 +18,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 /* 常用头文件 */
-#include "commonHelper.h"
+#include "commonSingleValue.h"
 /* 方法配置文件 */
 #include "methodCfg.h"
 /* 本题头文件 */

@@ -4,7 +4,7 @@
   - [commonDef/](./inc/commonDef/) - 通用定义头文件
     - [commonTypeDef.h](./inc/commonDef/commonTypeDef.h) - 通用类型定义头文件
     - [commonPrintDef.h](./inc/commonDef/commonPrintDef.h) - 通用打印定义头文件
-  - [commonHelper.h](./inc/commonHelper.h) - 通用头文件
+  - [commonSingleValue.h](./inc/commonSingleValue.h) - 通用头文件
   - [commonCmd.h](./inc/commonCmd.h) - 通用命令行指令头文件
   - [commonRingBuffer.h](./inc/commonRingBuffer.h) - 通用环形缓冲区头文件
   - [commonArray.h](./inc/commonArray.h) - 通用数组头文件
@@ -16,7 +16,7 @@
   - [commonQueue.h](./inc/commonQueue.h) - 通用队列头文件
   - [commonBinaryTree.h](./inc/commonBinaryTree.h) - 通用二叉树头文件
 - [src/](./src/) - 通用源文件
-  - [commonHelper.c](./src/commonHelper.c) - 通用源文件
+  - [commonSingleValue.c](./src/commonSingleValue.c) - 通用源文件
   - [commonCmd.c](./src/commonCmd.c) - 通用命令行指令源文件
   - [commonRingBuffer.c](./src/commonRingBuffer.c) - 通用环形缓冲区源文件
   - [commonArray.c](./src/commonArray.c) - 通用数组源文件

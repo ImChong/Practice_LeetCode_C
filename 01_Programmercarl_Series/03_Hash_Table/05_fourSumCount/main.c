@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */
-#include "commonHelper.h"
+#include "commonSingleValue.h"
 #include "commonArray.h"
 /* 解题方法配置文件 */
 #include "methodCfg.h"

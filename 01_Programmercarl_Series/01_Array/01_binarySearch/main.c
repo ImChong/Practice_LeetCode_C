@@ -15,7 +15,7 @@
 /* 编译配置文件 */
 #include "compileCfg.h"
 /* 通用头文件 */
-#include "commonHelper.h"
+#include "commonSingleValue.h"
 #include "commonArray.h"
 
 /**********************************************************************************/

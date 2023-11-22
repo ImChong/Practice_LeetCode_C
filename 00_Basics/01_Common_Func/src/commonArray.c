@@ -14,7 +14,7 @@
 #include <stdlib.h>
 /* 常用头文件 */
 #include "commonTypeDef.h"
-#include "commonHelper.h"
+#include "commonSingleValue.h"
 #include "commonArray.h"
 
 /**********************************************************************************/

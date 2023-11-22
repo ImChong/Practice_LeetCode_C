@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <limits.h>
 /* 通用头文件 */
-#include "commonHelper.h"
+#include "commonSingleValue.h"
 #include "commonArray.h"
 
 /**********************************************************************************/

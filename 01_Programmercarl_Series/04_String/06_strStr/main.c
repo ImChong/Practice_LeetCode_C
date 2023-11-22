@@ -16,7 +16,7 @@
 #include <stdlib.h>
 #include <string.h>
 /* 通用头文件 */
-#include "commonHelper.h"
+#include "commonSingleValue.h"
 #include "commonString.h"
 
 /**********************************************************************************/

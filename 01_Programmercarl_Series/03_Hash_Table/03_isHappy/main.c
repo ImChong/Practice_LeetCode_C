@@ -22,7 +22,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 /* 通用头文件 */
-#include "commonHelper.h"
+#include "commonSingleValue.h"
 /* 解题方法配置文件 */
 #include "methodCfg.h"
 /* 本文件头文件 */
