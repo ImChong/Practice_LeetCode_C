@@ -3,12 +3,16 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-21 00:09:34
+ * @LastEditTime : 2023-11-23 02:03:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用数组源文件
  */
+
+/* 编译配置文件 */
+#include "compileCfg.h"
+#if COMMON_ARRAY_EN
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -248,3 +252,6 @@ void validate2DArray(char testNum,
     printf("- Actual: "); print2DArray(actual2DArr, actualRtnRowSize, actualRtnColSize);
     printf("\n");
 }
+
+
+#endif /* COMMON_ARRAY_EN */
