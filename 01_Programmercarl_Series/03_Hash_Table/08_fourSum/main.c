@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-22 23:35:20
+ * @LastEditTime : 2023-11-22 23:37:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -23,7 +23,6 @@
 #include <stdio.h>
 /* 通用头文件 */
 #include "commonTypeDef.h"
-#include "commonHelper.h"
 #include "commonArray.h"
 /* 解题方法配置文件 */
 #include "methodCfg.h"
@@ -82,7 +81,10 @@ void runTest(struct TestStruct *test) {
     int **expect2DArr = test->output.arr;
 
     /* 比较结果 */
-    validate2DArray(test->testNum, expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
+    validate2DArray(test->testNum,
+                        expect2DArr, expectRtnRowSize, expectRtnColSize,
+                        actual2DArr, actualRtnRowSize, actualRtnColSize,
+                        COMMON_TRUE);
 
     /* 释放内存 */
     freeArray(actualRtnColSize);
