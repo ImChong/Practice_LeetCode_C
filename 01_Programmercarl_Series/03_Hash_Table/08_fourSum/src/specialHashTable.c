@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 00:23:33
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 00:43:18
+ * @LastEditTime : 2023-11-23 00:44:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -82,4 +82,23 @@ struct HashNode *searchHashTable(struct HashTable *table, int val)  {
         currentNode = currentNode->next;                                                    /* 否则，将哈希节点指向下一个节点 */
     }
     return NULL;                                                                        /* 如果不存在哈希节点，返回 NULL */
+}
+
+/**
+ * @description: 释放哈希表
+ * =================================================================================
+ * @param {HashTable} *table    哈希表
+ * @return {void}
+ */
+void freeHashTable(struct HashTable *table) {
+    for (int i = 0; i < table->size; i++) {                                             /* 遍历哈希表 */
+        struct HashNode *currentNode = table->hashSlots[i];                                 /* 获取哈希表的哈希节点 */
+        while (currentNode) {                                                               /* 遍历哈希节点 */
+            struct HashNode *tmp = currentNode;                                                 /* 临时节点 */
+            currentNode = currentNode->next;                                                    /* 将哈希节点指向下一个节点 */
+            free(tmp);                                                                          /* 释放临时节点 */
+        }
+    }
+    free(table->hashSlots);                                                             /* 释放哈希表的哈希列表 */
+    free(table);                                                                        /* 释放哈希表 */
 }
