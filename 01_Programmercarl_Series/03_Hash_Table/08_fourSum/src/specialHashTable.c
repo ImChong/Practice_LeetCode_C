@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 00:23:33
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 00:44:12
+ * @LastEditTime : 2023-11-23 00:47:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -101,4 +101,24 @@ void freeHashTable(struct HashTable *table) {
     }
     free(table->hashSlots);                                                             /* 释放哈希表的哈希列表 */
     free(table);                                                                        /* 释放哈希表 */
+}
+
+/**
+ * @description: 打印哈希表
+ * =================================================================================
+ * @param {HashTable} *table    哈希表
+ * @return {void}
+ */
+void printHashTable(struct HashTable *table) {
+    printf("Hash Table (slot size: %d):\n", table->size);
+    for (int i = 0; i < table->size; i++) {
+        printf("    Hash Slot [%d]: ", i);
+        struct HashNode *currentNode = table->hashSlots[i];
+        while (currentNode) {
+            printf("[%d, (%d, %d)]", currentNode->sum, currentNode->index1, currentNode->index2);
+            printf(" -> ");
+            currentNode = currentNode->next;
+        }
+        printf("Null\n");
+    }
 }
