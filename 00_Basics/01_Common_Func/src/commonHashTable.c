@@ -15,6 +15,7 @@
 /* 常用头文件 */
 #include "commonHashTable.h"
 
+#if COMMON_HASH_TABLE_EN
 /**********************************************************************************/
 /*                                                                                */
 /*                                UTILITY FUNCTIONS                               */
@@ -161,3 +162,6 @@ void printHashTable(struct HashTable *table) {
         printf("Null\n");
     }
 }
+
+
+#endif  /* COMMON_HASH_TABLE_EN */

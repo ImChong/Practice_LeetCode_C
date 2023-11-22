@@ -11,9 +11,13 @@
  */
 /* 标准头文件 */
 #include <stdio.h>
+#include <stdlib.h>
+/* 解题方法配置文件 */
+#include "methodCfg.h"
 /* 本文件头文件 */
 #include "specialHashTable.h"
 
+#if SPECIAL_HASH_TABLE_EN
 /**********************************************************************************/
 /*                                                                                */
 /*                                UTILITY FUNCTIONS                               */
@@ -122,3 +126,6 @@ void printHashTable(struct HashTable *table) {
         printf("Null\n");
     }
 }
+
+
+#endif  /* SPECIAL_HASH_TABLE_EN */

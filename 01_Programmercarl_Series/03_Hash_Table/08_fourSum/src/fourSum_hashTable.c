@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-22 10:12:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 00:55:49
+ * @LastEditTime : 2023-11-23 01:06:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,7 @@
 #if HASH_TABLE_METHOD_EN
 /* 标准头文件 */
 #include <stdio.h>
+#include <stdlib.h>
 /* 特殊头文件 */
 #include "specialHashTable.h"
 /* 本文件头文件 */
@@ -23,7 +24,7 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define HASH_SIZE     100
+#define HASH_SIZE     20
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -44,7 +45,8 @@
  */
 int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;
-    int **ans = (int **)malloc(sizeof(int *) * (*returnSize));   /* 为返回数组分配空间 */
+    int **ans = (int **)malloc(sizeof(int *) * HASH_SIZE);   /* 为返回数组分配空间 */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * HASH_SIZE); /* 为返回数组列大小分配空间 */
 
     struct HashTable *table = createHashTable(HASH_SIZE);       /* 创建哈希表 */
     for (int i = 0; i < numsSize - 3; i++) {
@@ -60,23 +62,28 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
                 if (k > j + 1 && nums[k] == nums[k - 1]) {                  /* 去重 */
                     continue;
                 }
-                int remain = target - nums[i] - nums[j] - nums[k];         /* 计算另外一个数 */
-                struct HashNode *node = searchHashTable(table, remain + nums[k]);
-                if (node != NULL) {
-                    (*returnSize)++;
-                    *returnColumnSizes = (int *)realloc(*returnColumnSizes, sizeof(int) * (*returnSize)); /* 为返回数组列大小分配空间 */
-                    (*returnColumnSizes)[(*returnSize) - 1] = 4;                /* 设置返回数组列大小 */
-                    ans = (int **)realloc(ans, sizeof(int *) * (*returnSize)); /* 为返回数组分配空间 */
-                    ans[(*returnSize) - 1] = (int *)malloc(sizeof(int) * 4);   /* 为返回数组的每一行分配空间 */
-                    ans[(*returnSize) - 1][0] = nums[node->index1];             /* 设置返回数组的每一行的第一个元素 */
-                    ans[(*returnSize) - 1][1] = nums[node->index2];             /* 设置返回数组的每一行的第二个元素 */
-                    ans[(*returnSize) - 1][2] = nums[j];                        /* 设置返回数组的每一行的第三个元素 */
-                    ans[(*returnSize) - 1][3] = nums[k];                        /* 设置返回数组的每一行的第四个元素 */
+                for (int l = k + 1; l < numsSize; l++) {
+                    if (l > k + 1 && nums[l] == nums[l - 1]) {                  /* 去重 */
+                        continue;
+                    }
+                    struct HashNode *node = searchHashTable(table, target - nums[k] - nums[l]);
+                    if (node) {
+                        ans[*returnSize] = (int *)malloc(sizeof(int) * 4);
+                        ans[*returnSize][0] = nums[node->index1];
+                        ans[*returnSize][1] = nums[node->index2];
+                        ans[*returnSize][2] = nums[k];
+                        ans[*returnSize][3] = nums[l];
+                        (*returnColumnSizes)[*returnSize] = 4;
+                        (*returnSize)++;
+                    }
                 }
             }
         }
     }
-    return 0;
+
+    printHashTable(table);  /* 打印哈希表 */
+    freeHashTable(table);   /* 释放哈希表 */
+    return NULL;
 }
 
 
