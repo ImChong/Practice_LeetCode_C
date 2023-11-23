@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\08_fourSum\src\specialHashTable.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\08_fourSum\src\customHashTable.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 00:23:33
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 01:25:24
+ * @LastEditTime : 2023-11-23 23:26:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -15,9 +15,9 @@
 /* 编译配置文件 */
 #include "compileCfg.h"
 /* 本文件头文件 */
-#include "specialHashTable.h"
+#include "customHashTable.h"
 
-#if SPECIAL_HASH_TABLE_EN
+#if CUSTOM_HASH_TABLE_EN
 /**********************************************************************************/
 /*                                                                                */
 /*                                UTILITY FUNCTIONS                               */
