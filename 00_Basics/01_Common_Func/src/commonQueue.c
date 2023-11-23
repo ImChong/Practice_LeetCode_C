@@ -3,12 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:40:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:32:26
+ * @LastEditTime : 2023-11-23 15:01:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用队列源文件
  */
+/* 编译配置文件 */
+#include "compileCfg.h"
+#if COMMON_QUEUE_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* 标准头文件 */
 #include <stdlib.h>
 /* 常用头文件 */
@@ -88,3 +91,6 @@ void freeQueue(Queue *obj) {
     free(obj);                                  /* 释放队列空间 */
     obj = NULL;                                 /* 将队列指针置空 */
 }
+
+
+#endif      /* COMMON_QUEUE_EN */
