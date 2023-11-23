@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-22 23:37:22
+ * @LastEditTime : 2023-11-24 00:26:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -84,7 +84,7 @@ void runTest(struct TestStruct *test) {
     validate2DArray(test->testNum,
                         expect2DArr, expectRtnRowSize, expectRtnColSize,
                         actual2DArr, actualRtnRowSize, actualRtnColSize,
-                        COMMON_TRUE);
+                        COMMON_FALSE);
 
     /* 释放内存 */
     freeArray(actualRtnColSize);
@@ -145,15 +145,22 @@ void test_3(void) {
     test.input.arr = inputArr;
     test.input.arrSize = ARR_SIZE(inputArr);
     test.input.target = 20;
-    test.output.rtnSize = 9;
-    test.output.rtnColSize = (int[]){4, 4, 4, 4, 4, 4, 4, 4, 4};
+    test.output.rtnSize = 16;
+    test.output.rtnColSize = (int[]){4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
     test.output.arr = (int*[]){(int[]){1, 2, 7, 10},
+                                (int[]){1, 2, 8, 9},
                                 (int[]){1, 3, 6, 10},
+                                (int[]){1, 3, 7, 9},
                                 (int[]){1, 4, 5, 10},
                                 (int[]){1, 4, 6, 9},
+                                (int[]){1, 4, 7, 8},
+                                (int[]){1, 5, 6, 8},
                                 (int[]){2, 3, 5, 10},
                                 (int[]){2, 3, 6, 9},
+                                (int[]){2, 3, 7, 8},
                                 (int[]){2, 4, 5, 9},
+                                (int[]){2, 4, 6, 8},
+                                (int[]){2, 5, 6, 7},
                                 (int[]){3, 4, 5, 8},
                                 (int[]){3, 4, 6, 7}};
     runTest(&test);
