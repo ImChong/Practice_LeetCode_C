@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\src\intersection_hash_table.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\src\intersection_hashTable.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-29 11:36:49
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-19 21:22:47
+ * @LastEditTime : 2023-11-23 23:30:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -18,7 +18,14 @@
 /* 通用头文件 */
 #include "commonHashTable.h"
 /* 本文件头文件 */
-#include "intersection_hashTable.h"
+#include "intersection.h"
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO CONSTANTS                                 */
+/*                                                                                */
+/**********************************************************************************/
+#define HASH_SIZE 10
 
 /**********************************************************************************/
 /**********************************************************************************/
