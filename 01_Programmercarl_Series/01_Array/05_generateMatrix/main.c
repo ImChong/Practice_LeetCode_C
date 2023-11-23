@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:38:04
+ * @LastEditTime : 2023-11-23 15:17:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -144,9 +144,9 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
 #if LAYER_SIMULATION_METHOD_EN
-    printf("LAYER_SIMULATION_METHOD_EN\n");
+    printf("LAYER_SIMULATION_METHOD_EN\r\n");
 #elif SIMULATION_METHOD_EN
-    printf("SIMULATION_METHOD_EN\n");
+    printf("SIMULATION_METHOD_EN\r\n");
 #endif
     test_1();
     test_2();
