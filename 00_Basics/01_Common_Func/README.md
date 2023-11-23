@@ -27,4 +27,3 @@
   - [commonStack.c](./src/commonStack.c) - 通用栈源文件
   - [commonQueue.c](./src/commonQueue.c) - 通用队列源文件
   - [commonBinaryTree.c](./src/commonBinaryTree.c) - 通用二叉树源文件
-- [main.c](./main.c) - 主函数源文件
