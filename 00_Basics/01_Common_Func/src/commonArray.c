@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 14:57:37
+ * @LastEditTime : 2023-11-24 00:03:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,7 +34,7 @@
  * @return {void}
  */
 void printArray(int *arr, int arrSize) {
-    printf("Arr: [");
+    printf("Arr: (len: %d)[", arrSize);
     for (int i = 0; i < arrSize; i++) {
         printf("%d", arr[i]);
         if (i < arrSize - 1) {
@@ -53,7 +53,7 @@ void printArray(int *arr, int arrSize) {
  * @return {void}
  */
 void print2DArray(int **arr, int arrSize, int *arrColSizes) {
-    printf("Ans: [\n");
+    printf("Ans: (row: %d, col: %d)[\n", arrSize, arrColSizes[0]);
     for (int i = 0; i < arrSize; i++) {
         printf("  [");
         for (int j = 0; j < arrColSizes[i]; j++) {
