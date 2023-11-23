@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_hashtable\02_intersection\main.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-05 14:47:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-20 23:30:07
+ * @LastEditTime : 2023-11-23 23:33:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -18,11 +18,8 @@
 #include "commonArray.h"
 /* 解题方法配置文件 */
 #include "methodCfg.h"
-#if DOUBLE_POINTER_METHOD_EN
-#include "intersection_doublePointer.h"
-#elif HASH_TABLE_METHOD_EN
-#include "intersection_hashTable.h"
-#endif
+/* 本文件头文件 */
+#include "intersection.h"
 
 /**********************************************************************************/
 /*                                                                                */
