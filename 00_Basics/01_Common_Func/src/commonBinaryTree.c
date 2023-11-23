@@ -3,12 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:30:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 10:38:26
+ * @LastEditTime : 2023-11-23 14:57:49
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用二叉树源文件
  */
+/* 编译配置文件 */
+#include "compileCfg.h"
+#if COMMON_BINARY_TREE_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* 常用头文件 */
 #include "commonBinaryTree.h"
 
@@ -17,3 +20,5 @@
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
+
+#endif      /* COMMON_BINARY_TREE_EN */
