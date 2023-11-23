@@ -9,6 +9,9 @@
  * =================================================================================
  * @Description  : 通用栈源文件
  */
+/* 编译配置文件 */
+#include "compileCfg.h"
+#if COMMON_STACK_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* 标准头文件 */
 #include <stdlib.h>
 #include <stdbool.h>
@@ -84,3 +87,6 @@ bool stackEmpty(Stack *obj) {
 void stackFree(Stack *obj) {
     free(obj->stk);                                     /* 释放栈结构体内 stk 数组的空间 */
 }
+
+
+#endif      /* COMMON_STACK_EN */
