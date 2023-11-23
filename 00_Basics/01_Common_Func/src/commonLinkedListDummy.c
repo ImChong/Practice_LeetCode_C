@@ -3,12 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 15:58:08
+ * @LastEditTime : 2023-11-23 15:00:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用虚拟头节点链表源文件 - 使用虚拟头节点
  */
+/* 编译配置文件 */
+#include "compileCfg.h"
+#if COMMON_LINKED_LIST_DUMMY_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -290,3 +293,6 @@ void validateDummyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedL
     printf("- Actual: "); dummyLinkedListPrint(actual);                         /* 打印实际结果 */
     printf("\n");
 }
+
+
+#endif      /* COMMON_LINKED_LIST_DUMMY_EN */
