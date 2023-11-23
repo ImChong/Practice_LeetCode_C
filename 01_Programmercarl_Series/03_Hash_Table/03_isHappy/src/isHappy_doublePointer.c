@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\03_isHappy\src\isHappy_double_pointer.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\03_isHappy\src\isHappy_doublePointer.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-30 23:45:33
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 19:13:31
+ * @LastEditTime : 2023-11-23 23:39:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -15,6 +15,8 @@
 #if FAST_SLOW_POINTER_METHOD_EN
 /* 标准头文件 */
 #include <stdbool.h>
+/* 通用头文件 */
+#include "commonFunc.h"
 /* 本文件头文件 */
 #include "isHappy.h"
 

@@ -15,6 +15,8 @@
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdbool.h>
+/* 通用头文件 */
+#include "commonFunc.h"
 /* 本文件头文件 */
 #include "isHappy.h"
 
