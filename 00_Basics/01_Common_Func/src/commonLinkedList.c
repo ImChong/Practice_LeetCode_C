@@ -9,6 +9,9 @@
  * =================================================================================
  * @Description  : 通用链表源文件 - 未使用虚拟头节点
  */
+/* 编译配置文件 */
+#include "compileCfg.h"
+#if COMMON_LINKED_LIST_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -275,3 +278,6 @@ void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNo
     printf("- Actual: "); linkedListPrint(actualList);
     printf("\n");
 }
+
+
+#endif      /* COMMON_LINKED_LIST_EN */
