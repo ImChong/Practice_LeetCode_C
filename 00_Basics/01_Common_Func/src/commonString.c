@@ -9,6 +9,9 @@
  * =================================================================================
  * @Description  : 通用字符串源文件
  */
+/* 编译配置文件 */
+#include "compileCfg.h"
+#if COMMON_STRING_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -109,3 +112,6 @@ void validateString(char testNum, char *expect, char *actual) {
     printf("    - Actual: %s\n", actual);
     printf("\n");
 }
+
+
+#endif          /* COMMON_STRING_EN */
