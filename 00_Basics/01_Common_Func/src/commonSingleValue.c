@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 11:55:54
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 13:44:10
+ * @LastEditTime : 2023-11-23 11:14:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用通用辅助函数源文件
+ * @Description  : 通用单值函数源文件
  */
 /* 标准头文件 */
 #include <stdio.h>
