@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 15:32:40
+ * @LastEditTime : 2023-11-24 19:24:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -20,6 +20,13 @@
 #include "commonTypeDef.h"
 #include "commonSingleValue.h"
 #include "commonArray.h"
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                 GLOBAL VARIABLES                               */
+/*                                                                                */
+/**********************************************************************************/
+STATIC int g_2DArrRowSize = 0;
 
 /**********************************************************************************/
 /*                                                                                */
@@ -123,11 +130,7 @@ int compareElements(const void *a, const void *b) {
 int compareRows(const void *a, const void *b) {
     int *arrA = *(int **)a;
     int *arrB = *(int **)b;
-    // printf("type_of: %s\r\n", type_of(arrA[0]));     // BUG
-    int arrSize = MIN(ARR_SIZE(arrA), ARR_SIZE(arrB));
-    // printf("arrSize A: %d\n", ARR_SIZE(arrA));
-    // printf("arrSize B: %d\n", ARR_SIZE(arrB));
-    for (int i = 0; i < arrSize; i++) {
+    for (int i = 0; i < g_2DArrRowSize; i++) {
         if (arrA[i] != arrB[i]) {
             return (arrA[i] - arrB[i]);
         }
@@ -158,6 +161,7 @@ void sort2DArray(int **arr, int arrSize, int *arrColSizes) {
     for (int i = 0; i < arrSize; i++) {
         qsort(arr[i], arrColSizes[i], sizeof(int), compareElements);
     }
+    g_2DArrRowSize = arrSize;
     qsort(arr, arrSize, sizeof(int *), compareRows);
 }
 
