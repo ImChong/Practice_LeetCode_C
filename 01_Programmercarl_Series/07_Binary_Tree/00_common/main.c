@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-24 20:28:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 23:20:01
+ * @LastEditTime : 2023-11-24 23:22:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -15,6 +15,21 @@
 #include "commonTypeDef.h"
 #include "commonArray.h"
 #include "commonBinaryTree.h"
+
+/**
+ * @description: 打印示意树结构
+ * =================================================================================
+ * @return {void}
+ */
+void printTestTree(void) {
+    printf("Test Tree:\n");
+    printf("      1 \n");
+    printf("     / \\ \n");
+    printf("    2   3 \n");
+    printf("   / \\ / \\ \n");
+    printf("  4  5 6  7 \n");
+    printf("\n");
+}
 
 /**********************************************************************************/
 /*                                                                                */
@@ -70,12 +85,23 @@ void test_1(void) {
  */
 void test_2(void) {
     printf("PreorderTraversal Iteration Method.\n");
+
     /* 实际结果 */
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int arrSize = ARR_SIZE(arr);
+    struct TreeNode *root = arrayToTree(arr, arrSize);
+    int actualSize = 0;
+    int *actual = preorderTraversal_iteration(root, &actualSize);
 
     /* 预期结果 */
+    int expected[] = {1, 2, 4, 5, 3, 6, 7};
+    int expectedSize = ARR_SIZE(expected);
 
     /* 比较结果 */
+    validateArray('2', expected, expectedSize, actual, actualSize, COMMON_FALSE);
 
+    /* 释放内存 */
+    freeTree(root);
 }
 
 /**
@@ -105,8 +131,9 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char* argv[]) {
+    printTestTree();
     test_1();
-    // test_2();
+    test_2();
     // test_3();
     return 0;
 }
