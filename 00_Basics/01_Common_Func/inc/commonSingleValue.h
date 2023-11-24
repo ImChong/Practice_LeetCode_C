@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 13:42:27
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 15:11:35
+ * @LastEditTime : 2023-11-24 15:24:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,7 +22,6 @@
                                 float: "float", \
                                 double: "double", \
                                 default: "other")
-#define IS_INT(x)           (typeid(x) == typeid(int))
 
 #define MAX(a, b)           ((a) > (b) ? (a) : (b))     /* 取最大值 */
 #define MIN(a, b)           ((a) < (b) ? (a) : (b))     /* 取最小值 */
