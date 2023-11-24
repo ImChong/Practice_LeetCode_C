@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-17 23:28:52
+ * @LastEditTime : 2023-11-24 19:51:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -327,16 +327,16 @@ struct TreeNode *newNode(int value) {
  * @description: 数组转换为树
  * =================================================================================
  * @param {int} *arr                数组
- * @param {int} size                数组大小
+ * @param {int} arrSize             数组大小
  * @param {int} index               数组索引
  * @param {struct TreeNode} **root  树的根节点
  * @return {void}
  */
-void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
-    if (index < size) {
+void arrayToTree(int *arr, int arrSize, int index, struct TreeNode **root) {
+    if (index < arrSize) {
         *root = newNode(*(arr + index));
-        arrayToTree(arr, size, 2 * index + 1, &((*root)->left));
-        arrayToTree(arr, size, 2 * index + 2, &((*root)->right));
+        arrayToTree(arr, arrSize, 2 * index + 1, &((*root)->left));
+        arrayToTree(arr, arrSize, 2 * index + 2, &((*root)->right));
     }
 }
 

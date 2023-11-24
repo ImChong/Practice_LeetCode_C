@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-26 13:56:46
+ * @LastEditTime : 2023-11-24 19:48:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,9 +14,38 @@
 
 /**********************************************************************************/
 /*                                                                                */
+/*                                 GLOBAL VARIABLES                               */
+/*                                                                                */
+/**********************************************************************************/
+/* 树节点 */
+struct TreeNode {
+    int val;                    /* 节点的值 */
+    struct TreeNode *left;      /* 左节点 */
+    struct TreeNode *right;     /* 右节点 */
+};
+
+/**********************************************************************************/
+/*                                                                                */
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
+void preOrder(struct TreeNode *node, int *ret, int *returnSize);
+int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize);
+int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize);
+void inOrder(struct TreeNode *node, int *ret, int *returnSize);
+int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize);
+int *inorderTraversal_iteration(struct TreeNode *root, int *returnSize);
+void postOrder(struct TreeNode *node, int *ret, int *returnSize);
+int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize);
+int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 HELPER FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+struct TreeNode *newNode(int value);
+void arrayToTree(int *arr, int size, int index, struct TreeNode **root);
+void freeTree(struct TreeNode *root);
 
 #endif  /* __COMMON_BINARY_TREE_H */
