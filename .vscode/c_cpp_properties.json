@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "00_Basics/01_Common_Func/cfg/"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
@@ -14,7 +15,8 @@
         {
             "name": "Windows",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "00_Basics/01_Common_Func/cfg/"
             ],
             "defines": [
                 "_DEBUG",
