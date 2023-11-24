@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 23:44:48
+ * @LastEditTime : 2023-11-24 23:46:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -257,10 +257,10 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 创建一个新的二叉树节点队列
  * =================================================================================
- * @param {int} queueSize
- * @return {*}
+ * @param {int} queueSize       队列的大小
+ * @return {TreeQueue} *queue   新的二叉树节点队列指针
  */
 TreeQueue *newTreeQueue(int queueSize) {
     TreeQueue *queue = (TreeQueue *)malloc(sizeof(TreeQueue));
@@ -271,10 +271,10 @@ TreeQueue *newTreeQueue(int queueSize) {
 }
 
 /**
- * @description:
+ * @description: 释放二叉树节点队列的空间
  * =================================================================================
- * @param {TreeQueue} *queue
- * @return {*}
+ * @param {TreeQueue} *queue    二叉树节点队列指针
+ * @return {void}
  */
 void freeTreeQueue(TreeQueue *queue) {
     free(queue->list);
