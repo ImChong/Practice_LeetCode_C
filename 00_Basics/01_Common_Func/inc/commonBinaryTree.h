@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 20:25:55
+ * @LastEditTime : 2023-11-24 22:54:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -49,7 +49,7 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);
 /*                                                                                */
 /**********************************************************************************/
 struct TreeNode *newNode(int value);
-void arrayToTree(int *arr, int size, int index, struct TreeNode *root);
+struct TreeNode *arrayToTree(int* arr, int arrSize)
 void freeTree(struct TreeNode *root);
 void printTree(struct TreeNode *root);
 

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 22:39:28
+ * @LastEditTime : 2023-11-24 22:53:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -269,21 +269,36 @@ struct TreeNode *newNode(int value) {
     return node;
 }
 
+// /**
+//  * @description: 将数组转换为二叉树
+//  * =================================================================================
+//  * @param {int} *arr            数组指针
+//  * @param {int} arrSize         数组大小
+//  * @param {int} index           当前节点索引
+//  * @param {TreeNode} **root     根节点指针的指针
+//  * @return {void}
+//  */
+// void arrayToTree(int *arr, int arrSize, int index, struct TreeNode *root) {
+//     if (index < arrSize) {
+//         root = newNode(*(arr + index));
+//         arrayToTree(arr, arrSize, 2 * index + 1, root->left);
+//         arrayToTree(arr, arrSize, 2 * index + 2, root->right);
+//     }
+// }
+
 /**
  * @description: 将数组转换为二叉树
  * =================================================================================
- * @param {int} *arr            数组指针
- * @param {int} arrSize         数组大小
- * @param {int} index           当前节点索引
- * @param {TreeNode} **root     根节点指针的指针
- * @return {void}
+ * @param {int*} arr                数组指针
+ * @param {int} arrSize             数组大小
+ * @return {TreeNode} *node         根节点指针
  */
-void arrayToTree(int *arr, int arrSize, int index, struct TreeNode *root) {
-    if (index < arrSize) {
-        root = newNode(*(arr + index));
-        arrayToTree(arr, arrSize, 2 * index + 1, root->left);
-        arrayToTree(arr, arrSize, 2 * index + 2, root->right);
+struct TreeNode *arrayToTree(int* arr, int arrSize) {
+    if (arrSize == 0) {
+        return NULL;
     }
+
+
 }
 
 /**
