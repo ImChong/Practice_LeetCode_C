@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:30:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 20:06:42
+ * @LastEditTime : 2023-11-24 20:12:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,12 +30,12 @@
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 前序遍历
  * =================================================================================
- * @param {TreeNode} *node
- * @param {int} *ret
- * @param {int} *returnSize
- * @return {*}
+ * @param {TreeNode} *node      当前节点指针
+ * @param {int} *ret            用于储存遍历答案的数组
+ * @param {int} *returnSize     用于储存遍历答案的数组的大小
+ * @return {void}
  */
 void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
     if (node == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
@@ -47,11 +47,11 @@ void preOrder(struct TreeNode *node, int *ret, int *returnSize) {
 }
 
 /**
- * @description:
+ * @description: 前序遍历 - 递归方法
  * =================================================================================
- * @param {TreeNode} *root
- * @param {int} *returnSize
- * @return {*}
+ * @param {TreeNode} *root      根节点指针
+ * @param {int} *returnSize     用于储存遍历答案的数组的大小
+ * @return {int} *ret           用于储存遍历答案的数组
  */
 int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     int *ret = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案（后期需要free） */
@@ -61,11 +61,11 @@ int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
 }
 
 /**
- * @description:
+ * @description: 前序遍历 - 迭代方法
  * =================================================================================
- * @param {TreeNode} *root
- * @param {int} *returnSize
- * @return {*}
+ * @param {TreeNode} *root      根节点指针
+ * @param {int} *returnSize     用于储存遍历答案的数组的大小
+ * @return {int} *ret           用于储存遍历答案的数组
  */
 int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     int *res = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ret 数组，用于储存遍历答案（后期需要free） */
@@ -89,8 +89,11 @@ int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     return res;                                         /* 返回结果数组 */
 }
 
+/* ============================================================================== */
+/* ============================================================================== */
+
 /**
- * @description:
+ * @description: 中序遍历
  * =================================================================================
  * @param {TreeNode} *node
  * @param {int} *ret
