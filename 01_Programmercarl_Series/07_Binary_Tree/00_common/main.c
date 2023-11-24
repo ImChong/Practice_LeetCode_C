@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-24 20:28:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 23:18:08
+ * @LastEditTime : 2023-11-24 23:20:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,14 +35,14 @@
  * @return {void}
  */
 void test_1(void) {
-    printf("PreorderTraversal Iteration Method.\n");
+    printf("PreorderTraversal Recursion Method.\n");
 
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
     struct TreeNode *root = arrayToTree(arr, arrSize);
     int actualSize = 0;
-    int *actual = preorderTraversal_iteration(root, &actualSize);
+    int *actual = preorderTraversal_recursion(root, &actualSize);
 
     /* 预期结果 */
     int expected[] = {1, 2, 4, 5, 3, 6, 7};
@@ -57,10 +57,19 @@ void test_1(void) {
 
 /**
  * @description: 测试 2
+ *  树结构表示：
+ *       1
+ *      / \
+ *     2   3
+ *    / \ / \
+ *   4  5 6  7
+ * 前序遍历 - 迭代方法
+ * [1, 2, 4, 5, 3, 6, 7]
  * =================================================================================
  * @return {void}
  */
 void test_2(void) {
+    printf("PreorderTraversal Iteration Method.\n");
     /* 实际结果 */
 
     /* 预期结果 */
