@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 20:22:57
+ * @LastEditTime : 2023-11-24 20:25:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,13 +29,17 @@ struct TreeNode {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-void preOrder(struct TreeNode *node, int *ret, int *returnSize);
+void preOrder(struct TreeNode *node, int *ret, int *returnSize);                /* 前序遍历 */
 int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize);
 int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize);
-void inOrder(struct TreeNode *node, int *ret, int *returnSize);
+/* ============================================================================== */
+/* ============================================================================== */
+void inOrder(struct TreeNode *node, int *ret, int *returnSize);                 /* 中序遍历 */
 int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize);
 int *inorderTraversal_iteration(struct TreeNode *root, int *returnSize);
-void postOrder(struct TreeNode *node, int *ret, int *returnSize);
+/* ============================================================================== */
+/* ============================================================================== */
+void postOrder(struct TreeNode *node, int *ret, int *returnSize);               /* 后序遍历 */
 int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize);
 int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);
 
@@ -47,7 +51,7 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);
 struct TreeNode *newNode(int value);
 void arrayToTree(int *arr, int size, int index, struct TreeNode *root);
 void freeTree(struct TreeNode *root);
-// void printTree(struct TreeNode *root);
+void printTree(struct TreeNode *root);
 
 
 #endif  /* __COMMON_BINARY_TREE_H */
