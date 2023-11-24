@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 19:24:39
+ * @LastEditTime : 2023-11-24 19:40:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -77,7 +77,7 @@ void print2DArray(int **arr, int arrSize, int *arrColSizes) {
 /**
  * @description: 释放数组
  * =================================================================================
- * @param {int} *result     返回数组
+ * @param {int} *result             返回数组
  * @return {void}
  */
 void freeArray(int *result) {
