@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 22:53:46
+ * @LastEditTime : 2023-11-24 23:02:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -42,6 +42,7 @@
 #if COMMON_BINARY_TREE_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* 标准头文件 */
 #include <stdio.h>
+#include <stdlib.h>
 /* 常用头文件 */
 #include "commonBinaryTree.h"
 
@@ -269,23 +270,6 @@ struct TreeNode *newNode(int value) {
     return node;
 }
 
-// /**
-//  * @description: 将数组转换为二叉树
-//  * =================================================================================
-//  * @param {int} *arr            数组指针
-//  * @param {int} arrSize         数组大小
-//  * @param {int} index           当前节点索引
-//  * @param {TreeNode} **root     根节点指针的指针
-//  * @return {void}
-//  */
-// void arrayToTree(int *arr, int arrSize, int index, struct TreeNode *root) {
-//     if (index < arrSize) {
-//         root = newNode(*(arr + index));
-//         arrayToTree(arr, arrSize, 2 * index + 1, root->left);
-//         arrayToTree(arr, arrSize, 2 * index + 2, root->right);
-//     }
-// }
-
 /**
  * @description: 将数组转换为二叉树
  * =================================================================================
@@ -298,7 +282,35 @@ struct TreeNode *arrayToTree(int* arr, int arrSize) {
         return NULL;
     }
 
+    struct TreeNode *root = (struct TreeNode *)malloc(sizeof(struct TreeNode));
+    root->val = arr[0];
+    root->left = NULL;
+    root->right = NULL;
 
+    struct TreeNode **queue = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * arrSize);
+    int queue_front = 0;
+    int queue_rear = 0;
+    queue[queue_rear++] = root;
+
+    for (int i = 1; i < arrSize; i++) {
+        struct TreeNode *node = queue[queue_front++];
+        if (arr[i] != NULL) {
+            node->left = (struct TreeNode *)malloc(sizeof(struct TreeNode));
+            node->left->val = arr[i];
+            node->left->left = NULL;
+            node->left->right = NULL;
+            queue[queue_rear++] = node->left;
+        }
+        if (++i < arrSize && arr[i] != NULL) {
+            node->right = (struct TreeNode *)malloc(sizeof(struct TreeNode));
+            node->right->val = arr[i];
+            node->right->left = NULL;
+            node->right->right = NULL;
+            queue[queue_rear++] = node->right;
+        }
+    }
+    free(queue);
+    return root;
 }
 
 /**
