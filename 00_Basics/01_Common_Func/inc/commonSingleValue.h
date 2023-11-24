@@ -17,15 +17,15 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define MAX(a, b)           ((a) > (b) ? (a) : (b))     /* 取最大值 */
-#define MIN(a, b)           ((a) < (b) ? (a) : (b))     /* 取最小值 */
-
 #define type_of(x)          _Generic((x), \
                                 int: "int", \
                                 float: "float", \
                                 double: "double", \
                                 default: "other")
 #define IS_INT(x)           (typeid(x) == typeid(int))
+
+#define MAX(a, b)           ((a) > (b) ? (a) : (b))     /* 取最大值 */
+#define MIN(a, b)           ((a) < (b) ? (a) : (b))     /* 取最小值 */
 
 /**********************************************************************************/
 /*                                                                                */
