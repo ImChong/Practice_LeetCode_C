@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 23:28:14
+ * @LastEditTime : 2023-11-24 23:30:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,7 +17,7 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define MAX_QUEUE_SIZE 100      /* 队列的最大容量 */
+#define MAX_QUEUE_SIZE 1000      /* 队列的最大容量 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -33,7 +33,7 @@ struct TreeNode {
 
 /* 队列 */
 typedef struct {
-    struct TreeNode *data[MAX_QUEUE_SIZE];  /* 队列的数据 */
+    struct TreeNode *queue[MAX_QUEUE_SIZE];  /* 队列的数据 */
     int front;                              /* 队首指针 */
     int rear;                               /* 队尾指针 */
 } TreeQueue;
