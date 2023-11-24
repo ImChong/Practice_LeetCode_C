@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-24 20:28:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 23:22:22
+ * @LastEditTime : 2023-11-24 23:23:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -106,16 +106,35 @@ void test_2(void) {
 
 /**
  * @description: 测试 3
+ * 树结构表示：
+ *       1
+ *      / \
+ *     2   3
+ *    / \ / \
+ *   4  5 6  7
+ * 中序遍历 - 递归方法
  * =================================================================================
  * @return {void}
  */
 void test_3(void) {
+    printf("InorderTraversal Recursion Method.\n");
+
     /* 实际结果 */
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int arrSize = ARR_SIZE(arr);
+    struct TreeNode *root = arrayToTree(arr, arrSize);
+    int actualSize = 0;
+    int *actual = inorderTraversal_recursion(root, &actualSize);
 
     /* 预期结果 */
+    int expected[] = {4, 2, 5, 1, 6, 3, 7};
+    int expectedSize = ARR_SIZE(expected);
 
     /* 比较结果 */
+    validateArray('3', expected, expectedSize, actual, actualSize, COMMON_FALSE);
 
+    /* 释放内存 */
+    freeTree(root);
 }
 
 /**********************************************************************************/
@@ -134,6 +153,6 @@ int main(int argc, const char* argv[]) {
     printTestTree();
     test_1();
     test_2();
-    // test_3();
+    test_3();
     return 0;
 }
