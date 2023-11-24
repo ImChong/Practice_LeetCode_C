@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 00:27:27
+ * @LastEditTime : 2023-11-24 15:03:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,7 +17,13 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))          /* 获取数组长度：如果以地址形式传入则会报错 */
+#define IS_INT(x)       (typeid(x) == typeid(int))
+#define type_of(x)      _Generic((x), \
+                            int: "int", \
+                            float: "float", \
+                            double: "double", \
+                            default: "other")
+#define ARR_SIZE(arr)   (sizeof(arr) / sizeof((arr)[0]))          /* 获取数组长度：如果以地址形式传入则会报错 */
 
 /**********************************************************************************/
 /*                                                                                */
