@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-23 22:54:19
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 00:26:21
+ * @LastEditTime : 2023-11-24 15:22:52
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -84,7 +84,7 @@ void runTest(struct TestStruct *test) {
     validate2DArray(test->testNum,
                         expect2DArr, expectRtnRowSize, expectRtnColSize,
                         actual2DArr, actualRtnRowSize, actualRtnColSize,
-                        COMMON_FALSE);
+                        COMMON_TRUE);
 
     /* 释放内存 */
     freeArray(actualRtnColSize);

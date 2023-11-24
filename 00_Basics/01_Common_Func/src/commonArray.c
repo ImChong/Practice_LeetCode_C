@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 00:03:55
+ * @LastEditTime : 2023-11-24 15:22:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -123,6 +123,7 @@ int compareElements(const void *a, const void *b) {
 int compareRows(const void *a, const void *b) {
     int *arrA = *(int **)a;
     int *arrB = *(int **)b;
+    printf("is int: %d\r\n", IS_INT(arrA[0]));
     int arrSize = MIN(ARR_SIZE(arrA), ARR_SIZE(arrB));
     for (int i = 0; i < arrSize; i++) {
         if (arrA[i] != arrB[i]) {
