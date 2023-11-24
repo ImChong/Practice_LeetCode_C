@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 23:42:47
+ * @LastEditTime : 2023-11-24 23:44:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -332,7 +332,7 @@ struct TreeNode *arrayToTree(int* arr, int arrSize) {
             queue->list[queue->rear++] = node->right;
         }
     }
-    free(queue);
+    freeTreeQueue(queue);
     return root;
 }
 
