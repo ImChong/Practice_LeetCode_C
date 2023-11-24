@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 23:26:39
+ * @LastEditTime : 2023-11-24 23:28:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -62,10 +62,11 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);
 /*                                 HELPER FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-struct TreeNode *newNode(int value);
-struct TreeNode *arrayToTree(int* arr, int arrSize);
-void freeTree(struct TreeNode *root);
-void printTree(struct TreeNode *root);
+struct TreeNode *newNode(int value);                        /* 创建新节点 */
+struct TreeNode *arrayToTree(int* arr, int arrSize);        /* 将数组转换为树 */
+int *treeToArray(struct TreeNode *root, int *returnSize);   /* 将树转换为数组 */    /* TODO */
+void freeTree(struct TreeNode *root);                       /* 释放树的内存 */
+void printTree(struct TreeNode *root);                      /* 打印树 */
 
 
 #endif  /* __COMMON_BINARY_TREE_H */
