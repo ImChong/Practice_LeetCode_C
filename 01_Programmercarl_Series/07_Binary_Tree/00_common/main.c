@@ -3,13 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-24 20:28:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 23:09:19
+ * @LastEditTime : 2023-11-24 23:18:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用二叉树源文件测试
  */
 /* 标准头文件 */
+#include <stdio.h>
 /* 通用头文件 */
 #include "commonTypeDef.h"
 #include "commonArray.h"
@@ -22,10 +23,20 @@
 /**********************************************************************************/
 /**
  * @description: 测试 1
+ *  树结构表示：
+ *       1
+ *      / \
+ *     2   3
+ *    / \ / \
+ *   4  5 6  7
+ * 前序遍历 - 递归方法
+ * [1, 2, 4, 5, 3, 6, 7]
  * =================================================================================
  * @return {void}
  */
 void test_1(void) {
+    printf("PreorderTraversal Iteration Method.\n");
+
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
@@ -39,6 +50,9 @@ void test_1(void) {
 
     /* 比较结果 */
     validateArray('1', expected, expectedSize, actual, actualSize, COMMON_FALSE);
+
+    /* 释放内存 */
+    freeTree(root);
 }
 
 /**

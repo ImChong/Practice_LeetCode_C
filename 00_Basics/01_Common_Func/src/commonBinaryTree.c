@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 23:02:48
+ * @LastEditTime : 2023-11-24 23:14:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -294,14 +294,14 @@ struct TreeNode *arrayToTree(int* arr, int arrSize) {
 
     for (int i = 1; i < arrSize; i++) {
         struct TreeNode *node = queue[queue_front++];
-        if (arr[i] != NULL) {
+        if (i < arrSize) {
             node->left = (struct TreeNode *)malloc(sizeof(struct TreeNode));
             node->left->val = arr[i];
             node->left->left = NULL;
             node->left->right = NULL;
             queue[queue_rear++] = node->left;
         }
-        if (++i < arrSize && arr[i] != NULL) {
+        if (++i < arrSize) {
             node->right = (struct TreeNode *)malloc(sizeof(struct TreeNode));
             node->right->val = arr[i];
             node->right->left = NULL;

@@ -41,7 +41,7 @@ STATIC int g_2DArrRowSize = 0;
  * @return {void}
  */
 void printArray(int *arr, int arrSize) {
-    printf("Arr: (len: %d)[", arrSize);
+    printf("Arr (len: %d): [", arrSize);
     for (int i = 0; i < arrSize; i++) {
         printf("%d", arr[i]);
         if (i < arrSize - 1) {
