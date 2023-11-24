@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 23:30:54
+ * @LastEditTime : 2023-11-24 23:43:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -33,7 +33,7 @@ struct TreeNode {
 
 /* 队列 */
 typedef struct {
-    struct TreeNode *queue[MAX_QUEUE_SIZE];  /* 队列的数据 */
+    struct TreeNode **list;                 /* 树节点数组 */
     int front;                              /* 队首指针 */
     int rear;                               /* 队尾指针 */
 } TreeQueue;
@@ -62,7 +62,9 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);
 /*                                 HELPER FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-struct TreeNode *newNode(int value);                        /* 创建新节点 */
+TreeQueue *newTreeQueue(int queueSize);                         /* 创建队列 */
+void freeTreeQueue(TreeQueue *queue);                           /* 释放队列 */
+struct TreeNode *newTreeNode(int value);                        /* 创建新节点 */
 struct TreeNode *arrayToTree(int* arr, int arrSize);        /* 将数组转换为树 */
 int *treeToArray(struct TreeNode *root, int *returnSize);   /* 将树转换为数组 */    /* TODO */
 void freeTree(struct TreeNode *root);                       /* 释放树的内存 */
