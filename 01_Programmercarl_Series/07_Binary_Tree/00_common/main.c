@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-24 20:28:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 22:57:37
+ * @LastEditTime : 2023-11-24 23:09:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,7 @@
  */
 /* 标准头文件 */
 /* 通用头文件 */
+#include "commonTypeDef.h"
 #include "commonArray.h"
 #include "commonBinaryTree.h"
 
@@ -28,11 +29,16 @@ void test_1(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
+    struct TreeNode *root = arrayToTree(arr, arrSize);
+    int actualSize = 0;
+    int *actual = preorderTraversal_iteration(root, &actualSize);
 
     /* 预期结果 */
+    int expected[] = {1, 2, 4, 5, 3, 6, 7};
+    int expectedSize = ARR_SIZE(expected);
 
     /* 比较结果 */
-
+    validateArray('1', expected, expectedSize, actual, actualSize, COMMON_FALSE);
 }
 
 /**
@@ -77,7 +83,7 @@ void test_3(void) {
  */
 int main(int argc, const char* argv[]) {
     test_1();
-    test_2();
-    test_3();
+    // test_2();
+    // test_3();
     return 0;
 }
