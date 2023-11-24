@@ -17,11 +17,6 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define type_of(x)          _Generic((x), \
-                                int: "int", \
-                                float: "float", \
-                                double: "double", \
-                                default: "other")
 
 #define IS_ARR(arr)         (sizeof(arr) == sizeof((arr)[0]) * ARR_SIZE(arr))
 #define ARR_SIZE(arr)       (sizeof(arr) / sizeof((arr)[0]))          /* 获取数组长度：如果以地址形式传入则会报错 */
