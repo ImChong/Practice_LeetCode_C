@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:40:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 22:56:48
+ * @LastEditTime : 2023-11-25 22:57:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -45,11 +45,11 @@ Queue *initQueue(int queueSize) {
  * @return {void}
  */
 void enQueue(Queue *queue, int val) {
-    if (queue->head == -1) {                      /* 如果队列头为索引 -1 */
-        queue->head = 0;                          /* 将队列头改为索引 0 */
+    if (queue->head == -1) {                        /* 如果队列头为索引 -1 */
+        queue->head = 0;                            /* 将队列头改为索引 0 */
     }
-    queue->tail = (queue->tail + 1) % queue->size;    /* 队列尾 + 1，（% queue->size）是为了防止新添加的元素超出队列内数组大小。超出部分从 0 开始：环形队列 */
-    queue->data[queue->tail] = val;                   /* 将元素添加至队列内数组，索引为队列尾所指索引 */
+    queue->tail = (queue->tail + 1) % queue->size;  /* 队列尾 + 1，（% queue->size）是为了防止新添加的元素超出队列内数组大小。超出部分从 0 开始：环形队列 */
+    queue->data[queue->tail] = val;                 /* 将元素添加至队列内数组，索引为队列尾所指索引 */
 }
 
 /**
@@ -59,14 +59,14 @@ void enQueue(Queue *queue, int val) {
  * @return {int} headVal          队首元素
  */
 int deQueue(Queue *queue) {
-    int headVal = queue->data[queue->head];               /* 取出队首元素并赋值给 headVal */
+    int headVal = queue->data[queue->head];         /* 取出队首元素并赋值给 headVal */
     if (queue->head == queue->tail) {               /* 如果队列头索引等于队列尾索引 */
-        queue->head = -1;                             /* 队列头索引设置为 -1 */
-        queue->tail = -1;                             /* 队列尾索引设置为 -1 */
-        return headVal;                                   /* 返回之前取出的队首元素 */
+        queue->head = -1;                           /* 队列头索引设置为 -1 */
+        queue->tail = -1;                           /* 队列尾索引设置为 -1 */
+        return headVal;                             /* 返回之前取出的队首元素 */
     }
-    queue->head = (queue->head + 1) % queue->size;    /* 队列头 + 1，（% queue->size）是为了防止新队列头索引超出队列内数组大小。超出部分从 0 开始：环形队列 */
-    return headVal;                                   /* 返回之前取出的队首元素 */
+    queue->head = (queue->head + 1) % queue->size;  /* 队列头 + 1，（% queue->size）是为了防止新队列头索引超出队列内数组大小。超出部分从 0 开始：环形队列 */
+    return headVal;                                 /* 返回之前取出的队首元素 */
 }
 
 /**
@@ -76,7 +76,7 @@ int deQueue(Queue *queue) {
  * @return {int}            0：队列不为空，1：队列为空
  */
 int isQueueEmpty(Queue *queue) {
-    return queue->head == -1;                     /* 判断队列头是否为 -1，若队列头为 -1 则队列为空 */
+    return queue->head == -1;                       /* 判断队列头是否为 -1，若队列头为 -1 则队列为空 */
 }
 
 /**
@@ -86,10 +86,10 @@ int isQueueEmpty(Queue *queue) {
  * @return {void}
  */
 void freeQueue(Queue *queue) {
-    free(queue->data);                            /* 释放队列内数组空间 */
-    queue->data = NULL;                           /* 将队列内数组指针置空 */
-    free(queue);                                  /* 释放队列空间 */
-    queue = NULL;                                 /* 将队列指针置空 */
+    free(queue->data);                              /* 释放队列内数组空间 */
+    queue->data = NULL;                             /* 将队列内数组指针置空 */
+    free(queue);                                    /* 释放队列空间 */
+    queue = NULL;                                   /* 将队列指针置空 */
 }
 
 
