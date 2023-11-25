@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:15:20
+ * @LastEditTime : 2023-11-25 23:18:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -265,17 +265,17 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
 TreeQueue *newTreeQueue(int queueSize) {
     TreeQueue *queue = (TreeQueue *)malloc(sizeof(TreeQueue));
     queue->list = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * queueSize);
-    queue->front = 0;
-    queue->rear = 0;
+    queue->head = 0;
+    queue->tail = 0;
     queue->size = queueSize;
     return queue;
 }
 
 void enTreeQueue(TreeQueue *queue, struct TreeNode *node) {
-    if (queue->rear == queue->size) {
+    if (queue->tail == queue->size) {
         return;
     }
-    queue->list[queue->rear++] = node;
+    queue->list[queue->tail++] = node;
 }
 
 /**
@@ -324,23 +324,23 @@ struct TreeNode *arrayToTree(int* arr, int arrSize) {
     root->right = NULL;
 
     TreeQueue *queue = newTreeQueue(arrSize);
-    queue->list[queue->rear++] = root;
+    queue->list[queue->tail++] = root;
 
     for (int i = 1; i < arrSize; i++) {
-        struct TreeNode *node = queue->list[queue->front++];
+        struct TreeNode *node = queue->list[queue->head++];
         if (i < arrSize) {
             node->left = (struct TreeNode *)malloc(sizeof(struct TreeNode));
             node->left->val = arr[i];
             node->left->left = NULL;
             node->left->right = NULL;
-            queue->list[queue->rear++] = node->left;
+            queue->list[queue->tail++] = node->left;
         }
         if (++i < arrSize) {
             node->right = (struct TreeNode *)malloc(sizeof(struct TreeNode));
             node->right->val = arr[i];
             node->right->left = NULL;
             node->right->right = NULL;
-            queue->list[queue->rear++] = node->right;
+            queue->list[queue->tail++] = node->right;
         }
     }
     freeTreeQueue(queue);
