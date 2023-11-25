@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:40:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 22:59:25
+ * @LastEditTime : 2023-11-25 23:12:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -87,6 +87,17 @@ int isQueueEmpty(Queue *queue) {
  */
 int isQueueFull(Queue *queue) {
     return (queue->tail + 1) % queue->size == queue->head;    /* 判断队列是否为满，若队列尾 + 1 等于队列头则队列为满 */
+}
+
+void printQueue(Queue *queue) {
+    printf("Queue (size = %d): [", queue->size);
+    for (int i = queue->head; i <= queue->tail; i++) {
+        printf("%d", queue->data[i]);
+        if (i != queue->tail) {
+            printf(", ");
+        }
+    }
+    printf("]\n");
 }
 
 /**

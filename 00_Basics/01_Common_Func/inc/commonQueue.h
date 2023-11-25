@@ -34,6 +34,7 @@ void enQueue(Queue *queue, int val);    /* 入队 */
 int deQueue(Queue *queue);              /* 出队 */
 int isQueueEmpty(Queue *queue);         /* 判断队列是否为空 */
 int isQueueFull(Queue *queue);          /* 判断队列是否为满 */
+void printQueue(Queue *queue);          /* 打印队列 */
 void freeQueue(Queue *queue);           /* 释放队列 */
 
 
