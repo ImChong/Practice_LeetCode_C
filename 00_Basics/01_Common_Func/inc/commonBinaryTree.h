@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 23:43:04
+ * @LastEditTime : 2023-11-25 11:25:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,7 +31,7 @@ struct TreeNode {
     struct TreeNode *right;     /* 右节点 */
 };
 
-/* 队列 */
+/* 树队列 */
 typedef struct {
     struct TreeNode **list;                 /* 树节点数组 */
     int front;                              /* 队首指针 */
