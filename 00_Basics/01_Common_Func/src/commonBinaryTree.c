@@ -267,6 +267,7 @@ TreeQueue *newTreeQueue(int queueSize) {
     queue->list = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * queueSize);
     queue->front = 0;
     queue->rear = 0;
+    queue->size = queueSize;
     return queue;
 }
 
