@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:40:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 22:57:51
+ * @LastEditTime : 2023-11-25 22:59:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,8 +25,8 @@
 /**
  * @description: 初始化队列
  * =================================================================================
- * @param {int} queueSize   数据长度
- * @return {Queue} *obj     初始化后队列的指针
+ * @param {int} queueSize       数据长度
+ * @return {Queue} *obj         初始化后队列的指针
  */
 Queue *initQueue(int queueSize) {
     Queue *obj = (Queue *)malloc(sizeof(Queue));            /* 为队列分配空间 */
@@ -55,8 +55,8 @@ void enQueue(Queue *queue, int val) {
 /**
  * @description: 出队
  * =================================================================================
- * @param {Queue} *queue      队列指针
- * @return {int} headVal          队首元素
+ * @param {Queue} *queue        队列指针
+ * @return {int} headVal        队首元素
  */
 int deQueue(Queue *queue) {
     int headVal = queue->data[queue->head];         /* 取出队首元素并赋值给 headVal */
@@ -72,11 +72,21 @@ int deQueue(Queue *queue) {
 /**
  * @description: 判读队列是否为空
  * =================================================================================
- * @param {Queue} *queue      队列指针
- * @return {int}            0：队列不为空，1：队列为空
+ * @param {Queue} *queue        队列指针
+ * @return {int}                0：队列不为空，1：队列为空
  */
 int isQueueEmpty(Queue *queue) {
     return queue->head == -1;                       /* 判断队列头是否为 -1，若队列头为 -1 则队列为空 */
+}
+
+/**
+ * @description: 判断队列是否为满
+ * =================================================================================
+ * @param {Queue} *queue        队列指针
+ * @return {int}                0：队列不为满，1：队列为满
+ */
+int isQueueFull(Queue *queue) {
+    return (queue->tail + 1) % queue->size == queue->head;    /* 判断队列是否为满，若队列尾 + 1 等于队列头则队列为满 */
 }
 
 /**
