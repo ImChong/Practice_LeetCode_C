@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-24 20:28:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 11:08:18
+ * @LastEditTime : 2023-11-25 11:19:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -37,7 +37,7 @@ void printTestTree(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: 测试前序遍历
  * [1, 2, 3, 4, 5, 6, 7]
  *  树结构表示：
  *       1
@@ -45,72 +45,38 @@ void printTestTree(void) {
  *     2   3
  *    / \ / \
  *   4  5 6  7
- * 前序遍历 - 递归方法
+ * 前序遍历 - 递归方法/迭代方法
  * [1, 2, 4, 5, 3, 6, 7]
  * =================================================================================
  * @return {void}
  */
-void test_preorderTraversal_recursion(void) {
+void test_preorderTraversal(void) {
+
+    /* 实际结果 */
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int arrSize = ARR_SIZE(arr);
+    struct TreeNode *root = arrayToTree(arr, arrSize);
+    int actualSize_recursion = 0;
+    int *actual_recursion = preorderTraversal_recursion(root, &actualSize_recursion);
+    int actualSize_iteration = 0;
+    int *actual_iteration = preorderTraversal_iteration(root, &actualSize_iteration);
+
+    /* 预期结果 */
+    int expected[] = {1, 2, 4, 5, 3, 6, 7};
+    int expectedSize = ARR_SIZE(expected);
+
+    /* 比较结果 */
     printf("PreorderTraversal Recursion Method.\n");
-
-    /* 实际结果 */
-    int arr[] = {1, 2, 3, 4, 5, 6, 7};
-    int arrSize = ARR_SIZE(arr);
-    struct TreeNode *root = arrayToTree(arr, arrSize);
-    int actualSize = 0;
-    int *actual = preorderTraversal_recursion(root, &actualSize);
-
-    /* 预期结果 */
-    int expected[] = {1, 2, 4, 5, 3, 6, 7};
-    int expectedSize = ARR_SIZE(expected);
-
-    /* 比较结果 */
-    validateArray('1', expected, expectedSize, actual, actualSize, COMMON_FALSE);
-
-    /* 释放内存 */
-    freeTree(root);
-}
-
-/**
- * @description: 测试 2
- * [1, 2, 3, 4, 5, 6, 7]
- *  树结构表示：
- *       1
- *      / \
- *     2   3
- *    / \ / \
- *   4  5 6  7
- * 前序遍历 - 迭代方法
- * [1, 2, 4, 5, 3, 6, 7]
- * =================================================================================
- * @return {void}
- */
-void test_preorderTraversal_iteration(void) {
+    validateArray('1', expected, expectedSize, actual_recursion, actualSize_recursion, COMMON_FALSE);
     printf("PreorderTraversal Iteration Method.\n");
-
-    /* 实际结果 */
-    int arr[] = {1, 2, 3, 4, 5, 6, 7};
-    int arrSize = ARR_SIZE(arr);
-    struct TreeNode *root = arrayToTree(arr, arrSize);
-    int actualSize = 0;
-    int *actual = preorderTraversal_iteration(root, &actualSize);
-
-    /* 预期结果 */
-    int expected[] = {1, 2, 4, 5, 3, 6, 7};
-    int expectedSize = ARR_SIZE(expected);
-
-    /* 比较结果 */
-    validateArray('2', expected, expectedSize, actual, actualSize, COMMON_FALSE);
+    validateArray('2', expected, expectedSize, actual_iteration, actualSize_iteration, COMMON_FALSE);
 
     /* 释放内存 */
     freeTree(root);
 }
 
-/* ============================================================================== */
-/* ============================================================================== */
-
 /**
- * @description: 测试 3
+ * @description: 测试中序遍历
  * [1, 2, 3, 4, 5, 6, 7]
  * 树结构表示：
  *       1
@@ -123,64 +89,29 @@ void test_preorderTraversal_iteration(void) {
  * =================================================================================
  * @return {void}
  */
-void test_inorderTraversal_recursion(void) {
+void test_inorderTraversal(void) {
+    /* 实际结果 */
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int arrSize = ARR_SIZE(arr);
+    struct TreeNode *root = arrayToTree(arr, arrSize);
+    int actualSize_recursion = 0;
+    int *actual_recursion = inorderTraversal_recursion(root, &actualSize_recursion);
+    int actualSize_iteration = 0;
+    int *actual_iteration = inorderTraversal_iteration(root, &actualSize_iteration);
+
+    /* 预期结果 */
+    int expected[] = {4, 2, 5, 1, 6, 3, 7};
+    int expectedSize = ARR_SIZE(expected);
+
+    /* 比较结果 */
     printf("InorderTraversal Recursion Method.\n");
-
-    /* 实际结果 */
-    int arr[] = {1, 2, 3, 4, 5, 6, 7};
-    int arrSize = ARR_SIZE(arr);
-    struct TreeNode *root = arrayToTree(arr, arrSize);
-    int actualSize = 0;
-    int *actual = inorderTraversal_recursion(root, &actualSize);
-
-    /* 预期结果 */
-    int expected[] = {4, 2, 5, 1, 6, 3, 7};
-    int expectedSize = ARR_SIZE(expected);
-
-    /* 比较结果 */
-    validateArray('3', expected, expectedSize, actual, actualSize, COMMON_FALSE);
-
-    /* 释放内存 */
-    freeTree(root);
-}
-
-/**
- * @description: 测试 4
- * [1, 2, 3, 4, 5, 6, 7]
- * 树结构表示：
- *       1
- *      / \
- *     2   3
- *    / \ / \
- *   4  5 6  7
- * 中序遍历 - 迭代方法
- * [4, 2, 5, 1, 6, 3, 7]
- * =================================================================================
- * @return {void}
- */
-void test_inorderTraversal_iteration(void) {
+    validateArray('1', expected, expectedSize, actual_recursion, actualSize_recursion, COMMON_FALSE);
     printf("InorderTraversal Iteration Method.\n");
-
-    /* 实际结果 */
-    int arr[] = {1, 2, 3, 4, 5, 6, 7};
-    int arrSize = ARR_SIZE(arr);
-    struct TreeNode *root = arrayToTree(arr, arrSize);
-    int actualSize = 0;
-    int *actual = inorderTraversal_iteration(root, &actualSize);
-
-    /* 预期结果 */
-    int expected[] = {4, 2, 5, 1, 6, 3, 7};
-    int expectedSize = ARR_SIZE(expected);
-
-    /* 比较结果 */
-    validateArray('4', expected, expectedSize, actual, actualSize, COMMON_FALSE);
+    validateArray('2', expected, expectedSize, actual_iteration, actualSize_iteration, COMMON_FALSE);
 
     /* 释放内存 */
     freeTree(root);
 }
-
-/* ============================================================================== */
-/* ============================================================================== */
 
 /* TODO */
 
@@ -198,11 +129,10 @@ void test_inorderTraversal_iteration(void) {
  */
 int main(int argc, const char* argv[]) {
     printTestTree();
-
-    test_preorderTraversal_recursion();
-    test_preorderTraversal_iteration();
     printf("--------------------\r\n");
-    test_inorderTraversal_recursion();
-    test_inorderTraversal_iteration();
+    test_preorderTraversal();
+    printf("--------------------\r\n");
+    test_inorderTraversal();
+    printf("--------------------\r\n");
     return 0;
 }
