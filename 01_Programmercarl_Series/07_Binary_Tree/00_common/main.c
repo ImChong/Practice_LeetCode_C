@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-24 20:28:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 11:19:12
+ * @LastEditTime : 2023-11-25 22:49:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -113,6 +113,43 @@ void test_inorderTraversal(void) {
     freeTree(root);
 }
 
+/**
+ * @description: 测试后序遍历
+ * [1, 2, 3, 4, 5, 6, 7]
+ * 树结构表示：
+ *       1
+ *      / \
+ *     2   3
+ *    / \ / \
+ *   4  5 6  7
+ * 中序遍历 - 递归方法/迭代方法
+ * [4, 5, 2, 6, 7, 3, 1]
+ * =================================================================================
+ * @return {void}
+ */
+void test_postorderTraversal(void) {
+    /* 实际结果 */
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int arrSize = ARR_SIZE(arr);
+    struct TreeNode *root = arrayToTree(arr, arrSize);
+    int actualSize_recursion = 0;
+    int *actual_recursion = postorderTraversal_recursion(root, &actualSize_recursion);
+    int actualSize_iteration = 0;
+    int *actual_iteration = postorderTraversal_iteration(root, &actualSize_iteration);
+
+    /* 预期结果 */
+    int expected[] = {4, 5, 2, 6, 7, 3, 1};
+    int expectedSize = ARR_SIZE(expected);
+
+    /* 比较结果 */
+    printf("PostorderTraversal Recursion Method.\n");
+    validateArray('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
+    printf("PostorderTraversal Iteration Method.\n");
+    validateArray('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
+
+    /* 释放内存 */
+    freeTree(root);
+}
 /* TODO */
 
 /**********************************************************************************/
@@ -134,5 +171,6 @@ int main(int argc, const char* argv[]) {
     printf("--------------------\r\n");
     test_inorderTraversal();
     printf("--------------------\r\n");
+    test_postorderTraversal();
     return 0;
 }
