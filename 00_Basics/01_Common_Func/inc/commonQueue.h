@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:38:47
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 22:59:42
+ * @LastEditTime : 2023-11-25 23:00:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,10 +31,10 @@ typedef struct {
 /**********************************************************************************/
 Queue *initQueue(int queueSize);        /* 初始化队列 */
 void enQueue(Queue *queue, int val);    /* 入队 */
-int deQueue(Queue *queue);            /* 出队 */
-int isQueueEmpty(Queue *queue);       /* 判断队列是否为空 */
-int isQueueFull(Queue *queue);        /* 判断队列是否为满 */
-void freeQueue(Queue *queue);         /* 释放队列 */
+int deQueue(Queue *queue);              /* 出队 */
+int isQueueEmpty(Queue *queue);         /* 判断队列是否为空 */
+int isQueueFull(Queue *queue);          /* 判断队列是否为满 */
+void freeQueue(Queue *queue);           /* 释放队列 */
 
 
 #endif  /* __COMMON_QUEUE_H */
