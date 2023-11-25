@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:21:12
+ * @LastEditTime : 2023-11-25 23:22:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -285,6 +285,32 @@ void enTreeQueue(TreeQueue *queue, struct TreeNode *node) {
     }
     queue->list[queue->tail] = node;
     queue->tail = (queue->tail + 1) % queue->size;
+}
+
+/**
+ * @description:
+ * =================================================================================
+ * @param {TreeQueue} *queue
+ * @return {*}
+ */
+struct TreeNode *deTreeQueue(TreeQueue *queue) {
+    if (queue->head == queue->tail) {
+        printf("Queue is empty.\n");
+        return NULL;
+    }
+    struct TreeNode *node = queue->list[queue->head];
+    queue->head = (queue->head + 1) % queue->size;
+    return node;
+}
+
+/**
+ * @description: 
+ * =================================================================================
+ * @param {TreeQueue} *queue
+ * @return {*}
+ */
+int isTreeQueueEmpty(TreeQueue *queue) {
+    return queue->head == queue->tail;
 }
 
 /**
