@@ -3,7 +3,7 @@
 C language leetcode practice guide:
 
 - [Basics](00_Basics/) - Prerequisites
-  - [VScode_Settings_Backup](00_Basics/00_VScode_Settings_Backup) - VScode settings
+  - [VScode_Settings_Backup](00_Basics/00_VScode_Settings_Backup) - VScode settings backup
   - [Common_Func](00_Basics/01_Common_Func/) - Common c function modules
 - [Programming_Topics](Programming_Topics/) - [代码随想录系列](https://programmercarl.com/)
 - [Labuladong_Series](02_Labuladong_Series/) - [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
