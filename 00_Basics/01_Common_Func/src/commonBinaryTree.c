@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:22:13
+ * @LastEditTime : 2023-11-25 23:23:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -304,13 +304,23 @@ struct TreeNode *deTreeQueue(TreeQueue *queue) {
 }
 
 /**
- * @description: 
+ * @description:
  * =================================================================================
  * @param {TreeQueue} *queue
  * @return {*}
  */
 int isTreeQueueEmpty(TreeQueue *queue) {
     return queue->head == queue->tail;
+}
+
+/**
+ * @description:
+ * =================================================================================
+ * @param {TreeQueue} *queue
+ * @return {*}
+ */
+int isTreeQueueFull(TreeQueue *queue) {
+    return (queue->tail + 1) % queue->size == queue->head;
 }
 
 /**
