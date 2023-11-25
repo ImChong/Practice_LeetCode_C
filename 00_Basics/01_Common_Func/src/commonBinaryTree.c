@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:27:41
+ * @LastEditTime : 2023-11-25 23:29:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -407,6 +407,41 @@ struct TreeNode *arrayToTree(int* arr, int arrSize) {
     }
     freeTreeQueue(queue);
     return root;
+}
+
+/**
+ * @description: 将二叉树转换为数组
+ * =================================================================================
+ * @param {TreeNode} *root      根节点指针
+ * @param {int} *returnSize     数组长度指针
+ * @return {int} *result        转换后的数组指针
+ */
+int *treeToArray(struct TreeNode *root, int *returnSize) {
+    if (!root) {
+        *returnSize = 0;
+        return NULL;
+    }
+
+    int *result = (int *)malloc(MAX_SIZE * sizeof(int));
+    TreeQueue *q = newTreeQueue(MAX_SIZE);
+    enTreeQueue(q, root);
+    int index = 0;
+
+    while (!isTreeQueueEmpty(q)) {
+        struct TreeNode *current = deTreeQueue(q);
+        if (current) {
+            result[index] = current->val;
+            enTreeQueue(q, current->left);
+            enTreeQueue(q, current->right);
+        } else {
+            result[index] = INT_MIN;
+        }
+        index++;
+    }
+
+    *returnSize = index;
+    freeTreeQueue(q);
+    return result;
 }
 
 /**
