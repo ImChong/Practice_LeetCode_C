@@ -84,7 +84,7 @@ void runTest(struct TestStruct *test) {
     validate2DArray(test->testNum,
                         expect2DArr, expectRtnRowSize, expectRtnColSize,
                         actual2DArr, actualRtnRowSize, actualRtnColSize,
-                        COMMON_TRUE);
+                        SORT_TRUE);
 
     /* 释放内存 */
     freeArray(actualRtnColSize);
