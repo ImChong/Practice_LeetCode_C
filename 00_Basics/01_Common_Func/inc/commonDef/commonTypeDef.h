@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 12:30:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-23 12:25:24
+ * @LastEditTime : 2023-11-25 11:22:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -24,6 +24,8 @@
 /* 程序判断宏 */
 #define COMMON_TRUE             1
 #define COMMON_FALSE            0
+#define SORT_TRUE               COMMON_TRUE
+#define SORT_FALSE              COMMON_FALSE
 
 /* 程序调试宏 */
 #define STATIC                  static

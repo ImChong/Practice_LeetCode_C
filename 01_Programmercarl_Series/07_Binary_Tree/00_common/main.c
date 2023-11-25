@@ -67,9 +67,9 @@ void test_preorderTraversal(void) {
 
     /* 比较结果 */
     printf("PreorderTraversal Recursion Method.\n");
-    validateArray('1', expected, expectedSize, actual_recursion, actualSize_recursion, COMMON_FALSE);
+    validateArray('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
     printf("PreorderTraversal Iteration Method.\n");
-    validateArray('2', expected, expectedSize, actual_iteration, actualSize_iteration, COMMON_FALSE);
+    validateArray('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
 
     /* 释放内存 */
     freeTree(root);
@@ -105,9 +105,9 @@ void test_inorderTraversal(void) {
 
     /* 比较结果 */
     printf("InorderTraversal Recursion Method.\n");
-    validateArray('1', expected, expectedSize, actual_recursion, actualSize_recursion, COMMON_FALSE);
+    validateArray('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
     printf("InorderTraversal Iteration Method.\n");
-    validateArray('2', expected, expectedSize, actual_iteration, actualSize_iteration, COMMON_FALSE);
+    validateArray('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
 
     /* 释放内存 */
     freeTree(root);
