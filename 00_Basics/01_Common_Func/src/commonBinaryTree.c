@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:14:01
+ * @LastEditTime : 2023-11-25 23:15:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -269,6 +269,13 @@ TreeQueue *newTreeQueue(int queueSize) {
     queue->rear = 0;
     queue->size = queueSize;
     return queue;
+}
+
+void enTreeQueue(TreeQueue *queue, struct TreeNode *node) {
+    if (queue->rear == queue->size) {
+        return;
+    }
+    queue->list[queue->rear++] = node;
 }
 
 /**
