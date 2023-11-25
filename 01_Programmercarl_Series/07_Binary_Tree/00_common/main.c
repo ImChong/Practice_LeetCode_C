@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-24 20:28:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 11:05:04
+ * @LastEditTime : 2023-11-25 11:08:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -50,7 +50,7 @@ void printTestTree(void) {
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void test_preorderTraversal_recursion(void) {
     printf("PreorderTraversal Recursion Method.\n");
 
     /* 实际结果 */
@@ -85,7 +85,7 @@ void test_1(void) {
  * =================================================================================
  * @return {void}
  */
-void test_2(void) {
+void test_preorderTraversal_iteration(void) {
     printf("PreorderTraversal Iteration Method.\n");
 
     /* 实际结果 */
@@ -123,7 +123,7 @@ void test_2(void) {
  * =================================================================================
  * @return {void}
  */
-void test_3(void) {
+void test_inorderTraversal_recursion(void) {
     printf("InorderTraversal Recursion Method.\n");
 
     /* 实际结果 */
@@ -158,7 +158,7 @@ void test_3(void) {
  * =================================================================================
  * @return {void}
  */
-void test_4(void) {
+void test_inorderTraversal_iteration(void) {
     printf("InorderTraversal Iteration Method.\n");
 
     /* 实际结果 */
@@ -199,10 +199,10 @@ void test_4(void) {
 int main(int argc, const char* argv[]) {
     printTestTree();
 
-    test_1();
-    test_2();
-
-    test_3();
-    test_4();
+    test_preorderTraversal_recursion();
+    test_preorderTraversal_iteration();
+    printf("--------------------\r\n");
+    test_inorderTraversal_recursion();
+    test_inorderTraversal_iteration();
     return 0;
 }
