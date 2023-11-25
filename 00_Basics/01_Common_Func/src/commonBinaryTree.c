@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:23:08
+ * @LastEditTime : 2023-11-25 23:27:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -272,11 +272,11 @@ TreeQueue *newTreeQueue(int queueSize) {
 }
 
 /**
- * @description:
+ * @description: 将节点加入队列
  * =================================================================================
- * @param {TreeQueue} *queue
- * @param {TreeNode} *node
- * @return {*}
+ * @param {TreeQueue} *queue    二叉树节点队列指针
+ * @param {TreeNode} *node      节点指针
+ * @return {void}
  */
 void enTreeQueue(TreeQueue *queue, struct TreeNode *node) {
     if ((queue->tail + 1) % queue->size == queue->head) {
@@ -288,10 +288,10 @@ void enTreeQueue(TreeQueue *queue, struct TreeNode *node) {
 }
 
 /**
- * @description:
+ * @description: 从队列中取出一个节点
  * =================================================================================
- * @param {TreeQueue} *queue
- * @return {*}
+ * @param {TreeQueue} *queue        二叉树节点队列指针
+ * @return {TreeNode} *node         节点指针
  */
 struct TreeNode *deTreeQueue(TreeQueue *queue) {
     if (queue->head == queue->tail) {
@@ -304,23 +304,40 @@ struct TreeNode *deTreeQueue(TreeQueue *queue) {
 }
 
 /**
- * @description:
+ * @description: 判断队列是否为空
  * =================================================================================
- * @param {TreeQueue} *queue
- * @return {*}
+ * @param {TreeQueue} *queue        二叉树节点队列指针
+ * @return {int}                    如果队列为空，返回1；否则返回0
  */
 int isTreeQueueEmpty(TreeQueue *queue) {
     return queue->head == queue->tail;
 }
 
 /**
- * @description:
+ * @description: 判断队列是否为满
  * =================================================================================
- * @param {TreeQueue} *queue
- * @return {*}
+ * @param {TreeQueue} *queue        二叉树节点队列指针
+ * @return {int}                    如果队列为满，返回1；否则返回0
  */
 int isTreeQueueFull(TreeQueue *queue) {
     return (queue->tail + 1) % queue->size == queue->head;
+}
+
+/**
+ * @description: 打印二叉树节点队列
+ * =================================================================================
+ * @param {TreeQueue} *queue        二叉树节点队列指针
+ * @return {void}
+ */
+void printTreeQueue(TreeQueue *queue) {
+    printf("TreeQueue (size = %d): [", queue->size);
+    for (int i = queue->head; i != queue->tail; i = (i + 1) % queue->size) {
+        printf("%d", queue->list[i]->val);
+        if ((i + 1) % queue->size != queue->tail) {
+            printf(", ");
+        }
+    }
+    printf("]\n");
 }
 
 /**
