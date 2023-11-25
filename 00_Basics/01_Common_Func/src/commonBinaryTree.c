@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:18:31
+ * @LastEditTime : 2023-11-25 23:21:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -271,11 +271,20 @@ TreeQueue *newTreeQueue(int queueSize) {
     return queue;
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {TreeQueue} *queue
+ * @param {TreeNode} *node
+ * @return {*}
+ */
 void enTreeQueue(TreeQueue *queue, struct TreeNode *node) {
-    if (queue->tail == queue->size) {
+    if ((queue->tail + 1) % queue->size == queue->head) {
+        printf("Queue is full.\n");
         return;
     }
-    queue->list[queue->tail++] = node;
+    queue->list[queue->tail] = node;
+    queue->tail = (queue->tail + 1) % queue->size;
 }
 
 /**
