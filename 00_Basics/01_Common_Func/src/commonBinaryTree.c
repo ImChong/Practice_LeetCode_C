@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:10:32
+ * @LastEditTime : 2023-11-25 23:14:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -341,21 +341,6 @@ struct TreeNode *arrayToTree(int* arr, int arrSize) {
 }
 
 /**
- * @description: 释放二叉树的空间
- * =================================================================================
- * @param {TreeNode} *root      根节点指针
- * @return {void}
- */
-void freeTree(struct TreeNode *root) {
-    if (root == NULL) {             /* 如果传入节点为 NULL 则返回 */
-        return;
-    }
-    freeTree(root->left);           /* 遍历释放左节点空间 */
-    freeTree(root->right);          /* 遍历释放右节点空间 */
-    free(root);                     /* 释放当前节点空间 */
-}
-
-/**
  * @description: 打印二叉树
  * =================================================================================
  * @param {TreeNode} *root      根节点指针
@@ -368,6 +353,21 @@ void printTree(struct TreeNode *root) {
     printf("%d ", root->val);       /* 打印当前节点的值 */
     printTree(root->left);          /* 遍历打印左节点 */
     printTree(root->right);         /* 遍历打印右节点 */
+}
+
+/**
+ * @description: 释放二叉树的空间
+ * =================================================================================
+ * @param {TreeNode} *root      根节点指针
+ * @return {void}
+ */
+void freeTree(struct TreeNode *root) {
+    if (root == NULL) {             /* 如果传入节点为 NULL 则返回 */
+        return;
+    }
+    freeTree(root->left);           /* 遍历释放左节点空间 */
+    freeTree(root->right);          /* 遍历释放右节点空间 */
+    free(root);                     /* 释放当前节点空间 */
 }
 
 

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:10:16
+ * @LastEditTime : 2023-11-25 23:13:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -73,8 +73,8 @@ void freeTreeQueue(TreeQueue *queue);                           /* 释放队列 
 struct TreeNode *newTreeNode(int value);                        /* 创建新节点 */
 struct TreeNode *arrayToTree(int *arr, int arrSize);            /* 将数组转换为树 */
 int *treeToArray(struct TreeNode *root, int *returnSize);       /* 将树转换为数组 */
-void freeTree(struct TreeNode *root);                           /* 释放树的内存 */
 void printTree(struct TreeNode *root);                          /* 打印树 */
+void freeTree(struct TreeNode *root);                           /* 释放树的内存 */
 
 
 #endif  /* __COMMON_BINARY_TREE_H */
