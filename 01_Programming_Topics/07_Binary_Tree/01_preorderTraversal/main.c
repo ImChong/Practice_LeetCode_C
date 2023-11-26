@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 12:52:18
+ * @LastEditTime : 2023-11-26 12:52:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,8 +19,6 @@
  * 前序遍历 - 递归方法/迭代方法
  * [1, 2, 4, 5, 3, 6, 7]
  */
-
-/* TODO: 重构 */
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -85,6 +83,8 @@ void test_preorderTraversal(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
+    printTestTree();
+    printf("--------------------\r\n");
     test_preorderTraversal();
     return 0;
 }
