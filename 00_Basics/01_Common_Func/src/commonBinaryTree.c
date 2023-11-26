@@ -297,11 +297,11 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
  * @description: 创建一个新的二叉树节点队列
  * =================================================================================
  * @param {int} queueSize       队列的大小
- * @return {TreeQueue} *queue   新的二叉树节点队列指针
+ * @return {TreeArrQueue} *queue   新的二叉树节点队列指针
  */
-TreeQueue *newTreeQueue(int queueSize) {
-    TreeQueue *queue = (TreeQueue *)malloc(sizeof(TreeQueue));
-    queue->list = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * queueSize);
+TreeArrQueue *newTreeArrQueue(int queueSize) {
+    TreeArrQueue *queue = (TreeArrQueue *)malloc(sizeof(TreeArrQueue));
+    queue->array = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * queueSize);
     queue->head = 0;
     queue->tail = 0;
     queue->size = queueSize;
@@ -311,31 +311,31 @@ TreeQueue *newTreeQueue(int queueSize) {
 /**
  * @description: 将节点加入队列
  * =================================================================================
- * @param {TreeQueue} *queue    二叉树节点队列指针
+ * @param {TreeArrQueue} *queue    二叉树节点队列指针
  * @param {TreeNode} *node      节点指针
  * @return {void}
  */
-void enTreeQueue(TreeQueue *queue, struct TreeNode *node) {
+void enTreeArrQueue(TreeArrQueue *queue, struct TreeNode *node) {
     if ((queue->tail + 1) % queue->size == queue->head) {
         printf("Queue is full.\n");
         return;
     }
-    queue->list[queue->tail] = node;
+    queue->array[queue->tail] = node;
     queue->tail = (queue->tail + 1) % queue->size;
 }
 
 /**
  * @description: 从队列中取出一个节点
  * =================================================================================
- * @param {TreeQueue} *queue        二叉树节点队列指针
+ * @param {TreeArrQueue} *queue        二叉树节点队列指针
  * @return {TreeNode} *node         节点指针
  */
-struct TreeNode *deTreeQueue(TreeQueue *queue) {
+struct TreeNode *deTreeArrQueue(TreeArrQueue *queue) {
     if (queue->head == queue->tail) {
         printf("Queue is empty.\n");
         return NULL;
     }
-    struct TreeNode *node = queue->list[queue->head];
+    struct TreeNode *node = queue->array[queue->head];
     queue->head = (queue->head + 1) % queue->size;
     return node;
 }
@@ -343,33 +343,33 @@ struct TreeNode *deTreeQueue(TreeQueue *queue) {
 /**
  * @description: 判断队列是否为空
  * =================================================================================
- * @param {TreeQueue} *queue        二叉树节点队列指针
+ * @param {TreeArrQueue} *queue        二叉树节点队列指针
  * @return {int}                    如果队列为空，返回1；否则返回0
  */
-int isTreeQueueEmpty(TreeQueue *queue) {
+int isTreeArrQueueEmpty(TreeArrQueue *queue) {
     return queue->head == queue->tail;
 }
 
 /**
  * @description: 判断队列是否为满
  * =================================================================================
- * @param {TreeQueue} *queue        二叉树节点队列指针
+ * @param {TreeArrQueue} *queue        二叉树节点队列指针
  * @return {int}                    如果队列为满，返回1；否则返回0
  */
-int isTreeQueueFull(TreeQueue *queue) {
+int isTreeArrQueueFull(TreeArrQueue *queue) {
     return (queue->tail + 1) % queue->size == queue->head;
 }
 
 /**
  * @description: 打印二叉树节点队列
  * =================================================================================
- * @param {TreeQueue} *queue        二叉树节点队列指针
+ * @param {TreeArrQueue} *queue        二叉树节点队列指针
  * @return {void}
  */
-void printTreeQueue(TreeQueue *queue) {
-    printf("TreeQueue (size = %d): [", queue->size);
+void printTreeArrQueue(TreeArrQueue *queue) {
+    printf("TreeArrQueue (size = %d): [", queue->size);
     for (int i = queue->head; i != queue->tail; i = (i + 1) % queue->size) {
-        printf("%d", queue->list[i]->val);
+        printf("%d", queue->array[i]->val);
         if ((i + 1) % queue->size != queue->tail) {
             printf(", ");
         }
@@ -380,11 +380,11 @@ void printTreeQueue(TreeQueue *queue) {
 /**
  * @description: 释放二叉树节点队列的空间
  * =================================================================================
- * @param {TreeQueue} *queue    二叉树节点队列指针
+ * @param {TreeArrQueue} *queue    二叉树节点队列指针
  * @return {void}
  */
-void freeTreeQueue(TreeQueue *queue) {
-    free(queue->list);
+void freeTreeArrQueue(TreeArrQueue *queue) {
+    free(queue->array);
     free(queue);
 }
 
@@ -422,27 +422,27 @@ struct TreeNode *arrayToTree(int* arr, int arrSize) {
     root->left = NULL;
     root->right = NULL;
 
-    TreeQueue *queue = newTreeQueue(arrSize);
-    queue->list[queue->tail++] = root;
+    TreeArrQueue *queue = newTreeArrQueue(arrSize);
+    queue->array[queue->tail++] = root;
 
     for (int i = 1; i < arrSize; i++) {
-        struct TreeNode *node = queue->list[queue->head++];
+        struct TreeNode *node = queue->array[queue->head++];
         if (i < arrSize) {
             node->left = (struct TreeNode *)malloc(sizeof(struct TreeNode));
             node->left->val = arr[i];
             node->left->left = NULL;
             node->left->right = NULL;
-            queue->list[queue->tail++] = node->left;
+            queue->array[queue->tail++] = node->left;
         }
         if (++i < arrSize) {
             node->right = (struct TreeNode *)malloc(sizeof(struct TreeNode));
             node->right->val = arr[i];
             node->right->left = NULL;
             node->right->right = NULL;
-            queue->list[queue->tail++] = node->right;
+            queue->array[queue->tail++] = node->right;
         }
     }
-    freeTreeQueue(queue);
+    freeTreeArrQueue(queue);
     return root;
 }
 
@@ -460,16 +460,16 @@ int *treeToArray(struct TreeNode *root, int *returnSize) {
     }
 
     int *result = (int *)malloc(MAX_SIZE * sizeof(int));
-    TreeQueue *q = newTreeQueue(MAX_SIZE);
-    enTreeQueue(q, root);
+    TreeArrQueue *q = newTreeArrQueue(MAX_SIZE);
+    enTreeArrQueue(q, root);
     int index = 0;
 
-    while (!isTreeQueueEmpty(q)) {
-        struct TreeNode *current = deTreeQueue(q);
+    while (!isTreeArrQueueEmpty(q)) {
+        struct TreeNode *current = deTreeArrQueue(q);
         if (current) {
             result[index] = current->val;
-            enTreeQueue(q, current->left);
-            enTreeQueue(q, current->right);
+            enTreeArrQueue(q, current->left);
+            enTreeArrQueue(q, current->right);
         } else {
             result[index] = INT_MIN;
         }
@@ -477,7 +477,7 @@ int *treeToArray(struct TreeNode *root, int *returnSize) {
     }
 
     *returnSize = index;
-    freeTreeQueue(q);
+    freeTreeArrQueue(q);
     return result;
 }
 
