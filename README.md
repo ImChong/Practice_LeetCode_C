@@ -23,15 +23,15 @@ C language leetcode practice guide:
 >
 > ```txt
 > .
-> ├── cfg                                   /* configuration files */
+> ├── cfg                                   /* configuration folder */
 > │   ├── compileCfg.h                          /* compile configuration */
 > │   └── methodCfg.h                           /* method configuration */
-> ├── docs                                  /* documentation files */
+> ├── docs                                  /* documentation folder */
 > │   └── sketch.drawio                         /* drawing sketch file */
-> ├── inc                                   /* header files */
+> ├── inc                                   /* header folder */
 > │   └── solutionName.h                        /* solution header file */
 > ├── main.c                                /* main & test source file */
-> └── src                                   /* source files */
+> └── src                                   /* source folder */
 >     ├── solutionName_methodName01.c           /* solution method 01 source file */
 >     └── solutionName_methodName02.c           /* solution method 02 source file */
 > ```
