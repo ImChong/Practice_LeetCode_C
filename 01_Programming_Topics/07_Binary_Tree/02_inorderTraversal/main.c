@@ -1,16 +1,24 @@
 /*
- * @File: main_chong.c
- * @Created Date: 2023-08-28 9:44:35 am
- * @Author: Chong Liu
- * @Brief: 94.二叉树的中序遍历: https://leetcode.cn/problems/binary-tree-inorder-traversal/
- * https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%80%92%E5%BD%92%E9%81%8D%E5%8E%86.html
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\07_Binary_Tree\02_inorderTraversal\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-16 08:57:10
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-11-26 18:09:52
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 12:16:17 pm
+ * @Description  :
+ * [1, 2, 3, 4, 5, 6, 7]
+ * 树结构表示：
+ *       1
+ *      / \
+ *     2   3
+ *    / \ / \
+ *   4  5 6  7
+ *
+ * 中序遍历 - 递归方法/迭代方法
+ * [4, 2, 5, 1, 6, 3, 7]
  */
-
-/* TODO: 重构 */
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
