@@ -18,6 +18,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */
+#include "commonArray.h"
 #include "commonLinkedList.h"
 
 /**********************************************************************************/
@@ -98,7 +99,8 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
-    struct ListNode *l1 = NULL;
+    int array1[] = {1, 2, 4};
+    struct ListNode *l1 = linkedListFromArray(array1, sizeof(array1) / sizeof(int));
 
     /* 预期结果 */
 
