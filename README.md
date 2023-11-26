@@ -40,9 +40,9 @@ C language leetcode practice guide:
 >
 > ```txt
 > .
-> ├── cfg
-> │   └── compileCfg.h
-> └── main.c
+> ├── cfg                                   /* configuration folder */
+> │   └── compileCfg.h                          /* compile configuration */
+> └── main.c                                /* main & test source file */
 > ```
 >
 > all the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder.
