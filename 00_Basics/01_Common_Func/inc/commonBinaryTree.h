@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:22:48
+ * @LastEditTime : 2023-11-26 20:09:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -26,18 +26,24 @@
 /**********************************************************************************/
 /* 树节点 */
 struct TreeNode {
-    int val;                    /* 节点的值 */
-    struct TreeNode *left;      /* 左节点 */
-    struct TreeNode *right;     /* 右节点 */
+    int val;                        /* 节点的值 */
+    struct TreeNode *left;          /* 左节点 */
+    struct TreeNode *right;         /* 右节点 */
 };
 
 /* 树队列 */
 typedef struct {
-    struct TreeNode **list;                 /* 树节点数组 */
-    int head;                               /* 队首指针 */
-    int tail;                               /* 队尾指针 */
-    int size;                               /* 队列大小 */
+    struct TreeNode **list;         /* 树节点数组 */
+    int head;                       /* 队首指针 */
+    int tail;                       /* 队尾指针 */
+    int size;                       /* 队列大小 */
 } TreeQueue;
+
+/* 树链表 */
+struct TreeListNode {
+    struct TreeNode *node;          /* 树节点指针 */
+    struct TreeListNode *next;      /* 指向下一元素的指针 */
+};
 
 /**********************************************************************************/
 /*                                                                                */
