@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 12:06:04
+ * @LastEditTime : 2023-11-26 12:08:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -134,11 +134,24 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    printf("input: \n");
+    int array1[] = {};
+    struct ListNode *l1 = linkedListFromArray(array1, ARR_SIZE(array1));
+    printf("\t"); linkedListPrint(l1);
+    int array2[] = {0};
+    struct ListNode *l2 = linkedListFromArray(array2, ARR_SIZE(array2));
+    printf("\t"); linkedListPrint(l2);
+    struct ListNode *actual = mergeTwoLists(l1, l2);
 
     /* 预期结果 */
+    int array3[] = {0};
+    struct ListNode *expect = linkedListFromArray(array3, ARR_SIZE(array3));
 
     /* 比较结果 */
+    validateLinkedList('3', expect, actual);
 
+    /* 释放内存 */
+    linkedListFree(expect);
 }
 
 /**********************************************************************************/
@@ -156,5 +169,6 @@ void test_3(void) {
 int main(int argc, const char *argv[]) {
     test_1();
     test_2();
+    test_3();
     return 0;
 }
