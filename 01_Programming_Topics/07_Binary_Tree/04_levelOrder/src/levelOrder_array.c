@@ -3,9 +3,9 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-26 18:25:56
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 18:26:10
+ * @LastEditTime : 2023-11-26 18:38:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : 层序遍历二叉树源文件 - 数组实现
  */
