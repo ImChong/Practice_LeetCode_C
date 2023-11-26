@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-26 18:25:56
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 18:50:23
+ * @LastEditTime : 2023-11-26 18:51:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -73,5 +73,6 @@ int **levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
     }
     return resultArray;                                                                             /* 返回结果二维数组 */
 }
+
 
 #endif  /* ARRAY_METHOD_EN */
