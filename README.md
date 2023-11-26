@@ -98,8 +98,8 @@ C language leetcode practice guide:
 > then run
 >
 > ```txt
-> .\04_Misc\00_Clean_Exe\killexe.bat        /* windows system */
-> ./04_Misc/00_Clean_Exe/killexe.sh         /* linux system */
+> .\03_Misc\00_Clean_Exe\killexe.bat        /* windows system */
+> ./03_Misc/00_Clean_Exe/killexe.sh         /* linux system */
 > ```
 
 for the code to accomplish the above behavior please see [source code](./04_Misc/00_Clean_Exe/).
