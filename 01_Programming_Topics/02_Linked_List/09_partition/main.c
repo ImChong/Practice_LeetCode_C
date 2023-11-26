@@ -1,7 +1,8 @@
 /* 86. 分隔链表：https://leetcode.cn/problems/partition-list/ */
 /* https://leetcode.cn/problems/partition-list/ */
-
 /* https://labuladong.github.io/algo/di-ling-zh-bfe1b/shuang-zhi-0f7cc/ */
+
+/* TODO: 重构 */
 
 #include <stdio.h>
 #include <stdlib.h>
