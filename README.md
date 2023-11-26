@@ -15,7 +15,7 @@ C language leetcode practice overall folder structure:
   - [Clean_Exe](03_Misc/00_Clean_Exe/) - Executables to clean all .exe files
   - [Programming_Notes](03_Misc/01_Programming_Notes/) - Programming notes
 
-## Versions
+## Build Tool Versions
 
 - gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
 - g++.exe (Rev7, Built by MSYS2 project) 13.1.0
