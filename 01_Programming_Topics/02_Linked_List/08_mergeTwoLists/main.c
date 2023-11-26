@@ -11,9 +11,6 @@
  * https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
  * https://labuladong.github.io/algo/di-ling-zh-bfe1b/shuang-zhi-0f7cc/
  */
-
-/* TODO: 重构 */
-
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
