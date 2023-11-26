@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 11:51:23
+ * @LastEditTime : 2023-11-26 12:01:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -81,7 +81,7 @@ void test_1(void) {
     /* 实际结果 */
     struct ListNode *l1 = NULL;
     struct ListNode *l2 = NULL;
-    struct ListNode *actual = NULL;
+    struct ListNode *actual = mergeTwoLists(l1, l2);
 
     /* 预期结果 */
     struct ListNode *expect = NULL;
@@ -100,12 +100,20 @@ void test_1(void) {
 void test_2(void) {
     /* 实际结果 */
     int array1[] = {1, 2, 4};
-    struct ListNode *l1 = linkedListFromArray(array1, sizeof(array1) / sizeof(int));
+    struct ListNode *l1 = linkedListFromArray(array1, ARR_SIZE(array1));
+    int array2[] = {1, 3, 4};
+    struct ListNode *l2 = linkedListFromArray(array2, ARR_SIZE(array2));
+    struct ListNode *actual = mergeTwoLists(l1, l2);
 
     /* 预期结果 */
+    int array3[] = {1, 1, 2, 3, 4, 4};
+    struct ListNode *expect = linkedListFromArray(array3, ARR_SIZE(array3));
 
     /* 比较结果 */
+    validateLinkedList('2', expect, actual);
 
+    /* 释放内存 */
+    linkedListFree(expect);
 }
 
 /**
@@ -137,39 +145,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    /* Test case 1 */
-    struct ListNode *l1 = NULL;
-    struct ListNode *l2 = NULL;
-    struct ListNode *merged = NULL;
-
     test_1();
-
-    /* Test case 2 */
-    l1 = (struct ListNode*)malloc(sizeof(struct ListNode));
-    l1->val = 1;
-    l1->next = (struct ListNode*)malloc(sizeof(struct ListNode));
-    l1->next->val = 2;
-    l1->next->next = (struct ListNode*)malloc(sizeof(struct ListNode));
-    l1->next->next->val = 4;
-    l1->next->next->next = NULL;
-
-    l2 = (struct ListNode*)malloc(sizeof(struct ListNode));
-    l2->val = 1;
-    l2->next = (struct ListNode*)malloc(sizeof(struct ListNode));
-    l2->next->val = 3;
-    l2->next->next = (struct ListNode*)malloc(sizeof(struct ListNode));
-    l2->next->next->val = 4;
-    l2->next->next->next = NULL;
-
-    merged = mergeTwoLists(l1, l2);
-
-    /* Print merged list */
-    while (merged != NULL) {
-        printf("%d ", merged->val);
-        merged = merged->next;
-    }
-
-    printf("\n");
-
+    test_2();
     return 0;
 }
