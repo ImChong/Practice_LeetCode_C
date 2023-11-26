@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 12:01:21
+ * @LastEditTime : 2023-11-26 12:02:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -88,6 +88,9 @@ void test_1(void) {
 
     /* 比较结果 */
     validateLinkedList('1', expect, actual);
+
+    /* 释放内存 */
+    linkedListFree(expect);
 }
 
 /**
