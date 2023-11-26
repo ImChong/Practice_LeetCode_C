@@ -23,17 +23,17 @@ C language leetcode practice guide:
 >
 > ```txt
 > .
-> ├── cfg                                       /* configuration files */
-> │   ├── compileCfg.h                            /* compile configuration */
-> │   └── methodCfg.h                             /* method configuration */
-> ├── docs                                      /* documentation files */
-> │   └── sketch.drawio                           /* drawing sketch file */
-> ├── inc                                       /* header files */
-> │   └── solutionName.h                          /* solution header file */
-> ├── main.c                                    /* main & test source file */
-> └── src                                       /* source files */
->     ├── solutionName_methodName01.c             /* solution method 01 source file */
->     └── solutionName_methodName02.c             /* solution method 02 source file */
+> ├── cfg                                   /* configuration files */
+> │   ├── compileCfg.h                          /* compile configuration */
+> │   └── methodCfg.h                           /* method configuration */
+> ├── docs                                  /* documentation files */
+> │   └── sketch.drawio                         /* drawing sketch file */
+> ├── inc                                   /* header files */
+> │   └── solutionName.h                        /* solution header file */
+> ├── main.c                                /* main & test source file */
+> └── src                                   /* source files */
+>     ├── solutionName_methodName01.c           /* solution method 01 source file */
+>     └── solutionName_methodName02.c           /* solution method 02 source file */
 > ```
 >
 > if the question has only one solution, the code structure will be as follows:
