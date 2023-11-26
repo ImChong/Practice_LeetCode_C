@@ -77,13 +77,31 @@
         /* 编译并运行：编译并运行当前活跃文件编译生成的可执行文件 */
         {
             "label": "Build & Run Current File",                                    /* 任务名称 */
+            "detail": "Compile & Run Current File.",                                /* 任务描述 */
             "dependsOrder": "sequence",                                             /* 依赖顺序 */
             "dependsOn": [
                 "Build Current File - Python",      /* 编译当前活跃文件 */
                 "Run Current File"                  /* 运行当前活跃文件 */
             ],
-            "group": "build",                                                       /* 此处将此任务组设置为默认任务 */
-            "detail": "Compile & Run Current File"                                  /* 任务描述 */
+            "group": "build"                                                        /* 此处将此任务组设置为默认任务 */
+        },
+        /* 清除：清除当前活跃文件编译生成的可执行文件 */
+        {
+            "label": "Clean All Exe File",                                          /* 任务名称 */
+            "detail": "Clean All Exe File.",                                        /* 任务描述 */
+            "options": {
+                "cwd": "${workspaceFolder}"                    /* 指定工作目录 */
+            },
+            "linux": {          /* Linux下的清除指令 */
+                "command": [
+                    "${workspaceFolder}/03_Misc/00_Clean_Exe/killexe.sh"
+                ]
+            },
+            "windows": {        /* Windows下的清除指令 */
+                "command": [
+                    "${workspaceFolder}/03_Misc/00_Clean_Exe/killexe.bat"
+                ]
+            }
         }
     ]
 }
