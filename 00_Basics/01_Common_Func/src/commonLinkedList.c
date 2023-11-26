@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 15:00:25
+ * @LastEditTime : 2023-11-26 11:53:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -32,11 +32,11 @@
  * @return {int}                目标节点值
  */
 int linkedListGet(struct ListNode *head, int index) {
-    struct ListNode *curr = head;
+    struct ListNode *currentNode = head;
     while (index--) {
-        curr = curr->next;
+        currentNode = currentNode->next;
     }
-    return curr->val;
+    return currentNode->val;
 }
 
 /**
@@ -69,11 +69,11 @@ struct ListNode *linkedListAddAtTail(struct ListNode *head, int val) {
     if (head == NULL) {
         return newNode;
     }
-    struct ListNode *tmp = head;
-    while (tmp->next != NULL) {
-        tmp = tmp->next;
+    struct ListNode *temp = head;
+    while (temp->next != NULL) {
+        temp = temp->next;
     }
-    tmp->next = newNode;
+    temp->next = newNode;
     return head;
 }
 
@@ -93,12 +93,12 @@ struct ListNode *linkedListAddAtIndex(struct ListNode *head, int index, int val)
     if (head == NULL) {
         return newNode;
     }
-    struct ListNode *curr = head;
+    struct ListNode *currentNode = head;
     while (index--) {
-        curr = curr->next;
+        currentNode = currentNode->next;
     }
-    newNode->next = curr->next;
-    curr->next = newNode;
+    newNode->next = currentNode->next;
+    currentNode->next = newNode;
     return head;
 }
 
@@ -112,13 +112,13 @@ struct ListNode *linkedListAddAtIndex(struct ListNode *head, int index, int val)
 struct ListNode *linkedListDeleteAtIndex(struct ListNode *head, int index) {
     struct ListNode *dummy = (struct ListNode *)malloc(sizeof(struct ListNode));
     dummy->next = head;
-    struct ListNode *curr = dummy;
+    struct ListNode *currentNode = dummy;
     while (index--) {
-        curr = curr->next;
+        currentNode = currentNode->next;
     }
-    struct ListNode *tmp = curr->next;
-    curr->next = curr->next->next;
-    free(tmp);
+    struct ListNode *temp = currentNode->next;
+    currentNode->next = currentNode->next->next;
+    free(temp);
     return dummy->next;
 }
 
@@ -133,14 +133,14 @@ struct ListNode *linkedListDeleteElement(struct ListNode *head, int val) {
     struct ListNode dummy;                          /* 创建虚拟头节点 */
     dummy.next = head;                              /* 将传入链表接在虚拟头节点后面 */
 
-    struct ListNode *curr = &dummy;                 /* 创建指针：用于遍历列表 */
-    while (curr->next != NULL) {                    /* 遍历链表 */
-        if (curr->next->val == val) {                   /* 当前节点的下一个节点的值等于目标值 */
-            struct ListNode *tmp = curr->next;              /* 保存当前节点的下一个节点 */
-            curr->next = curr->next->next;                  /* 当前节点的下一个节点指向下下个节点 */
-            free(tmp);                                      /* 释放当前节点的下一个节点 */
+    struct ListNode *currentNode = &dummy;                 /* 创建指针：用于遍历列表 */
+    while (currentNode->next != NULL) {                    /* 遍历链表 */
+        if (currentNode->next->val == val) {                   /* 当前节点的下一个节点的值等于目标值 */
+            struct ListNode *temp = currentNode->next;              /* 保存当前节点的下一个节点 */
+            currentNode->next = currentNode->next->next;                  /* 当前节点的下一个节点指向下下个节点 */
+            free(temp);                                      /* 释放当前节点的下一个节点 */
         } else {                                        /* 当前节点的下一个节点的值不等于目标值 */
-            curr = curr->next;                              /* 当前节点指向下一个节点 */
+            currentNode = currentNode->next;                              /* 当前节点指向下一个节点 */
         }
     }
     return dummy.next;                              /* 返回链表虚拟头节点 */
@@ -182,8 +182,8 @@ int *linkedListGetIndexes(struct ListNode *head, int val, int *returnSize) {
  * @return {struct ListNode} *head      头节点指针
  */
 struct ListNode *linkedListFromArray(int *array, int size) {
-    struct ListNode *head = NULL;       /* 头节点指针 */
-    struct ListNode *current = NULL;    /* 当前节点指针 */
+    struct ListNode *head = NULL;           /* 头节点指针 */
+    struct ListNode *currentNode = NULL;    /* 当前节点指针 */
 
     for (int i = 0; i < size; i++) {
         /* 创建新结点 */
@@ -196,9 +196,9 @@ struct ListNode *linkedListFromArray(int *array, int size) {
             head = new_node;
         } else {
             /* 否则，将新结点追加到链表末尾 */
-            current->next = new_node;
+            currentNode->next = new_node;
         }
-        current = new_node;
+        currentNode = new_node;
     }
     return head;
 }
@@ -228,11 +228,11 @@ void linkedListPrint(struct ListNode *head) {
  * @return {void}
  */
 void linkedListFree(struct ListNode *head) {
-    struct ListNode *tmp = NULL;
+    struct ListNode *temp = NULL;
     while (head != NULL) {
-        tmp = head;
+        temp = head;
         head = head->next;
-        free(tmp);
+        free(temp);
     }
 }
 

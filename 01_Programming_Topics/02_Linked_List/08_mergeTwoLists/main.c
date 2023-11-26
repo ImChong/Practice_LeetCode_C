@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 11:47:16
+ * @LastEditTime : 2023-11-26 11:51:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -98,6 +98,7 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    struct ListNode *l1 = NULL;
 
     /* 预期结果 */
 
