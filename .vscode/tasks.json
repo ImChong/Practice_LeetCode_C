@@ -101,7 +101,8 @@
                 "command": [
                     "${workspaceFolder}/03_Misc/00_Clean_Exe/killexe.bat"
                 ]
-            }
+            },
+            "problemMatcher":"$gcc",                                                /* 指定错误匹配模式 */
         }
     ]
 }
