@@ -39,7 +39,7 @@
  * @param {int} **returnColumnSizes     二叉树对应层级的节点数
  * @return {int} **resultArray          结果二维数组
  */
-int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
+int **levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;                                                                                /* 初始化二叉树的层数为 0 */
     if (root == NULL) {                                                                             /* 如果根节点为 NULL */
         return NULL;                                                                                    /* 返回 NULL */
@@ -71,7 +71,6 @@ int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
         (*returnColumnSizes)[*returnSize] = nodeNums;                                                  /* 将当前层的节点数计入 *returnColumnSizes 对应的二叉树层数（二维数组的行数） */
         (*returnSize)++;                                                                               /* 二叉树层数（二维数组行数） + 1 */
     }
-
     return resultArray;                                                                             /* 返回结果二维数组 */
 }
 
