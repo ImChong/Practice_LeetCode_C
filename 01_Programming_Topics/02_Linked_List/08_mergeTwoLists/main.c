@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 12:02:28
+ * @LastEditTime : 2023-11-26 12:06:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -79,8 +79,11 @@ struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
  */
 void test_1(void) {
     /* 实际结果 */
+    printf("input: \n");
     struct ListNode *l1 = NULL;
+    printf("\t"); linkedListPrint(l1);
     struct ListNode *l2 = NULL;
+    printf("\t"); linkedListPrint(l2);
     struct ListNode *actual = mergeTwoLists(l1, l2);
 
     /* 预期结果 */
@@ -102,10 +105,13 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
+    printf("input: \n");
     int array1[] = {1, 2, 4};
     struct ListNode *l1 = linkedListFromArray(array1, ARR_SIZE(array1));
+    printf("\t"); linkedListPrint(l1);
     int array2[] = {1, 3, 4};
     struct ListNode *l2 = linkedListFromArray(array2, ARR_SIZE(array2));
+    printf("\t"); linkedListPrint(l2);
     struct ListNode *actual = mergeTwoLists(l1, l2);
 
     /* 预期结果 */
