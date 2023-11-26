@@ -32,7 +32,7 @@
  * =================================================================================
  * @param {ListNode} *list1     链表1
  * @param {ListNode} *list2     链表2
- * @return {ListNode} *head     合并后的链表
+ * @return {ListNode} *head     合并后的链表头节点
  */
 struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
     if (!list1) {
