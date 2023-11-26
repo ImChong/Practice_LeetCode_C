@@ -2,7 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-C language leetcode practice guide:
+## Workspace Structure
+
+C language leetcode practice overall folder structure:
 
 - [Basics](00_Basics/) - Prerequisites
   - [VScode_Settings_Backup](00_Basics/00_VScode_Settings_Backup) - VScode settings backup
