@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 11:42:53
+ * @LastEditTime : 2023-11-26 11:43:38
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,23 +43,23 @@ struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
     }
 
     struct ListNode *head = (struct ListNode *)malloc(sizeof(struct ListNode));
-    struct ListNode *t = head;
+    struct ListNode *currNode = head;
 
     while (list1 && list2) {
         if (list1->val < list2->val) {
-            t->next = list1;
+            currNode->next = list1;
             list1 = list1->next;
         } else {
-            t->next = list2;
+            currNode->next = list2;
             list2 = list2->next;
         }
-        t = t->next;
+        currNode = currNode->next;
     }
 
     if (list1) {
-        t->next = list1;
+        currNode->next = list1;
     } else {
-        t->next = list2;
+        currNode->next = list2;
     }
 
     return head->next;
