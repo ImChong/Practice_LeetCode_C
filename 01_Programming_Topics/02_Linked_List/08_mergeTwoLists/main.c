@@ -12,7 +12,7 @@ struct ListNode {
     struct ListNode *next;
 };
 
-struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {
+struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
     if (!list1) {
         return list2;
     }
@@ -104,10 +104,10 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
     /* Test case 1 */
-    struct ListNode* l1 = NULL;
-    struct ListNode* l2 = NULL;
+    struct ListNode *l1 = NULL;
+    struct ListNode *l2 = NULL;
 
-    struct ListNode* merged = mergeTwoLists(l1, l2);
+    struct ListNode *merged = mergeTwoLists(l1, l2);
 
     /* Print merged list */
     while (merged != NULL) {
