@@ -13,6 +13,7 @@
 #include "methodCfg.h"
 #if STRUCT_METHOD_EN
 /* 标准头文件 */
+#include <stdio.h>
 /* 本文件头文件 */
 #include "levelOrder.h"
 
