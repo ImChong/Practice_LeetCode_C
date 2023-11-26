@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 11:44:39
+ * @LastEditTime : 2023-11-26 11:46:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -76,11 +76,15 @@ struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
  */
 void test_1(void) {
     /* 实际结果 */
+    struct ListNode *l1 = NULL;
+    struct ListNode *l2 = NULL;
+    struct ListNode *actual = NULL;
 
     /* 预期结果 */
+    struct ListNode *expect = NULL;
 
     /* 比较结果 */
-
+    validateLinkedList('1', expect, actual);
 }
 
 /**
@@ -127,16 +131,9 @@ int main(int argc, const char *argv[]) {
     /* Test case 1 */
     struct ListNode *l1 = NULL;
     struct ListNode *l2 = NULL;
+    struct ListNode *merged = NULL;
 
-    struct ListNode *merged = mergeTwoLists(l1, l2);
-
-    /* Print merged list */
-    while (merged != NULL) {
-        printf("%d ", merged->val);
-        merged = merged->next;
-    }
-
-    printf("\n");
+    test_1();
 
     /* Test case 2 */
     l1 = (struct ListNode*)malloc(sizeof(struct ListNode));
