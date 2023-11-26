@@ -1,5 +1,7 @@
 # Practice_LeetCode_C
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
+
 C language leetcode practice guide:
 
 - [Basics](00_Basics/) - Prerequisites
