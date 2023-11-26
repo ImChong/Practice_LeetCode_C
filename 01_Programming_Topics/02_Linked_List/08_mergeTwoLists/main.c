@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 11:43:38
+ * @LastEditTime : 2023-11-26 11:44:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -61,7 +61,6 @@ struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
     } else {
         currNode->next = list2;
     }
-
     return head->next;
 }
 
