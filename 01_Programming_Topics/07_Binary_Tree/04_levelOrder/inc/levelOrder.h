@@ -12,6 +12,6 @@
 #ifndef __LEVEL_ORDER_H
 #define __LEVEL_ORDER_H
 
-int** levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
+int **levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
 
 #endif  /* __LEVEL_ORDER_H */
