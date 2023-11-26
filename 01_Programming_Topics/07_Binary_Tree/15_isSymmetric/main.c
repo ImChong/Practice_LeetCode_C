@@ -11,6 +11,8 @@
  * https://programmercarl.com/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.html
  */
 
+/* TODO: 重构 */
+
 #include <stdio.h>
 #include <stdbool.h>
 

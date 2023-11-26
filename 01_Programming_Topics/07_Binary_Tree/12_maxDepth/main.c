@@ -10,6 +10,9 @@
  * @Description  : 104. 二叉树的最大深度: https://leetcode.cn/problems/maximum-depth-of-binary-tree/
  * 解法参考: https://leetcode.cn/problems/maximum-depth-of-binary-tree/solutions/349250/er-cha-shu-de-zui-da-shen-du-by-leetcode-solution/
  */
+
+/* TODO: 重构 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

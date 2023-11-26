@@ -1,15 +1,18 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\10_connect\main.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\07_Binary_Tree\10_connect\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 09:11:21
+ * @LastEditTime : 2023-11-26 11:09:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 116. 填充每个节点的下一个右侧节点指针: https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/
  * 解法参考: https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/solutions/446938/tian-chong-mei-ge-jie-dian-de-xia-yi-ge-you-ce-2-4/
  */
+
+/* TODO: 重构 */
+
 #include <stdio.h>
 #include <stdlib.h>
 

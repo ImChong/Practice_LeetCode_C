@@ -21,6 +21,9 @@
  * counts:      [1,    2,   4]
  * averages:    [1,  2.5, 5.5]
  */
+
+/* TODO: 重构 */
+
 #include <stdio.h>
 #include <stdlib.h>
 

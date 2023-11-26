@@ -10,6 +10,9 @@
  * @Description  : 111. 二叉树的最小深度: https://leetcode.cn/problems/minimum-depth-of-binary-tree/
  * 解法参考: https://leetcode.cn/problems/minimum-depth-of-binary-tree/solutions/382646/er-cha-shu-de-zui-xiao-shen-du-by-leetcode-solutio/
  */
+
+/* TODO: 重构 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

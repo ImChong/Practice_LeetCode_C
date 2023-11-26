@@ -21,6 +21,9 @@
  * [1, 3, 7]
  *
  */
+
+/* TODO: 重构 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
