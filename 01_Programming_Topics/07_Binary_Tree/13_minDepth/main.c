@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\13_minDepth\main.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\07_Binary_Tree\13_minDepth\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-03 11:11:06
+ * @LastEditTime : 2023-11-26 17:41:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,22 +12,13 @@
  */
 
 /* TODO: 重构 */
-
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 GLOBAL VARIABLES                               */
-/*                                                                                */
-/**********************************************************************************/
-/* 树节点 */
-struct TreeNode {
-    int val;                    /* 节点的值 */
-    struct TreeNode *left;      /* 左节点 */
-    struct TreeNode *right;     /* 右节点 */
-};
+/* 通用头文件 */
+#include "commonSingleValue.h"
+#include "commonBinaryTree.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -36,13 +27,6 @@ struct TreeNode {
 /***                                                                            ***/
 /**********************************************************************************/
 /**********************************************************************************/
-/*
-    方法一：深度优先搜索
-
-*/
-/* ============================================================================== */
-/* ============================================================================== */
-
 /**
  * @description: 二叉树的最小深度
  * =================================================================================
@@ -52,42 +36,6 @@ struct TreeNode {
 int minDepth(struct TreeNode *root){
     /* TODO */
     return 0;
-}
-
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 新建节点
- * =================================================================================
- * @param {int} val                     节点值
- * @return {struct TreeNode} *node      新建节点
- */
-struct TreeNode *newNode(int val) {
-    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));
-    node->val = val;
-    node->left = NULL;
-    node->right = NULL;
-    return node;
-}
-
-/**
- * @description: 验证答案
- * =================================================================================
- * @param {char} testNum    测试编号
- * @param {int} expect      预期
- * @param {int} actual      实际
- * @return {void}
- */
-void validateSingleValue(char testNum, int expect, int actual) {
-    if (expect == actual) {
-        printf("✅ Test %c Passed\n", testNum);
-    } else {
-        printf("❌ Test %c Failed\n", testNum);
-    }
 }
 
 /**********************************************************************************/
