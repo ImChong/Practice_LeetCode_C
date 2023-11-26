@@ -44,6 +44,8 @@ C language leetcode practice guide:
 > │   └── compileCfg.h
 > └── main.c
 > ```
+>
+> all the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder.
 
 ## Build & Run Code
 
