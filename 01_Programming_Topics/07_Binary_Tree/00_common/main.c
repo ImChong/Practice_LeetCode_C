@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\00_common\main.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\07_Binary_Tree\00_common\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-24 20:28:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 22:50:01
+ * @LastEditTime : 2023-11-26 12:49:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -15,21 +15,6 @@
 #include "commonTypeDef.h"
 #include "commonArray.h"
 #include "commonBinaryTree.h"
-
-/**
- * @description: 打印示意树结构
- * =================================================================================
- * @return {void}
- */
-void printTestTree(void) {
-    printf("Test Tree:\n");
-    printf("      1 \n");
-    printf("     / \\ \n");
-    printf("    2   3 \n");
-    printf("   / \\ / \\ \n");
-    printf("  4  5 6  7 \n");
-    printf("\n");
-}
 
 /**********************************************************************************/
 /*                                                                                */

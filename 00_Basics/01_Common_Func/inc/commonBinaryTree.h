@@ -75,6 +75,7 @@ void freeTreeQueue(TreeQueue *queue);                           /* 释放队列 
 struct TreeNode *newTreeNode(int value);                        /* 创建新节点 */
 struct TreeNode *arrayToTree(int *arr, int arrSize);            /* 将数组转换为树 */
 int *treeToArray(struct TreeNode *root, int *returnSize);       /* 将树转换为数组 */
+void printTestTree(void);                                       /* 打印测试树 */
 void printTree(struct TreeNode *root);                          /* 打印树 */
 void freeTree(struct TreeNode *root);                           /* 释放树的内存 */
 

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:29:33
+ * @LastEditTime : 2023-11-26 12:49:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -442,6 +442,21 @@ int *treeToArray(struct TreeNode *root, int *returnSize) {
     *returnSize = index;
     freeTreeQueue(q);
     return result;
+}
+
+/**
+ * @description: 打印示意树结构
+ * =================================================================================
+ * @return {void}
+ */
+void printTestTree(void) {
+    printf("Test Tree:\n");
+    printf("      1 \n");
+    printf("     / \\ \n");
+    printf("    2   3 \n");
+    printf("   / \\ / \\ \n");
+    printf("  4  5 6  7 \n");
+    printf("\n");
 }
 
 /**
