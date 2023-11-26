@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-18 23:18:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 11:41:58
+ * @LastEditTime : 2023-11-26 11:42:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,9 +30,9 @@
 /**
  * @description: 合并两个有序链表
  * =================================================================================
- * @param {ListNode} *list1
- * @param {ListNode} *list2
- * @return {ListNode} *head
+ * @param {ListNode} *list1     链表1
+ * @param {ListNode} *list2     链表2
+ * @return {ListNode} *head     合并后的链表
  */
 struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
     if (!list1) {
