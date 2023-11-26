@@ -17,6 +17,34 @@ C language leetcode practice guide:
 - g++.exe (Rev7, Built by MSYS2 project) 13.1.0
 - GNU gdb (GDB) 13.2
 
+## Code Structure
+
+> if the question has multiple solutions, the code structure will be as follows:
+>
+> ```txt
+> .
+> ├── cfg
+> │   ├── compileCfg.h
+> │   └── methodCfg.h
+> ├── docs
+> │   └── sketch.drawio
+> ├── inc
+> │   └── generateMatrix.h
+> ├── main.c
+> └── src
+>     ├── generateMatrix_layer_simulation.c
+>     └── generateMatrix_simulation.c
+> ```
+>
+> if the question has only one solution, the code structure will be as follows:
+>
+> ```txt
+> .
+> ├── cfg
+> │   └── compileCfg.h
+> └── main.c
+> ```
+
 ## Build & Run Code
 
 ### VSCode Native - Build & Run Current File
