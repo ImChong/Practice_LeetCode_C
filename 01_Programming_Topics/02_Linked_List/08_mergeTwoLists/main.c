@@ -4,8 +4,11 @@
 
 /* TODO: 重构 */
 
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
+/* 通用头文件 */
+#include "commonLinkedList.h"
 
 struct ListNode {
     int val;
