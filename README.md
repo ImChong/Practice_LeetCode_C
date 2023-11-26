@@ -76,34 +76,37 @@ for the code to accomplish the above behavior please see [source code](./04_Misc
 
 ## Progress
 
-- [x] .
-- [x] ├── 00_Basics
-- [x] │   ├── 00_VScode_Settings
-- [x] │   └── 01_Common_Func
-- [x] ├── 01_Programmercarl_Series
-- [x] │   ├── 01_Array
-- [x] │   ├── 02_Linked_List
-- [x] │   ├── 03_Hash_Table
-- [ ] │   ├── 04_String
-- [ ] │   ├── 05_Double_Pointer
-- [x] │   ├── 06_Stack_Queue
-- [x] │   ├── 07_Binary_Tree
-- [ ] │   ├── 08_Backtracking
-- [ ] │   ├── 09_Greedy
-- [ ] │   ├── 10_Dynamic_Programming
-- [ ] │   ├── 11_Monotone_Stack
-- [ ] │   └── 12_Graph_Theory
-- [x] ├── 02_Labuladong_Series
-- [x] │   ├── 01_Linked_List
-- [ ] │   ├── 02_Array
-- [ ] │   ├── 03_Binary_Tree
-- [ ] │   ├── 04_Dynamic_Programming
-- [ ] │   ├── 05_Backtracking
-- [ ] │   ├── 06_Breadth_First_Search
-- [ ] │   ├── 07_Binary_Search
-- [ ] │   ├── 08_Sliding_Window
-- [ ] │   ├── 09_Buy_And_Sell
-- [ ] │   ├── 10_House_Robber
-- [ ] │   └── 11_N_Sum
-- [x] ├── LICENSE
-- [x] └── README.md
+[x] .
+[x] ├── 00_Basics
+[x] │   ├── 00_VScode_Settings_Backup
+[x] │   ├── 01_Common_Func
+[x] │   └── README.md
+[x] ├── 01_Programming_Topics
+[x] │   ├── 01_Array
+[x] │   ├── 02_Linked_List
+[x] │   ├── 03_Hash_Table
+[x] │   ├── 04_String
+[ ] │   ├── 05_Double_Pointer
+[ ] │   ├── 06_Stack_Queue
+[x] │   ├── 07_Binary_Tree
+[ ] │   ├── 08_Backtracking
+[ ] │   ├── 09_Greedy
+[ ] │   ├── 10_Dynamic_Programming
+[ ] │   ├── 11_Monotone_Stack
+[ ] │   ├── 12_Graph_Theory
+[ ] │   ├── 13_Breadth_First_Search
+[ ] │   ├── 14_Binary_Search
+[ ] │   ├── 15_Sliding_Window
+[ ] │   ├── 16_Buy_And_Sell
+[ ] │   ├── 17_House_Robber
+[ ] │   ├── 18_N_Sum
+[x] │   └── README.md
+[x] ├── 02_Real_World_Problem
+[ ] │   ├── Cross_Section_Line_Problem
+[x] │   └── README.md
+[x] ├── 03_Misc
+[x] │   ├── 00_Clean_Exe
+[x] │   ├── 01_Programming_Notes
+[x] │   └── README.md
+[x] ├── LICENSE
+[x] └── README.md
