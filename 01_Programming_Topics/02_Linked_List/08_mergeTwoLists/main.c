@@ -1,6 +1,16 @@
-/* 21. 合并两个有序链表: https://leetcode.cn/problems/merge-two-sorted-lists/ */
-/* https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/ */
-/* https://labuladong.github.io/algo/di-ling-zh-bfe1b/shuang-zhi-0f7cc/ */
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\02_Linked_List\08_mergeTwoLists\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-08-18 23:18:36
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-11-26 11:41:58
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 21. 合并两个有序链表: https://leetcode.cn/problems/merge-two-sorted-lists/
+ * https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
+ * https://labuladong.github.io/algo/di-ling-zh-bfe1b/shuang-zhi-0f7cc/
+ */
 
 /* TODO: 重构 */
 
@@ -10,11 +20,20 @@
 /* 通用头文件 */
 #include "commonLinkedList.h"
 
-struct ListNode {
-    int val;
-    struct ListNode *next;
-};
-
+/**********************************************************************************/
+/**********************************************************************************/
+/***                                                                            ***/
+/***                               TARGET FUNCTION                              ***/
+/***                                                                            ***/
+/**********************************************************************************/
+/**********************************************************************************/
+/**
+ * @description: 合并两个有序链表
+ * =================================================================================
+ * @param {ListNode} *list1
+ * @param {ListNode} *list2
+ * @return {ListNode} *head
+ */
 struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
     if (!list1) {
         return list2;
