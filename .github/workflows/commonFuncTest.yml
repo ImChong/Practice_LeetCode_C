@@ -12,9 +12,8 @@ jobs:
       # Runner
       runs-on: ubuntu-latest
       steps:
-        # Step
-        - name: Get Source Code
-          run: echo "Get Source Code"
+        # Step: Checkout source code
+        - uses: actions/checkout@v2
 
         # Step
         - name: Check Code Style
@@ -25,9 +24,8 @@ jobs:
       # Runner
       runs-on: ubuntu-latest
       steps:
-        # Step
-        - name: Get Source Code
-          run: echo "Get Source Code"
+        # Step: Checkout source code
+        - uses: actions/checkout@v2
 
         # Step
         - name: Test Common Functions
