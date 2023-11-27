@@ -7,12 +7,10 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-    # Job: Get Source Code
-    Test-Common-Functions:
-
+    # Job: Check Code Style
+    Check-Code-Style:
       # The type of runner that the job will run on
       runs-on: ubuntu-latest
-
       steps:
         # Step: Get Source Code
         - name: Get Source Code
@@ -21,6 +19,15 @@ jobs:
         # Step: Check Code Style
         - name: Check Code Style
           run: echo "Check Code Style"
+
+    # Job: Test Common Functions
+    Test-Common-Functions:
+      # The type of runner that the job will run on
+      runs-on: ubuntu-latest
+      steps:
+        # Step: Get Source Code
+        - name: Get Source Code
+          run: echo "Get Source Code"
 
         # Step: Test Common Funcs
         - name: Test Common Funcs
