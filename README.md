@@ -40,7 +40,7 @@ C language leetcode practice overall folder structure:
 >     ├── solutionName_methodName01.c           /* solution method 01 source file */
 >     ├── solutionName_methodName02.c           /* solution method 02 source file */
 >     ├── ...
->     └── solutionName_methodNamexx.c           /* solution method xx source file */
+>     └── solutionName_methodNameXX.c           /* solution method XX source file */
 > ```
 >
 > if the question has only one solution, the code structure will be as follows:
