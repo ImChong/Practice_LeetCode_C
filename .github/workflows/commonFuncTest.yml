@@ -29,7 +29,7 @@ jobs:
         - name: Get Source Code
           run: echo "Get Source Code"
 
-        # Step: Test Common Funcs
-        - name: Test Common Funcs
+        # Step: Test Common Functions
+        - name: Test Common Functions
           run: echo "Test all common Functions"
 
