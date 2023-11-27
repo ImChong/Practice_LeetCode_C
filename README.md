@@ -9,11 +9,11 @@ C language leetcode practice overall folder structure:
 - [Basics](00_Basics/) - Prerequisites
   - [VScode_Settings_Backup](00_Basics/00_VScode_Settings_Backup) - VScode settings backup
   - [Common_Func](00_Basics/01_Common_Func/) - Common c function modules
+  - [Clean_Exe](00_Basics/02_Clean_Exe/) - Executables to clean all .exe files
 - [Programming_Topics](Programming_Topics/) - [代码随想录系列](https://programmercarl.com/) / [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/)
 - [Real_World_Problem](02_Real_World_Problem/) - Real world problem
 - [Misc](03_Misc/) - Miscellaneous
-  - [Clean_Exe](03_Misc/00_Clean_Exe/) - Executables to clean all .exe files
-  - [Programming_Notes](03_Misc/01_Programming_Notes/) - Programming notes
+  - [Programming_Notes](03_Misc/00_Programming_Notes/) - Programming notes
 
 ## Build Tool Versions
 
