@@ -32,4 +32,3 @@ jobs:
         # Step
         - name: Test Common Functions
           run: echo "Test all common Functions"
-
