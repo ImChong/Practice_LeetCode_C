@@ -1,6 +1,7 @@
 # Practice_LeetCode_C
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Manual workflow](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/manual.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/manual.yml)
 
 ## Workspace Structure
 
