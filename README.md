@@ -32,7 +32,8 @@ C language leetcode practice overall folder structure:
 > │   ├── compileCfg.h                          /* compile configuration */
 > │   └── methodCfg.h                           /* method configuration */
 > ├── docs                                  /* documentation folder */
-> │   └── sketch.drawio                         /* drawing sketch file */
+> │   ├── sketch.drawio                         /* drawing sketch file */
+> │   └── sketch.excalidraw                     /* drawing sketch file */
 > ├── inc                                   /* header folder */
 > │   └── solutionName.h                        /* solution header file */
 > ├── main.c                                /* main & test source file */
