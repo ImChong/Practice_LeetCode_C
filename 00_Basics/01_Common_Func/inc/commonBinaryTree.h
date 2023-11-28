@@ -50,17 +50,22 @@ struct TreeListNode {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-void preOrder(struct TreeNode *node, int *ret, int *returnSize);                /* 前序遍历 */
+/* ============================================================================== */
+/* 前序遍历 */
+/* ============================================================================== */
+void preOrder(struct TreeNode *node, int *ret, int *returnSize);
 int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize);
 int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize);
 /* ============================================================================== */
+/* 中序遍历 */
 /* ============================================================================== */
-void inOrder(struct TreeNode *node, int *ret, int *returnSize);                 /* 中序遍历 */
+void inOrder(struct TreeNode *node, int *ret, int *returnSize);
 int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize);
 int *inorderTraversal_iteration(struct TreeNode *root, int *returnSize);
 /* ============================================================================== */
+/* 后序遍历 */
 /* ============================================================================== */
-void postOrder(struct TreeNode *node, int *ret, int *returnSize);               /* 后序遍历 */
+void postOrder(struct TreeNode *node, int *ret, int *returnSize);
 int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize);
 int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);
 
@@ -69,6 +74,9 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);
 /*                                 HELPER FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
+/* ============================================================================== */
+/* 树队列操作 */
+/* ============================================================================== */
 TreeArrQueue *newTreeArrQueue(int queueSize);                         /* 创建队列 */
 void enTreeArrQueue(TreeArrQueue *queue, struct TreeNode *node);      /* 将节点加入队列 */
 struct TreeNode *deTreeArrQueue(TreeArrQueue *queue);                 /* 从队列中取出一个节点 */
@@ -77,6 +85,11 @@ int isTreeArrQueueFull(TreeArrQueue *queue);                          /* 判断�
 void printTreeArrQueue(TreeArrQueue *queue);                          /* 打印队列 */
 void freeTreeArrQueue(TreeArrQueue *queue);                           /* 释放队列 */
 /* ============================================================================== */
+/* 树链表操作 */
+/* ============================================================================== */
+/* TODO */
+/* ============================================================================== */
+/* 树操作 */
 /* ============================================================================== */
 struct TreeNode *newTreeNode(int value);                        /* 创建新节点 */
 struct TreeNode *arrayToTree(int *arr, int arrSize);            /* 将数组转换为树 */
