@@ -77,13 +77,13 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);
 /* ============================================================================== */
 /* 树队列操作 */
 /* ============================================================================== */
-TreeArrQueue *newTreeArrQueue(int queueSize);                         /* 创建队列 */
-void enTreeArrQueue(TreeArrQueue *queue, struct TreeNode *node);      /* 将节点加入队列 */
-struct TreeNode *deTreeArrQueue(TreeArrQueue *queue);                 /* 从队列中取出一个节点 */
-int isTreeArrQueueEmpty(TreeArrQueue *queue);                         /* 判断队列是否为空 */
-int isTreeArrQueueFull(TreeArrQueue *queue);                          /* 判断队列是否为满 */
-void printTreeArrQueue(TreeArrQueue *queue);                          /* 打印队列 */
-void freeTreeArrQueue(TreeArrQueue *queue);                           /* 释放队列 */
+TreeArrQueue *newTreeArrQueue(int queueSize);                       /* 创建队列 */
+void enTreeArrQueue(TreeArrQueue *queue, struct TreeNode *node);    /* 将节点加入队列 */
+struct TreeNode *deTreeArrQueue(TreeArrQueue *queue);               /* 从队列中取出一个节点 */
+int isTreeArrQueueEmpty(TreeArrQueue *queue);                       /* 判断队列是否为空 */
+int isTreeArrQueueFull(TreeArrQueue *queue);                        /* 判断队列是否为满 */
+void printTreeArrQueue(TreeArrQueue *queue);                        /* 打印队列 */
+void freeTreeArrQueue(TreeArrQueue *queue);                         /* 释放队列 */
 /* ============================================================================== */
 /* 树链表操作 */
 /* ============================================================================== */
@@ -91,12 +91,12 @@ void freeTreeArrQueue(TreeArrQueue *queue);                           /* 释放�
 /* ============================================================================== */
 /* 树操作 */
 /* ============================================================================== */
-struct TreeNode *newTreeNode(int value);                        /* 创建新节点 */
-struct TreeNode *arrayToTree(int *arr, int arrSize);            /* 将数组转换为树 */
-int *treeToArray(struct TreeNode *root, int *returnSize);       /* 将树转换为数组 */
-void printTestTree(void);                                       /* 打印测试树 */
-void printTree(struct TreeNode *root);                          /* 打印树 */
-void freeTree(struct TreeNode *root);                           /* 释放树的内存 */
+struct TreeNode *newTreeNode(int value);                            /* 创建新节点 */
+struct TreeNode *arrayToTree(int *arr, int arrSize);                /* 将数组转换为树 */
+int *treeToArray(struct TreeNode *root, int *returnSize);           /* 将树转换为数组 */
+void printTestTree(void);                                           /* 打印测试树 */
+void printTree(struct TreeNode *root);                              /* 打印树 */
+void freeTree(struct TreeNode *root);                               /* 释放树的内存 */
 
 
 #endif  /* __COMMON_BINARY_TREE_H */
