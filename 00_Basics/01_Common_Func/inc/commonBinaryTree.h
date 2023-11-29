@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-30 00:25:16
+ * @LastEditTime : 2023-11-30 00:26:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -94,6 +94,12 @@ void freeTreeArrQueue(TreeArrQueue *queue);                         /* 释放队
 /* 树链表队列操作 */
 /* ============================================================================== */
 TreeListQueue *newTreeListQueue(void);                              /* 创建队列 */
+void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node);  /* 将节点加入队列 */
+struct TreeNode *deTreeListQueue(TreeListQueue *queue);             /* 从队列中取出一个节点 */
+int isTreeListQueueEmpty(TreeListQueue *queue);                     /* 判断队列是否为空 */
+int isTreeListQueueFull(TreeListQueue *queue);                      /* 判断队列是否为满 */
+void printTreeListQueue(TreeListQueue *queue);                      /* 打印队列 */
+void freeTreeListQueue(TreeListQueue *queue);                       /* 释放队列 */
 /* ============================================================================== */
 /* 树操作 */
 /* ============================================================================== */
