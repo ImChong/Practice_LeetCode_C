@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-01 01:13:07
+ * @LastEditTime : 2023-12-01 01:15:06
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -406,8 +406,8 @@ TreeListQueue *newTreeListQueue(void) {
 /**
  * @description: 将节点加入队列
  * =================================================================================
- * @param {TreeListQueue} *queue
- * @param {TreeNode} *node
+ * @param {TreeListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeNode} *node          节点指针
  * @return {void}
  */
 void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node) {
@@ -417,37 +417,37 @@ void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node) {
 /**
  * @description: 从队列中取出一个节点
  * =================================================================================
- * @param {TreeListQueue} *queue
- * @return {TreeNode} *node
+ * @param {TreeListQueue} *queue    二叉树节点链表队列指针
+ * @return {TreeNode} *node         节点指针
  */
 struct TreeNode *deTreeListQueue(TreeListQueue *queue) {
 
 }
 
 /**
- * @description:
+ * @description: 判断队列是否为空
  * =================================================================================
- * @param {TreeListQueue} *queue
- * @return {int}
+ * @param {TreeListQueue} *queue    二叉树节点链表队列指针
+ * @return {int}                    如果队列为空，返回1；否则返回0
  */
 int isTreeListQueueEmpty(TreeListQueue *queue) {
 
 }
 
 /**
- * @description:
+ * @description: 判断队列是否为满
  * =================================================================================
- * @param {TreeListQueue} *queue
- * @return {int}
+ * @param {TreeListQueue} *queue    二叉树节点链表队列指针
+ * @return {int}                    如果队列为满，返回1；否则返回0
  */
 int isTreeListQueueFull(TreeListQueue *queue) {
 
 }
 
 /**
- * @description:
+ * @description: 打印二叉树节点链表队列
  * =================================================================================
- * @param {TreeListQueue} *queue
+ * @param {TreeListQueue} *queue    二叉树节点链表队列指针
  * @return {void}
  */
 void printTreeListQueue(TreeListQueue *queue) {
@@ -455,9 +455,9 @@ void printTreeListQueue(TreeListQueue *queue) {
 }
 
 /**
- * @description:
+ * @description: 释放二叉树节点链表队列的空间
  * =================================================================================
- * @param {TreeListQueue} *queue
+ * @param {TreeListQueue} *queue    二叉树节点链表队列指针
  * @return {void}
  */
 void freeTreeListQueue(TreeListQueue *queue) {
