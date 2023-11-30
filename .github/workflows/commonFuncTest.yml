@@ -1,4 +1,4 @@
-# This is a workflow to get source code, check code style and run tests of common functions
+# This is a workflow to get source code and run tests of common functions
 name: Common Function Tests
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI or API.

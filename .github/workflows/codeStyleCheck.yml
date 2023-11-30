@@ -1,7 +1,12 @@
+# This is a workflow to get source code and check the coding style using clang-format and cppcheck
 name: Coding Style Checks
 
 on:
-    workflow_dispatch
+    # # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+    # Schedule a workflow to run automatically
+    schedule:
+      - cron:  '0 2 * * *'
 
 jobs:
     code-style-check:
