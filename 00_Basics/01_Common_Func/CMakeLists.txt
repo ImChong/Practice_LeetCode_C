@@ -1,6 +1,7 @@
 # 将所有源文件添加到一个变量中
 set(SRC_FILES
     src/commonArray.c
+    # src/commonBinaryTree.c
     # TODO: 添加其他源文件
 )
 
@@ -13,4 +14,4 @@ include_directories(inc/commonDef)
 add_library(common_func ${SRC_FILES})
 
 # 生成可执行测试文件
-add_executable(test_common_func test/main.c)
+# TODO：调用 google test对所有的.c文件进行测试
