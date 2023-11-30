@@ -1,4 +1,6 @@
+# 设置CMake最低版本
 cmake_minimum_required(VERSION 3.20)
+# 设置项目名称
 project(LeetCodePractice)
 
 # 设置可执行文件输出目录
