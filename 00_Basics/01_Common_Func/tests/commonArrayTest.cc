@@ -3,13 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-01 02:43:31
+ * @LastEditTime : 2023-12-01 03:00:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用数组单元测试
  */
+#include <stdio.h>
 
 int main() {
     // TODO
+    printf("commonArrayTest.cc\n");
 }

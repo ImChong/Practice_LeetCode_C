@@ -42,4 +42,6 @@ jobs:
 
         # Step: Run all executables in the build/bin directory
         - name: Run executables
-          run: find ./build/bin -executable -type f -exec {} \;
+          run: |
+            find ./build/bin -executable -type f -exec {} \;
+            echo "All executables have been run!"
