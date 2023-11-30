@@ -1,4 +1,4 @@
-name: C Coding Style Checks
+name: Coding Style Checks
 
 on:
     workflow_dispatch
