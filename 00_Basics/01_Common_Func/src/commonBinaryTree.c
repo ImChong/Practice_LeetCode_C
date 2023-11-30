@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-01 01:15:06
+ * @LastEditTime : 2023-12-01 02:55:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -41,6 +41,7 @@
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
+#include "limits.h"
 /* 常用头文件 */
 #include "commonBinaryTree.h"
 
