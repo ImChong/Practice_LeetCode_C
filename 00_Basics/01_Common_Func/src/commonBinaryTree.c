@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 18:10:20
+ * @LastEditTime : 2023-12-01 01:12:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -293,6 +293,9 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
 /*                                 HELPER FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
+/* ============================================================================== */
+/* 树列表队列操作 */
+/* ============================================================================== */
 /**
  * @description: 创建一个新的二叉树节点队列
  * =================================================================================
@@ -389,8 +392,57 @@ void freeTreeArrQueue(TreeArrQueue *queue) {
 }
 
 /* ============================================================================== */
+/* 树链表队列操作 */
 /* ============================================================================== */
+/**
+ * @description:
+ * =================================================================================
+ * @return {TreeListQueue} *queue   新的二叉树节点链表队列指针
+ */
+TreeListQueue *newTreeListQueue(void) {
 
+}
+
+/**
+ * @description:
+ * =================================================================================
+ * @param {TreeListQueue} *queue
+ * @param {TreeNode} *node
+ * @return {void}
+ */
+void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node) {
+
+}
+
+/**
+ * @description:
+ * =================================================================================
+ * @param {TreeListQueue} *queue
+ * @return {TreeNode} *node
+ */
+struct TreeNode *deTreeListQueue(TreeListQueue *queue) {
+
+}
+
+int isTreeListQueueEmpty(TreeListQueue *queue) {
+
+}
+
+int isTreeListQueueFull(TreeListQueue *queue) {
+
+}
+
+void printTreeListQueue(TreeListQueue *queue) {
+
+}
+
+void freeTreeListQueue(TreeListQueue *queue) {
+
+}
+
+/* ============================================================================== */
+/* 树操作 */
+/* ============================================================================== */
 /**
  * @description: 创建一个新的树节点
  * =================================================================================
