@@ -8,24 +8,13 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
     # Job
-    Check-Code-Style:
-      # Runner
-      runs-on: ubuntu-latest
-      steps:
-        # Step: Checkout source code
-        - uses: actions/checkout@v2
-
-        # Step
-        - name: Check Code Style
-          run: echo "Check Code Style"
-
-    # Job
     Test-Common-Functions:
       # Runner
       runs-on: ubuntu-latest
       steps:
         # Step: Checkout source code
-        - uses: actions/checkout@v2
+        - name: Checkout source code
+          uses: actions/checkout@v2
 
         # Step
         - name: Test Common Functions
