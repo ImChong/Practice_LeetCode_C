@@ -16,6 +16,22 @@ jobs:
         - name: Checkout source code
           uses: actions/checkout@main
 
-        # Step
-        - name: Test Common Functions
-          run: echo "Test all common Functions"
+        # Step: Setup CMake
+        - name: Setup CMake
+          uses: jwlawson/actions-setup-cmake@v1.9
+
+        # Step: Cmake version
+        - name: Cmake version
+          run: cmake --version
+
+        # Step: Build the project
+        - name: Build the project
+          run: |
+            mkdir build
+            cd build
+            cmake ..
+            cmake --build .
+
+        # Step: Run all executables in the build/bin directory
+        - name: Run executables
+          run: find ./build/bin -executable -type f -exec {} \;
