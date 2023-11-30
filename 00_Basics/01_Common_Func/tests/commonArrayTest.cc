@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-01 03:00:28
+ * @LastEditTime : 2023-12-01 03:03:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,5 +13,5 @@
 
 int main() {
     // TODO
-    printf("commonArrayTest.cc\n");
+    printf("Run commonArrayTest.cc\n");
 }
