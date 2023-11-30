@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-01 01:12:13
+ * @LastEditTime : 2023-12-01 01:13:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -395,7 +395,7 @@ void freeTreeArrQueue(TreeArrQueue *queue) {
 /* 树链表队列操作 */
 /* ============================================================================== */
 /**
- * @description:
+ * @description: 创建一个新的二叉树节点链表队列
  * =================================================================================
  * @return {TreeListQueue} *queue   新的二叉树节点链表队列指针
  */
@@ -404,7 +404,7 @@ TreeListQueue *newTreeListQueue(void) {
 }
 
 /**
- * @description:
+ * @description: 将节点加入队列
  * =================================================================================
  * @param {TreeListQueue} *queue
  * @param {TreeNode} *node
@@ -415,7 +415,7 @@ void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node) {
 }
 
 /**
- * @description:
+ * @description: 从队列中取出一个节点
  * =================================================================================
  * @param {TreeListQueue} *queue
  * @return {TreeNode} *node
