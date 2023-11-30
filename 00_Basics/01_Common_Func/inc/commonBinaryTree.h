@@ -60,22 +60,22 @@ typedef struct {
 /* 前序遍历 */
 /* ============================================================================== */
 void preOrder(struct TreeNode *node, int *ret, int *returnSize);
-int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize);
-int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize);
+int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize);   /* 递归实现 */
+int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize);   /* 迭代实现 */
 
 /* ============================================================================== */
 /* 中序遍历 */
 /* ============================================================================== */
 void inOrder(struct TreeNode *node, int *ret, int *returnSize);
-int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize);
-int *inorderTraversal_iteration(struct TreeNode *root, int *returnSize);
+int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize);    /* 递归实现 */
+int *inorderTraversal_iteration(struct TreeNode *root, int *returnSize);    /* 迭代实现 */
 
 /* ============================================================================== */
 /* 后序遍历 */
 /* ============================================================================== */
 void postOrder(struct TreeNode *node, int *ret, int *returnSize);
-int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize);
-int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);
+int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize);  /* 递归实现 */
+int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);  /* 迭代实现 */
 
 /* ============================================================================== */
 /* 层序遍历 */
