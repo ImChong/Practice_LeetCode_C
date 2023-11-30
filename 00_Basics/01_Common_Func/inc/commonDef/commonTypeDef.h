@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 12:30:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 11:22:01
+ * @LastEditTime : 2023-12-01 02:49:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,6 +34,7 @@
 #define INLINE_FUNC             inline
 
 /* 数据类型宏 */
+#ifndef int8_t || uint8_t || int16_t || uint16_t || int32_t || uint32_t || int64_t || uint64_t
 typedef signed char             int8_t;
 typedef unsigned char           uint8_t;
 typedef short                   int16_t;
@@ -42,6 +43,7 @@ typedef int                     int32_t;
 typedef unsigned                uint32_t;
 typedef long long               int64_t;
 typedef unsigned long long      uint64_t;
+#endif
 
 /**********************************************************************************/
 /*                                                                                */
