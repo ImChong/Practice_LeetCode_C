@@ -7,17 +7,22 @@ jobs:
     code-check:
       runs-on: ubuntu-latest
       steps:
+        # step to checkout the source code
         - name: Checkout source code
           uses: actions/checkout@v2
 
+        # step to install clang-format and cppcheck
         - name: Install Clang Format
           run: sudo apt-get install -y clang-format
 
+        # step to install cppcheck
         - name: Install Cppcheck
           run: sudo apt-get install -y cppcheck
 
+        # step to run clang-format to check the code style
         - name: Run Clang Format
           run: clang-format --version && find . -name '*.c' -exec clang-format -i -style=llvm {} \;
 
+        # step to run cppcheck to check the code style
         - name: Run Cppcheck
           run: find . -name '*.c' -exec cppcheck --enable=all --error-exitcode=1 {} \;
