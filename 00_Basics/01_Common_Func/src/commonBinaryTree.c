@@ -424,18 +424,42 @@ struct TreeNode *deTreeListQueue(TreeListQueue *queue) {
 
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {TreeListQueue} *queue
+ * @return {int}
+ */
 int isTreeListQueueEmpty(TreeListQueue *queue) {
 
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {TreeListQueue} *queue
+ * @return {int}
+ */
 int isTreeListQueueFull(TreeListQueue *queue) {
 
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {TreeListQueue} *queue
+ * @return {void}
+ */
 void printTreeListQueue(TreeListQueue *queue) {
 
 }
 
+/**
+ * @description:
+ * =================================================================================
+ * @param {TreeListQueue} *queue
+ * @return {void}
+ */
 void freeTreeListQueue(TreeListQueue *queue) {
 
 }
