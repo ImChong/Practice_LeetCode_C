@@ -4,6 +4,18 @@ name: Coding Style Checks
 on:
     # # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
+    # Allows you to run this workflow every time a commit is pushed to the repository
+    push:
+      paths:
+        - '00_Basics/01_Common_Func/inc/**'
+        - '00_Basics/01_Common_Func/src/**'
+        - '.github/workflows/**'
+    # Allows you to run this workflow every time a pull request is opened or updated
+    pull_request:
+      paths:
+        - '00_Basics/01_Common_Func/inc/**'
+        - '00_Basics/01_Common_Func/src/**'
+        - '.github/workflows/**'
     # Schedule a workflow to run automatically
     schedule:
       - cron:  '0 2 * * *'
