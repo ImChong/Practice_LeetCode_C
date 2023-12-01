@@ -49,3 +49,12 @@ jobs:
         # step to run cppcheck to check the code style
         - name: Run Cppcheck
           run: find . -name '*.c' -exec cppcheck --enable=all --error-exitcode=1 {} \;
+
+# TODO
+# SecMissile
+# Secbrella
+# clangtidy
+# cmetrics
+# codecheck
+# codemars
+# codingStyle
