@@ -102,7 +102,29 @@
                     "${workspaceFolder}/00_Basics/02_Clean_Exe/killexe.bat"
                 ]
             },
-            "problemMatcher":"$gcc",                                                /* 指定错误匹配模式 */
-        }
+            "problemMatcher": [],                                                   /* 指定错误匹配模式 */
+        },
+        /* 清除：清除 build 文件夹 */
+        {
+            "label": "Clean Build Folder",                                          /* 任务名称 */
+            "detail": "Clean Build Folder.",                                        /* 任务描述 */
+            "type": "shell",
+            "linux": {          /* Linux下的清除指令 */
+                "command": "rm",                                                    /* 清除指令 */
+                "args": [
+                    "-rf",                                                          /* 递归清除 */
+                    "${workspaceFolder}/build"                                      /* 指定清除目录 */
+                ],
+            },
+            "windows": {        /* Windows下的清除指令 */
+                "command": "Remove-Item",                                           /* 清除指令 */
+                "args": [
+                    "-Recurse",                                                     /* 递归清除 */
+                    "-Force",                                                       /* 安静模式 */
+                    "${workspaceFolder}/build"                                      /* 指定清除目录 */
+                ],
+            },
+            "problemMatcher": [],                                                   /* 指定错误匹配模式 */
+        },
     ]
 }
