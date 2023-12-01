@@ -14,7 +14,6 @@ link_directories(${CMAKE_BINARY_DIR}/ThirdParty/lib)
 
 # 添加Google Test的依赖
 enable_testing()
-# add_subdirectory(${CMAKE_BINARY_DIR}/ThirdParty/src/googletest)
 
 # 添加头文件路径
 include_directories(cfg)
