@@ -28,7 +28,7 @@ jobs:
         - name: Checkout source code
           uses: actions/checkout@main
 
-        # step to install clang-format and cppcheck
+        # step to install clang-format
         - name: Install Clang Format
           run: sudo apt-get install -y clang-format
 
@@ -36,9 +36,15 @@ jobs:
         - name: Install Cppcheck
           run: sudo apt-get install -y cppcheck
 
+        # Step: clang-format and cppcheck version
+        - name: Tool Versions
+          run: |
+            clang-format --version
+            cppcheck --version
+
         # step to run clang-format to check the code style
         - name: Run Clang Format
-          run: clang-format --version && find . -name '*.c' -exec clang-format -i -style=llvm {} \;
+          run: find . -name '*.c' -exec clang-format -i -style=llvm {} \;
 
         # step to run cppcheck to check the code style
         - name: Run Cppcheck
