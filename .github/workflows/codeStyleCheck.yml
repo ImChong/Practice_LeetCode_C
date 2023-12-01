@@ -36,7 +36,7 @@ jobs:
         - name: Install Cppcheck
           run: sudo apt-get install -y cppcheck
 
-        # Step: clang-format and cppcheck version
+        # Step: Tool Versions
         - name: Tool Versions
           run: |
             clang-format --version
