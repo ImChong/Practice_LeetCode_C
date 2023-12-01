@@ -4,6 +4,14 @@ name: Coding Style Checks
 on:
     # # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
+    # Allows you to run this workflow every time a commit is pushed to the repository
+    push:
+      paths:
+        - '.github/workflows/codeStyleCheck.yml'
+    # Allows you to run this workflow every time a pull request is opened or updated
+    pull_request:
+      paths:
+        - '.github/workflows/codeStyleCheck.yml'
     # Schedule a workflow to run automatically
     schedule:
       - cron:  '0 2 * * *'
