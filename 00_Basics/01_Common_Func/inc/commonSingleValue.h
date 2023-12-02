@@ -3,14 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 13:42:27
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 17:43:11
+ * @LastEditTime : 2023-12-02 17:58:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用单值函数头文件
  */
-#ifndef 00_BASICS_01_COMMON_FUNC_INC_COMMONSINGLEVALUE_H_
-#define 00_BASICS_01_COMMON_FUNC_INC_COMMONSINGLEVALUE_H_
+#ifndef COMMON_SINGLE_VALUE_H   /* NOLINT(build/header_guard) */
+#define COMMON_SINGLE_VALUE_H   /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -40,4 +40,4 @@
 void validateSingleValue(char testNum, int expect, int actual);     /* 验证单个值 */
 
 
-#endif  /* 00_BASICS_01_COMMON_FUNC_INC_COMMONSINGLEVALUE_H_ */
+#endif  /* COMMON_SINGLE_VALUE_H */ /* NOLINT(build/header_guard) */
