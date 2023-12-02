@@ -3,14 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-08 21:49:14
+ * @LastEditTime : 2023-12-02 18:31:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用虚拟头节点链表头文件 - 使用虚拟头节点
  */
-#ifndef __COMMON_LINKED_LIST_DUMMY_H
-#define __COMMON_LINKED_LIST_DUMMY_H
+#ifndef __COMMON_LINKED_LIST_DUMMY_H    /* NOLINT(build/header_guard) */
+#define __COMMON_LINKED_LIST_DUMMY_H    /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -36,10 +36,14 @@ DummyLinkedList *myLinkedListCreate(void);     /* 创建使用虚拟头节点的
 int dummyLinkedListGet(DummyLinkedList *dummyHead, int index);        /* 获取链表中第index个节点的值 */
 void dummyLinkedListAddAtHead(DummyLinkedList *dummyHead, int val);       /* 在链表头部添加一个节点 */
 void dummyLinkedListAddAtTail(DummyLinkedList *dummyHead, int val);       /* 在链表尾部添加一个节点 */
-void dummyLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val);       /* 在链表中第index个节点之前添加一个值为val的节点 */
+void dummyLinkedListAddAtIndex(DummyLinkedList *dummyHead,
+                                int index,
+                                int val);               /* 在链表中第index个节点之前添加一个值为val的节点 */
 void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index);     /* 删除链表中第index个节点 */
 void dummyLinkedListDeleteElement(DummyLinkedList *dummyHead, int val);       /* 从链表中删除值为val的所有节点 */
-int *dummyLinkedListGetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize);   /* 获取链表中值为val的所有节点的索引 */
+int *dummyLinkedListGetIndexes(DummyLinkedList *dummyHead,
+                                int val,
+                                int *returnSize);       /* 获取链表中值为val的所有节点的索引 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -58,4 +62,4 @@ void dummyLinkedListFree(DummyLinkedList *dummyHead);     /* 释放链表 */
 void validateDummyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual);        /* 验证链表 */
 
 
-#endif  /* __COMMON_LINKED_LIST_DUMMY_H */
+#endif  /* __COMMON_LINKED_LIST_DUMMY_H */   /* NOLINT(build/header_guard) */
