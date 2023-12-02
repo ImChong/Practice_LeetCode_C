@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 15:00:36
+ * @LastEditTime : 2023-12-02 18:50:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,7 +30,7 @@
  * @return {DummyLinkedList *} dummyHead    返回虚拟头节点
  */
 DummyLinkedList *myLinkedListCreate(void) {
-    DummyLinkedList *dummyHead = (DummyLinkedList*)malloc(sizeof(DummyLinkedList));    /* 为虚拟头节点分配空间 */
+    DummyLinkedList *dummyHead = (DummyLinkedList*)malloc(sizeof(DummyLinkedList)); /* NOLINT(readability/casting) */
     dummyHead->head = NULL;       /* 初始化链表头 */
     dummyHead->size = 0;          /* 初始化链表长度 */
     return dummyHead;             /* 返回虚拟头节点 */
@@ -145,12 +145,12 @@ void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index) {
     if (index == 0) {                                   /* 如果删除头节点 */
         dummyHead->head = curr->next;                       /* 将虚拟头节点所指向的链表头节点指向当前指针的下一节点 */
     } else {                                            /* 如果删除中间节点 */
-        for (int i = 0; i < index - 1; i++) {               /* 因为目标节点自己本身要占据一个节点位置，所以循环索引 - 1 次 */
+        for (int i = 0; i < index - 1; i++) {               /* 因为目标节点自己本身要占据一个节点位置，所以循环索引-1次 */
             curr = curr->next;                                  /* 指针向后移动一位 */
         }
         if (curr->next) {                                   /* 如果当前指针所指节点的下一节点存在*/
             struct ListNode* tmp = curr->next;                  /* 获取待删除节点的指针 */
-            curr->next = curr->next->next;                      /* 将待删除节点上一节点的下一节点改为待删除节点的下一节点*/
+            curr->next = curr->next->next;                      /* 将待删除节点上节点的下节点改为待删除节点的下节点 */
             free(tmp);                                          /* 释放待删除节点内存空间 */
         }
     }
@@ -191,7 +191,7 @@ void dummyLinkedListDeleteElement(DummyLinkedList *dummyHead, int val) {
  * @return {int *} indexes                  返回索引数组
  */
 int *dummyLinkedListGetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize) {
-    int *indexes = (int *)malloc(sizeof(int) * dummyHead->size);    /* 为索引数组分配空间 */
+    int *indexes = (int *)malloc(sizeof(int) * dummyHead->size);    /* NOLINT(readability/casting) */
     int listIndex = 0;                                              /* 链表索引 */
     int elementIndex = 0;                                           /* 元素索引 */
     struct ListNode *curr = dummyHead->head;                        /* 获取当前链表头节点的指针 */
