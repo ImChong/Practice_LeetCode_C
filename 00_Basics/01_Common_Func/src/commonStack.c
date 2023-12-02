@@ -56,7 +56,7 @@ void stackPush(Stack *obj, int x) {
  * @return {void}
  */
 void stackPop(Stack *obj) {
-    obj->stkSize--;                                     /* 将【栈大小】- 1 */
+    obj->stkSize--;                         /* 将【栈大小】- 1 */
 }
 
 /**
@@ -66,7 +66,7 @@ void stackPop(Stack *obj) {
  * @return {int} x          栈顶元素
  */
 int stackTop(Stack *obj) {
-    return obj->stk[obj->stkSize - 1];                  /* 返回栈结构体内【栈大小 - 1】索引位置处的数据 */
+    return obj->stk[obj->stkSize - 1];      /* 返回栈结构体内【栈大小 - 1】索引位置处的数据 */
 }
 
 /**
@@ -76,7 +76,7 @@ int stackTop(Stack *obj) {
  * @return {bool}           栈是否为空
  */
 bool stackEmpty(Stack *obj) {
-    return obj->stkSize == 0;                           /* 返回确认 stkSize 栈大小是否为0 */
+    return obj->stkSize == 0;               /* 返回确认 stkSize 栈大小是否为0 */
 }
 
 /**
@@ -86,7 +86,7 @@ bool stackEmpty(Stack *obj) {
  * @return {void}
  */
 void stackFree(Stack *obj) {
-    free(obj->stk);                                     /* 释放栈结构体内 stk 数组的空间 */
+    free(obj->stk);                         /* 释放栈结构体内 stk 数组的空间 */
 }
 
 
