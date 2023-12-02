@@ -21,6 +21,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+    # Job
     # code-style-check:
     #   runs-on: ubuntu-latest
     #   steps:
@@ -50,7 +51,7 @@ jobs:
     #     - name: Run Cppcheck
     #       run: find . -name '*.c' -exec cppcheck --enable=all --error-exitcode=1 {} \; || exit 1
 
-  # Job
+    # Job
     Test-Common-Functions:
       # Runner
       runs-on: ubuntu-latest
