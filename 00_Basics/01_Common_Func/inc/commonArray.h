@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 10:19:40
+ * @LastEditTime : 2023-12-02 20:15:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,9 @@
  */
 #ifndef __COMMON_ARRAY_H    /* NOLINT(build/header_guard) */
 #define __COMMON_ARRAY_H    /* NOLINT(build/header_guard) */
+
+/* 通用头文件 */
+#include "commonTypeDef.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -36,7 +39,6 @@ void free2DArray(int **result, int returnSize);                             /* �
 /*                                                                                */
 /**********************************************************************************/
 int compareElements(const void *a, const void *b);              /* 比较元素 */
-int compareRows(const void *a, const void *b);                  /* 比较行 */
 void sortArray(int *arr, int arrSize);                          /* 排序数组 */
 void sort2DArray(int **arr, int arrSize, int *arrColSizes);     /* 排序二维数组 */
 void validateArray(char testNum,

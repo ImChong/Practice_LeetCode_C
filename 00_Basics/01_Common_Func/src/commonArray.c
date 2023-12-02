@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 19:40:37
+ * @LastEditTime : 2023-12-02 20:16:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -127,7 +127,7 @@ int compareElements(const void *a, const void *b) {
  * @param {void} *b             数组元素b
  * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
  */
-int compareRows(const void *a, const void *b) {
+STATIC_FUNC int compareRows(const void *a, const void *b) {
     int *arrA = *(int **)a;             /* NOLINT(readability/casting) */
     int *arrB = *(int **)b;             /* NOLINT(readability/casting) */
     for (int i = 0; i < g_2DArrRowSize; i++) {
