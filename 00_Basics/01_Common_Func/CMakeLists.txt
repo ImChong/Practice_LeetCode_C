@@ -1,6 +1,8 @@
+# 引入ExternalProject模块
 include(ExternalProject)                                                                    # 引入ExternalProject模块
 set_directory_properties(PROPERTIES EP_PREFIX ${CMAKE_BINARY_DIR}/ThirdParty/googletest)    # 设置下载目录
 
+# 添加Google Test的下载和编译
 ExternalProject_Add(
     googletest
     GIT_REPOSITORY https://github.com/google/googletest.git
@@ -8,6 +10,7 @@ ExternalProject_Add(
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR>
 )
 
+# 添加Google Test的头文件和库文件的搜索路径
 include_directories(${CMAKE_BINARY_DIR}/ThirdParty/googletest/include)
 link_directories(${CMAKE_BINARY_DIR}/ThirdParty/googletest/lib)
 
@@ -22,6 +25,6 @@ include_directories(inc/commonDef)      # 公共定义头文件
 # 创建一个新的测试目标
 add_executable(commonArrayTest test/commonArrayTest.cc src/commonArray.c)   # 测试目标 commonArray
 
-# 将Google Test库链接到你的测试目标
+# 将Google Test库链接到测试目标
 add_dependencies(commonArrayTest googletest)
 target_link_libraries(commonArrayTest gtest gtest_main)
