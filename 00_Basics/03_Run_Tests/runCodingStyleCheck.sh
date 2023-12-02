@@ -7,6 +7,5 @@ TARGET_DIR="./00_Basics/01_Common_Func"
 find $TARGET_DIR \
     -type f \( -name "*.c" -o -name "*.h" \) \
     -exec echo " =============== " \; \
-    -exec echo "Checking file: {} ..." \; \
     -exec cppcheck {} \; \
     || { echo "cppcheck failed for {}"; exit 1; }
