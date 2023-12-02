@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:36:54
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 02:26:27
+ * @LastEditTime : 2023-12-02 18:46:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,8 +30,9 @@
  * @return {Stack} *ret         返回创建的栈结构体
  */
 Stack *stackCreate(int capacity) {
-    Stack *ret = (Stack *)malloc(sizeof(Stack));        /* 为栈结构体分配空间 */
-    ret->stk = (int *)malloc(sizeof(int) * capacity);   /* 为栈数组分配空间，大小为最大容量 */
+    /* NOLINT(readability/casting) */
+    Stack *ret = (Stack *)malloc(sizeof(Stack));        /* NOLINT(readability/casting) */
+    ret->stk = (int *)malloc(sizeof(int) * capacity);   /* NOLINT(readability/casting) */
     ret->stkSize = 0;                                   /* 当前栈大小为0 */
     ret->stkCapacity = capacity;                        /* 记录栈容量 */
     return ret;                                         /* 返回创建的栈结构体 */
