@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 20:30:04
+ * @LastEditTime : 2023-12-02 20:32:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,7 +22,7 @@ extern "C" {
 /*                                                                                */
 /**********************************************************************************/
 class TestCommonArray : public ::testing::Test {
-    public:
+public:
     static void SetUpTestCase() {
         // Code here will be called once before all tests
     }
