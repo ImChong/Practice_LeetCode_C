@@ -8,9 +8,9 @@ find $TARGET_DIR \
     -type f \( -name "*.c" -o -name "*.h" \) \
     -exec echo " =============== " \; \
     -exec echo "Checking file: {} ..." \; \
-    -exec cppcheck {} 2>&1 | tee temp/cppcheck_output.txt \;
+    -exec cppcheck {} 2>&1 | tee cppcheck_output.txt \;
 
-if grep -q "error:" temp/cppcheck_output.txt; then
+if grep -q "error:" cppcheck_output.txt; then
     echo "cppcheck found errors"
     exit 1
 fi
