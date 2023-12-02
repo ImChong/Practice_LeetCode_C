@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 23:06:28
+ * @LastEditTime : 2023-12-02 23:13:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -102,9 +102,9 @@ TEST_F(TestCommonArray, TestSortArray) {
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestSort2DArray) {
     /* 准备数据 */
-    int **arrPtr = (int **)malloc(sizeof(int *) * 2);
+    int **arrPtr = (int **)malloc(sizeof(int *) * 2);       /* NOLINT(readability/casting) */
     for (int i = 0; i < 2; i++) {
-        arrPtr[i] = (int *)malloc(sizeof(int) * 3);
+        arrPtr[i] = (int *)malloc(sizeof(int) * 3);         /* NOLINT(readability/casting) */
     }
     arrPtr[0][0] = 5;
     arrPtr[0][1] = 4;
