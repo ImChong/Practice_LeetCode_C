@@ -40,11 +40,9 @@ jobs:
 
         # step to run clang-format to check the code style
         - name: Run Clang Format
-          run: find ./00_Basics/01_Common_Func -name '*.c' -exec clang-format -i -style=llvm {} \; || exit 1
-
-        # step to run cppcheck to check the code style
-        - name: Run Cppcheck
-          run: find ./00_Basics/01_Common_Func -name '*.c' -exec cppcheck --enable=all --error-exitcode=1 {} \; || exit 1
+          run: |
+            chmod +x 00_Basics/03_Run_Tests/runCodingStyleCheck.sh
+            ./00_Basics/03_Run_Tests/runCodingStyleCheck.sh
 
 # TODO
 # SecMissile
