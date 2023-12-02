@@ -12,3 +12,7 @@ do
     echo "=============================="
     cpplint --linelength=120 $file            # run cpplint
 done
+
+# finish up message
+echo "=============================="
+echo "All files have been linted!"

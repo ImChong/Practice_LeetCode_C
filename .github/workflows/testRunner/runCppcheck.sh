@@ -17,3 +17,7 @@ do
         exit 1                                              # exit with error code
     fi
 done
+
+# finish up message
+echo "=============================="
+echo "All files have been checked!"

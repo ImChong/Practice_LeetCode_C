@@ -9,5 +9,6 @@ for test in $(find ./build/bin -executable -type f); do
     $test   # run GTest executables
 done
 
+# finish up message
 echo "=============================="
 echo "All executables have been run!"
