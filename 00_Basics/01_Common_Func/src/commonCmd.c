@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-04 08:56:01
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 02:51:55
+ * @LastEditTime : 2023-12-02 17:44:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -42,8 +42,7 @@
 void printCommandInfo(int argc, char *argv[]) {
     INFO("Number of command-line arguments: %d", argc);
     INFO("Command-line arguments:");
-    for (int i = 0; i < argc; i++)
-    {
+    for (int i = 0; i < argc; i++) {
         INFO("%d -> %s", i, argv[i]);
     }
 }
