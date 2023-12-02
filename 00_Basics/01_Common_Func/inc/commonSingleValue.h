@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 13:42:27
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 17:58:09
+ * @LastEditTime : 2023-12-02 17:58:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,4 +40,4 @@
 void validateSingleValue(char testNum, int expect, int actual);     /* 验证单个值 */
 
 
-#endif  /* COMMON_SINGLE_VALUE_H */ /* NOLINT(build/header_guard) */
+#endif  /* COMMON_SINGLE_VALUE_H */     /* NOLINT(build/header_guard) */
