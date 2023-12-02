@@ -51,5 +51,3 @@ jobs:
           run: |
             chmod +x .github/workflows/testRunner/runGTests.sh
             .github/workflows/testRunner/runGTests.sh
-            echo "=============================="
-            echo "All executables have been run!"
