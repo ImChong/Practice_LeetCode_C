@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 通用单值函数头文件
  */
-#ifndef COMMON_SINGLE_VALUE_H   /* NOLINT(build/header_guard) */
-#define COMMON_SINGLE_VALUE_H   /* NOLINT(build/header_guard) */
+#ifndef __COMMON_SINGLE_VALUE_H   /* NOLINT(build/header_guard) */
+#define __COMMON_SINGLE_VALUE_H   /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -40,4 +40,4 @@
 void validateSingleValue(char testNum, int expect, int actual);     /* 验证单个值 */
 
 
-#endif  /* COMMON_SINGLE_VALUE_H */     /* NOLINT(build/header_guard) */
+#endif  /* __COMMON_SINGLE_VALUE_H */     /* NOLINT(build/header_guard) */
