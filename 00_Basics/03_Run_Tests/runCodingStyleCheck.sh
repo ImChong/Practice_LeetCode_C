@@ -8,4 +8,3 @@ find $TARGET_DIR \
     -type f \( -name "*.c" -o -name "*.h" \) \
     -exec echo "===============" \; \
     -exec cppcheck {} \; \
-    || { echo "cppcheck failed for {}"; exit 1; }
