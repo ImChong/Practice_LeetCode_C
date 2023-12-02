@@ -1,10 +1,14 @@
 #!/bin/bash
 echo "Running cppcheck..."
 
-set -e  # Exit immediately if a command exits with a non-zero status.
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
+# run cppcheck on all .c and .h files in the target directory
 TARGET_DIR="./00_Basics/01_Common_Func"
 
-find $TARGET_DIR \
-    -type f \( -name "*.c" -o -name "*.h" \) \
-    -exec echo "===============" \; \
-    -exec cppcheck {} \; \
+for file in $(find $TARGET_DIR -name '*.c' -or -name '*.h')
+do
+    echo "=============================="
+    cppcheck $file
+done

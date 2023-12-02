@@ -1,9 +1,14 @@
 #!/bin/bash
 echo "Running cpplint..."
 
-set -e  # Exit immediately if a command exits with a non-zero status.
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
+# run cpplint on all .c and .h files in the target directory
 TARGET_DIR="./00_Basics/01_Common_Func"
 
-
-
-cpplint --recursive 00_Basics/01_Common_Func/**/*.c 00_Basics/01_Common_Func/**/*.h
+for file in $(find $TARGET_DIR -name '*.c' -or -name '*.h')
+do
+    echo "=============================="
+    cpplint $file
+done
