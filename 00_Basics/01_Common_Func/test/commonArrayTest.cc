@@ -3,16 +3,45 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 10:10:57
+ * @LastEditTime : 2023-12-02 10:34:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用数组单元测试
  */
-/* 标准头文件 */
-#include <stdio.h>
+/* gtest 头文件 */
+#include "gtest/gtest.h"
+/* 测试目标头文件 */
+extern "C" {
+    #include "commonArray.h"
+}
 
-int main() {
-    // TODO
-    printf("Run commonArrayTest.cc\n");
+/* 测试套件名称 */
+class TestCommonArray : public ::testing::Test {
+protected:
+    void SetUp() override {
+        // Code here will be called before each test
+    }
+
+    void TearDown() override {
+        // Code here will be called after each test
+    }
+};
+
+/* ============================================================================== */
+/* ============================================================================== */
+
+/* 测试用例名称 */
+TEST_F(TestCommonArray, TestCompareElements) {
+    int a = 5;
+    int b = 3;
+    EXPECT_EQ(compareElements(&a, &b), 2);
+
+    a = 3;
+    b = 5;
+    EXPECT_EQ(compareElements(&a, &b), -2);
+
+    a = 5;
+    b = 5;
+    EXPECT_EQ(compareElements(&a, &b), 0);
 }
