@@ -74,3 +74,6 @@ jobs:
 # codingStyle
 # Clang Static Analyzer
 # SonarQube
+# PVS-Studio
+# Code Climate
+# cloc (Count Lines of Code)
