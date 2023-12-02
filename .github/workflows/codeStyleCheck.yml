@@ -57,8 +57,8 @@ jobs:
         # step to run clang-format and cppcheck to check the code style
         - name: Run Cppcheck
           run: |
-            chmod +x 00_Basics/03_Run_Tests/runCppCheck.sh
-            ./00_Basics/03_Run_Tests/runCppCheck.sh
+            chmod +x 00_Basics/03_Run_Tests/runCppcheck.sh
+            ./00_Basics/03_Run_Tests/runCppcheck.sh
 
 # TODO
 # SecMissile
