@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-01 02:55:20
+ * @LastEditTime : 2023-12-02 17:54:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -97,7 +97,7 @@ void preOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ans 数组，用于储存遍历答案（后期需要free） */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     preOrder(root, ans, returnSize);                    /* 前序遍历根节点 */
     return ans;                                         /* 返回结果 ans 数组 */
@@ -261,7 +261,7 @@ int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* 初始化一个MAX_SIZE长度的 ans 数组，用于储存遍历答案（后期需要free） */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT(readability/casting) */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     if (root == NULL) {                                     /* 如果当前节点为 NULL，直接返回 */
         return ans;
@@ -304,7 +304,7 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
  * @return {TreeArrQueue} *queue   新的二叉树节点队列指针
  */
 TreeArrQueue *newTreeArrQueue(int queueSize) {
-    TreeArrQueue *queue = (TreeArrQueue *)malloc(sizeof(TreeArrQueue));
+    TreeArrQueue *queue = (TreeArrQueue *)malloc(sizeof(TreeArrQueue)); /* NOLINT(readability/casting) */
     queue->array = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * queueSize);
     queue->head = 0;
     queue->tail = 0;
