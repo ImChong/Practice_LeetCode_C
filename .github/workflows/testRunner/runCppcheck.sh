@@ -7,7 +7,7 @@ set -e
 # run cppcheck on all .c and .h files in the target directory
 TARGET_DIR="./00_Basics/01_Common_Func"
 
-for file in $(find $TARGET_DIR -name '*.c' -or -name '*.h')
+for file in $(find $TARGET_DIR -name '*.c' -or -name '*.h' -or -name '*.cc')
 do
     echo "=============================="
     cppcheck $file --output-file=cppcheck_output.txt    # run cppcheck and write output to file
