@@ -7,5 +7,6 @@ TARGET_DIR="./00_Basics/01_Common_Func"
 for file in "$TARGET_DIR"/*.{c,h}; do
     if [ -f "$file" ]; then
         cppcheck "$file" || { echo "cppcheck failed for $file"; exit 1; }
+        echo "===> cppcheck passed for $file."
     fi
 done
