@@ -72,3 +72,5 @@ jobs:
 # codecheck
 # codemars
 # codingStyle
+# Clang Static Analyzer
+# SonarQube
