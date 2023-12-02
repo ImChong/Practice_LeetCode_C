@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 18:18:03
+ * @LastEditTime : 2023-12-02 18:59:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -41,7 +41,7 @@
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
-#include "limits.h"
+#include <limits.h>
 /* 常用头文件 */
 #include "commonBinaryTree.h"
 
@@ -81,12 +81,12 @@
  * @return {void}
  */
 void preOrder(struct TreeNode *node, int *ans, int *returnSize) {
-    if (node == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
+    if (node == NULL) {     /* 如果当前节点为 NULL，直接返回 */
         return;
     }
-    ans[(*returnSize)++] = node->val;                   /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
-    preOrder(node->left, ans, returnSize);              /* 前序遍历左节点 */
-    preOrder(node->right, ans, returnSize);             /* 前序遍历右节点 */
+    ans[(*returnSize)++] = node->val;       /* 把当前节点的值放入ret数组的*returnSize索引，并将*returnSize索引值+1 */
+    preOrder(node->left, ans, returnSize);      /* 前序遍历左节点 */
+    preOrder(node->right, ans, returnSize);     /* 前序遍历右节点 */
 }
 
 /**
@@ -111,7 +111,7 @@ int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ans 数组，用于储存遍历答案（后期需要free） */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ans 数组用于储存遍历答案 */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return ans;
@@ -122,11 +122,11 @@ int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     struct TreeNode *node = root;                       /* 获取根节点的指针 */
     while (stk_top > 0 || node != NULL) {               /* 当栈顶索引大于0 或者 节点指针不指向NULL */
         while (node != NULL) {                              /* 当结点指针不指向NULL */
-            ans[(*returnSize)++] = node->val;                   /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
+            ans[(*returnSize)++] = node->val;                   /* 把当前节点的值放入ret数组的 *returnSize 索引 */
             stk[stk_top++] = node;                              /* 入栈：将当前节点指针放入栈顶，并将栈顶索引 + 1 */
             node = node->left;                                  /* 节点指针向左移动 */
         }
-        node = stk[--stk_top];                              /* 出栈：当节点指针指向NULL - 左节点指针已经到头：获取栈顶节点指针，并将栈顶索引 - 1 */
+        node = stk[--stk_top];                              /* 出栈：获取栈顶节点指针，并将栈顶索引 - 1 */
         node = node->right;                                 /* 节点指针向右移动 */
     }
     return ans;                                         /* 返回结果数组 */
@@ -159,9 +159,9 @@ void inOrder(struct TreeNode *node, int *ans, int *returnSize) {
     if (node == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return;
     }
-    inOrder(node->left, ans, returnSize);               /* 中序遍历左节点 */
-    ans[(*returnSize)++] = node->val;                   /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
-    inOrder(node->right, ans, returnSize);              /* 中序遍历右节点 */
+    inOrder(node->left, ans, returnSize);
+    ans[(*returnSize)++] = node->val;
+    inOrder(node->right, ans, returnSize);
 }
 
 /**
@@ -172,7 +172,8 @@ void inOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个100长度的 ans 数组，用于储存遍历答案（后期需要free） */
+    /* NOLINT(readability/casting) */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个100长度的 ans 数组，用于储存遍历答案 */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     inOrder(root, ans, returnSize);                     /* 中序遍历根节点 */
     return ans;                                         /* 返回结果 ans 数组 */
@@ -192,7 +193,7 @@ int *inorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
         return ans;
     }
 
-    struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);   /* 分配一个MAX_SIZE容量的树节点栈空间（后期需要free） */
+    struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);
     int stk_top = 0;                                    /* 栈顶索引为 0 */
     struct TreeNode *node = root;                       /* 获取根节点的指针 */
     while (node != NULL || stk_top > 0) {               /* 当栈顶索引大于0 或者 节点指针不指向NULL */
@@ -200,8 +201,8 @@ int *inorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
             stk[stk_top++] = node;                              /* 入栈：将当前节点指针放入栈顶，并将栈顶索引 + 1 */
             node = node->left;                                  /* 节点指针向左移动 */
         }
-        node = stk[--stk_top];                              /* 出栈：当节点指针指向NULL - 左节点指针已经到头：获取栈顶节点指针，并将栈顶索引 - 1 */
-        ans[(*returnSize)++] = node->val;                   /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
+        node = stk[--stk_top];                              /* 出栈：获取栈顶节点指针，并将栈顶索引 - 1 */
+        ans[(*returnSize)++] = node->val;
         node = node->right;                                 /* 节点指针向右移动 */
     }
     return ans;                                         /* 返回结果数组 */
@@ -236,7 +237,7 @@ void postOrder(struct TreeNode *node, int *ans, int *returnSize) {
     }
     postOrder(node->left, ans, returnSize);                 /* 后序遍历左节点 */
     postOrder(node->right, ans, returnSize);                /* 后序遍历右节点 */
-    ans[(*returnSize)++] = node->val;                       /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
+    ans[(*returnSize)++] = node->val;
 }
 
 /**
@@ -247,7 +248,7 @@ void postOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* 初始化一个 MAX_SIZE 长度的 ans 数组，用于储存遍历答案（后期需要free） */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* 初始化一个 MAX_SIZE 长度的 ans 数组，用于储存遍历答案 */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     postOrder(root, ans, returnSize);                       /* 后序遍历根节点 */
     return ans;                                             /* 返回结果 ans 数组 */
@@ -276,9 +277,9 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
             stk[stk_top++] = node;                                  /* 入栈：将当前节点指针放入栈顶，并将栈顶索引 + 1 */
             node = node->left;                                      /* 节点指针向左移动 */
         }
-        node = stk[--stk_top];                                  /* 出栈：当节点指针指向NULL - 左节点指针已经到头：获取栈顶节点指针，并将栈顶索引 - 1 */
+        node = stk[--stk_top];                                  /* 出栈：获取栈顶节点指针，并将栈顶索引 - 1 */
         if (node->right == NULL || node->right == prev) {       /* 如果右节点为NULL 或者 右节点为前节点 */
-            ans[(*returnSize)++] = node->val;                       /* 把当前节点的值放入ret数组的 *returnSize 索引，并将 *returnSize 索引值 + 1 */
+            ans[(*returnSize)++] = node->val;                       /* 把当前节点的值放入ret数组的 *returnSize 索引 */
             prev = node;                                            /* 给前节点指针赋值为当前节点 */
             node = NULL;                                            /* 把当前节点指针赋值为 NULL*/
         } else {                                                /* 否则 */
@@ -304,7 +305,7 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
  * @return {TreeArrQueue} *queue   新的二叉树节点队列指针
  */
 TreeArrQueue *newTreeArrQueue(int queueSize) {
-    TreeArrQueue *queue = (TreeArrQueue *)malloc(sizeof(TreeArrQueue)); /* NOLINT(readability/casting) */
+    TreeArrQueue *queue = (TreeArrQueue *)malloc(sizeof(TreeArrQueue));     /* NOLINT(readability/casting) */
     queue->array = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * queueSize);
     queue->head = 0;
     queue->tail = 0;
