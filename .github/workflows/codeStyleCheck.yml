@@ -36,7 +36,9 @@ jobs:
 
         # step to run cpplint
         - name: Check Code Style
-          run: cpplint --recursive 00_Basics/01_Common_Func/**/*.c 00_Basics/01_Common_Func/**/*.h
+          run: |
+            chmod +x .github/workflows/testRunner/runCpplint.sh
+            .github/workflows/testRunner/runCpplint.sh
 
     cppcheck-check:
       runs-on: ubuntu-latest
@@ -57,8 +59,8 @@ jobs:
         # step to run clang-format and cppcheck to check the code style
         - name: Run Cppcheck
           run: |
-            chmod +x 00_Basics/03_Run_Tests/runCppcheck.sh
-            ./00_Basics/03_Run_Tests/runCppcheck.sh
+            chmod +x .github/workflows/testRunner/runCppcheck.sh
+            .github/workflows/testRunner/runCppcheck.sh
 
 # TODO
 # SecMissile

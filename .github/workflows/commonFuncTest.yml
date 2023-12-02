@@ -49,7 +49,7 @@ jobs:
         # Step: Run all test executables in the build/bin directory
         - name: Run all tests
           run: |
-            chmod +x 00_Basics/03_Run_Tests/runGTests.sh
-            ./00_Basics/03_Run_Tests/runGTests.sh
+            chmod +x .github/workflows/testRunner/runGTests.sh
+            .github/workflows/testRunner/runGTests.sh
             echo "=============================="
             echo "All executables have been run!"
