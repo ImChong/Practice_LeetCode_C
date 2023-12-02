@@ -117,7 +117,7 @@ void free2DArray(int **arr, int arrSize) {
  * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
  */
 int compareElements(const void *a, const void *b) {
-    return (*(int*)a - *(int*)b);
+    return (*(int*)a - *(int*)b);       /* NOLINT(readability/casting) */
 }
 
 /**
@@ -128,8 +128,8 @@ int compareElements(const void *a, const void *b) {
  * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
  */
 int compareRows(const void *a, const void *b) {
-    int *arrA = *(int **)a;
-    int *arrB = *(int **)b;
+    int *arrA = *(int **)a;             /* NOLINT(readability/casting) */
+    int *arrB = *(int **)b;             /* NOLINT(readability/casting) */
     for (int i = 0; i < g_2DArrRowSize; i++) {
         if (arrA[i] != arrB[i]) {
             return (arrA[i] - arrB[i]);
