@@ -10,4 +10,4 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # 添加子目录
-add_subdirectory(00_Basics)
+add_subdirectory(00_Basics/01_Common_Func)
