@@ -4,15 +4,72 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:24:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 20:28:31
+ * @LastEditTime : 2023-12-02 23:25:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用二叉树单元测试
  */
-#include <stdio.h>
+/* gtest 头文件 */
+#include "gtest/gtest.h"
+/* 测试目标头文件 */
+extern "C" {
+    #include "commonString.h"
+}
 
-int main() {
-    // TODO(Chong Liu, 2023-12-02): 二叉树单元测试
-    printf("Run commonBinaryTreeTest.cc\n");
+/**********************************************************************************/
+/*                                                                                */
+/*                                   TEST SUITE                                   */
+/*                                                                                */
+/**********************************************************************************/
+class TestCommonString : public ::testing::Test {
+ public:
+    static void SetUpTestCase() {
+        // Code here will be called once before all tests
+    }
+    void SetUp() override {
+        // Code here will be called before each test
+    }
+    void TearDown() override {
+        // Code here will be called after each test
+    }
+    static void TearDownTestCase() {
+        // Code here will be called once after all tests
+    }
+};
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                   TEST CASES                                   */
+/*                                                                                */
+/**********************************************************************************/
+/* ============================================================================== */
+/* swapChar */
+/* ============================================================================== */
+TEST_F(TestCommonString, TestSwapChar) {
+    /* 准备数据 */
+    char a = 'a';
+    char b = 'b';
+
+    /* 运行结果 */
+    swapChar(&a, &b);
+
+    /* 比较结果 */
+    EXPECT_EQ(a, 'b');
+    EXPECT_EQ(b, 'a');
+}
+
+/* ============================================================================== */
+/* reverseStringSection */
+/* ============================================================================== */
+TEST_F(TestCommonString, TestReverseStringSection) {
+    /* 准备数据 */
+    char *s = (char *)malloc(sizeof(char) * 8);
+    strcpy(s, "abcdefg");
+
+    /* 运行结果 */
+    reverseStringSection(s, 2, 5);
+
+    /* 比较结果 */
+    EXPECT_STREQ(s, "abfedcg");
 }
