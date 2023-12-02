@@ -39,7 +39,7 @@ jobs:
           run: cmake --version
 
         # Step: Build all the tests
-        - name: Build all the tests
+        - name: Build all the GTests
           run: |
             mkdir build
             cd build
@@ -47,7 +47,7 @@ jobs:
             cmake --build .
 
         # Step: Run all test executables in the build/bin directory
-        - name: Run all tests
+        - name: Run all GTests
           run: |
             chmod +x .github/workflows/testRunner/runGTests.sh
             .github/workflows/testRunner/runGTests.sh
