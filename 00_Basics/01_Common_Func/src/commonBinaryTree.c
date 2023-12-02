@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 18:59:40
+ * @LastEditTime : 2023-12-02 19:09:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -111,7 +111,7 @@ int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ans 数组用于储存遍历答案 */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return ans;
@@ -172,8 +172,7 @@ void inOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
-    /* NOLINT(readability/casting) */
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个100长度的 ans 数组，用于储存遍历答案 */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     inOrder(root, ans, returnSize);                     /* 中序遍历根节点 */
     return ans;                                         /* 返回结果 ans 数组 */
@@ -187,13 +186,14 @@ int *inorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *inorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* 初始化一个MAX_SIZE长度的 ans 数组，用于储存遍历答案 */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return ans;
     }
 
-    struct TreeNode **stk = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);
+    struct TreeNode **stk =
+        (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);   /* NOLINT(readability/casting) */
     int stk_top = 0;                                    /* 栈顶索引为 0 */
     struct TreeNode *node = root;                       /* 获取根节点的指针 */
     while (node != NULL || stk_top > 0) {               /* 当栈顶索引大于0 或者 节点指针不指向NULL */
@@ -248,7 +248,7 @@ void postOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* 初始化一个 MAX_SIZE 长度的 ans 数组，用于储存遍历答案 */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT(readability/casting) */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     postOrder(root, ans, returnSize);                       /* 后序遍历根节点 */
     return ans;                                             /* 返回结果 ans 数组 */
@@ -413,7 +413,6 @@ TreeListQueue *newTreeListQueue(void) {
  * @return {void}
  */
 void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node) {
-
 }
 
 /**
@@ -453,7 +452,6 @@ int isTreeListQueueFull(TreeListQueue *queue) {
  * @return {void}
  */
 void printTreeListQueue(TreeListQueue *queue) {
-
 }
 
 /**
@@ -463,7 +461,6 @@ void printTreeListQueue(TreeListQueue *queue) {
  * @return {void}
  */
 void freeTreeListQueue(TreeListQueue *queue) {
-
 }
 
 /* ============================================================================== */
