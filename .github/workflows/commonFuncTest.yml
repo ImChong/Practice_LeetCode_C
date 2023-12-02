@@ -51,6 +51,7 @@ jobs:
         # Step: Run all test executables in the build/bin directory
         - name: Run all tests
           run: |
-            find ./build/bin -executable -type f -exec {} \;
+            chmod +x 00_Basics/03_Run_Tests/runTests.sh
+            ./00_Basics/03_Run_Tests/runTests.sh
 
 # echo "All executables have been run!"
