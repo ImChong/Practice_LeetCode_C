@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 11:53:45
+ * @LastEditTime : 2023-12-02 19:11:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -155,7 +155,7 @@ struct ListNode *linkedListDeleteElement(struct ListNode *head, int val) {
  * @return {int *} indexes      返回索引数组
  */
 int *linkedListGetIndexes(struct ListNode *head, int val, int *returnSize) {
-    int *indexes = (int *)malloc(sizeof(int) * 1000);
+    int *indexes = (int *)malloc(sizeof(int) * 1000);       /* NOLINT(readability/casting) */
     int listIndex = 0;
     int elementIndex = 0;
     while (head != NULL) {
@@ -250,7 +250,6 @@ void linkedListFree(struct ListNode *head) {
  * @return {void}
  */
 void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList) {
-
     int isSuccess = COMMON_TRUE;
 
     struct ListNode *curr1 = expectList, *curr2 = actualList;
