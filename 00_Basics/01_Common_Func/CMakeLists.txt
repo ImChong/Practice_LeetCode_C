@@ -14,9 +14,6 @@ ExternalProject_Add(
 include_directories(${CMAKE_BINARY_DIR}/ThirdParty/googletest/include)
 link_directories(${CMAKE_BINARY_DIR}/ThirdParty/googletest/lib)
 
-# 添加Google Test的依赖
-# enable_testing()
-
 # 添加头文件路径
 include_directories(cfg)                # 配置文件
 include_directories(inc)                # 头文件
