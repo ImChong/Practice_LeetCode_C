@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 13:36:11
+ * @LastEditTime : 2023-12-02 13:59:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -49,7 +49,7 @@ public:
 TEST_F(TestCommonArray, TestCompareElements) {
     int a = 5;
     int b = 3;
-    EXPECT_EQ(compareElements(&a, &b), 0);
+    EXPECT_EQ(compareElements(&a, &b), 2);
 
     a = 3;
     b = 5;
