@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 17:54:25
+ * @LastEditTime : 2023-12-02 18:18:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -401,7 +401,7 @@ void freeTreeArrQueue(TreeArrQueue *queue) {
  * @return {TreeListQueue} *queue   新的二叉树节点链表队列指针
  */
 TreeListQueue *newTreeListQueue(void) {
-
+    return NULL;
 }
 
 /**
@@ -422,7 +422,7 @@ void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node) {
  * @return {TreeNode} *node         节点指针
  */
 struct TreeNode *deTreeListQueue(TreeListQueue *queue) {
-
+    return NULL;
 }
 
 /**
@@ -432,7 +432,7 @@ struct TreeNode *deTreeListQueue(TreeListQueue *queue) {
  * @return {int}                    如果队列为空，返回1；否则返回0
  */
 int isTreeListQueueEmpty(TreeListQueue *queue) {
-
+    return 0;
 }
 
 /**
@@ -442,7 +442,7 @@ int isTreeListQueueEmpty(TreeListQueue *queue) {
  * @return {int}                    如果队列为满，返回1；否则返回0
  */
 int isTreeListQueueFull(TreeListQueue *queue) {
-
+    return 0;
 }
 
 /**
