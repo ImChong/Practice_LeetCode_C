@@ -7,10 +7,12 @@ on:
     # Allows you to run this workflow every time a commit is pushed to the repository
     push:
       paths:
+        - '00_Basics/01_Common_Func/**'
         - '.github/workflows/codeStyleCheck.yml'
     # Allows you to run this workflow every time a pull request is opened or updated
     pull_request:
       paths:
+        - '00_Basics/01_Common_Func/**'
         - '.github/workflows/codeStyleCheck.yml'
     # Schedule a workflow to run automatically
     schedule:
