@@ -26,7 +26,7 @@ jobs:
           uses: actions/checkout@main
 
         # step to install cpplint
-        - name: Install cpplint
+        - name: Install Cpplint
           run: pip install cpplint
 
         # Step: Tool Versions
