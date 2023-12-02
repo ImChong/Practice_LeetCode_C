@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:40:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:17:32
+ * @LastEditTime : 2023-12-02 19:13:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,8 +29,8 @@
  * @return {Queue} *obj         初始化后队列的指针
  */
 Queue *initQueue(int queueSize) {
-    Queue *obj = (Queue *)malloc(sizeof(Queue));            /* 为队列分配空间 */
-    obj->list = (int *)malloc(sizeof(int) * queueSize);     /* 为队列内数组分配空间，大小为 queueSize */
+    Queue *obj = (Queue *)malloc(sizeof(Queue));            /* NOLINT(readability/casting) */
+    obj->list = (int *)malloc(sizeof(int) * queueSize);     /* NOLINT(readability/casting) */
     obj->head = -1;                                         /* 队列头初始化为 -1 */
     obj->tail = -1;                                         /* 队列尾初始化为 -1 */
     obj->size = queueSize;                                  /* 队列大小为 k */
@@ -48,7 +48,8 @@ void enQueue(Queue *queue, int val) {
     if (queue->head == -1) {                        /* 如果队列头为索引 -1 */
         queue->head = 0;                            /* 将队列头改为索引 0 */
     }
-    queue->tail = (queue->tail + 1) % queue->size;  /* 队列尾 + 1，（% queue->size）是为了防止新添加的元素超出队列内数组大小。超出部分从 0 开始：环形队列 */
+    /* 队列尾 + 1，（% queue->size）是为了防止新添加的元素超出队列内数组大小。超出部分从 0 开始：环形队列 */
+    queue->tail = (queue->tail + 1) % queue->size;
     queue->list[queue->tail] = val;                 /* 将元素添加至队列内数组，索引为队列尾所指索引 */
 }
 
@@ -65,7 +66,8 @@ int deQueue(Queue *queue) {
         queue->tail = -1;                           /* 队列尾索引设置为 -1 */
         return headVal;                             /* 返回之前取出的队首元素 */
     }
-    queue->head = (queue->head + 1) % queue->size;  /* 队列头 + 1，（% queue->size）是为了防止新队列头索引超出队列内数组大小。超出部分从 0 开始：环形队列 */
+    /* 队列头 + 1，（% queue->size）是为了防止新队列头索引超出队列内数组大小。超出部分从 0 开始：环形队列 */
+    queue->head = (queue->head + 1) % queue->size;
     return headVal;                                 /* 返回之前取出的队首元素 */
 }
 
