@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 18:50:30
+ * @LastEditTime : 2023-12-02 18:51:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -145,7 +145,7 @@ void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index) {
     if (index == 0) {                                   /* 如果删除头节点 */
         dummyHead->head = curr->next;                       /* 将虚拟头节点所指向的链表头节点指向当前指针的下一节点 */
     } else {                                            /* 如果删除中间节点 */
-        for (int i = 0; i < index - 1; i++) {               /* 因为目标节点自己本身要占据一个节点位置，所以循环索引-1次 */
+        for (int i = 0; i < index - 1; i++) {               /* 目标节点自己本身要占据一节点位置，所以循环索引-1次 */
             curr = curr->next;                                  /* 指针向后移动一位 */
         }
         if (curr->next) {                                   /* 如果当前指针所指节点的下一节点存在*/
