@@ -52,4 +52,5 @@ jobs:
         - name: Run all tests
           run: |
             find ./build/bin -executable -type f -exec {} \;
-            echo "All executables have been run!"
+
+# echo "All executables have been run!"
