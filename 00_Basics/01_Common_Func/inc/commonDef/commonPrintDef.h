@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 通用打印定义头文件
  */
-#ifndef __COMMON_PRINT_DEF_H
-#define __COMMON_PRINT_DEF_H
+#ifndef __COMMON_PRINT_DEF_H    /* NOLINT(build/header_guard) */
+#define __COMMON_PRINT_DEF_H    /* NOLINT(build/header_guard) */
 
 /* 标准头文件 */
 #include <stdio.h>
@@ -26,4 +26,4 @@
 /* 重命名打印函数: 打印时可省略输入\r\n */
 #define INFO(format, ...) printf(format "\r\n", ##__VA_ARGS__)
 
-#endif  /* __COMMON_PRINT_DEF_H */
+#endif  /* __COMMON_PRINT_DEF_H */  /* NOLINT(build/header_guard) */

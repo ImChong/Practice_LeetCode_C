@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 通用数组头文件
  */
-#ifndef __COMMON_ARRAY_H
-#define __COMMON_ARRAY_H
+#ifndef __COMMON_ARRAY_H    /* NOLINT(build/header_guard) */
+#define __COMMON_ARRAY_H    /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -49,4 +49,4 @@ void validate2DArray(char testNum,
                         int needSort);                          /* 验证二维数组 */
 
 
-#endif  /* __COMMON_ARRAY_H */
+#endif  /* __COMMON_ARRAY_H */  /* NOLINT(build/header_guard) */

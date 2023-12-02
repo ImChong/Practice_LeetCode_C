@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 通用类型定义头文件
  */
-#ifndef __COMMON_TYPE_DEF_H
-#define __COMMON_TYPE_DEF_H
+#ifndef __COMMON_TYPE_DEF_H     /* NOLINT(build/header_guard) */
+#define __COMMON_TYPE_DEF_H     /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -58,4 +58,4 @@
                                             } \
                                         } while (0)
 
-#endif  /* __COMMON_TYPE_DEF_H */
+#endif  /* __COMMON_TYPE_DEF_H */       /* NOLINT(build/header_guard) */

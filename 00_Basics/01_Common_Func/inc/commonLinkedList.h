@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 通用链表头文件 - 未使用虚拟头节点
  */
-#ifndef __COMMON_LINKED_LIST_H
-#define __COMMON_LINKED_LIST_H
+#ifndef __COMMON_LINKED_LIST_H      /* NOLINT(build/header_guard) */
+#define __COMMON_LINKED_LIST_H      /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -53,4 +53,4 @@ void linkedListFree(struct ListNode *head);         /* 释放链表 */
 void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList);       /* 验证链表 */
 
 
-#endif  /* __COMMON_LINKED_LIST_H */
+#endif  /* __COMMON_LINKED_LIST_H */    /* NOLINT(build/header_guard) */

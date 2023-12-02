@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 通用二叉树头文件
  */
-#ifndef __COMMON_BINARY_TREE_H
-#define __COMMON_BINARY_TREE_H
+#ifndef __COMMON_BINARY_TREE_H  /* NOLINT(build/header_guard) */
+#define __COMMON_BINARY_TREE_H  /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -121,4 +121,4 @@ void printTree(struct TreeNode *root);                              /* 打印树
 void freeTree(struct TreeNode *root);                               /* 释放树的内存 */
 
 
-#endif  /* __COMMON_BINARY_TREE_H */
+#endif  /* __COMMON_BINARY_TREE_H */    /* NOLINT(build/header_guard) */

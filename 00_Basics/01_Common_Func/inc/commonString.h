@@ -3,14 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 01:39:05
+ * @LastEditTime : 2023-12-02 18:37:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用字符串头文件
  */
-#ifndef __COMMON_STRING_H
-#define __COMMON_STRING_H
+#ifndef __COMMON_STRING_H       /* NOLINT(build/header_guard) */
+#define __COMMON_STRING_H       /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -30,4 +30,4 @@ void freeString(char *s);                                           /* 释放字
 void validateString(char testNum, char *expect, char *actual);      /* 验证字符串 */
 
 
-#endif  /* __COMMON_STRING_H */
+#endif  /* __COMMON_STRING_H */     /* NOLINT(build/header_guard) */

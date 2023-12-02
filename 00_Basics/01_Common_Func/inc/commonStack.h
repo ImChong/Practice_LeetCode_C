@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 通用栈头文件
  */
-#ifndef __COMMON_STACK_H
-#define __COMMON_STACK_H
+#ifndef __COMMON_STACK_H        /* NOLINT(build/header_guard) */
+#define __COMMON_STACK_H        /* NOLINT(build/header_guard) */
 
 /* 标准头文件 */
 #include <stdbool.h>
@@ -40,4 +40,4 @@ bool stackEmpty(Stack *obj);            /* 判断栈是否为空 */
 void stackFree(Stack *obj);             /* 释放栈 */
 
 
-#endif  /* __COMMON_STACK_H */
+#endif  /* __COMMON_STACK_H */      /* NOLINT(build/header_guard) */

@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 通用队列头文件
  */
-#ifndef __COMMON_QUEUE_H
-#define __COMMON_QUEUE_H
+#ifndef __COMMON_QUEUE_H        /* NOLINT(build/header_guard) */
+#define __COMMON_QUEUE_H        /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -38,4 +38,4 @@ void printQueue(Queue *queue);          /* 打印队列 */
 void freeQueue(Queue *queue);           /* 释放队列 */
 
 
-#endif  /* __COMMON_QUEUE_H */
+#endif  /* __COMMON_QUEUE_H */      /* NOLINT(build/header_guard) */

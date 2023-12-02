@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 通用哈希表头文件
  */
-#ifndef __COMMON_HASH_TABLE_H
-#define __COMMON_HASH_TABLE_H
+#ifndef __COMMON_HASH_TABLE_H       /* NOLINT(build/header_guard) */
+#define __COMMON_HASH_TABLE_H       /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -44,4 +44,5 @@ void removeHashTable(struct HashTable *table, int val);                 /* 删�
 void freeHashTable(struct HashTable *table);                            /* 释放哈希表 */
 void printHashTable(struct HashTable *table);                           /* 打印哈希表 */
 
-#endif  /* __COMMON_HASH_TABLE_H */
+
+#endif  /* __COMMON_HASH_TABLE_H */     /* NOLINT(build/header_guard) */
