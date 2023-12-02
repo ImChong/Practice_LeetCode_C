@@ -22,9 +22,15 @@ include_directories(cfg)                # 配置文件
 include_directories(inc)                # 头文件
 include_directories(inc/commonDef)      # 公共定义头文件
 
-# 创建一个新的测试目标
-add_executable(commonArrayTest test/commonArrayTest.cc src/commonArray.c)   # 测试目标 commonArray
+# 创建一个包含所有测试目标的列表
+set(TEST_TARGETS commonArray commonString)
 
-# 将Google Test库链接到测试目标
-add_dependencies(commonArrayTest googletest)
-target_link_libraries(commonArrayTest gtest gtest_main)
+# 对每个测试目标执行操作
+foreach(TARGET ${TEST_TARGETS})
+    # 创建一个新的测试目标
+    add_executable(${TARGET}Test test/${TARGET}Test.cc src/${TARGET}.c)
+
+    # 将Google Test库链接到测试目标
+    add_dependencies(${TARGET}Test googletest)
+    target_link_libraries(${TARGET}Test gtest gtest_main)
+endforeach()
