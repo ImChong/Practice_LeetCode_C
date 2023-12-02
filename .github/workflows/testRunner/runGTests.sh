@@ -6,7 +6,7 @@ set -e
 # run gtest executables in the build/bin directory
 for test in $(find ./build/bin -executable -type f); do
     echo "=============================="
-    $test
+    $test   # run GTest executables
 done
 
 echo "=============================="

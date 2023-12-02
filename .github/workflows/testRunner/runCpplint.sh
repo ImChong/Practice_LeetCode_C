@@ -10,5 +10,5 @@ TARGET_DIR="./00_Basics/01_Common_Func"
 for file in $(find $TARGET_DIR -name '*.c' -or -name '*.h')
 do
     echo "=============================="
-    cpplint --linelength=120 $file
+    cpplint --linelength=120 $file            # run cpplint
 done
