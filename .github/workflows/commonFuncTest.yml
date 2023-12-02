@@ -51,5 +51,4 @@ jobs:
           run: |
             chmod +x 00_Basics/03_Run_Tests/runTests.sh
             ./00_Basics/03_Run_Tests/runTests.sh
-
-# echo "All executables have been run!"
+            echo "All executables have been run!"
