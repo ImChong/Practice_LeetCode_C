@@ -3,7 +3,7 @@
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 15:04:19
+ * @LastEditTime : 2023-12-02 19:12:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -160,7 +160,7 @@ void Test_RingBuffer(void) {
     RingBuffer_AddByte(&g_rxRing, 3);
     RingBuffer_AddByte(&g_rxRing, 4);
     RingBuffer_AddByte(&g_rxRing, 5);
-    RingBuffer_AddByte(&g_rxRing, 6); // 只能存放5个数据
+    RingBuffer_AddByte(&g_rxRing, 6);       // 只能存放5个数据
     RingBuffer_Print(&g_rxRing);
 
     // 出队
