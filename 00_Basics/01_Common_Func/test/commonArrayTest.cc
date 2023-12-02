@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 10:56:03
+ * @LastEditTime : 2023-12-02 11:08:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,16 +22,10 @@ extern "C" {
 /*                                                                                */
 /**********************************************************************************/
 class TestCommonArray : public ::testing::Test {
-protected:
-    // void SetUpTestCase() {
-    //     // Code here will be called immediately after the constructor (right
-    //     // before each test).
-    // }
-
-    // void TearDownTestCase() {
-    //     // Code here will be called immediately after each test (right
-    //     // before the destructor).
-    // }
+public:
+    static void SetUpTestCase() {
+        // Code here will be called once before all tests
+    }
 
     void SetUp() override {
         // Code here will be called before each test
@@ -39,6 +33,10 @@ protected:
 
     void TearDown() override {
         // Code here will be called after each test
+    }
+
+    static void TearDownTestCase() {
+        // Code here will be called once after all tests
     }
 };
 
