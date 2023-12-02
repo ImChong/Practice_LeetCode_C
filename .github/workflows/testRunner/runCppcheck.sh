@@ -13,10 +13,7 @@ do
     cppcheck $file --output-file=cppcheck_output.txt
     output=$(cat cppcheck_output.txt)
     echo "$output"
-    echo "test point 1"
     if echo "$output" | grep -q "error"; then
-        echo "test point 2"
-        echo "cppcheck found errors!"
         exit 1
     fi
 done
