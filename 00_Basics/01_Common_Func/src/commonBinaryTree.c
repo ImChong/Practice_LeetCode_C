@@ -534,7 +534,7 @@ int *treeToArray(struct TreeNode *root, int *returnSize) {
         return NULL;
     }
 
-    int *result = (int *)malloc(MAX_SIZE * sizeof(int));
+    int *result = (int *)malloc(MAX_SIZE * sizeof(int));    /* NOLINT(readability/casting) */
     TreeArrQueue *q = newTreeArrQueue(MAX_SIZE);
     enTreeArrQueue(q, root);
     int index = 0;
