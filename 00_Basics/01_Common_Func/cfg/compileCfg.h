@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : 编译配置文件
  */
-#ifndef __COMPILE_CFG_H
-#define __COMPILE_CFG_H
+#ifndef __COMPILE_CFG_H     /* NOLINT(build/header_guard) */
+#define __COMPILE_CFG_H     /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -30,4 +30,4 @@
 #define COMMON_STRING_EN                1           /* 通用字符串编译使能  1: enable, 0: disable */
 
 
-#endif  /* __COMPILE_CFG_H */
+#endif  /* __COMPILE_CFG_H */   /* NOLINT(build/header_guard) */
