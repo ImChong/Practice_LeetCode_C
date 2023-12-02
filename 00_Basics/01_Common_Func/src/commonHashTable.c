@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 18:52:38
+ * @LastEditTime : 2023-12-02 18:55:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,13 +30,13 @@
  * @return {struct HashTable} *newTable     哈希表
  */
 struct HashTable *createHashTable(int size) {
-    struct HashTable *newTable = (struct HashTable *)malloc(sizeof(struct HashTable));  /* 为哈希表分配空间 */
-    newTable->size = size;                                                              /* 设置哈希表大小 */
-    newTable->hashSlots = (struct HashNode **)malloc(sizeof(struct HashNode *) * size); /* 为哈希节点分配空间 */
-    for (int i = 0; i < size; i++) {                                                    /* 遍历哈希表 */
-        newTable->hashSlots[i] = NULL;                                                      /* 将哈希表的每个节点都设置为空 */
+    struct HashTable *newTable = (struct HashTable *)malloc(sizeof(struct HashTable));      /* 为哈希表分配空间 */
+    newTable->size = size;      /* 设置哈希表大小 */
+    newTable->hashSlots = (struct HashNode **)malloc(sizeof(struct HashNode *) * size);     /* 为哈希节点分配空间 */
+    for (int i = 0; i < size; i++) {        /* 遍历哈希表 */
+        newTable->hashSlots[i] = NULL;      /* 将哈希表的每个节点都设置为空 */
     }
-    return newTable;                                                                    /* 返回哈希表 */
+    return newTable;        /* 返回哈希表 */
 }
 
 /**
@@ -47,7 +47,7 @@ struct HashTable *createHashTable(int size) {
  * @return {int} slot           槽位
  */
 int getHashSlot(struct HashTable *table, int val) {
-    return abs(val) % table->size;                                                      /* 获取元素值在哈希表中的槽位 */
+    return abs(val) % table->size;      /* 获取元素值在哈希表中的槽位 */
 }
 
 /**
