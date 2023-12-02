@@ -18,7 +18,7 @@ on:
 
 jobs:
     # Job
-    cpplint-check:
+    Cpplint-Style-Check:
       runs-on: ubuntu-latest
       steps:
         # step to checkout the source code
@@ -40,7 +40,7 @@ jobs:
             chmod +x .github/workflows/testRunner/runCpplint.sh
             .github/workflows/testRunner/runCpplint.sh
 
-    cppcheck-check:
+    Cppcheck-Style-Check:
       runs-on: ubuntu-latest
       steps:
         # step to checkout the source code
