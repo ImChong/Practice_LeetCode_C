@@ -4,10 +4,8 @@ echo "Running cppcheck..."
 set -e  # Exit immediately if a command exits with a non-zero status.
 TARGET_DIR="./00_Basics/01_Common_Func"
 
-for file in "$TARGET_DIR"/*.{c,h}; do
-    echo "Checking $file..."
-    if [ -f "$file" ]; then
-        cppcheck "$file" || { echo "cppcheck failed for $file"; exit 1; }
-        echo "===> cppcheck passed for $file."
-    fi
-done
+find $TARGET_DIR \
+    -name "*.c" -o -name "*.h" \
+    -exec echo "Checking file: {} ..." \; \
+    -exec cppcheck {} \; \
+    || { echo "cppcheck failed for {}"; exit 1; }
