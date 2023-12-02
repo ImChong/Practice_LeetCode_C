@@ -94,12 +94,12 @@
             },
             "linux": {          /* Linux下的清除指令 */
                 "command": [
-                    "${workspaceFolder}/00_Basics/02_Clean_Exe/killexe.sh"
+                    "${workspaceFolder}/00_Basics/02_Clean_Exe/killExes.sh"
                 ]
             },
             "windows": {        /* Windows下的清除指令 */
                 "command": [
-                    "${workspaceFolder}/00_Basics/02_Clean_Exe/killexe.bat"
+                    "${workspaceFolder}/00_Basics/02_Clean_Exe/killExes.bat"
                 ]
             },
             "problemMatcher": [],                                                   /* 指定错误匹配模式 */
