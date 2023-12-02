@@ -21,27 +21,6 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-    # # Job
-    # code-style-check:
-    #   runs-on: ubuntu-latest
-    #   steps:
-    #     # step to checkout the source code
-    #     - name: Checkout source code
-    #       uses: actions/checkout@main
-
-    #     # step to install cpplint
-    #     - name: Install cpplint
-    #       run: pip install cpplint
-
-    #     # Step: Tool Versions
-    #     - name: Tool Versions
-    #       run: |
-    #         cpplint --version
-
-    #     # step to run cpplint
-    #     - name: Check Code Style
-    #       run: cpplint --recursive 00_Basics/01_Common_Func/**/*.c 00_Basics/01_Common_Func/**/*.h
-
     # Job
     Common-Functions-Tests:
       # Runner
@@ -72,4 +51,5 @@ jobs:
           run: |
             chmod +x 00_Basics/03_Run_Tests/runGTests.sh
             ./00_Basics/03_Run_Tests/runGTests.sh
+            echo "=============================="
             echo "All executables have been run!"
