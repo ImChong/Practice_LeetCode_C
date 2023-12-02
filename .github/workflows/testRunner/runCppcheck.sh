@@ -12,7 +12,9 @@ do
     echo "=============================="
     output=$(cppcheck $file)
     echo "$output"
+    echo "test point 1"
     if echo "$output" | grep -q "error"; then   # if output contains "error"
+        echo "test point 2"
         echo "cppcheck found errors!"
         exit 1                                      # exit with error
     fi
