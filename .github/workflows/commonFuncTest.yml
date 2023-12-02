@@ -40,16 +40,16 @@ jobs:
         - name: Tool Versions
           run: cmake --version
 
-        # Step: Build the project
-        - name: Build the project
+        # Step: Build all the tests
+        - name: Build all the tests
           run: |
             mkdir build
             cd build
             cmake ..
             cmake --build .
 
-        # Step: Run all executables in the build/bin directory
-        - name: Run executables
+        # Step: Run all test executables in the build/bin directory
+        - name: Run all tests
           run: |
             find ./build/bin -executable -type f -exec {} \;
             echo "All executables have been run!"
