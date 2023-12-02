@@ -2,7 +2,7 @@
 echo "Running cpplint..."
 
 # Exit immediately if a command exits with a non-zero status.
-# set -e
+set -e
 
 # run cpplint on all .c and .h files in the target directory
 TARGET_DIR="./00_Basics/01_Common_Func"
