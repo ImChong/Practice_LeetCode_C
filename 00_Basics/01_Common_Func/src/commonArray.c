@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 20:21:44
+ * @LastEditTime : 2023-12-03 11:00:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -77,31 +77,33 @@ void print2DArray(int **arr, int arrSize, int *arrColSizes) {
 /**
  * @description: 释放数组
  * =================================================================================
- * @param {int} *result             返回数组
+ * @param {int} **arrPtr            返回数组
  * @return {void}
  */
-void freeArray(int *result) {
-    if (result == NULL) {
+void freeArray(int **arrPtr) {
+    if (*arrPtr == NULL) {
         return;
     }
-    free(result);
+    free(*arrPtr);
+    *arrPtr = NULL;
 }
 
 /**
  * @description: 释放二维数组
  * =================================================================================
- * @param {int} **arr               返回数组
+ * @param {int} ***arrPtr           返回数组
  * @param {int} arrSize             返回数组大小
  * @return {void}
  */
-void free2DArray(int **arr, int arrSize) {
-    if (arr == NULL) {
+void free2DArray(int ***arrPtr, int arrSize) {
+    if (*arrPtr == NULL) {
         return;
     }
     for (int i = 0; i < arrSize; i++) {
-        free(arr[i]);
+        free((*arrPtr)[i]);
     }
-    free(arr);
+    free(*arrPtr);
+    *arrPtr = NULL;
 }
 
 /**********************************************************************************/

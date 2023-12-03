@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\01_Array\01_binarySearch\cfg\compileCfg.h
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\cfg\compileCfg.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 15:00:41
+ * @LastEditTime : 2023-12-03 10:59:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,7 +17,7 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define COMMON_ARRAY_EN                 0           /* 通用数组编译使能  1: enable, 0: disable */
+#define COMMON_ARRAY_EN                 1           /* 通用数组编译使能  1: enable, 0: disable */
 #define COMMON_BINARY_TREE_EN           0           /* 通用二叉树编译使能  1: enable, 0: disable */
 #define COMMON_CMD_EN                   0           /* 通用命令行编译使能  1: enable, 0: disable */
 #define COMMON_HASH_TABLE_EN            0           /* 通用哈希表编译使能  1: enable, 0: disable */
