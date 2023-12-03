@@ -20,17 +20,17 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define ARR_SIZE(arr)       (sizeof(arr) / sizeof((arr)[0]))        /* 获取数组长度：如果以地址形式传入则会报错 */
+#define ARR_SIZE(arr)       (sizeof(arr) / sizeof((arr)[0]))    /* 获取数组长度：如果以地址形式传入则会报错 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void printArray(int *arr, int arrSize);                                 /* 打印数组 */
-void print2DArray(int **arr, int arrSize, int *arrColSizes);            /* 打印二维数组 */
-void freeArray(int **arrPtr);                                           /* 释放数组 */
-void free2DArray(int ***arrPtr, int arrSize);                           /* 释放二维数组 */
+void printArray(int *arr, int arrSize);                         /* 打印数组 */
+void print2DArray(int **arr, int arrSize, int *arrColSizes);    /* 打印二维数组 */
+void freeArray(int **arrPtr);                                   /* 释放数组 */
+void free2DArray(int ***arrPtr, int arrSize);                   /* 释放二维数组 */
 
 /**********************************************************************************/
 /*                                                                                */
