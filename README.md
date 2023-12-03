@@ -117,10 +117,6 @@ for the code to accomplish the above behavior please see [source code](./00_Basi
 
 > In order to ensure the quality of the [common c function code](00_Basics/01_Common_Func), the following workflows are used:
 >
-> ### Code Style Checks
->
 > The source code of Coding Style Checks is in [codeStyleCheck.yml](.github/workflows/codeStyleCheck.yml).
->
-> ### Common Function Tests
 >
 > The source code of Common Function Tests is in [commonFuncTest.yml](.github/workflows/commonFuncTest.yml).
