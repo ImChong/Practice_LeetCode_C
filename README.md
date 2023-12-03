@@ -13,7 +13,7 @@ C language leetcode practice overall folder structure:
   - [Common_Func](00_Basics/01_Common_Func/) - Common c function modules
   - [Clean_Exe](00_Basics/02_Clean_Exe/) - Executables to clean all .exe files
 - [Programming_Topics](Programming_Topics/) - Programming topics ([代码随想录系列](https://programmercarl.com/) / [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/))
-- [Real_World_Problem](02_Real_World_Problem/) - Real world problem
+- [Real_World_Problem](02_Real_World_Problem/) - Real world problems
 - [Misc](03_Misc/) - Miscellaneous
   - [Programming_Notes](03_Misc/00_Programming_Notes/) - Programming notes
 
