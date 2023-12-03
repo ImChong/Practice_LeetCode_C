@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-04 01:11:27
+ * @LastEditTime : 2023-12-04 01:14:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -120,6 +120,11 @@ int validateString(char testNum, char *expect, char *actual) {
     printf("    - Expect: %s\n", expect);
     printf("    - Actual: %s\n", actual);
     printf("\n");
+    if (isSuccess) {                                                            /* 如果通过测试 */
+        return COMMON_OK;                                                           /* 返回成功 */
+    } else {                                                                    /* 如果未通过测试 */
+        return COMMON_ERR;                                                          /* 返回失败 */
+    }
 }
 
 
