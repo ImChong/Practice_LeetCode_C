@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 18:17:58
+ * @LastEditTime : 2023-12-04 01:12:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -103,11 +103,10 @@ int print2DArray(int **arr, int arrSize, int *arrColSizes) {
  * @return {int}                    打印结果
  */
 int freeArray(int **arrPtr) {
-    if (*arrPtr == NULL) {
-        return COMMON_OK;
+    if (*arrPtr != NULL) {
+        free(*arrPtr);
+        *arrPtr = NULL;
     }
-    free(*arrPtr);
-    *arrPtr = NULL;
     return COMMON_OK;
 }
 
@@ -119,17 +118,16 @@ int freeArray(int **arrPtr) {
  * @return {int}                    打印结果
  */
 int free2DArray(int ***arrPtr, int arrSize) {
-    if (*arrPtr == NULL) {
-        return COMMON_OK;
-    }
-    for (int i = 0; i < arrSize; i++) {
-        if ((*arrPtr)[i] != NULL) {
-            free((*arrPtr)[i]);
-            (*arrPtr)[i] = NULL;
+    if (*arrPtr != NULL) {
+        for (int i = 0; i < arrSize; i++) {
+            if ((*arrPtr)[i] != NULL) {
+                free((*arrPtr)[i]);
+                (*arrPtr)[i] = NULL;
+            }
         }
+        free(*arrPtr);
+        *arrPtr = NULL;
     }
-    free(*arrPtr);
-    *arrPtr = NULL;
     return COMMON_OK;
 }
 

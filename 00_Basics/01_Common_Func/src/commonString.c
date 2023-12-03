@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 18:47:12
+ * @LastEditTime : 2023-12-04 01:11:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -52,27 +52,36 @@ void reverseStringSection(char *s, int leftIndex, int rightIndex) {
     }
 }
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                HELPER FUNCTIONS                                */
+/*                                                                                */
+/**********************************************************************************/
 /**
  * @description: 打印字符串
  * =================================================================================
  * @param {char} *s     字符串地址
- * @return {void}
+ * @return {int}
  */
-void printString(char *s) {
-    printf("Str: %s\n", s);
+int printString(char *s) {
+    if (printf("Str: %s\n", s) < 0) {       /* 打印字符串 */
+        return COMMON_ERR;                    /* 打印失败 */
+    }
+    return COMMON_OK;                       /* 打印成功 */
 }
 
 /**
  * @description: 释放字符串
  * =================================================================================
  * @param {char} *s     字符串地址
- * @return {void}
+ * @return {int}
  */
-void freeString(char *s) {
+int freeString(char *s) {
     if (s != NULL) {        /* 字符串不为空 */
         free(s);                /* 释放字符串 */
         s = NULL;               /* 字符串指针置空 */
     }
+    return COMMON_OK;       /* 释放成功 */
 }
 
 /**********************************************************************************/
@@ -86,9 +95,9 @@ void freeString(char *s) {
  * @param {char} testNum    测试编号
  * @param {int} expect      预期字符串
  * @param {int} actual      实际字符串
- * @return {void}
+ * @return {int}
  */
-void validateString(char testNum, char *expect, char *actual) {
+int validateString(char testNum, char *expect, char *actual) {
     int isSuccess = COMMON_TRUE;
 
     if (expect == NULL && actual == NULL) {
