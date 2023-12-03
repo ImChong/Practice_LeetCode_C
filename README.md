@@ -54,7 +54,10 @@ C language leetcode practice overall folder structure:
 > └── main.c                                /* main & test source file */
 > ```
 >
-> all the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder.
+> all the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder. with the following workflows to ensure the quality of the code:
+>
+> - Coding Style Checks: [codeStyleCheck.yml](.github/workflows/codeStyleCheck.yml).
+> - Common Function Tests: [commonFuncTest.yml](.github/workflows/commonFuncTest.yml).
 
 ## Build & Run Code
 
@@ -110,12 +113,12 @@ C language leetcode practice overall folder structure:
 > .\00_Basics\02_Clean_Exe\killexe.bat        /* windows system */
 > ./00_Basics/02_Clean_Exe/killexe.sh         /* linux system */
 > ```
+>
+> for the code to accomplish the above behavior please see [source code](./00_Basics/02_Clean_Exe/).
 
-for the code to accomplish the above behavior please see [source code](./00_Basics/02_Clean_Exe/).
+## Common Function & WorkFlows
 
-## Common Function WorkFlows
-
-> In order to ensure the quality of the [common c function code](00_Basics/01_Common_Func), the following workflows are used:
+> [00_Basics/01_Common_Func](00_Basics/01_Common_Func) folder contains common c function modules.
 >
 > The source code of Coding Style Checks is in [codeStyleCheck.yml](.github/workflows/codeStyleCheck.yml).
 >
