@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonPrintDef.h
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonDef\commonPrintDef.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 12:55:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-22 12:56:30
+ * @LastEditTime : 2023-12-03 10:06:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
