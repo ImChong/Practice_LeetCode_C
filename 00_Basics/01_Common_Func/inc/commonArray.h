@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 17:45:34
+ * @LastEditTime : 2023-12-03 18:12:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -37,11 +37,11 @@ int free2DArray(int ***arrPtr, int arrSize);                    /* 释放二维�
 int compareElements(const void *a, const void *b);              /* 比较元素 */
 void sortArray(int *arr, int arrSize);                          /* 排序数组 */
 void sort2DArray(int **arr, int arrSize, int *arrColSizes);     /* 排序二维数组 */
-void validateArray(char testNum,
-                        int *expectArr, int expectLen,
-                        int *actualArr, int actualLen,
-                        int needSort);                          /* 验证数组 */
-void validate2DArray(char testNum,
+int validateArray(char testNum,
+                    int *expectArr, int expectLen,
+                    int *actualArr, int actualLen,
+                    int needSort);                              /* 验证数组 */
+int validate2DArray(char testNum,
                         int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
                         int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
                         int needSort);                          /* 验证二维数组 */

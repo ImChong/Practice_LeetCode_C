@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 17:58:37
+ * @LastEditTime : 2023-12-03 18:13:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -203,9 +203,9 @@ void sort2DArray(int **arr, int arrSize, int *arrColSizes) {
  * @param {int} *actualArr      实际结果
  * @param {int} actualLen       实际结果长度
  * @param {int} needSort        是否排序
- * @return {void}
+ * @return {int}                验证结果: 0-成功，-1-失败
  */
-void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen, int needSort) {
+int validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen, int needSort) {
     if (needSort == COMMON_TRUE) {
         sortArray(expectArr, expectLen);
         sortArray(actualArr, actualLen);
@@ -234,6 +234,11 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
     printf("- Expect: "); printArray(expectArr, expectLen);
     printf("- Actual: "); printArray(actualArr, actualLen);
     printf("\n");
+    if (isSuccess) {
+        return COMMON_OK;
+    } else {
+        return COMMON_ERR;
+    }
 }
 
 /**
@@ -247,9 +252,9 @@ void validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, 
  * @param {int} actualRtnRowSize        实际结果大小
  * @param {int} *actualRtnColSize       实际结果列大小
  * @param {int} needSort                是否排序
- * @return {void}
+ * @return {int}                        验证结果: 0-成功，-1-失败
  */
-void validate2DArray(char testNum,
+int validate2DArray(char testNum,
                             int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
                             int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
                             int needSort) {
@@ -287,6 +292,11 @@ void validate2DArray(char testNum,
     printf("- Expect: "); print2DArray(expect2DArr, expectRtnRowSize, expectRtnColSize);
     printf("- Actual: "); print2DArray(actual2DArr, actualRtnRowSize, actualRtnColSize);
     printf("\n");
+    if (isSuccess) {
+        return COMMON_OK;
+    } else {
+        return COMMON_ERR;
+    }
 }
 
 

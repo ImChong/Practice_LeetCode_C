@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 18:01:47
+ * @LastEditTime : 2023-12-03 18:14:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -229,14 +229,10 @@ TEST_F(TestCommonArray, TestValidateArray) {
     /* 运行结果 */
     sortArray(actualArr, 5);
     printf("\n");
-    validateArray('1', expectArr, 5, actualArr, 5, 1);
+    int result = validateArray('1', expectArr, 5, actualArr, 5, 1);
 
     /* 比较结果 */
-    EXPECT_EQ(1, actualArr[0]) << "Error occurred in validateArray actualArr[0]";
-    EXPECT_EQ(2, actualArr[1]) << "Error occurred in validateArray actualArr[1]";
-    EXPECT_EQ(3, actualArr[2]) << "Error occurred in validateArray actualArr[2]";
-    EXPECT_EQ(4, actualArr[3]) << "Error occurred in validateArray actualArr[3]";
-    EXPECT_EQ(5, actualArr[4]) << "Error occurred in validateArray actualArr[4]";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in validateArray";
 }
 
 /* ============================================================================== */
@@ -271,13 +267,8 @@ TEST_F(TestCommonArray, TestValidate2DArray) {
     /* 运行结果 */
     sort2DArray(actual2DArr, 2, actualRtnColSize);
     printf("\n");
-    validate2DArray('1', expect2DArr, 2, expectRtnColSize, actual2DArr, 2, actualRtnColSize, 1);
+    int result = validate2DArray('1', expect2DArr, 2, expectRtnColSize, actual2DArr, 2, actualRtnColSize, 1);
 
     /* 比较结果 */
-    EXPECT_EQ(1, actual2DArr[0][0]) << "Error occurred in validate2DArray actual2DArr[0][0]";
-    EXPECT_EQ(2, actual2DArr[0][1]) << "Error occurred in validate2DArray actual2DArr[0][1]";
-    EXPECT_EQ(3, actual2DArr[0][2]) << "Error occurred in validate2DArray actual2DArr[0][2]";
-    EXPECT_EQ(4, actual2DArr[1][0]) << "Error occurred in validate2DArray actual2DArr[1][0]";
-    EXPECT_EQ(5, actual2DArr[1][1]) << "Error occurred in validate2DArray actual2DArr[1][1]";
-    EXPECT_EQ(6, actual2DArr[1][2]) << "Error occurred in validate2DArray actual2DArr[1][2]";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in validate2DArray";
 }
