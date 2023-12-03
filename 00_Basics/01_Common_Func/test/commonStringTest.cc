@@ -4,7 +4,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:24:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 23:39:58
+ * @LastEditTime : 2023-12-03 18:21:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -65,7 +65,7 @@ TEST_F(TestCommonString, TestSwapChar) {
 TEST_F(TestCommonString, TestReverseStringSection) {
     /* 准备数据 */
     char *s = (char *)malloc(sizeof(char) * 8);     /* NOLINT(readability/casting) */
-    snprintf(s, sizeof(s), "%s", "abcdefg");
+    snprintf(s, 8, "%s", "abcdefg");
 
     /* 运行结果 */
     reverseStringSection(s, 2, 5);
