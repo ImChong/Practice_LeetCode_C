@@ -35,8 +35,8 @@ int free2DArray(int ***arrPtr, int arrSize);                    /* 释放二维�
 /*                                                                                */
 /**********************************************************************************/
 int compareElements(const void *a, const void *b);              /* 比较元素 */
-void sortArray(int *arr, int arrSize);                          /* 排序数组 */
-void sort2DArray(int **arr, int arrSize, int *arrColSizes);     /* 排序二维数组 */
+int sortArray(int *arr, int arrSize);                           /* 排序数组 */
+int sort2DArray(int **arr, int arrSize, int *arrColSizes);      /* 排序二维数组 */
 int validateArray(char testNum,
                     int *expectArr, int expectLen,
                     int *actualArr, int actualLen,

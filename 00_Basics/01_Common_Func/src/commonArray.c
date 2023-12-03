@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 18:13:58
+ * @LastEditTime : 2023-12-03 18:17:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -172,10 +172,14 @@ STATIC_FUNC int compareRows(const void *a, const void *b) {
  * =================================================================================
  * @param {int} *arr            数组
  * @param {int} arrSize         数组大小
- * @return {void}
+ * @return {int}                排序结果
  */
-void sortArray(int *arr, int arrSize) {
+int sortArray(int *arr, int arrSize) {
+    if (arr == NULL || arrSize <= 0) {
+        return COMMON_ERR;
+    }
     qsort(arr, arrSize, sizeof(int), compareElements);
+    return COMMON_OK;
 }
 
 /**
@@ -184,14 +188,21 @@ void sortArray(int *arr, int arrSize) {
  * @param {int} **arr           返回数组
  * @param {int} arrSize         返回数组大小
  * @param {int} *arrColSizes    返回数组列大小
- * @return {void}
+ * @return {int}                排序结果
  */
-void sort2DArray(int **arr, int arrSize, int *arrColSizes) {
+int sort2DArray(int **arr, int arrSize, int *arrColSizes) {
+    if (arr == NULL || arrSize <= 0 || arrColSizes == NULL) {
+        return COMMON_ERR;
+    }
     for (int i = 0; i < arrSize; i++) {
+        if (arr[i] == NULL || arrColSizes[i] <= 0) {
+            return COMMON_ERR;
+        }
         qsort(arr[i], arrColSizes[i], sizeof(int), compareElements);
     }
     g_2DArrRowSize = arrSize;
     qsort(arr, arrSize, sizeof(int *), compareRows);
+    return COMMON_OK;
 }
 
 /**
