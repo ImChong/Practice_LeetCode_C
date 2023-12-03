@@ -25,9 +25,9 @@ set(TEST_TARGETS commonArray commonString)
 # 对每个测试目标执行操作
 foreach(TARGET ${TEST_TARGETS})
     # 创建一个新的测试目标
-    add_executable(${TARGET}Test test/${TARGET}Test.cc src/${TARGET}.c)
-
+    set(TEST_TARGET_NAME ${TARGET}Test)
+    add_executable(${TEST_TARGET_NAME} test/${TEST_TARGET_NAME}.cc src/${TARGET}.c)
     # 将Google Test库链接到测试目标
-    add_dependencies(${TARGET}Test googletest)
-    target_link_libraries(${TARGET}Test gtest gtest_main)
+    add_dependencies(${TEST_TARGET_NAME} googletest)
+    target_link_libraries(${TEST_TARGET_NAME} gtest gtest_main)
 endforeach()
