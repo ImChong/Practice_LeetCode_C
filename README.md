@@ -115,11 +115,3 @@ C language leetcode practice overall folder structure:
 > ```
 >
 > for the code to accomplish the above behavior please see [source code](./00_Basics/02_Clean_Exe/).
-
-## Common Function & WorkFlows
-
-> [00_Basics/01_Common_Func](00_Basics/01_Common_Func) folder contains common c function modules.
->
-> The source code of Coding Style Checks is in [codeStyleCheck.yml](.github/workflows/codeStyleCheck.yml).
->
-> The source code of Common Function Tests is in [commonFuncTest.yml](.github/workflows/commonFuncTest.yml).
