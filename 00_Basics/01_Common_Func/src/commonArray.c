@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-04 02:34:40
+ * @LastEditTime : 2023-12-04 02:39:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -27,6 +27,78 @@
 /*                                                                                */
 /**********************************************************************************/
 STATIC int g_2DArrRowSize = 0;
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                UTILITY FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 比较数组间的元素顺序
+ * =================================================================================
+ * @param {void} *a             数组元素a
+ * @param {void} *b             数组元素b
+ * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
+ */
+int compareElements(const void *a, const void *b) {
+    return (*(int*)a - *(int*)b);       /* NOLINT(readability/casting) */
+}
+
+/**
+ * @description: 比较二维数组间的行顺序
+ * =================================================================================
+ * @param {void} *a             数组元素a
+ * @param {void} *b             数组元素b
+ * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
+ */
+STATIC_FUNC int compareRows(const void *a, const void *b) {
+    int *arrA = *(int **)a;             /* NOLINT(readability/casting) */
+    int *arrB = *(int **)b;             /* NOLINT(readability/casting) */
+    for (int i = 0; i < g_2DArrRowSize; i++) {
+        if (arrA[i] != arrB[i]) {
+            return (arrA[i] - arrB[i]);
+        }
+    }
+    return 0;
+}
+
+/**
+ * @description: 数组排序
+ * =================================================================================
+ * @param {int} *arr            数组
+ * @param {int} arrSize         数组大小
+ * @return {int}                排序结果
+ */
+int sortArray(int *arr, int arrSize) {
+    if (arr == NULL || arrSize <= 0) {
+        return COMMON_ERR;
+    }
+    qsort(arr, arrSize, sizeof(int), compareElements);
+    return COMMON_OK;
+}
+
+/**
+ * @description: 二维数组排序
+ * =================================================================================
+ * @param {int} **arr           返回数组
+ * @param {int} arrSize         返回数组大小
+ * @param {int} *arrColSizes    返回数组列大小
+ * @return {int}                排序结果
+ */
+int sort2DArray(int **arr, int arrSize, int *arrColSizes) {
+    if (arr == NULL || arrSize <= 0 || arrColSizes == NULL) {
+        return COMMON_ERR;
+    }
+    for (int i = 0; i < arrSize; i++) {
+        if (arr[i] == NULL || arrColSizes[i] <= 0) {
+            return COMMON_ERR;
+        }
+        qsort(arr[i], arrColSizes[i], sizeof(int), compareElements);
+    }
+    g_2DArrRowSize = arrSize;
+    qsort(arr, arrSize, sizeof(int *), compareRows);
+    return COMMON_OK;
+}
 
 /**********************************************************************************/
 /*                                                                                */
@@ -128,78 +200,6 @@ int free2DArray(int ***arrPtr, int arrSize) {
         free(*arrPtr);
         *arrPtr = NULL;
     }
-    return COMMON_OK;
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                UTILITY FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 比较数组间的元素顺序
- * =================================================================================
- * @param {void} *a             数组元素a
- * @param {void} *b             数组元素b
- * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
- */
-int compareElements(const void *a, const void *b) {
-    return (*(int*)a - *(int*)b);       /* NOLINT(readability/casting) */
-}
-
-/**
- * @description: 比较二维数组间的行顺序
- * =================================================================================
- * @param {void} *a             数组元素a
- * @param {void} *b             数组元素b
- * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
- */
-STATIC_FUNC int compareRows(const void *a, const void *b) {
-    int *arrA = *(int **)a;             /* NOLINT(readability/casting) */
-    int *arrB = *(int **)b;             /* NOLINT(readability/casting) */
-    for (int i = 0; i < g_2DArrRowSize; i++) {
-        if (arrA[i] != arrB[i]) {
-            return (arrA[i] - arrB[i]);
-        }
-    }
-    return 0;
-}
-
-/**
- * @description: 数组排序
- * =================================================================================
- * @param {int} *arr            数组
- * @param {int} arrSize         数组大小
- * @return {int}                排序结果
- */
-int sortArray(int *arr, int arrSize) {
-    if (arr == NULL || arrSize <= 0) {
-        return COMMON_ERR;
-    }
-    qsort(arr, arrSize, sizeof(int), compareElements);
-    return COMMON_OK;
-}
-
-/**
- * @description: 二维数组排序
- * =================================================================================
- * @param {int} **arr           返回数组
- * @param {int} arrSize         返回数组大小
- * @param {int} *arrColSizes    返回数组列大小
- * @return {int}                排序结果
- */
-int sort2DArray(int **arr, int arrSize, int *arrColSizes) {
-    if (arr == NULL || arrSize <= 0 || arrColSizes == NULL) {
-        return COMMON_ERR;
-    }
-    for (int i = 0; i < arrSize; i++) {
-        if (arr[i] == NULL || arrColSizes[i] <= 0) {
-            return COMMON_ERR;
-        }
-        qsort(arr[i], arrColSizes[i], sizeof(int), compareElements);
-    }
-    g_2DArrRowSize = arrSize;
-    qsort(arr, arrSize, sizeof(int *), compareRows);
     return COMMON_OK;
 }
 

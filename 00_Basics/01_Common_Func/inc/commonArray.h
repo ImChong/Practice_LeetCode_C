@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 18:12:07
+ * @LastEditTime : 2023-12-04 02:39:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,6 +21,15 @@
 
 /**********************************************************************************/
 /*                                                                                */
+/*                                UTILITY FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+int compareElements(const void *a, const void *b);              /* 比较元素 */
+int sortArray(int *arr, int arrSize);                           /* 排序数组 */
+int sort2DArray(int **arr, int arrSize, int *arrColSizes);      /* 排序二维数组 */
+
+/**********************************************************************************/
+/*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
@@ -28,15 +37,6 @@ int printArray(int *arr, int arrSize);                          /* 打印数组 
 int print2DArray(int **arr, int arrSize, int *arrColSizes);     /* 打印二维数组 */
 int freeArray(int **arrPtr);                                    /* 释放数组 */
 int free2DArray(int ***arrPtr, int arrSize);                    /* 释放二维数组 */
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                UTILITY FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-int compareElements(const void *a, const void *b);              /* 比较元素 */
-int sortArray(int *arr, int arrSize);                           /* 排序数组 */
-int sort2DArray(int **arr, int arrSize, int *arrColSizes);      /* 排序二维数组 */
 
 /**********************************************************************************/
 /*                                                                                */
