@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 11:15:58
+ * @LastEditTime : 2023-12-03 17:27:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -108,7 +108,7 @@ TEST_F(TestCommonArray, TestPrint2DArray) {
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestFreeArray) {
     /* 准备数据 */
-    int *arr = (int *)malloc(sizeof(int) * 5);      /* NOLINT(readability/casting) */
+    int *arr = (int *)malloc(sizeof(int) * 5);              /* NOLINT(readability/casting) */
 
     /* 运行结果 */
     freeArray(&arr);
