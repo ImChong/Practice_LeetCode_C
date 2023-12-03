@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 10:53:16
+ * @LastEditTime : 2023-12-03 17:45:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,9 +11,6 @@
  */
 #ifndef __COMMON_ARRAY_H    /* NOLINT(build/header_guard) */
 #define __COMMON_ARRAY_H    /* NOLINT(build/header_guard) */
-
-/* 通用头文件 */
-#include "commonTypeDef.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -27,10 +24,10 @@
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void printArray(int *arr, int arrSize);                         /* 打印数组 */
-void print2DArray(int **arr, int arrSize, int *arrColSizes);    /* 打印二维数组 */
-void freeArray(int **arrPtr);                                   /* 释放数组 */
-void free2DArray(int ***arrPtr, int arrSize);                   /* 释放二维数组 */
+int printArray(int *arr, int arrSize);                          /* 打印数组 */
+int print2DArray(int **arr, int arrSize, int *arrColSizes);     /* 打印二维数组 */
+int freeArray(int **arrPtr);                                    /* 释放数组 */
+int free2DArray(int ***arrPtr, int arrSize);                    /* 释放二维数组 */
 
 /**********************************************************************************/
 /*                                                                                */

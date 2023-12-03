@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 11:00:29
+ * @LastEditTime : 2023-12-03 17:58:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,17 +38,26 @@ STATIC int g_2DArrRowSize = 0;
  * =================================================================================
  * @param {int} *arr            数组
  * @param {int} arrSize         数组大小
- * @return {void}
+ * @return {int}                打印结果
  */
-void printArray(int *arr, int arrSize) {
-    printf("Arr (len: %d): [", arrSize);
+int printArray(int *arr, int arrSize) {
+    if (printf("Arr (len: %d): [", arrSize) < 0) {
+        return COMMON_ERR;
+    }
     for (int i = 0; i < arrSize; i++) {
-        printf("%d", arr[i]);
+        if (printf("%d", arr[i]) < 0) {
+            return COMMON_ERR;
+        }
         if (i < arrSize - 1) {
-            printf(",\t");
+            if (printf(",\t") < 0) {
+                return COMMON_ERR;
+            }
         }
     }
-    printf("]\n");
+    if (printf("]\n") < 0) {
+        return COMMON_ERR;
+    }
+    return COMMON_OK;
 }
 
 /**
@@ -57,35 +66,49 @@ void printArray(int *arr, int arrSize) {
  * @param {int} **2DArr             返回数组
  * @param {int} arrSize             返回数组大小
  * @param {int} *arrColSizes        返回数组列大小
- * @return {void}
+ * @return {int}                    打印结果
  */
-void print2DArray(int **arr, int arrSize, int *arrColSizes) {
-    printf("Ans: (row: %d, col: %d)[\n", arrSize, arrColSizes[0]);
+int print2DArray(int **arr, int arrSize, int *arrColSizes) {
+    if (printf("Ans: (row: %d, col: %d)[\n", arrSize, arrColSizes[0]) < 0) {
+        return COMMON_ERR;
+    }
     for (int i = 0; i < arrSize; i++) {
-        printf("  [");
+        if (printf("  [") < 0) {
+            return COMMON_ERR;
+        }
         for (int j = 0; j < arrColSizes[i]; j++) {
-            printf("%d", arr[i][j]);
+            if (printf("%d", arr[i][j]) < 0) {
+                return COMMON_ERR;
+            }
             if (j < arrColSizes[i] - 1) {
-                printf(",\t");
+                if (printf(",\t") < 0) {
+                    return COMMON_ERR;
+                }
             }
         }
-        printf("]\n");
+        if (printf("]\n") < 0) {
+            return COMMON_ERR;
+        }
     }
-    printf("]\n");
+    if (printf("]\n") < 0) {
+        return COMMON_ERR;
+    }
+    return COMMON_OK;
 }
 
 /**
  * @description: 释放数组
  * =================================================================================
  * @param {int} **arrPtr            返回数组
- * @return {void}
+ * @return {int}                    打印结果
  */
-void freeArray(int **arrPtr) {
+int freeArray(int **arrPtr) {
     if (*arrPtr == NULL) {
-        return;
+        return COMMON_OK;
     }
     free(*arrPtr);
     *arrPtr = NULL;
+    return COMMON_OK;
 }
 
 /**
@@ -93,17 +116,21 @@ void freeArray(int **arrPtr) {
  * =================================================================================
  * @param {int} ***arrPtr           返回数组
  * @param {int} arrSize             返回数组大小
- * @return {void}
+ * @return {int}                    打印结果
  */
-void free2DArray(int ***arrPtr, int arrSize) {
+int free2DArray(int ***arrPtr, int arrSize) {
     if (*arrPtr == NULL) {
-        return;
+        return COMMON_OK;
     }
     for (int i = 0; i < arrSize; i++) {
-        free((*arrPtr)[i]);
+        if ((*arrPtr)[i] != NULL) {
+            free((*arrPtr)[i]);
+            (*arrPtr)[i] = NULL;
+        }
     }
     free(*arrPtr);
     *arrPtr = NULL;
+    return COMMON_OK;
 }
 
 /**********************************************************************************/

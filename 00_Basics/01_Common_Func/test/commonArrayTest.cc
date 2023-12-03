@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 17:27:13
+ * @LastEditTime : 2023-12-03 18:01:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,7 @@
 #include "gtest/gtest.h"
 /* 测试目标头文件 */
 extern "C" {
+    #include "commonTypeDef.h"
     #include "commonArray.h"
 }
 
@@ -76,8 +77,11 @@ TEST_F(TestCommonArray, TestPrintArray) {
 
     /* 运行结果 */
     printf("\n");
-    printArray(arr, 5);
+    int result = printArray(arr, 5);
     printf("\n");
+
+    /* 检查结果 */
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in printArray";
 }
 
 /* ============================================================================== */
@@ -99,8 +103,11 @@ TEST_F(TestCommonArray, TestPrint2DArray) {
 
     /* 运行结果 */
     printf("\n");
-    print2DArray(arrPtr, 2, arrColSize);
+    int result = print2DArray(arrPtr, 2, arrColSize);
     printf("\n");
+
+    /* 检查结果 */
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in print2DArray";
 }
 
 /* ============================================================================== */
@@ -111,10 +118,11 @@ TEST_F(TestCommonArray, TestFreeArray) {
     int *arr = (int *)malloc(sizeof(int) * 5);              /* NOLINT(readability/casting) */
 
     /* 运行结果 */
-    freeArray(&arr);
+    int result = freeArray(&arr);
 
     /* 比较结果 */
-    EXPECT_EQ(arr, nullptr);
+    EXPECT_EQ(nullptr, arr) << "Error occurred in freeArray";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in freeArray result";
 }
 
 /* ============================================================================== */
@@ -128,10 +136,11 @@ TEST_F(TestCommonArray, TestFree2DArray) {
     }
 
     /* 运行结果 */
-    free2DArray(&arrPtr, 2);
+    int result = free2DArray(&arrPtr, 2);
 
     /* 比较结果 */
-    EXPECT_EQ(arrPtr, nullptr);
+    EXPECT_EQ(nullptr, arrPtr) << "Error occurred in free2DArray";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in free2DArray result";
 }
 
 /**********************************************************************************/
@@ -147,19 +156,19 @@ TEST_F(TestCommonArray, TestCompareElements) {
     int a = 5;
     int b = 3;
     /* 运行结果 & 比较结果 */
-    EXPECT_EQ(compareElements(&a, &b), 2);
+    EXPECT_EQ(2, compareElements(&a, &b)) << "Error occurred in compareElements a > b";
 
     /* 准备数据 */
     a = 3;
     b = 5;
     /* 运行结果 & 比较结果 */
-    EXPECT_EQ(compareElements(&a, &b), -2);
+    EXPECT_EQ(-2, compareElements(&a, &b)) << "Error occurred in compareElements a < b";
 
     /* 准备数据 */
     a = 5;
     b = 5;
     /* 运行结果 & 比较结果 */
-    EXPECT_EQ(compareElements(&a, &b), 0);
+    EXPECT_EQ(0, compareElements(&a, &b)) << "Error occurred in compareElements a = b";
 }
 
 /* ============================================================================== */
@@ -173,11 +182,11 @@ TEST_F(TestCommonArray, TestSortArray) {
     sortArray(arr, 5);
 
     /* 比较结果 */
-    EXPECT_EQ(arr[0], 1);
-    EXPECT_EQ(arr[1], 2);
-    EXPECT_EQ(arr[2], 3);
-    EXPECT_EQ(arr[3], 4);
-    EXPECT_EQ(arr[4], 5);
+    EXPECT_EQ(1, arr[0]) << "Error occurred in sortArray arr[0]";
+    EXPECT_EQ(2, arr[1]) << "Error occurred in sortArray arr[1]";
+    EXPECT_EQ(3, arr[2]) << "Error occurred in sortArray arr[2]";
+    EXPECT_EQ(4, arr[3]) << "Error occurred in sortArray arr[3]";
+    EXPECT_EQ(5, arr[4]) << "Error occurred in sortArray arr[4]";
 }
 
 /* ============================================================================== */
@@ -201,12 +210,12 @@ TEST_F(TestCommonArray, TestSort2DArray) {
     sort2DArray(arrPtr, 2, arrColSize);
 
     /* 比较结果 */
-    EXPECT_EQ(arrPtr[0][0], 0);
-    EXPECT_EQ(arrPtr[0][1], 1);
-    EXPECT_EQ(arrPtr[0][2], 2);
-    EXPECT_EQ(arrPtr[1][0], 3);
-    EXPECT_EQ(arrPtr[1][1], 4);
-    EXPECT_EQ(arrPtr[1][2], 5);
+    EXPECT_EQ(0, arrPtr[0][0]) << "Error occurred in sort2DArray arrPtr[0][0]";
+    EXPECT_EQ(1, arrPtr[0][1]) << "Error occurred in sort2DArray arrPtr[0][1]";
+    EXPECT_EQ(2, arrPtr[0][2]) << "Error occurred in sort2DArray arrPtr[0][2]";
+    EXPECT_EQ(3, arrPtr[1][0]) << "Error occurred in sort2DArray arrPtr[1][0]";
+    EXPECT_EQ(4, arrPtr[1][1]) << "Error occurred in sort2DArray arrPtr[1][1]";
+    EXPECT_EQ(5, arrPtr[1][2]) << "Error occurred in sort2DArray arrPtr[1][2]";
 }
 
 /* ============================================================================== */
@@ -223,11 +232,11 @@ TEST_F(TestCommonArray, TestValidateArray) {
     validateArray('1', expectArr, 5, actualArr, 5, 1);
 
     /* 比较结果 */
-    EXPECT_EQ(actualArr[0], 1);
-    EXPECT_EQ(actualArr[1], 2);
-    EXPECT_EQ(actualArr[2], 3);
-    EXPECT_EQ(actualArr[3], 4);
-    EXPECT_EQ(actualArr[4], 5);
+    EXPECT_EQ(1, actualArr[0]) << "Error occurred in validateArray actualArr[0]";
+    EXPECT_EQ(2, actualArr[1]) << "Error occurred in validateArray actualArr[1]";
+    EXPECT_EQ(3, actualArr[2]) << "Error occurred in validateArray actualArr[2]";
+    EXPECT_EQ(4, actualArr[3]) << "Error occurred in validateArray actualArr[3]";
+    EXPECT_EQ(5, actualArr[4]) << "Error occurred in validateArray actualArr[4]";
 }
 
 /* ============================================================================== */
@@ -265,10 +274,10 @@ TEST_F(TestCommonArray, TestValidate2DArray) {
     validate2DArray('1', expect2DArr, 2, expectRtnColSize, actual2DArr, 2, actualRtnColSize, 1);
 
     /* 比较结果 */
-    EXPECT_EQ(actual2DArr[0][0], 1);
-    EXPECT_EQ(actual2DArr[0][1], 2);
-    EXPECT_EQ(actual2DArr[0][2], 3);
-    EXPECT_EQ(actual2DArr[1][0], 4);
-    EXPECT_EQ(actual2DArr[1][1], 5);
-    EXPECT_EQ(actual2DArr[1][2], 6);
+    EXPECT_EQ(1, actual2DArr[0][0]) << "Error occurred in validate2DArray actual2DArr[0][0]";
+    EXPECT_EQ(2, actual2DArr[0][1]) << "Error occurred in validate2DArray actual2DArr[0][1]";
+    EXPECT_EQ(3, actual2DArr[0][2]) << "Error occurred in validate2DArray actual2DArr[0][2]";
+    EXPECT_EQ(4, actual2DArr[1][0]) << "Error occurred in validate2DArray actual2DArr[1][0]";
+    EXPECT_EQ(5, actual2DArr[1][1]) << "Error occurred in validate2DArray actual2DArr[1][1]";
+    EXPECT_EQ(6, actual2DArr[1][2]) << "Error occurred in validate2DArray actual2DArr[1][2]";
 }
