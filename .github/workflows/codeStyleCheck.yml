@@ -63,17 +63,3 @@ jobs:
           run: |
             chmod +x .github/workflows/testRunner/runCppcheck.sh
             .github/workflows/testRunner/runCppcheck.sh
-
-# TODO: 搭建如下workflow
-# SecMissile
-# Secbrella
-# clangtidy
-# cmetrics
-# codecheck
-# codemars
-# codingStyle
-# Clang Static Analyzer
-# SonarQube
-# PVS-Studio
-# Code Climate
-# cloc (Count Lines of Code)
