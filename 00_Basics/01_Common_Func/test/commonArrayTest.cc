@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 11:09:43
+ * @LastEditTime : 2023-12-03 11:14:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -75,7 +75,9 @@ TEST_F(TestCommonArray, TestPrintArray) {
     int arr[5] = {1, 2, 3, 4, 5};
 
     /* 运行结果 */
+    printf("\n");
     printArray(arr, 5);
+    printf("\n");
 }
 
 /* ============================================================================== */
@@ -96,7 +98,9 @@ TEST_F(TestCommonArray, TestPrint2DArray) {
     int arrColSize[2] = {3, 3};
 
     /* 运行结果 */
+    printf("\n");
     print2DArray(arrPtr, 2, arrColSize);
+    printf("\n");
 }
 
 /* ============================================================================== */
@@ -215,6 +219,7 @@ TEST_F(TestCommonArray, TestValidateArray) {
 
     /* 运行结果 */
     sortArray(actualArr, 5);
+    printf("\n");
     validateArray('1', expectArr, 5, actualArr, 5, 1);
 
     /* 比较结果 */
@@ -256,6 +261,7 @@ TEST_F(TestCommonArray, TestValidate2DArray) {
 
     /* 运行结果 */
     sort2DArray(actual2DArr, 2, actualRtnColSize);
+    printf("\n");
     validate2DArray('1', expect2DArr, 2, expectRtnColSize, actual2DArr, 2, actualRtnColSize, 1);
 
     /* 比较结果 */
