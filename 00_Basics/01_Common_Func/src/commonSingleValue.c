@@ -29,7 +29,7 @@
  * @param {char} testNum    测试编号
  * @param {int} expect      预期
  * @param {int} actual      实际
- * @return {void}
+ * @return {int}            验证结果: 0-成功，-1-失败
  */
 int validateSingleValue(char testNum, int expect, int actual) {
     int isSuccess = COMMON_TRUE;
