@@ -4,7 +4,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:24:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-05 01:39:25
+ * @LastEditTime : 2023-12-05 01:44:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -94,7 +94,9 @@ TEST_F(TestCommonString, TestReverseStringSection) {
 /* ============================================================================== */
 TEST_F(TestCommonString, TestPrintString) {
     /* 准备数据 */
-    char *s = "Hello World!";
+    char *s = (char *)malloc(sizeof(char) * 8);     /* NOLINT(readability/casting) */
+    int charSize = sizeof(s);
+    snprintf(s, charSize, "%s", "Hello World!");
 
     /* 运行结果 */
     printf("\n");
@@ -127,8 +129,12 @@ TEST_F(TestCommonString, TestFreeString) {
 /* ============================================================================== */
 TEST_F(TestCommonString, TestValidateString) {
     /* 准备数据 */
-    char *expect = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\0'};
-    char *actual = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\0'};
+    char *expect = (char *)malloc(sizeof(char) * 13);     /* NOLINT(readability/casting) */
+    int expectCharSize = sizeof(expect);
+    snprintf(expect, expectCharSize, "%s", "Hello World!");
+    char *actual = (char *)malloc(sizeof(char) * 13);     /* NOLINT(readability/casting) */
+    int actualCharSize = sizeof(actual);
+    snprintf(actual, actualCharSize, "%s", "Hello World!");
 
     /* 运行结果 */
     int result = validateString('1', expect, actual);
