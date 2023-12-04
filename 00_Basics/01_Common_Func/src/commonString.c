@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-05 01:21:31
+ * @LastEditTime : 2023-12-05 01:30:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -81,13 +81,13 @@ int printString(char *s) {
 /**
  * @description: 释放字符串
  * =================================================================================
- * @param {char} *s     字符串地址
+ * @param {char} **s     字符串地址
  * @return {int}
  */
-int freeString(char *s) {
-    if (s != NULL) {        /* 字符串不为空 */
-        free(s);                /* 释放字符串 */
-        s = NULL;               /* 字符串指针置空 */
+int freeString(char **s) {
+    if (*s != NULL) {       /* 字符串不为空 */
+        free(*s);               /* 释放字符串 */
+        *s = NULL;              /* 字符串指针置空 */
     }
     return COMMON_OK;       /* 释放成功 */
 }

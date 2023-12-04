@@ -26,7 +26,7 @@ int reverseStringSection(char *s, int leftIndex, int rightIndex);   /* 反转字
 /*                                                                                */
 /**********************************************************************************/
 int printString(char *s);                                           /* 打印字符串 */
-int freeString(char *s);                                            /* 释放字符串 */
+int freeString(char **s);                                           /* 释放字符串 */
 
 /**********************************************************************************/
 /*                                                                                */
