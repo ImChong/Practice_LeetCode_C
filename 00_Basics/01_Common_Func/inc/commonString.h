@@ -17,23 +17,23 @@
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-void swapChar(char *a, char *b);                                    /* 交换字符 */
-void reverseStringSection(char *s, int leftIndex, int rightIndex);  /* 反转字符串 */
+int swapChar(char *a, char *b);                                     /* 交换字符 */
+int reverseStringSection(char *s, int leftIndex, int rightIndex);   /* 反转字符串 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-int printString(char *s);                                          /* 打印字符串 */
-int freeString(char *s);                                           /* 释放字符串 */
+int printString(char *s);                                           /* 打印字符串 */
+int freeString(char *s);                                            /* 释放字符串 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-int validateString(char testNum, char *expect, char *actual);      /* 验证字符串 */
+int validateString(char testNum, char *expect, char *actual);       /* 验证字符串 */
 
 
 #endif  /* __COMMON_STRING_H */     /* NOLINT(build/header_guard) */

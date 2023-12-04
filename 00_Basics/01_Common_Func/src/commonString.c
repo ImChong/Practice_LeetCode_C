@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-04 01:14:19
+ * @LastEditTime : 2023-12-05 01:21:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,12 +30,16 @@
  * =================================================================================
  * @param {char} *a     a字符地址
  * @param {char} *b     b字符地址
- * @return {void}
+ * @return {int}        交换结果: 0-成功，-1-失败
  */
-void swapChar(char *a, char *b) {
+int swapChar(char *a, char *b) {
+    if (a == NULL || b == NULL) {
+        return COMMON_ERR;
+    }
     char tmp = *a;      /* 保存a字符 */
     *a = *b;            /* 将b字符赋值给a字符 */
     *b = tmp;           /* 将保存的a字符赋值给b字符 */
+    return COMMON_OK;
 }
 
 /**
@@ -44,12 +48,16 @@ void swapChar(char *a, char *b) {
  * @param {char} *s             字符串地址
  * @param {int} leftIndex       左指针
  * @param {int} rightIndex      右指针
- * @return {void}
+ * @return {int}                反转结果: 0-成功，-1-失败
  */
-void reverseStringSection(char *s, int leftIndex, int rightIndex) {
+int reverseStringSection(char *s, int leftIndex, int rightIndex) {
+    if (s == NULL || leftIndex < 0 || rightIndex >= strlen(s) || leftIndex > rightIndex) {
+        return COMMON_ERR;
+    }
     while (leftIndex < rightIndex) {                    /* 左右指针未相遇 */
         swapChar(&s[leftIndex++], &s[rightIndex--]);        /* 交换字符，左指针右移，右指针左移 */
     }
+    return COMMON_OK;
 }
 
 /**********************************************************************************/

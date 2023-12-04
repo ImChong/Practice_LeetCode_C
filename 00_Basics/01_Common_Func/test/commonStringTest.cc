@@ -4,7 +4,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:24:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-04 02:38:24
+ * @LastEditTime : 2023-12-05 01:27:52
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,7 @@
 #include "gtest/gtest.h"
 /* 测试目标头文件 */
 extern "C" {
+    #include "commonTypeDef.h"
     #include "commonString.h"
 }
 
@@ -58,11 +59,12 @@ TEST_F(TestCommonString, TestSwapChar) {
     char b = 'b';
 
     /* 运行结果 */
-    swapChar(&a, &b);
+    int result = swapChar(&a, &b);
 
     /* 比较结果 */
-    EXPECT_EQ(a, 'b');
-    EXPECT_EQ(b, 'a');
+    EXPECT_EQ(a, 'b') << "Error occurred at parameter a";
+    EXPECT_EQ(b, 'a') << "Error occurred at parameter b";
+    EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
 }
 
 /* ============================================================================== */
@@ -75,10 +77,11 @@ TEST_F(TestCommonString, TestReverseStringSection) {
     snprintf(s, charSize, "%s", "abcdefg");
 
     /* 运行结果 */
-    reverseStringSection(s, 2, 5);
+    int result = reverseStringSection(s, 2, 5);
 
     /* 比较结果 */
-    EXPECT_STREQ(s, "abfedcg");
+    EXPECT_STREQ(s, "abfedcg") << "Error occurred at parameter s";
+    EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
 }
 
 /**********************************************************************************/
@@ -86,4 +89,35 @@ TEST_F(TestCommonString, TestReverseStringSection) {
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-/* TODO */
+/* ============================================================================== */
+/* printString */
+/* ============================================================================== */
+TEST_F(TestCommonString, TestPrintString) {
+    /* 准备数据 */
+    char *s = (char *)malloc(sizeof(char) * 8);     /* NOLINT(readability/casting) */
+    int charSize = sizeof(s);
+    snprintf(s, charSize, "%s", "Hello World!");
+
+    /* 运行结果 */
+    int result = printString(s);
+
+    /* 比较结果 */
+    EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
+}
+
+/* ============================================================================== */
+/* freeString */
+/* ============================================================================== */
+TEST_F(TestCommonString, TestFreeString) {
+    /* 准备数据 */
+    char *s = (char *)malloc(sizeof(char) * 8);     /* NOLINT(readability/casting) */
+    int charSize = sizeof(s);
+    snprintf(s, charSize, "%s", "Hello World!");
+
+    /* 运行结果 */
+    int result = freeString(s);
+
+    /* 比较结果 */
+    EXPECT_EQ(s, nullptr) << "Error occurred at parameter s";
+    EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
+}
