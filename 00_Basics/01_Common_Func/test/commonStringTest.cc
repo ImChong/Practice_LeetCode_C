@@ -4,7 +4,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:24:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-05 01:47:59
+ * @LastEditTime : 2023-12-05 01:51:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -95,7 +95,7 @@ TEST_F(TestCommonString, TestReverseStringSection) {
 TEST_F(TestCommonString, TestPrintString) {
     /* 准备数据 */
     char *s = (char *)malloc(sizeof(char) * 13);        /* NOLINT(readability/casting) */
-    int charSize = sizeof(s);
+    int charSize = 13;
     snprintf(s, charSize, "%s", "Hello World!");
 
     /* 运行结果 */
@@ -112,9 +112,9 @@ TEST_F(TestCommonString, TestPrintString) {
 /* ============================================================================== */
 TEST_F(TestCommonString, TestFreeString) {
     /* 准备数据 */
-    char *s = (char *)malloc(sizeof(char) * 13);        /* NOLINT(readability/casting) */
-    int charSize = sizeof(s);
-    snprintf(s, charSize, "%s", "Hello World!");
+    int strSize = 13;
+    char *s = (char *)malloc(sizeof(char) * strSize);       /* NOLINT(readability/casting) */
+    snprintf(s, strSize, "%s", "Hello World!");
 
     /* 运行结果 */
     int result = freeString(&s);
@@ -134,11 +134,11 @@ TEST_F(TestCommonString, TestFreeString) {
 /* ============================================================================== */
 TEST_F(TestCommonString, TestValidateString) {
     /* 准备数据 */
-    char *expect = (char *)malloc(sizeof(char) * 13);     /* NOLINT(readability/casting) */
-    int expectCharSize = sizeof(expect);
+    int expectCharSize = 13;
+    char *expect = (char *)malloc(sizeof(char) * expectCharSize);     /* NOLINT(readability/casting) */
     snprintf(expect, expectCharSize, "%s", "Hello World!");
-    char *actual = (char *)malloc(sizeof(char) * 13);     /* NOLINT(readability/casting) */
-    int actualCharSize = sizeof(actual);
+    int actualCharSize = 13;
+    char *actual = (char *)malloc(sizeof(char) * actualCharSize);     /* NOLINT(readability/casting) */
     snprintf(actual, actualCharSize, "%s", "Hello World!");
 
     /* 运行结果 */
