@@ -4,7 +4,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:24:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-05 01:34:30
+ * @LastEditTime : 2023-12-05 01:39:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -127,8 +127,8 @@ TEST_F(TestCommonString, TestFreeString) {
 /* ============================================================================== */
 TEST_F(TestCommonString, TestValidateString) {
     /* 准备数据 */
-    char *expect = "Hello World!";
-    char *actual = "Hello World!";
+    char *expect = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\0'};
+    char *actual = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\0'};
 
     /* 运行结果 */
     int result = validateString('1', expect, actual);

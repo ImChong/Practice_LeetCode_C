@@ -51,7 +51,7 @@ int swapChar(char *a, char *b) {
  * @return {int}                反转结果: 0-成功，-1-失败
  */
 int reverseStringSection(char *s, int leftIndex, int rightIndex) {
-    if (s == NULL || leftIndex < 0 || rightIndex >= strlen(s) || leftIndex > rightIndex) {
+    if (s == NULL || leftIndex < 0 || rightIndex >= (int)strlen(s) || leftIndex > rightIndex) {
         return COMMON_ERR;
     }
     while (leftIndex < rightIndex) {                    /* 左右指针未相遇 */
