@@ -15,6 +15,7 @@
 /* 标准头文件 */
 #include <stdio.h>
 /* 常用头文件 */
+#include "commonTypeDef.h"
 #include "commonSingleValue.h"
 
 /**********************************************************************************/
@@ -30,9 +31,15 @@
  * @param {int} actual      实际
  * @return {void}
  */
-void validateSingleValue(char testNum, int expect, int actual) {
+int validateSingleValue(char testNum, int expect, int actual) {
+    int isSuccess = COMMON_TRUE;
+
+    if (expect != actual) {
+        isSuccess = COMMON_FALSE;
+    }
+
     printf("=========================\n");
-    if (expect == actual) {
+    if (isSuccess) {
         printf(" - ✅ Test %c Passed\n", testNum);
     } else {
         printf(" - ❌ Test %c Failed\n", testNum);
@@ -41,6 +48,11 @@ void validateSingleValue(char testNum, int expect, int actual) {
     printf("- Expect: %d\n", expect);
     printf("- Actual: %d\n", actual);
     printf("\n");
+    if (isSuccess) {
+        return COMMON_OK;
+    } else {
+        return COMMON_ERR;
+    }
 }
 
 

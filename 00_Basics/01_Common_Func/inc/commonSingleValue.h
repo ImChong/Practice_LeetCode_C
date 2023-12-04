@@ -37,7 +37,7 @@
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void validateSingleValue(char testNum, int expect, int actual);     /* 验证单个值 */
+int validateSingleValue(char testNum, int expect, int actual);     /* 验证单个值 */
 
 
 #endif  /* __COMMON_SINGLE_VALUE_H */     /* NOLINT(build/header_guard) */
