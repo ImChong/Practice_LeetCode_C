@@ -5,10 +5,10 @@ set -e
 
 # run gtest executables in the build/bin directory
 for test in $(find ./build/bin -executable -type f); do
-    echo "============================================================"
+    echo "=========================================================================================="
     $test   # run GTest executables
 done
 
 # finish up message
-echo "============================================================"
+echo "=========================================================================================="
 echo "All executables have been run!"
