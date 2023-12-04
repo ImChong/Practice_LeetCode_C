@@ -52,8 +52,8 @@ int swapChar(char *a, char *b) {
  */
 int reverseStringSection(char *s, int leftIndex, int rightIndex) {
     if (s == NULL || leftIndex < 0 ||
-            rightIndex >= (int)strlen(s) ||
-            leftIndex > rightIndex) {     /* NOLINT(readability/casting) */
+            rightIndex >= (int)strlen(s) ||             /* NOLINT(readability/casting) */
+            leftIndex > rightIndex) {
         return COMMON_ERR;
     }
     while (leftIndex < rightIndex) {                    /* 左右指针未相遇 */
