@@ -121,3 +121,18 @@ TEST_F(TestCommonString, TestFreeString) {
     EXPECT_EQ(s, nullptr) << "Error occurred at parameter s";
     EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
 }
+
+/* ============================================================================== */
+/* validateString */
+/* ============================================================================== */
+TEST_F(TestCommonString, TestValidateString) {
+    /* 准备数据 */
+    char *expect = "Hello World!";
+    char *actual = "Hello World!";
+
+    /* 运行结果 */
+    int result = validateString('1', expect, actual);
+
+    /* 比较结果 */
+    EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
+}
