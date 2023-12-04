@@ -4,7 +4,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:24:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-05 01:44:34
+ * @LastEditTime : 2023-12-05 01:46:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -124,6 +124,11 @@ TEST_F(TestCommonString, TestFreeString) {
     EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
 }
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                  TEST FUNCTION                                 */
+/*                                                                                */
+/**********************************************************************************/
 /* ============================================================================== */
 /* validateString */
 /* ============================================================================== */
@@ -137,6 +142,7 @@ TEST_F(TestCommonString, TestValidateString) {
     snprintf(actual, actualCharSize, "%s", "Hello World!");
 
     /* 运行结果 */
+    printf("\n");
     int result = validateString('1', expect, actual);
 
     /* 比较结果 */
