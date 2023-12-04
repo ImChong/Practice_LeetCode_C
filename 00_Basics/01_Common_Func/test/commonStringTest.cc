@@ -4,7 +4,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:24:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-05 01:31:29
+ * @LastEditTime : 2023-12-05 01:33:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -94,9 +94,7 @@ TEST_F(TestCommonString, TestReverseStringSection) {
 /* ============================================================================== */
 TEST_F(TestCommonString, TestPrintString) {
     /* 准备数据 */
-    char *s = (char *)malloc(sizeof(char) * 8);     /* NOLINT(readability/casting) */
-    int charSize = sizeof(s);
-    snprintf(s, charSize, "%s", "Hello World!");
+    char *s = "Hello World!";
 
     /* 运行结果 */
     int result = printString(s);
