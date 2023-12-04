@@ -4,7 +4,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:24:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-05 01:27:52
+ * @LastEditTime : 2023-12-05 01:31:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -115,7 +115,7 @@ TEST_F(TestCommonString, TestFreeString) {
     snprintf(s, charSize, "%s", "Hello World!");
 
     /* 运行结果 */
-    int result = freeString(s);
+    int result = freeString(&s);
 
     /* 比较结果 */
     EXPECT_EQ(s, nullptr) << "Error occurred at parameter s";
