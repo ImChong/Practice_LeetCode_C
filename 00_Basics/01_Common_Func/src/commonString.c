@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-05 01:30:20
+ * @LastEditTime : 2023-12-05 01:45:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -51,7 +51,7 @@ int swapChar(char *a, char *b) {
  * @return {int}                反转结果: 0-成功，-1-失败
  */
 int reverseStringSection(char *s, int leftIndex, int rightIndex) {
-    if (s == NULL || leftIndex < 0 || rightIndex >= (int)strlen(s) || leftIndex > rightIndex) {
+    if (s == NULL || leftIndex < 0 || rightIndex >= strlen(s) || leftIndex > rightIndex) {
         return COMMON_ERR;
     }
     while (leftIndex < rightIndex) {                    /* 左右指针未相遇 */
