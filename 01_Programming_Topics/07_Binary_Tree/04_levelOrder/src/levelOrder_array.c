@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-26 18:25:56
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-26 18:51:19
+ * @LastEditTime : 2023-12-06 00:04:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,6 +21,8 @@
 #if ARRAY_METHOD_EN
 /* 标准头文件 */
 #include <stdio.h>
+/* 通用头文件 */
+#include "commonBinaryTree.h"
 /* 本文件头文件 */
 #include "levelOrder.h"
 
