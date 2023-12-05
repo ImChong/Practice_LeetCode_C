@@ -1,5 +1,5 @@
 # This is a workflow to get source code and check the coding style using clang-format and cppcheck
-name: Coding Style Checks
+name: Common Function Lints
 
 on:
     # # Allows you to run this workflow manually from the Actions tab
