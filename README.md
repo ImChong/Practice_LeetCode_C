@@ -1,7 +1,7 @@
 # Practice_LeetCode_C
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Coding Style Checks](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/codeStyleCheck.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/codeStyleCheck.yml)
+[![Common Function Lints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml)
 [![Common Function Tests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml)
 
 ## Workspace Structure
