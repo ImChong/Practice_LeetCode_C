@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 19:09:17
+ * @LastEditTime : 2023-12-05 23:56:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -289,6 +289,82 @@ int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     }
     return ans;                                             /* 返回结果数组 */
 }
+
+/* ============================================================================== */
+/* ============================================================================== */
+/*
+ * 树结构表示：
+ *       1
+ *      / \
+ *     2   3
+ *    / \ / \
+ *   4  5 6  7
+ *
+ * 层序遍历：
+ * [
+ *   [1]
+ *   [2, 3]
+ *   [4, 5, 6, 7]
+ * ]
+ */
+/* ============================================================================== */
+/* ============================================================================== */
+/**
+ * @description: 层序遍历 - 数组方法
+ * =================================================================================
+ * @param {TreeNode} *root                  根节点指针
+ * @param {int} *returnSize                 用于储存遍历答案的数组的大小
+ * @param {int} **returnColumnSizes         用于储存遍历答案的数组的每一行的大小
+ * @return {int} **ans                      用于储存遍历答案的数组
+ */
+int **levelOrder_array(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
+    *returnSize = 0;        /* 初始化二叉树的层数为 0 */
+    if (root == NULL) {     /* 如果根节点为 NULL */
+        return NULL;        /* 返回 NULL */
+    }
+
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);   /* 为结果二维数组分配空间 - 2000个 int* 类型数据 */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);     /* 用来记录二叉树每层的节点数 */
+
+    struct TreeNode *treeNodeQueue[MAX_SIZE];   /* 数组作为树节点的队列 treeNodeQueue  */
+    int queueFront = 0;     /* 队首索引 */
+    int queueRear = 0;      /* 队尾索引 */
+    struct TreeNode *curNode;       /* 当前树节点的指针 */
+
+    treeNodeQueue[queueRear++] = root;      /* 将树的根节点入队 */
+    while (queueFront != queueRear) {       /* 当队首索引不等于队尾索引时 - 保持循环 */
+        int nodeNums = 0;       /* 二叉树当前层的节点数（结果二维数组当前行的列数） */
+        int layerEndIndex = queueRear;      /* 记录当前层队尾索引 */
+        resultArray[*returnSize] =
+            (int *)malloc(sizeof(int) * (layerEndIndex - queueFront));      /* 为当前层的树节点记录数组分配空间 */
+        while (queueFront < layerEndIndex) {        /* 当队首索引小于队尾索引时 - 保持循环 */
+            curNode = treeNodeQueue[queueFront++];      /* 取出当前队首树节点，并将队首索引 + 1 */
+            resultArray[*returnSize][nodeNums++] = curNode->val;
+            if (curNode->left != NULL) {        /* 如果当前队首树节点的左节点不为 NULL */
+                treeNodeQueue[queueRear++] = curNode->left;     /* 将当前队首树节点的左节点放入队尾 */
+            }
+            if (curNode->right != NULL) {       /* 如果当前队首树节点的右节点不为 NULL */
+                treeNodeQueue[queueRear++] = curNode->right;        /* 将当前队首树节点的右节点放入队尾 */
+            }
+        }
+        (*returnColumnSizes)[*returnSize] = nodeNums;       /* 将当前层的节点数计入 *returnColumnSizes */
+        (*returnSize)++;        /* 二叉树层数（二维数组行数） + 1 */
+    }
+    return resultArray;     /* 返回结果二维数组 */
+}
+
+/**
+ * @description: 层序遍历 - 结构体树链表队列方法
+ * =================================================================================
+ * @param {TreeNode} *root                  根节点指针
+ * @param {int} *returnSize                 用于储存遍历答案的数组的大小
+ * @param {int} **returnColumnSizes         用于储存遍历答案的数组的每一行的大小
+ * @return {int} **ans                      用于储存遍历答案的数组
+ */
+int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
+    return NULL;
+}
+
 
 /**********************************************************************************/
 /*                                                                                */
