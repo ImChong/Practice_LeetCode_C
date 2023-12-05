@@ -21,6 +21,7 @@ on:
 jobs:
     # Job
     Cpplint:
+      # environment
       runs-on: ubuntu-latest
       steps:
         # step to checkout the source code
@@ -42,7 +43,9 @@ jobs:
             chmod +x .github/workflows/testRunner/runCpplint.sh
             .github/workflows/testRunner/runCpplint.sh
 
+    # Job
     Cppcheck:
+      # environment
       runs-on: ubuntu-latest
       steps:
         # step to checkout the source code
