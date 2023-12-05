@@ -362,6 +362,7 @@ int **levelOrder_array(struct TreeNode *root, int *returnSize, int **returnColum
  * @return {int} **ans                      用于储存遍历答案的数组
  */
 int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
+    /* TODO */
     return NULL;
 }
 
@@ -478,6 +479,7 @@ void freeTreeArrQueue(TreeArrQueue *queue) {
  * @return {TreeListQueue} *queue   新的二叉树节点链表队列指针
  */
 TreeListQueue *newTreeListQueue(void) {
+    /* TODO */
     return NULL;
 }
 
@@ -489,6 +491,7 @@ TreeListQueue *newTreeListQueue(void) {
  * @return {void}
  */
 void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node) {
+    /* TODO */
 }
 
 /**
@@ -498,6 +501,7 @@ void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node) {
  * @return {TreeNode} *node         节点指针
  */
 struct TreeNode *deTreeListQueue(TreeListQueue *queue) {
+    /* TODO */
     return NULL;
 }
 
@@ -508,6 +512,7 @@ struct TreeNode *deTreeListQueue(TreeListQueue *queue) {
  * @return {int}                    如果队列为空，返回1；否则返回0
  */
 int isTreeListQueueEmpty(TreeListQueue *queue) {
+    /* TODO */
     return 0;
 }
 
@@ -518,6 +523,7 @@ int isTreeListQueueEmpty(TreeListQueue *queue) {
  * @return {int}                    如果队列为满，返回1；否则返回0
  */
 int isTreeListQueueFull(TreeListQueue *queue) {
+    /* TODO */
     return 0;
 }
 
@@ -528,6 +534,7 @@ int isTreeListQueueFull(TreeListQueue *queue) {
  * @return {void}
  */
 void printTreeListQueue(TreeListQueue *queue) {
+    /* TODO */
 }
 
 /**
@@ -537,6 +544,7 @@ void printTreeListQueue(TreeListQueue *queue) {
  * @return {void}
  */
 void freeTreeListQueue(TreeListQueue *queue) {
+    /* TODO */
 }
 
 /* ============================================================================== */
