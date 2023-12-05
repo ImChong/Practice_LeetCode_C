@@ -8,12 +8,12 @@ on:
     push:
       paths:
         - '00_Basics/01_Common_Func/**'
-        - '.github/workflows/codeStyleCheck.yml'
+        - '.github/workflows/commonFuncLint.yml'
     # Allows you to run this workflow every time a pull request is opened or updated
     pull_request:
       paths:
         - '00_Basics/01_Common_Func/**'
-        - '.github/workflows/codeStyleCheck.yml'
+        - '.github/workflows/commonFuncLint.yml'
     # Schedule a workflow to run automatically
     schedule:
       - cron:  '0 2 * * *'
