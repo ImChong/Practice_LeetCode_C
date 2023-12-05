@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-05 23:56:19
+ * @LastEditTime : 2023-12-06 00:02:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -323,8 +323,8 @@ int **levelOrder_array(struct TreeNode *root, int *returnSize, int **returnColum
         return NULL;        /* 返回 NULL */
     }
 
-    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);   /* 为结果二维数组分配空间 - 2000个 int* 类型数据 */
-    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);     /* 用来记录二叉树每层的节点数 */
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);   /* NOLINT(readability/casting) */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);     /* NOLINT(readability/casting) */
 
     struct TreeNode *treeNodeQueue[MAX_SIZE];   /* 数组作为树节点的队列 treeNodeQueue  */
     int queueFront = 0;     /* 队首索引 */
@@ -336,7 +336,7 @@ int **levelOrder_array(struct TreeNode *root, int *returnSize, int **returnColum
         int nodeNums = 0;       /* 二叉树当前层的节点数（结果二维数组当前行的列数） */
         int layerEndIndex = queueRear;      /* 记录当前层队尾索引 */
         resultArray[*returnSize] =
-            (int *)malloc(sizeof(int) * (layerEndIndex - queueFront));      /* 为当前层的树节点记录数组分配空间 */
+            (int *)malloc(sizeof(int) * (layerEndIndex - queueFront));      /* NOLINT(readability/casting) */
         while (queueFront < layerEndIndex) {        /* 当队首索引小于队尾索引时 - 保持循环 */
             curNode = treeNodeQueue[queueFront++];      /* 取出当前队首树节点，并将队首索引 + 1 */
             resultArray[*returnSize][nodeNums++] = curNode->val;
