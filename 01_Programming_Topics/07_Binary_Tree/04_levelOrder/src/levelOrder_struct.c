@@ -34,6 +34,50 @@
 #include "levelOrder.h"
 
 /**********************************************************************************/
+/*                                                                                */
+/*                                 HELPER FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+/**
+ * @description: 广度优先搜索算法 Breadth-First Search
+ * =================================================================================
+ * @param {int} *returnSize             二叉树的层数
+ * @param {int} **returnColumnSizes     二叉树对应层级的节点数
+ * @param {int} **resultArray           结果二维数组
+ * @param {struct Queue} *queueHead     链表队列的虚拟头节点
+ * @return {void}
+ */
+void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray, struct Queue *queueHead) {
+    struct Queue *queueIt = queueHead->next;                /* 初始化当前队列节点的指针为队首指针 */
+    if (queueIt->node == NULL) {                            /* 如果队首节点的树节点指针为 NULL */
+        return;                                                 /* 返回 */
+    }
+
+    int count = 0;                                                          /* 初始化计数器 count 为 0 */
+    resultArray[*returnSize] = (int *)malloc(sizeof(int) * MAX_SIZE);       /* 结果二维数组的行号对应二叉树的层数：为二维数组的第 returnSize 行分配空间 - 2000个int类型数据 */
+
+    while (1) {                                             /* 持续循环 */
+        struct TreeNode *node = deQueue(queueHead);             /* 将队首树节点出队 */
+        if (node == NULL) {                                     /* 如果队首树节点为 NULL */
+            break;                                                  /* 停止循环 */
+        }
+        resultArray[*returnSize][count] = node->val;            /* 结果二维数组的 returnSize 行 count 列赋值为队首树节点的值 */
+        count++;                                                /* 计数器count + 1 */
+        if (node->left != NULL) {                               /* 如果队首树节点的左节点不为 NULL */
+            enQueue(queueHead, node->left);                         /* 将队首树节点的左节点入队 */
+        }
+        if (node->right != NULL) {                              /* 如果队首树节点的右节点不为 NULL */
+            enQueue(queueHead, node->right);                        /* 将队首树节点的右节点入队 */
+        }
+    }
+
+    enQueue(queueHead, NULL);                               /* 将 NULL 入队 */
+    (*returnColumnSizes)[*returnSize] = count;              /* *returnColumnSizes 数组的 *returnSize 位有 count 个节点 */
+    *returnSize = *returnSize + 1;                          /* 二叉树的层数 + 1 */
+    breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);      /* 进行下一层的遍历 */
+}
+
+/**********************************************************************************/
 /**********************************************************************************/
 /***                                                                            ***/
 /***                               TARGET FUNCTION                              ***/
@@ -49,8 +93,23 @@
  * @return {int} **resultArray          结果二维数组
  */
 int **levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
-    /* TODO */
-    return NULL;
+    *returnSize = 0;                                                                /* 初始化二叉树的层数为 0 */
+    if (root == NULL) {                                                             /* 如果根节点为 NULL */
+        return NULL;                                                                    /* 返回 NULL */
+    }
+
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);                   /* 为二维数组分配空间 - 2000个int*类型数据 */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);                     /* 用来记录二叉树每层的节点数（二维数组每行的列数）- 2000个int类型数据 */
+
+    struct Queue *queueHead = (struct Queue *)malloc(sizeof(struct Queue));         /* 为链表队列的虚拟头节点分配空间 */
+    queueHead->next = NULL;                                                         /* 虚拟头节点的下一队列节点为 NULL */
+    queueHead->node = NULL;                                                         /* 虚拟头节点保存的树节点为 NULL */
+
+    enQueue(queueHead, root);                                                       /* 将树的根节点入队 */
+    enQueue(queueHead, NULL);                                                       /* 将 NULL 入队，表示当前树的层级结束 */
+    breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);      /* 开始广度优先搜索算法 */
+    freeQueue(queueHead);                                                           /* 释放队列空间 */
+    return resultArray;                                                             /* 返回结果二维数组 */
 }
 
 
