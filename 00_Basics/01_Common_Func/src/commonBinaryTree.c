@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-06 00:02:14
+ * @LastEditTime : 2023-12-07 02:04:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -479,8 +479,10 @@ void freeTreeArrQueue(TreeArrQueue *queue) {
  * @return {TreeListQueue} *queue   新的二叉树节点链表队列指针
  */
 TreeListQueue *newTreeListQueue(void) {
-    /* TODO */
-    return NULL;
+    TreeListQueue *queue = (TreeListQueue *)malloc(sizeof(TreeListQueue));     /* NOLINT(readability/casting) */
+    queue->head = NULL;
+    queue->size = 0;
+    return queue;
 }
 
 /**
@@ -491,7 +493,22 @@ TreeListQueue *newTreeListQueue(void) {
  * @return {void}
  */
 void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node) {
-    /* TODO */
+    if (queue->head == NULL) {
+        queue->head = (struct TreeListNode *)malloc(sizeof(struct TreeListNode));
+        queue->head->node = node;
+        queue->head->next = NULL;
+        queue->size++;
+    } else {
+        struct TreeListNode *current = queue->head;
+        while (current->next != NULL) {
+            current = current->next;
+        }
+        current->next = (struct TreeListNode *)malloc(sizeof(struct TreeListNode));
+        current->next->node = node;
+        current->next->next = NULL;
+        queue->size++;
+    }
+    return;
 }
 
 /**
