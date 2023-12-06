@@ -1,6 +1,6 @@
 ---
 name: Issue guideline template
-about: Guide new contributors about how to create an issue
+about: Guide new contributors before creating a new issue
 title: ''
 labels: ''
 assignees: ImChong
