@@ -1,6 +1,6 @@
 ---
-name: Issue guideline template
-about: Guide new contributors before creating a new issue
+name: Issue Guideline
+about: If you are a new contributors, please click "Get started" to create a new issue.
 title: ''
 labels: ''
 assignees: ImChong
