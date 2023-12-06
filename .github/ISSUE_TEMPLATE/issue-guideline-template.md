@@ -1,6 +1,6 @@
 ---
 name: Issue Guideline
-about: If you are a new contributors, please click "Get started" to create a new issue.
+about: Click "Get started" to create a new issue with guidelines.
 title: ''
 labels: ''
 assignees: ImChong
