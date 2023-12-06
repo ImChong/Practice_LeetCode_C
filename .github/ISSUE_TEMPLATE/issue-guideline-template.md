@@ -1,7 +1,7 @@
 ---
 name: Issue Guideline
 about: Click "Get started" to create a new issue with guidelines.
-title: ''
+title: "【Topic】【SubTopic (if applied)】 Title Descriptions"
 labels: ''
 assignees: ImChong
 
