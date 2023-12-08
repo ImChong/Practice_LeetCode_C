@@ -1,18 +1,6 @@
 {
     "configurations": [
         {
-            "name": "Linux",
-            "includePath": [
-                "${workspaceFolder}/**",
-                "00_Basics/01_Common_Func/cfg/"
-            ],
-            "defines": [],
-            "compilerPath": "/usr/bin/gcc",
-            "cStandard": "c11",
-            "cppStandard": "c++20",
-            "intelliSenseMode": "linux-gcc-x64"
-        },
-        {
             "name": "Windows",
             "includePath": [
                 "${workspaceFolder}/**",
@@ -27,7 +15,19 @@
             "cStandard": "c11",
             "cppStandard": "c++20",
             "intelliSenseMode": "windows-gcc-x64"
-        }
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "00_Basics/01_Common_Func/cfg/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "linux-gcc-x64"
+        },
     ],
     "version": 4
 }
