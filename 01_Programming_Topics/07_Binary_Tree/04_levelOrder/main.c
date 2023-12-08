@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-08 21:12:16
+ * @LastEditTime : 2023-12-08 21:35:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,7 +25,6 @@
  *   [4, 5, 6, 7]
  * ]
  */
-/* TODO: 重构 */
 /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -66,7 +65,6 @@ void test_levelOrderTraversal(void) {
     int actualReturnSize = 0;
     int *actualReturnColumnSizes = NULL;
     int **actualArray = levelOrder(root, &actualReturnSize, &actualReturnColumnSizes);
-
 
     /* 预期结果 */
     int expectedReturnSize = 3;
