@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-07 02:04:48
+ * @LastEditTime : 2023-12-08 20:17:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -518,8 +518,16 @@ void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node) {
  * @return {TreeNode} *node         节点指针
  */
 struct TreeNode *deTreeListQueue(TreeListQueue *queue) {
-    /* TODO */
-    return NULL;
+    if (queue->head == NULL) {
+        printf("Queue is empty.\n");
+        return NULL;
+    }
+    struct TreeNode *node = queue->head->node;
+    struct TreeListNode *temp = queue->head;
+    queue->head = queue->head->next;
+    free(temp);
+    queue->size--;
+    return node;
 }
 
 /**
@@ -529,8 +537,7 @@ struct TreeNode *deTreeListQueue(TreeListQueue *queue) {
  * @return {int}                    如果队列为空，返回1；否则返回0
  */
 int isTreeListQueueEmpty(TreeListQueue *queue) {
-    /* TODO */
-    return 0;
+    return queue->head == NULL;
 }
 
 /**
@@ -540,7 +547,6 @@ int isTreeListQueueEmpty(TreeListQueue *queue) {
  * @return {int}                    如果队列为满，返回1；否则返回0
  */
 int isTreeListQueueFull(TreeListQueue *queue) {
-    /* TODO */
     return 0;
 }
 
@@ -551,7 +557,16 @@ int isTreeListQueueFull(TreeListQueue *queue) {
  * @return {void}
  */
 void printTreeListQueue(TreeListQueue *queue) {
-    /* TODO */
+    printf("TreeListQueue (size = %d): [", queue->size);
+    struct TreeListNode *current = queue->head;
+    while (current != NULL) {
+        printf("%d", current->node->val);
+        if (current->next != NULL) {
+            printf(", ");
+        }
+        current = current->next;
+    }
+    printf("]\n");
 }
 
 /**
@@ -561,7 +576,13 @@ void printTreeListQueue(TreeListQueue *queue) {
  * @return {void}
  */
 void freeTreeListQueue(TreeListQueue *queue) {
-    /* TODO */
+    struct TreeListNode *current = queue->head;
+    while (current != NULL) {
+        struct TreeListNode *temp = current;
+        current = current->next;
+        free(temp);
+    }
+    free(queue);
 }
 
 /* ============================================================================== */
