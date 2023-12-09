@@ -354,6 +354,45 @@ int **levelOrder_array(struct TreeNode *root, int *returnSize, int **returnColum
 }
 
 /**
+ * @description:
+ * =================================================================================
+ * @param {int} *returnSize                 二叉树的层数
+ * @param {int} **returnColumnSizes         二叉树对应层级的节点数
+ * @param {int} **resultArray               结果二维数组
+ * @param {TreeListQueue} *queueHead        链表队列头指针
+ * @return {int}
+ */
+STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray, TreeListQueue *queueHead) {
+    struct TreeListNode *currentNode = queueHead->head;
+    if (currentNode->node == NULL) {
+        return;
+    }
+
+    int count = 0;
+    resultArray[*returnSize] = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);
+
+    while (1) {
+        struct TreeNode *node = deTreeListQueue(queueHead);
+        if (node == NULL) {
+            break;
+        }
+        resultArray[*returnSize][count] = node->val;
+        count++;
+        if (node->left != NULL) {
+            enTreeListQueue(queueHead, node->left);
+        }
+        if (node->right != NULL) {
+            enTreeListQueue(queueHead, node->right);
+        }
+    }
+
+    enTreeListQueue(queueHead, NULL);
+    (*returnColumnSizes)[*returnSize] = count;
+    *returnSize = *returnSize + 1;
+    breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);
+}
+
+/**
  * @description: 层序遍历 - 结构体树链表队列方法
  * =================================================================================
  * @param {TreeNode} *root                  根节点指针
@@ -362,10 +401,23 @@ int **levelOrder_array(struct TreeNode *root, int *returnSize, int **returnColum
  * @return {int} **ans                      用于储存遍历答案的数组
  */
 int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
-    /* TODO */
-    return NULL;
-}
+    *returnSize = 0;
+    if (root == NULL) {
+        return NULL;
+    }
 
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_QUEUE_SIZE);
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);
+
+    TreeListQueue *queueHead = (TreeListQueue *)malloc(sizeof(TreeListQueue));
+    queueHead->head = NULL;
+
+    enTreeListQueue(queueHead, root);
+    enTreeListQueue(queueHead, NULL);
+    breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);
+    freeTreeListQueue(queueHead);
+    return resultArray;
+}
 
 /**********************************************************************************/
 /*                                                                                */
