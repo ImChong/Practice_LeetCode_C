@@ -410,7 +410,7 @@ int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColu
     int **resultArray = (int **)malloc(sizeof(int *) * MAX_QUEUE_SIZE);     /* NOLINT(readability/casting) */
     *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);       /* NOLINT(readability/casting) */
 
-    TreeListQueue *queueHead = (TreeListQueue *)malloc(sizeof(TreeListQueue));
+    TreeListQueue *queueHead = (TreeListQueue *)malloc(sizeof(TreeListQueue));      /* NOLINT(readability/casting) */
     queueHead->head = NULL;
 
     enTreeListQueue(queueHead, root);
@@ -435,8 +435,8 @@ int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColu
  * @return {TreeArrQueue} *queue   新的二叉树节点队列指针
  */
 TreeArrQueue *newTreeArrQueue(int queueSize) {
-    TreeArrQueue *queue = (TreeArrQueue *)malloc(sizeof(TreeArrQueue));     /* NOLINT(readability/casting) */
-    queue->array = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * queueSize);
+    TreeArrQueue *queue = (TreeArrQueue *)malloc(sizeof(TreeArrQueue));         /* NOLINT(readability/casting) */
+    queue->array = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * queueSize); /* NOLINT(readability/casting) */
     queue->head = 0;
     queue->tail = 0;
     queue->size = queueSize;
