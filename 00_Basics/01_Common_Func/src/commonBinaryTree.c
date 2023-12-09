@@ -362,14 +362,15 @@ int **levelOrder_array(struct TreeNode *root, int *returnSize, int **returnColum
  * @param {TreeListQueue} *queueHead        链表队列头指针
  * @return {int}
  */
-STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray, TreeListQueue *queueHead) {
+STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray,
+                                        TreeListQueue *queueHead) {
     struct TreeListNode *currentNode = queueHead->head;
     if (currentNode->node == NULL) {
         return;
     }
 
     int count = 0;
-    resultArray[*returnSize] = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);
+    resultArray[*returnSize] = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);     /* NOLINT(readability/casting) */
 
     while (1) {
         struct TreeNode *node = deTreeListQueue(queueHead);
@@ -406,8 +407,8 @@ int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColu
         return NULL;
     }
 
-    int **resultArray = (int **)malloc(sizeof(int *) * MAX_QUEUE_SIZE);
-    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_QUEUE_SIZE);     /* NOLINT(readability/casting) */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);       /* NOLINT(readability/casting) */
 
     TreeListQueue *queueHead = (TreeListQueue *)malloc(sizeof(TreeListQueue));
     queueHead->head = NULL;
