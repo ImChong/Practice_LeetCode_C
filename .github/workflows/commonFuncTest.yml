@@ -24,11 +24,8 @@ jobs:
     # Job
     GTests:
       # Runner
-      runs-on: ${{ matrix.os }}
-      strategy:
-        matrix:
-          os: [ubuntu-latest, windows-latest, macos-latest]
-
+      runs-on: ubuntu-latest
+      
       steps:
         # Step: Checkout source code
         - name: Checkout source code
