@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-11 21:17:11
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-09 19:00:22
+ * @LastEditTime : 2023-12-10 10:23:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -85,6 +85,10 @@ void test_levelOrderTraversal(void) {
     freeArray(&actualReturnColumnSizes);
     free2DArray(&actualArray, actualReturnSize);
     freeTree(root);
+}
+
+void test_levelOrderTraversal_CommonFunc(void) {
+    return;
 }
 
 /**********************************************************************************/
