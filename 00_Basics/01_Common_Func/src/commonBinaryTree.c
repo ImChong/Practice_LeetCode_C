@@ -407,7 +407,7 @@ int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColu
         return NULL;
     }
 
-    int **resultArray = (int **)malloc(sizeof(int *) * MAX_QUEUE_SIZE);     /* NOLINT(readability/casting) */
+    int **ans = (int **)malloc(sizeof(int *) * MAX_QUEUE_SIZE);     /* NOLINT(readability/casting) */
     *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);       /* NOLINT(readability/casting) */
 
     TreeListQueue *queueHead = (TreeListQueue *)malloc(sizeof(TreeListQueue));      /* NOLINT(readability/casting) */
@@ -415,9 +415,9 @@ int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColu
 
     enTreeListQueue(queueHead, root);
     enTreeListQueue(queueHead, NULL);
-    breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);
+    breadthFirstSearch(returnSize, returnColumnSizes, ans, queueHead);
     freeTreeListQueue(queueHead);
-    return resultArray;
+    return ans;
 }
 
 /**********************************************************************************/
