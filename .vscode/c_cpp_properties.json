@@ -4,7 +4,9 @@
             "name": "Windows",
             "includePath": [
                 "${workspaceFolder}/**",
-                "00_Basics/01_Common_Func/cfg/"
+                "00_Basics/01_Common_Func/cfg/",
+                "00_Basics/01_Common_Func/inc",
+                "00_Basics/01_Common_Func/inc/commonDef"
             ],
             "defines": [
                 "_DEBUG",

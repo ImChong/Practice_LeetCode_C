@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-08 20:17:27
+ * @LastEditTime : 2023-12-10 10:27:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -354,7 +354,7 @@ int **levelOrder_array(struct TreeNode *root, int *returnSize, int **returnColum
 }
 
 /**
- * @description:
+ * @description: Breadth First Search - 广度优先搜索
  * =================================================================================
  * @param {int} *returnSize                 二叉树的层数
  * @param {int} **returnColumnSizes         二叉树对应层级的节点数
