@@ -43,6 +43,7 @@
 #include <stdlib.h>
 #include <limits.h>
 /* 常用头文件 */
+#include "commonTypeDef.h"
 #include "commonBinaryTree.h"
 
 /**********************************************************************************/
