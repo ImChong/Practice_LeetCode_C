@@ -60,8 +60,8 @@ typedef struct {
 /* 前序遍历 */
 /* ============================================================================== */
 void preOrder(struct TreeNode *node, int *ret, int *returnSize);
-int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize);   /* 递归实现 */
-int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize);   /* 迭代实现 */
+int *preOrderTraversal_recursion(struct TreeNode *root, int *returnSize);   /* 递归实现 */
+int *preOrderTraversal_iteration(struct TreeNode *root, int *returnSize);   /* 迭代实现 */
 
 /* ============================================================================== */
 /* 中序遍历 */

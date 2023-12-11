@@ -36,15 +36,15 @@
  * =================================================================================
  * @return {void}
  */
-void test_preorderTraversal(void) {
+void test_preOrderTraversal(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
     struct TreeNode *root = arrayToTree(arr, arrSize);
     int actualSize_recursion = 0;
-    int *actual_recursion = preorderTraversal_recursion(root, &actualSize_recursion);
+    int *actual_recursion = preOrderTraversal_recursion(root, &actualSize_recursion);
     int actualSize_iteration = 0;
-    int *actual_iteration = preorderTraversal_iteration(root, &actualSize_iteration);
+    int *actual_iteration = preOrderTraversal_iteration(root, &actualSize_iteration);
 
     /* 预期结果 */
     int expected[] = {1, 2, 4, 5, 3, 6, 7};
@@ -153,7 +153,7 @@ void test_postorderTraversal(void) {
 int main(int argc, const char* argv[]) {
     printTestTree();
     printf("--------------------\r\n");
-    test_preorderTraversal();
+    test_preOrderTraversal();
     printf("--------------------\r\n");
     test_inorderTraversal();
     printf("--------------------\r\n");

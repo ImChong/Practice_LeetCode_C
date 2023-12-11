@@ -97,7 +97,7 @@ void preOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
+int *preOrderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     preOrder(root, ans, returnSize);                    /* 前序遍历根节点 */
@@ -111,7 +111,7 @@ int *preorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *preorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
+int *preOrderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
