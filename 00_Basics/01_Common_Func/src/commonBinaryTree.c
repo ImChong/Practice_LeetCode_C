@@ -248,7 +248,7 @@ void postOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
+int *postOrderTraversal_recursion(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT(readability/casting) */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     postOrder(root, ans, returnSize);                       /* 后序遍历根节点 */
@@ -262,7 +262,7 @@ int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize) {
+int *postOrderTraversal_iteration(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT(readability/casting) */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     if (root == NULL) {                                     /* 如果当前节点为 NULL，直接返回 */

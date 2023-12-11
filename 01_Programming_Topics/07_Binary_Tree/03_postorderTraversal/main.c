@@ -1,5 +1,5 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\07_Binary_Tree\03_postorderTraversal\main.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\07_Binary_Tree\03_postOrderTraversal\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
@@ -47,15 +47,15 @@
  * =================================================================================
  * @return {void}
  */
-void test_postorderTraversal(void) {
+void test_postOrderTraversal(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
     struct TreeNode *root = arrayToTree(arr, arrSize);
     int actualSize_recursion = 0;
-    int *actual_recursion = postorderTraversal_recursion(root, &actualSize_recursion);
+    int *actual_recursion = postOrderTraversal_recursion(root, &actualSize_recursion);
     int actualSize_iteration = 0;
-    int *actual_iteration = postorderTraversal_iteration(root, &actualSize_iteration);
+    int *actual_iteration = postOrderTraversal_iteration(root, &actualSize_iteration);
 
     /* 预期结果 */
     int expected[] = {4, 5, 2, 6, 7, 3, 1};
@@ -86,6 +86,6 @@ void test_postorderTraversal(void) {
 int main(int argc, const char *argv[]) {
     printTestTree();
     printf("--------------------\r\n");
-    test_postorderTraversal();
+    test_postOrderTraversal();
     return 0;
 }

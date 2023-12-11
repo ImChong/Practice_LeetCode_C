@@ -74,8 +74,8 @@ int *inOrderTraversal_iteration(struct TreeNode *root, int *returnSize);    /* �
 /* 后序遍历 */
 /* ============================================================================== */
 void postOrder(struct TreeNode *node, int *ret, int *returnSize);
-int *postorderTraversal_recursion(struct TreeNode *root, int *returnSize);  /* 递归实现 */
-int *postorderTraversal_iteration(struct TreeNode *root, int *returnSize);  /* 迭代实现 */
+int *postOrderTraversal_recursion(struct TreeNode *root, int *returnSize);  /* 递归实现 */
+int *postOrderTraversal_iteration(struct TreeNode *root, int *returnSize);  /* 迭代实现 */
 
 /* ============================================================================== */
 /* 层序遍历 */
