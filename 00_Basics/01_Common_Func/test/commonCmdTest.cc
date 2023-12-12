@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-13 00:47:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-13 00:59:41
+ * @LastEditTime : 2023-12-13 01:02:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -54,7 +54,9 @@ TEST_F(TestCommonCmd, TestCmdHelp) {
     char *argv[] = {"./test", "-h"};
     int argc = sizeof(argv) / sizeof(char *);
     /* 执行函数 */
+    printf("\n");
     int ret = printCommandInfo(argc, argv);
+    printf("\n");
     /* 验证结果 */
-    EXPECT_EQ(COMMON_OK, ret);
+    EXPECT_EQ(COMMON_OK, ret) << "Error occurred in printCommandInfo()";
 }
