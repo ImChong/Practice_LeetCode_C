@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-04 08:56:01
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-13 00:54:07
+ * @LastEditTime : 2023-12-13 01:04:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -39,7 +39,7 @@
  * @param {char} *argv[]    程序入参字符串数组
  * @return {int}            运行结果：0 - 成功；其他 - 失败
  */
-int printCommandInfo(int argc, char *argv[]) {
+int printCommandInfo(int argc, const char *argv[]) {
     INFO("Number of command-line arguments: %d", argc);
     INFO("Command-line arguments:");
     for (int i = 0; i < argc; i++) {

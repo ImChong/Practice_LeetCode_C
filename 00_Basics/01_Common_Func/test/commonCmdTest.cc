@@ -51,7 +51,7 @@ class TestCommonCmd : public ::testing::Test {
 /**********************************************************************************/
 TEST_F(TestCommonCmd, TestCmdHelp) {
     /* 准备数据 */
-    char *argv[] = {"./test", "-h"};
+    const char *argv[] = {"./test", "-h"};
     int argc = sizeof(argv) / sizeof(char *);
     /* 执行函数 */
     printf("\n");
