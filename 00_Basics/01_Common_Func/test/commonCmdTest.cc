@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-13 00:47:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-13 01:02:08
+ * @LastEditTime : 2023-12-13 01:06:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -49,7 +49,7 @@ class TestCommonCmd : public ::testing::Test {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-TEST_F(TestCommonCmd, TestCmdHelp) {
+TEST_F(TestCommonCmd, TestPrintCommandInfo) {
     /* 准备数据 */
     const char *argv[] = {"./test", "-h"};
     int argc = sizeof(argv) / sizeof(char *);
