@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-04 08:56:01
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 10:06:27
+ * @LastEditTime : 2023-12-13 00:54:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,8 +13,8 @@
 #include "compileCfg.h"
 #if COMMON_CMD_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* 常用头文件 */
+#include "commonTypeDef.h"
 #include "commonPrintDef.h"
-#include "commonSingleValue.h"
 #include "commonCmd.h"
 
 /**********************************************************************************/
@@ -37,14 +37,15 @@
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组
- * @return {void}
+ * @return {int}            运行结果：0 - 成功；其他 - 失败
  */
-void printCommandInfo(int argc, char *argv[]) {
+int printCommandInfo(int argc, char *argv[]) {
     INFO("Number of command-line arguments: %d", argc);
     INFO("Command-line arguments:");
     for (int i = 0; i < argc; i++) {
         INFO("%d -> %s", i, argv[i]);
     }
+    return COMMON_OK;
 }
 
 

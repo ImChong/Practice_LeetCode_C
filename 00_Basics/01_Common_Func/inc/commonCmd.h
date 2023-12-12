@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:12:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 18:38:44
+ * @LastEditTime : 2023-12-13 00:54:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,6 +17,6 @@
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-void printCommandInfo(int argc, char *argv[]);      /* 打印命令行信息 */
+int printCommandInfo(int argc, char *argv[]);      /* 打印命令行信息 */
 
 #endif  /* __COMMON_CMD_H */    /* NOLINT(build/header_guard) */
