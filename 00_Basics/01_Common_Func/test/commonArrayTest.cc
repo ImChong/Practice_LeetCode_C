@@ -102,9 +102,9 @@ TEST_F(TestCommonArray, TestPrint2DArray) {
     int arrColSize[2] = {3, 3};
 
     /* 运行结果 */
-    printf("\n");
+    printf("============================================================ Print Start.\n");
     int result = print2DArray(arrPtr, 2, arrColSize);
-    printf("\n");
+    printf("============================================================ Print End.\n");
 
     /* 检查结果 */
     EXPECT_EQ(COMMON_OK, result) << "Error occurred in print2DArray";
@@ -230,8 +230,9 @@ TEST_F(TestCommonArray, TestValidateArray) {
 
     /* 运行结果 */
     sortArray(actualArr, 5);
-    printf("\n");
+    printf("============================================================ Print Start.\n");
     int result = validateArray('1', expectArr, 5, actualArr, 5, 1);
+    printf("============================================================ Print End.\n");
 
     /* 比较结果 */
     EXPECT_EQ(COMMON_OK, result) << "Error occurred in validateArray";
@@ -268,8 +269,9 @@ TEST_F(TestCommonArray, TestValidate2DArray) {
 
     /* 运行结果 */
     sort2DArray(actual2DArr, 2, actualRtnColSize);
-    printf("\n");
+    printf("============================================================ Print Start.\n");
     int result = validate2DArray('1', expect2DArr, 2, expectRtnColSize, actual2DArr, 2, actualRtnColSize, 1);
+    printf("============================================================ Print End.\n");
 
     /* 比较结果 */
     EXPECT_EQ(COMMON_OK, result) << "Error occurred in validate2DArray";
