@@ -247,7 +247,6 @@ int validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, i
     printf("=========================\n");
     printf("- Expect: "); printArray(expectArr, expectLen);
     printf("- Actual: "); printArray(actualArr, actualLen);
-    printf("\n");
     if (isSuccess) {
         return COMMON_OK;
     } else {
@@ -305,7 +304,6 @@ int validate2DArray(char testNum,
     printf("=========================\n");
     printf("- Expect: "); print2DArray(expect2DArr, expectRtnRowSize, expectRtnColSize);
     printf("- Actual: "); print2DArray(actual2DArr, actualRtnRowSize, actualRtnColSize);
-    printf("\n");
     if (isSuccess) {
         return COMMON_OK;
     } else {
