@@ -59,21 +59,18 @@ typedef struct {
 /* ============================================================================== */
 /* 前序遍历 */
 /* ============================================================================== */
-void preOrder(struct TreeNode *node, int *ret, int *returnSize);
 int *preOrderTraversal_recursion(struct TreeNode *root, int *returnSize);   /* 递归实现 */
 int *preOrderTraversal_iteration(struct TreeNode *root, int *returnSize);   /* 迭代实现 */
 
 /* ============================================================================== */
 /* 中序遍历 */
 /* ============================================================================== */
-void inOrder(struct TreeNode *node, int *ret, int *returnSize);
 int *inOrderTraversal_recursion(struct TreeNode *root, int *returnSize);    /* 递归实现 */
 int *inOrderTraversal_iteration(struct TreeNode *root, int *returnSize);    /* 迭代实现 */
 
 /* ============================================================================== */
 /* 后序遍历 */
 /* ============================================================================== */
-void postOrder(struct TreeNode *node, int *ret, int *returnSize);
 int *postOrderTraversal_recursion(struct TreeNode *root, int *returnSize);  /* 递归实现 */
 int *postOrderTraversal_iteration(struct TreeNode *root, int *returnSize);  /* 迭代实现 */
 
