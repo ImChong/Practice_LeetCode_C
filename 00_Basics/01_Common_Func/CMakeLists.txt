@@ -25,6 +25,7 @@ set(TEST_TARGETS
         commonBinaryTree
         commonCmd
         commonHashTable
+        commonLinkedList
         commonString
         )
 
