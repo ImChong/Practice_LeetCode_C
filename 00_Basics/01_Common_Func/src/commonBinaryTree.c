@@ -81,7 +81,7 @@
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {void}
  */
-void preOrder(struct TreeNode *node, int *ans, int *returnSize) {
+STATIC_FUNC void preOrder(struct TreeNode *node, int *ans, int *returnSize) {
     if (node == NULL) {     /* 如果当前节点为 NULL，直接返回 */
         return;
     }
@@ -156,7 +156,7 @@ int *preOrderTraversal_iteration(struct TreeNode *root, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {void}
  */
-void inOrder(struct TreeNode *node, int *ans, int *returnSize) {
+STATIC_FUNC void inOrder(struct TreeNode *node, int *ans, int *returnSize) {
     if (node == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return;
     }
@@ -232,7 +232,7 @@ int *inOrderTraversal_iteration(struct TreeNode *root, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {void}
  */
-void postOrder(struct TreeNode *node, int *ans, int *returnSize) {
+STATIC_FUNC void postOrder(struct TreeNode *node, int *ans, int *returnSize) {
     if (node == NULL) {                                     /* 如果当前节点为 NULL，直接返回 */
         return;
     }

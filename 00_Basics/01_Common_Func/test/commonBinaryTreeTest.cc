@@ -52,3 +52,15 @@ class TestCommonBinaryTree : public ::testing::Test {
 TEST_F(TestCommonBinaryTree, TestPreOrderTraversal_recursion) {
     EXPECT_EQ(0, 0);
 }
+
+TEST_F(TestCommonBinaryTree, TestPreOrderTraversal_iteration) {
+    EXPECT_EQ(0, 0);
+}
+
+TEST_F(TestCommonBinaryTree, TestInOrderTraversal_recursion) {
+    EXPECT_EQ(0, 0);
+}
+
+TEST_F(TestCommonBinaryTree, TestInOrderTraversal_iteration) {
+    EXPECT_EQ(0, 0);
+}
