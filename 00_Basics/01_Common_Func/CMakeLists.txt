@@ -26,6 +26,7 @@ set(TEST_TARGETS
         commonCmd
         commonHashTable
         commonLinkedList
+        commonLinkedListDummy
         commonString
         )
 
