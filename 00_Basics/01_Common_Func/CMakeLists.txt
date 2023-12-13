@@ -27,8 +27,9 @@ set(TEST_TARGETS
         commonHashTable
         commonLinkedList
         commonLinkedListDummy
+        commonQueue
         commonString
-        )
+    )
 
 # 对每个测试目标执行操作
 foreach(TARGET ${TEST_TARGETS})
