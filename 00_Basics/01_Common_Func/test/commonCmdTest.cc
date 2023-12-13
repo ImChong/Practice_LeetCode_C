@@ -54,9 +54,9 @@ TEST_F(TestCommonCmd, TestPrintCommandInfo) {
     const char *argv[] = {"./test", "-h"};
     int argc = sizeof(argv) / sizeof(char *);
     /* 执行函数 */
-    printf("\n");
+    printf("============================================= Print Start.\n");
     int ret = printCommandInfo(argc, argv);
-    printf("\n");
+    printf("============================================= Print End.\n");
     /* 验证结果 */
     EXPECT_EQ(COMMON_OK, ret) << "Error occurred in printCommandInfo()";
 }
