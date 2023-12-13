@@ -64,3 +64,11 @@ TEST_F(TestCommonBinaryTree, TestInOrderTraversal_recursion) {
 TEST_F(TestCommonBinaryTree, TestInOrderTraversal_iteration) {
     EXPECT_EQ(0, 0);
 }
+
+TEST_F(TestCommonBinaryTree, TestPostOrderTraversal_recursion) {
+    EXPECT_EQ(0, 0);
+}
+
+TEST_F(TestCommonBinaryTree, TestPostOrderTraversal_iteration) {
+    EXPECT_EQ(0, 0);
+}
