@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-10 10:27:14
+ * @LastEditTime : 2023-12-13 21:56:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -612,6 +612,7 @@ int isTreeListQueueEmpty(TreeListQueue *queue) {
  */
 int isTreeListQueueFull(TreeListQueue *queue) {
     /* TODO */
+    (void)queue;
     return 0;
 }
 
