@@ -23,8 +23,9 @@ include_directories(inc/commonDef)      # 公共定义头文件
 set(TEST_TARGETS
         commonArray
         commonBinaryTree
-        commonString
         commonCmd
+        commonHashTable
+        commonString
         )
 
 # 对每个测试目标执行操作
