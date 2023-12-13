@@ -99,9 +99,9 @@ TEST_F(TestCommonString, TestPrintString) {
     snprintf(s, charSize, "%s", "Hello World!");
 
     /* 运行结果 */
-    printf("\n");
+    printf("============================================================ Print Start.\n");
     int result = printString(s);
-    printf("\n");
+    printf("============================================================ Print End.\n");
 
     /* 比较结果 */
     EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
@@ -142,8 +142,9 @@ TEST_F(TestCommonString, TestValidateString) {
     snprintf(actual, actualCharSize, "%s", "Hello World!");
 
     /* 运行结果 */
-    printf("\n");
+    printf("============================================================ Print Start.\n");
     int result = validateString('1', expect, actual);
+    printf("============================================================ Print End.\n");
 
     /* 比较结果 */
     EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
