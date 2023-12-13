@@ -601,6 +601,7 @@ int isTreeListQueueEmpty(TreeListQueue *queue) {
  * @return {int}                    如果队列为满，返回1；否则返回0
  */
 int isTreeListQueueFull(TreeListQueue *queue) {
+    /* TODO */
     return 0;
 }
 
