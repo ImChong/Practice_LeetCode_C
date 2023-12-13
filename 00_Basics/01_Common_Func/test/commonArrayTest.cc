@@ -76,9 +76,9 @@ TEST_F(TestCommonArray, TestPrintArray) {
     int arr[5] = {1, 2, 3, 4, 5};
 
     /* 运行结果 */
-    printf("\n");
+    printf("============================================================ Print Start.\n");
     int result = printArray(arr, 5);
-    printf("\n");
+    printf("============================================================ Print End.\n");
 
     /* 检查结果 */
     EXPECT_EQ(COMMON_OK, result) << "Error occurred in printArray";
