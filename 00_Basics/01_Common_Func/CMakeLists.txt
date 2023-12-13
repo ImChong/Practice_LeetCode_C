@@ -22,6 +22,7 @@ include_directories(inc/commonDef)      # 公共定义头文件
 # 创建一个包含所有测试目标的列表
 set(TEST_TARGETS
         commonArray
+        commonBinaryTree
         commonString
         commonCmd
         )
