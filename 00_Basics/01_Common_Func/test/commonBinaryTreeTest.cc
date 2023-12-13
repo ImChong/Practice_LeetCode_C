@@ -49,26 +49,30 @@ class TestCommonBinaryTree : public ::testing::Test {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-TEST_F(TestCommonBinaryTree, TestPreOrderTraversal_recursion) {
+TEST_F(TestCommonBinaryTree, TestPreOrderTraversal) {
     EXPECT_EQ(0, 0);
 }
 
-TEST_F(TestCommonBinaryTree, TestPreOrderTraversal_iteration) {
+TEST_F(TestCommonBinaryTree, TestInOrderTraversal) {
     EXPECT_EQ(0, 0);
 }
 
-TEST_F(TestCommonBinaryTree, TestInOrderTraversal_recursion) {
+TEST_F(TestCommonBinaryTree, TestPostOrderTraversal) {
     EXPECT_EQ(0, 0);
 }
 
-TEST_F(TestCommonBinaryTree, TestInOrderTraversal_iteration) {
+TEST_F(TestCommonBinaryTree, TestLevelOrder) {
     EXPECT_EQ(0, 0);
 }
 
-TEST_F(TestCommonBinaryTree, TestPostOrderTraversal_recursion) {
+TEST_F(TestCommonBinaryTree, TestTreeArrQueue) {
     EXPECT_EQ(0, 0);
 }
 
-TEST_F(TestCommonBinaryTree, TestPostOrderTraversal_iteration) {
+TEST_F(TestCommonBinaryTree, TestTreeListQueue) {
+    EXPECT_EQ(0, 0);
+}
+
+TEST_F(TestCommonBinaryTree, TestTreeOperation) {
     EXPECT_EQ(0, 0);
 }
