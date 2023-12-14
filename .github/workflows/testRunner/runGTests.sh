@@ -3,7 +3,7 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
-# run gtest executables in the build/bin directory
+# set test names
 tests=("commonArrayTest" \
     "commonBinaryTreeTest" \
     "commonCmdTest" \
@@ -17,6 +17,7 @@ tests=("commonArrayTest" \
     "commonStringTest"
 )
 
+# run gtest executables in the build/bin directory
 for test in "${tests[@]}"; do
     executable=$(find ./build/bin/ -type f -executable -name "$test*")
     echo "=========================================================================================="
