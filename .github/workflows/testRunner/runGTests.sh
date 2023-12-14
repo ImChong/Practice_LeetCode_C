@@ -11,6 +11,9 @@ tests=("commonArrayTest" \
     "commonLinkedListTest" \
     "commonLinkedListDummyTest" \
     "commonQueueTest" \
+    "commonRingBufferTest" \
+    "commonSingleValueTest" \
+    "commonStackTest" \
     "commonStringTest"
 )
 
