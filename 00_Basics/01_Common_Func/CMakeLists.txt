@@ -33,10 +33,18 @@ set(TEST_TARGETS
 
 # 对每个测试目标执行操作
 foreach(TARGET ${TEST_TARGETS})
-    # 创建一个新的测试目标
+    # 设置测试目标的名称
     set(TEST_TARGET_NAME ${TARGET}Test)
-    add_executable(${TEST_TARGET_NAME} test/${TEST_TARGET_NAME}.cc src/${TARGET}.c)
-    # 将Google Test库链接到测试目标
-    add_dependencies(${TEST_TARGET_NAME} googletest)
-    target_link_libraries(${TEST_TARGET_NAME} gtest gtest_main)
+    set(TEST_SOURCE test/${TEST_TARGET_NAME}.cc)
+    set(TARGET_SOURCE src/${TARGET}.c)
+
+    # 检查源文件是否存在
+    if(EXISTS ${TEST_SOURCE} AND EXISTS ${TARGET_SOURCE})
+        # 将测试目标添加到构建系统
+        add_executable(${TEST_TARGET_NAME} ${TEST_SOURCE} ${TARGET_SOURCE})
+        # 添加测试目标的依赖项
+        add_dependencies(${TEST_TARGET_NAME} googletest)
+        # 添加测试目标的链接库
+        target_link_libraries(${TEST_TARGET_NAME} gtest gtest_main)
+    endif()
 endforeach()
