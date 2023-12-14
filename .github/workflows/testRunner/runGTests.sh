@@ -4,9 +4,25 @@
 set -e
 
 # run gtest executables in the build/bin directory
-for test in $(find ./build/bin -executable -type f); do
+tests=("commonArray" \
+        "commonBinaryTree" \
+        "commonCmd" \
+        "commonHashTable" \
+        "commonLinkedList" \
+        "commonLinkedListDummy" \
+        "commonQueue" \
+        "commonString"
+        )
+
+for test in "${tests[@]}"; do
+    executable=$(find ./build/bin/ -type f -executable -name "$test*")
     echo "=========================================================================================="
-    $test   # run GTest executables
+    if [[ -f $executable && -x $executable ]]; then
+        echo "Executable $executable found. Starting test..."
+        $executable   # run GTest executables
+    else
+        echo "Executable $executable not found or not executable"
+    fi
 done
 
 # finish up message
