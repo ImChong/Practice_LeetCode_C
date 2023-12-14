@@ -4,15 +4,15 @@
 set -e
 
 # run gtest executables in the build/bin directory
-tests=("commonArray" \
-        "commonBinaryTree" \
-        "commonCmd" \
-        "commonHashTable" \
-        "commonLinkedList" \
-        "commonLinkedListDummy" \
-        "commonQueue" \
-        "commonString"
-        )
+tests=("commonArrayTest" \
+    "commonBinaryTreeTest" \
+    "commonCmdTest" \
+    "commonHashTableTest" \
+    "commonLinkedListTest" \
+    "commonLinkedListDummyTest" \
+    "commonQueueTest" \
+    "commonStringTest"
+)
 
 for test in "${tests[@]}"; do
     executable=$(find ./build/bin/ -type f -executable -name "$test*")
