@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:40:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 19:13:55
+ * @LastEditTime : 2023-12-14 08:51:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,7 @@
 #include "compileCfg.h"
 #if COMMON_QUEUE_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* 标准头文件 */
+#include <stdio.h>
 #include <stdlib.h>
 /* 常用头文件 */
 #include "commonQueue.h"
