@@ -19,9 +19,11 @@ for test in "${tests[@]}"; do
     echo "=========================================================================================="
     if [[ -f $executable && -x $executable ]]; then
         echo "Executable $executable found. Starting test..."
+        echo "=========================================================================================="
         $executable   # run GTest executables
     else
         echo "Executable $executable not found or not executable"
+        echo "=========================================================================================="
     fi
 done
 
