@@ -9,11 +9,15 @@ on:
       paths:
         - '00_Basics/01_Common_Func/**'
         - '.github/workflows/commonFuncLint.yml'
+        - '.github/workflows/testRunner/runCpplint.sh'
+        - '.github/workflows/testRunner/runCppcheck.sh'
     # Allows you to run this workflow every time a pull request is opened or updated
     pull_request:
       paths:
         - '00_Basics/01_Common_Func/**'
         - '.github/workflows/commonFuncLint.yml'
+        - '.github/workflows/testRunner/runCpplint.sh'
+        - '.github/workflows/testRunner/runCppcheck.sh'
     # Schedule a workflow to run automatically
     schedule:
       - cron:  '0 2 * * *'
