@@ -25,7 +25,7 @@ for test in "${tests[@]}"; do
         echo "=========================================================================================="
         $executable   # run GTest executables
     else
-        echo "Executable $executable not found or not executable"
+        echo "Executable $test not found or not executable"
         echo "=========================================================================================="
     fi
 done
