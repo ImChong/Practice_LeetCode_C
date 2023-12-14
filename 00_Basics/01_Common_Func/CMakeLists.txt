@@ -38,13 +38,10 @@ foreach(TARGET ${TEST_TARGETS})
     set(TEST_SOURCE test/${TEST_TARGET_NAME}.cc)
     set(TARGET_SOURCE src/${TARGET}.c)
 
-    # 检查源文件是否存在
-    if(EXISTS ${TEST_SOURCE} AND EXISTS ${TARGET_SOURCE})
-        # 将测试目标添加到构建系统
-        add_executable(${TEST_TARGET_NAME} ${TEST_SOURCE} ${TARGET_SOURCE})
-        # 添加测试目标的依赖项
-        add_dependencies(${TEST_TARGET_NAME} googletest)
-        # 添加测试目标的链接库
-        target_link_libraries(${TEST_TARGET_NAME} gtest gtest_main)
-    endif()
+    # 将测试目标添加到构建系统
+    add_executable(${TEST_TARGET_NAME} ${TEST_SOURCE} ${TARGET_SOURCE})
+    # 添加测试目标的依赖项
+    add_dependencies(${TEST_TARGET_NAME} googletest)
+    # 添加测试目标的链接库
+    target_link_libraries(${TEST_TARGET_NAME} gtest gtest_main)
 endforeach()
