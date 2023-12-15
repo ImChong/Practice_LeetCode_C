@@ -37,6 +37,14 @@ void stackPush(Stack *obj, int x);      /* 入栈 */
 void stackPop(Stack *obj);              /* 出栈 */
 int stackTop(Stack *obj);               /* 查看栈顶元素 */
 bool stackEmpty(Stack *obj);            /* 判断栈是否为空 */
+bool stackFull(Stack *obj);             /* 判断栈是否为满 */
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                HELPER FUNCTIONS                                */
+/*                                                                                */
+/**********************************************************************************/
+void stackPrint(Stack *obj);            /* 打印栈 */
 void stackFree(Stack *obj);             /* 释放栈 */
 
 
