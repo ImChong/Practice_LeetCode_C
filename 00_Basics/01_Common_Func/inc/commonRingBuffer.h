@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:22:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 10:40:33
+ * @LastEditTime : 2023-12-15 23:04:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -32,10 +32,16 @@ typedef struct {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
+int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen);      /* 初始化环形buffer */
 int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte);      /* 向环形buffer中添加一个字节 */
 int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte);        /* 从环形buffer中取出一个字节 */
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                HELPER FUNCTIONS                                */
+/*                                                                                */
+/**********************************************************************************/
 void RingBuffer_Print(RingBufferSt *pRing);     /* 打印环形buffer中的数据 */
-int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen);      /* 初始化环形buffer */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -43,6 +49,5 @@ int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen);  
 /*                                                                                */
 /**********************************************************************************/
 void Test_RingBuffer(void);
-
 
 #endif  /* __COMMON_RING_BUFFER_H */        /* NOLINT(build/header_guard) */

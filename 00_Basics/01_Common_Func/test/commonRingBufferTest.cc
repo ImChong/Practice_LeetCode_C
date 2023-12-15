@@ -1,20 +1,20 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\test\commonBinaryTreeTest.cc
+ * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\test\commonRingBufferTest.cc
  * @Author       : Chong Liu
- * @CreateDate   : 2023-12-13 00:47:48
+ * @CreateDate   : 2023-12-15 22:59:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-15 23:01:17
+ * @LastEditTime : 2023-12-15 23:03:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用命令行指令单元测试
+ * @Description  : 通用环形缓冲区单元测试
  */
 /* gtest 头文件 */
 #include "gtest/gtest.h"
 /* 测试目标头文件 */
 extern "C" {
     #include "commonTypeDef.h"
-    #include "commonBinaryTree.h"
+    #include "commonRingBuffer.h"
 }
 
 /**********************************************************************************/
@@ -22,7 +22,7 @@ extern "C" {
 /*                                   TEST SUITE                                   */
 /*                                                                                */
 /**********************************************************************************/
-class TestCommonBinaryTree : public ::testing::Test {
+class TestCommonRingBuffer : public ::testing::Test {
  public:
     static void SetUpTestCase() {
         // Code here will be called once before all tests
@@ -40,40 +40,31 @@ class TestCommonBinaryTree : public ::testing::Test {
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                UTILITY FUNCTIONS                               */
+/*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-TEST_F(TestCommonBinaryTree, TestPreOrderTraversal) {
+TEST_F(TestCommonRingBuffer, TestRingBuffer_Init) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
-TEST_F(TestCommonBinaryTree, TestInOrderTraversal) {
+TEST_F(TestCommonRingBuffer, TestRingBuffer_AddByte) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
-TEST_F(TestCommonBinaryTree, TestPostOrderTraversal) {
+TEST_F(TestCommonRingBuffer, TestRingBuffer_GetByte) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
-TEST_F(TestCommonBinaryTree, TestLevelOrder) {
+/**********************************************************************************/
+/*                                                                                */
+/*                                HELPER FUNCTIONS                                */
+/*                                                                                */
+/**********************************************************************************/
+TEST_F(TestCommonRingBuffer, TestRingBuffer_Print) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
-TEST_F(TestCommonBinaryTree, TestTreeArrQueue) {
-    /* TODO */
-    EXPECT_EQ(0, 0);
-}
-
-TEST_F(TestCommonBinaryTree, TestTreeListQueue) {
-    /* TODO */
-    EXPECT_EQ(0, 0);
-}
-
-TEST_F(TestCommonBinaryTree, TestTreeOperation) {
-    /* TODO */
-    EXPECT_EQ(0, 0);
-}
