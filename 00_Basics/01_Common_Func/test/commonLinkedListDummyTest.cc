@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-13 22:14:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-13 22:32:39
+ * @LastEditTime : 2023-12-16 00:15:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -105,7 +105,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListFree) {
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                  TEST FUNCTION                                 */
+/*                                  TEST_FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
 TEST_F(TestCommonLinkedListDummy, TestValidateDummyLinkedList) {
