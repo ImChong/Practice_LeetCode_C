@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-13 22:14:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-16 00:15:00
+ * @LastEditTime : 2023-12-16 00:21:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,41 +43,65 @@ class TestCommonLinkedListDummy : public ::testing::Test {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
+/* ============================================================================== */
+/* dummyLinkedListCreate */
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListCreate) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
+/* ============================================================================== */
+/* dummyLinkedListGet */
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListGet) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
+/* ============================================================================== */
+/* dummyLinkedListAddAtHead */
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListAddAtHead) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
+/* ============================================================================== */
+/* dummyLinkedListAddAtTail */
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListAddAtTail) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
+/* ============================================================================== */
+/* dummyLinkedListAddAtIndex */
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListAddAtIndex) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
+/* ============================================================================== */
+/* dummyLinkedListDeleteAtIndex */
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListDeleteAtIndex) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
+/* ============================================================================== */
+/* dummyLinkedListDeleteElement */
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListDeleteElement) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
+/* ============================================================================== */
+/* dummyLinkedListGetIndexes */
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListGetIndexes) {
     /* TODO */
     EXPECT_EQ(0, 0);
@@ -88,16 +112,25 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListGetIndexes) {
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
+/* ============================================================================== */
+/* dummyLinkedListFromArray */
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListFromArray) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
+/* ============================================================================== */
+/* dummyLinkedListPrint */
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListPrint) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
+/* ============================================================================== */
+/* dummyLinkedListFree */
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListFree) {
     /* TODO */
     EXPECT_EQ(0, 0);
@@ -108,6 +141,9 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListFree) {
 /*                                  TEST_FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
+/* ============================================================================== */
+
+/* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestValidateDummyLinkedList) {
     /* TODO */
     EXPECT_EQ(0, 0);
