@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:22:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-15 23:04:17
+ * @LastEditTime : 2023-12-16 00:22:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -42,6 +42,7 @@ int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte);        /* 从�
 /*                                                                                */
 /**********************************************************************************/
 void RingBuffer_Print(RingBufferSt *pRing);     /* 打印环形buffer中的数据 */
+void RingBuffer_Free(RingBufferSt *pRing);      /* 释放环形buffer */
 
 /**********************************************************************************/
 /*                                                                                */
