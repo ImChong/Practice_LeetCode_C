@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-13 22:14:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-13 22:21:12
+ * @LastEditTime : 2023-12-16 00:14:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -100,7 +100,7 @@ TEST_F(TestCommonLinkedList, TestLinkedListFree) {
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                  TEST FUNCTION                                 */
+/*                                  TEST_FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
 TEST_F(TestCommonLinkedList, TestValidateLinkedList) {
