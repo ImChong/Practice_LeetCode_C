@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 18:14:42
+ * @LastEditTime : 2023-12-15 23:15:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -55,6 +55,83 @@ TEST_F(TestCommonArray, TestArrSize) {
 
     /* 比较结果 */
     EXPECT_EQ(arrSize, 5);
+}
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                UTILITY FUNCTIONS                               */
+/*                                                                                */
+/**********************************************************************************/
+/* ============================================================================== */
+/* compareElements */
+/* ============================================================================== */
+TEST_F(TestCommonArray, TestCompareElements) {
+    /* 准备数据 */
+    int a = 5;
+    int b = 3;
+    /* 运行结果 & 比较结果 */
+    EXPECT_EQ(2, compareElements(&a, &b)) << "Error occurred in compareElements a > b";
+
+    /* 准备数据 */
+    a = 3;
+    b = 5;
+    /* 运行结果 & 比较结果 */
+    EXPECT_EQ(-2, compareElements(&a, &b)) << "Error occurred in compareElements a < b";
+
+    /* 准备数据 */
+    a = 5;
+    b = 5;
+    /* 运行结果 & 比较结果 */
+    EXPECT_EQ(0, compareElements(&a, &b)) << "Error occurred in compareElements a = b";
+}
+
+/* ============================================================================== */
+/* sortArray */
+/* ============================================================================== */
+TEST_F(TestCommonArray, TestSortArray) {
+    /* 准备数据 */
+    int arr[5] = {5, 4, 3, 2, 1};
+
+    /* 运行结果 */
+    int result = sortArray(arr, 5);
+
+    /* 比较结果 */
+    EXPECT_EQ(1, arr[0]) << "Error occurred in sortArray arr[0]";
+    EXPECT_EQ(2, arr[1]) << "Error occurred in sortArray arr[1]";
+    EXPECT_EQ(3, arr[2]) << "Error occurred in sortArray arr[2]";
+    EXPECT_EQ(4, arr[3]) << "Error occurred in sortArray arr[3]";
+    EXPECT_EQ(5, arr[4]) << "Error occurred in sortArray arr[4]";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in sortArray result";
+}
+
+/* ============================================================================== */
+/* sort2DArray */
+/* ============================================================================== */
+TEST_F(TestCommonArray, TestSort2DArray) {
+    /* 准备数据 */
+    int **arrPtr = (int **)malloc(sizeof(int *) * 2);       /* NOLINT(readability/casting) */
+    for (int i = 0; i < 2; i++) {
+        arrPtr[i] = (int *)malloc(sizeof(int) * 3);         /* NOLINT(readability/casting) */
+    }
+    arrPtr[0][0] = 5;
+    arrPtr[0][1] = 4;
+    arrPtr[0][2] = 3;
+    arrPtr[1][0] = 2;
+    arrPtr[1][1] = 1;
+    arrPtr[1][2] = 0;
+    int arrColSize[2] = {3, 3};
+
+    /* 运行结果 */
+    int result = sort2DArray(arrPtr, 2, arrColSize);
+
+    /* 比较结果 */
+    EXPECT_EQ(0, arrPtr[0][0]) << "Error occurred in sort2DArray arrPtr[0][0]";
+    EXPECT_EQ(1, arrPtr[0][1]) << "Error occurred in sort2DArray arrPtr[0][1]";
+    EXPECT_EQ(2, arrPtr[0][2]) << "Error occurred in sort2DArray arrPtr[0][2]";
+    EXPECT_EQ(3, arrPtr[1][0]) << "Error occurred in sort2DArray arrPtr[1][0]";
+    EXPECT_EQ(4, arrPtr[1][1]) << "Error occurred in sort2DArray arrPtr[1][1]";
+    EXPECT_EQ(5, arrPtr[1][2]) << "Error occurred in sort2DArray arrPtr[1][2]";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in sort2DArray result";
 }
 
 /**********************************************************************************/
@@ -139,81 +216,9 @@ TEST_F(TestCommonArray, TestFree2DArray) {
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                UTILITY FUNCTIONS                               */
+/*                                  TEST_FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-/* ============================================================================== */
-/* compareElements */
-/* ============================================================================== */
-TEST_F(TestCommonArray, TestCompareElements) {
-    /* 准备数据 */
-    int a = 5;
-    int b = 3;
-    /* 运行结果 & 比较结果 */
-    EXPECT_EQ(2, compareElements(&a, &b)) << "Error occurred in compareElements a > b";
-
-    /* 准备数据 */
-    a = 3;
-    b = 5;
-    /* 运行结果 & 比较结果 */
-    EXPECT_EQ(-2, compareElements(&a, &b)) << "Error occurred in compareElements a < b";
-
-    /* 准备数据 */
-    a = 5;
-    b = 5;
-    /* 运行结果 & 比较结果 */
-    EXPECT_EQ(0, compareElements(&a, &b)) << "Error occurred in compareElements a = b";
-}
-
-/* ============================================================================== */
-/* sortArray */
-/* ============================================================================== */
-TEST_F(TestCommonArray, TestSortArray) {
-    /* 准备数据 */
-    int arr[5] = {5, 4, 3, 2, 1};
-
-    /* 运行结果 */
-    int result = sortArray(arr, 5);
-
-    /* 比较结果 */
-    EXPECT_EQ(1, arr[0]) << "Error occurred in sortArray arr[0]";
-    EXPECT_EQ(2, arr[1]) << "Error occurred in sortArray arr[1]";
-    EXPECT_EQ(3, arr[2]) << "Error occurred in sortArray arr[2]";
-    EXPECT_EQ(4, arr[3]) << "Error occurred in sortArray arr[3]";
-    EXPECT_EQ(5, arr[4]) << "Error occurred in sortArray arr[4]";
-    EXPECT_EQ(COMMON_OK, result) << "Error occurred in sortArray result";
-}
-
-/* ============================================================================== */
-/* sort2DArray */
-/* ============================================================================== */
-TEST_F(TestCommonArray, TestSort2DArray) {
-    /* 准备数据 */
-    int **arrPtr = (int **)malloc(sizeof(int *) * 2);       /* NOLINT(readability/casting) */
-    for (int i = 0; i < 2; i++) {
-        arrPtr[i] = (int *)malloc(sizeof(int) * 3);         /* NOLINT(readability/casting) */
-    }
-    arrPtr[0][0] = 5;
-    arrPtr[0][1] = 4;
-    arrPtr[0][2] = 3;
-    arrPtr[1][0] = 2;
-    arrPtr[1][1] = 1;
-    arrPtr[1][2] = 0;
-    int arrColSize[2] = {3, 3};
-
-    /* 运行结果 */
-    int result = sort2DArray(arrPtr, 2, arrColSize);
-
-    /* 比较结果 */
-    EXPECT_EQ(0, arrPtr[0][0]) << "Error occurred in sort2DArray arrPtr[0][0]";
-    EXPECT_EQ(1, arrPtr[0][1]) << "Error occurred in sort2DArray arrPtr[0][1]";
-    EXPECT_EQ(2, arrPtr[0][2]) << "Error occurred in sort2DArray arrPtr[0][2]";
-    EXPECT_EQ(3, arrPtr[1][0]) << "Error occurred in sort2DArray arrPtr[1][0]";
-    EXPECT_EQ(4, arrPtr[1][1]) << "Error occurred in sort2DArray arrPtr[1][1]";
-    EXPECT_EQ(5, arrPtr[1][2]) << "Error occurred in sort2DArray arrPtr[1][2]";
-    EXPECT_EQ(COMMON_OK, result) << "Error occurred in sort2DArray result";
-}
-
 /* ============================================================================== */
 /* validateArray */
 /* ============================================================================== */
