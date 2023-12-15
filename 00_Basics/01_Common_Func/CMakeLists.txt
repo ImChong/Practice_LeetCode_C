@@ -53,7 +53,7 @@ foreach(TARGET ${TEST_TARGETS})
         target_link_libraries(${TARGET_TEST_NAME} gtest gtest_main)
     else()
         # 打印警告信息
-        message(WARNING "Either ${TARGET} or ${TARGET_TEST_NAME} does not exist.")
+        message(STATUS "Either ${TARGET} or ${TARGET_TEST_NAME} does not exist.")
         # 跳过当前循环的剩余部分
         continue()
     endif()
