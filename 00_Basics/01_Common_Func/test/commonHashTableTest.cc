@@ -95,4 +95,3 @@ TEST_F(TestCommonHashTable, TestFreeHashTable) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
-

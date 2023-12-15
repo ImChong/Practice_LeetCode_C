@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 18:55:13
+ * @LastEditTime : 2023-12-15 23:25:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* 常用头文件 */
+#include "commonTypeDef.h"
 #include "commonHashTable.h"
 
 /**********************************************************************************/
@@ -46,7 +47,7 @@ struct HashTable *createHashTable(int size) {
  * @param {int} val             元素值
  * @return {int} slot           槽位
  */
-int getHashSlot(struct HashTable *table, int val) {
+STATIC_FUNC int getHashSlot(struct HashTable *table, int val) {
     return abs(val) % table->size;      /* 获取元素值在哈希表中的槽位 */
 }
 
@@ -122,25 +123,11 @@ void removeHashTable(struct HashTable *table, int val) {
     }
 }
 
-/**
- * @description: 释放哈希表
- * =================================================================================
- * @param {HashTable} *table    哈希表
- * @return {void}
- */
-void freeHashTable(struct HashTable *table) {
-    for (int i = 0; i < table->size; i++) {     /* 遍历哈希表 */
-        struct HashNode *currentNode = table->hashSlots[i];     /* 获取哈希表的哈希节点 */
-        while (currentNode) {       /* 遍历哈希节点 */
-            struct HashNode *tmp = currentNode;     /* 临时节点 */
-            currentNode = currentNode->next;        /* 将哈希节点指向下一个节点 */
-            free(tmp);      /* 释放临时节点 */
-        }
-    }
-    free(table->hashSlots);     /* 释放哈希表的哈希列表 */
-    free(table);        /* 释放哈希表 */
-}
-
+/**********************************************************************************/
+/*                                                                                */
+/*                                HELPER FUNCTIONS                                */
+/*                                                                                */
+/**********************************************************************************/
 /**
  * @description: 打印哈希表
  * =================================================================================
@@ -163,6 +150,25 @@ void printHashTable(struct HashTable *table) {
         }
         printf("Null\n");
     }
+}
+
+/**
+ * @description: 释放哈希表
+ * =================================================================================
+ * @param {HashTable} *table    哈希表
+ * @return {void}
+ */
+void freeHashTable(struct HashTable *table) {
+    for (int i = 0; i < table->size; i++) {     /* 遍历哈希表 */
+        struct HashNode *currentNode = table->hashSlots[i];     /* 获取哈希表的哈希节点 */
+        while (currentNode) {       /* 遍历哈希节点 */
+            struct HashNode *tmp = currentNode;     /* 临时节点 */
+            currentNode = currentNode->next;        /* 将哈希节点指向下一个节点 */
+            free(tmp);      /* 释放临时节点 */
+        }
+    }
+    free(table->hashSlots);     /* 释放哈希表的哈希列表 */
+    free(table);        /* 释放哈希表 */
 }
 
 
