@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 01:06:19
+ * @LastEditTime : 2023-12-15 23:23:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -41,8 +41,14 @@ int getHashSlot(struct HashTable *table, int val);                      /* 获�
 void insertHashTable(struct HashTable *table, int val, int index);      /* 插入哈希节点 */
 int searchHashTable(struct HashTable *table, int val);                  /* 查找哈希表（返回元素个数） */
 void removeHashTable(struct HashTable *table, int val);                 /* 删除哈希节点 */
-void freeHashTable(struct HashTable *table);                            /* 释放哈希表 */
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                HELPER FUNCTIONS                                */
+/*                                                                                */
+/**********************************************************************************/
 void printHashTable(struct HashTable *table);                           /* 打印哈希表 */
+void freeHashTable(struct HashTable *table);                            /* 释放哈希表 */
 
 
 #endif  /* __COMMON_HASH_TABLE_H */     /* NOLINT(build/header_guard) */
