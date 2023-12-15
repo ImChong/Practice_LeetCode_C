@@ -38,6 +38,8 @@ foreach(TARGET ${TEST_TARGETS})
     set(TEST_SOURCE test/${TEST_TARGET_NAME}.cc)
     set(TARGET_SOURCE src/${TARGET}.c)
 
+    # TODO: 若不存在测试目标的源文件，则跳过该测试目标
+
     # 将测试目标添加到构建系统
     add_executable(${TEST_TARGET_NAME} ${TEST_SOURCE} ${TARGET_SOURCE})
     # 添加测试目标的依赖项
