@@ -33,15 +33,25 @@ set(TEST_TARGETS
 
 # 对每个测试目标执行操作
 foreach(TARGET ${TEST_TARGETS})
-    # 设置测试目标的名称
-    set(TARGET_SOURCE src/${TARGET}.c)
-    set(TEST_TARGET_NAME ${TARGET}Test)
-    set(TEST_TARGET_SOURCE test/${TEST_TARGET_NAME}.cc)
+    # 设置目标的源文件
+    set(TARGET_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/src/${TARGET}.c)
+    # 设置目标的测试名称
+    set(TARGET_TEST_NAME ${TARGET}Test)
+    # 设置目标的测试源文件
+    set(TARGET_TEST_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/test/${TARGET_TEST_NAME}.cc)
 
-    # 将测试目标添加到构建系统
-    add_executable(${TEST_TARGET_NAME} ${TEST_TARGET_SOURCE} ${TARGET_SOURCE})
-    # 添加测试目标的依赖项
-    add_dependencies(${TEST_TARGET_NAME} googletest)
-    # 添加测试目标的链接库
-    target_link_libraries(${TEST_TARGET_NAME} gtest gtest_main)
+    # 检查TARGET_SOURCE和TARGET_TEST_SOURCE是否都存在
+    if(EXISTS ${TARGET_SOURCE} AND EXISTS ${TARGET_TEST_SOURCE})
+        # 将测试目标添加到构建系统
+        add_executable(${TARGET_TEST_NAME} ${TARGET_TEST_SOURCE} ${TARGET_SOURCE})
+        # 添加测试目标的依赖项
+        add_dependencies(${TARGET_TEST_NAME} googletest)
+        # 添加测试目标的链接库
+        target_link_libraries(${TARGET_TEST_NAME} gtest gtest_main)
+    else()
+        # 打印警告信息
+        message(WARNING "Either ${TARGET_SOURCE} or ${TARGET_TEST_SOURCE} does not exist.")
+        # 跳过当前循环的剩余部分
+        continue()
+    endif()
 endforeach()
