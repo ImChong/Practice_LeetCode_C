@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-20 00:10:22
+ * @LastEditTime : 2023-12-20 00:16:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -33,83 +33,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */
+#include "commonArray.h"
 #include "commonBinaryTree.h"
 /* 本文件头文件 */
 #include "levelOrderBottom.h"
-
-/* TODO: 重构 */
-
-/* ==================================================================================================== */
-/* ==================================================================================================== */
-/* 107. 二叉树的层序遍历 II：从下往上层序遍历二叉树 */
-
-/* 层序遍历 + 队列(迭代法)*/
-/* 关键点：  1：采用队列结构存储每一层的结点
-            2：因为队列的结构特性，操作是先进先出
-            3：将全部的的每一层节点存储于Queue队列当中
-            4：遍历结点的左右子结点，放在就继续放入Queue队列
-            5：为了清晰的表示出每一层之间的间隔，这里在队列中插入null结点，表示换层了
-            时间复杂度：O(n) 空间复杂度: O(n) */
-
-/* 层序遍历 + 队列(迭代法) 优化 */
-/* 关键点：  1：去掉用来表示换行的null指针
-            2：通过交换打印输出的方式，完成结果的输出
-            时间复杂度：O(n) 空间复杂度: O(n) */
-/* ==================================================================================================== */
-/* ==================================================================================================== */
-#define MAX_SIZE 2000           /* 初始化大小 */
-
-/**
- * @description: 二叉树的层序遍历
- * =================================================================================
- * @param {struct TreeNode} *root       二叉树的根节点
- * @param {int} *returnSize             二叉树的层数
- * @param {int} **returnColumnSizes     二叉树对应层级的节点数
- * @return {int} **resultArray          结果二维数组
- */
-int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColumnSizes) {
-    *returnSize = 0;                                                                    /* 初始化二叉树的层数为 0 */
-    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);                       /* 为结果二维数组分配空间 - 2000个 int* 类型数据 */
-    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);                         /* 用来记录二叉树每层的节点数（二维数组每行的列数）- 2000个 int 类型数据 */
-    if (root == NULL) {                                                                 /* 如果根节点为 NULL */
-        return resultArray;                                                                 /* 返回结果二维数组 */
-    }
-
-    struct TreeNode **treeNodeQueue = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);     /* 初始化树节点的队列 treeNodeQueue - 2000个 struct TreeNode * 类型数据  */
-    int queueFront = 0;                                                                 /* 队首索引 */
-    int queueRear = 0;                                                                  /* 队尾索引 */
-    treeNodeQueue[queueRear++] = root;                                                  /* 将树的根节点放入队尾，并且队尾索引 + 1 */
-    while (queueFront < queueRear) {                                                    /* 当队首索引小于队尾索引时 - 保持循环 */
-        int nodeNums = queueRear - queueFront;                                              /* 当前层的节点数 = 队尾索引 - 队首索引 */
-        int *nodeValues = (int *)malloc(sizeof(int) * nodeNums);                            /* 为当前层节点的所有数值分配空间 */
-        (*returnColumnSizes)[*returnSize] = nodeNums;                                       /* 记录当前层的节点数（当前行的列数） */
-        for (int i = 0; i < nodeNums; i++) {                                                /* 遍历当前层的节点 */
-            struct TreeNode *node = treeNodeQueue[queueFront++];                                /* 取出队首树节点 - 获取指针并将队首索引 + 1 */
-            nodeValues[i] = node->val;                                                          /* 记录本层第 i 个节点数值 */
-            if (node->left != NULL) {                                                           /* 如果当前节点的左节点不为 NULL */
-                treeNodeQueue[queueRear++] = node->left;                                            /* 将左节点加入队尾 */
-            }
-            if (node->right != NULL) {                                                          /* 如果当前节点的右节点不为 NULL */
-                treeNodeQueue[queueRear++] = node->right;                                           /* 将右节点加入队尾 */
-            }
-        }
-        resultArray[(*returnSize)++] = nodeValues;                                          /* 将记录下来的当前层所有数值放入二维数组的当前层（二维数组的对应行），并将层数 + 1 */
-    }
-
-    for (int i = 0; 2 * i < *returnSize; i++) {                                         /* 循环层数的一半 */
-        int *tmp1 = resultArray[i];                                                         /* 用临时指针保存第 i 层的数据 */
-        resultArray[i] = resultArray[(*returnSize) - i - 1];                                /* 将第【i】层的数据替换为第【总层数 - i - 1】层的数据 */
-        resultArray[(*returnSize) - i - 1] = tmp1;                                          /* 将第【总层数 - i - 1】层的数据替换为临时指针的数据，实现二维数组逆转 */
-        int tmp2 = (*returnColumnSizes)[i];                                                 /* 用临时指针保存第 i 层的节点数 */
-        (*returnColumnSizes)[i] = (*returnColumnSizes)[(*returnSize) - i - 1];              /* 将第【i】层的节点数替换为第【总层数 - i - 1】层的节点数 */
-        (*returnColumnSizes)[(*returnSize) - i - 1] = tmp2;                                 /* 将第【总层数 - i - 1】层的节点数替换为临时指针的节点数，实现二维数组逆转 */
-    }
-
-    return resultArray;                                                                 /* 返回结果二维数组 */
-}
-
-/* ==================================================================================================== */
-/* ==================================================================================================== */
 
 /**
  * @description: 创建树节点
@@ -123,29 +50,6 @@ struct TreeNode *newNode(int value) {
     node->left = NULL;                                                              /* 树节点的左子节点为 NULL */
     node->right = NULL;                                                             /* 树节点的右子节点为 NULL */
     return node;                                                                    /* 返回树节点 */
-}
-
-/**
- * @description: 打印二维数组
- * =================================================================================
- * @param {int} **array                 二维数组
- * @param {int} size                    二维数组的行数
- * @param {int} *columnSizes            二维数组行数对应的列数
- * @return {void}
- */
-void print2DArray(int **array, int size, int *columnSizes) {
-    printf("[\n");                                          /* 打印总边框 [ */
-    for (int i = 0; i < size; ++i) {                        /* 遍历二维数组的行 */
-        printf("  [");                                          /* 打印行边框 [ */
-        for (int j = 0; j < columnSizes[i]; ++j) {                  /* 遍历 i 行内的元素 */
-            printf("%d", array[i][j]);                                  /* 打印 i 行内的元素 */
-            if (j < columnSizes[i] - 1) {                               /* 打印分隔符：, */
-                printf(", ");
-            }
-        }
-        printf("]\n");                                          /* 打印行边框 ] */
-    }
-    printf("]\n");                                          /* 打印总边框 ] */
 }
 
 /**
