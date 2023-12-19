@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\07_Binary_Tree\05_levelOrderBottom\main_chong.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\07_Binary_Tree\05_levelOrderBottom\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-22 22:09:45
+ * @LastEditTime : 2023-12-20 00:10:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,17 +28,16 @@
  *
  */
 
-/* TODO: 重构 */
 
+/* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
+/* 通用头文件 */
+#include "commonBinaryTree.h"
+/* 本文件头文件 */
+#include "levelOrderBottom.h"
 
-/* 树节点 */
-struct TreeNode {
-    int val;                    /* 节点的值 */
-    struct TreeNode *left;      /* 左节点 */
-    struct TreeNode *right;     /* 右节点 */
-};
+/* TODO: 重构 */
 
 /* ==================================================================================================== */
 /* ==================================================================================================== */
