@@ -458,7 +458,7 @@ int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColu
  * @param {int} **returnColumnSizes     二叉树对应层级的节点数
  * @return {int} **resultArray          结果二维数组
  */
-int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColumnSizes) {
+int **levelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;
     int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);       /* NOLINT(readability/casting) */
     *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);         /* NOLINT(readability/casting) */

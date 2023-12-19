@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-20 00:16:24
+ * @LastEditTime : 2023-12-20 00:19:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -82,7 +82,7 @@ int main(int argc, const char *argv[]) {
     int *returnColumnSizes;
 
     /* 函数调用 */
-    int** result = levelOrderBottom(root, &returnSize, &returnColumnSizes);
+    int** result = levelOrderBottom_test(root, &returnSize, &returnColumnSizes);
     print2DArray(result, returnSize, returnColumnSizes);
 
     return 0;

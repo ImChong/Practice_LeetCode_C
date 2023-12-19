@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-04 02:39:46
+ * @LastEditTime : 2023-12-20 00:21:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -141,7 +141,7 @@ int printArray(int *arr, int arrSize) {
  * @return {int}                    打印结果
  */
 int print2DArray(int **arr, int arrSize, int *arrColSizes) {
-    if (printf("Ans: (row: %d, col: %d)[\n", arrSize, arrColSizes[0]) < 0) {
+    if (printf("Ans: (row: %d, col: %d) [\n", arrSize, arrColSizes[0]) < 0) {
         return COMMON_ERR;
     }
     for (int i = 0; i < arrSize; i++) {

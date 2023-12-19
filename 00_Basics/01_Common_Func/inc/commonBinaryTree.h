@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-01 01:24:47
+ * @LastEditTime : 2023-12-20 00:20:06
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -79,6 +79,7 @@ int *postOrderTraversal_iteration(struct TreeNode *root, int *returnSize);  /* è
 /* ============================================================================== */
 int **levelOrder_array(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
 int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
+int **levelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
 
 /**********************************************************************************/
 /*                                                                                */
