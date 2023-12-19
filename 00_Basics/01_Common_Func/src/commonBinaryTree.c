@@ -430,6 +430,78 @@ int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColu
 
 /**********************************************************************************/
 /*                                                                                */
+/*                                 UTILITY FUNCTIONS                              */
+/*                                                                                */
+/**********************************************************************************/
+/*
+ * 树结构表示：
+ *       1
+ *      / \
+ *     2   3
+ *    / \ / \
+ *   4  5 6  7
+ *
+ * 层序遍历：
+ * [
+ *   [1]
+ *   [2, 3]
+ *   [4, 5, 6, 7]
+ * ]
+ */
+/* ============================================================================== */
+/* ============================================================================== */
+/**
+ * @description: 二叉树的层序遍历
+ * =================================================================================
+ * @param {struct TreeNode} *root       二叉树的根节点
+ * @param {int} *returnSize             二叉树的层数
+ * @param {int} **returnColumnSizes     二叉树对应层级的节点数
+ * @return {int} **resultArray          结果二维数组
+ */
+int** levelOrderBottom(struct TreeNode* root, int* returnSize, int** returnColumnSizes) {
+    *returnSize = 0;
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);       /* NOLINT(readability/casting) */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);         /* NOLINT(readability/casting) */
+    if (root == NULL) {
+        return resultArray;
+    }
+
+    struct TreeNode **treeNodeQueue =
+        (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);   /* NOLINT(readability/casting) */
+    int queueFront = 0;
+    int queueRear = 0;
+    treeNodeQueue[queueRear++] = root;
+    while (queueFront < queueRear) {
+        int nodeNums = queueRear - queueFront;
+        int *nodeValues = (int *)malloc(sizeof(int) * nodeNums);    /* NOLINT(readability/casting) */
+        (*returnColumnSizes)[*returnSize] = nodeNums;
+        for (int i = 0; i < nodeNums; i++) {
+            struct TreeNode *node = treeNodeQueue[queueFront++];
+            nodeValues[i] = node->val;
+            if (node->left != NULL) {
+                treeNodeQueue[queueRear++] = node->left;
+            }
+            if (node->right != NULL) {
+                treeNodeQueue[queueRear++] = node->right;
+            }
+        }
+        resultArray[(*returnSize)++] = nodeValues;
+    }
+
+    for (int i = 0; 2 * i < *returnSize; i++) {
+        int *tmp1 = resultArray[i];
+        resultArray[i] = resultArray[(*returnSize) - i - 1];
+        resultArray[(*returnSize) - i - 1] = tmp1;
+        int tmp2 = (*returnColumnSizes)[i];
+        (*returnColumnSizes)[i] = (*returnColumnSizes)[(*returnSize) - i - 1];
+        (*returnColumnSizes)[(*returnSize) - i - 1] = tmp2;
+    }
+
+    return resultArray;
+}
+
+/**********************************************************************************/
+/*                                                                                */
 /*                                 HELPER FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
