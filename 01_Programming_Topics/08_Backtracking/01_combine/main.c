@@ -90,6 +90,8 @@ int main(int argc, const char *argv[]) {
     int *returnColumnSizes;
     int **result = combine(n, k, &returnSize, &returnColumnSizes);
 
+    /* BUG: 调用debug命令梳理报错点 */
+
     /* 调用打印函数 */
     print2DArray(result, returnSize, returnColumnSizes);
 
