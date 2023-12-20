@@ -91,7 +91,7 @@ int main(int argc, const char *argv[]) {
     int **result = combine(n, k, &returnSize, &returnColumnSizes);
 
     /* 调用打印函数 */
-    print2DArray(result, returnSize, k);
+    print2DArray(result, returnSize, returnColumnSizes);
 
     /* 释放内存 */
     for (int i = 0; i < returnSize; ++i) {

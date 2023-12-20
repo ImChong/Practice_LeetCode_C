@@ -2,7 +2,7 @@
 #include "methodCfg.h"
 #if BASELINE_METHOD_EN
 /* 标准头文件 */
-#include <stdio.h>
+#include <stdlib.h>
 /* 通用头文件 */
 #include "commonTypeDef.h"
 /* 本文件头文件 */
