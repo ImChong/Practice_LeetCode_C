@@ -17,6 +17,8 @@
  /* 标准头文件 */
 #include <stdio.h>
 #include <stdlib.h>
+/* 通用头文件 */
+
 /* 解题方法配置文件 */
 #include "methodCfg.h"
 /* 本文件头文件 */
