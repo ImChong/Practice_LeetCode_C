@@ -19,5 +19,6 @@
 /**********************************************************************************/
 #define BASELINE_METHOD_EN          0                           /* 基础方法使能，1：使能，0：关闭 */
 #define CUT_BRANCH_METHOD_EN        !BASELINE_METHOD_EN         /* 剪枝方法使能，1：使能，0：关闭 */
+#define CUT_BRANCH_GPT4_METHOD_EN   0                           /* GPT4生成剪枝方法使能，1：使能，0：关闭 */
 
 #endif  /* __METHOD_CFG_H */
