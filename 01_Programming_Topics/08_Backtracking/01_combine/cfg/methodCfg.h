@@ -17,7 +17,7 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define UNCUT_METHOD_EN             0                       /* 数组方法使能，1：使能，0：关闭 */
-#define CUT_BRANCH_METHOD_EN        !UNCUT_METHOD_EN        /* 结构体方法使能，1：使能，0：关闭 */
+#define BASELINE_METHOD_EN          0                           /* 基础方法使能，1：使能，0：关闭 */
+#define CUT_BRANCH_METHOD_EN        !BASELINE_METHOD_EN         /* 剪枝方法使能，1：使能，0：关闭 */
 
 #endif  /* __METHOD_CFG_H */
