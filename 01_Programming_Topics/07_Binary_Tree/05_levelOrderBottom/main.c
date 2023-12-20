@@ -82,7 +82,7 @@ int main(int argc, const char *argv[]) {
     int *returnColumnSizes;
 
     /* 函数调用 */
-    int** result = levelOrderBottom_test(root, &returnSize, &returnColumnSizes);
+    int** result = levelOrderBottom_leetCode(root, &returnSize, &returnColumnSizes);
     print2DArray(result, returnSize, returnColumnSizes);
 
     return 0;

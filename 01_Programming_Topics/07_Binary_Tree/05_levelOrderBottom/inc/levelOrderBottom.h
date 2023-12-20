@@ -12,7 +12,7 @@
 #ifndef __LEVEL_ORDER_BOTTOM_H
 #define __LEVEL_ORDER_BOTTOM_H
 
-int **levelOrderBottom_test(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
+int **levelOrderBottom_leetCode(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
 
 
 #endif  /* __LEVEL_ORDER_BOTTOM_H */
