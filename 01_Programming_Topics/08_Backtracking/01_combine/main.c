@@ -26,36 +26,6 @@
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                 HELPER FUNCTIONS                               */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: 打印组合
- * =================================================================================
- * @param {int} **result        二维数组
- * @param {int} returnSize      二维数组的行数
- * @param {int} k               k 个数的组合
- * @return {void}
- */
-void printCombinations(int **result, int returnSize, int k) {
-    printf("[\n");
-    for (int i = 0; i < returnSize; ++i) {
-        printf("  [");
-        for (int j = 0; j < k; ++j) {
-            printf("%d", result[i][j]);
-            if (j < k - 1) {
-                printf(", ");
-            }
-        }
-        printf("]\n");
-    }
-    printf("]\n");
-
-    printf("nums of combination: %d\n", returnSize);
-}
-
-/**********************************************************************************/
-/*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
@@ -121,7 +91,7 @@ int main(int argc, const char *argv[]) {
     int **result = combine(n, k, &returnSize, &returnColumnSizes);
 
     /* 调用打印函数 */
-    printCombinations(result, returnSize, k);
+    print2DArray(result, returnSize, k);
 
     /* 释放内存 */
     for (int i = 0; i < returnSize; ++i) {
