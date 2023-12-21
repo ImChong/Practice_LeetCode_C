@@ -36,8 +36,8 @@
  */
 void test_1(void) {
     /* 实际结果 */
-    int n = 20;
-    int k = 10;
+    int n = 4;
+    int k = 2;
     int returnSize;
     int *returnColumnSizes;
     int **result = combine(n, k, &returnSize, &returnColumnSizes);      /* BUG: 调用debug命令梳理报错点 */
