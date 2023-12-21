@@ -36,11 +36,24 @@
  */
 void test_1(void) {
     /* 实际结果 */
+    int n = 20;
+    int k = 10;
+    int returnSize;
+    int *returnColumnSizes;
+    int **result = combine(n, k, &returnSize, &returnColumnSizes);      /* BUG: 调用debug命令梳理报错点 */
+
+    print2DArray(result, returnSize, returnColumnSizes);
 
     /* 预期结果 */
 
     /* 比较结果 */
 
+    /* 释放内存 */
+    for (int i = 0; i < returnSize; ++i) {
+        free(result[i]);
+    }
+    free(result);
+    free(returnColumnSizes);
 }
 
 /**
@@ -84,23 +97,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    int n = 20;
-    int k = 10;
-    int returnSize;
-    int *returnColumnSizes;
-    int **result = combine(n, k, &returnSize, &returnColumnSizes);
 
-    /* BUG: 调用debug命令梳理报错点 */
-
-    /* 调用打印函数 */
-    print2DArray(result, returnSize, returnColumnSizes);
-
-    /* 释放内存 */
-    for (int i = 0; i < returnSize; ++i) {
-        free(result[i]);
-    }
-    free(result);
-    free(returnColumnSizes);
 
     return 0;
 }
