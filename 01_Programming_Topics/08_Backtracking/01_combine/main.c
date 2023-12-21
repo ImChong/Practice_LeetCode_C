@@ -85,11 +85,23 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
+    int n = 5;
+    int k = 3;
+    int returnSize;
+    int *returnColumnSizes;
+    int **result = combine(n, k, &returnSize, &returnColumnSizes);
 
     /* 预期结果 */
 
     /* 比较结果 */
+    print2DArray(result, returnSize, returnColumnSizes);
 
+    /* 释放内存 */
+    for (int i = 0; i < returnSize; ++i) {
+        free(result[i]);
+    }
+    free(result);
+    free(returnColumnSizes);
 }
 
 /**********************************************************************************/
@@ -107,6 +119,6 @@ void test_3(void) {
 int main(int argc, const char *argv[]) {
     test_1();
     test_2();
-    // test_3();
+    test_3();
     return 0;
 }
