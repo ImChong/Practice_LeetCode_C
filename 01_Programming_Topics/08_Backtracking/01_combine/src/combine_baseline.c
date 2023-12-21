@@ -84,7 +84,7 @@ int **combine(int n, int k, int *returnSize, int **returnColumnSizes) {
     ans = (int **)malloc(sizeof(int *) * MAX_SIZE);                     /* ans二维数组存储符合条件的结果数组的集合。（数组足够大，避免极端情况） */
     pathTop = ansTop = 0;                                               /* 初始化当前数的数量 pathTop 和 当前的组数 ansTop 为 0 */
 
-    backtracking(n, k, 1);                                              /* 回溯算法，回溯初始值为 1 */
+    backtracking(n, k, 1);                                              /* 回溯算法，组合初始范围为 1 */
 
     *returnSize = ansTop;                                               /* 最后的返回大小为当前的组数 */
     *returnColumnSizes = (int *)malloc(sizeof(int) * (*returnSize));    /* returnColumnSizes数组存储ans二维数组对应下标中一维数组的长度（都为k） */
