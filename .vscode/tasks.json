@@ -39,7 +39,7 @@
             "label": "Build Current File - Python",
             "detail": "Compile Current File by Python File.",
             "type": "shell",
-            "command": "python",
+            "command": "python3",
             "linux": {
                 "args": [
                     "${workspaceFolder}/.vscode/build.py",
