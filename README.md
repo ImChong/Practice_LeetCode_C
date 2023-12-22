@@ -19,6 +19,7 @@ C language leetcode practice overall folder structure:
   - [Hash_Table](./01_Programming_Topics/03_Hash_Table/) - Hash table
   - [String](./01_Programming_Topics/04_String/) - String
   - [Double_Pointer](./01_Programming_Topics/05_Double_Pointer/) - Double pointer
+  - [Stack_Queue](./01_Programming_Topics/06_Stack_Queue/) - Stack & Queue
 - [Misc](./02_Misc/) - Miscellaneous
   - [Programming_Notes](./02_Misc/00_Programming_Notes/) - Programming notes
   - [Real_World_Problem](./02_Misc/01_Real_World_Problems/) - Real world problems
