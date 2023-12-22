@@ -83,7 +83,7 @@ C language leetcode practice overall folder structure:
 
 ### VSCode Native - Build & Run Current File
 
-> In order to run source code in VSCode, select the main.c file that wish to run. Then click the following button in VSCode:
+> In order to run source code in VSCode, select the main.c file that wish to run. Then click the following tab and options in VSCode:
 >
 > ```txt
 > Terminal -> Run Task... -> Build & Run Current File
