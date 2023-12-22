@@ -26,12 +26,13 @@ C language leetcode practice overall folder structure:
   - [Dynamic_Programming](./01_Programming_Topics/10_Dynamic_Programming/) - Dynamic programming
   - [Monotone_Stack](./01_Programming_Topics/11_Monotone_Stack/) - Monotone stack
   - [Graph_Theory](./01_Programming_Topics/12_Graph_Theory/) - Graph theory
-  - [Breath_First_Search](./01_Programming_Topics/13_Breath_First_Search/) - Breath first search
-  - [Binary_Search](./01_Programming_Topics/14_Binary_Search/) - Binary search
-  - [Sliding_Window](./01_Programming_Topics/15_Sliding_Window/) - Sliding window
-  - [Buy_And_Sell](./01_Programming_Topics/16_Buy_And_Sell/) - Buy and sell
-  - [House_Robber](./01_Programming_Topics/17_House_Robber/) - House robber
-  - [N_Sum](./01_Programming_Topics/18_N_Sum/) - N sum
+  - [Binary_Search](./01_Programming_Topics/13_Binary_Search/) - Binary search
+  - [Breath_First_Search](./01_Programming_Topics/14_Breath_First_Search/) - Breath first search
+  - [Depth_First_Search](./01_Programming_Topics/15_Depth_First_Search/) - Depth first search
+  - [Sliding_Window](./01_Programming_Topics/16_Sliding_Window/) - Sliding window
+  - [Buy_And_Sell](./01_Programming_Topics/17_Buy_And_Sell/) - Buy and sell
+  - [House_Robber](./01_Programming_Topics/18_House_Robber/) - House robber
+  - [N_Sum](./01_Programming_Topics/19_N_Sum/) - N sum
 - [Misc](./02_Misc/) - Miscellaneous
   - [Programming_Notes](./02_Misc/00_Programming_Notes/) - Programming notes
   - [Real_World_Problem](./02_Misc/01_Real_World_Problems/) - Real world problems
