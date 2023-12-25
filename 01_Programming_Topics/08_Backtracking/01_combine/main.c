@@ -117,6 +117,13 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
+#if BASELINE_METHOD_EN
+    printf("BASELINE_METHOD_EN\n");
+#elif CUT_BRANCH_METHOD_EN
+    printf("CUT_BRANCH_METHOD_EN\n");
+#elif CUT_BRANCH_GPT4_METHOD_EN
+    printf("CUT_BRANCH_GPT4_METHOD_EN\n");
+#endif
     test_1();
     test_2();
     test_3();
