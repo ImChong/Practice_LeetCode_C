@@ -1,15 +1,16 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\08_Backtracking\01_combine\main_uncut.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\08_Backtracking\01_combine\main.c
  * @Author       : Chong Liu
- * @CreateDate   : 2023-08-28 09:44:35
+ * @CreateDate   : 2023-12-26 13:19:53
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-17 23:34:45
+ * @LastEditTime : 2023-12-26 23:55:06
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 77. 组合: https://leetcode.cn/problems/combinations/
- * https://programmercarl.com/0077.%E7%BB%84%E5%90%88.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE
- * 解法参考：https://leetcode.cn/problems/combinations/solutions/857507/dai-ma-sui-xiang-lu-dai-ni-xue-tou-hui-s-0uql/
+ * 解法参考:
+ *      https://programmercarl.com/0077.%E7%BB%84%E5%90%88.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE
+ *      https://leetcode.cn/problems/combinations/solutions/857507/dai-ma-sui-xiang-lu-dai-ni-xue-tou-hui-s-0uql/
  */
  /* 标准头文件 */
 #include <stdio.h>

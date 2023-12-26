@@ -1,3 +1,14 @@
+/*
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\08_Backtracking\01_combine\src\combine_cutBranch._gpt4.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-12-26 13:19:53
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-12-26 23:54:09
+ * =================================================================================
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  :
+ */
 /* 解题方法配置文件 */
 #include "methodCfg.h"
 #if CUT_BRANCH_GPT4_METHOD_EN
