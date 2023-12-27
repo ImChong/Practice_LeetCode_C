@@ -86,41 +86,41 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 
 ### VSCode Native - Build & Run Current File
 
-> In order to run source code in VSCode, select the main.c file that wish to run. Then click the following tab and options in VSCode:
->
-> ```txt
-> Terminal -> Run Task... -> Build & Run Current File
-> ```
->
-> or simply press
->
-> ```txt
-> Ctrl+Shift+B
-> ```
->
-> for the code to accomplish the above behavior please see [source code](.vscode/tasks.json) and [python gcc build code](.vscode/build.py).
+In order to run source code in VSCode, select the main.c file that wish to run. Then click the following tab and options in VSCode:
+
+```txt
+Terminal -> Run Task... -> Build & Run Current File
+```
+
+or simply press
+
+```txt
+Ctrl+Shift+B
+```
+
+Source code: [tasks.json](.vscode/tasks.json) and [python build.py](.vscode/build.py).
 
 ### VSCode Extension - Code Runner
 
-> for the `Code Runner` vscode extension to accomplish the above behavior please see [source code](.vscode/settings.json).
+For the `Code Runner` vscode extension to run the main.c directly, please see source code: [settings.json](.vscode/settings.json).
 
 ## Debug Code
 
-> In order to debug source code in VSCode, select the .c file that wish to run.
-> First Build & Run source code as the above section.
-> Then click the following button in VSCode:
->
-> ```txt
-> Run and Debug (Ctil+Shift+D) -> (gdb) Debug Main
-> ```
->
-> or simply press
->
-> ```txt
-> F5
-> ```
->
-> for the code to accomplish the above behavior please see [source code](.vscode/launch.json).
+In order to debug source code in VSCode, select the .c file that wish to run.
+First Build & Run source code as the above section.
+Then click the following button in VSCode:
+
+```txt
+Run and Debug (Ctil+Shift+D) -> (gdb) Debug Main
+```
+
+or simply press
+
+```txt
+F5
+```
+
+for the code to accomplish the above behavior please see [source code](.vscode/launch.json).
 
 ## Clean all .exe files
 
