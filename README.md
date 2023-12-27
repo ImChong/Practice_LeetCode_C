@@ -75,6 +75,8 @@ C language leetcode practice overall folder structure:
 └── main.c                                /* main & test source file */
 ```
 
+## Common Function Modules
+
 All the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder. with the following workflows to ensure the quality of the code:
 
 - Common Function Lints: [commonFuncLint.yml](.github/workflows/commonFuncLint.yml)
