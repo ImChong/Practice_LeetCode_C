@@ -44,6 +44,13 @@ C language leetcode practice overall folder structure:
 - g++.exe (Rev7, Built by MSYS2 project) 13.1.0
 - GNU gdb (GDB) 13.2
 
+## Common Function Modules
+
+All the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder. with the following workflows to ensure the quality of the code:
+
+- Common Function Lints: [commonFuncLint.yml](.github/workflows/commonFuncLint.yml)
+- Common Function Tests: [commonFuncTest.yml](.github/workflows/commonFuncTest.yml).
+
 ## Code Structure
 
 - If the question has multiple solutions, the code structure will be as follows:
@@ -74,13 +81,6 @@ C language leetcode practice overall folder structure:
 │   └── compileCfg.h                          /* compile configuration */
 └── main.c                                /* main & test source file */
 ```
-
-## Common Function Modules
-
-All the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder. with the following workflows to ensure the quality of the code:
-
-- Common Function Lints: [commonFuncLint.yml](.github/workflows/commonFuncLint.yml)
-- Common Function Tests: [commonFuncTest.yml](.github/workflows/commonFuncTest.yml).
 
 ## Build & Run Code
 
