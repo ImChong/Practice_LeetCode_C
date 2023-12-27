@@ -60,14 +60,14 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 > ```txt
 > .
 > ├── cfg                                   /* configuration folder */
-> │   ├── compileCfg.h                          /* compile configuration */
+> │   ├── compileCfg.h                          /* common function modules configuration */
 > │   └── methodCfg.h                           /* method configuration */
 > ├── docs                                  /* documentation folder */
 > │   ├── sketch.drawio                         /* drawing sketch file */
 > │   └── sketch.excalidraw                     /* drawing sketch file */
 > ├── inc                                   /* header folder */
 > │   └── solutionName.h                        /* solution header file */
-> ├── main.c                                /* main & test source file */
+> ├── main.c                                /* main.c file */
 > └── src                                   /* source folder */
 >     ├── solutionName_methodName01.c           /* solution method 01 source file */
 >     ├── solutionName_methodName02.c           /* solution method 02 source file */
@@ -80,8 +80,8 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 > ```txt
 > .
 > ├── cfg                                   /* configuration folder */
-> │   └── compileCfg.h                          /* compile configuration */
-> └── main.c                                /* main & test source file */
+> │   └── compileCfg.h                          /* common function modules configuration */
+> └── main.c                                /* main.c file */
 > ```
 
 ## Build & Run Code
