@@ -120,21 +120,21 @@ or simply press
 F5
 ```
 
-for the code to accomplish the above behavior please see [source code](.vscode/launch.json).
+Source code: [launch.json](.vscode/launch.json).
 
 ## Clean all .exe files
 
-> Open the terminal
->
-> ```txt
-> ctrl+~
-> ```
->
-> then run
->
-> ```txt
-> .\00_Basics\02_Clean_Exe\killexe.bat        /* windows system */
-> ./00_Basics/02_Clean_Exe/killexe.sh         /* linux system */
-> ```
->
-> for the code to accomplish the above behavior please see [source code](./00_Basics/02_Clean_Exe/).
+Open the terminal by pressing
+
+```txt
+ctrl+~
+```
+
+then run
+
+```txt
+.\00_Basics\02_Clean_Exe\killexe.bat        /* windows system */
+./00_Basics/02_Clean_Exe/killexe.sh         /* linux system */
+```
+
+[Source code](./00_Basics/02_Clean_Exe/).
