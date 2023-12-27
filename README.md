@@ -39,10 +39,10 @@ C language leetcode practice overall folder structure:
 
 ## Build Tool Versions
 
-> - Python 3.12.1
-> - gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
-> - g++.exe (Rev7, Built by MSYS2 project) 13.1.0
-> - GNU gdb (GDB) 13.2
+- Python 3.12.1
+- gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
+- g++.exe (Rev7, Built by MSYS2 project) 13.1.0
+- GNU gdb (GDB) 13.2
 
 ## Code Structure
 
