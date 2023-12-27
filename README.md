@@ -99,46 +99,46 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 > ```txt
 > Ctrl+Shift+B
 > ```
-
-Source code: [tasks.json](.vscode/tasks.json) and [python build.py](.vscode/build.py).
+>
+> Source code: [tasks.json](.vscode/tasks.json) and [python build.py](.vscode/build.py).
 
 ### VSCode Extension - Code Runner
 
 > The `Code Runner` vscode extension can be used to run the main.c file directly.
-
-Source code: [settings.json](.vscode/settings.json).
+>
+> Source code: [settings.json](.vscode/settings.json).
 
 ## Debug Code
 
-In order to debug source code in VSCode, select the .c file that wish to run.
-First Build & Run source code as the above section.
-Then click the following button in VSCode:
-
-```txt
-Run and Debug (Ctil+Shift+D) -> (gdb) Debug Main
-```
-
-or simply press
-
-```txt
-F5
-```
-
-Source code: [launch.json](.vscode/launch.json).
+> In order to debug source code in VSCode, select the .c file that wish to run.
+> First Build & Run source code as the above section.
+> Then click the following button in VSCode:
+>
+> ```txt
+> Run and Debug (Ctil+Shift+D) -> (gdb) Debug Main
+> ```
+>
+> or simply press
+>
+> ```txt
+> F5
+> ```
+>
+> Source code: [launch.json](.vscode/launch.json).
 
 ## Clean all .exe files
 
-Open the terminal by pressing
-
-```txt
-ctrl+~
-```
-
-then run
-
-```txt
-.\00_Basics\02_Clean_Exe\killexe.bat        /* windows system */
-./00_Basics/02_Clean_Exe/killexe.sh         /* linux system */
-```
-
-[Source code](./00_Basics/02_Clean_Exe/).
+> Open the terminal by pressing
+>
+> ```txt
+> ctrl+~
+> ```
+>
+> then run
+>
+> ```txt
+> .\00_Basics\02_Clean_Exe\killexe.bat        /* windows system */
+> ./00_Basics/02_Clean_Exe/killexe.sh         /* linux system */
+> ```
+>
+> [Source code](./00_Basics/02_Clean_Exe/).
