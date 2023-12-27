@@ -10,12 +10,12 @@
 C language leetcode practice overall folder structure:
 
 - [Basics](./00_Basics/)
-  - This folder contains the basic configuration files and common function modules before getting started with the local leetcode practice.
+  > - This folder contains the basic configuration files and common function modules before getting started with the local leetcode practice.
   - [VScode_Settings_Backup](./00_Basics/00_VScode_Settings_Backup) - VScode settings backup
   - [Common_Func](./00_Basics/01_Common_Func/) - Common c function modules
   - [Clean_Exe](./00_Basics/02_Clean_Exe/) - Executables to clean all .exe files
 - [Programming_Topics](./01_Programming_Topics/) - ([Programming Carl Series](https://programmercarl.com/) / [Labuladong's Algorithm Cheat Sheet](https://labuladong.github.io/algo/home/))
-  - This folder contains the leetcode practice questions by programming topics.
+  > - This folder contains the leetcode practice questions by programming topics.
   - [Array](./01_Programming_Topics/01_Array/) - Array
   - [Linked_List](./01_Programming_Topics/02_Linked_List/) - Linked list
   - [Hash_Table](./01_Programming_Topics/03_Hash_Table/) - Hash table
@@ -36,7 +36,7 @@ C language leetcode practice overall folder structure:
   - [House_Robber](./01_Programming_Topics/18_House_Robber/) - House robber
   - [N_Sum](./01_Programming_Topics/19_N_Sum/) - N sum
 - [Misc](./02_Misc/)
-  - This folder contains miscellaneous topics.
+  > - This folder contains miscellaneous topics.
   - [Programming_Notes](./02_Misc/00_Programming_Notes/) - Programming notes
   - [Real_World_Problem](./02_Misc/01_Real_World_Problems/) - Real world problems
 
