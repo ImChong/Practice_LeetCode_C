@@ -55,34 +55,34 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 
 ## Code Structure
 
-- If the question can be solved by multiple methods, the problem code structure will be as follows:
-
-```txt
-.
-├── cfg                                   /* configuration folder */
-│   ├── compileCfg.h                          /* compile configuration */
-│   └── methodCfg.h                           /* method configuration */
-├── docs                                  /* documentation folder */
-│   ├── sketch.drawio                         /* drawing sketch file */
-│   └── sketch.excalidraw                     /* drawing sketch file */
-├── inc                                   /* header folder */
-│   └── solutionName.h                        /* solution header file */
-├── main.c                                /* main & test source file */
-└── src                                   /* source folder */
-    ├── solutionName_methodName01.c           /* solution method 01 source file */
-    ├── solutionName_methodName02.c           /* solution method 02 source file */
-    ├── ...
-    └── solutionName_methodNameXX.c           /* solution method XX source file */
-```
-
-- If the question can be solved by only one method, the problem code structure will be as follows:
-
-```txt
-.
-├── cfg                                   /* configuration folder */
-│   └── compileCfg.h                          /* compile configuration */
-└── main.c                                /* main & test source file */
-```
+> If the question can be solved by multiple methods, the problem code structure will be as follows:
+>
+> ```txt
+> .
+> ├── cfg                                   /* configuration folder */
+> │   ├── compileCfg.h                          /* compile configuration */
+> │   └── methodCfg.h                           /* method configuration */
+> ├── docs                                  /* documentation folder */
+> │   ├── sketch.drawio                         /* drawing sketch file */
+> │   └── sketch.excalidraw                     /* drawing sketch file */
+> ├── inc                                   /* header folder */
+> │   └── solutionName.h                        /* solution header file */
+> ├── main.c                                /* main & test source file */
+> └── src                                   /* source folder */
+>     ├── solutionName_methodName01.c           /* solution method 01 source file */
+>     ├── solutionName_methodName02.c           /* solution method 02 source file */
+>     ├── ...
+>     └── solutionName_methodNameXX.c           /* solution method XX source file */
+> ```
+>
+> If the question can be solved by only one method, the problem code structure will be as follows:
+>
+> ```txt
+> .
+> ├── cfg                                   /* configuration folder */
+> │   └── compileCfg.h                          /* compile configuration */
+> └── main.c                                /* main & test source file */
+> ```
 
 ## Build & Run Code
 
