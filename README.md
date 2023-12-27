@@ -46,39 +46,39 @@ C language leetcode practice overall folder structure:
 
 ## Code Structure
 
-> If the question has multiple solutions, the code structure will be as follows:
->
-> ```txt
-> .
-> ├── cfg                                   /* configuration folder */
-> │   ├── compileCfg.h                          /* compile configuration */
-> │   └── methodCfg.h                           /* method configuration */
-> ├── docs                                  /* documentation folder */
-> │   ├── sketch.drawio                         /* drawing sketch file */
-> │   └── sketch.excalidraw                     /* drawing sketch file */
-> ├── inc                                   /* header folder */
-> │   └── solutionName.h                        /* solution header file */
-> ├── main.c                                /* main & test source file */
-> └── src                                   /* source folder */
->     ├── solutionName_methodName01.c           /* solution method 01 source file */
->     ├── solutionName_methodName02.c           /* solution method 02 source file */
->     ├── ...
->     └── solutionName_methodNameXX.c           /* solution method XX source file */
-> ```
->
-> if the question has only one solution, the code structure will be as follows:
->
-> ```txt
-> .
-> ├── cfg                                   /* configuration folder */
-> │   └── compileCfg.h                          /* compile configuration */
-> └── main.c                                /* main & test source file */
-> ```
->
-> all the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder. with the following workflows to ensure the quality of the code:
->
-> - Common Function Lints: [commonFuncLint.yml](.github/workflows/commonFuncLint.yml)
-> - Common Function Tests: [commonFuncTest.yml](.github/workflows/commonFuncTest.yml).
+If the question has multiple solutions, the code structure will be as follows:
+
+```txt
+.
+├── cfg                                   /* configuration folder */
+│   ├── compileCfg.h                          /* compile configuration */
+│   └── methodCfg.h                           /* method configuration */
+├── docs                                  /* documentation folder */
+│   ├── sketch.drawio                         /* drawing sketch file */
+│   └── sketch.excalidraw                     /* drawing sketch file */
+├── inc                                   /* header folder */
+│   └── solutionName.h                        /* solution header file */
+├── main.c                                /* main & test source file */
+└── src                                   /* source folder */
+    ├── solutionName_methodName01.c           /* solution method 01 source file */
+    ├── solutionName_methodName02.c           /* solution method 02 source file */
+    ├── ...
+    └── solutionName_methodNameXX.c           /* solution method XX source file */
+```
+
+if the question has only one solution, the code structure will be as follows:
+
+```txt
+.
+├── cfg                                   /* configuration folder */
+│   └── compileCfg.h                          /* compile configuration */
+└── main.c                                /* main & test source file */
+```
+
+all the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder. with the following workflows to ensure the quality of the code:
+
+- Common Function Lints: [commonFuncLint.yml](.github/workflows/commonFuncLint.yml)
+- Common Function Tests: [commonFuncTest.yml](.github/workflows/commonFuncTest.yml).
 
 ## Build & Run Code
 
