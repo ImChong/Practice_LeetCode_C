@@ -86,7 +86,7 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 
 ## Build & Run Code
 
-### VSCode Native - Build & Run Current File
+> ### VSCode Native - Build & Run Current File
 
 In order to run source code in VSCode, select the main.c file that wish to run. Then click the following tab and options in VSCode:
 
