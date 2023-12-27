@@ -46,7 +46,7 @@ C language leetcode practice overall folder structure:
 
 ## Code Structure
 
-If the question has multiple solutions, the code structure will be as follows:
+- If the question has multiple solutions, the code structure will be as follows:
 
 ```txt
 .
@@ -66,7 +66,7 @@ If the question has multiple solutions, the code structure will be as follows:
     └── solutionName_methodNameXX.c           /* solution method XX source file */
 ```
 
-if the question has only one solution, the code structure will be as follows:
+- if the question has only one solution, the code structure will be as follows:
 
 ```txt
 .
@@ -75,7 +75,7 @@ if the question has only one solution, the code structure will be as follows:
 └── main.c                                /* main & test source file */
 ```
 
-all the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder. with the following workflows to ensure the quality of the code:
+All the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder. with the following workflows to ensure the quality of the code:
 
 - Common Function Lints: [commonFuncLint.yml](.github/workflows/commonFuncLint.yml)
 - Common Function Tests: [commonFuncTest.yml](.github/workflows/commonFuncTest.yml).
