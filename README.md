@@ -66,7 +66,7 @@ C language leetcode practice overall folder structure:
     └── solutionName_methodNameXX.c           /* solution method XX source file */
 ```
 
-- if the question has only one solution, the code structure will be as follows:
+- If the question has only one solution, the code structure will be as follows:
 
 ```txt
 .
