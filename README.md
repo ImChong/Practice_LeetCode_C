@@ -55,7 +55,7 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 
 ## Code Structure
 
-- If the question has multiple solutions, the code structure will be as follows:
+- If the question can be solved by multiple methods, the problem code structure will be as follows:
 
 ```txt
 .
@@ -75,7 +75,7 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
     └── solutionName_methodNameXX.c           /* solution method XX source file */
 ```
 
-- If the question has only one solution, the code structure will be as follows:
+- If the question can be solved by only one method, the problem code structure will be as follows:
 
 ```txt
 .
