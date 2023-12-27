@@ -49,6 +49,7 @@ C language leetcode practice overall folder structure:
 All the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder. with the following workflows to ensure the quality of the code:
 
 [![Common Function Lints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml) > [commonFuncLint.yml](.github/workflows/commonFuncLint.yml)
+
 [![Common Function Tests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml) > [commonFuncTest.yml](.github/workflows/commonFuncTest.yml)
 
 ## Code Structure
