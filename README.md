@@ -13,7 +13,7 @@ C language leetcode practice overall folder structure:
   - [VScode_Settings_Backup](./00_Basics/00_VScode_Settings_Backup) - VScode settings backup
   - [Common_Func](./00_Basics/01_Common_Func/) - Common c function modules
   - [Clean_Exe](./00_Basics/02_Clean_Exe/) - Executables to clean all .exe files
-- [Programming_Topics](./01_Programming_Topics/) - Programming topics ([代码随想录系列](https://programmercarl.com/) / [labuladong 的算法小抄系列](https://labuladong.github.io/algo/home/))
+- [Programming_Topics](./01_Programming_Topics/) - Programming topics ([Programming Carl Series](https://programmercarl.com/) / [Labuladong's Algorithm Cheat Sheet](https://labuladong.github.io/algo/home/))
   - [Array](./01_Programming_Topics/01_Array/) - Array
   - [Linked_List](./01_Programming_Topics/02_Linked_List/) - Linked list
   - [Hash_Table](./01_Programming_Topics/03_Hash_Table/) - Hash table
