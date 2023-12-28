@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-12-28 14:47:24
+LastEditTime : 2023-12-28 15:03:29
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -45,7 +45,6 @@ if __name__ == "__main__":
                 "-g",
                 workspacePath + "/00_Basics/01_Common_Func/src/*.c",
                 filePath + "/src/*.c",
-                filePath + "/test/*.c",
                 mainPath,
                 "-o",
                 filePath + "/main.exe"
