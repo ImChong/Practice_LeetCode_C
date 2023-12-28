@@ -9,3 +9,9 @@
  * =================================================================================
  * @Description  :
  */
+#ifndef __REMOVE_ELEMENT_H
+#define __REMOVE_ELEMENT_H
+
+int removeElement(int *nums, int numsSize, int val);
+
+#endif  /* __REMOVE_ELEMENT_H */
