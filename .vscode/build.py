@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-12-28 16:00:32
+LastEditTime : 2023-12-28 16:03:53
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -66,6 +66,7 @@ if __name__ == "__main__":
                 print("subprocess.run compilation failed!")
             else:
                 print("subprocess.run compilation finished successfully!")
+
         except Exception as error:
             print("An error occurred during compilation:")
             print(str(error))
