@@ -15,5 +15,6 @@
 void test_1(void);
 void test_2(void);
 void test_3(void);
+void test_4(void);
 
 #endif  /* __UNIT_TEST_H */
