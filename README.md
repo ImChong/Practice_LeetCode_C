@@ -48,18 +48,7 @@ To ensure code quality, all shared common code based on different programming to
 
 ## Code Structure
 
-> If the question can be solved by only one method, the problem code structure will be as follows:
->
-> ```txt
-> .
-> ├── cfg                                   /* configuration folder */
-> │   └── compileCfg.h                          /* common function modules configuration */
-> └── main.c                                /* main.c file */
-> ```
->
-> **Example**: `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
->
-> If the question can be solved by multiple methods, the problem code structure will be as follows:
+> The code structure of each question is as follows:
 >
 > ```txt
 > .
@@ -79,7 +68,7 @@ To ensure code quality, all shared common code based on different programming to
 >     └── solutionName_methodNameXX.c           /* solution method XX source file */
 > ```
 >
-> **Example**: `\Practice_LeetCode_C\01_Programming_Topics\03_Hash_Table\02_intersection\main.c`
+> **Example**: `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
 >
 
 ## Build & Run Code
