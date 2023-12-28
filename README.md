@@ -76,7 +76,8 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 > ```
 >
 > - Example
-> TODO
+>
+> > TODO
 >
 > If the question can be solved by only one method, the problem code structure will be as follows:
 >
@@ -89,6 +90,7 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 >
 > - Example
 >
+> > TODO
 
 ## Build & Run Code
 
