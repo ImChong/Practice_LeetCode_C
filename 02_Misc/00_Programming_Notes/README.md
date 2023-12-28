@@ -1,4 +1,4 @@
-# C 语言编码知识笔记
+# Programming Notes (编程笔记)
 
 [01_研发通识](01_GeneralInfo.md)
 
