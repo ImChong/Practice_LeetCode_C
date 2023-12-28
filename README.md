@@ -64,7 +64,7 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 > └── main.c                                /* main.c file */
 > ```
 >
-> > **Single Method Example**
+> > **Example**
 > >
 > > TODO
 >
@@ -88,7 +88,7 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 >     └── solutionName_methodNameXX.c           /* solution method XX source file */
 > ```
 >
-> > **Multiple Methods Example**
+> > **Example**
 > >
 > > TODO
 >
