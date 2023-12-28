@@ -46,18 +46,6 @@ To ensure code quality, all shared common code based on different programming to
 |   [![Common Function Lints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml)  |   [commonFuncLint.yml](.github/workflows/commonFuncLint.yml)   |
 |   [![Common Function Tests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml)  |   [commonFuncTest.yml](.github/workflows/commonFuncTest.yml)   |
 
-## Operating Systems
-
-- Windows
-- Ubuntu
-
-## Build Tool Versions
-
-- Python 3.12.1
-- gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
-- g++.exe (Rev7, Built by MSYS2 project) 13.1.0
-- GNU gdb (GDB) 13.2
-
 ## Code Structure
 
 > If the question can be solved by only one method, the problem code structure will be as follows:
@@ -93,6 +81,18 @@ To ensure code quality, all shared common code based on different programming to
 >
 > **Example**: `\Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\main.c`
 >
+
+## Operating Systems
+
+- Windows
+- Ubuntu
+
+## Build Tool Versions
+
+- Python 3.12.1
+- gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
+- g++.exe (Rev7, Built by MSYS2 project) 13.1.0
+- GNU gdb (GDB) 13.2
 
 ## Build & Run Code
 
