@@ -127,8 +127,9 @@ To ensure code quality, all shared common code based on different programming to
 ## Clean all .exe files
 
 > To ensure a clean development environment, it is important to remove unnecessary executable files.
-> You can use the following steps to clean all .exe files:
-> Open the terminal by pressing
+> The following steps can be used to clean all .exe files:
+>
+> First, open the terminal by pressing
 >
 > ```txt
 > ctrl + ~
