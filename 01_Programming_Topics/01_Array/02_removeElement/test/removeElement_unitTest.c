@@ -17,7 +17,7 @@
 /* 题解头文件 */
 #include "removeElement.h"
 /* 单元测试头文件 */
-#include "unitTest.h"
+#include "removeElement_unitTest.h"
 
 /**********************************************************************************/
 /*                                                                                */
