@@ -9,3 +9,11 @@
  * =================================================================================
  * @Description  :
  */
+#ifndef __UNIT_TEST_H
+#define __UNIT_TEST_H
+
+void test_1(void);
+void test_2(void);
+void test_3(void);
+
+#endif  /* __UNIT_TEST_H */
