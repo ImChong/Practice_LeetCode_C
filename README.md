@@ -37,6 +37,11 @@ C language leetcode practice overall folder structure:
   - [Programming_Notes](./02_Misc/00_Programming_Notes/) - Programming notes
   - [Real_World_Problem](./02_Misc/01_Real_World_Problems/) - Real world problems
 
+## Operating Systems
+
+- Windows
+- Ubuntu
+
 ## Build Tool Versions
 
 - Python 3.12.1
