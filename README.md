@@ -37,6 +37,15 @@ C language leetcode practice overall folder structure:
   - [Programming_Notes](./02_Misc/00_Programming_Notes/) - Programming notes
   - [Real_World_Problem](./02_Misc/01_Real_World_Problems/) - Real world problems
 
+## Common Function Modules
+
+All the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder. with the following workflows to ensure the quality of the code:
+
+| Workflows | Source Code |
+|----------|----------|
+|   [![Common Function Lints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml)  |   [commonFuncLint.yml](.github/workflows/commonFuncLint.yml)   |
+|   [![Common Function Tests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml)  |   [commonFuncTest.yml](.github/workflows/commonFuncTest.yml)   |
+
 ## Operating Systems
 
 - Windows
@@ -48,15 +57,6 @@ C language leetcode practice overall folder structure:
 - gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
 - g++.exe (Rev7, Built by MSYS2 project) 13.1.0
 - GNU gdb (GDB) 13.2
-
-## Common Function Modules
-
-All the shared common code will be placed in [Common_Func](00_Basics/01_Common_Func/) folder. with the following workflows to ensure the quality of the code:
-
-| Workflows | Source Code |
-|----------|----------|
-|   [![Common Function Lints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml)  |   [commonFuncLint.yml](.github/workflows/commonFuncLint.yml)   |
-|   [![Common Function Tests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml)  |   [commonFuncTest.yml](.github/workflows/commonFuncTest.yml)   |
 
 ## Code Structure
 
