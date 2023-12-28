@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-12-28 15:03:29
+LastEditTime : 2023-12-28 16:00:32
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -30,40 +30,33 @@ if __name__ == "__main__":
     else:   # 如果存在 ${fileDirname}/main.c
         print("main.c exists. continue...")
         # 编译指令
-        cmd = []
+        cmd = [
+            gccPath,
+            "-fdiagnostics-color=always",
+            "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/",
+            "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/commonDef/",
+            "-I" + filePath + "/cfg/",
+        ]
 
         # 如果存在 ${fileDirname}/src 文件夹
         if os.path.isdir(filePath + "/src"):
             print("src folder exists. continue...")
-            cmd = [
-                gccPath,
-                "-fdiagnostics-color=always",
-                "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/",
-                "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/commonDef/",
-                "-I" + filePath + "/cfg/",
+            cmd = cmd + [
                 "-I" + filePath + "/inc/",
-                "-g",
-                workspacePath + "/00_Basics/01_Common_Func/src/*.c",
                 filePath + "/src/*.c",
-                mainPath,
-                "-o",
-                filePath + "/main.exe"
             ]
         # 如果不存在 ${fileDirname}/src 文件夹
         else:
             print("src folder not exists. continue...")
-            cmd = [
-                gccPath,
-                "-fdiagnostics-color=always",
-                "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/",
-                "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/commonDef/",
-                "-I" + filePath + "/cfg/",
-                "-g",
-                workspacePath + "/00_Basics/01_Common_Func/src/*.c",
-                mainPath,
-                "-o",
-                filePath + "/main.exe"
-            ]
+
+        # 编译指令
+        cmd = cmd + [
+            workspacePath + "/00_Basics/01_Common_Func/src/*.c",
+            mainPath,
+            "-g",
+            "-o",
+            filePath + "/main.exe"
+        ]
 
         # 执行编译指令
         try:
