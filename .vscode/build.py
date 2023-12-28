@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-12-28 16:03:53
+LastEditTime : 2023-12-28 16:06:03
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -72,4 +72,4 @@ if __name__ == "__main__":
             print(str(error))
 
     # 运行结束提示信息
-    print("End compiling main.c ...")
+    print("End compiling ...")
