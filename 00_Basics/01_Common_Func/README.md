@@ -1,6 +1,6 @@
 # C 语言常用函数
 
-```plain text
+```txt
 .
 ├── CMakeLists.txt
 ├── cfg
