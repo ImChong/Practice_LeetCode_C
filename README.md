@@ -88,7 +88,7 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 
 ### VSCode Native - Build & Run Current File
 
-> In order to run source code in VSCode, select the main.c file that wish to run. Then click the following tab and options in VSCode:
+> In order to run source code in VSCode, select the `main.c` file that wish to run. Then click the following tab and options in VSCode:
 >
 > ```txt
 > Terminal -> Run Task... -> Build & Run Current File
@@ -104,7 +104,7 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 
 ### VSCode Extension - Code Runner
 
-> The `Code Runner` vscode extension can be used to run the main.c file directly.
+> The `Code Runner` vscode extension can be used to run the `main.c` file directly.
 >
 > Source code: [settings.json](.vscode/settings.json).
 
