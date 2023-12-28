@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-28 11:47:42
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-28 12:26:20
+ * @LastEditTime : 2023-12-28 12:29:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,7 +14,9 @@
 /* 通用头文件 */
 #include "commonTypeDef.h"
 #include "commonArray.h"
-/* 本文件头文件 */
+/* 题解头文件 */
+#include "removeElement.h"
+/* 单元测试头文件 */
 #include "unitTest.h"
 
 /**********************************************************************************/

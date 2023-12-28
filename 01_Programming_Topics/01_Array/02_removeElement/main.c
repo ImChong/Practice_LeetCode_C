@@ -3,13 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-28 12:26:14
+ * @LastEditTime : 2023-12-28 12:29:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 27. 移除元素：https://leetcode.cn/problems/remove-element/
  *      https://programmercarl.com/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.html
  */
+/* 单元测试头文件 */
+#include "unitTest.h"
 
 /**********************************************************************************/
 /*                                                                                */
