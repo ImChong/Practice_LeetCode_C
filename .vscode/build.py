@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-12-28 13:39:58
+LastEditTime : 2023-12-28 13:43:04
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -73,3 +73,5 @@ if __name__ == "__main__":
         except Exception as error:
             print("An error occurred during compilation:")
             print(str(error))
+
+    print("End compiling main.c ...")
