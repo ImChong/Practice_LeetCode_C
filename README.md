@@ -146,4 +146,4 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 > ./00_Basics/02_Clean_Exe/killexe.sh         /* linux system */
 > ```
 >
-> Source code: [killExes.bat](./00_Basics/02_Clean_Exe/killExes.bat) and [killExes.bat](./00_Basics/02_Clean_Exe/killExes.sh).
+> Source code: [killExes.bat](./00_Basics/02_Clean_Exe/killExes.bat) and [killExes.sh](./00_Basics/02_Clean_Exe/killExes.sh).
