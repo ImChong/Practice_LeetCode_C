@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-12-28 13:43:04
+LastEditTime : 2023-12-28 14:46:47
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -29,7 +29,9 @@ if __name__ == "__main__":
         print("compilation failed!")
     else:   # 如果存在 ${fileDirname}/main.c
         print("main.c exists. continue...")
-        cmd = []    # 编译指令
+        # 编译指令
+        cmd = []
+
         # 如果存在 ${fileDirname}/src 文件夹
         if os.path.isdir(filePath + "/src"):
             print("src folder exists. continue...")
@@ -63,8 +65,10 @@ if __name__ == "__main__":
                 "-o",
                 filePath + "/main.exe"
             ]
+
+        # 执行编译指令
         try:
-            result = subprocess.run(cmd, capture_output=True, text=True)    # 执行编译指令
+            result = subprocess.run(cmd, capture_output=True, text=True)
             if result.returncode != 0:
                 print(result.stderr)
                 print("subprocess.run compilation failed!")
