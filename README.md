@@ -86,7 +86,7 @@ To ensure code quality, all shared common code based on different programming to
 
 ### VSCode Native - Build & Run Current File
 
-> In order to run source code in VSCode, select the `main.c` file that wish to run. Then click the following tab and options in VSCode:
+> To execute the source code in VSCode, choose the desired `main.c` file and navigate to the following tab and options in the VSCode interface:
 >
 > ```txt
 > Terminal -> Run Task... -> Build & Run Current File
@@ -102,15 +102,15 @@ To ensure code quality, all shared common code based on different programming to
 
 ### VSCode Extension - Code Runner
 
-> The `Code Runner` vscode extension can be used to run the `main.c` file directly.
+> The `Code Runner` vscode extension provides a convenient way to execute the `main.c` file directly.
 >
 > Source code: [settings.json](.vscode/settings.json).
 
 ## Debug Code
 
-> In order to debug source code in VSCode, select the `main.c` file that wish to run.
-> First Build & Run source code as the above section.
-> Then click the following button in VSCode:
+> To facilitate source code debugging in VSCode, select the `main.c` file that you wish to run.
+> First, build and run the source code as described in the previous section.
+> Then, click the following button in VSCode:
 >
 > ```txt
 > Run and Debug (Ctil+Shift+D) -> (gdb) Debug Main
@@ -126,6 +126,8 @@ To ensure code quality, all shared common code based on different programming to
 
 ## Clean all .exe files
 
+> To ensure a clean development environment, it is important to remove unnecessary executable files.
+> You can use the following steps to clean all .exe files:
 > Open the terminal by pressing
 >
 > ```txt
