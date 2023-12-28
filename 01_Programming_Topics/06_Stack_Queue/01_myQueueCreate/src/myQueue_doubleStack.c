@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\06_Stack_Queue\01_myQueueCreate\myQueue_double_stack.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\06_Stack_Queue\01_myQueueCreate\src\myQueue_doubleStack.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 02:16:48
+ * @LastEditTime : 2023-12-29 00:59:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include "commonStack.h"
-#include "myQueue_double_stack.h"
+#include "myQueue_doubleStack.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
