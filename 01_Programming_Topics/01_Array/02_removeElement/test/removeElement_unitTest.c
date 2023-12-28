@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\02_removeElement\src\unitTest.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\02_removeElement\test\removeElement_unitTest.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-28 11:47:42
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-28 12:29:41
+ * @LastEditTime : 2023-12-28 14:52:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,7 +17,7 @@
 /* 题解头文件 */
 #include "removeElement.h"
 /* 单元测试头文件 */
-#include "removeElement_unitTest.h"
+#include "unitTest.h"
 
 /**********************************************************************************/
 /*                                                                                */
