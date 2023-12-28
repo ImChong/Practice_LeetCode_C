@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-11-05 12:30:02
+LastEditTime : 2023-12-28 13:43:04
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -24,13 +24,14 @@ if __name__ == "__main__":
     filePath = sys.argv[3]              # sys.argv[3] = ${fileDirname}
     mainPath = filePath + "/main.c"     # ${fileDirname}/main.c
 
-    if not os.path.isfile(mainPath):                                # 如果没有 ${fileDirname}/main.c 则报错
+    if not os.path.isfile(mainPath):    # 如果没有 ${fileDirname}/main.c 则报错
         print("[" + mainPath + "] not exists")
         print("compilation failed!")
-    else:                                                           # 如果存在 ${fileDirname}/main.c
+    else:   # 如果存在 ${fileDirname}/main.c
         print("main.c exists. continue...")
-        cmd = []
-        if os.path.isdir(filePath + "/src"):                            # 如果存在 ${fileDirname}/src 文件夹
+        cmd = []    # 编译指令
+        # 如果存在 ${fileDirname}/src 文件夹
+        if os.path.isdir(filePath + "/src"):
             print("src folder exists. continue...")
             cmd = [
                 gccPath,
@@ -42,11 +43,13 @@ if __name__ == "__main__":
                 "-g",
                 workspacePath + "/00_Basics/01_Common_Func/src/*.c",
                 filePath + "/src/*.c",
+                filePath + "/test/*.c",
                 mainPath,
                 "-o",
                 filePath + "/main.exe"
             ]
-        else:                                                           # 如果不存在 ${fileDirname}/src 文件夹
+        # 如果不存在 ${fileDirname}/src 文件夹
+        else:
             print("src folder not exists. continue...")
             cmd = [
                 gccPath,
@@ -60,9 +63,15 @@ if __name__ == "__main__":
                 "-o",
                 filePath + "/main.exe"
             ]
-        result = subprocess.run(cmd, capture_output=True, text=True)    # 执行编译指令
-        if result.returncode != 0:                                      # 如果编译失败
-            print(result.stderr)
-            print("compilation failed!")
-        else:                                                           # 如果编译成功
-            print("compilation finished successfully!")
+        try:
+            result = subprocess.run(cmd, capture_output=True, text=True)    # 执行编译指令
+            if result.returncode != 0:
+                print(result.stderr)
+                print("subprocess.run compilation failed!")
+            else:
+                print("subprocess.run compilation finished successfully!")
+        except Exception as error:
+            print("An error occurred during compilation:")
+            print(str(error))
+
+    print("End compiling main.c ...")
