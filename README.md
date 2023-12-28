@@ -79,7 +79,7 @@ To ensure code quality, all shared common code based on different programming to
 >     └── solutionName_methodNameXX.c           /* solution method XX source file */
 > ```
 >
-> **Example**: `\Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\main.c`
+> **Example**: `\Practice_LeetCode_C\01_Programming_Topics\03_Hash_Table\02_intersection\main.c`
 >
 
 ## Build & Run Code
