@@ -6,12 +6,12 @@
 ├── cfg
 │   └── compileCfg.h
 ├── inc
-│   ├── commonArray.h
-│   ├── commonBinaryTree.h
-│   ├── commonCmd.h
 │   ├── commonDef
 │   │   ├── commonPrintDef.h
 │   │   └── commonTypeDef.h
+│   ├── commonArray.h
+│   ├── commonBinaryTree.h
+│   ├── commonCmd.h
 │   ├── commonHashTable.h
 │   ├── commonLinkedList.h
 │   ├── commonLinkedListDummy.h
