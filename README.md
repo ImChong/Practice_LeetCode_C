@@ -107,7 +107,7 @@ To ensure code quality, all shared common code based on different programming to
 > or simply press
 >
 > ```txt
-> Ctrl+Shift+B
+> Ctrl + Shift + B
 > ```
 >
 > Source code: [tasks.json](.vscode/tasks.json) and [python build.py](.vscode/build.py).
@@ -120,7 +120,7 @@ To ensure code quality, all shared common code based on different programming to
 
 ## Debug Code
 
-> In order to debug source code in VSCode, select the .c file that wish to run.
+> In order to debug source code in VSCode, select the `main.c` file that wish to run.
 > First Build & Run source code as the above section.
 > Then click the following button in VSCode:
 >
@@ -141,7 +141,7 @@ To ensure code quality, all shared common code based on different programming to
 > Open the terminal by pressing
 >
 > ```txt
-> ctrl+~
+> ctrl + ~
 > ```
 >
 > then run
