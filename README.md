@@ -55,6 +55,19 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 
 ## Code Structure
 
+> If the question can be solved by only one method, the problem code structure will be as follows:
+>
+> ```txt
+> .
+> ├── cfg                                   /* configuration folder */
+> │   └── compileCfg.h                          /* common function modules configuration */
+> └── main.c                                /* main.c file */
+> ```
+>
+> > ### Single Method Example
+> >
+> > TODO
+>
 > If the question can be solved by multiple methods, the problem code structure will be as follows:
 >
 > ```txt
@@ -75,22 +88,10 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 >     └── solutionName_methodNameXX.c           /* solution method XX source file */
 > ```
 >
-> > - Example
+> > ### Multiple Methods Example
 > >
 > > TODO
 >
-> If the question can be solved by only one method, the problem code structure will be as follows:
->
-> ```txt
-> .
-> ├── cfg                                   /* configuration folder */
-> │   └── compileCfg.h                          /* common function modules configuration */
-> └── main.c                                /* main.c file */
-> ```
->
-> > - Example
-> >
-> > TODO
 
 ## Build & Run Code
 
