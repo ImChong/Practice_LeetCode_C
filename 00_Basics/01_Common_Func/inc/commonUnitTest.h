@@ -9,12 +9,12 @@
  * =================================================================================
  * @Description  :
  */
-#ifndef __UNIT_TEST_H
-#define __UNIT_TEST_H
+#ifndef __UNIT_TEST_H       /* NOLINT(build/header_guard) */
+#define __UNIT_TEST_H       /* NOLINT(build/header_guard) */
 
 void test_1(void);
 void test_2(void);
 void test_3(void);
 void test_4(void);
 
-#endif  /* __UNIT_TEST_H */
+#endif  /* __UNIT_TEST_H */     /* NOLINT(build/header_guard) */
