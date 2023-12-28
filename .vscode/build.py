@@ -78,4 +78,5 @@ if __name__ == "__main__":
             print("An error occurred during compilation:")
             print(str(error))
 
+    # 运行结束提示信息
     print("End compiling main.c ...")
