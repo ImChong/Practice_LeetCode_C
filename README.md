@@ -82,19 +82,19 @@ To ensure code quality, all shared common code based on different programming to
 > **Example**: `\Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\main.c`
 >
 
-## Operating Systems
-
-- Windows
-- Ubuntu
-
-## Build Tool Versions
-
-- Python 3.12.1
-- gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
-- g++.exe (Rev7, Built by MSYS2 project) 13.1.0
-- GNU gdb (GDB) 13.2
-
 ## Build & Run Code
+
+### Operating Systems
+
+> - Windows
+> - Ubuntu
+
+### Build Tool Versions
+
+> - Python 3.12.1
+> - gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
+> - g++.exe (Rev7, Built by MSYS2 project) 13.1.0
+> - GNU gdb (GDB) 13.2
 
 ### VSCode Native - Build & Run Current File
 
