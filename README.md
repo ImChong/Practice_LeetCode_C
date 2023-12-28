@@ -69,7 +69,6 @@ To ensure code quality, all shared common code based on different programming to
 > ```
 >
 > **Example**: `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
->
 
 ## Build & Run Code
 
