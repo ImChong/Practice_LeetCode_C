@@ -64,9 +64,7 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 > └── main.c                                /* main.c file */
 > ```
 >
-> **Example**
->
-> `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
+> **Example**: `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
 >
 > If the question can be solved by multiple methods, the problem code structure will be as follows:
 >
@@ -88,9 +86,7 @@ All the shared common code will be placed in [Common_Func](00_Basics/01_Common_F
 >     └── solutionName_methodNameXX.c           /* solution method XX source file */
 > ```
 >
-> **Example**
->
-> `\Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\main.c`
+> **Example**: `\Practice_LeetCode_C\01_Programmercarl_Series\03_Hash_Table\02_intersection\main.c`
 >
 
 ## Build & Run Code
