@@ -28,4 +28,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # 添加子目录
-add_subdirectory(00_Basics/01_Common_Func)
+add_subdirectory(01_Common_Func)
