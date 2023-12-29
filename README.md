@@ -70,11 +70,9 @@ To ensure code quality, all shared common code based on different programming to
 >
 > **Example**: `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
 >
-> The call hierarchy of the code struture is as follow:
+> The call hierarchy between files is as follow:
 >
 > ![Call Hierarchy](./00_Basics/01_Common_Func/callHierarchy.png)
->
->
 
 ## Build & Run Code
 
