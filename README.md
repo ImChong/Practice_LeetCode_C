@@ -73,7 +73,7 @@ To ensure code quality, all shared common code based on different programming to
 >
 > The call hierarchy between files is as follow:
 >
-> ![Call Hierarchy](./00_Basics/01_Common_Func/callHierarchy.png)
+> ![Call Hierarchy](./02_Misc/02_Supplementary_Materials/callHierarchy.png)
 
 ## Build & Run Code
 
