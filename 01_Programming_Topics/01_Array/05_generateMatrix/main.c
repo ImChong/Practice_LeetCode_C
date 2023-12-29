@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 15:01:34
+ * @LastEditTime : 2023-12-29 15:02:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,7 +21,7 @@
 #include "commonArray.h"
 /* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
-/* 题解头文件 */
+/* solution header file (题解头文件) */
 #include "generateMatrix.h"
 
 /**********************************************************************************/
