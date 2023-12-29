@@ -111,7 +111,7 @@ To ensure code quality, all shared common code based on different programming to
 
 ### VSCode Extension - Code Runner
 
-> The `**Code Runner**` vscode extension provides a convenient way to execute the `main.c` file directly.
+> The **`Code Runner`** vscode extension provides a convenient way to execute the `main.c` file directly.
 >
 > Source code: [settings.json](.vscode/settings.json).
 
