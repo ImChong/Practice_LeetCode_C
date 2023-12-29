@@ -127,7 +127,7 @@ To ensure code quality, all shared common code based on different programming to
 >
 > 4. Generate the executable file in `${fileDirname}/` folder with name `main.exe`.
 >
-> Source code: [python build.py](.vscode/build.py).
+> Source code: [python build.py](.vscode/build.py) and [settings.json](.vscode/settings.json).
 
 ## Debug Code
 
