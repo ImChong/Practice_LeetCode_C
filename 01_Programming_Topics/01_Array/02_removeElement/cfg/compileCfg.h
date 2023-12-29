@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 10:11:23
+ * @LastEditTime : 2023-12-29 10:53:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : common function compilation selection configuration file 编译配置文件
+ * @Description  : common function compilation configuration file 编译配置文件
  *      本文件无需 #include 至题解的.c源文件内，本文件用于 commonXXX.c 等通用文件编译时的剪裁
  */
 #ifndef __COMPILE_CFG_H
