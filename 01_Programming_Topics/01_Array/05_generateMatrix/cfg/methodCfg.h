@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:03:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 14:58:00
+ * @LastEditTime : 2023-12-29 15:04:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : method configuration file 解题方法配置文件
+ * @Description  : solution method configuration file 解题方法配置文件
  */
 #ifndef __METHOD_CFG_H
 #define __METHOD_CFG_H
