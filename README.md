@@ -54,7 +54,7 @@ To ensure code quality, all shared common code based on different programming to
 
 ## Code Structure
 
-> The code structure of each question is as follows:
+> To start getting hands on the project, the code structure of each question is as follows:
 >
 > ```txt
 > .
