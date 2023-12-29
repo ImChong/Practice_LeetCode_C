@@ -80,12 +80,13 @@ To ensure code quality, all shared common code based on different programming to
 >
 > The `main.c` file is the entry point of the program, which calls the solution method in the `solutionName_methodNameXX.c` file. Meanwhile, this file also contains the test cases for the selected solution method.
 >
-> The `cfg` folder contains the configuration files for the common functions and solution methods.
+> <details>
+> <summary>The `cfg` folder contains the configuration files for the common functions and solution methods.</summary>
 >
 > - The `compileCfg.h` file is the configuration file for common functions. By toggling the `#define` macro, the corresponding common function can be enabled or disabled during compilation.
 >
 > - The `methodCfg.h` file is the configuration file for solution methods. By toggling the `#define` macro, the corresponding solution method can be enabled or disabled during compilation.
->
+> </details>
 > The `doc` folder contains the documentation files and drawing sketches for the question.
 >
 > The `inc` folder contains the header files for the solution methods.
