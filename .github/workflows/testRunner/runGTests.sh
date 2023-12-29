@@ -19,12 +19,14 @@ tests=("commonArrayTest" \
 
 # run gtest executables in the build/bin directory
 for test in "${tests[@]}"; do
-    executable=$(find ./build/bin/ -type f -executable -name "$test*")
+    # find all the files that has the same name as test in the ./build/bin/ folder
+    file=$(find ./build/bin/ -type f -executable -name "$test*")
     echo "=========================================================================================="
-    if [[ -f $executable && -x $executable ]]; then
-        echo "Executable $executable found. Starting test..."
+    # if the result file is an executable file
+    if [[ -f $file && -x $file ]]; then
+        echo "Executable $file found. Starting test..."
         echo "=========================================================================================="
-        $executable   # run GTest executables
+        $file   # run GTest executables
     else
         echo "Executable $test not found."
         echo "=========================================================================================="
