@@ -1,13 +1,13 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\01_Array\01_binarySearch\cfg\compileCfg.h
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\03_sortedSquares\cfg\compileCfg.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 01:59:25
+ * @LastEditTime : 2023-12-29 10:46:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 编译配置文件
+ * @Description  : common function compilation selection configuration file 编译配置文件
  */
 #ifndef __COMPILE_CFG_H
 #define __COMPILE_CFG_H
