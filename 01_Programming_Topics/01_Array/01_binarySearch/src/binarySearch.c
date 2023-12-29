@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-28 17:24:05
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 10:04:15
+ * @LastEditTime : 2023-12-29 10:07:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : solution source file - binarySearch
  */
 /* 题解头文件 */
 #include "binarySearch.h"

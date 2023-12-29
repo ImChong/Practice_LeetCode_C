@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-28 17:24:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 09:55:05
+ * @LastEditTime : 2023-12-29 10:08:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : solution header file - binarySearch
  */
 #ifndef __BINARY_SEARCH_H
 #define __BINARY_SEARCH_H
