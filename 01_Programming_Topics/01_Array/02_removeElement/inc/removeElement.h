@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : solution header file - removeElement
  */
 #ifndef __REMOVE_ELEMENT_H
 #define __REMOVE_ELEMENT_H

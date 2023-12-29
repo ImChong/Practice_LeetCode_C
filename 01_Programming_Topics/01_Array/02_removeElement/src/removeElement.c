@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-28 11:28:50
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-28 12:24:35
+ * @LastEditTime : 2023-12-29 10:17:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : solution source file - removeElement
  */
 /* 本文件头文件 */
 #include "removeElement.h"
