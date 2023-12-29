@@ -58,20 +58,20 @@ To ensure code quality, all shared common code based on different programming to
 >
 > ```txt
 > .
-> ├── cfg                               /* configuration folder */
+> ├── cfg
 > │   ├── compileCfg.h                      /* common function configuration file */
 > │   └── methodCfg.h                       /* solution method configuration file */
-> ├── doc                               /* documentation folder */
+> ├── doc
 > │   ├── sketch.drawio                     /* drawing sketch file */
 > │   └── sketch.excalidraw                 /* drawing sketch file */
-> ├── inc                               /* header folder */
+> ├── inc
 > │   └── solutionName.h                    /* solution header file */
-> ├── src                               /* source folder */
+> ├── src
 > │   ├── solutionName_methodName01.c       /* solution method 01 source file */
 > │   ├── solutionName_methodName02.c       /* solution method 02 source file */
 > │   ├── ...
 > │   └── solutionName_methodNameXX.c       /* solution method XX source file */
-> └── main.c                            /* main.c file */
+> └── main.c                                /* entry point */
 > ```
 >
 > The call hierarchy between files is as follow:
