@@ -9,7 +9,7 @@
 
 C language leetcode practice overall folder structure:
 
-- [Basics](./00_Basics/) - This folder contains the basic configuration files and common function modules before getting started with the local leetcode practice.
+- [Prerequisite](./00_Basics/) - This folder contains the basic configuration files and common function modules before getting started with the local leetcode practice.
   - [VSCode_Settings](./00_Basics/00_VSCode_Settings) - VSCode settings
   - [Clean_Exe](./00_Basics/02_Clean_Exe/) - Executables to clean all .exe files
 - [Common_Func](./00_Basics/01_Common_Func/) - This folder contains the common c function modules based on different programming topics.
