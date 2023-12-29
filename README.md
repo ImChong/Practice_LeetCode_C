@@ -10,33 +10,33 @@
 C language leetcode practice overall folder structure:
 
 - [Basics](./00_Basics/) - This folder contains the basic configuration files and common function modules before getting started with the local leetcode practice.
-  - [VSCode_Settings_Backup](./00_Basics/00_VScode_Settings_Backup) - VSCode settings backup
+  - [VSCode_Settings](./00_Basics/00_VSCode_Settings) - VSCode settings
   - [Clean_Exe](./00_Basics/02_Clean_Exe/) - Executables to clean all .exe files
-- [Common_Func](./00_Basics/01_Common_Func/) - This folder contains the common c function modules based on different programming topics
+- [Common_Func](./00_Basics/01_Common_Func/) - This folder contains the common c function modules based on different programming topics.
 - [Programming_Topics](./01_Programming_Topics/) - ([Programming Carl Series](https://programmercarl.com/) / [Labuladong's Algorithm Cheat Sheet](https://labuladong.github.io/algo/home/)) - This folder contains the leetcode practice questions by programming topics.
-  - [Array](./01_Programming_Topics/01_Array/) - Array
-  - [Linked_List](./01_Programming_Topics/02_Linked_List/) - Linked list
-  - [Hash_Table](./01_Programming_Topics/03_Hash_Table/) - Hash table
-  - [String](./01_Programming_Topics/04_String/) - String
-  - [Double_Pointer](./01_Programming_Topics/05_Double_Pointer/) - Double pointer
-  - [Stack_Queue](./01_Programming_Topics/06_Stack_Queue/) - Stack & Queue
-  - [Binary_Tree](./01_Programming_Topics/07_Binary_Tree/) - Binary tree
-  - [Backtracking](./01_Programming_Topics/08_Backtracking/) - Backtracking
-  - [Greedy](./01_Programming_Topics/09_Greedy/) - Greedy
-  - [Dynamic_Programming](./01_Programming_Topics/10_Dynamic_Programming/) - Dynamic programming
-  - [Monotone_Stack](./01_Programming_Topics/11_Monotone_Stack/) - Monotone stack
-  - [Graph_Theory](./01_Programming_Topics/12_Graph_Theory/) - Graph theory
-  - [Binary_Search](./01_Programming_Topics/13_Binary_Search/) - Binary search
-  - [Breath_First_Search](./01_Programming_Topics/14_Breath_First_Search/) - Breath first search
-  - [Depth_First_Search](./01_Programming_Topics/15_Depth_First_Search/) - Depth first search
-  - [Sliding_Window](./01_Programming_Topics/16_Sliding_Window/) - Sliding window
-  - [Buy_And_Sell](./01_Programming_Topics/17_Buy_And_Sell/) - Buy and sell
-  - [House_Robber](./01_Programming_Topics/18_House_Robber/) - House robber
-  - [N_Sum](./01_Programming_Topics/19_N_Sum/) - N sum
+  - [Array](./01_Programming_Topics/01_Array/)
+  - [Linked_List](./01_Programming_Topics/02_Linked_List/)
+  - [Hash_Table](./01_Programming_Topics/03_Hash_Table/)
+  - [String](./01_Programming_Topics/04_String/)
+  - [Double_Pointer](./01_Programming_Topics/05_Double_Pointer/)
+  - [Stack_Queue](./01_Programming_Topics/06_Stack_Queue/)
+  - [Binary_Tree](./01_Programming_Topics/07_Binary_Tree/)
+  - [Backtracking](./01_Programming_Topics/08_Backtracking/)
+  - [Greedy](./01_Programming_Topics/09_Greedy/)
+  - [Dynamic_Programming](./01_Programming_Topics/10_Dynamic_Programming/)
+  - [Monotone_Stack](./01_Programming_Topics/11_Monotone_Stack/)
+  - [Graph_Theory](./01_Programming_Topics/12_Graph_Theory/)
+  - [Binary_Search](./01_Programming_Topics/13_Binary_Search/)
+  - [Breath_First_Search](./01_Programming_Topics/14_Breath_First_Search/)
+  - [Depth_First_Search](./01_Programming_Topics/15_Depth_First_Search/)
+  - [Sliding_Window](./01_Programming_Topics/16_Sliding_Window/)
+  - [Buy_And_Sell](./01_Programming_Topics/17_Buy_And_Sell/)
+  - [House_Robber](./01_Programming_Topics/18_House_Robber/)
+  - [N_Sum](./01_Programming_Topics/19_N_Sum/)
 - [Misc](./02_Misc/) - This folder contains miscellaneous topics.
-  - [Programming_Notes](./02_Misc/00_Programming_Notes/) - Programming notes
-  - [Real_World_Problem](./02_Misc/01_Real_World_Problems/) - Real world problems
-  - [Supplementary_Materials](./02_Misc/02_Supplementary_Materials/) - Supplementary materials
+  - [Programming_Notes](./02_Misc/00_Programming_Notes/)
+  - [Real_World_Problem](./02_Misc/01_Real_World_Problems/)
+  - [Supplementary_Materials](./02_Misc/02_Supplementary_Materials/)
 
 ## Common Function Modules
 
