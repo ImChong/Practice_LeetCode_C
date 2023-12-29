@@ -12,11 +12,11 @@ C language leetcode practice overall folder structure:
 - [Prerequisite](./00_Basics/) - This folder contains the basic configuration files and common function modules before getting started with the local leetcode practice.
   - [VSCode_Settings](./00_Basics/00_VSCode_Settings) - VSCode settings
   - [Clean_Exe](./00_Basics/02_Clean_Exe/) - Executables to clean all .exe files
-- [Common_Functions](./00_Basics/01_Common_Func/) - This folder contains the common C functions used by different programming topics.
-  - [cfg](./00_Basics/01_Common_Func/cfg/) - This folder contains the common function configuration files.
-  - [inc](./00_Basics/01_Common_Func/inc/) - This folder contains the common function header files.
-  - [src](./00_Basics/01_Common_Func/src/) - This folder contains the common function source files.
-  - [test](./00_Basics/01_Common_Func/test/) - This folder contains the common function test files.
+- [Common_Functions](./00_Basics/01_Common_Func/) - Common C functions used by different programming topics.
+  - [cfg](./00_Basics/01_Common_Func/cfg/) - Common function configuration files.
+  - [inc](./00_Basics/01_Common_Func/inc/) - Common function header files.
+  - [src](./00_Basics/01_Common_Func/src/) - Common function source files.
+  - [test](./00_Basics/01_Common_Func/test/) - Common function test files.
 - [Programming_Topics](./01_Programming_Topics/) - ([Programming Carl Series](https://programmercarl.com/) / [Labuladong's Algorithm Cheat Sheet](https://labuladong.github.io/algo/home/)) - This folder contains the leetcode practice questions organized by programming topics.
   - [Array](./01_Programming_Topics/01_Array/)
   - [Linked_List](./01_Programming_Topics/02_Linked_List/)
