@@ -3,22 +3,22 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-03 11:02:17
+ * @LastEditTime : 2023-12-29 10:05:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 704. 二分查找：https://leetcode.cn/problems/binary-search/
- * https://programmercarl.com/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE
+ *      https://programmercarl.com/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE
  */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
-/* 通用头文件 */
+/* common function header file (通用头文件) */
 #include "commonSingleValue.h"
 #include "commonArray.h"
-/* 解题方法配置文件 */
+/* solution method configuration header file (解题方法配置文件) */
 
-/* 题解头文件 */
-
+/* solution header file (题解头文件) */
+#include "binarySearch.h"
 
 /**********************************************************************************/
 /*                                                                                */
