@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\01_Array\05_generateMatrix\main.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\05_generateMatrix\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-24 19:26:53
+ * @LastEditTime : 2023-12-29 15:01:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,13 +13,13 @@
  * 给一个正整数 n ，生成一个包含 1 到 n^2 所有元素，且元素按顺时针顺序螺旋排列的 n x n 正方形矩阵 matrix 。
  *
  */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* 通用头文件 */
+/* common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
-/* 解题方法配置文件 */
+/* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
 /* 题解头文件 */
 #include "generateMatrix.h"

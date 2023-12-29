@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c
+ * @FilePath     : \01_binarySearch\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 10:05:35
+ * @LastEditTime : 2023-12-29 15:01:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -15,7 +15,7 @@
 /* common function header file (通用头文件) */
 #include "commonSingleValue.h"
 #include "commonArray.h"
-/* solution method configuration header file (解题方法配置文件) */
+/* solution method configuration file (解题方法配置文件) */
 
 /* solution header file (题解头文件) */
 #include "binarySearch.h"
