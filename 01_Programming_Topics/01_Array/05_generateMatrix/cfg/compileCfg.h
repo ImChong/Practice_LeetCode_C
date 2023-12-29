@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 14:57:30
+ * @LastEditTime : 2023-12-29 15:03:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : common function compilation configuration file 编译配置文件
+ * @Description  : common function configuration file 编译配置文件
  */
 #ifndef __COMPILE_CFG_H
 #define __COMPILE_CFG_H

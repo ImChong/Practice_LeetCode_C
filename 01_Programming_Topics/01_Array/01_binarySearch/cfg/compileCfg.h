@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : common function compilation configuration file 编译配置文件
+ * @Description  : common function configuration file 编译配置文件
  *      本文件无需 #include 至题解的.c源文件内，本文件用于 commonXXX.c 等通用文件编译时的剪裁
  */
 #ifndef __COMPILE_CFG_H
