@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2023-12-28 16:57:07
+LastEditTime : 2023-12-29 18:32:58
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -11,9 +11,9 @@ Description  : python 编译指令，用于编译 ${fileDirname}/main.c
     如果存在 ${fileDirname}/src 文件夹，则编译 ${fileDirname}/src/*.c 和 ${fileDirname}/main.c
     如果不存在 ${fileDirname}/src 文件夹，则编译 ${fileDirname}/main.c
 '''
-import sys              # sys模块提供了一些函数和变量，可以通过它来访问与python解释器紧密相关的变量和函数
-import os               # os模块提供了不少与操作系统相关联的函数
-import subprocess       # subprocess模块允许你生成新的进程，连接它们的输入、输出、错误管道，并且获取它们的返回码
+import sys              # sys provides information about constants, functions and methods of the Python interpreter
+import os               # os provides functions for interacting with the operating system
+import subprocess       # subprocess allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes
 
 if __name__ == "__main__":
     print("Start compiling ...")
@@ -24,25 +24,25 @@ if __name__ == "__main__":
     filePath = sys.argv[3]              # sys.argv[3] = ${fileDirname}
     mainPath = filePath + "/main.c"     # ${fileDirname}/main.c
 
-    if not os.path.isfile(mainPath):
-        print("[" + mainPath + "] not exists, compilation failed!")     # 如果没有 ${fileDirname}/main.c 则报错
-    elif not os.path.isdir(filePath + "/cfg"):
+    if not os.path.isfile(mainPath):                # check if main.c exists
+        print("[" + mainPath + "] not exists, compilation failed!")
+    elif not os.path.isdir(filePath + "/cfg"):      # check if cfg folder exists
         print("cfg folder not exists, compilation failed!")
-    elif not os.path.isdir(filePath + "/inc"):
+    elif not os.path.isdir(filePath + "/inc"):      # check if inc folder exists
         print("inc folder not exists, compilation failed!")
-    elif not os.path.isdir(filePath + "/src"):
+    elif not os.path.isdir(filePath + "/src"):      # check if src folder exists
         print("src folder not exists, compilation failed!")
-    else:   # 如果所需文件都存在
+    else:   # if all checks passed, then compile
         print("file checks finished successfully! continue...")
-        # 编译指令
+        # compile command
         cmd = [
             gccPath,
             "-fdiagnostics-color=always",
-            "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/",
-            "-I" + workspacePath + "/00_Basics/01_Common_Func/inc/commonDef/",
+            "-I" + workspacePath + "/01_Common_Functions/inc/",
+            "-I" + workspacePath + "/01_Common_Functions/inc/commonDef/",
             "-I" + filePath + "/cfg/",
             "-I" + filePath + "/inc/",
-            workspacePath + "/00_Basics/01_Common_Func/src/*.c",
+            workspacePath + "/01_Common_Functions/src/*.c",
             filePath + "/src/*.c",
             mainPath,
             "-g",
@@ -50,23 +50,26 @@ if __name__ == "__main__":
             filePath + "/main.exe"
         ]
 
-        # 执行编译指令
+        # execute compile command
         try:
             print("gcc compilation subprocess.runnning ...")
             result = subprocess.run(cmd, capture_output=True, text=True)
 
+            # compiled successfully
             if result.returncode == 0:
                 print("subprocess.run compilation finished successfully!")
 
+            # compiled failed
             else:
                 print("An error occurred during compilation:")
                 print(result.stderr)
                 print("subprocess.run compilation failed!")
 
+        # compiled failed
         except Exception as error:
             print("An error occurred during compilation:")
             print(str(error))
             print("subprocess.run compilation failed!")
 
-    # 运行结束提示信息
+    # compile finished
     print("End compiling ...\n")
