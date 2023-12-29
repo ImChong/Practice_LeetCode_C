@@ -4,9 +4,10 @@
             "name": "Windows",
             "includePath": [
                 "${workspaceFolder}/**",
-                "01_Common_Functions/cfg/",
+                "01_Common_Functions/cfg",
                 "01_Common_Functions/inc",
-                "01_Common_Functions/inc/commonDef"
+                "01_Common_Functions/inc/commonDef",
+                "${fileDirname}/inc"
             ],
             "defines": [
                 "_DEBUG",
@@ -22,7 +23,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "01_Common_Functions/cfg/",
+                "01_Common_Functions/cfg",
                 "01_Common_Functions/inc",
                 "01_Common_Functions/inc/commonDef"
             ],
