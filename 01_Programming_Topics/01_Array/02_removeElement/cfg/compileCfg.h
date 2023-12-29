@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\01_Array\01_binarySearch\cfg\compileCfg.h
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\02_removeElement\cfg\compileCfg.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 01:59:25
+ * @LastEditTime : 2023-12-29 10:11:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
