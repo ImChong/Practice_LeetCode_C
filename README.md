@@ -117,7 +117,15 @@ To ensure code quality, all shared common code based on different programming to
 
 ### Build Process
 
-> TODO
+> 1. The gcc command will first search for the header in `/01_Common_Functions/inc/commonDef/` and `/01_Common_Functions/inc/` folders.
+>
+> 2. Then, it will search for the header in `${fileDirname}/cfg/` and `${fileDirname}/inc/` folder.
+>
+> 3. After found the header, it will search and compile all the `*.c` source file in `$/01_Common_Functions/src/` and `${fileDirname}/src/` folder with `${fileDirname}/main.c` as the entry point.
+>
+> 4. Finally, it will generate the executable file in `${fileDirname}/` folder with name `main.exe`.
+>
+> Source code: [python build.py](.vscode/build.py).
 
 ## Debug Code
 

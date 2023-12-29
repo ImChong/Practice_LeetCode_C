@@ -38,8 +38,8 @@ if __name__ == "__main__":
         cmd = [
             gccPath,
             "-fdiagnostics-color=always",
-            "-I" + workspacePath + "/01_Common_Functions/inc/",
             "-I" + workspacePath + "/01_Common_Functions/inc/commonDef/",
+            "-I" + workspacePath + "/01_Common_Functions/inc/",
             "-I" + filePath + "/cfg/",
             "-I" + filePath + "/inc/",
             workspacePath + "/01_Common_Functions/src/*.c",
