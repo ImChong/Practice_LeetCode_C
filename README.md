@@ -123,7 +123,7 @@ To ensure code quality, all shared common code based on different programming to
 >
 > 2. Search for the header in `${fileDirname}/cfg/` and `${fileDirname}/inc/` folder.
 >
-> 3. Search and compile all the `*.c` source file in `$/01_Common_Functions/src/` and `${fileDirname}/src/` folder with `${fileDirname}/main.c` as the entry point.
+> 3. Search and compile all the `/01_Common_Functions/src/*.c` and `${fileDirname}/src/*.c` with `${fileDirname}/main.c` as the entry point.
 >
 > 4. Generate the executable file in `${fileDirname}/` folder with name `main.exe`.
 >
