@@ -183,3 +183,9 @@ To ensure code quality, all shared common code based on different programming to
 > ```
 >
 > Source code: [killExes.bat](./00_Prerequisite/01_Clean_Exe/killExes.bat) and [killExes.sh](./00_Prerequisite/01_Clean_Exe/killExes.sh).
+
+## Questions
+
+> Now, you can start to practice the leetcode questions by following the [Programming Topics](./02_Programming_Topics/) folder.
+>
+> If you have any questions, please feel free to create an issue in the [Issues](https://github.com/ImChong/Practice_LeetCode_C/issues).
