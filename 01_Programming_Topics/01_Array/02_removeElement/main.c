@@ -3,19 +3,21 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-28 14:52:56
+ * @LastEditTime : 2023-12-29 10:16:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 27. 移除元素：https://leetcode.cn/problems/remove-element/
  *      https://programmercarl.com/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.html
  */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
-/* 通用头文件 */
+/* common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
-/* 题解头文件 */
+/* solution method configuration header file (解题方法配置文件) */
+
+/* solution header file (题解头文件) */
 #include "removeElement.h"
 
 /**********************************************************************************/
