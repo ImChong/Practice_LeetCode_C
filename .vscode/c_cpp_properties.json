@@ -4,9 +4,9 @@
             "name": "Windows",
             "includePath": [
                 "${workspaceFolder}/**",
-                "01_Common_Functions/cfg",
-                "01_Common_Functions/inc",
                 "01_Common_Functions/inc/commonDef",
+                "01_Common_Functions/inc",
+                "${fileDirname}/cfg",
                 "${fileDirname}/inc"
             ],
             "defines": [
@@ -23,9 +23,10 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "01_Common_Functions/cfg",
+                "01_Common_Functions/inc/commonDef",
                 "01_Common_Functions/inc",
-                "01_Common_Functions/inc/commonDef"
+                "${fileDirname}/cfg",
+                "${fileDirname}/inc"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
