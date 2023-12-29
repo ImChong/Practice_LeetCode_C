@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 00:24:47
+ * @LastEditTime : 2023-12-29 10:14:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -247,6 +247,7 @@ int validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, i
     printf("=========================\n");
     printf("- Expect: "); printArray(expectArr, expectLen);
     printf("- Actual: "); printArray(actualArr, actualLen);
+    printf("\n");
     if (isSuccess) {
         return COMMON_OK;
     } else {
@@ -304,6 +305,7 @@ int validate2DArray(char testNum,
     printf("=========================\n");
     printf("- Expect: "); print2DArray(expect2DArr, expectRtnRowSize, expectRtnColSize);
     printf("- Actual: "); print2DArray(actual2DArr, actualRtnRowSize, actualRtnColSize);
+    printf("\n");
     if (isSuccess) {
         return COMMON_OK;
     } else {
