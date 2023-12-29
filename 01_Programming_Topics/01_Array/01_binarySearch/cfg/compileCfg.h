@@ -3,12 +3,12 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 10:06:57
+ * @LastEditTime : 2023-12-29 10:10:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 编译配置文件
- *      本文件无需 #include 至题解的.c源文件内，本文件用于 commonXXX.c 等通用文件的编译剪裁
+ *      本文件无需 #include 至题解的.c源文件内，本文件用于 commonXXX.c 等通用文件编译时的剪裁
  */
 #ifndef __COMPILE_CFG_H
 #define __COMPILE_CFG_H
