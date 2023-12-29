@@ -74,11 +74,27 @@ To ensure code quality, all shared common code based on different programming to
 > └── main.c                            /* main.c file */
 > ```
 >
-> **Example**: `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
->
 > The call hierarchy between files is as follow:
 >
 > ![Call Hierarchy](./03_Misc/02_Supplementary_Materials/callHierarchy.png)
+>
+> The `main.c` file is the entry point of the program, which calls the solution method in the `solutionName_methodNameXX.c` file. Meanwhile, this file also contains the test cases for the selected solution method.
+>
+> The `cfg` folder contains the configuration files for the common functions and solution methods.
+>
+> - The `compileCfg.h` file is the configuration file for common functions. By toggling the `#define` macro, the corresponding common function can be enabled or disabled during compilation.
+>
+> - The `methodCfg.h` file is the configuration file for solution methods. By toggling the `#define` macro, the corresponding solution method can be enabled or disabled during compilation.
+>
+> The `doc` folder contains the documentation files and drawing sketches for the question.
+>
+> The `inc` folder contains the header files for the solution methods.
+>
+> The `src` folder contains the source files for the solution methods.
+>
+> - The `solutionName_methodNameXX.c` file is the source file for a specific solution method. The file name is composed of the solution name and the method name. The corresponding method switch can be toggled in the `methodCfg.h` file.
+>
+> **Example**: `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
 
 ## Build & Run Code
 
