@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 15:02:10
+ * @LastEditTime : 2023-12-29 15:11:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -56,10 +56,10 @@ void test_1(void) {
     validate2DArray('1',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
-                    COMMON_FALSE);
+                    SORT_FALSE);
 
     /* 释放内存 */
-    free2DArray(actual2DArr, actualRtnRowSize);
+    free2DArray(&actual2DArr, actualRtnRowSize);
     free(actualRtnColSize);
 }
 
@@ -88,10 +88,10 @@ void test_2(void) {
     validate2DArray('2',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
-                    COMMON_FALSE);
+                    SORT_FALSE);
 
     /* 释放内存 */
-    free2DArray(actual2DArr, actualRtnRowSize);
+    free2DArray(&actual2DArr, actualRtnRowSize);
     free(actualRtnColSize);
 }
 
@@ -123,10 +123,10 @@ void test_3(void) {
     validate2DArray('3',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
-                    COMMON_FALSE);
+                    SORT_FALSE);
 
     /* 释放内存 */
-    free2DArray(actual2DArr, actualRtnRowSize);
+    free2DArray(&actual2DArr, actualRtnRowSize);
     free(actualRtnColSize);
 }
 
