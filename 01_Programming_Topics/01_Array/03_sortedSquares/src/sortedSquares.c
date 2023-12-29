@@ -3,12 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-28 17:25:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 10:20:57
+ * @LastEditTime : 2023-12-29 10:22:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : solution source file
  */
+/* standard header file (标准头文件) */
+#include <stdlib.h>
 /* solution header file (题解头文件) */
 #include "sortedSquares.h"
 
