@@ -52,20 +52,20 @@ To ensure code quality, all shared common code based on different programming to
 >
 > ```txt
 > .
-> ├── cfg                                   /* configuration folder */
-> │   ├── compileCfg.h                          /* common function compilation configuration file */
-> │   └── methodCfg.h                           /* method configuration file */
-> ├── docs                                  /* documentation folder */
-> │   ├── sketch.drawio                         /* drawing sketch file */
-> │   └── sketch.excalidraw                     /* drawing sketch file */
-> ├── inc                                   /* header folder */
-> │   └── solutionName.h                        /* solution header file */
-> ├── src                                   /* source folder */
-> │   ├── solutionName_methodName01.c           /* solution method 01 source file */
-> │   ├── solutionName_methodName02.c           /* solution method 02 source file */
+> ├── cfg                               /* configuration folder */
+> │   ├── compileCfg.h                      /* common function compilation configuration file */
+> │   └── methodCfg.h                       /* method configuration file */
+> ├── docs                              /* documentation folder */
+> │   ├── sketch.drawio                     /* drawing sketch file */
+> │   └── sketch.excalidraw                 /* drawing sketch file */
+> ├── inc                               /* header folder */
+> │   └── solutionName.h                    /* solution header file */
+> ├── src                               /* source folder */
+> │   ├── solutionName_methodName01.c       /* solution method 01 source file */
+> │   ├── solutionName_methodName02.c       /* solution method 02 source file */
 > │   ├── ...
-> │   └── solutionName_methodNameXX.c           /* solution method XX source file */
-> └── main.c                                /* main.c file */
+> │   └── solutionName_methodNameXX.c       /* solution method XX source file */
+> └── main.c                            /* main.c file */
 > ```
 >
 > **Example**: `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
