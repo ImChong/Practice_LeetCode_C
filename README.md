@@ -94,7 +94,7 @@ To ensure code quality, all shared common code based on different programming to
 >
 > - The `solutionName_methodNameXX.c` file is the source file for a specific solution method. The file name is composed of the solution name and the method name. The corresponding method switch can be toggled in the `methodCfg.h` file.
 >
-> **Example**: `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
+> For a complete example, please refer to the following file: `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
 
 ## Build & Run Code
 
