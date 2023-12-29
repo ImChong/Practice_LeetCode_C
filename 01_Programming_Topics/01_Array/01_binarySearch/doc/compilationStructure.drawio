@@ -6,11 +6,13 @@
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="&lt;div style=&quot;background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;font color=&quot;#dadada&quot;&gt;\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch&lt;/font&gt;&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="-820" y="30" width="750" height="400" as="geometry">
-                        <mxRectangle x="35" y="40" width="560" height="30" as="alternateBounds"/>
+                        <mxRectangle x="-820" y="30" width="560" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="3" value="\cfg" style="swimlane;whiteSpace=wrap;html=1;fontColor=#DADADA;" vertex="1" parent="2">
-                    <mxGeometry x="40" y="50" width="200" height="200" as="geometry"/>
+                    <mxGeometry x="40" y="50" width="200" height="200" as="geometry">
+                        <mxRectangle x="40" y="50" width="60" height="30" as="alternateBounds"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="7" value="compileCfg.h" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontColor=#DADADA;" vertex="1" parent="3">
                     <mxGeometry x="20" y="40" width="90" height="90" as="geometry"/>
