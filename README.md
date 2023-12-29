@@ -55,7 +55,7 @@ To ensure code quality, all shared common code based on different programming to
 > ├── cfg                               /* configuration folder */
 > │   ├── compileCfg.h                      /* common function configuration file */
 > │   └── methodCfg.h                       /* solution method configuration file */
-> ├── docs                              /* documentation folder */
+> ├── doc                               /* documentation folder */
 > │   ├── sketch.drawio                     /* drawing sketch file */
 > │   └── sketch.excalidraw                 /* drawing sketch file */
 > ├── inc                               /* header folder */
