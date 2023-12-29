@@ -53,8 +53,8 @@ To ensure code quality, all shared common code based on different programming to
 > ```txt
 > .
 > ├── cfg                                   /* configuration folder */
-> │   ├── compileCfg.h                          /* common function modules configuration */
-> │   └── methodCfg.h                           /* method configuration */
+> │   ├── compileCfg.h                          /* common function compilation configuration file */
+> │   └── methodCfg.h                           /* method configuration file */
 > ├── docs                                  /* documentation folder */
 > │   ├── sketch.drawio                         /* drawing sketch file */
 > │   └── sketch.excalidraw                     /* drawing sketch file */
