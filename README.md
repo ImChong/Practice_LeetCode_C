@@ -186,6 +186,6 @@ To ensure code quality, all shared common code based on different programming to
 
 ## Questions
 
-> Now, you can start to practice the leetcode questions by following the [Programming Topics](./02_Programming_Topics/) folder.
+> Now, please feel free to start the leetcode practice journey by selecting the desired programming topic in the [Programming_Topics](./02_Programming_Topics/) folder.
 >
-> If you have any questions, please feel free to create an issue in the [Issues](https://github.com/ImChong/Practice_LeetCode_C/issues).
+> If there are any questions, please feel free to create an issue in the [Issues](https://github.com/ImChong/Practice_LeetCode_C/issues) or start a discussion in the [Discussions](https://github.com/ImChong/Practice_LeetCode_C/discussions).
