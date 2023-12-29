@@ -1,19 +1,19 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\01_Array\05_generateMatrix\src\generateMatrix_simulation.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\05_generateMatrix\src\generateMatrix_simulation.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-06 10:12:23
+ * @LastEditTime : 2023-12-29 15:09:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 螺旋矩阵II头文件 - 模拟法
+ * @Description  : solution source file - 螺旋矩阵II头文件 - 模拟法
  */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdlib.h>
-/* 解题方法配置文件 */
+/* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
-/* 题解头文件 */
+/* solution header file (题解头文件) */
 #include "generateMatrix.h"
 
 #if SIMULATION_METHOD_EN
