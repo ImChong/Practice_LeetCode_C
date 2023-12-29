@@ -3,17 +3,17 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:24
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 15:09:24
+ * @LastEditTime : 2023-12-29 15:13:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : solution source file - 螺旋矩阵II头文件 - 按层模拟法
  */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdlib.h>
-/* 解题方法配置文件 */
+/* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
-/* 题解头文件 */
+/* solution header file (题解头文件) */
 #include "generateMatrix.h"
 
 #if LAYER_SIMULATION_METHOD_EN
