@@ -78,7 +78,7 @@ To ensure code quality, all shared common code based on different programming to
 >
 > ![Call Hierarchy](./03_Misc/02_Supplementary_Materials/callHierarchy.png)
 >
-> The `main.c` file is the entry point of the program, which calls the solution method in the `solutionName_methodNameXX.c` file. Meanwhile, this file also contains the test cases for the selected solution method.
+> The `main.c` file is the entry point of the program, which calls the solution method in the `solutionName_methodNameXX.c` file. Meanwhile, the `main.c` file also contains the test cases for the selected solution method.
 >
 > The `cfg` folder contains the configuration files for the common functions and solution methods.
 >
