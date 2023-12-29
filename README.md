@@ -110,6 +110,10 @@ To ensure code quality, all shared common code based on different programming to
 >
 > Source code: [settings.json](.vscode/settings.json).
 
+### Build Process
+
+> TODO
+
 ## Debug Code
 
 > To facilitate source code debugging in VSCode, select the `main.c` file that you wish to run.
