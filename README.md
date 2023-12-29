@@ -11,8 +11,8 @@ C language leetcode practice overall folder structure:
 
 - [Basics](./00_Basics/) - This folder contains the basic configuration files and common function modules before getting started with the local leetcode practice.
   - [VSCode_Settings_Backup](./00_Basics/00_VScode_Settings_Backup) - VSCode settings backup
-  - [Common_Func](./00_Basics/01_Common_Func/) - Common c function modules
   - [Clean_Exe](./00_Basics/02_Clean_Exe/) - Executables to clean all .exe files
+- [Common_Func](./00_Basics/01_Common_Func/) - This folder contains the common c function modules based on different programming topics
 - [Programming_Topics](./01_Programming_Topics/) - ([Programming Carl Series](https://programmercarl.com/) / [Labuladong's Algorithm Cheat Sheet](https://labuladong.github.io/algo/home/)) - This folder contains the leetcode practice questions by programming topics.
   - [Array](./01_Programming_Topics/01_Array/) - Array
   - [Linked_List](./01_Programming_Topics/02_Linked_List/) - Linked list
@@ -36,6 +36,7 @@ C language leetcode practice overall folder structure:
 - [Misc](./02_Misc/) - This folder contains miscellaneous topics.
   - [Programming_Notes](./02_Misc/00_Programming_Notes/) - Programming notes
   - [Real_World_Problem](./02_Misc/01_Real_World_Problems/) - Real world problems
+  - [Supplementary_Materials](./02_Misc/02_Supplementary_Materials/) - Supplementary materials
 
 ## Common Function Modules
 
