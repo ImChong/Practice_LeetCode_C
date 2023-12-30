@@ -7,6 +7,7 @@
   - [1.2. 创建和初始化](#12-创建和初始化)
   - [1.3. 遍历](#13-遍历)
   - [1.4. 应用](#14-应用)
+  - [Question List](#question-list)
 
 ## 1.1. 定义
 
@@ -89,3 +90,86 @@ void preorder(struct Node *root) {
 5. **文件系统的目录结构**：可以看作是一种树形结构，虽然通常不是二叉树。
 
 二叉树是数据结构和算法中非常重要的一个概念，掌握它有助于解决许多复杂的问题。
+
+## Question List
+
+```txt
+.
+├───00_common
+│   ├───cfg
+│   └───doc
+├───01_preorderTraversal
+│   └───cfg
+├───02_inorderTraversal
+│   └───cfg
+├───03_postorderTraversal
+│   └───cfg
+├───04_levelOrder
+│   ├───cfg
+│   ├───inc
+│   └───src
+├───05_levelOrderBottom
+│   ├───cfg
+│   ├───inc
+│   └───src
+├───06_rightSideView
+│   └───cfg
+├───07_averageOfLevels
+│   └───cfg
+├───08_nlevelOrder
+│   └───cfg
+├───09_largestValues
+│   └───cfg
+├───10_connect
+│   └───cfg
+├───11_connectII
+│   └───cfg
+├───12_maxDepth
+│   └───cfg
+├───13_minDepth
+│   └───cfg
+├───14_invertTree
+│   └───cfg
+├───15_isSymmetric
+│   └───cfg
+├───16_countNodes
+│   └───cfg
+├───17_isBalanced
+│   └───cfg
+├───18_binaryTreePaths
+│   └───cfg
+├───19_sumOfLeftLeaves
+│   └───cfg
+├───20_findBottomLeftValue
+│   └───cfg
+├───21_hasPathSum
+│   └───cfg
+├───22_pathSum
+│   └───cfg
+├───23_buildTree
+│   └───cfg
+├───24_constructMaximumBinaryTree
+│   └───cfg
+├───25_mergeTrees
+│   └───cfg
+├───26_searchBST
+│   └───cfg
+├───27_isValidBST
+│   └───cfg
+├───28_getMinimumDifference
+│   └───cfg
+├───29_findMode
+│   └───cfg
+├───30_lowestCommonAncestor
+│   └───cfg
+├───31_insertIntoBST
+│   └───cfg
+├───32_deleteNode
+│   └───cfg
+├───33_trimBST
+│   └───cfg
+├───34_sortedArrayToBST
+│   └───cfg
+└───35_convertBST
+    └───cfg
+```
