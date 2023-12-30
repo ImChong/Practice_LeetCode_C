@@ -6,6 +6,7 @@
   - [1.1. 字符串的定义和初始化](#11-字符串的定义和初始化)
   - [1.2. 常用字符串操作](#12-常用字符串操作)
   - [1.3. 字符串与内存](#13-字符串与内存)
+  - [Question List](#question-list)
 
 ## 1.1. 字符串的定义和初始化
 
@@ -57,3 +58,25 @@ char *ch = strchr(str1, 'e');
 ## 1.3. 字符串与内存
 
 由于C语言没有内建的字符串类型，所以字符串操作往往需要特别注意内存管理。例如，当你使用 `strcat` 函数拼接字符串时，你需要确保目标数组有足够的空间来容纳新增的字符和结尾的空字符。
+
+## Question List
+
+```txt
+.
+├───01_reverseString
+│   ├───cfg
+│   ├───inc
+│   └───src
+├───02_reverseStr
+│   └───cfg
+├───03_replaceSpace
+│   └───cfg
+├───04_reverseWords
+│   └───cfg
+├───05_reverseLeftWords
+│   └───cfg
+├───06_strStr
+│   └───cfg
+└───07_repeatedSubstringPattern
+    └───cfg
+```
