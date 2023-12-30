@@ -5,6 +5,7 @@
 - [1. Stack\_Queue：栈和队列](#1-stack_queue栈和队列)
   - [1.1. 栈（Stack）](#11-栈stack)
   - [1.2. 队列（Queue）](#12-队列queue)
+  - [Question List](#question-list)
 
 ## 1.1. 栈（Stack）
 
@@ -78,3 +79,22 @@ int dequeue() {
 需要注意的是，以上的示例代码为了简单明了，并没有涉及动态分配内存或其他高级特性。
 
 栈常用于实现函数调用、深度优先搜索（DFS）、表达式求值等；而队列常用于广度优先搜索（BFS）、任务调度等。在C语言中，你可以根据具体的需求，使用数组或链表等基础数据结构来实现这些高级数据结构。
+
+## Question List
+
+```txt
+.
+├───01_myQueueCreate
+│   ├───cfg
+│   ├───inc
+│   └───src
+├───02_myStackCreate
+│   ├───cfg
+│   ├───inc
+│   └───src
+├───03_isValid
+├───04_removeDuplicates
+├───05_evalRPN
+├───06_maxSlidingWindow
+└───07_topKFrequent
+```
