@@ -7,6 +7,7 @@
   - [1.2. 示例结构定义](#12-示例结构定义)
   - [1.3. 基础操作](#13-基础操作)
   - [1.4. 优缺点](#14-优缺点)
+  - [1.5. Question List](#15-question-list)
 
 哈希表通常用于实现关联数组，即用于存储键-值对（Key-Value Pairs）的数据结构。通过键，你可以很快地找到相应的值。
 
@@ -54,3 +55,41 @@ struct HashTable *createHashTable(int size);
   - 动态调整大小: 当哈希表变得太满或太空时，可能需要动态地调整其大小，这是一个代价高昂的操作。
 
 哈希表是一种非常有用的数据结构，尤其是当你需要快速插入和查找操作，并且不需要元素保持有序时。不过，正确地实现一个哈希表需要解决多种问题，包括选择一个好的哈希函数和处理哈希冲突。
+
+## 1.5. Question List
+
+```txt
+.
+├───01_isAnagram
+│   ├───cfg
+│   ├───inc
+│   └───src
+├───02_intersection
+│   ├───cfg
+│   ├───inc
+│   └───src
+├───03_isHappy
+│   ├───cfg
+│   ├───inc
+│   └───src
+├───04_twoSum
+│   ├───cfg
+│   ├───inc
+│   └───src
+├───05_fourSumCount
+│   ├───cfg
+│   ├───inc
+│   └───src
+├───06_canConstruct
+│   ├───cfg
+│   ├───inc
+│   └───src
+├───07_threeSum
+│   ├───cfg
+│   ├───inc
+│   └───src
+└───08_fourSum
+    ├───cfg
+    ├───inc
+    └───src
+```
