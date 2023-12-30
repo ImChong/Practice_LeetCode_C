@@ -41,62 +41,19 @@ struct DoublyNode {
 ## 1.4. Question List
 
 ```txt
-.
-├───00_common
-│   ├───00_noDummyMethod
-│   │   ├───cfg
-│   │   ├───inc
-│   │   └───src
-│   └───01_dummyMethod
-│       ├───cfg
-│       ├───inc
-│       └───src
-├───01_removeElements
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───02_myLinkedListCreate
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───03_reverseList
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───04_swapPairs
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───05_removeNthFromEnd
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───06_getIntersectionNode
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───07_detectCycle
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───07_hasCycle
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───08_mergeTwoLists
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───09_partition
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───10_mergeKLists
-│   ├───cfg
-│   ├───inc
-│   └───src
-└───11_middleNode
-    ├───cfg
-    ├───inc
-    └───src
+02_Linked_List/
+├── 00_common
+├── 01_removeElements
+├── 02_myLinkedListCreate
+├── 03_reverseList
+├── 04_swapPairs
+├── 05_removeNthFromEnd
+├── 06_getIntersectionNode
+├── 07_detectCycle
+├── 07_hasCycle
+├── 08_mergeTwoLists
+├── 09_partition
+├── 10_mergeKLists
+├── 11_middleNode
+└── README.md
 ```
