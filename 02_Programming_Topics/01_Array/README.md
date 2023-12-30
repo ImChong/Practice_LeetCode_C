@@ -74,26 +74,11 @@ dynamic_array = (int *)malloc(5 * sizeof(int));
 ## 1.6. Question List
 
 ```txt
-.
-├───01_binarySearch
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───02_removeElement
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───03_sortedSquares
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───04_minSubArrayLen
-│   ├───cfg
-│   ├───inc
-│   └───src
-└───05_generateMatrix
-    ├───cfg
-    ├───docs
-    ├───inc
-    └───src
+01_Array/
+├── 01_binarySearch
+├── 02_removeElement
+├── 03_sortedSquares
+├── 04_minSubArrayLen
+├── 05_generateMatrix
+└── README.md
 ```
