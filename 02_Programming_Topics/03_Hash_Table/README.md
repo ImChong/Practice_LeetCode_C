@@ -1,23 +1,23 @@
-# 1. Hash_Table：哈希表
+# 1. Hash_Table (哈希表)
 
-在C语言中，哈希表（Hash Table）是一种用于快速查找和添加元素的数据结构。哈希表通常用数组和链表（或其他数据结构）组合实现。它使用一个哈希函数来计算一个键（Key）应存储在哪个位置（也称作哈希桶或哈希槽）。
+In C language, a hash table is a data structure used for fast lookup and insertion of elements. A hash table is typically implemented using a combination of an array and linked lists (or other data structures). It uses a hash function to calculate the position (also known as hash bucket or hash slot) where a key should be stored.
 
-- [1. Hash\_Table：哈希表](#1-hash_table哈希表)
-  - [1.1. 基础实现](#11-基础实现)
-  - [1.2. 示例结构定义](#12-示例结构定义)
-  - [1.3. 基础操作](#13-基础操作)
-  - [1.4. 优缺点](#14-优缺点)
+- [1. Hash\_Table (哈希表)](#1-hash_table-哈希表)
+  - [1.1. Basic Implementation](#11-basic-implementation)
+  - [1.2. Example Structure Definition](#12-example-structure-definition)
+  - [1.3. Basic Operations](#13-basic-operations)
+  - [1.4. Advantages and Disadvantages](#14-advantages-and-disadvantages)
   - [1.5. Question List](#15-question-list)
 
-哈希表通常用于实现关联数组，即用于存储键-值对（Key-Value Pairs）的数据结构。通过键，你可以很快地找到相应的值。
+Hash tables are commonly used to implement associative arrays, which are data structures used to store key-value pairs. With a key, you can quickly find the corresponding value.
 
-## 1.1. 基础实现
+## 1.1. Basic Implementation
 
-一个简单的哈希表可能包括一个数组和一些链表。数组的每个元素都是链表的头指针。当你要添加一个键-值对时，首先使用哈希函数计算键的哈希值，然后用这个哈希值来确定应该在哪个数组索引（或哈希桶）中存储这个键-值对。然后，你将这个键-值对作为一个新节点添加到相应索引处链表的末尾。
+A simple hash table may consist of an array and some linked lists. Each element of the array is a head pointer of a linked list. When you want to add a key-value pair, you first calculate the hash value of the key using a hash function, and then use this hash value to determine which array index (or hash bucket) to store the key-value pair. Then, you add this key-value pair as a new node to the end of the corresponding index's linked list.
 
-这样做的好处是即使多个键的哈希值相同（这称为哈希冲突），它们也可以存储在同一个桶（数组的同一个位置）的链表中。
+The advantage of doing this is that even if multiple keys have the same hash value (known as hash collision), they can still be stored in the same bucket (the same position in the array) in the linked list.
 
-## 1.2. 示例结构定义
+## 1.2. Example Structure Definition
 
 ```c
 #include <stdio.h>
@@ -38,23 +38,23 @@ struct HashTable *createHashTable(int size);
 
 ```
 
-## 1.3. 基础操作
+## 1.3. Basic Operations
 
-哈希表通常支持以下几种基本操作：
+Hash tables typically support the following basic operations:
 
-插入（Insert）: 插入一个新的键-值对。
-删除（Delete）: 删除一个键-值对。
-查找（Search）: 根据键查找值。
+Insert: Insert a new key-value pair.
+Delete: Delete a key-value pair.
+Search: Find the value based on the key.
 
-## 1.4. 优缺点
+## 1.4. Advantages and Disadvantages
 
-- 优点
-  - 快速访问: 哈希表通常提供常数时间复杂度的插入和查找操作。
-- 缺点
-  - 哈希冲突: 当两个键的哈希值相同时，需要有一种方法来处理这种冲突，这通常会使数据结构变得复杂。
-  - 动态调整大小: 当哈希表变得太满或太空时，可能需要动态地调整其大小，这是一个代价高昂的操作。
+- Advantages
+  - Fast Access: Hash tables typically provide constant time complexity for insertion and lookup operations.
+- Disadvantages
+  - Hash Collisions: When two keys have the same hash value, there needs to be a way to handle this collision, which can make the data structure more complex.
+  - Dynamic Resizing: When the hash table becomes too full or too empty, it may need to be dynamically resized, which is a costly operation.
 
-哈希表是一种非常有用的数据结构，尤其是当你需要快速插入和查找操作，并且不需要元素保持有序时。不过，正确地实现一个哈希表需要解决多种问题，包括选择一个好的哈希函数和处理哈希冲突。
+Hash tables are a very useful data structure, especially when you need fast insertion and lookup operations and don't require elements to be sorted. However, implementing a hash table correctly requires addressing various issues, including choosing a good hash function and handling hash collisions.
 
 ## 1.5. Question List
 
