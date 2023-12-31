@@ -11,7 +11,7 @@
  */
 /* standard header file (标准头文件) */
 #include <stdio.h>
-/* 通用头文件 */
+/* common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
 #include "commonBinaryTree.h"

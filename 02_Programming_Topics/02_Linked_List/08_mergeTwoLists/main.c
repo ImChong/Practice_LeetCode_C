@@ -14,7 +14,7 @@
 /* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* 通用头文件 */
+/* common function header file (通用头文件) */
 #include "commonArray.h"
 #include "commonLinkedList.h"
 

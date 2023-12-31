@@ -14,7 +14,7 @@
 #if DOUBLE_POINTER_METHOD_EN
 /* standard header file (标准头文件) */
 #include <stdlib.h>
-/* 通用头文件 */
+/* common function header file (通用头文件) */
 #include "commonArray.h"
 /* 本文件头文件 */
 #include "threeSum.h"

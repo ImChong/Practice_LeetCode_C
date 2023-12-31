@@ -12,7 +12,7 @@
 /* 解题方法配置文件 */
 #include "methodCfg.h"
 #if HASH_TABLE_METHOD_EN
-/* 通用头文件 */
+/* common function header file (通用头文件) */
 #include "commonHashTable.h"
 /* 本文件头文件 */
 #include "fourSumCount.h"

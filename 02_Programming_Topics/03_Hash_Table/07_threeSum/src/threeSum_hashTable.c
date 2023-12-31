@@ -14,7 +14,7 @@
 #if HASH_TABLE_METHOD_EN
 /* standard header file (标准头文件) */
 #include <stdlib.h>
-/* 通用头文件 */
+/* common function header file (通用头文件) */
 #include "commonArray.h"
 #include "commonHashTable.h"
 /* 本文件头文件 */

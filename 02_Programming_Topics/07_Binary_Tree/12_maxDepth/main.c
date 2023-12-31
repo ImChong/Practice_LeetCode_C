@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-/* 通用头文件 */
+/* common function header file (通用头文件) */
 #include "commonSingleValue.h"
 #include "commonBinaryTree.h"
 
