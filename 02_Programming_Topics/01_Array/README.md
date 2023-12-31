@@ -4,10 +4,10 @@ In C language, an array is a data structure used to store multiple items of the 
 
 - [1. Array (数组)](#1-array-数组)
   - [1.1. One-Dimensional Array](#11-one-dimensional-array)
-  - [1.2. 二维数组](#12-二维数组)
-  - [1.3. 访问数组元素](#13-访问数组元素)
-  - [1.4. 动态数组](#14-动态数组)
-  - [1.5. 优缺点](#15-优缺点)
+  - [1.2. Two-Dimensional Array](#12-two-dimensional-array)
+  - [1.3. Accessing Array Elements](#13-accessing-array-elements)
+  - [1.4. Dynamic Arrays](#14-dynamic-arrays)
+  - [1.5. Pros and Cons](#15-pros-and-cons)
   - [1.6. Question List](#16-question-list)
 
 ## 1.1. One-Dimensional Array
@@ -18,25 +18,25 @@ A one-dimensional array can be seen as a list. For example, a one-dimensional ar
 int arr[5];
 ```
 
-在这里，`arr` 是一个包含5个整数的数组。
+Here, `arr` is an array containing 5 integers.
 
-初始化数组：
+Initializing the array:
 
 ```c
 int arr[5] = {1, 2, 3, 4, 5};
 ```
 
-## 1.2. 二维数组
+## 1.2. Two-Dimensional Array
 
-二维数组可以看作是一个表格，有行和列。例如：
+A two-dimensional array can be seen as a table with rows and columns. For example:
 
 ```c
 int matrix[2][3];
 ```
 
-这是一个有2行和3列的二维数组。
+This is a two-dimensional array with 2 rows and 3 columns.
 
-初始化二维数组：
+Initializing the two-dimensional array:
 
 ```c
 int matrix[2][3] = {
@@ -45,18 +45,18 @@ int matrix[2][3] = {
 };
 ```
 
-## 1.3. 访问数组元素
+## 1.3. Accessing Array Elements
 
-数组元素可以通过索引来访问。注意，C语言的数组索引是从0开始的。
+Array elements can be accessed using indexes. Note that array indexes in C start from 0.
 
 ```c
 int first_element = arr[0];  // 访问第一个元素
 int second_element = arr[1]; // 访问第二个元素
 ```
 
-## 1.4. 动态数组
+## 1.4. Dynamic Arrays
 
-C语言标准库提供了动态内存分配的函数，如 `malloc()`，以动态地创建数组。
+The C standard library provides functions for dynamic memory allocation, such as `malloc()`, to dynamically create arrays.
 
 ```c
 int *dynamic_array;
@@ -67,9 +67,9 @@ dynamic_array = (int *)malloc(5 * sizeof(int));
 
 记住，在使用 `malloc()` 分配的内存后，最终需要使用 `free()` 函数来释放这些内存。
 
-## 1.5. 优缺点
+## 1.5. Pros and Cons
 
-数组的主要优点是访问速度快，因为它们存储在连续的内存位置上。但是，数组的大小是固定的，这是它的一个主要缺点，尤其是在不知道需要多少内存的情况下。
+The main advantage of arrays is fast access speed because they are stored in contiguous memory locations. However, a major drawback of arrays is that their size is fixed, which can be especially problematic when the required amount of memory is unknown.
 
 ## 1.6. Question List
 
