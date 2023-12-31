@@ -94,82 +94,42 @@ void preorder(struct Node *root) {
 ## Question List
 
 ```txt
-.
-├───00_common
-│   ├───cfg
-│   └───doc
-├───01_preorderTraversal
-│   └───cfg
-├───02_inorderTraversal
-│   └───cfg
-├───03_postorderTraversal
-│   └───cfg
-├───04_levelOrder
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───05_levelOrderBottom
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───06_rightSideView
-│   └───cfg
-├───07_averageOfLevels
-│   └───cfg
-├───08_nlevelOrder
-│   └───cfg
-├───09_largestValues
-│   └───cfg
-├───10_connect
-│   └───cfg
-├───11_connectII
-│   └───cfg
-├───12_maxDepth
-│   └───cfg
-├───13_minDepth
-│   └───cfg
-├───14_invertTree
-│   └───cfg
-├───15_isSymmetric
-│   └───cfg
-├───16_countNodes
-│   └───cfg
-├───17_isBalanced
-│   └───cfg
-├───18_binaryTreePaths
-│   └───cfg
-├───19_sumOfLeftLeaves
-│   └───cfg
-├───20_findBottomLeftValue
-│   └───cfg
-├───21_hasPathSum
-│   └───cfg
-├───22_pathSum
-│   └───cfg
-├───23_buildTree
-│   └───cfg
-├───24_constructMaximumBinaryTree
-│   └───cfg
-├───25_mergeTrees
-│   └───cfg
-├───26_searchBST
-│   └───cfg
-├───27_isValidBST
-│   └───cfg
-├───28_getMinimumDifference
-│   └───cfg
-├───29_findMode
-│   └───cfg
-├───30_lowestCommonAncestor
-│   └───cfg
-├───31_insertIntoBST
-│   └───cfg
-├───32_deleteNode
-│   └───cfg
-├───33_trimBST
-│   └───cfg
-├───34_sortedArrayToBST
-│   └───cfg
-└───35_convertBST
-    └───cfg
+07_Binary_Tree/
+├── 00_common
+├── 01_preorderTraversal
+├── 02_inorderTraversal
+├── 03_postorderTraversal
+├── 04_levelOrder
+├── 05_levelOrderBottom
+├── 06_rightSideView
+├── 07_averageOfLevels
+├── 08_nlevelOrder
+├── 09_largestValues
+├── 10_connect
+├── 11_connectII
+├── 12_maxDepth
+├── 13_minDepth
+├── 14_invertTree
+├── 15_isSymmetric
+├── 16_countNodes
+├── 17_isBalanced
+├── 18_binaryTreePaths
+├── 19_sumOfLeftLeaves
+├── 20_findBottomLeftValue
+├── 21_hasPathSum
+├── 22_pathSum
+├── 23_buildTree
+├── 24_constructMaximumBinaryTree
+├── 25_mergeTrees
+├── 26_searchBST
+├── 27_isValidBST
+├── 28_getMinimumDifference
+├── 29_findMode
+├── 30_lowestCommonAncestor
+├── 31_insertIntoBST
+├── 32_deleteNode
+├── 33_trimBST
+├── 34_sortedArrayToBST
+├── 35_convertBST
+└── README.md
 ```
