@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-26 13:19:53
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-31 20:33:21
+ * @LastEditTime : 2023-12-31 20:36:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -77,21 +77,30 @@ void test_2(void) {
     /* 实际结果 */
     int n = 1;
     int k = 1;
-    int returnSize;
-    int *returnColumnSizes;
-    int **result = combine(n, k, &returnSize, &returnColumnSizes);
+    int actualRtnRowSize;
+    int *actualRtnColSize;
+    int **actual2DArr = combine(n, k, &actualRtnRowSize, &actualRtnColSize);
 
     /* 预期结果 */
+    int expectRtnRowSize = 1;
+    int expectRtnColSize[] = {1};
+    int *expect2DArr[] = {
+        (int[]){1},
+    };
 
     /* 比较结果 */
-    print2DArray(result, returnSize, returnColumnSizes);
+    validate2DArray('2',
+                    expect2DArr, expectRtnRowSize, expectRtnColSize,
+                    actual2DArr, actualRtnRowSize, actualRtnColSize,
+                    SORT_FALSE
+    );
 
     /* 释放内存 */
-    for (int i = 0; i < returnSize; ++i) {
-        free(result[i]);
+    for (int i = 0; i < actualRtnRowSize; ++i) {
+        free(actual2DArr[i]);
     }
-    free(result);
-    free(returnColumnSizes);
+    free(actual2DArr);
+    free(actualRtnColSize);
 }
 
 /**
@@ -141,7 +150,7 @@ int main(int argc, const char *argv[]) {
     printf("CUT_BRANCH_GPT4_METHOD_EN\r\n");
 #endif
     test_1();
-    // test_2();
+    test_2();
     // test_3();
     return 0;
 }
