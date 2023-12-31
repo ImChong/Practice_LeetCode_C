@@ -8,7 +8,7 @@
   - [1.1. 用途和应用](#11-用途和应用)
   - [1.2. 示例：找到下一个更大的元素](#12-示例找到下一个更大的元素)
   - [1.3. 总结](#13-总结)
-  - [Question List](#question-list)
+  - [1.4. Question List](#14-question-list)
 
 ## 1.1. 用途和应用
 
@@ -75,7 +75,7 @@ int main() {
 
 单调栈是一个强大的数据结构，尤其适用于解决数组和序列中与顺序和大小有关的问题。它通常能够在O(n)的时间复杂度内解决这类问题。
 
-## Question List
+## 1.4. Question List
 
 ```txt
 11_Monotone_Stack/
