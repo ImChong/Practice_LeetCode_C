@@ -10,7 +10,7 @@
  * @Description  : 707. 设计链表：https://leetcode.cn/problems/design-linked-list/
  * https://programmercarl.com/0707.%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html
  */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */

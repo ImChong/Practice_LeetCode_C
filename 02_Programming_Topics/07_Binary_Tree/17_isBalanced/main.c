@@ -12,7 +12,7 @@
  */
 
 /* TODO: 重构 */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdbool.h>
 

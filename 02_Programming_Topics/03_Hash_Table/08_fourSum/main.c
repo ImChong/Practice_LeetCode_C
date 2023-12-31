@@ -19,7 +19,7 @@
  *
  * 可以按 任意顺序 返回答案
  */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
 /* 通用头文件 */
 #include "commonTypeDef.h"

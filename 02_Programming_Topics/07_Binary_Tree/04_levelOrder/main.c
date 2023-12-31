@@ -25,7 +25,7 @@
  *   [4, 5, 6, 7]
  * ]
  */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */

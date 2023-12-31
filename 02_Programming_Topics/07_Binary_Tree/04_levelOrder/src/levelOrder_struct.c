@@ -26,7 +26,7 @@
 /* 解题方法配置文件 */
 #include "methodCfg.h"
 #if STRUCT_METHOD_EN
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */

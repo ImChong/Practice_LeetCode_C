@@ -20,7 +20,7 @@
  * 前序遍历 - 递归方法/迭代方法
  * [1, 2, 4, 5, 3, 6, 7]
  */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */

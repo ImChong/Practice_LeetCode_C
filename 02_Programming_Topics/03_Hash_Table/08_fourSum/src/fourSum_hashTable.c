@@ -11,7 +11,7 @@
  */
 #include "methodCfg.h"
 #if HASH_TABLE_METHOD_EN
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* 特殊头文件 */

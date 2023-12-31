@@ -11,7 +11,7 @@
  * https://programmercarl.com/0028.%E5%AE%9E%E7%8E%B0strStr.html
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0028.%E5%AE%9E%E7%8E%B0strStr.md
  */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -12,7 +12,7 @@
 #ifndef __COMMON_RING_BUFFER_H      /* NOLINT(build/header_guard) */
 #define __COMMON_RING_BUFFER_H      /* NOLINT(build/header_guard) */
 
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdint.h>
 
 /**********************************************************************************/
