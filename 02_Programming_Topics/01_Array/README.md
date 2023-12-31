@@ -63,9 +63,9 @@ int *dynamic_array;
 dynamic_array = (int *)malloc(5 * sizeof(int));
 ```
 
-在这个例子中，`dynamic_array` 是一个指针，指向一个有5个整数的数组。
+In this example, `dynamic_array` is a pointer that points to an array of 5 integers.
 
-记住，在使用 `malloc()` 分配的内存后，最终需要使用 `free()` 函数来释放这些内存。
+Remember, after allocating memory using `malloc()`, it is necessary to free that memory using the `free()` function.
 
 ## 1.5. Pros and Cons
 
