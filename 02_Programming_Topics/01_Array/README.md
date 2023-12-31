@@ -50,8 +50,8 @@ int matrix[2][3] = {
 Array elements can be accessed using indexes. Note that array indexes in C start from 0.
 
 ```c
-int first_element = arr[0];  // 访问第一个元素
-int second_element = arr[1]; // 访问第二个元素
+int first_element = arr[0];  // Access the first element
+int second_element = arr[1]; // Access the second element
 ```
 
 ## 1.4. Dynamic Arrays
