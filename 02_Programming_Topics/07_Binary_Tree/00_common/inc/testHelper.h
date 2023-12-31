@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : test helper header file (测试函数头文件)
  */
 #ifndef __TEST_HELPER_H
 #define __TEST_HELPER_H

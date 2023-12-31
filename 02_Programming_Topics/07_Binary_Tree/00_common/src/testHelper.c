@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : test helper source file (测试函数源文件)
  */
 /* standard header file (标准头文件) */
 #include <stdio.h>
