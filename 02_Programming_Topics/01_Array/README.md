@@ -1,18 +1,18 @@
-# 1. Array：数组
+# 1. Array (数组)
 
-在C语言中，数组（Array）是一种数据结构，用于存储多个相同类型的数据项。数组的所有元素存储在连续的内存位置上。数组可以有一维、二维或多维，并且每个元素可以通过索引来访问。
+In C language, an array is a data structure used to store multiple items of the same type. All elements of an array are stored in contiguous memory locations. Arrays can be one-dimensional, two-dimensional, or multi-dimensional, and each element can be accessed using an index.
 
-- [1. Array：数组](#1-array数组)
-  - [1.1. 一维数组](#11-一维数组)
+- [1. Array (数组)](#1-array-数组)
+  - [1.1. One-Dimensional Array](#11-one-dimensional-array)
   - [1.2. 二维数组](#12-二维数组)
   - [1.3. 访问数组元素](#13-访问数组元素)
   - [1.4. 动态数组](#14-动态数组)
   - [1.5. 优缺点](#15-优缺点)
   - [1.6. Question List](#16-question-list)
 
-## 1.1. 一维数组
+## 1.1. One-Dimensional Array
 
-一维数组可以看作是一个列表。例如，一个包含5个整数的一维数组可以声明如下：
+A one-dimensional array can be seen as a list. For example, a one-dimensional array containing 5 integers can be declared as follows:
 
 ```c
 int arr[5];
