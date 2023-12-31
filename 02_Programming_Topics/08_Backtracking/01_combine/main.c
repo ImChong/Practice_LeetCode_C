@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-26 13:19:53
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-31 20:36:26
+ * @LastEditTime : 2023-12-31 20:37:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -112,21 +112,39 @@ void test_3(void) {
     /* 实际结果 */
     int n = 5;
     int k = 3;
-    int returnSize;
-    int *returnColumnSizes;
-    int **result = combine(n, k, &returnSize, &returnColumnSizes);
+    int actualRtnRowSize;
+    int *actualRtnColSize;
+    int **actual2DArr = combine(n, k, &actualRtnRowSize, &actualRtnColSize);
 
     /* 预期结果 */
+    int expectRtnRowSize = 10;
+    int expectRtnColSize[] = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+    int *expect2DArr[] = {
+        (int[]){1, 2, 3},
+        (int[]){1, 2, 4},
+        (int[]){1, 2, 5},
+        (int[]){1, 3, 4},
+        (int[]){1, 3, 5},
+        (int[]){1, 4, 5},
+        (int[]){2, 3, 4},
+        (int[]){2, 3, 5},
+        (int[]){2, 4, 5},
+        (int[]){3, 4, 5},
+    };
 
     /* 比较结果 */
-    print2DArray(result, returnSize, returnColumnSizes);
+    validate2DArray('3',
+                    expect2DArr, expectRtnRowSize, expectRtnColSize,
+                    actual2DArr, actualRtnRowSize, actualRtnColSize,
+                    SORT_FALSE
+    );
 
     /* 释放内存 */
-    for (int i = 0; i < returnSize; ++i) {
-        free(result[i]);
+    for (int i = 0; i < actualRtnRowSize; ++i) {
+        free(actual2DArr[i]);
     }
-    free(result);
-    free(returnColumnSizes);
+    free(actual2DArr);
+    free(actualRtnColSize);
 }
 
 /**********************************************************************************/
@@ -151,6 +169,6 @@ int main(int argc, const char *argv[]) {
 #endif
     test_1();
     test_2();
-    // test_3();
+    test_3();
     return 0;
 }
