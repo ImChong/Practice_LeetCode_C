@@ -1,14 +1,14 @@
-# 1. Linked_List：链表
+# 1. Linked_List (链表)
 
 在C语言中，链表（Linked List）是一种复杂的数据结构，用于存储多个元素。与数组不同，链表的元素不是在内存中连续存储的。每个元素（通常称为节点）都包含数据和一个指向下一个元素的指针。链表可以有多种形式，包括单向链表、双向链表和循环链表。
 
-- [1. Linked\_List：链表](#1-linked_list链表)
-  - [1.1. 单向链表](#11-单向链表)
-  - [1.2. 双向链表](#12-双向链表)
-  - [1.3. 优缺点](#13-优缺点)
+- [1. Linked\_List (链表)](#1-linked_list-链表)
+  - [1.1. Singly Linked List](#11-singly-linked-list)
+  - [1.2. Doubly Linked List](#12-doubly-linked-list)
+  - [1.3. Advantages and Disadvantages](#13-advantages-and-disadvantages)
   - [1.4. Question List](#14-question-list)
 
-## 1.1. 单向链表
+## 1.1. Singly Linked List
 
 ```c
 struct Node {
@@ -17,7 +17,7 @@ struct Node {
 };
 ```
 
-## 1.2. 双向链表
+## 1.2. Doubly Linked List
 
 ```c
 struct DoublyNode {
@@ -27,16 +27,15 @@ struct DoublyNode {
 };
 ```
 
-## 1.3. 优缺点
+## 1.3. Advantages and Disadvantages
 
-- 优点
-  - 动态大小：链表的大小可以在运行时动态改变。
-  - 插入和删除方便：与数组相比，添加或删除节点通常更快，不需要移动其他元素。
-- 缺点
-  - 访问速度：链表的元素不是连续存储的，所以访问速度通常比数组慢。
-  - 更多的内存开销：因为每个节点都需要一个额外的指针字段来存储下一个节点的地址。
-
-链表是一种非常灵活的数据结构，特别适用于需要频繁插入和删除操作的场合。然而，如果你需要快速访问（例如，随机访问）或者不需要经常插入和删除元素，数组可能是更好的选择。
+- Advantages
+  - Dynamic size: The size of the linked list can change dynamically at runtime.
+  - Easy insertion and deletion: Compared to arrays, adding or deleting nodes is usually faster, without the need to move other elements.
+- Disadvantages
+  - Access speed: The elements of the linked list are not stored continuously, so the access speed is usually slower than arrays.
+  - More memory overhead: Because each node needs an additional pointer field to store the address of the next node.
+Linked lists are a very flexible data structure, especially suitable for situations that require frequent insertion and deletion operations. However, if you need quick access (for example, random access) or do not need to frequently insert and delete elements, arrays may be a better choice.
 
 ## 1.4. Question List
 
