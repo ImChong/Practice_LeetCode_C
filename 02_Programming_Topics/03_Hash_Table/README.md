@@ -59,37 +59,14 @@ struct HashTable *createHashTable(int size);
 ## 1.5. Question List
 
 ```txt
-.
-├───01_isAnagram
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───02_intersection
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───03_isHappy
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───04_twoSum
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───05_fourSumCount
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───06_canConstruct
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───07_threeSum
-│   ├───cfg
-│   ├───inc
-│   └───src
-└───08_fourSum
-    ├───cfg
-    ├───inc
-    └───src
+03_Hash_Table/
+├── 01_isAnagram
+├── 02_intersection
+├── 03_isHappy
+├── 04_twoSum
+├── 05_fourSumCount
+├── 06_canConstruct
+├── 07_threeSum
+├── 08_fourSum
+└── README.md
 ```
