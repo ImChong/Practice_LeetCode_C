@@ -83,18 +83,13 @@ int dequeue() {
 ## Question List
 
 ```txt
-.
-├───01_myQueueCreate
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───02_myStackCreate
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───03_isValid
-├───04_removeDuplicates
-├───05_evalRPN
-├───06_maxSlidingWindow
-└───07_topKFrequent
+06_Stack_Queue/
+├── 01_myQueueCreate
+├── 02_myStackCreate
+├── 03_isValid
+├── 04_removeDuplicates
+├── 05_evalRPN
+├── 06_maxSlidingWindow
+├── 07_topKFrequent
+└── README.md
 ```
