@@ -16,14 +16,14 @@
  *          4: 使用nodeIt = Queue[rear++];来出队
  *          5：出队后，用 nodeIt 对应的子节点来操作，是否需要入队。
  */
-/* 解题方法配置文件 */
+/* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
 #if ARRAY_METHOD_EN
 /* standard header file (标准头文件) */
 #include <stdio.h>
 /* common function header file (通用头文件) */
 #include "commonBinaryTree.h"
-/* 本文件头文件 */
+/* solution header file (题解头文件) */
 #include "levelOrder.h"
 
 /**********************************************************************************/

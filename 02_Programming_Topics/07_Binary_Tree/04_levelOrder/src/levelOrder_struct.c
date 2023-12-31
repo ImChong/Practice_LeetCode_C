@@ -23,7 +23,7 @@
  *          2：因为队列的结构特性，操作是先进先出
  *             时间复杂度：O(n) 空间复杂度: O(n)
  */
-/* 解题方法配置文件 */
+/* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
 #if STRUCT_METHOD_EN
 /* standard header file (标准头文件) */
@@ -32,7 +32,7 @@
 /* common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonBinaryTree.h"
-/* 本文件头文件 */
+/* solution header file (题解头文件) */
 #include "levelOrder.h"
 
 /**********************************************************************************/

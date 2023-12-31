@@ -34,7 +34,7 @@
 /* common function header file (通用头文件) */
 #include "commonArray.h"
 #include "commonBinaryTree.h"
-/* 本文件头文件 */
+/* solution header file (题解头文件) */
 #include "levelOrderBottom.h"
 
 /**

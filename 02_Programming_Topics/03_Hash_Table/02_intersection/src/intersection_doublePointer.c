@@ -9,14 +9,14 @@
  * =================================================================================
  * @Description  : 两个数组的交集 - 双指针解法源文件
  */
-/* 解题方法配置文件 */
+/* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
 #if DOUBLE_POINTER_METHOD_EN
 /* standard header file (标准头文件) */
 #include <stdlib.h>
 /* common function header file (通用头文件) */
 #include "commonArray.h"
-/* 本文件头文件 */
+/* solution header file (题解头文件) */
 #include "intersection.h"
 
 /**********************************************************************************/

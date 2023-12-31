@@ -16,7 +16,7 @@
 #include <stdlib.h>
 /* 特殊头文件 */
 #include "specialHashTable.h"
-/* 本文件头文件 */
+/* solution header file (题解头文件) */
 #include "fourSum.h"
 
 /**********************************************************************************/

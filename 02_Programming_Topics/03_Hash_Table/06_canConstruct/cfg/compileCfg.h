@@ -12,7 +12,7 @@
 #ifndef __COMPILE_CFG_H
 #define __COMPILE_CFG_H
 
-/* 解题方法配置文件 */
+/* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
 
 /**********************************************************************************/

@@ -19,7 +19,7 @@
 /* common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
-/* 解题方法配置文件 */
+/* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
 /* 解题方法头文件 */
 #include "threeSum.h"

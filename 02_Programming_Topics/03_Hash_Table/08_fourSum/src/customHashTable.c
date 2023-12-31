@@ -14,7 +14,7 @@
 #include <stdlib.h>
 /* 编译配置文件 */
 #include "compileCfg.h"
-/* 本文件头文件 */
+/* solution header file (题解头文件) */
 #include "customHashTable.h"
 
 #if CUSTOM_HASH_TABLE_EN

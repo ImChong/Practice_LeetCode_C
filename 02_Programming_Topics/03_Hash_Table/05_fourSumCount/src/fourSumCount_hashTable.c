@@ -9,12 +9,12 @@
  * =================================================================================
  * @Description  : 四数相加 - 哈希表法源文件
  */
-/* 解题方法配置文件 */
+/* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
 #if HASH_TABLE_METHOD_EN
 /* common function header file (通用头文件) */
 #include "commonHashTable.h"
-/* 本文件头文件 */
+/* solution header file (题解头文件) */
 #include "fourSumCount.h"
 
 /**********************************************************************************/
