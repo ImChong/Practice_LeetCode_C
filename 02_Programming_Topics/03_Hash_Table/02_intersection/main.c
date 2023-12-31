@@ -1,24 +1,24 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\03_Hash_Table\02_intersection\main.c
+ * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\03_Hash_Table\02_intersection\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-27 09:49:42
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 09:56:30
+ * @LastEditTime : 2023-12-31 20:45:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 349. 两个数组的交集：https://leetcode.cn/problems/intersection-of-two-arrays/
  *      https://programmercarl.com/0349.%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86.html
  */
-/* 标准头文件 */
+/* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* 通用头文件 */
+/* common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
-/* 解题方法配置文件 */
+/* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
-/* 题解头文件 */
+/* solution header file (题解头文件) */
 #include "intersection.h"
 
 /**********************************************************************************/
