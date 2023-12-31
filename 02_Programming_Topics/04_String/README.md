@@ -62,21 +62,13 @@ char *ch = strchr(str1, 'e');
 ## Question List
 
 ```txt
-.
-├───01_reverseString
-│   ├───cfg
-│   ├───inc
-│   └───src
-├───02_reverseStr
-│   └───cfg
-├───03_replaceSpace
-│   └───cfg
-├───04_reverseWords
-│   └───cfg
-├───05_reverseLeftWords
-│   └───cfg
-├───06_strStr
-│   └───cfg
-└───07_repeatedSubstringPattern
-    └───cfg
+04_String/
+├── 01_reverseString
+├── 02_reverseStr
+├── 03_replaceSpace
+├── 04_reverseWords
+├── 05_reverseLeftWords
+├── 06_strStr
+├── 07_repeatedSubstringPattern
+└── README.md
 ```
