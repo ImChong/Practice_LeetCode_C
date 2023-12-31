@@ -100,25 +100,16 @@ void twoSum(int* nums, int numsSize, int target) {
 ## Question List
 
 ```txt
-.
-├───01_removeElement
-│   └───cfg
-├───02_reverseString
-│   └───cfg
-├───03_replaceSpace
-│   └───cfg
-├───04_reverseWords
-│   └───cfg
-├───05_reverseList
-│   └───cfg
-├───06_removeNthFromEnd
-│   └───cfg
-├───07_getIntersectionNode
-│   └───cfg
-├───08_detectCycle
-│   └───cfg
-├───09_threeSum
-│   └───cfg
-└───10_fourSum
-    └───cfg
+05_Double_Pointer/
+├── 01_removeElement
+├── 02_reverseString
+├── 03_replaceSpace
+├── 04_reverseWords
+├── 05_reverseList
+├── 06_removeNthFromEnd
+├── 07_getIntersectionNode
+├── 08_detectCycle
+├── 09_threeSum
+├── 10_fourSum
+└── README.md
 ```
