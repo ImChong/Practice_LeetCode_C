@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-22 16:12:53
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-31 20:15:46
+ * @LastEditTime : 2023-12-31 20:16:48
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -33,8 +33,8 @@
 /**********************************************************************************/
 int *g_path;          /* 记录当前 k 个数的组合 */
 int g_pathTop;        /* 记录当前数的数量 */
-int **g_ans2DArr;          /* 结果二维数组：记录所有 k 个数的组合 */
-int g_ansTop;         /* 记录当前的组数 */
+int **g_ans2DArr;       /* 结果二维数组：记录所有 k 个数的组合 */
+int g_ans2DArrTop;         /* 记录当前的组数 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -63,7 +63,7 @@ STATIC_FUNC void backtracking(int n, int k, int startNum) {
         for (int i = 0; i < k; i++) {
             temp[i] = g_path[i];
         }
-        g_ans2DArr[g_ansTop++] = temp;
+        g_ans2DArr[g_ans2DArrTop++] = temp;
         return;
     }
 
@@ -93,11 +93,11 @@ STATIC_FUNC void backtracking(int n, int k, int startNum) {
 int **combine(int n, int k, int *returnSize, int **returnColumnSizes) {
     g_path = (int *)malloc(sizeof(int) * k);
     g_ans2DArr = (int **)malloc(sizeof(int *) * MAX_SIZE);
-    g_pathTop = g_ansTop = 0;
+    g_pathTop = g_ans2DArrTop = 0;
 
     backtracking(n, k, 1);
 
-    *returnSize = g_ansTop;
+    *returnSize = g_ans2DArrTop;
     *returnColumnSizes = (int *)malloc(sizeof(int) * (*returnSize));
     for(int i = 0; i < *returnSize; i++) {
         (*returnColumnSizes)[i] = k;
