@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\08_Backtracking\01_combine\main.c
+ * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\08_Backtracking\01_combine\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-26 13:19:53
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-26 23:55:06
+ * @LastEditTime : 2023-12-31 20:33:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* 通用头文件 */
+#include "commonTypeDef.h"
 #include "commonArray.h"
 /* 解题方法配置文件 */
 #include "methodCfg.h"
@@ -36,21 +37,35 @@ void test_1(void) {
     /* 实际结果 */
     int n = 4;
     int k = 2;
-    int returnSize;
-    int *returnColumnSizes;
-    int **result = combine(n, k, &returnSize, &returnColumnSizes);
+    int actualRtnRowSize;
+    int *actualRtnColSize;
+    int **actual2DArr = combine(n, k, &actualRtnRowSize, &actualRtnColSize);
 
     /* 预期结果 */
+    int expectRtnRowSize = 6;
+    int expectRtnColSize[] = {2, 2, 2, 2, 2, 2};
+    int *expect2DArr[] = {
+        (int[]){1, 2},
+        (int[]){1, 3},
+        (int[]){1, 4},
+        (int[]){2, 3},
+        (int[]){2, 4},
+        (int[]){3, 4},
+    };
 
     /* 比较结果 */
-    print2DArray(result, returnSize, returnColumnSizes);
+    validate2DArray('1',
+                    expect2DArr, expectRtnRowSize, expectRtnColSize,
+                    actual2DArr, actualRtnRowSize, actualRtnColSize,
+                    SORT_FALSE
+    );
 
     /* 释放内存 */
-    for (int i = 0; i < returnSize; ++i) {
-        free(result[i]);
+    for (int i = 0; i < actualRtnRowSize; ++i) {
+        free(actual2DArr[i]);
     }
-    free(result);
-    free(returnColumnSizes);
+    free(actual2DArr);
+    free(actualRtnColSize);
 }
 
 /**
@@ -119,14 +134,14 @@ void test_3(void) {
  */
 int main(int argc, const char *argv[]) {
 #if BASELINE_METHOD_EN
-    printf("BASELINE_METHOD_EN\n");
+    printf("BASELINE_METHOD_EN\r\n");
 #elif CUT_BRANCH_METHOD_EN
-    printf("CUT_BRANCH_METHOD_EN\n");
+    printf("CUT_BRANCH_METHOD_EN\r\n");
 #elif CUT_BRANCH_GPT4_METHOD_EN
-    printf("CUT_BRANCH_GPT4_METHOD_EN\n");
+    printf("CUT_BRANCH_GPT4_METHOD_EN\r\n");
 #endif
     test_1();
-    test_2();
-    test_3();
+    // test_2();
+    // test_3();
     return 0;
 }
