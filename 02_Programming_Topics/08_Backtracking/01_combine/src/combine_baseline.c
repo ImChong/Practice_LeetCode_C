@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-22 16:12:53
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-31 20:16:48
+ * @LastEditTime : 2023-12-31 20:34:50
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,8 +31,8 @@
 /*                                 GLOBAL VARIABLES                               */
 /*                                                                                */
 /**********************************************************************************/
-int *g_path;          /* 记录当前 k 个数的组合 */
-int g_pathTop;        /* 记录当前数的数量 */
+int *g_currArr;          /* 记录当前 k 个数的组合 */
+int g_currArrTop;        /* 记录当前数的数量 */
 int **g_ans2DArr;       /* 结果二维数组：记录所有 k 个数的组合 */
 int g_ans2DArrTop;         /* 记录当前的组数 */
 
@@ -58,19 +58,19 @@ int g_ans2DArrTop;         /* 记录当前的组数 */
  * @return {void}
  */
 STATIC_FUNC void backtracking(int n, int k, int startNum) {
-    if (g_pathTop == k) {
+    if (g_currArrTop == k) {
         int *temp = (int*)malloc(sizeof(int) * k);
         for (int i = 0; i < k; i++) {
-            temp[i] = g_path[i];
+            temp[i] = g_currArr[i];
         }
         g_ans2DArr[g_ans2DArrTop++] = temp;
         return;
     }
 
     for (int j = startNum; j <= n; j++) {
-        g_path[g_pathTop++] = j;
+        g_currArr[g_currArrTop++] = j;
         backtracking(n, k, j + 1);
-        g_pathTop--;
+        g_currArrTop--;
     }
 }
 
@@ -91,9 +91,9 @@ STATIC_FUNC void backtracking(int n, int k, int startNum) {
  * @return {int} **g_ans2DArr                  结果二维数组
  */
 int **combine(int n, int k, int *returnSize, int **returnColumnSizes) {
-    g_path = (int *)malloc(sizeof(int) * k);
+    g_currArr = (int *)malloc(sizeof(int) * k);
     g_ans2DArr = (int **)malloc(sizeof(int *) * MAX_SIZE);
-    g_pathTop = g_ans2DArrTop = 0;
+    g_currArrTop = g_ans2DArrTop = 0;
 
     backtracking(n, k, 1);
 
