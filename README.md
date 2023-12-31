@@ -178,8 +178,8 @@ To ensure code quality, all shared common code based on different programming to
 > then run
 >
 > ```txt
-> .\00_Basics\02_Clean_Exe\killexe.bat        /* windows system */
-> ./00_Basics/02_Clean_Exe/killexe.sh         /* linux system */
+> .\00_Prerequisite\01_Clean_Exe\killExes.bat         /* windows system */
+> ./00_Prerequisite/01_Clean_Exe/killexe.sh           /* linux system */
 > ```
 >
 > Source code: [killExes.bat](./00_Prerequisite/01_Clean_Exe/killExes.bat) and [killExes.sh](./00_Prerequisite/01_Clean_Exe/killExes.sh).
