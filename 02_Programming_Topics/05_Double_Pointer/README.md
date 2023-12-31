@@ -97,7 +97,7 @@ void twoSum(int* nums, int numsSize, int target) {
 
 以上只是双指针算法的几个例子。这种算法能有效地解决许多问题，通常能减少时间和/或空间复杂性。不过，编写双指针算法需要非常小心，以避免出现越界或其他错误。
 
-## Question List
+## 1.5. Question List
 
 ```txt
 05_Double_Pointer/

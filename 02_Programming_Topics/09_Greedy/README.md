@@ -7,6 +7,7 @@
 - [1. Greedy：贪心算法](#1-greedy贪心算法)
   - [1.1. 示例：硬币找零问题](#11-示例硬币找零问题)
     - [1.1.1. 注意事项](#111-注意事项)
+  - [1.2. Question List](#12-question-list)
 
 ## 1.1. 示例：硬币找零问题
 
@@ -50,3 +51,27 @@ int main() {
 虽然贪心算法在某些问题上非常高效和简单，但它也有局限性。有的问题不能通过贪心算法得到全局最优解，因此在应用贪心算法之前，需要确定问题是否具有贪心选择性质和最优子结构。
 
 总之，贪心算法是一种思想或策略，而非固定的算法框架。它在各种实际问题中有广泛的应用，包括但不限于任务调度、数据压缩和网络路由等。
+
+## 1.2. Question List
+
+```txt
+09_Greedy/
+├── 01_findContentChildren
+├── 02_wiggleMaxLength
+├── 03_maxSubArray
+├── 04_maxProfit
+├── 05_canJump
+├── 06_jump
+├── 07_largestSumAfterKNegations
+├── 08_canCompleteCircuit
+├── 09_candy
+├── 10_lemonadeChange
+├── 11_reconstructQueue
+├── 12_findMinArrowShots
+├── 13_eraseOverlapIntervals
+├── 14_partitionLabels
+├── 15_merge
+├── 16_monotoneIncreasingDigits
+├── 17_minCameraCover
+└── README.md
+```

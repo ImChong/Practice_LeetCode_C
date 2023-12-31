@@ -10,7 +10,7 @@
   - [1.1. 回溯法解决的问题 \& 力扣题目总结](#11-回溯法解决的问题--力扣题目总结)
   - [1.2. 示例：N皇后问题](#12-示例n皇后问题)
   - [1.3. 回溯算法模板框架](#13-回溯算法模板框架)
-  - [Question List](#question-list)
+  - [1.4. Question List](#14-question-list)
 
 ## 1.1. 回溯法解决的问题 & 力扣题目总结
 
@@ -134,7 +134,7 @@ void backtracking(参数) {
 }
 ```
 
-## Question List
+## 1.4. Question List
 
 ```txt
 08_Backtracking/
