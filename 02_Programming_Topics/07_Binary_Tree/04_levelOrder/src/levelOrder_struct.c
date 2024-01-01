@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\07_Binary_Tree\04_levelOrder\src\levelOrder_struct.c
+ * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\07_Binary_Tree\04_levelOrder\src\levelOrder_struct.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-26 18:26:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-08 20:42:47
+ * @LastEditTime : 2024-01-02 02:12:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -119,6 +119,5 @@ int **levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
     freeTreeListQueue(queueHead);
     return resultArray;
 }
-
 
 #endif  /* STRUCT_METHOD_EN */
