@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-01 01:07:22
+ * @LastEditTime : 2024-01-02 02:08:22
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,7 +22,6 @@
  */
 /* standard header file (标准头文件) */
 #include <stdio.h>
-#include <stdlib.h>
 /* common function header file (通用头文件) */
 #include "commonBinaryTree.h"
 /* test helper header file (测试函数头文件) */
