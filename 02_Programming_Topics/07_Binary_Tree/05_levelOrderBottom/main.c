@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\07_Binary_Tree\05_levelOrderBottom\main.c
+ * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\07_Binary_Tree\05_levelOrderBottom\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-20 00:22:39
+ * @LastEditTime : 2024-01-02 02:13:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -81,7 +81,7 @@ int main(int argc, const char *argv[]) {
     int *returnColumnSizes;
 
     /* 函数调用 */
-    int** result = levelOrderBottom_leetCode(root, &returnSize, &returnColumnSizes);
+    int** result = levelOrderBottom(root, &returnSize, &returnColumnSizes);
     print2DArray(result, returnSize, returnColumnSizes);
 
     return 0;
