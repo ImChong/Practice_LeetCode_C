@@ -20,7 +20,14 @@ C language leetcode practice overall folder structure:
   - [test](./01_Common_Functions/test/) - Common function test files.
 - [Programming_Topics](./02_Programming_Topics/) - ([Programming Carl Series](https://programmercarl.com/) / [Labuladong's Algorithm Cheat Sheet](https://labuladong.github.io/algo/home/)) - This folder contains the leetcode practice questions organized by programming topics.
   - [Data_Structure](./02_Programming_Topics/01_Data_Structure/)
-    - TODO...
+    - [Array](./02_Programming_Topics/01_Data_Structure/01_Array/)
+    - [Linked_List](./02_Programming_Topics/01_Data_Structure/02_Linked_List/)
+    - [Hash_Table](./02_Programming_Topics/01_Data_Structure/03_Hash_Table/)
+    - [String](./02_Programming_Topics/01_Data_Structure/04_String/)
+    - [Stack_Queue](./02_Programming_Topics/01_Data_Structure/05_Stack_Queue/)
+    - [Binary_Tree](./02_Programming_Topics/01_Data_Structure/06_Binary_Tree/)
+    - [Monotone_Stack](./02_Programming_Topics/01_Data_Structure/07_Monotone_Stack/)
+    - [Graph_Theory](./02_Programming_Topics/01_Data_Structure/08_Graph_Theory/)
   - [Algorithm](./02_Programming_Topics/02_Algorithm/)
     - TODO...
   - [Design_Pattern](./02_Programming_Topics/03_Design_Pattern/)
