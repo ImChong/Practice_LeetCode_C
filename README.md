@@ -33,7 +33,9 @@ C language leetcode practice overall folder structure:
   - [Design_Pattern](./02_Programming_Topics/03_Design_Pattern/)
     - TODO...
   - [Classic_LeetCode_Topics](./02_Programming_Topics/04_Classic_LeetCode_Topics/)
-    - TODO...
+    - [N_sum](./02_Programming_Topics/04_Classic_LeetCode_Topics/01_N_sum/)
+    - [Buy_Sell_Stock](./02_Programming_Topics/04_Classic_LeetCode_Topics/02_Buy_Sell_Stock/)
+    - [House_Robber](./02_Programming_Topics/04_Classic_LeetCode_Topics/03_House_Robber/)
 - [Misc](./03_Misc/) - This folder contains miscellaneous topics.
   - [Programming_Notes](./03_Misc/00_Programming_Notes/)
   - [Real_World_Problem](./03_Misc/01_Real_World_Problems/)
