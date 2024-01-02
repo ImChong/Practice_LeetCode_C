@@ -1,0 +1,1 @@
+Convert the interface of one class to be compatible with another. Useful for integrating with existing code.

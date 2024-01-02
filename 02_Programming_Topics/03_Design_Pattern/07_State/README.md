@@ -1,0 +1,1 @@
+Allow an object's behavior to change based on internal state. Useful for state machines or workflows.

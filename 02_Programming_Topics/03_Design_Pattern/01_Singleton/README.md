@@ -1,0 +1,1 @@
+Ensure only one instance of a class exists. Useful for things like logging or database connections.

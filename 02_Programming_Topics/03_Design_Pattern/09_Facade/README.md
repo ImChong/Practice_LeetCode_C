@@ -1,0 +1,1 @@
+Provide a simple interface to a complex system. Useful for libraries or frameworks.

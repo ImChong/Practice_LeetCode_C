@@ -1,0 +1,1 @@
+Create objects without specifying the exact class. Useful for abstracting object creation.

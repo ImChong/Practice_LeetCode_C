@@ -1,0 +1,1 @@
+Allow objects to subscribe to events/updates from another object. Useful for event handling.

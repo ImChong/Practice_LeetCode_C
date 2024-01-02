@@ -1,0 +1,1 @@
+Encapsulate a request into an object. Useful for queuing operations, logging, undo/redo.

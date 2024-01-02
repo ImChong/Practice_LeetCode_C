@@ -1,0 +1,1 @@
+Define a family of interchangeable algorithms that can be used through a common interface. Useful for swapping behaviors dynamically.

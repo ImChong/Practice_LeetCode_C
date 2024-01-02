@@ -1,0 +1,1 @@
+Reuse existing objects to minimize memory usage. Useful for things like textures or shared data.
