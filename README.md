@@ -83,7 +83,9 @@ To ensure code quality, all shared common code based on different programming to
 >
 > - The `solutionName_methodNameXX.c` file is the source file for a specific solution method. By toggling the `#define` macro in the `methodCfg.h` file, the corresponding solution method can be enabled or disabled during compilation.
 >
-> For a complete example, please refer to the following file: `\Practice_LeetCode_C\01_Programming_Topics\01_Array\01_binarySearch\main.c`
+> For a complete example, please refer to the following file: `\Practice_LeetCode_C\02_Programming_Topics\01_Data_Structure\01_Array\01_binarySearch\main.c`
+>
+> Flowchart source file: [compilationStructure.drawio](./03_Misc/02_Supplementary_Materials/compilationStructure.drawio) (hediet.vscode-drawio extension required)
 
 ## Build & Run Code
 
