@@ -13,31 +13,16 @@ C language leetcode practice overall folder structure:
 - [Prerequisite](./00_Prerequisite/) - This folder contains the basic configuration files and common function modules before getting started with the local leetcode practice.
   - [VSCode_Settings](./00_Prerequisite/00_VSCode_Settings/) - VSCode settings
   - [Clean_Exe](./00_Prerequisite/01_Clean_Exe/) - Scripts to clean all .exe files
-- [Common_Functions](./01_Common_Functions/) - Common C functions used by different programming topics.
+- [Common_Functions](./01_Common_Functions/) - Common C functions used by different programming topics with quality check workflows deployed.
   - [cfg](./01_Common_Functions/cfg/) - Common function configuration file template.
   - [inc](./01_Common_Functions/inc/) - Common function header files.
   - [src](./01_Common_Functions/src/) - Common function source files.
   - [test](./01_Common_Functions/test/) - Common function test files.
 - [Programming_Topics](./02_Programming_Topics/) - ([Programming Carl Series](https://programmercarl.com/) / [Labuladong's Algorithm Cheat Sheet](https://labuladong.github.io/algo/home/)) - This folder contains the leetcode practice questions organized by programming topics.
-  - [Array](./02_Programming_Topics/01_Array/)
-  - [Linked_List](./02_Programming_Topics/02_Linked_List/)
-  - [Hash_Table](./02_Programming_Topics/03_Hash_Table/)
-  - [String](./02_Programming_Topics/04_String/)
-  - [Double_Pointer](./02_Programming_Topics/05_Double_Pointer/)
-  - [Stack_Queue](./02_Programming_Topics/06_Stack_Queue/)
-  - [Binary_Tree](./02_Programming_Topics/07_Binary_Tree/)
-  - [Backtracking](./02_Programming_Topics/08_Backtracking/)
-  - [Greedy](./02_Programming_Topics/09_Greedy/)
-  - [Dynamic_Programming](./02_Programming_Topics/10_Dynamic_Programming/)
-  - [Monotone_Stack](./02_Programming_Topics/11_Monotone_Stack/)
-  - [Graph_Theory](./02_Programming_Topics/12_Graph_Theory/)
-  - [Binary_Search](./02_Programming_Topics/13_Binary_Search/)
-  - [Breath_First_Search](./02_Programming_Topics/14_Breath_First_Search/)
-  - [Depth_First_Search](./02_Programming_Topics/15_Depth_First_Search/)
-  - [Sliding_Window](./02_Programming_Topics/16_Sliding_Window/)
-  - [Buy_And_Sell](./02_Programming_Topics/17_Buy_And_Sell/)
-  - [House_Robber](./02_Programming_Topics/18_House_Robber/)
-  - [N_Sum](./02_Programming_Topics/19_N_Sum/)
+  - [Data_Structure](./02_Programming_Topics/01_Data_Structure/)
+  - [Algorithm](./02_Programming_Topics/02_Algorithm/)
+  - [Design_Pattern](./02_Programming_Topics/03_Design_Pattern/)
+  - [Classic_LeetCode_Topics](./02_Programming_Topics/04_Classic_LeetCode_Topics/)
 - [Misc](./03_Misc/) - This folder contains miscellaneous topics.
   - [Programming_Notes](./03_Misc/00_Programming_Notes/)
   - [Real_World_Problem](./03_Misc/01_Real_World_Problems/)
