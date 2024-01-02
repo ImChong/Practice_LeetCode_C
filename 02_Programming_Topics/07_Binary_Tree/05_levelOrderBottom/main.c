@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-08-28 09:44:35
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-02 02:13:34
+ * @LastEditTime : 2024-01-02 02:15:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,20 +38,6 @@
 #include "levelOrderBottom.h"
 
 /**
- * @description: 创建树节点
- * =================================================================================
- * @param {int} value                   树节点的数值
- * @return {struct TreeNode} *node      新树节点的指针
- */
-struct TreeNode *newNode(int value) {
-    struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));     /* 初始化树节点：为树节点分配空间 */
-    node->val = value;                                                              /* 树节点的值为 value */
-    node->left = NULL;                                                              /* 树节点的左子节点为 NULL */
-    node->right = NULL;                                                             /* 树节点的右子节点为 NULL */
-    return node;                                                                    /* 返回树节点 */
-}
-
-/**
  * @description: 主函数
  * =================================================================================
  * @param {int} argc        程序入参个数
@@ -67,15 +53,15 @@ int main(int argc, const char *argv[]) {
      *   / \ / \
      *  4  5 6  7
      */
-    struct TreeNode *root = newNode(1);
-    root->left = newNode(2);
-    root->right = newNode(3);
+    struct TreeNode *root = newTreeNode(1);
+    root->left = newTreeNode(2);
+    root->right = newTreeNode(3);
 
-    root->left->left = newNode(4);
-    root->left->right = newNode(5);
+    root->left->left = newTreeNode(4);
+    root->left->right = newTreeNode(5);
 
-    root->right->left = newNode(6);
-    root->right->right = newNode(7);
+    root->right->left = newTreeNode(6);
+    root->right->right = newTreeNode(7);
 
     int returnSize = 0;
     int *returnColumnSizes;
