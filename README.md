@@ -85,7 +85,7 @@ To ensure code quality, all shared common code based on different programming to
 >
 > For a complete example, please refer to the following file: `\Practice_LeetCode_C\02_Programming_Topics\01_Data_Structure\01_Array\01_binarySearch\main.c`
 >
-> Flowchart source code: [compilationStructure.drawio](./03_Misc/02_Supplementary_Materials/compilationStructure.drawio)
+> Flowchart source file: [compilationStructure.drawio](./03_Misc/02_Supplementary_Materials/compilationStructure.drawio) (hediet.vscode-drawio extension required)
 
 ## Build & Run Code
 
