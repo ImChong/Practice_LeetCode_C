@@ -1,0 +1,2 @@
+- [ ] https://swedishembedded.com/design-patterns/
+- [ ] https://marketsplash.com/tutorials/c/c-programming-design-patterns/
