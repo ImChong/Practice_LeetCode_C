@@ -19,6 +19,27 @@ C language local leetcode practice overall folder structure:
   - [src](./01_Common_Functions/src/) - Common function source files.
   - [test](./01_Common_Functions/test/) - Common function test files.
 - [Programming_Topics](./02_Programming_Topics/) - ([Programming Carl Series](https://programmercarl.com/) / [Labuladong's Algorithm Cheat Sheet](https://labuladong.github.io/algo/home/)) - This folder contains the leetcode practice questions organized by programming topics.
+
+  <details>
+  <summary>Data_Structure</summary>
+
+      Array
+
+      Linked_List
+
+      Hash_Table
+
+      String
+
+      Stack_Queue
+
+      Binary_Tree
+
+      Monotone_Stack
+
+      Graph_Theory
+  </details>
+
   - [Data_Structure](./02_Programming_Topics/01_Data_Structure/)
     - [Array](./02_Programming_Topics/01_Data_Structure/01_Array/)
     - [Linked_List](./02_Programming_Topics/01_Data_Structure/02_Linked_List/)
