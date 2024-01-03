@@ -1,9 +1,5 @@
 # Design Pattern (设计模式)
 
-- [ ] https://zhuanlan.zhihu.com/p/392882378
-- [ ] https://swedishembedded.com/design-patterns/
-- [ ] https://marketsplash.com/tutorials/c/c-programming-design-patterns/
-
 ```txt
 03_Design_Pattern/
 ├── 01_Singleton
