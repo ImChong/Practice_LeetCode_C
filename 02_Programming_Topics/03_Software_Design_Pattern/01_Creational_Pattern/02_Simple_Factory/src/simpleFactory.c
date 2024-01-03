@@ -97,7 +97,7 @@ void *createProduct(ProductType type) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description:
+ * @description: 获取产品类型名称
  * =================================================================================
  * @param {ProductType} type                    产品类型
  * @return {const char *} product type name     产品类型名称
