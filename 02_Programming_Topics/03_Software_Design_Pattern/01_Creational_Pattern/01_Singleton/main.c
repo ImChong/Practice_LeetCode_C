@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\03_Software_Design_Pattern\01_Singleton\main.c
+ * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\03_Software_Design_Pattern\01_Creational_Pattern\01_Singleton\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-03 13:07:30
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-03 13:31:49
+ * @LastEditTime : 2024-01-03 16:35:12
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -18,24 +18,6 @@
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                HELPER FUNCTIONS                                */
-/*                                                                                */
-/**********************************************************************************/
-/**
- * @description: demo function
- * =================================================================================
- * @return {void}
- */
-void demoFunction() {
-    /* get singleton */
-    Singleton *s = getSingleton();
-    printf("Singleton value: %d\n", s->value);
-    /* change the value of singleton */
-    s->value = 42;
-}
-
-/**********************************************************************************/
-/*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
@@ -45,9 +27,17 @@ void demoFunction() {
  * @return {void}
  */
 void test_1(void) {
-    demoFunction();
-    /* call demoFunction() again */
-    demoFunction();
+    /* get singleton */
+    Singleton *s = getSingleton();
+    printf("Singleton value: %d\n", s->value);
+
+    /* change the value of singleton */
+    s->value = 42;
+
+    /* get singleton */
+    s = getSingleton();
+    printf("Singleton value: %d\n", s->value);
+
     /* free singleton */
     freeSingleton();
 }
