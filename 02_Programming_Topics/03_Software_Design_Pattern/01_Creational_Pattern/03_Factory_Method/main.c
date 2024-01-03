@@ -3,12 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-04 00:26:57
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-04 00:35:37
+ * @LastEditTime : 2024-01-04 00:40:12
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : factory method main function 工厂方法模式主函数
  */
+/* standard head file 标准头文件 */
+#include <stdlib.h>
 /* factory method head file 工厂方法模式头文件 */
 #include "factoryMethod.h"
 
@@ -23,12 +25,12 @@
  * @return {void}
  */
 void test_1(void) {
-    /* 实际结果 */
+    Factory *factoryA = createFactoryA();
+    Product *productA = factoryA->createProduct(factoryA);
+    productA->use(productA);
 
-    /* 预期结果 */
-
-    /* 比较结果 */
-
+    free(productA);
+    free(factoryA);
 }
 
 /**
@@ -39,6 +41,6 @@ void test_1(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-
+    test_1();
     return 0;
 }
