@@ -3,11 +3,13 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-03 13:07:30
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-03 13:30:32
+ * @LastEditTime : 2024-01-03 13:31:49
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : singleton main file 单例模式主文件
+ *      单例设计模式（Singleton Design Pattern）是一种软件设计模式，用于确保一个类只有一个实例，并提供一个全局访问点来获取这个实例。
+ *      这个模式在需要严格控制如何以及何时访问某个共享资源时非常有用。
  */
 /* standard header file (标准头文件) */
 #include <stdio.h>
