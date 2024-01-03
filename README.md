@@ -8,7 +8,7 @@
 
 ## Workspace Structure
 
-C language leetcode practice overall folder structure:
+C language local leetcode practice overall folder structure:
 
 - [Prerequisite](./00_Prerequisite/) - This folder contains the basic configuration files and common function modules before getting started with the local leetcode practice.
   - [VSCode_Settings](./00_Prerequisite/00_VSCode_Settings/) - VSCode settings
