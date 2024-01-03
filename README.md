@@ -31,7 +31,9 @@ C language local leetcode practice overall folder structure:
   - [Algorithm](./02_Programming_Topics/02_Algorithm/)
     - TODO...
   - [Software_Design_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/)
-    - TODO...
+    - [Creational_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/01_Creational_Pattern/)
+    - [Structural_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/02_Structural_Pattern/)
+    - [Behavioral_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/03_Behavioral_Pattern/)
   - [Classic_LeetCode_Topics](./02_Programming_Topics/04_Classic_LeetCode_Topics/)
     - [N_sum](./02_Programming_Topics/04_Classic_LeetCode_Topics/01_N_sum/)
     - [Buy_Sell_Stock](./02_Programming_Topics/04_Classic_LeetCode_Topics/02_Buy_Sell_Stock/)
