@@ -30,7 +30,7 @@ C language local leetcode practice overall folder structure:
     - [Graph_Theory](./02_Programming_Topics/01_Data_Structure/08_Graph_Theory/)
   - [Algorithm](./02_Programming_Topics/02_Algorithm/)
     - TODO...
-  - [Design_Pattern](./02_Programming_Topics/03_Design_Pattern/)
+  - [Software_Design_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/)
     - TODO...
   - [Classic_LeetCode_Topics](./02_Programming_Topics/04_Classic_LeetCode_Topics/)
     - [N_sum](./02_Programming_Topics/04_Classic_LeetCode_Topics/01_N_sum/)
