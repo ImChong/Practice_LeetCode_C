@@ -3,9 +3,12 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-04 00:27:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-04 00:27:24
+ * @LastEditTime : 2024-01-04 00:34:31
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : factory method source file 工厂方法模式源文件
  */
+/* factory method head file 工厂方法模式头文件 */
+#include "factoryMethod.h"
+
