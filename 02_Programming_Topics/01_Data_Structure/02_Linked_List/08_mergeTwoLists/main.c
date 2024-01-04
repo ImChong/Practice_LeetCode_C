@@ -129,7 +129,7 @@ void Test2(void) {
  * =================================================================================
  * @return {void}
  */
-void test_3(void) {
+void Test3(void) {
     /* 实际结果 */
     printf("input: \n");
     int array1[] = {};
@@ -166,6 +166,6 @@ void test_3(void) {
 int main(int argc, const char *argv[]) {
     Test1();
     Test2();
-    test_3();
+    Test3();
     return 0;
 }

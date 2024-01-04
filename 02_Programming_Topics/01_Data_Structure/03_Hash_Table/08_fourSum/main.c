@@ -138,7 +138,7 @@ void Test2(void) {
  * =================================================================================
  * @return {void}
  */
-void test_3(void) {
+void Test3(void) {
     struct TestStruct test;
     test.testNum = '3';
     int inputArr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -186,6 +186,6 @@ int main(int argc, const char* argv[]) {
 #endif
     Test1();
     Test2();
-    test_3();
+    Test3();
     return 0;
 }

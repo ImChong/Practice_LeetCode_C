@@ -76,7 +76,7 @@ void Test2(void) {
  * =================================================================================
  * @return {void}
  */
-void test_3(void) {
+void Test3(void) {
     /* 实际结果 */
     char ransomNote[] = "aa";
     char magazine[] = "aab";
@@ -109,6 +109,6 @@ int main(int argc, char const *argv[]) {
 #endif
     Test1();
     Test2();
-    test_3();
+    Test3();
     return 0;
 }

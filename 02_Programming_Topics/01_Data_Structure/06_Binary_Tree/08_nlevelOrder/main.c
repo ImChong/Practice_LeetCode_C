@@ -273,7 +273,7 @@ void Test2(void) {
  * =================================================================================
  * @return {void}
  */
-void test_3(void) {
+void Test3(void) {
     /* 预期结果 */
     /* int expected[5][5] = {{1}, {2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13}, {14}}; */
     int **expected = (int **)malloc(sizeof(int *) * TEST_ARR_SIZE);
@@ -384,6 +384,6 @@ void test_3(void) {
 int main(int argc, const char *argv[]) {
     Test1();
     Test2();
-    test_3();
+    Test3();
     return 0;
 }

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-02 09:57:57
  * @LastEditors: Chong Liu liuc12@miamioh.edu
- * @LastEditTime: 2024-01-04 16:02:19
+ * @LastEditTime: 2024-01-04 16:02:51
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -68,7 +68,7 @@ void Test2(void) {
  * =================================================================================
  * @return {void}
  */
-void test_3(void) {
+void Test3(void) {
     /* 实际结果 */
     int nums[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};       /* 有序数组 */
     int numsSize = ARR_SIZE(nums);
@@ -97,6 +97,6 @@ void test_3(void) {
 int main(int argc, const char *argv[]) {
     Test1();
     Test2();
-    test_3();
+    Test3();
     return 0;
 }

@@ -68,7 +68,7 @@ void Test2(void) {
  * =================================================================================
  * @return {void}
  */
-void test_3(void) {
+void Test3(void) {
     /* 实际结果 */
     int nums[] = {1, 2, 3, 4, 5};
     int numsSize = ARR_SIZE(nums);
@@ -97,6 +97,6 @@ void test_3(void) {
 int main(int argc, const char *argv[]) {
     Test1();
     Test2();
-    test_3();
+    Test3();
     return 0;
 }

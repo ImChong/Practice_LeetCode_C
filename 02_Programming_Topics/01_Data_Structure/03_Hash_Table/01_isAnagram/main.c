@@ -71,7 +71,7 @@ void Test2(void) {
  * =================================================================================
  * @return {void}
  */
-void test_3(void) {
+void Test3(void) {
     /* 实际结果 */
     char s[] = "";
     char t[] = "";
@@ -99,6 +99,6 @@ void test_3(void) {
 int main(int argc, char const *argv[]) {
     Test1();
     Test2();
-    test_3();
+    Test3();
     return 0;
 }
