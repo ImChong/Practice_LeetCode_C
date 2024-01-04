@@ -3,11 +3,12 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-04 00:03:18
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-04 00:14:08
+ * @LastEditTime : 2024-01-04 10:42:15
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : simple factory main file 简单工厂模式主文件
+ *      通过传入枚举输出不同的结构体
  */
 /* standard header file 标准头文件 */
 #include <stdio.h>
