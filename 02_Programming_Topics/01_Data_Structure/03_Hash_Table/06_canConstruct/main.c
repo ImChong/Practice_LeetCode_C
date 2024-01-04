@@ -56,7 +56,7 @@ void Test1(void) {
  * =================================================================================
  * @return {void}
  */
-void test_2(void) {
+void Test2(void) {
     /* 实际结果 */
     char ransomNote[] = "aa";
     char magazine[] = "ab";
@@ -108,7 +108,7 @@ int main(int argc, char const *argv[]) {
     printf("HASH_TABLE_METHOD_EN\r\n");
 #endif
     Test1();
-    test_2();
+    Test2();
     test_3();
     return 0;
 }

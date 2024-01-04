@@ -83,7 +83,7 @@ void Test1(void) {
  * =================================================================================
  * @return {void}
  */
-void test_2(void) {
+void Test2(void) {
     /* 实际结果 */
     char *haystack = "leetcode";
     char *needle = "leeto";
@@ -150,7 +150,7 @@ void test_4(void) {
  */
 int main(int argc, const char *argv[]) {
     Test1();
-    test_2();
+    Test2();
     test_3();
     test_4();
     return 0;

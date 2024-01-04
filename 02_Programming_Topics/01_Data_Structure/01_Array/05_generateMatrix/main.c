@@ -70,7 +70,7 @@ void Test1(void) {
  * =================================================================================
  * @return {void}
  */
-void test_2(void) {
+void Test2(void) {
     /* 实际结果 */
     int n = 1;
     int actualRtnRowSize = 0;
@@ -149,7 +149,7 @@ int main(int argc, const char *argv[]) {
     printf("SIMULATION_METHOD_EN\r\n");
 #endif
     Test1();
-    test_2();
+    Test2();
     test_3();
     return 0;
 }

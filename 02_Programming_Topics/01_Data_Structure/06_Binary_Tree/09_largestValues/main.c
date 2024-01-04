@@ -286,7 +286,7 @@ void Test1(void) {
  * =================================================================================
  * @return {void}
  */
-void test_2(void) {
+void Test2(void) {
     /* 预期结果 */
     int expected[] = {1, 3};
 
@@ -330,6 +330,6 @@ int main(int argc, const char *argv[]) {
     printf("====================\n");
     Test1();
     printf("====================\n");
-    test_2();
+    Test2();
     return 0;
 }

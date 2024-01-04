@@ -70,7 +70,7 @@ void Test1(void) {
  * =================================================================================
  * @return {void}
  */
-void test_2(void) {
+void Test2(void) {
     /* 实际结果 */
     int nums[] = {0, 1, 2, 2, 3, 0, 4, 2};
     int numsSize = ARR_SIZE(nums);

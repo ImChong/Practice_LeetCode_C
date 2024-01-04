@@ -78,7 +78,7 @@ void Test1(void) {
  * =================================================================================
  * @return {void}
  */
-void test_2(void) {
+void Test2(void) {
     /* 预期结果 */
     int expect = 5;
 
@@ -111,6 +111,6 @@ void test_2(void) {
  */
 int main(int argc, const char *argv[]) {
     Test1();
-    test_2();
+    Test2();
     return 0;
 }

@@ -60,7 +60,7 @@ void Test1(void) {
  * =================================================================================
  * @return {void}
  */
-void test_2(void) {
+void Test2(void) {
     /* 实际结果 */
     int nums1[] = {4, 9, 5};
     int nums1Size = ARR_SIZE(nums1);
@@ -126,7 +126,7 @@ int main(int argc, char const *argv[]) {
     printf("HASH_TABLE_METHOD_EN\r\n");
 #endif
     Test1();
-    test_2();
+    Test2();
     test_3();
     return 0;
 }

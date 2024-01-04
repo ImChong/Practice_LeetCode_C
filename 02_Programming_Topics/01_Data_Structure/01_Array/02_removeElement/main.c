@@ -49,7 +49,7 @@ void Test1(void) {
  * =================================================================================
  * @return {void}
  */
-void test_2(void) {
+void Test2(void) {
     /* 实际结果 */
     int nums[] = {0, 1, 2, 2, 3, 0, 4, 2};
     int removeVal = 2;
@@ -115,7 +115,7 @@ void test_4(void) {
  */
 int main(int argc, const char *argv[]) {
     Test1();
-    test_2();
+    Test2();
     test_3();
     test_4();
     return 0;
