@@ -40,6 +40,8 @@ C language local leetcode practice overall folder structure:
   - [Software_Design_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/)
     - [Creational_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/01_Creational_Pattern/)
       - [Singleton](./02_Programming_Topics/03_Software_Design_Pattern/01_Creational_Pattern/01_Singleton/)
+      - [Simple_Factory](./02_Programming_Topics/03_Software_Design_Pattern/01_Creational_Pattern/02_Simple_Factory/)
+      - [Factory_Method](./02_Programming_Topics/03_Software_Design_Pattern/01_Creational_Pattern/03_Factory_Method/)
       - TODO...
     - [Structural_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/02_Structural_Pattern/)
       - TODO...
