@@ -29,14 +29,17 @@
  * @return {void}
  */
 void test_1(void) {
+    /* create product */
     ProductA *a = (ProductA *)createProduct(PRODUCT_A);
     ProductB *b = (ProductB *)createProduct(PRODUCT_B);
     ProductC *c = (ProductC *)createProduct(PRODUCT_C);
 
+    /* get product type and print name */
     printf("a->type = %s\n", getProductTypeName(a->type));
     printf("b->type = %s\n", getProductTypeName(b->type));
     printf("c->type = %s\n", getProductTypeName(c->type));
 
+    /* free space */
     free(a);
     free(b);
     free(c);
