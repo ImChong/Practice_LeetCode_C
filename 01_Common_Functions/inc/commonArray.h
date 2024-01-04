@@ -47,10 +47,10 @@ int validateArray(char testNum,
                   int *expectArr, int expectLen,
                   int *actualArr, int actualLen,
                   int needSort);                              /* 验证数组 */
-int validate2DAr  ray(char testNum,
-                      int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
-                      int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
-                      int needSort);                          /* 验证二维数组 */
+int validate2DArray(char testNum,
+                    int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
+                    int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
+                    int needSort);                          /* 验证二维数组 */
 
 
 #endif  /* __COMMON_ARRAY_H */  /* NOLINT(build/header_guard) */
