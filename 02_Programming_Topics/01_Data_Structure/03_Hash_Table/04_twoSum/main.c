@@ -34,7 +34,7 @@
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 实际结果 */
     int nums[] = {2, 7, 11, 15};
     int numsSize = ARR_SIZE(nums);
@@ -146,7 +146,7 @@ int main(int argc, char const *argv[]) {
 #elif HASH_TABLE_METHOD_EN
     printf("HASH_TABLE_METHOD_EN\r\n");
 #endif
-    test_1();
+    Test1();
     test_2();
     test_3();
     test_4();

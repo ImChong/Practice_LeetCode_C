@@ -30,7 +30,7 @@
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 实际结果 */
     int nums[] = {3, 2, 2, 3};
     int removeVal = 3;
@@ -114,7 +114,7 @@ void test_4(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    test_1();
+    Test1();
     test_2();
     test_3();
     test_4();

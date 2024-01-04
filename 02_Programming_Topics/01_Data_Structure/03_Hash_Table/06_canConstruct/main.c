@@ -36,7 +36,7 @@
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 实际结果 */
     char ransomNote[] = "a";
     char magazine[] = "b";
@@ -107,7 +107,7 @@ int main(int argc, char const *argv[]) {
 #elif HASH_TABLE_METHOD_EN
     printf("HASH_TABLE_METHOD_EN\r\n");
 #endif
-    test_1();
+    Test1();
     test_2();
     test_3();
     return 0;

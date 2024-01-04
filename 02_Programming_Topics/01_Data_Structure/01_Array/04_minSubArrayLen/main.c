@@ -30,7 +30,7 @@
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 实际结果 */
     int nums[] = {2, 3, 1, 2, 4, 3};
     int numsSize = ARR_SIZE(nums);
@@ -95,7 +95,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    test_1();
+    Test1();
     test_2();
     test_3();
     return 0;

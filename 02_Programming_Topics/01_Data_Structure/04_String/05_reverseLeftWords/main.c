@@ -58,7 +58,7 @@ char *dynamicPassword(char *password, int target) {
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 实际结果 */
     char s[] = "s3cur1tyC0d3";
     int target = 4;
@@ -133,7 +133,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    test_1();
+    Test1();
     test_2();
     test_3();
     return 0;

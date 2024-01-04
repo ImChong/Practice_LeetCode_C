@@ -33,7 +33,7 @@
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 实际结果 */
     int n = 4;
     int k = 2;
@@ -167,7 +167,7 @@ int main(int argc, const char *argv[]) {
 #elif CUT_BRANCH_GPT4_METHOD_EN
     printf("CUT_BRANCH_GPT4_METHOD_EN\r\n");
 #endif
-    test_1();
+    Test1();
     test_2();
     test_3();
     return 0;

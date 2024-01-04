@@ -63,7 +63,7 @@ void validateSingleValue(char testNum, int expect, int actual) {
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
 
 }
 

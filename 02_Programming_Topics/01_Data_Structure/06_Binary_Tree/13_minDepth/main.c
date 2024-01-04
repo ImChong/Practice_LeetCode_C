@@ -48,7 +48,7 @@ int minDepth(struct TreeNode *root){
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 预期结果 */
     int expect = 2;
 
@@ -110,7 +110,7 @@ void test_2(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    test_1();
+    Test1();
     test_2();
     return 0;
 }

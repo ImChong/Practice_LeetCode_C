@@ -26,7 +26,7 @@
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* get singleton */
     Singleton *s = getSingleton();
     printf("Singleton value: %d\n", s->value);
@@ -55,6 +55,6 @@ void test_1(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    test_1();
+    Test1();
     return 0;
 }

@@ -2,8 +2,8 @@
  * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\01_Data_Structure\01_Array\01_binarySearch\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-02 09:57:57
- * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-02 14:19:19
+ * @LastEditors: Chong Liu liuc12@miamioh.edu
+ * @LastEditTime: 2024-01-04 16:01:06
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,7 +30,7 @@
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 实际结果 */
     int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
     int numsSize = ARR_SIZE(nums);
@@ -95,7 +95,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    test_1();
+    Test1();
     test_2();
     test_3();
     return 0;

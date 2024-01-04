@@ -43,7 +43,7 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
 
 }
 
@@ -78,6 +78,6 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    test_1();
+    Test1();
     return 0;
 }

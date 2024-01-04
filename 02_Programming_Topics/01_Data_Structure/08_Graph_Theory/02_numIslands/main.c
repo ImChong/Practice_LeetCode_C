@@ -35,7 +35,7 @@ int numIslands(char **grid, int gridSize, int *gridColSize) {
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 实际结果 */
 
     /* 预期结果 */

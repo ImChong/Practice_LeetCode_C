@@ -36,7 +36,7 @@ int wiggleMaxLength(int* nums, int numsSize){
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 实际结果 */
 
     /* 预期结果 */

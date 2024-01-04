@@ -63,7 +63,7 @@ bool repeatedSubstringPattern(char *s){
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 实际结果 */
     char *s = "abab";
     bool actual = repeatedSubstringPattern(s);
@@ -126,7 +126,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    test_1();
+    Test1();
     test_2();
     test_3();
     return 0;

@@ -249,7 +249,7 @@ void freeTree(struct TreeNode *root) {
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 预期结果 */
     int expected[] = {1, 3, 9};
 
@@ -328,7 +328,7 @@ void test_2(void) {
  */
 int main(int argc, const char *argv[]) {
     printf("====================\n");
-    test_1();
+    Test1();
     printf("====================\n");
     test_2();
     return 0;

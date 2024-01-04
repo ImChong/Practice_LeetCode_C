@@ -98,7 +98,7 @@ void runTest(struct TestStruct *test) {
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     struct TestStruct test;
     test.testNum = '1';
     int inputArr[] = {1, 0, -1, 0, -2, 2};
@@ -184,7 +184,7 @@ int main(int argc, const char* argv[]) {
 #elif HASH_TABLE_METHOD_EN
     printf("HASH_TABLE_METHOD_EN\r\n");
 #endif
-    test_1();
+    Test1();
     test_2();
     test_3();
     return 0;

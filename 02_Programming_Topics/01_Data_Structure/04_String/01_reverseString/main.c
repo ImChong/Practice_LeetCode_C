@@ -54,7 +54,7 @@ void reverseString(char *s, int sSize) {
  * =================================================================================
  * @return {void}
  */
-void test_1(void) {
+void Test1(void) {
     /* 实际结果 */
     // char *s = "hello";                                  /* strlen: 5, ARR_SIZE: 8, 字符串不可修改 */
     char s[] = "hello";                                 /* strlen: 5, ARR_SIZE: 6, 字符串可修改 */
@@ -123,7 +123,7 @@ void test_3(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    test_1();
+    Test1();
     test_2();
     test_3();
     return 0;
