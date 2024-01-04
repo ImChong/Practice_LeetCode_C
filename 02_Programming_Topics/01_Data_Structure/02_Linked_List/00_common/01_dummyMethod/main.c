@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\01_dummyMethod\main.c
+ * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\01_Data_Structure\02_Linked_List\00_common\01_dummyMethod\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 14:31:53
+ * @LastEditTime : 2024-01-04 14:40:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,14 +30,14 @@
  */
 void test_1(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = myLinkedListCreate();
+    DummyLinkedList *actualDummy = dummyLinkedListCreate();
     dummyLinkedListAddAtHead(actualDummy, 1);
     dummyLinkedListAddAtTail(actualDummy, 3);
     dummyLinkedListAddAtIndex(actualDummy, 1, 2);
     dummyLinkedListDeleteAtIndex(actualDummy, 0);
 
     /* 预期结果 */
-    DummyLinkedList *expectDummy = myLinkedListCreate();
+    DummyLinkedList *expectDummy = dummyLinkedListCreate();
     int nums[] = {2, 3};
     dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
 
@@ -55,12 +55,12 @@ void test_1(void) {
  */
 void test_2(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = myLinkedListCreate();
+    DummyLinkedList *actualDummy = dummyLinkedListCreate();
     dummyLinkedListAddAtHead(actualDummy, 1);
     dummyLinkedListDeleteAtIndex(actualDummy, 0);
 
     /* 预期结果 */
-    DummyLinkedList *expectDummy = myLinkedListCreate();
+    DummyLinkedList *expectDummy = dummyLinkedListCreate();
 
     /* 比较结果 */
     validateDummyLinkedList('2', expectDummy, actualDummy);
@@ -76,7 +76,7 @@ void test_2(void) {
  */
 void test_3(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = myLinkedListCreate();
+    DummyLinkedList *actualDummy = dummyLinkedListCreate();
     dummyLinkedListAddAtTail(actualDummy, 1);
     dummyLinkedListAddAtTail(actualDummy, 2);
     dummyLinkedListAddAtTail(actualDummy, 1);
@@ -86,7 +86,7 @@ void test_3(void) {
     dummyLinkedListDeleteElement(actualDummy, 2);
 
     /* 预期结果 */
-    DummyLinkedList *expectDummy = myLinkedListCreate();
+    DummyLinkedList *expectDummy = dummyLinkedListCreate();
     int nums[] = {1, 1, 1};
     dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
 
@@ -99,7 +99,7 @@ void test_3(void) {
 
 void test_4(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = myLinkedListCreate();
+    DummyLinkedList *actualDummy = dummyLinkedListCreate();
     dummyLinkedListAddAtTail(actualDummy, 1);
     dummyLinkedListAddAtTail(actualDummy, 2);
     dummyLinkedListAddAtTail(actualDummy, 1);
