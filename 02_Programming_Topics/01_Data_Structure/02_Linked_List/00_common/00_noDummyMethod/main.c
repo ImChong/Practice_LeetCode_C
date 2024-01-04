@@ -92,7 +92,7 @@ void Test3(void) {
     linkedListFree(expectList);
 }
 
-void test_4(void) {
+void Test4(void) {
     /* 实际结果 */
     struct ListNode *actualList = NULL;
     actualList = linkedListAddAtTail(actualList, 1);
@@ -130,6 +130,6 @@ int main(int argc, const char *argv[]) {
     Test1();
     Test2();
     Test3();
-    test_4();
+    Test4();
     return 0;
 }

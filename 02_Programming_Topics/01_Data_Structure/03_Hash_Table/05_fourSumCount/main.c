@@ -114,7 +114,7 @@ void Test3(void) {
  * =================================================================================
  * @return {void}
  */
-void test_4(void) {
+void Test4(void) {
     /* 实际结果 */
     int A[] = {0};
     int B[] = {0};
@@ -150,6 +150,6 @@ int main(int argc, char const *argv[]) {
     Test1();
     Test2();
     Test3();
-    test_4();
+    Test4();
     return 0;
 }

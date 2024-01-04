@@ -97,7 +97,7 @@ void Test3(void) {
     dummyLinkedListFree(actualDummy);
 }
 
-void test_4(void) {
+void Test4(void) {
     /* 实际结果 */
     DummyLinkedList *actualDummy = dummyLinkedListCreate();
     dummyLinkedListAddAtTail(actualDummy, 1);
@@ -136,6 +136,6 @@ int main(int argc, const char *argv[]) {
     Test1();
     Test2();
     Test3();
-    test_4();
+    Test4();
     return 0;
 }
