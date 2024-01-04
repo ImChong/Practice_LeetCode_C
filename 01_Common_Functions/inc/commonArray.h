@@ -2,8 +2,8 @@
  * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonArray.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
- * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-04 02:39:34
+ * @LastEditors: Chong Liu liuc12@miamioh.edu
+ * @LastEditTime: 2024-01-04 16:10:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,13 +44,13 @@ int free2DArray(int ***arrPtr, int arrSize);                    /* 释放二维�
 /*                                                                                */
 /**********************************************************************************/
 int validateArray(char testNum,
-                    int *expectArr, int expectLen,
-                    int *actualArr, int actualLen,
-                    int needSort);                              /* 验证数组 */
-int validate2DArray(char testNum,
-                        int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
-                        int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
-                        int needSort);                          /* 验证二维数组 */
+                  int *expectArr, int expectLen,
+                  int *actualArr, int actualLen,
+                  int needSort);                              /* 验证数组 */
+int validate2DAr  ray(char testNum,
+                      int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
+                      int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
+                      int needSort);                          /* 验证二维数组 */
 
 
 #endif  /* __COMMON_ARRAY_H */  /* NOLINT(build/header_guard) */
