@@ -113,7 +113,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListGetIndexes) {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* dummyLinkedListFromArray */
+/* DLinkedList_FromArray */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListFromArray) {
     /* TODO */

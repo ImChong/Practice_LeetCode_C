@@ -219,7 +219,7 @@ int *DLinkedList_GetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize
  * @param {int} numsSize            数组大小
  * @return {void}
  */
-void dummyLinkedListFromArray(DummyLinkedList *list, int *nums, int numsSize) {
+void DLinkedList_FromArray(DummyLinkedList *list, int *nums, int numsSize) {
     for (int i = 0; i < numsSize; i++) {
         DLinkedList_AddAtTail(list, nums[i]);
     }

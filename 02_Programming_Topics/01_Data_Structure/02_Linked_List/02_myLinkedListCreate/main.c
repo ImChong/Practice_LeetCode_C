@@ -38,7 +38,7 @@ void Test1(void) {
     /* 预期结果 */
     DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {2, 3};
-    dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
+    DLinkedList_FromArray(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateDummyLinkedList('1', expectDummy, actualDummy);
@@ -72,7 +72,7 @@ void Test2(void) {
     /* 预期结果 */
     DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {5, 2, 3, 7, 2};
-    dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
+    DLinkedList_FromArray(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateDummyLinkedList('2', expectDummy, actualDummy);
@@ -103,7 +103,7 @@ void Test3(void) {
     /* 预期结果 */
     DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {1, 7, 2, 1};
-    dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
+    DLinkedList_FromArray(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     validateDummyLinkedList('3', expectDummy, actualDummy);
