@@ -793,7 +793,7 @@ struct TreeNode *BTree_ArrayInit(int* arr, int arrSize) {
  * @param {int} *returnSize     数组长度指针
  * @return {int} *result        转换后的数组指针
  */
-int *treeToArray(struct TreeNode *root, int *returnSize) {
+int *BTree_ToArray(struct TreeNode *root, int *returnSize) {
     if (!root) {
         *returnSize = 0;
         return NULL;
