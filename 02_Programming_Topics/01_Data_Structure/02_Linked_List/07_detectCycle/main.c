@@ -118,7 +118,7 @@ void Test3(void) {
     struct ListNode *expect = NULL;
 
     /* 比较结果 */
-    validateLinkedList('3', expect, actual);
+    Validate_LinkedList('3', expect, actual);
 
     /* 释放内存 */
     LinkedList_Free(arrList);

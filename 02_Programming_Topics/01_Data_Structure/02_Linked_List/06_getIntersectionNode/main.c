@@ -156,7 +156,7 @@ void Test3(void) {
     struct ListNode *expect = NULL;
 
     /* 比较结果 */
-    validateLinkedList('3', expect, intersectNode);
+    Validate_LinkedList('3', expect, intersectNode);
 
     /* 释放内存 */
     LinkedList_Free(listA);

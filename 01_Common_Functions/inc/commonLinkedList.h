@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-06 00:40:11
+ * @LastEditTime : 2024-01-06 00:41:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -52,7 +52,7 @@ void LinkedList_Free(struct ListNode *head);         /* 释放链表 */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList);       /* 验证链表 */
+void Validate_LinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList);       /* 验证链表 */
 
 
 #endif  /* __COMMON_LINKED_LIST_H */    /* NOLINT(build/header_guard) */

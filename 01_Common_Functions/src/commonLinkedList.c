@@ -249,7 +249,7 @@ void LinkedList_Free(struct ListNode *head) {
  * @param {ListNode} *actualList    结果
  * @return {void}
  */
-void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList) {
+void Validate_LinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList) {
     int isSuccess = COMMON_TRUE;
 
     struct ListNode *curr1 = expectList, *curr2 = actualList;

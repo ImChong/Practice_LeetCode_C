@@ -39,7 +39,7 @@ void Test1(void) {
     struct ListNode *expectList = LinkedList_FromArray(nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateLinkedList('1', expectList, actualList);
+    Validate_LinkedList('1', expectList, actualList);
 
     /* 释放内存空间 */
     LinkedList_Free(actualList);
@@ -62,7 +62,7 @@ void Test2(void) {
     struct ListNode *expectList = LinkedList_FromArray(nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateLinkedList('2', expectList, actualList);
+    Validate_LinkedList('2', expectList, actualList);
 
     /* 释放内存空间 */
     LinkedList_Free(actualList);
@@ -85,7 +85,7 @@ void Test3(void) {
     struct ListNode *expectList = LinkedList_FromArray(nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateLinkedList('3', expectList, actualList);
+    Validate_LinkedList('3', expectList, actualList);
 
     /* 释放内存空间 */
     LinkedList_Free(actualList);

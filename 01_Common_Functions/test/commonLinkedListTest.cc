@@ -134,7 +134,7 @@ TEST_F(TestCommonLinkedList, TestLinkedListFree) {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* validateLinkedList */
+/* Validate_LinkedList */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedList, TestValidateLinkedList) {
     /* TODO */
