@@ -85,7 +85,7 @@ struct ListNode *LinkedList_AddAtTail(struct ListNode *head, int val) {
  * @param {int} val             目标节点值
  * @return {ListNode *} head    头节点指针
  */
-struct ListNode *linkedListAddAtIndex(struct ListNode *head, int index, int val) {
+struct ListNode *LinkedList_AddAtIndex(struct ListNode *head, int index, int val) {
     struct ListNode *newNode = (struct ListNode *)malloc(sizeof(struct ListNode));
     newNode->val = val;
     newNode->next = NULL;
