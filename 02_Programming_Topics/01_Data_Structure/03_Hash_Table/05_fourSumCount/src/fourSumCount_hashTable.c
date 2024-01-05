@@ -74,7 +74,7 @@ int fourSumCount(int *nums1, int nums1Size, int *nums2, int nums2Size,
         }
     }
 
-    freeHashTable(hashTable);                                                       /* 释放哈希表 */
+    HashTable_Free(hashTable);                                                       /* 释放哈希表 */
     return count;                                                                   /* 返回计数器 */
 }
 

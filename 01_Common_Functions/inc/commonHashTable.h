@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-05 21:31:53
+ * @LastEditTime : 2024-01-05 21:32:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -47,7 +47,7 @@ void HashTable_Remove(struct HashTable *table, int val);                 /* 删�
 /*                                                                                */
 /**********************************************************************************/
 void HashTable_Print(struct HashTable *table);                           /* 打印哈希表 */
-void freeHashTable(struct HashTable *table);                            /* 释放哈希表 */
+void HashTable_Free(struct HashTable *table);                            /* 释放哈希表 */
 
 
 #endif  /* __COMMON_HASH_TABLE_H */     /* NOLINT(build/header_guard) */

@@ -89,9 +89,9 @@ TEST_F(TestCommonHashTable, TestHashTable_Print) {
 }
 
 /* ============================================================================== */
-/* freeHashTable */
+/* HashTable_Free */
 /* ============================================================================== */
-TEST_F(TestCommonHashTable, TestFreeHashTable) {
+TEST_F(TestCommonHashTable, TestHashTable_Free) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }

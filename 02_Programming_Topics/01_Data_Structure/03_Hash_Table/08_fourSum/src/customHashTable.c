@@ -94,7 +94,7 @@ struct HashNode *HashTable_Search(struct HashTable *table, int val)  {
  * @param {HashTable} *table    哈希表
  * @return {void}
  */
-void freeHashTable(struct HashTable *table) {
+void HashTable_Free(struct HashTable *table) {
     for (int i = 0; i < table->size; i++) {                                             /* 遍历哈希表 */
         struct HashNode *currentNode = table->hashSlots[i];                                 /* 获取哈希表的哈希节点 */
         while (currentNode) {                                                               /* 遍历哈希节点 */
