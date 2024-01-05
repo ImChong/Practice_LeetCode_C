@@ -112,7 +112,7 @@ int Array_Sort2D(int **arr, int arrSize, int *arrColSizes) {
  * @param {int} arrSize         数组大小
  * @return {int}                打印结果
  */
-int ArrayPrint(int *arr, int arrSize) {
+int Array_Print(int *arr, int arrSize) {
     if (printf("Arr (len: %d): [", arrSize) < 0) {
         return COMMON_ERR;
     }
@@ -245,8 +245,8 @@ int ValidateArray(char testNum, int *expectArr, int expectLen, int *actualArr, i
         printf(" - ❌ Test %c failed\n", testNum);
     }
     printf("=========================\n");
-    printf("- Expect: "); ArrayPrint(expectArr, expectLen);
-    printf("- Actual: "); ArrayPrint(actualArr, actualLen);
+    printf("- Expect: "); Array_Print(expectArr, expectLen);
+    printf("- Actual: "); Array_Print(actualArr, actualLen);
     printf("\n");
     if (isSuccess) {
         return COMMON_OK;

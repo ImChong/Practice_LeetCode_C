@@ -140,7 +140,7 @@ TEST_F(TestCommonArray, TestSort2DArray) {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* ArrayPrint */
+/* Array_Print */
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestPrintArray) {
     /* 准备数据 */
@@ -148,11 +148,11 @@ TEST_F(TestCommonArray, TestPrintArray) {
 
     /* 运行结果 */
     printf("============================================================ Print Start.\n");
-    int result = ArrayPrint(arr, 5);
+    int result = Array_Print(arr, 5);
     printf("============================================================ Print End.\n");
 
     /* 检查结果 */
-    EXPECT_EQ(COMMON_OK, result) << "Error occurred in ArrayPrint";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in Array_Print";
 }
 
 /* ============================================================================== */
