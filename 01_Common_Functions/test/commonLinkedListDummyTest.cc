@@ -121,7 +121,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListFromArray) {
 }
 
 /* ============================================================================== */
-/* dummyLinkedListPrint */
+/* DLinkedList_Print */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListPrint) {
     /* TODO */

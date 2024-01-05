@@ -231,7 +231,7 @@ void DLinkedList_FromArray(DummyLinkedList *list, int *nums, int numsSize) {
  * @param {DummyLinkedList} *list      虚拟头节点
  * @return {void}
  */
-void dummyLinkedListPrint(DummyLinkedList *list) {
+void DLinkedList_Print(DummyLinkedList *list) {
     printf("linked list (size: %d): Dummy -> ", list->size);    /* 打印链表长度 */
 
     for (int i = 0; i < list->size; i++) {                      /* 循环打印链表节点数值 */
@@ -289,8 +289,8 @@ void validateDummyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedL
         printf(" - ❌ Test %c Failed\n", testNum);                                  /* 打印未通过信息 */
     }
     printf("=========================\n");                                      /* 打印分割线 */
-    printf("- Expect: "); dummyLinkedListPrint(expect);                         /* 打印预期结果 */
-    printf("- Actual: "); dummyLinkedListPrint(actual);                         /* 打印实际结果 */
+    printf("- Expect: "); DLinkedList_Print(expect);                         /* 打印预期结果 */
+    printf("- Actual: "); DLinkedList_Print(actual);                         /* 打印实际结果 */
     printf("\n");
 }
 
