@@ -182,18 +182,18 @@ TEST_F(TestCommonArray, TestPrint2DArray) {
 }
 
 /* ============================================================================== */
-/* freeArray */
+/* ArrayFree */
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestFreeArray) {
     /* 准备数据 */
     int *arr = (int *)malloc(sizeof(int) * 5);              /* NOLINT(readability/casting) */
 
     /* 运行结果 */
-    int result = freeArray(&arr);
+    int result = ArrayFree(&arr);
 
     /* 比较结果 */
-    EXPECT_EQ(nullptr, arr) << "Error occurred in freeArray";
-    EXPECT_EQ(COMMON_OK, result) << "Error occurred in freeArray result";
+    EXPECT_EQ(nullptr, arr) << "Error occurred in ArrayFree";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in ArrayFree result";
 }
 
 /* ============================================================================== */
