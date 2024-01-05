@@ -136,7 +136,7 @@ void DLinkedList_AddAtIndex(DummyLinkedList *dummyHead, int index, int val) {
  * @param {int} index                       索引
  * @return {void}
  */
-void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index) {
+void DLinkedList_DeleteAtIndex(DummyLinkedList *dummyHead, int index) {
     if (index < 0 || index >= dummyHead->size) {        /* 输入校验 */
         return;
     }
