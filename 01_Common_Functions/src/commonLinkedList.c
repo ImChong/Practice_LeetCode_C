@@ -181,7 +181,7 @@ int *LinkedList_GetIndexes(struct ListNode *head, int val, int *returnSize) {
  * @param {int} size                    数组大小
  * @return {struct ListNode} *head      头节点指针
  */
-struct ListNode *LinkedList_FromArray(int *array, int size) {
+struct ListNode *LinkedList_ArrayInit(int *array, int size) {
     struct ListNode *head = NULL;           /* 头节点指针 */
     struct ListNode *currentNode = NULL;    /* 当前节点指针 */
 

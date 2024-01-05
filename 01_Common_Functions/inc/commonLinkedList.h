@@ -43,7 +43,7 @@ int *LinkedList_GetIndexes(struct ListNode *head, int val, int *returnSize);    
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-struct ListNode *LinkedList_FromArray(int *array, int size);       /* 将数组转换为链表 */
+struct ListNode *LinkedList_ArrayInit(int *array, int size);       /* 将数组转换为链表 */
 void LinkedList_Print(struct ListNode *head);        /* 打印链表 */
 void LinkedList_Free(struct ListNode *head);         /* 释放链表 */
 

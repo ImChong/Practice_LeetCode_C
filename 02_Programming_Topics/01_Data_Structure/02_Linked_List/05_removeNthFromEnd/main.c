@@ -81,7 +81,7 @@ void Test1(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5};
     int arrSize = ARR_SIZE(arr);
-    struct ListNode *newList = LinkedList_FromArray(arr, arrSize);
+    struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
     int n = 2;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
@@ -89,7 +89,7 @@ void Test1(void) {
     /* {1, 2, 3, 5} */
     int expectArr[] = {1, 2, 3, 5};
     int expectArrSize = ARR_SIZE(expectArr);
-    struct ListNode *expectList = LinkedList_FromArray(expectArr, expectArrSize);
+    struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
     /* 比较结果 */
     Validate_LinkedList('1', expectList, ansList);
@@ -110,7 +110,7 @@ void Test2(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5};
     int arrSize = ARR_SIZE(arr);
-    struct ListNode *newList = LinkedList_FromArray(arr, arrSize);
+    struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
     int n = 7;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
@@ -118,7 +118,7 @@ void Test2(void) {
     /* {1, 2, 3, 4, 5} */
     int expectArr[] = {1, 2, 3, 4, 5};
     int expectArrSize = ARR_SIZE(expectArr);
-    struct ListNode *expectList = LinkedList_FromArray(expectArr, expectArrSize);
+    struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
     /* 比较结果 */
     Validate_LinkedList('2', expectList, ansList);
@@ -139,7 +139,7 @@ void Test3(void) {
     /* 实际结果 */
     int arr[] = {1};
     int arrSize = ARR_SIZE(arr);
-    struct ListNode *newList = LinkedList_FromArray(arr, arrSize);
+    struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
     int n = 1;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
@@ -147,7 +147,7 @@ void Test3(void) {
     /* {} */
     int expectArr[] = {};
     int expectArrSize = ARR_SIZE(expectArr);
-    struct ListNode *expectList = LinkedList_FromArray(expectArr, expectArrSize);
+    struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
     /* 比较结果 */
     Validate_LinkedList('3', expectList, ansList);
@@ -167,7 +167,7 @@ void Test4(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5};
     int arrSize = ARR_SIZE(arr);
-    struct ListNode *newList = LinkedList_FromArray(arr, arrSize);
+    struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
     int n = 5;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
@@ -175,7 +175,7 @@ void Test4(void) {
     /* {2, 3, 4, 5} */
     int expectArr[] = {2, 3, 4, 5};
     int expectArrSize = ARR_SIZE(expectArr);
-    struct ListNode *expectList = LinkedList_FromArray(expectArr, expectArrSize);
+    struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
     /* 比较结果 */
     Validate_LinkedList('4', expectList, ansList);

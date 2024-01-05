@@ -36,7 +36,7 @@ void Test1(void) {
 
     /* 预期结果 */
     int nums[] = {2, 3};
-    struct ListNode *expectList = LinkedList_FromArray(nums, ARR_SIZE(nums));
+    struct ListNode *expectList = LinkedList_ArrayInit(nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     Validate_LinkedList('1', expectList, actualList);
@@ -59,7 +59,7 @@ void Test2(void) {
 
     /* 预期结果 */
     int nums[] = {};
-    struct ListNode *expectList = LinkedList_FromArray(nums, ARR_SIZE(nums));
+    struct ListNode *expectList = LinkedList_ArrayInit(nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     Validate_LinkedList('2', expectList, actualList);
@@ -82,7 +82,7 @@ void Test3(void) {
 
     /* 预期结果 */
     int nums[] = {1, 1, 1};
-    struct ListNode *expectList = LinkedList_FromArray(nums, ARR_SIZE(nums));
+    struct ListNode *expectList = LinkedList_ArrayInit(nums, ARR_SIZE(nums));
 
     /* 比较结果 */
     Validate_LinkedList('3', expectList, actualList);

@@ -1,5 +1,5 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonBinaryTree.h
+ * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonBinaryTree.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:27:05
  * @LastEditors: Chong Liu liuc12@miamioh.edu
