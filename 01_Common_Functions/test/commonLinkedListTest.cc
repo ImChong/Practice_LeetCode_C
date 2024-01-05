@@ -105,7 +105,7 @@ TEST_F(TestCommonLinkedList, TestLinkedListGetIndexes) {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* linkedListFromArray */
+/* LinkedList_FromArray */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedList, TestLinkedListFromArray) {
     /* TODO */

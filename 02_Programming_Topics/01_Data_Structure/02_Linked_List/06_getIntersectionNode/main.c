@@ -75,10 +75,10 @@ void Test1(void) {
     /* 实际结果 */
     int arrA[] = {4, 1, 8, 4, 5};
     int arrASize = ARR_SIZE(arrA);
-    struct ListNode *listA = linkedListFromArray(arrA, arrASize);
+    struct ListNode *listA = LinkedList_FromArray(arrA, arrASize);
     int arrB[] = {5, 0, 1};
     int arrBSize = ARR_SIZE(arrB);
-    struct ListNode *listB = linkedListFromArray(arrB, arrBSize);
+    struct ListNode *listB = LinkedList_FromArray(arrB, arrBSize);
     /* 将链表B的尾结点指向链表A的第二个结点 */
     struct ListNode *current = listB;
     while (current->next != NULL) {
@@ -111,10 +111,10 @@ void Test2(void) {
     /* 实际结果 */
     int arrA[] = {0, 9, 1, 2, 4};
     int arrASize = ARR_SIZE(arrA);
-    struct ListNode *listA = linkedListFromArray(arrA, arrASize);
+    struct ListNode *listA = LinkedList_FromArray(arrA, arrASize);
     int arrB[] = {3, 2, 4};
     int arrBSize = ARR_SIZE(arrB);
-    struct ListNode *listB = linkedListFromArray(arrB, arrBSize);
+    struct ListNode *listB = LinkedList_FromArray(arrB, arrBSize);
     /* 将链表B的尾结点指向链表A的第四个结点 */
     struct ListNode *current = listB;
     while (current->next != NULL) {
@@ -145,10 +145,10 @@ void Test3(void) {
     /* 实际结果 */
     int arrA[] = {2, 6, 4};
     int arrASize = ARR_SIZE(arrA);
-    struct ListNode *listA = linkedListFromArray(arrA, arrASize);
+    struct ListNode *listA = LinkedList_FromArray(arrA, arrASize);
     int arrB[] = {1, 5};
     int arrBSize = ARR_SIZE(arrB);
-    struct ListNode *listB = linkedListFromArray(arrB, arrBSize);
+    struct ListNode *listB = LinkedList_FromArray(arrB, arrBSize);
 
     struct ListNode *intersectNode = getIntersectionNode(listA, listB);
 
