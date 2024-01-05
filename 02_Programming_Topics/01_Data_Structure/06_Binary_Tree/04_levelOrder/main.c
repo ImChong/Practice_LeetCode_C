@@ -128,7 +128,7 @@ void test_levelOrderTraversal_CommonFunc(void) {
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    printTestTree();
+    BTree_PrintTest();
     printf("--------------------\r\n");
 #if ARRAY_METHOD_EN
     printf("ARRAY_METHOD_EN\n");
