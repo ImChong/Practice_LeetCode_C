@@ -695,7 +695,7 @@ int BTree_ListQueueIsFull(TreeListQueue *queue) {
  * @param {TreeListQueue} *queue    二叉树节点链表队列指针
  * @return {void}
  */
-void printTreeListQueue(TreeListQueue *queue) {
+void BTree_ListQueuePrint(TreeListQueue *queue) {
     printf("TreeListQueue (size = %d): [", queue->size);
     struct TreeListNode *current = queue->head;
     while (current != NULL) {
