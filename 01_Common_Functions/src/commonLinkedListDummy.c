@@ -164,7 +164,7 @@ void DLinkedList_DeleteAtIndex(DummyLinkedList *dummyHead, int index) {
  * @param {int} val                         目标值
  * @return {void}
  */
-void DLinkedList_Delete(DummyLinkedList *dummyHead, int val) {
+void DLinkedList_DeleteValue(DummyLinkedList *dummyHead, int val) {
     struct ListNode dummy;                          /* 创建虚拟头节点 */
     dummy.next = dummyHead->head;                   /* 将传入链表接在虚拟头节点后面 */
 
