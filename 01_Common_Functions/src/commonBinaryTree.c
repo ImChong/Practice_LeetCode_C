@@ -581,7 +581,7 @@ int BTree_ArrQueueIsFull(TreeArrQueue *queue) {
  * @param {TreeArrQueue} *queue        二叉树节点队列指针
  * @return {void}
  */
-void printTreeArrQueue(TreeArrQueue *queue) {
+void BTree_ArrQueuePrint(TreeArrQueue *queue) {
     printf("TreeArrQueue (size = %d): [", queue->size);
     for (int i = queue->head; i != queue->tail; i = (i + 1) % queue->size) {
         printf("%d", queue->array[i]->val);
