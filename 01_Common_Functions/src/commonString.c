@@ -50,7 +50,7 @@ int Char_Swap(char *a, char *b) {
  * @param {int} rightIndex      右指针
  * @return {int}                反转结果: 0-成功，-1-失败
  */
-int String_ReverseSection(char *s, int leftIndex, int rightIndex) {
+int String_Reverse(char *s, int leftIndex, int rightIndex) {
     if (s == NULL || leftIndex < 0 ||
             rightIndex >= (int)strlen(s) ||             /* NOLINT(readability/casting) */
             leftIndex > rightIndex) {

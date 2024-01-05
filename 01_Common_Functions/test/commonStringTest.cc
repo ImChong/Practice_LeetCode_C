@@ -62,7 +62,7 @@ TEST_F(TestCommonString, TestSwapChar) {
 }
 
 /* ============================================================================== */
-/* String_ReverseSection */
+/* String_Reverse */
 /* ============================================================================== */
 TEST_F(TestCommonString, TestReverseStringSection) {
     /* 准备数据 */
@@ -71,7 +71,7 @@ TEST_F(TestCommonString, TestReverseStringSection) {
     snprintf(s, charSize, "%s", "abcdefg");
 
     /* 运行结果 */
-    int result = String_ReverseSection(s, 2, 5);
+    int result = String_Reverse(s, 2, 5);
 
     /* 比较结果 */
     EXPECT_STREQ(s, "abfedcg") << "Error occurred at parameter s";
