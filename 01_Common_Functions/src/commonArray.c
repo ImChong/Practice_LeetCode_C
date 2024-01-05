@@ -85,7 +85,7 @@ int ArraySort(int *arr, int arrSize) {
  * @param {int} *arrColSizes    返回数组列大小
  * @return {int}                排序结果
  */
-int sort2DArray(int **arr, int arrSize, int *arrColSizes) {
+int ArraySort2D(int **arr, int arrSize, int *arrColSizes) {
     if (arr == NULL || arrSize <= 0 || arrColSizes == NULL) {
         return COMMON_ERR;
     }
@@ -273,8 +273,8 @@ int validate2DArray(char testNum,
                             int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
                             int needSort) {
     if (needSort == COMMON_TRUE) {
-        sort2DArray(expect2DArr, expectRtnRowSize, expectRtnColSize);
-        sort2DArray(actual2DArr, actualRtnRowSize, actualRtnColSize);
+        ArraySort2D(expect2DArr, expectRtnRowSize, expectRtnColSize);
+        ArraySort2D(actual2DArr, actualRtnRowSize, actualRtnColSize);
     }
 
     int isSuccess = COMMON_TRUE;

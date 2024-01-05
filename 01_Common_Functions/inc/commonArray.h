@@ -26,7 +26,7 @@
 /**********************************************************************************/
 int compareElements(const void *a, const void *b);              /* 比较元素 */
 int ArraySort(int *arr, int arrSize);                           /* 排序数组 */
-int sort2DArray(int **arr, int arrSize, int *arrColSizes);      /* 排序二维数组 */
+int ArraySort2D(int **arr, int arrSize, int *arrColSizes);      /* 排序二维数组 */
 
 /**********************************************************************************/
 /*                                                                                */
