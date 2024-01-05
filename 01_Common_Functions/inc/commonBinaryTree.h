@@ -99,7 +99,7 @@ struct TreeNode *BTree_DeListQueue(TreeListQueue *queue);             /* 从队�
 int BTree_ListQueueIsEmpty(TreeListQueue *queue);                     /* 判断队列是否为空 */
 int BTree_ListQueueIsFull(TreeListQueue *queue);                      /* 判断队列是否为满 */
 void BTree_ListQueuePrint(TreeListQueue *queue);                      /* 打印队列 */
-void freeTreeListQueue(TreeListQueue *queue);                       /* 释放队列 */
+void BTree_ListQueueFree(TreeListQueue *queue);                       /* 释放队列 */
 
 /* ============================================================================== */
 /* 树操作 */

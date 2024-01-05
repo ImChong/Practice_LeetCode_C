@@ -116,7 +116,7 @@ int **levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
     BTree_EnListQueue(queueHead, root);
     BTree_EnListQueue(queueHead, NULL);
     breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);
-    freeTreeListQueue(queueHead);
+    BTree_ListQueueFree(queueHead);
     return resultArray;
 }
 

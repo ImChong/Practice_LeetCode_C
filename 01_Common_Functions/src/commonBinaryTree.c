@@ -425,7 +425,7 @@ int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColu
     BTree_EnListQueue(queueHead, root);
     BTree_EnListQueue(queueHead, NULL);
     breadthFirstSearch(returnSize, returnColumnSizes, ans, queueHead);
-    freeTreeListQueue(queueHead);
+    BTree_ListQueueFree(queueHead);
     return ans;
 }
 
@@ -714,7 +714,7 @@ void BTree_ListQueuePrint(TreeListQueue *queue) {
  * @param {TreeListQueue} *queue    二叉树节点链表队列指针
  * @return {void}
  */
-void freeTreeListQueue(TreeListQueue *queue) {
+void BTree_ListQueueFree(TreeListQueue *queue) {
     struct TreeListNode *current = queue->head;
     while (current != NULL) {
         struct TreeListNode *temp = current;
