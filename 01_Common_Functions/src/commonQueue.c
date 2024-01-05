@@ -115,7 +115,7 @@ void Queue_Print(Queue *queue) {
  * @param {Queue} *queue      队列指针
  * @return {void}
  */
-void freeQueue(Queue *queue) {
+void Queue_Free(Queue *queue) {
     free(queue->list);                              /* 释放队列内数组空间 */
     queue->list = NULL;                             /* 将队列内数组指针置空 */
     free(queue);                                    /* 释放队列空间 */

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:38:47
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-05 21:47:51
+ * @LastEditTime : 2024-01-05 21:48:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -41,7 +41,7 @@ int Queue_IsFull(Queue *queue);          /* 判断队列是否为满 */
 /*                                                                                */
 /**********************************************************************************/
 void Queue_Print(Queue *queue);          /* 打印队列 */
-void freeQueue(Queue *queue);           /* 释放队列 */
+void Queue_Free(Queue *queue);           /* 释放队列 */
 
 
 #endif  /* __COMMON_QUEUE_H */      /* NOLINT(build/header_guard) */

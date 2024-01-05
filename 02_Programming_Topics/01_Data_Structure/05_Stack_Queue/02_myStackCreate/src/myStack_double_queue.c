@@ -104,8 +104,8 @@ bool myStackEmpty(MyStack *obj) {
  * @return {void}
  */
 void myStackFree(MyStack* obj) {
-    freeQueue(obj->queue1);         /* 释放队列 1 空间 */
-    freeQueue(obj->queue2);         /* 释放队列 2 空间 */
+    Queue_Free(obj->queue1);         /* 释放队列 1 空间 */
+    Queue_Free(obj->queue2);         /* 释放队列 2 空间 */
     free(obj);                      /* 释放栈内存 */
     obj = NULL;                     /* 将栈指针指向 NULL */
 }

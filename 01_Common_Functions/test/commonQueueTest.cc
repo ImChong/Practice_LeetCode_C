@@ -97,7 +97,7 @@ TEST_F(TestCommonQueue, TestPrintQueue) {
 }
 
 /* ============================================================================== */
-/* freeQueue */
+/* Queue_Free */
 /* ============================================================================== */
 TEST_F(TestCommonQueue, TestFreeQueue) {
     /* TODO */
