@@ -96,7 +96,7 @@ struct QueueNode {
  * @param {struct TreeNode} *node       节点指针
  * @return {void}
  */
-void initQueue(struct QueueNode **queue, struct TreeNode *node) {
+void Queue_Init(struct QueueNode **queue, struct TreeNode *node) {
     *queue = (struct QueueNode *)malloc(sizeof(struct QueueNode));      /* 申请内存空间 */
     (*queue)->node = node;                                              /* 节点指针赋值 */
     (*queue)->next = NULL;                                              /* 下一个节点指针赋值 */
@@ -113,19 +113,19 @@ int maxDepth(struct TreeNode* root) {
         return 0;
     }
     struct QueueNode *left, *right;                             /* 定义左右节点指针 */
-    initQueue(&left, root);                                     /* 初始化左节点 */
+    Queue_Init(&left, root);                                     /* 初始化左节点 */
     right = left;                                               /* 初始化右节点 */
     int ans = 0, sz = 1, tmp = 0;                               /* 定义最大深度、当前层节点个数、当前层节点个数的临时变量 */
     while (left != NULL) {                                      /* 当左节点不为空时 */
         tmp = 0;                                                    /* 重置当前层节点个数的临时变量 */
         while (sz > 0) {                                            /* 遍历当前层的节点 */
             if (left->node->left != NULL) {                             /* 如果左节点不为空 */
-                initQueue(&right->next, left->node->left);                  /* 初始化左节点 */
+                Queue_Init(&right->next, left->node->left);                  /* 初始化左节点 */
                 right = right->next;                                        /* 右节点指针指向下一个节点 */
                 tmp++;                                                      /* 当前层节点个数 + 1 */
             }
             if (left->node->right != NULL) {                            /* 如果右节点不为空 */
-                initQueue(&right->next, left->node->right);                 /* 初始化右节点 */
+                Queue_Init(&right->next, left->node->right);                 /* 初始化右节点 */
                 right = right->next;                                        /* 右节点指针指向下一个节点 */
                 tmp++;                                                      /* 当前层节点个数 + 1 */
             }

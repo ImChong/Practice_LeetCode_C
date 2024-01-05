@@ -32,8 +32,8 @@
  */
 MyStack *myStackCreate() {
     MyStack *obj = (MyStack *)malloc(sizeof(MyStack));  /* 为栈结构体分配空间 */
-    obj->queue1 = initQueue(LEN);                       /* 初始化队列 1 大小为 20 */
-    obj->queue2 = initQueue(LEN);                       /* 初始化队列 2 大小为 20 */
+    obj->queue1 = Queue_Init(LEN);                       /* 初始化队列 1 大小为 20 */
+    obj->queue2 = Queue_Init(LEN);                       /* 初始化队列 2 大小为 20 */
     return obj;                                         /* 返回栈指针 */
 }
 

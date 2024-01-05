@@ -29,7 +29,7 @@
  * @param {int} queueSize       数据长度
  * @return {Queue} *obj         初始化后队列的指针
  */
-Queue *initQueue(int queueSize) {
+Queue *Queue_Init(int queueSize) {
     Queue *obj = (Queue *)malloc(sizeof(Queue));            /* NOLINT(readability/casting) */
     obj->list = (int *)malloc(sizeof(int) * queueSize);     /* NOLINT(readability/casting) */
     obj->head = -1;                                         /* 队列头初始化为 -1 */

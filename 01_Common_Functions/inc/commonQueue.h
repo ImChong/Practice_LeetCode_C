@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonQueue.h
+ * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonQueue.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:38:47
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-25 23:17:07
+ * @LastEditTime : 2024-01-05 21:41:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,7 +29,7 @@ typedef struct {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-Queue *initQueue(int queueSize);        /* 初始化队列 */
+Queue *Queue_Init(int queueSize);        /* 初始化队列 */
 void enQueue(Queue *queue, int val);    /* 入队 */
 int deQueue(Queue *queue);              /* 出队 */
 int isQueueEmpty(Queue *queue);         /* 判断队列是否为空 */
