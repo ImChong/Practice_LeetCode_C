@@ -45,7 +45,7 @@ Queue *Queue_Init(int queueSize) {
  * @param {int} val             入队元素
  * @return {void}
  */
-void enQueue(Queue *queue, int val) {
+void Queue_En(Queue *queue, int val) {
     if (queue->head == -1) {                        /* 如果队列头为索引 -1 */
         queue->head = 0;                            /* 将队列头改为索引 0 */
     }
