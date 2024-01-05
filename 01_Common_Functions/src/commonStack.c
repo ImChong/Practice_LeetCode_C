@@ -75,7 +75,7 @@ int Stack_Top(Stack *obj) {
  * @param {Stack *} obj     栈结构体
  * @return {bool}           栈是否为空
  */
-bool stackEmpty(Stack *obj) {
+bool Stack_Empty(Stack *obj) {
     return obj->stkSize == 0;               /* 返回确认 stkSize 栈大小是否为0 */
 }
 
