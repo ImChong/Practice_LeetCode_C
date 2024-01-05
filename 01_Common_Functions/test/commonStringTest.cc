@@ -84,7 +84,7 @@ TEST_F(TestCommonString, TestReverseStringSection) {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* printString */
+/* String_Print */
 /* ============================================================================== */
 TEST_F(TestCommonString, TestPrintString) {
     /* 准备数据 */
@@ -94,7 +94,7 @@ TEST_F(TestCommonString, TestPrintString) {
 
     /* 运行结果 */
     printf("============================================================ Print Start.\n");
-    int result = printString(s);
+    int result = String_Print(s);
     printf("============================================================ Print End.\n");
 
     /* 比较结果 */

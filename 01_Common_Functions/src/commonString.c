@@ -73,7 +73,7 @@ int String_ReverseSection(char *s, int leftIndex, int rightIndex) {
  * @param {char} *s     字符串地址
  * @return {int}
  */
-int printString(char *s) {
+int String_Print(char *s) {
     if (printf("Str: %s\n", s) < 0) {       /* 打印字符串 */
         return COMMON_ERR;                    /* 打印失败 */
     }
