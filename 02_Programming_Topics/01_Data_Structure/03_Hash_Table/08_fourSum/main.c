@@ -81,7 +81,7 @@ void runTest(struct TestStruct *test) {
     int **expect2DArr = test->output.arr;
 
     /* 比较结果 */
-    validate2DArray(test->testNum,
+    Validate2DArray(test->testNum,
                         expect2DArr, expectRtnRowSize, expectRtnColSize,
                         actual2DArr, actualRtnRowSize, actualRtnColSize,
                         SORT_TRUE);

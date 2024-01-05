@@ -54,7 +54,7 @@ void Test1(void) {
     };
 
     /* 比较结果 */
-    validate2DArray('1',
+    Validate2DArray('1',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE
@@ -89,7 +89,7 @@ void Test2(void) {
     };
 
     /* 比较结果 */
-    validate2DArray('2',
+    Validate2DArray('2',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE
@@ -133,7 +133,7 @@ void Test3(void) {
     };
 
     /* 比较结果 */
-    validate2DArray('3',
+    Validate2DArray('3',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE

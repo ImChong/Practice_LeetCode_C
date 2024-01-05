@@ -50,7 +50,7 @@ void Test1(void) {
     int *expect2DArr[] = {(int[]){-1, -1, 2}, (int[]){-1, 0, 1, 2}};    /* *expect2DArr[] 内数组可以不同长度 */
 
     /* 比较结果 */
-    validate2DArray('1', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
+    Validate2DArray('1', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
     /* 释放内存 */
     free(actualRtnColSize);
@@ -78,7 +78,7 @@ void Test2(void) {
     int *expect2DArr[] = {};
 
     /* 比较结果 */
-    validate2DArray('2', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
+    Validate2DArray('2', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
     /* 释放内存 */
     free(actualRtnColSize);
@@ -106,7 +106,7 @@ void Test3(void) {
     int *expect2DArr[] = {(int[]){0, 0, 0}};
 
     /* 比较结果 */
-    validate2DArray('3', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
+    Validate2DArray('3', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
     /* 释放内存 */
     free(actualRtnColSize);

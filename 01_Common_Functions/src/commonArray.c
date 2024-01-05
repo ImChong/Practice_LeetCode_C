@@ -268,7 +268,7 @@ int ValidateArray(char testNum, int *expectArr, int expectLen, int *actualArr, i
  * @param {int} needSort                是否排序
  * @return {int}                        验证结果: 0-成功，-1-失败
  */
-int validate2DArray(char testNum,
+int Validate2DArray(char testNum,
                             int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
                             int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
                             int needSort) {
