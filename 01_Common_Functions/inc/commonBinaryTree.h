@@ -59,20 +59,20 @@ int *BTree_PreOrderTraversal_Iteration(struct TreeNode *root, int *returnSize); 
 /* 中序遍历 */
 /* ============================================================================== */
 int *BTree_InOrderTraversal_Recursion(struct TreeNode *root, int *returnSize);    /* 递归实现 */
-int *inOrderTraversal_iteration(struct TreeNode *root, int *returnSize);    /* 迭代实现 */
+int *BTree_InOrderTraversal_Iteration(struct TreeNode *root, int *returnSize);    /* 迭代实现 */
 
 /* ============================================================================== */
 /* 后序遍历 */
 /* ============================================================================== */
-int *postOrderTraversal_recursion(struct TreeNode *root, int *returnSize);  /* 递归实现 */
-int *postOrderTraversal_iteration(struct TreeNode *root, int *returnSize);  /* 迭代实现 */
+int *BTree_PostOrderTraversal_Recursion(struct TreeNode *root, int *returnSize);  /* 递归实现 */
+int *BTree_PostOrderTraversal_Iteration(struct TreeNode *root, int *returnSize);  /* 迭代实现 */
 
 /* ============================================================================== */
 /* 层序遍历 */
 /* ============================================================================== */
-int **levelOrder_array(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
-int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
-int **levelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
+int **BTree_LevelOrder_Array(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
+int **BTree_LevelOrder_Struct(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
+int **BTree_LevelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
 
 /**********************************************************************************/
 /*                                                                                */

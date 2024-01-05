@@ -188,7 +188,7 @@ int *BTree_InOrderTraversal_Recursion(struct TreeNode *root, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *inOrderTraversal_iteration(struct TreeNode *root, int *returnSize) {
+int *BTree_InOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
@@ -253,7 +253,7 @@ STATIC_FUNC void postOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *postOrderTraversal_recursion(struct TreeNode *root, int *returnSize) {
+int *BTree_PostOrderTraversal_Recursion(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT(readability/casting) */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     postOrder(root, ans, returnSize);                       /* 后序遍历根节点 */
@@ -267,7 +267,7 @@ int *postOrderTraversal_recursion(struct TreeNode *root, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *postOrderTraversal_iteration(struct TreeNode *root, int *returnSize) {
+int *BTree_PostOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT(readability/casting) */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     if (root == NULL) {                                     /* 如果当前节点为 NULL，直接返回 */
@@ -326,7 +326,7 @@ int *postOrderTraversal_iteration(struct TreeNode *root, int *returnSize) {
  * @param {int} **returnColumnSizes         用于储存遍历答案的数组的每一行的大小
  * @return {int} **ans                      用于储存遍历答案的数组
  */
-int **levelOrder_array(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
+int **BTree_LevelOrder_Array(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;        /* 初始化二叉树的层数为 0 */
     if (root == NULL) {     /* 如果根节点为 NULL */
         return NULL;        /* 返回 NULL */
@@ -410,7 +410,7 @@ STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, in
  * @param {int} **returnColumnSizes         用于储存遍历答案的数组的每一行的大小
  * @return {int} **ans                      用于储存遍历答案的数组
  */
-int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
+int **BTree_LevelOrder_Struct(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;
     if (root == NULL) {
         return NULL;
@@ -459,7 +459,7 @@ int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColu
  * @param {int} **returnColumnSizes     二叉树对应层级的节点数
  * @return {int} **resultArray          结果二维数组
  */
-int **levelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
+int **BTree_LevelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;
     int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);       /* NOLINT(readability/casting) */
     *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);         /* NOLINT(readability/casting) */

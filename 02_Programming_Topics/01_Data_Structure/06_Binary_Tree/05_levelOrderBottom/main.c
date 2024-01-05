@@ -35,7 +35,7 @@
 #include "commonArray.h"
 #include "commonBinaryTree.h"
 /* solution header file (题解头文件) */
-#include "levelOrderBottom.h"
+#include "BTree_LevelOrderBottom.h"
 
 /**
  * @description: 主函数
@@ -67,7 +67,7 @@ int main(int argc, const char *argv[]) {
     int *returnColumnSizes;
 
     /* 函数调用 */
-    int** result = levelOrderBottom(root, &returnSize, &returnColumnSizes);
+    int** result = BTree_LevelOrderBottom(root, &returnSize, &returnColumnSizes);
     Array_Print2D(result, returnSize, returnColumnSizes);
 
     return 0;

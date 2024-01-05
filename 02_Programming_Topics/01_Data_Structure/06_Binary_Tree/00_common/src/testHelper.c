@@ -85,7 +85,7 @@ void test_inOrderTraversal(void) {
     int actualSize_recursion = 0;
     int *actual_recursion = BTree_InOrderTraversal_Recursion(root, &actualSize_recursion);
     int actualSize_iteration = 0;
-    int *actual_iteration = inOrderTraversal_iteration(root, &actualSize_iteration);
+    int *actual_iteration = BTree_InOrderTraversal_Iteration(root, &actualSize_iteration);
 
     /* 预期结果 */
     int expected[] = {4, 2, 5, 1, 6, 3, 7};
@@ -122,9 +122,9 @@ void test_postOrderTraversal(void) {
     int arrSize = ARR_SIZE(arr);
     struct TreeNode *root = BTree_Init(arr, arrSize);
     int actualSize_recursion = 0;
-    int *actual_recursion = postOrderTraversal_recursion(root, &actualSize_recursion);
+    int *actual_recursion = BTree_PostOrderTraversal_Recursion(root, &actualSize_recursion);
     int actualSize_iteration = 0;
-    int *actual_iteration = postOrderTraversal_iteration(root, &actualSize_iteration);
+    int *actual_iteration = BTree_PostOrderTraversal_Iteration(root, &actualSize_iteration);
 
     /* 预期结果 */
     int expected[] = {4, 5, 2, 6, 7, 3, 1};

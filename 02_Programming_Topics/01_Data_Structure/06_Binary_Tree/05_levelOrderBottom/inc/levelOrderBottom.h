@@ -1,5 +1,5 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\07_Binary_Tree\05_levelOrderBottom\inc\levelOrderBottom.h
+ * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\07_Binary_Tree\05_levelOrderBottom\inc\BTree_LevelOrderBottom.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-18 22:23:11
  * @LastEditors  : Chong Liu
@@ -12,6 +12,6 @@
 #ifndef __LEVEL_ORDER_BOTTOM_H
 #define __LEVEL_ORDER_BOTTOM_H
 
-int **levelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
+int **BTree_LevelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
 
 #endif  /* __LEVEL_ORDER_BOTTOM_H */

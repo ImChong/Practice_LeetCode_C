@@ -46,7 +46,7 @@ void test_inOrderTraversal(void) {
     int actualSize_recursion = 0;
     int *actual_recursion = BTree_InOrderTraversal_Recursion(root, &actualSize_recursion);
     int actualSize_iteration = 0;
-    int *actual_iteration = inOrderTraversal_iteration(root, &actualSize_iteration);
+    int *actual_iteration = BTree_InOrderTraversal_Iteration(root, &actualSize_iteration);
 
     /* 预期结果 */
     int expected[] = {4, 2, 5, 1, 6, 3, 7};
