@@ -107,7 +107,7 @@ void Test4(void) {
     DLinkedList_AddAtTail(actualDummy, 1);
     DLinkedList_AddAtTail(actualDummy, 2);
     int actualReturnSize = 0;
-    int *actualIndexes = dummyLinkedListGetIndexes(actualDummy, 2, &actualReturnSize);
+    int *actualIndexes = DLinkedList_GetIndexes(actualDummy, 2, &actualReturnSize);
 
     /* 预期结果 */
     int expectIndexes[] = {1, 3, 5};

@@ -190,7 +190,7 @@ void DLinkedList_DeleteValue(DummyLinkedList *dummyHead, int val) {
  * @param {int *} returnSize                返回索引数组的大小 / 值为val的节点个数
  * @return {int *} indexes                  返回索引数组
  */
-int *dummyLinkedListGetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize) {
+int *DLinkedList_GetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize) {
     int *indexes = (int *)malloc(sizeof(int) * dummyHead->size);    /* NOLINT(readability/casting) */
     int listIndex = 0;                                              /* 链表索引 */
     int elementIndex = 0;                                           /* 元素索引 */

@@ -100,7 +100,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListDeleteElement) {
 }
 
 /* ============================================================================== */
-/* dummyLinkedListGetIndexes */
+/* DLinkedList_GetIndexes */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListGetIndexes) {
     /* TODO */

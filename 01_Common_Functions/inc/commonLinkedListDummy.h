@@ -41,7 +41,7 @@ void DLinkedList_AddAtIndex(DummyLinkedList *dummyHead,
                                int val);               /* 在链表中第index个节点之前添加一个值为val的节点 */
 void DLinkedList_DeleteAtIndex(DummyLinkedList *dummyHead, int index);     /* 删除链表中第index个节点 */
 void DLinkedList_DeleteValue(DummyLinkedList *dummyHead, int val);       /* 从链表中删除值为val的所有节点 */
-int *dummyLinkedListGetIndexes(DummyLinkedList *dummyHead,
+int *DLinkedList_GetIndexes(DummyLinkedList *dummyHead,
                                int val,
                                int *returnSize);       /* 获取链表中值为val的所有节点的索引 */
 
