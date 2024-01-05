@@ -209,7 +209,7 @@ struct ListNode *LinkedList_FromArray(int *array, int size) {
  * @param {ListNode} *head          头节点指针
  * @return {void}
  */
-void linkedListPrint(struct ListNode *head) {
+void LinkedList_Print(struct ListNode *head) {
     printf("Linked List: ");
     while (head != NULL) {
         printf("%d", head->val);
@@ -273,8 +273,8 @@ void validateLinkedList(char testNum, struct ListNode *expectList, struct ListNo
         printf(" - ❌ Test %c Failed\n", testNum);
     }
     printf("=========================\n");
-    printf("- Expect: "); linkedListPrint(expectList);
-    printf("- Actual: "); linkedListPrint(actualList);
+    printf("- Expect: "); LinkedList_Print(expectList);
+    printf("- Actual: "); LinkedList_Print(actualList);
     printf("\n");
 }
 

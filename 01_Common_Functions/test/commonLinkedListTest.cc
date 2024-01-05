@@ -113,7 +113,7 @@ TEST_F(TestCommonLinkedList, TestLinkedListFromArray) {
 }
 
 /* ============================================================================== */
-/* linkedListPrint */
+/* LinkedList_Print */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedList, TestLinkedListPrint) {
     /* TODO */
