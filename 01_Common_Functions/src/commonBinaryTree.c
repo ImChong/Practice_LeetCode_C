@@ -389,14 +389,14 @@ STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, in
         resultArray[*returnSize][count] = node->val;
         count++;
         if (node->left != NULL) {
-            enTreeListQueue(queueHead, node->left);
+            BTree_EnListQueue(queueHead, node->left);
         }
         if (node->right != NULL) {
-            enTreeListQueue(queueHead, node->right);
+            BTree_EnListQueue(queueHead, node->right);
         }
     }
 
-    enTreeListQueue(queueHead, NULL);
+    BTree_EnListQueue(queueHead, NULL);
     (*returnColumnSizes)[*returnSize] = count;
     *returnSize = *returnSize + 1;
     breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);
@@ -422,8 +422,8 @@ int **levelOrder_struct(struct TreeNode *root, int *returnSize, int **returnColu
     TreeListQueue *queueHead = (TreeListQueue *)malloc(sizeof(TreeListQueue));      /* NOLINT(readability/casting) */
     queueHead->head = NULL;
 
-    enTreeListQueue(queueHead, root);
-    enTreeListQueue(queueHead, NULL);
+    BTree_EnListQueue(queueHead, root);
+    BTree_EnListQueue(queueHead, NULL);
     breadthFirstSearch(returnSize, returnColumnSizes, ans, queueHead);
     freeTreeListQueue(queueHead);
     return ans;
@@ -629,7 +629,7 @@ TreeListQueue *BTree_InitListQueue(void) {
  * @param {TreeNode} *node          节点指针
  * @return {void}
  */
-void enTreeListQueue(TreeListQueue *queue, struct TreeNode *node) {
+void BTree_EnListQueue(TreeListQueue *queue, struct TreeNode *node) {
     if (queue->head == NULL) {
         queue->head = (struct TreeListNode *)malloc(sizeof(struct TreeListNode));
         queue->head->node = node;
