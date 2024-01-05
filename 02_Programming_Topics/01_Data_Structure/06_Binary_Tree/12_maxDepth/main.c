@@ -165,7 +165,7 @@ void Test1(void) {
     int actual = maxDepth(root);
 
     /* 比较结果 */
-    validateSingleValue('1', expect, actual);
+    Validate_SingleValue('1', expect, actual);
 
     /* 释放内存空间 */
     free(root->right->right);
@@ -192,7 +192,7 @@ void Test2(void) {
     int actual = maxDepth(root);
 
     /* 比较结果 */
-    validateSingleValue('2', expect, actual);
+    Validate_SingleValue('2', expect, actual);
 
     /* 释放内存空间 */
     free(root->right);

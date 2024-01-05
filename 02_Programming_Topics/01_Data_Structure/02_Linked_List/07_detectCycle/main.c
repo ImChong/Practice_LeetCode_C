@@ -73,7 +73,7 @@ void Test1(void) {
     int expect = 2;
 
     /* 比较结果 */
-    validateSingleValue('1', expect, actual);
+    Validate_SingleValue('1', expect, actual);
 
     /* 释放内存 */
     /* 需要释放指定长度，否则会进入无限循环 */
@@ -96,7 +96,7 @@ void Test2(void) {
     int expect = 1;
 
     /* 比较结果 */
-    validateSingleValue('2', expect, actual);
+    Validate_SingleValue('2', expect, actual);
 
     /* 释放内存 */
     /* 需要释放指定长度，否则会进入无限循环 */

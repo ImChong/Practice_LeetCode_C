@@ -203,7 +203,7 @@ void arrayToTree(int *arr, int size, int index, struct TreeNode **root) {
  * @param {int} returnSize  结果数组的大小
  * @return {void}
  */
-void validateSingleValue(char testNum, int *expected, int *result, int returnSize) {
+void Validate_SingleValue(char testNum, int *expected, int *result, int returnSize) {
     if (returnSize == 0 && expected != NULL) {
         printf("test %c failed\n", testNum);
         return;
@@ -270,7 +270,7 @@ void Test1(void) {
     print1DArray(expected, ARR_SIZE(expected));
     printf("Result: \n");
     print1DArray(result, ARR_SIZE(result));
-    validateSingleValue('1', expected, result, returnSize);
+    Validate_SingleValue('1', expected, result, returnSize);
 
     /* 释放内存空间 */
     freeTree(root);
@@ -307,7 +307,7 @@ void Test2(void) {
     print1DArray(expected, ARR_SIZE(expected));
     printf("Result: \n");
     print1DArray(result, ARR_SIZE(result));
-    validateSingleValue('2', expected, result, returnSize);
+    Validate_SingleValue('2', expected, result, returnSize);
 
     /* 释放内存空间 */
     freeTree(root);

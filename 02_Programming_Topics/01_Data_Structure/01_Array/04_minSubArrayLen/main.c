@@ -40,7 +40,7 @@ void Test1(void) {
     int expectLen = 2;
 
     /* 比较结果 */
-    validateSingleValue('1', expectLen, resultLen);
+    Validate_SingleValue('1', expectLen, resultLen);
 }
 
 /**
@@ -59,7 +59,7 @@ void Test2(void) {
     int expectLen = 0;
 
     /* 比较结果 */
-    validateSingleValue('2', expectLen, resultLen);
+    Validate_SingleValue('2', expectLen, resultLen);
 }
 
 /**
@@ -78,7 +78,7 @@ void Test3(void) {
     int expectLen = 3;
 
     /* 比较结果 */
-    validateSingleValue('3', expectLen, resultLen);
+    Validate_SingleValue('3', expectLen, resultLen);
 }
 
 /**********************************************************************************/

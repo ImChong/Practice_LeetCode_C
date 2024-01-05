@@ -40,7 +40,7 @@ void Test1(void) {
     int expect = 4;
 
     /* 比较结果 */
-    validateSingleValue('1', expect, ans);
+    Validate_SingleValue('1', expect, ans);
 }
 
 /**
@@ -59,7 +59,7 @@ void Test2(void) {
     int expect = -1;
 
     /* 比较结果 */
-    validateSingleValue('2', expect, ans);
+    Validate_SingleValue('2', expect, ans);
 }
 
 /**
@@ -78,7 +78,7 @@ void Test3(void) {
     int expect = 4;
 
     /* 比较结果 */
-    validateSingleValue('3', expect, ans);
+    Validate_SingleValue('3', expect, ans);
 }
 
 /**********************************************************************************/

@@ -73,7 +73,7 @@ void Test1(void) {
     int expect = 0;
 
     /* 比较结果 */
-    validateSingleValue('1', expect, actual);
+    Validate_SingleValue('1', expect, actual);
 }
 
 /**
@@ -93,7 +93,7 @@ void Test2(void) {
     int expect = -1;
 
     /* 比较结果 */
-    validateSingleValue('2', expect, actual);
+    Validate_SingleValue('2', expect, actual);
 }
 
 /**
@@ -113,7 +113,7 @@ void Test3(void) {
     int expect = 0;
 
     /* 比较结果 */
-    validateSingleValue('3', expect, actual);
+    Validate_SingleValue('3', expect, actual);
 }
 
 /**
@@ -133,7 +133,7 @@ void Test4(void) {
     int expect = 4;
 
     /* 比较结果 */
-    validateSingleValue('4', expect, actual);
+    Validate_SingleValue('4', expect, actual);
 }
 
 /**********************************************************************************/
