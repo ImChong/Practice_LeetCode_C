@@ -52,7 +52,7 @@ typedef struct {
 /* ============================================================================== */
 /* 前序遍历 */
 /* ============================================================================== */
-int *preOrderTraversal_recursion(struct TreeNode *root, int *returnSize);   /* 递归实现 */
+int *BTree_PreOrderTraversal_Recursion(struct TreeNode *root, int *returnSize);   /* 递归实现 */
 int *preOrderTraversal_iteration(struct TreeNode *root, int *returnSize);   /* 迭代实现 */
 
 /* ============================================================================== */
