@@ -842,13 +842,13 @@ void BTree_PrintTest(void) {
  * @param {TreeNode} *root      根节点指针
  * @return {void}
  */
-void printTree(struct TreeNode *root) {
+void BTree_Print(struct TreeNode *root) {
     if (root == NULL) {             /* 如果传入节点为 NULL 则返回 */
         return;
     }
     printf("%d ", root->val);       /* 打印当前节点的值 */
-    printTree(root->left);          /* 遍历打印左节点 */
-    printTree(root->right);         /* 遍历打印右节点 */
+    BTree_Print(root->left);          /* 遍历打印左节点 */
+    BTree_Print(root->right);         /* 遍历打印右节点 */
 }
 
 /**
