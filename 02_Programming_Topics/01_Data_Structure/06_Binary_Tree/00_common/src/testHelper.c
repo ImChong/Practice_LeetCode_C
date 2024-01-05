@@ -83,7 +83,7 @@ void test_inOrderTraversal(void) {
     int arrSize = ARR_SIZE(arr);
     struct TreeNode *root = BTree_Init(arr, arrSize);
     int actualSize_recursion = 0;
-    int *actual_recursion = inOrderTraversal_recursion(root, &actualSize_recursion);
+    int *actual_recursion = BTree_InOrderTraversal_Recursion(root, &actualSize_recursion);
     int actualSize_iteration = 0;
     int *actual_iteration = inOrderTraversal_iteration(root, &actualSize_iteration);
 

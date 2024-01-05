@@ -58,7 +58,7 @@ int *BTree_PreOrderTraversal_Iteration(struct TreeNode *root, int *returnSize); 
 /* ============================================================================== */
 /* 中序遍历 */
 /* ============================================================================== */
-int *inOrderTraversal_recursion(struct TreeNode *root, int *returnSize);    /* 递归实现 */
+int *BTree_InOrderTraversal_Recursion(struct TreeNode *root, int *returnSize);    /* 递归实现 */
 int *inOrderTraversal_iteration(struct TreeNode *root, int *returnSize);    /* 迭代实现 */
 
 /* ============================================================================== */

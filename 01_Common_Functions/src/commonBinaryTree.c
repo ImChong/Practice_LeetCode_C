@@ -174,7 +174,7 @@ STATIC_FUNC void inOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *inOrderTraversal_recursion(struct TreeNode *root, int *returnSize) {
+int *BTree_InOrderTraversal_Recursion(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     inOrder(root, ans, returnSize);                     /* 中序遍历根节点 */
