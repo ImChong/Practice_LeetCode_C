@@ -70,3 +70,21 @@ jobs:
           run: |
             chmod +x .github/workflows/testRunner/runCppcheck.sh
             .github/workflows/testRunner/runCppcheck.sh
+
+    # style-check:
+    #   runs-on: ubuntu-latest
+
+    #   steps:
+    #     - name: Checkout code
+    #       uses: actions/checkout@v2
+
+    #     - name: Install clang-format
+    #       run: sudo apt-get install clang-format
+
+    #     - name: Check C++ code style
+    #       run: |
+    #         find . -regex '.*\.\(cpp\|hpp\|cc\|h\)' -exec clang-format -style=google -output-replacements-xml {} \; | grep "<replacement " > /dev/null
+    #         if [ $? -ne 1 ]; then
+    #           echo "Code style issues found"
+    #           exit 1
+    #         fi
