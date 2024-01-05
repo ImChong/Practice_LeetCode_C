@@ -60,7 +60,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListGet) {
 }
 
 /* ============================================================================== */
-/* dummyLinkedListAddAtHead */
+/* DLinkedList_AddAtHead */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListAddAtHead) {
     /* TODO */

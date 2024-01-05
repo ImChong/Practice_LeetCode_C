@@ -61,7 +61,7 @@ int DLinkedList_Get(DummyLinkedList *dummyHead, int index) {
  * @param {int} val                         新节点数值
  * @return {void}
  */
-void dummyLinkedListAddAtHead(DummyLinkedList *dummyHead, int val) {
+void DLinkedList_AddAtHead(DummyLinkedList *dummyHead, int val) {
     struct ListNode *newHead = (struct ListNode*)malloc(sizeof(struct ListNode));    /* 为链表新头节点分配空间*/
     newHead->val = val;                     /* 为链表新头节点赋值 */
     newHead->next = dummyHead->head;        /* 将链表新头节点的下一节点设置为链表旧头节点 */
@@ -107,7 +107,7 @@ void dummyLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val) {
     }
 
     if (index == 0) {                                   /* 插入新头节点 */
-        dummyLinkedListAddAtHead(dummyHead, val);
+        DLinkedList_AddAtHead(dummyHead, val);
         return;
     }
 
