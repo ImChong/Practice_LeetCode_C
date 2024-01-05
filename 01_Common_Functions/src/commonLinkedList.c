@@ -227,7 +227,7 @@ void LinkedList_Print(struct ListNode *head) {
  * @param {ListNode} *head          头节点指针
  * @return {void}
  */
-void linkedListFree(struct ListNode *head) {
+void LinkedList_Free(struct ListNode *head) {
     struct ListNode *temp = NULL;
     while (head != NULL) {
         temp = head;

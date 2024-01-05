@@ -90,7 +90,7 @@ void Test1(void) {
     validateLinkedList('1', expect, actual);
 
     /* 释放内存 */
-    linkedListFree(expect);
+    LinkedList_Free(expect);
 }
 
 /**
@@ -119,7 +119,7 @@ void Test2(void) {
     validateLinkedList('2', expect, actual);
 
     /* 释放内存 */
-    linkedListFree(expect);
+    LinkedList_Free(expect);
 }
 
 /**
@@ -148,7 +148,7 @@ void Test3(void) {
     validateLinkedList('3', expect, actual);
 
     /* 释放内存 */
-    linkedListFree(expect);
+    LinkedList_Free(expect);
 }
 
 /**********************************************************************************/

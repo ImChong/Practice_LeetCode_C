@@ -95,8 +95,8 @@ void Test1(void) {
     validateSingleValue('1', expect, intersectNode->val);
 
     /* 释放内存 - A/B链表相互链接，不可 while 循环释放 */
-    // linkedListFree(listA);
-    // linkedListFree(listB);
+    // LinkedList_Free(listA);
+    // LinkedList_Free(listB);
 }
 
 /**
@@ -159,8 +159,8 @@ void Test3(void) {
     validateLinkedList('3', expect, intersectNode);
 
     /* 释放内存 */
-    linkedListFree(listA);
-    linkedListFree(listB);
+    LinkedList_Free(listA);
+    LinkedList_Free(listB);
 }
 
 /**********************************************************************************/

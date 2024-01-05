@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-06 00:38:31
+ * @LastEditTime : 2024-01-06 00:40:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -45,7 +45,7 @@ int *LinkedList_GetIndexes(struct ListNode *head, int val, int *returnSize);    
 /**********************************************************************************/
 struct ListNode *LinkedList_FromArray(int *array, int size);       /* 将数组转换为链表 */
 void LinkedList_Print(struct ListNode *head);        /* 打印链表 */
-void linkedListFree(struct ListNode *head);         /* 释放链表 */
+void LinkedList_Free(struct ListNode *head);         /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */

@@ -121,7 +121,7 @@ TEST_F(TestCommonLinkedList, TestLinkedListPrint) {
 }
 
 /* ============================================================================== */
-/* linkedListFree */
+/* LinkedList_Free */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedList, TestLinkedListFree) {
     /* TODO */

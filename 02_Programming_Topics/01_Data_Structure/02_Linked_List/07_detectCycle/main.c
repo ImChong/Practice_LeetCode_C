@@ -121,7 +121,7 @@ void Test3(void) {
     validateLinkedList('3', expect, actual);
 
     /* 释放内存 */
-    linkedListFree(arrList);
+    LinkedList_Free(arrList);
 }
 
 /**********************************************************************************/

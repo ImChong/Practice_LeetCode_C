@@ -95,8 +95,8 @@ void Test1(void) {
     validateLinkedList('1', expectList, ansList);
 
     /* 释放内存 */
-    linkedListFree(newList);
-    linkedListFree(expectList);
+    LinkedList_Free(newList);
+    LinkedList_Free(expectList);
 }
 
 /**
@@ -124,8 +124,8 @@ void Test2(void) {
     validateLinkedList('2', expectList, ansList);
 
     /* 释放内存 */
-    linkedListFree(newList);
-    linkedListFree(expectList);
+    LinkedList_Free(newList);
+    LinkedList_Free(expectList);
 }
 
 /**
@@ -181,8 +181,8 @@ void Test4(void) {
     validateLinkedList('4', expectList, ansList);
 
     /* 释放内存 */
-    linkedListFree(ansList);        /* newList 的链表头已被释放内存 */
-    linkedListFree(expectList);
+    LinkedList_Free(ansList);        /* newList 的链表头已被释放内存 */
+    LinkedList_Free(expectList);
 }
 
 /**********************************************************************************/

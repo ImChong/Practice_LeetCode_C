@@ -42,8 +42,8 @@ void Test1(void) {
     validateLinkedList('1', expectList, actualList);
 
     /* 释放内存空间 */
-    linkedListFree(actualList);
-    linkedListFree(expectList);
+    LinkedList_Free(actualList);
+    LinkedList_Free(expectList);
 }
 
 /**
@@ -65,8 +65,8 @@ void Test2(void) {
     validateLinkedList('2', expectList, actualList);
 
     /* 释放内存空间 */
-    linkedListFree(actualList);
-    linkedListFree(expectList);
+    LinkedList_Free(actualList);
+    LinkedList_Free(expectList);
 }
 
 void Test3(void) {
@@ -88,8 +88,8 @@ void Test3(void) {
     validateLinkedList('3', expectList, actualList);
 
     /* 释放内存空间 */
-    linkedListFree(actualList);
-    linkedListFree(expectList);
+    LinkedList_Free(actualList);
+    LinkedList_Free(expectList);
 }
 
 void Test4(void) {
@@ -111,7 +111,7 @@ void Test4(void) {
     Validate_Array('4', expectIndexes, ARR_SIZE(expectIndexes), actualIndexes, actualReturnSize, COMMON_FALSE);
 
     /* 释放内存空间 */
-    linkedListFree(actualList);
+    LinkedList_Free(actualList);
 }
 
 /**********************************************************************************/
