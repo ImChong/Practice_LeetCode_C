@@ -37,7 +37,7 @@
  * @return {int} **ans                  返回数组
  */
 int **threeSum(int *arr, int arrSize, int *returnSize, int **returnColumnSizes) {
-    qsort(arr, arrSize, sizeof(int), CompareElement);
+    qsort(arr, arrSize, sizeof(int), Array_CmpElement);
     *returnSize = 0;
     *returnColumnSizes = (int *)malloc(sizeof(int) * arrSize * arrSize);
     int **ans = (int **)malloc(sizeof(int *) * arrSize * arrSize);

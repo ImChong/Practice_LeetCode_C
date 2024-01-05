@@ -63,26 +63,26 @@ TEST_F(TestCommonArray, TestArrSize) {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* CompareElement */
+/* Array_CmpElement */
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestCompareElements) {
     /* 准备数据 */
     int a = 5;
     int b = 3;
     /* 运行结果 & 比较结果 */
-    EXPECT_EQ(2, CompareElement(&a, &b)) << "Error occurred in CompareElement a > b";
+    EXPECT_EQ(2, Array_CmpElement(&a, &b)) << "Error occurred in Array_CmpElement a > b";
 
     /* 准备数据 */
     a = 3;
     b = 5;
     /* 运行结果 & 比较结果 */
-    EXPECT_EQ(-2, CompareElement(&a, &b)) << "Error occurred in CompareElement a < b";
+    EXPECT_EQ(-2, Array_CmpElement(&a, &b)) << "Error occurred in Array_CmpElement a < b";
 
     /* 准备数据 */
     a = 5;
     b = 5;
     /* 运行结果 & 比较结果 */
-    EXPECT_EQ(0, CompareElement(&a, &b)) << "Error occurred in CompareElement a = b";
+    EXPECT_EQ(0, Array_CmpElement(&a, &b)) << "Error occurred in Array_CmpElement a = b";
 }
 
 /* ============================================================================== */

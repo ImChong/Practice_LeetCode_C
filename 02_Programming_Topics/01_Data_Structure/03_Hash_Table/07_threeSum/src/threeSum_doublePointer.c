@@ -40,7 +40,7 @@ int **threeSum(int *arr, int arrSize, int *returnSize, int **returnColumnSizes) 
     if (arrSize < 3) {
         return NULL;
     }
-    qsort(arr, arrSize, sizeof(int), CompareElement);
+    qsort(arr, arrSize, sizeof(int), Array_CmpElement);
     int **ans = (int **)malloc(sizeof(int *) * arrSize * arrSize);
     *returnColumnSizes = (int *)malloc(sizeof(int) * arrSize * arrSize);
     int i, j, k, sum;

@@ -40,7 +40,7 @@ STATIC int g_2DArrRowSize = 0;
  * @param {void} *b             数组元素b
  * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
  */
-int CompareElement(const void *a, const void *b) {
+int Array_CmpElement(const void *a, const void *b) {
     return (*(int*)a - *(int*)b);       /* NOLINT(readability/casting) */
 }
 
@@ -73,7 +73,7 @@ int Array_Sort(int *arr, int arrSize) {
     if (arr == NULL || arrSize <= 0) {
         return COMMON_ERR;
     }
-    qsort(arr, arrSize, sizeof(int), CompareElement);
+    qsort(arr, arrSize, sizeof(int), Array_CmpElement);
     return COMMON_OK;
 }
 
@@ -93,7 +93,7 @@ int ArraySort2D(int **arr, int arrSize, int *arrColSizes) {
         if (arr[i] == NULL || arrColSizes[i] <= 0) {
             return COMMON_ERR;
         }
-        qsort(arr[i], arrColSizes[i], sizeof(int), CompareElement);
+        qsort(arr[i], arrColSizes[i], sizeof(int), Array_CmpElement);
     }
     g_2DArrRowSize = arrSize;
     qsort(arr, arrSize, sizeof(int *), compareRows);
