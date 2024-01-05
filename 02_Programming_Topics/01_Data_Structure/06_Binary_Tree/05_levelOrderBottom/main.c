@@ -53,15 +53,15 @@ int main(int argc, const char *argv[]) {
      *   / \ / \
      *  4  5 6  7
      */
-    struct TreeNode *root = BTree_NodeInit(1);
-    root->left = BTree_NodeInit(2);
-    root->right = BTree_NodeInit(3);
+    struct TreeNode *root = BTree_InitNode(1);
+    root->left = BTree_InitNode(2);
+    root->right = BTree_InitNode(3);
 
-    root->left->left = BTree_NodeInit(4);
-    root->left->right = BTree_NodeInit(5);
+    root->left->left = BTree_InitNode(4);
+    root->left->right = BTree_InitNode(5);
 
-    root->right->left = BTree_NodeInit(6);
-    root->right->right = BTree_NodeInit(7);
+    root->right->left = BTree_InitNode(6);
+    root->right->right = BTree_InitNode(7);
 
     int returnSize = 0;
     int *returnColumnSizes;

@@ -104,7 +104,7 @@ void freeTreeListQueue(TreeListQueue *queue);                       /* 释放队
 /* ============================================================================== */
 /* 树操作 */
 /* ============================================================================== */
-struct TreeNode *BTree_NodeInit(int value);                            /* 创建新节点 */
+struct TreeNode *BTree_InitNode(int value);                            /* 创建新节点 */
 struct TreeNode *BTree_ArrayInit(int *arr, int arrSize);                /* 将数组转换为树 */
 int *BTree_ToArray(struct TreeNode *root, int *returnSize);           /* 将树转换为数组 */
 void printTestTree(void);                                           /* 打印测试树 */

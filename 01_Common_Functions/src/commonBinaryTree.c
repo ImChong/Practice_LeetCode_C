@@ -737,7 +737,7 @@ void freeTreeListQueue(TreeListQueue *queue) {
  * @param {int} value           节点的值
  * @return {TreeNode} *node     新的树节点指针
  */
-struct TreeNode *BTree_NodeInit(int value) {
+struct TreeNode *BTree_InitNode(int value) {
     struct TreeNode *node = (struct TreeNode *)malloc(sizeof(struct TreeNode));
     node->val = value;
     node->left = NULL;
