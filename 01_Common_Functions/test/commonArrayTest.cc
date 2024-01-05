@@ -220,7 +220,7 @@ TEST_F(TestCommonArray, TestFree2DArray) {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* validateArray */
+/* ValidateArray */
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestValidateArray) {
     /* 准备数据 */
@@ -230,11 +230,11 @@ TEST_F(TestCommonArray, TestValidateArray) {
     /* 运行结果 */
     ArraySort(actualArr, 5);
     printf("============================================================ Print Start.\n");
-    int result = validateArray('1', expectArr, 5, actualArr, 5, 1);
+    int result = ValidateArray('1', expectArr, 5, actualArr, 5, 1);
     printf("============================================================ Print End.\n");
 
     /* 比较结果 */
-    EXPECT_EQ(COMMON_OK, result) << "Error occurred in validateArray";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in ValidateArray";
 }
 
 /* ============================================================================== */

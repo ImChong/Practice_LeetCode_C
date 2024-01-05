@@ -219,7 +219,7 @@ int ArrayFree2D(int ***arrPtr, int arrSize) {
  * @param {int} needSort        是否排序
  * @return {int}                验证结果: 0-成功，-1-失败
  */
-int validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen, int needSort) {
+int ValidateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen, int needSort) {
     if (needSort == COMMON_TRUE) {
         ArraySort(expectArr, expectLen);
         ArraySort(actualArr, actualLen);

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors: Chong Liu liuc12@miamioh.edu
- * @LastEditTime: 2024-01-05 18:19:31
+ * @LastEditTime: 2024-01-05 18:20:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,7 +43,7 @@ int ArrayFree2D(int ***arrPtr, int arrSize);                    /* 释放二维�
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-int validateArray(char testNum,
+int ValidateArray(char testNum,
                   int *expectArr, int expectLen,
                   int *actualArr, int actualLen,
                   int needSort);                              /* 验证数组 */
