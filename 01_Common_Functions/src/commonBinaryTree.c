@@ -673,7 +673,7 @@ struct TreeNode *BTree_DeListQueue(TreeListQueue *queue) {
  * @param {TreeListQueue} *queue    二叉树节点链表队列指针
  * @return {int}                    如果队列为空，返回1；否则返回0
  */
-int isTreeListQueueEmpty(TreeListQueue *queue) {
+int BTree_ListQueueIsEmpty(TreeListQueue *queue) {
     return queue->head == NULL;
 }
 
