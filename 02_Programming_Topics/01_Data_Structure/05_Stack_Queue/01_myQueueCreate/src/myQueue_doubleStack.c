@@ -104,7 +104,7 @@ bool myQueueEmpty(MyQueue* obj) {
  * @return {void}
  */
 void myQueueFree(MyQueue* obj) {
-    stackFree(obj->inStack);                                /* 释放入队栈空间 */
-    stackFree(obj->outStack);                               /* 释放出队栈空间 */
+    Stack_Free(obj->inStack);                                /* 释放入队栈空间 */
+    Stack_Free(obj->outStack);                               /* 释放出队栈空间 */
 }
 

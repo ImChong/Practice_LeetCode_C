@@ -85,7 +85,7 @@ bool Stack_Empty(Stack *obj) {
  * @param {Stack *} obj     栈结构体
  * @return {void}
  */
-void stackFree(Stack *obj) {
+void Stack_Free(Stack *obj) {
     free(obj->stk);                         /* 释放栈结构体内 stk 数组的空间 */
 }
 

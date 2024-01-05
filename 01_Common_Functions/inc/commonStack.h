@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:36:39
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-05 21:54:54
+ * @LastEditTime : 2024-01-05 21:55:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,8 +44,8 @@ bool Stack_Full(Stack *obj);             /* 判断栈是否为满 */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void stackPrint(Stack *obj);            /* 打印栈 */
-void stackFree(Stack *obj);             /* 释放栈 */
+void Stack_Print(Stack *obj);            /* 打印栈 */
+void Stack_Free(Stack *obj);             /* 释放栈 */
 
 
 #endif  /* __COMMON_STACK_H */      /* NOLINT(build/header_guard) */
