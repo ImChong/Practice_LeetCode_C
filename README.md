@@ -1,19 +1,5 @@
 # 1. Practice_LeetCode_C
 
-- [1. Practice\_LeetCode\_C](#1-practice_leetcode_c)
-  - [1.1. Workspace Structure](#11-workspace-structure)
-  - [1.2. Common Function Modules](#12-common-function-modules)
-  - [1.3. Code Structure of Basic Building Unit](#13-code-structure-of-basic-building-unit)
-  - [1.4. Build \& Run Code](#14-build--run-code)
-    - [1.4.1. Operating Systems](#141-operating-systems)
-    - [1.4.2. Build Tool Versions](#142-build-tool-versions)
-    - [1.4.3. VSCode Native - Build \& Run Current File](#143-vscode-native---build--run-current-file)
-    - [1.4.4. VSCode Extension - Code Runner](#144-vscode-extension---code-runner)
-    - [1.4.5. Build Process](#145-build-process)
-  - [1.5. Debug Code](#15-debug-code)
-  - [1.6. Clean all .exe files](#16-clean-all-exe-files)
-  - [1.7. Questions](#17-questions)
-
 | Topics | Badges |
 |:-:|:-|
 | License | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
