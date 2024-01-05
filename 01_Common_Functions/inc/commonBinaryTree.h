@@ -83,7 +83,7 @@ int **levelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColum
 /* 树列表队列操作 */
 /* ============================================================================== */
 TreeArrQueue *BTree_NewArrQueue(int queueSize);                       /* 创建队列 */
-void enTreeArrQueue(TreeArrQueue *queue, struct TreeNode *node);    /* 将节点加入队列 */
+void BTree_EnArrQueue(TreeArrQueue *queue, struct TreeNode *node);    /* 将节点加入队列 */
 struct TreeNode *deTreeArrQueue(TreeArrQueue *queue);               /* 从队列中取出一个节点 */
 int isTreeArrQueueEmpty(TreeArrQueue *queue);                       /* 判断队列是否为空 */
 int isTreeArrQueueFull(TreeArrQueue *queue);                        /* 判断队列是否为满 */

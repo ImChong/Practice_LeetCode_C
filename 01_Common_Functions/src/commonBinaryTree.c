@@ -530,7 +530,7 @@ TreeArrQueue *BTree_NewArrQueue(int queueSize) {
  * @param {TreeNode} *node      节点指针
  * @return {void}
  */
-void enTreeArrQueue(TreeArrQueue *queue, struct TreeNode *node) {
+void BTree_EnArrQueue(TreeArrQueue *queue, struct TreeNode *node) {
     if ((queue->tail + 1) % queue->size == queue->head) {
         printf("Queue is full.\n");
         return;
@@ -801,15 +801,15 @@ int *treeToArray(struct TreeNode *root, int *returnSize) {
 
     int *result = (int *)malloc(MAX_SIZE * sizeof(int));    /* NOLINT(readability/casting) */
     TreeArrQueue *q = BTree_NewArrQueue(MAX_SIZE);
-    enTreeArrQueue(q, root);
+    BTree_EnArrQueue(q, root);
     int index = 0;
 
     while (!isTreeArrQueueEmpty(q)) {
         struct TreeNode *current = deTreeArrQueue(q);
         if (current) {
             result[index] = current->val;
-            enTreeArrQueue(q, current->left);
-            enTreeArrQueue(q, current->right);
+            BTree_EnArrQueue(q, current->left);
+            BTree_EnArrQueue(q, current->right);
         } else {
             result[index] = INT_MIN;
         }
