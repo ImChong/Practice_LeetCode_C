@@ -514,7 +514,7 @@ int **levelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColum
  * @param {int} queueSize       队列的大小
  * @return {TreeArrQueue} *queue   新的二叉树节点队列指针
  */
-TreeArrQueue *BTree_ArrQueueInit(int queueSize) {
+TreeArrQueue *BTree_InitArrQueue(int queueSize) {
     TreeArrQueue *queue = (TreeArrQueue *)malloc(sizeof(TreeArrQueue));         /* NOLINT(readability/casting) */
     queue->array = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * queueSize); /* NOLINT(readability/casting) */
     queue->head = 0;
@@ -752,7 +752,7 @@ struct TreeNode *BTree_InitNode(int value) {
  * @param {int} arrSize             数组大小
  * @return {TreeNode} *node         根节点指针
  */
-struct TreeNode *BTree_ArrayInit(int* arr, int arrSize) {
+struct TreeNode *BTree_Init(int* arr, int arrSize) {
     if (arrSize == 0) {
         return NULL;
     }
@@ -762,7 +762,7 @@ struct TreeNode *BTree_ArrayInit(int* arr, int arrSize) {
     root->left = NULL;
     root->right = NULL;
 
-    TreeArrQueue *queue = BTree_ArrQueueInit(arrSize);
+    TreeArrQueue *queue = BTree_InitArrQueue(arrSize);
     queue->array[queue->tail++] = root;
 
     for (int i = 1; i < arrSize; i++) {
@@ -800,7 +800,7 @@ int *BTree_ToArray(struct TreeNode *root, int *returnSize) {
     }
 
     int *result = (int *)malloc(MAX_SIZE * sizeof(int));    /* NOLINT(readability/casting) */
-    TreeArrQueue *q = BTree_ArrQueueInit(MAX_SIZE);
+    TreeArrQueue *q = BTree_InitArrQueue(MAX_SIZE);
     BTree_EnArrQueue(q, root);
     int index = 0;
 
