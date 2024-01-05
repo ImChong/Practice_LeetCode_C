@@ -223,13 +223,13 @@ void Validate_SingleValue(char testNum, int *expected, int *result, int returnSi
  * @param {struct TreeNode} *root      树的根节点
  * @return {void}
  */
-void freeTree(struct TreeNode *root) {
+void BTree_Free(struct TreeNode *root) {
     if (root == NULL) {             /* 如果传入节点为 NULL 则返回 */
         return;
     }
 
-    freeTree(root->left);           /* 遍历释放左节点空间 */
-    freeTree(root->right);          /* 遍历释放右节点空间 */
+    BTree_Free(root->left);           /* 遍历释放左节点空间 */
+    BTree_Free(root->right);          /* 遍历释放右节点空间 */
     free(root);                     /* 释放当前节点空间 */
 }
 
@@ -273,7 +273,7 @@ void Test1(void) {
     Validate_SingleValue('1', expected, result, returnSize);
 
     /* 释放内存空间 */
-    freeTree(root);
+    BTree_Free(root);
     free(result);
 }
 
@@ -310,7 +310,7 @@ void Test2(void) {
     Validate_SingleValue('2', expected, result, returnSize);
 
     /* 释放内存空间 */
-    freeTree(root);
+    BTree_Free(root);
     free(result);
 }
 

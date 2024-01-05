@@ -59,5 +59,5 @@ void test_inOrderTraversal(void) {
     Validate_Array('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
 
     /* 释放内存 */
-    freeTree(root);
+    BTree_Free(root);
 }

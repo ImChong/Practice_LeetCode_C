@@ -165,12 +165,12 @@ void Array_Free2D(int **result, int returnSize) {
  * @param {struct Node} *root   根节点
  * @return {void}
  */
-void freeTree(struct Node *root) {
+void BTree_Free(struct Node *root) {
     if (root == NULL) {                                                     /* 如果传入节点为 NULL 则返回 */
         return;
     }
     for (int i = 0; i < root->numChildren; i++) {                           /* 遍历子节点 */
-        freeTree(root->children[i]);                                            /* 递归释放子节点所占用的空间 */
+        BTree_Free(root->children[i]);                                            /* 递归释放子节点所占用的空间 */
     }
     free(root->children);                                                   /* 释放子节点指针数组所占用的空间 */
     free(root);                                                             /* 释放根节点所占用的空间 */
@@ -205,7 +205,7 @@ void Test1(void) {
     Array_Free2D(expected, returnSize);
     Array_Free2D(result, returnSize);
     free(returnColumnSizes);
-    freeTree(root);
+    BTree_Free(root);
 }
 
 /**
@@ -256,7 +256,7 @@ void Test2(void) {
     Array_Free2D(expected, returnSize);
     Array_Free2D(result, returnSize);
     free(returnColumnSizes);
-    freeTree(root);
+    BTree_Free(root);
 }
 
 /**
@@ -366,7 +366,7 @@ void Test3(void) {
     Array_Free2D(expected, returnSize);
     Array_Free2D(result, returnSize);
     free(returnColumnSizes);
-    freeTree(root);
+    BTree_Free(root);
 }
 
 /**********************************************************************************/

@@ -109,7 +109,7 @@ struct TreeNode *BTree_ArrayInit(int *arr, int arrSize);                /* 将�
 int *BTree_ToArray(struct TreeNode *root, int *returnSize);           /* 将树转换为数组 */
 void BTree_PrintTest(void);                                           /* 打印测试树 */
 void BTree_Print(struct TreeNode *root);                              /* 打印树 */
-void freeTree(struct TreeNode *root);                               /* 释放树的内存 */
+void BTree_Free(struct TreeNode *root);                               /* 释放树的内存 */
 
 
 #endif  /* __COMMON_BINARY_TREE_H */    /* NOLINT(build/header_guard) */

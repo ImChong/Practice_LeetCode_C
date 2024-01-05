@@ -195,13 +195,13 @@ struct TreeNode *newNode(int value) {
  * @param {TreeNode} *root
  * @return {void}
  */
-void freeTree(struct TreeNode *root) {
+void BTree_Free(struct TreeNode *root) {
     if (root == NULL) {             /* 如果传入节点为 NULL 则返回 */
         return;
     }
 
-    freeTree(root->left);           /* 遍历释放左节点空间 */
-    freeTree(root->right);          /* 遍历释放右节点空间 */
+    BTree_Free(root->left);           /* 遍历释放左节点空间 */
+    BTree_Free(root->right);          /* 遍历释放右节点空间 */
     free(root);                     /* 释放当前节点空间 */
 }
 
@@ -260,7 +260,7 @@ int main(int argc, const char *argv[]) {
     double* result = averageOfLevels(root, &returnSize);
     print1DArray(result, returnSize);
 
-    freeTree(root);     /* 释放树所占用的空间 */
+    BTree_Free(root);     /* 释放树所占用的空间 */
     free(result);       /* 释放结果一维数组的内存空间 */
     return 0;
 }
