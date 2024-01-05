@@ -8,13 +8,13 @@ on:
     # Allows you to run this workflow every time a commit is pushed to the repository
     push:
       paths:
-        - '01_Common_Func/**'
+        - '01_Common_Functions/**'
         - '.github/workflows/commonFuncTest.yml'
         - '.github/workflows/testRunner/runGTests.sh'
     # Allows you to run this workflow every time a pull request is opened or updated
     pull_request:
       paths:
-        - '01_Common_Func/**'
+        - '01_Common_Functions/**'
         - '.github/workflows/commonFuncTest.yml'
         - '.github/workflows/testRunner/runGTests.sh'
     # Schedule a workflow to run automatically

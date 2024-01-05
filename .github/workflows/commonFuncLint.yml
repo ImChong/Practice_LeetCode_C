@@ -7,14 +7,14 @@ on:
     # Allows you to run this workflow every time a commit is pushed to the repository
     push:
       paths:
-        - '01_Common_Func/**'
+        - '01_Common_Functions/**'
         - '.github/workflows/commonFuncLint.yml'
         - '.github/workflows/testRunner/runCpplint.sh'
         - '.github/workflows/testRunner/runCppcheck.sh'
     # Allows you to run this workflow every time a pull request is opened or updated
     pull_request:
       paths:
-        - '01_Common_Func/**'
+        - '01_Common_Functions/**'
         - '.github/workflows/commonFuncLint.yml'
         - '.github/workflows/testRunner/runCpplint.sh'
         - '.github/workflows/testRunner/runCppcheck.sh'
