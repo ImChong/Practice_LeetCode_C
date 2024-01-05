@@ -66,7 +66,7 @@ STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, in
     resultArray[*returnSize] = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);
 
     while (1) {
-        struct TreeNode *node = deTreeListQueue(queueHead);
+        struct TreeNode *node = BTree_DeListQueue(queueHead);
         if (node == NULL) {
             break;
         }

@@ -382,7 +382,7 @@ STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, in
     resultArray[*returnSize] = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);     /* NOLINT(readability/casting) */
 
     while (1) {
-        struct TreeNode *node = deTreeListQueue(queueHead);
+        struct TreeNode *node = BTree_DeListQueue(queueHead);
         if (node == NULL) {
             break;
         }
@@ -654,7 +654,7 @@ void BTree_EnListQueue(TreeListQueue *queue, struct TreeNode *node) {
  * @param {TreeListQueue} *queue    二叉树节点链表队列指针
  * @return {TreeNode} *node         节点指针
  */
-struct TreeNode *deTreeListQueue(TreeListQueue *queue) {
+struct TreeNode *BTree_DeListQueue(TreeListQueue *queue) {
     if (queue->head == NULL) {
         printf("Queue is empty.\n");
         return NULL;
