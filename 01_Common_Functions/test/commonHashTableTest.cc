@@ -60,9 +60,9 @@ TEST_F(TestCommonHashTable, TestHashTable_Insert) {
 }
 
 /* ============================================================================== */
-/* searchHashTable */
+/* HashTable_Search */
 /* ============================================================================== */
-TEST_F(TestCommonHashTable, TestSearchHashTable) {
+TEST_F(TestCommonHashTable, TestHashTable_Search) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }

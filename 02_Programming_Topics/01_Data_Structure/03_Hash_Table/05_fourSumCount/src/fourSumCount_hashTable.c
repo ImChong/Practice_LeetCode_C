@@ -70,7 +70,7 @@ int fourSumCount(int *nums1, int nums1Size, int *nums2, int nums2Size,
     int count = 0;                                                                  /* 计数器 */
     for (int i = 0; i < nums3Size; i++) {                                               /* 遍历数组3 */
         for (int j = 0; j < nums4Size; j++) {                                               /* 遍历数组4 */
-            count += searchHashTable(hashTable, -1 * (nums3[i] + nums4[j]));                               /* 如果数组3和数组4的和的负数存在于哈希表中，计数器加 1 */
+            count += HashTable_Search(hashTable, -1 * (nums3[i] + nums4[j]));                               /* 如果数组3和数组4的和的负数存在于哈希表中，计数器加 1 */
         }
     }
 

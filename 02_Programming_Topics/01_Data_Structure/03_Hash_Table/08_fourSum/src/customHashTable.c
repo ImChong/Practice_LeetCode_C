@@ -76,7 +76,7 @@ void HashTable_Insert(struct HashTable *table, int val, int index1, int index2) 
  * @param {int} val                         元素值
  * @return {struct HashNode} *currentNode   哈希节点
  */
-struct HashNode *searchHashTable(struct HashTable *table, int val)  {
+struct HashNode *HashTable_Search(struct HashTable *table, int val)  {
     int slot = getHashSlot(table, val);                                                 /* 获取元素值在哈希表中的槽位 */
     struct HashNode *currentNode = table->hashSlots[slot];                              /* 获取哈希表的哈希节点 */
     while (currentNode) {                                                               /* 如果存在哈希节点，则遍历哈希节点 */

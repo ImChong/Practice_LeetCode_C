@@ -67,7 +67,7 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
                     if (l > k + 1 && nums[l] == nums[l - 1]) {                  /* 去重 */
                         continue;
                     }
-                    struct HashNode *node = searchHashTable(table, target - nums[k] - nums[l]);
+                    struct HashNode *node = HashTable_Search(table, target - nums[k] - nums[l]);
                     if (node) {
                         ans[*returnSize] = (int *)malloc(sizeof(int) * 4);
                         ans[*returnSize][0] = nums[node->index1];

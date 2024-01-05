@@ -48,7 +48,7 @@ int **threeSum(int *arr, int arrSize, int *returnSize, int **returnColumnSizes) 
         struct HashTable *table = HashTable_Create(arrSize);
         for (int j = i + 1; j < arrSize; j++) {
             int complement = -(arr[i] + arr[j]);
-            if (searchHashTable(table, complement)) {
+            if (HashTable_Search(table, complement)) {
                 ans[*returnSize] = (int *)malloc(sizeof(int) * 3);
                 ans[*returnSize][0] = arr[i];
                 ans[*returnSize][1] = arr[j];

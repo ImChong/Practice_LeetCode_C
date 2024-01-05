@@ -55,7 +55,7 @@ int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *ret
     int *result = (int *)malloc(sizeof(int) * (numsASize < numsBSize ? numsASize : numsBSize));
     *returnSize = 0;
     for (int i = 0; i < numsBSize; i++) {
-        if (searchHashTable(hashTable, numsB[i])) {
+        if (HashTable_Search(hashTable, numsB[i])) {
             result[(*returnSize)++] = numsB[i];
             removeHashTable(hashTable, numsB[i]);
         }
