@@ -45,7 +45,7 @@ class TestCommonString : public ::testing::Test {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* swapChar */
+/* Char_Swap */
 /* ============================================================================== */
 TEST_F(TestCommonString, TestSwapChar) {
     /* 准备数据 */
@@ -53,7 +53,7 @@ TEST_F(TestCommonString, TestSwapChar) {
     char b = 'b';
 
     /* 运行结果 */
-    int result = swapChar(&a, &b);
+    int result = Char_Swap(&a, &b);
 
     /* 比较结果 */
     EXPECT_EQ(a, 'b') << "Error occurred at parameter a";

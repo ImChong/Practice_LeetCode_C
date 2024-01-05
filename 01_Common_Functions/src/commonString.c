@@ -32,7 +32,7 @@
  * @param {char} *b     b字符地址
  * @return {int}        交换结果: 0-成功，-1-失败
  */
-int swapChar(char *a, char *b) {
+int Char_Swap(char *a, char *b) {
     if (a == NULL || b == NULL) {
         return COMMON_ERR;
     }
@@ -57,7 +57,7 @@ int reverseStringSection(char *s, int leftIndex, int rightIndex) {
         return COMMON_ERR;
     }
     while (leftIndex < rightIndex) {                    /* 左右指针未相遇 */
-        swapChar(&s[leftIndex++], &s[rightIndex--]);        /* 交换字符，左指针右移，右指针左移 */
+        Char_Swap(&s[leftIndex++], &s[rightIndex--]);        /* 交换字符，左指针右移，右指针左移 */
     }
     return COMMON_OK;
 }

@@ -36,7 +36,7 @@ void reverseString(char *s, int sSize) {
     int left = 0;                           /* 左指针 */
     int right = sSize - 1;                  /* 右指针 */
     while (left < right) {                  /* 左右指针交换 */
-        swapChar(s + left, s + right);          /* 交换字符 */
+        Char_Swap(s + left, s + right);          /* 交换字符 */
         left++;                                 /* 左指针右移 */
         right--;                                /* 右指针左移 */
     }
