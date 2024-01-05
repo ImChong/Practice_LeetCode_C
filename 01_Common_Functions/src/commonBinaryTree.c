@@ -598,7 +598,7 @@ void BTree_ArrQueuePrint(TreeArrQueue *queue) {
  * @param {TreeArrQueue} *queue    二叉树节点队列指针
  * @return {void}
  */
-void freeTreeArrQueue(TreeArrQueue *queue) {
+void BTree_ArrQueueFree(TreeArrQueue *queue) {
     free(queue->array);
     free(queue);
 }
@@ -782,7 +782,7 @@ struct TreeNode *BTree_Init(int* arr, int arrSize) {
             queue->array[queue->tail++] = node->right;
         }
     }
-    freeTreeArrQueue(queue);
+    BTree_ArrQueueFree(queue);
     return root;
 }
 
@@ -817,7 +817,7 @@ int *BTree_ToArray(struct TreeNode *root, int *returnSize) {
     }
 
     *returnSize = index;
-    freeTreeArrQueue(q);
+    BTree_ArrQueueFree(q);
     return result;
 }
 
