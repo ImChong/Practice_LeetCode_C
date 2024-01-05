@@ -44,7 +44,7 @@ class TestCommonCmd : public ::testing::Test {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* printCommandInfo */
+/* CMD_PrintInfo */
 /* ============================================================================== */
 TEST_F(TestCommonCmd, TestPrintCommandInfo) {
     /* 准备数据 */
@@ -52,8 +52,8 @@ TEST_F(TestCommonCmd, TestPrintCommandInfo) {
     int argc = sizeof(argv) / sizeof(char *);
     /* 执行函数 */
     printf("============================================================ Print Start.\n");
-    int ret = printCommandInfo(argc, argv);
+    int ret = CMD_PrintInfo(argc, argv);
     printf("============================================================ Print End.\n");
     /* 验证结果 */
-    EXPECT_EQ(COMMON_OK, ret) << "Error occurred in printCommandInfo()";
+    EXPECT_EQ(COMMON_OK, ret) << "Error occurred in CMD_PrintInfo()";
 }
