@@ -43,7 +43,7 @@ MyQueue *myQueueCreate(void) {
  */
 void in2out(MyQueue *obj) {
     while (!stackEmpty(obj->inStack)) {                     /* 当入队栈不为空时 */
-        Stack_Push(obj->outStack, stackTop(obj->inStack));       /* 将入队栈的栈顶元素放入出队栈 */
+        Stack_Push(obj->outStack, Stack_Top(obj->inStack));       /* 将入队栈的栈顶元素放入出队栈 */
         Stack_Pop(obj->inStack);                                 /* 去除入队栈的栈顶元素 */
     }
 }
@@ -69,7 +69,7 @@ int myQueuePop(MyQueue *obj) {
     if (stackEmpty(obj->outStack)) {                        /* 如果出队栈为空 */
         in2out(obj);                                            /* 将入队栈内所有元素反向放入出队栈 */
     }
-    int x = stackTop(obj->outStack);                        /* 取出出队栈的栈顶元素，并赋值给 x */
+    int x = Stack_Top(obj->outStack);                        /* 取出出队栈的栈顶元素，并赋值给 x */
     Stack_Pop(obj->outStack);                                /* 移除出队栈内的栈顶元素 */
     return x;                                               /* 返回出队栈栈顶元素 x */
 }
@@ -84,7 +84,7 @@ int myQueuePeek(MyQueue *obj) {
     if (stackEmpty(obj->outStack)) {                        /* 如果出队栈为空 */
         in2out(obj);                                            /* 将入队栈内所有元素反向放入出队栈 */
     }
-    return stackTop(obj->outStack);                         /* 返回出队栈栈顶元素 */
+    return Stack_Top(obj->outStack);                         /* 返回出队栈栈顶元素 */
 }
 
 /**

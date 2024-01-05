@@ -65,7 +65,7 @@ void Stack_Pop(Stack *obj) {
  * @param {Stack *} obj     栈结构体
  * @return {int} x          栈顶元素
  */
-int stackTop(Stack *obj) {
+int Stack_Top(Stack *obj) {
     return obj->stk[obj->stkSize - 1];      /* 返回栈结构体内【栈大小 - 1】索引位置处的数据 */
 }
 
