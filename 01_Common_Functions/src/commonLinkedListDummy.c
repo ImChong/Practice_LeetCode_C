@@ -43,7 +43,7 @@ DummyLinkedList *DLinkedList_Init(void) {
  * @param {int} index                       索引
  * @return {int} ans                        返回指定索引的节点数值
  */
-int DLinkedList_GetIndex(DummyLinkedList *dummyHead, int index) {
+int DLinkedList_GetAtIndex(DummyLinkedList *dummyHead, int index) {
     if (index < 0 || index >= dummyHead->size) {        /* 输入校验 */
         return -1;                                          /* 返回 -1 */
     }
@@ -235,7 +235,7 @@ void DLinkedList_Print(DummyLinkedList *list) {
     printf("linked list (size: %d): Dummy -> ", list->size);    /* 打印链表长度 */
 
     for (int i = 0; i < list->size; i++) {                      /* 循环打印链表节点数值 */
-        printf("%d", DLinkedList_GetIndex(list, i));                  /* 打印链表节点数值 */
+        printf("%d", DLinkedList_GetAtIndex(list, i));                  /* 打印链表节点数值 */
         if (i < list->size - 1) {                                   /* 如果不是最后一个节点 */
             printf(" -> ");                                             /* 打印箭头 */
         }
@@ -276,7 +276,7 @@ void Validate_DLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList
     int isSuccess = COMMON_TRUE;                                                /* 是否通过测试 */
 
     for (int i = 0; i < expect->size; i++) {                                    /* 循环比较每个节点的数值 */
-        if (DLinkedList_GetIndex(expect, i) != DLinkedList_GetIndex(actual, i)) {       /* 如果节点数值不相等 */
+        if (DLinkedList_GetAtIndex(expect, i) != DLinkedList_GetAtIndex(actual, i)) {       /* 如果节点数值不相等 */
             isSuccess = COMMON_FALSE;                                                   /* 未通过测试 */
             break;                                                                      /* 跳出循环 */
         }

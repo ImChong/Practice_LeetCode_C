@@ -65,7 +65,7 @@ void Test2(void) {
     DLinkedList_AddAtHead(actualDummy, 2);                 /* addAtHead        [2] */
     DLinkedList_AddAtHead(actualDummy, 5);                 /* addAtHead        [5] */
     DLinkedList_AddAtTail(actualDummy, 5);                 /* addAtTail        [5] */
-    DLinkedList_GetIndex(actualDummy, 5);                       /* get              [5] */
+    DLinkedList_GetAtIndex(actualDummy, 5);                       /* get              [5] */
     DLinkedList_DeleteAtIndex(actualDummy, 6);             /* deleteAtIndex    [6] */
     DLinkedList_DeleteAtIndex(actualDummy, 4);             /* deleteAtIndex    [4] */
 

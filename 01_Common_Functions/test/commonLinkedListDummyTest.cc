@@ -52,7 +52,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListCreate) {
 }
 
 /* ============================================================================== */
-/* DLinkedList_GetIndex */
+/* DLinkedList_GetAtIndex */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListGet) {
     /* TODO */
