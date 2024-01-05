@@ -53,7 +53,7 @@ void Test1(void) {
     };
 
     /* 测试结果 */
-    ValidateArray2D('1',
+    Validate_Array2D('1',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE);
@@ -85,7 +85,7 @@ void Test2(void) {
     };
 
     /* 测试结果 */
-    ValidateArray2D('2',
+    Validate_Array2D('2',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE);
@@ -120,7 +120,7 @@ void Test3(void) {
     };
 
     /* 测试结果 */
-    ValidateArray2D('3',
+    Validate_Array2D('3',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE);

@@ -129,7 +129,7 @@ struct Node *newNode(int val) {
  * @param {int} **returnColumnSizes     运算结果数组的列数
  * @return {void}
  */
-void ValidateArray2D(char testNum, int **expected, int **result, int returnSize, int *returnColumnSizes) {
+void Validate_Array2D(char testNum, int **expected, int **result, int returnSize, int *returnColumnSizes) {
     if (returnSize == 0 && expected != NULL) {                              /* 如果预期结果与运算结果的长度不相等 */
         printf("❌ Test %c failed\n", testNum);                                 /* 测试失败 */
         return;                                                                 /* 返回 */
@@ -199,7 +199,7 @@ void Test1(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    ValidateArray2D('1', expected, result, returnSize, returnColumnSizes);
+    Validate_Array2D('1', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     Array_Free2D(expected, returnSize);
@@ -250,7 +250,7 @@ void Test2(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    ValidateArray2D('2', expected, result, returnSize, returnColumnSizes);
+    Validate_Array2D('2', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     Array_Free2D(expected, returnSize);
@@ -360,7 +360,7 @@ void Test3(void) {
     int **result = levelOrder(root, &returnSize, &returnColumnSizes);
 
     /* 测试输出结果 */
-    ValidateArray2D('3', expected, result, returnSize, returnColumnSizes);
+    Validate_Array2D('3', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
     Array_Free2D(expected, returnSize);
