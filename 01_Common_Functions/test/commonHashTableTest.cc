@@ -81,9 +81,9 @@ TEST_F(TestCommonHashTable, TestHashTable_Remove) {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* printHashTable */
+/* HashTable_Print */
 /* ============================================================================== */
-TEST_F(TestCommonHashTable, TestPrintHashTable) {
+TEST_F(TestCommonHashTable, TestHashTable_Print) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }

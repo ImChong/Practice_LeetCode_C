@@ -50,7 +50,7 @@ int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *ret
         HashTable_Insert(hashTable, numsA[i], -1);
     }
 
-    // printHashTable(hashTable);
+    // HashTable_Print(hashTable);
 
     int *result = (int *)malloc(sizeof(int) * (numsASize < numsBSize ? numsASize : numsBSize));
     *returnSize = 0;

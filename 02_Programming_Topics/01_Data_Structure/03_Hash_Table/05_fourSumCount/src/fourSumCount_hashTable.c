@@ -65,7 +65,7 @@ int fourSumCount(int *nums1, int nums1Size, int *nums2, int nums2Size,
         }
     }
 
-    // printHashTable(hashTable);                                                      /* 打印哈希表 */
+    // HashTable_Print(hashTable);                                                      /* 打印哈希表 */
 
     int count = 0;                                                                  /* 计数器 */
     for (int i = 0; i < nums3Size; i++) {                                               /* 遍历数组3 */

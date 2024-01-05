@@ -134,7 +134,7 @@ void HashTable_Remove(struct HashTable *table, int val) {
  * @param {HashTable} *table    哈希表
  * @return {void}
  */
-void printHashTable(struct HashTable *table) {
+void HashTable_Print(struct HashTable *table) {
     printf("Hash Table (slot size: %d):\n", table->size);
     for (int i = 0; i < table->size; i++) {
         printf("    Hash Slot [%d]: ", i);

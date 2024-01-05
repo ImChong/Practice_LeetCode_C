@@ -82,7 +82,7 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
         }
     }
 
-    printHashTable(table);  /* 打印哈希表 */
+    HashTable_Print(table);  /* 打印哈希表 */
     freeHashTable(table);   /* 释放哈希表 */
     return NULL;
 }

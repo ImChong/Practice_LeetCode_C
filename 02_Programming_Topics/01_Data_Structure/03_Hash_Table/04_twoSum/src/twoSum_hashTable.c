@@ -54,7 +54,7 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
         }
         HashTable_Insert(table, nums[i], i);
     }
-    // printHashTable(table);
+    // HashTable_Print(table);
     *returnSize = 0;
     return NULL;
 }
