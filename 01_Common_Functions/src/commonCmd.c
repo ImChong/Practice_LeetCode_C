@@ -39,7 +39,7 @@
  * @param {char} *argv[]    程序入参字符串数组
  * @return {int}            运行结果：0 - 成功；其他 - 失败
  */
-int CMD_PrintInfo(int argc, const char *argv[]) {
+int CMD_PrintInput(int argc, const char *argv[]) {
     INFO("Number of command-line arguments: %d", argc);
     INFO("Command-line arguments:");
     for (int i = 0; i < argc; i++) {
