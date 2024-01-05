@@ -1,5 +1,5 @@
 # This is a workflow to get source code and run tests of common functions
-name: Common Function Tests
+name: CommonFunctionTests
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI or API.
 on:
