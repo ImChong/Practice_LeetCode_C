@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-06 00:50:10
+ * @LastEditTime : 2024-01-06 01:10:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,7 +28,7 @@ struct ListNode {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-int LinkedList_Get(struct ListNode *head, int index);        /* 获取链表中第index个节点的值 */
+int LinkedList_GetAtIndex(struct ListNode *head, int index);        /* 获取链表中第index个节点的值 */
 struct ListNode *LinkedList_AddAtHead(struct ListNode *head, int val);       /* 在链表头部添加一个节点 */
 struct ListNode *LinkedList_AddAtTail(struct ListNode *head, int val);       /* 在链表尾部添加一个节点 */
 struct ListNode *LinkedList_AddAtIndex(struct ListNode *head,
