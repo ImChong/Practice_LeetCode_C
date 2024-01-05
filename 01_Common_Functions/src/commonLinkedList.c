@@ -129,7 +129,7 @@ struct ListNode *LinkedList_DeleteAtIndex(struct ListNode *head, int index) {
  * @param {int} val                     目标值
  * @return {struct ListNode} *head      返回链表虚拟头节点
  */
-struct ListNode *LinkedList_DeleteElement(struct ListNode *head, int val) {
+struct ListNode *LinkedList_DeleteValue(struct ListNode *head, int val) {
     struct ListNode dummy;                          /* 创建虚拟头节点 */
     dummy.next = head;                              /* 将传入链表接在虚拟头节点后面 */
 

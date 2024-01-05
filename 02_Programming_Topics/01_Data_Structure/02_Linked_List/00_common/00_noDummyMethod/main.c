@@ -78,7 +78,7 @@ void Test3(void) {
     actualList = LinkedList_AddAtTail(actualList, 2);
     actualList = LinkedList_AddAtTail(actualList, 1);
     actualList = LinkedList_AddAtTail(actualList, 2);
-    actualList = LinkedList_DeleteElement(actualList, 2);
+    actualList = LinkedList_DeleteValue(actualList, 2);
 
     /* 预期结果 */
     int nums[] = {1, 1, 1};

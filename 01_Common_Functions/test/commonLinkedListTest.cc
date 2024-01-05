@@ -84,7 +84,7 @@ TEST_F(TestCommonLinkedList, TestLinkedListDeleteAtIndex) {
 }
 
 /* ============================================================================== */
-/* LinkedList_DeleteElement */
+/* LinkedList_DeleteValue */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedList, TestLinkedListDeleteElement) {
     /* TODO */
