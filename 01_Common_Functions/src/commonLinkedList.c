@@ -109,7 +109,7 @@ struct ListNode *LinkedList_AddAtIndex(struct ListNode *head, int index, int val
  * @param {int} index           目标节点索引
  * @return {ListNode *} head    头节点指针
  */
-struct ListNode *linkedListDeleteAtIndex(struct ListNode *head, int index) {
+struct ListNode *LinkedList_DeleteAtIndex(struct ListNode *head, int index) {
     struct ListNode *dummy = (struct ListNode *)malloc(sizeof(struct ListNode));
     dummy->next = head;
     struct ListNode *currentNode = dummy;

@@ -76,7 +76,7 @@ TEST_F(TestCommonLinkedList, TestLinkedListAddAtIndex) {
 }
 
 /* ============================================================================== */
-/* linkedListDeleteAtIndex */
+/* LinkedList_DeleteAtIndex */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedList, TestLinkedListDeleteAtIndex) {
     /* TODO */

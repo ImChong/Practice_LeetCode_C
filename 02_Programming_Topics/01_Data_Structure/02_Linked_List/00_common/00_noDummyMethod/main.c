@@ -32,7 +32,7 @@ void Test1(void) {
     actualList = LinkedList_AddAtTail(actualList, 1);
     actualList = LinkedList_AddAtTail(actualList, 2);
     actualList = LinkedList_AddAtTail(actualList, 3);
-    actualList = linkedListDeleteAtIndex(actualList, 0);
+    actualList = LinkedList_DeleteAtIndex(actualList, 0);
 
     /* 预期结果 */
     int nums[] = {2, 3};
@@ -55,7 +55,7 @@ void Test2(void) {
     /* 实际结果 */
     struct ListNode *actualList = NULL;
     actualList = LinkedList_AddAtTail(actualList, 1);
-    actualList = linkedListDeleteAtIndex(actualList, 0);
+    actualList = LinkedList_DeleteAtIndex(actualList, 0);
 
     /* 预期结果 */
     int nums[] = {};
