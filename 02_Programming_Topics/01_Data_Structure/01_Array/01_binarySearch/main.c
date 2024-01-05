@@ -16,7 +16,6 @@
 #include "commonSingleValue.h"
 #include "commonArray.h"
 /* solution method configuration file (解题方法配置文件) */
-
 /* solution header file (题解头文件) */
 #include "binarySearch.h"
 
