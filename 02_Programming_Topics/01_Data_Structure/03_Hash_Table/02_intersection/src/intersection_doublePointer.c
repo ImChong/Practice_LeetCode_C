@@ -43,8 +43,8 @@
  * @return {int} *res           返回结果数组
  */
 int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *returnSize) {
-    qsort(numsA, numsASize, sizeof(int), compareElements);      /* 将数组1排序 */
-    qsort(numsB, numsBSize, sizeof(int), compareElements);      /* 将数组2排序 */
+    qsort(numsA, numsASize, sizeof(int), CompareElement);      /* 将数组1排序 */
+    qsort(numsB, numsBSize, sizeof(int), CompareElement);      /* 将数组2排序 */
     int *res = (int *)malloc(sizeof(int) * (numsASize < numsBSize ? numsASize : numsBSize));    /* 创建一个新数组用于保存结果 */
     int i = 0, j = 0, k = 0;                                    /* 创建3个索引 */
     while (i < numsASize && j < numsBSize) {                    /* 当i和j索引没有出界时，保持循环 */

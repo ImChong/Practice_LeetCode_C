@@ -50,7 +50,7 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
     if (nums == NULL || numsSize < 4) {
         return quadruplets;
     }
-    qsort(nums, numsSize, sizeof(int), compareElements);
+    qsort(nums, numsSize, sizeof(int), CompareElement);
     int len = numsSize;
     for (int i = 0; i < len - 3; i++) {
         if (i > 0 && nums[i] == nums[i - 1]) {
