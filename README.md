@@ -14,8 +14,6 @@
   - [1.6. Clean all .exe files](#16-clean-all-exe-files)
   - [1.7. Questions](#17-questions)
 
----
-
 | Topics | Badges |
 |:-:|:-|
 | License | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
