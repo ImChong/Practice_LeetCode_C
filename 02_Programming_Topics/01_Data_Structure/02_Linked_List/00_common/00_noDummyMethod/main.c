@@ -29,9 +29,9 @@
 void Test1(void) {
     /* 实际结果 */
     struct ListNode *actualList = NULL;
-    actualList = linkedListAddAtTail(actualList, 1);
-    actualList = linkedListAddAtTail(actualList, 2);
-    actualList = linkedListAddAtTail(actualList, 3);
+    actualList = LinkedList_AddAtTail(actualList, 1);
+    actualList = LinkedList_AddAtTail(actualList, 2);
+    actualList = LinkedList_AddAtTail(actualList, 3);
     actualList = linkedListDeleteAtIndex(actualList, 0);
 
     /* 预期结果 */
@@ -54,7 +54,7 @@ void Test1(void) {
 void Test2(void) {
     /* 实际结果 */
     struct ListNode *actualList = NULL;
-    actualList = linkedListAddAtTail(actualList, 1);
+    actualList = LinkedList_AddAtTail(actualList, 1);
     actualList = linkedListDeleteAtIndex(actualList, 0);
 
     /* 预期结果 */
@@ -72,12 +72,12 @@ void Test2(void) {
 void Test3(void) {
     /* 实际结果 */
     struct ListNode *actualList = NULL;
-    actualList = linkedListAddAtTail(actualList, 1);
-    actualList = linkedListAddAtTail(actualList, 2);
-    actualList = linkedListAddAtTail(actualList, 1);
-    actualList = linkedListAddAtTail(actualList, 2);
-    actualList = linkedListAddAtTail(actualList, 1);
-    actualList = linkedListAddAtTail(actualList, 2);
+    actualList = LinkedList_AddAtTail(actualList, 1);
+    actualList = LinkedList_AddAtTail(actualList, 2);
+    actualList = LinkedList_AddAtTail(actualList, 1);
+    actualList = LinkedList_AddAtTail(actualList, 2);
+    actualList = LinkedList_AddAtTail(actualList, 1);
+    actualList = LinkedList_AddAtTail(actualList, 2);
     actualList = linkedListDeleteElement(actualList, 2);
 
     /* 预期结果 */
@@ -95,12 +95,12 @@ void Test3(void) {
 void Test4(void) {
     /* 实际结果 */
     struct ListNode *actualList = NULL;
-    actualList = linkedListAddAtTail(actualList, 1);
-    actualList = linkedListAddAtTail(actualList, 2);
-    actualList = linkedListAddAtTail(actualList, 1);
-    actualList = linkedListAddAtTail(actualList, 2);
-    actualList = linkedListAddAtTail(actualList, 1);
-    actualList = linkedListAddAtTail(actualList, 2);
+    actualList = LinkedList_AddAtTail(actualList, 1);
+    actualList = LinkedList_AddAtTail(actualList, 2);
+    actualList = LinkedList_AddAtTail(actualList, 1);
+    actualList = LinkedList_AddAtTail(actualList, 2);
+    actualList = LinkedList_AddAtTail(actualList, 1);
+    actualList = LinkedList_AddAtTail(actualList, 2);
     int actualReturnSize = 0;
     int *actualIndexes = linkedListGetIndexes(actualList, 2, &actualReturnSize);
 
