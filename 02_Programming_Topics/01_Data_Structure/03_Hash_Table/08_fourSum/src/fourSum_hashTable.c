@@ -49,7 +49,7 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
     int **ans = (int **)malloc(sizeof(int *) * HASH_SIZE);   /* 为返回数组分配空间 */
     *returnColumnSizes = (int *)malloc(sizeof(int) * HASH_SIZE); /* 为返回数组列大小分配空间 */
 
-    struct HashTable *table = createHashTable(HASH_SIZE);       /* 创建哈希表 */
+    struct HashTable *table = HashTable_Create(HASH_SIZE);       /* 创建哈希表 */
     for (int i = 0; i < numsSize - 3; i++) {
         if (i > 0 && nums[i] == nums[i - 1]) {                      /* 去重 */
             continue;

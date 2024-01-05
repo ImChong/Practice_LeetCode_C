@@ -44,9 +44,9 @@ class TestCommonHashTable : public ::testing::Test {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* createHashTable */
+/* HashTable_Create */
 /* ============================================================================== */
-TEST_F(TestCommonHashTable, TestCreateHashTable) {
+TEST_F(TestCommonHashTable, TestHashTable_Create) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }

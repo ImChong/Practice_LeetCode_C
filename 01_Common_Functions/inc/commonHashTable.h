@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonHashTable.h
+ * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonHashTable.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-15 23:25:20
+ * @LastEditTime : 2024-01-05 21:28:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -36,7 +36,7 @@ struct HashTable {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-struct HashTable *createHashTable(int size);                            /* 创建哈希表 */
+struct HashTable *HashTable_Create(int size);                            /* 创建哈希表 */
 void insertHashTable(struct HashTable *table, int val, int index);      /* 插入哈希节点 */
 int searchHashTable(struct HashTable *table, int val);                  /* 查找哈希表（返回元素个数） */
 void removeHashTable(struct HashTable *table, int val);                 /* 删除哈希节点 */
