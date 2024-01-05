@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-31 20:30:38
+ * @LastEditTime : 2024-01-05 21:35:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -51,7 +51,7 @@ int Array_CmpElement(const void *a, const void *b) {
  * @param {void} *b             数组元素b
  * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
  */
-STATIC_FUNC int compareRows(const void *a, const void *b) {
+STATIC_FUNC int CompareRows(const void *a, const void *b) {
     int *arrA = *(int **)a;             /* NOLINT(readability/casting) */
     int *arrB = *(int **)b;             /* NOLINT(readability/casting) */
     for (int i = 0; i < g_2DArrRowSize; i++) {
@@ -96,7 +96,7 @@ int Array_Sort2D(int **arr, int arrSize, int *arrColSizes) {
         qsort(arr[i], arrColSizes[i], sizeof(int), Array_CmpElement);
     }
     g_2DArrRowSize = arrSize;
-    qsort(arr, arrSize, sizeof(int *), compareRows);
+    qsort(arr, arrSize, sizeof(int *), CompareRows);
     return COMMON_OK;
 }
 
