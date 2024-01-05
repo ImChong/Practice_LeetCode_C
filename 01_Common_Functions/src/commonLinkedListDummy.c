@@ -101,7 +101,7 @@ void DLinkedList_AddAtTail(DummyLinkedList *dummyHead, int val) {
  * @param {int} val                         新节点数值
  * @return {void}
  */
-void dummyLinkedListAddAtIndex(DummyLinkedList *dummyHead, int index, int val) {
+void DLinkedList_AddAtIndex(DummyLinkedList *dummyHead, int index, int val) {
     if (index < 0 || index > dummyHead->size) {         /* 输入校验 */
         return;
     }

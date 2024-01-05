@@ -33,7 +33,7 @@ void Test1(void) {
     DummyLinkedList *actualDummy = DLinkedList_Create();
     DLinkedList_AddAtHead(actualDummy, 1);
     DLinkedList_AddAtTail(actualDummy, 3);
-    dummyLinkedListAddAtIndex(actualDummy, 1, 2);
+    DLinkedList_AddAtIndex(actualDummy, 1, 2);
     dummyLinkedListDeleteAtIndex(actualDummy, 0);
 
     /* 预期结果 */

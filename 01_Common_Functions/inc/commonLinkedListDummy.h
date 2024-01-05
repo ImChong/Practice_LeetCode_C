@@ -36,7 +36,7 @@ DummyLinkedList *DLinkedList_Create(void);     /* 创建使用虚拟头节点的
 int DLinkedList_Get(DummyLinkedList *dummyHead, int index);        /* 获取链表中第index个节点的值 */
 void DLinkedList_AddAtHead(DummyLinkedList *dummyHead, int val);       /* 在链表头部添加一个节点 */
 void DLinkedList_AddAtTail(DummyLinkedList *dummyHead, int val);       /* 在链表尾部添加一个节点 */
-void dummyLinkedListAddAtIndex(DummyLinkedList *dummyHead,
+void DLinkedList_AddAtIndex(DummyLinkedList *dummyHead,
                                int index,
                                int val);               /* 在链表中第index个节点之前添加一个值为val的节点 */
 void dummyLinkedListDeleteAtIndex(DummyLinkedList *dummyHead, int index);     /* 删除链表中第index个节点 */

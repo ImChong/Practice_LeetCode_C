@@ -76,7 +76,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListAddAtTail) {
 }
 
 /* ============================================================================== */
-/* dummyLinkedListAddAtIndex */
+/* DLinkedList_AddAtIndex */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListAddAtIndex) {
     /* TODO */
