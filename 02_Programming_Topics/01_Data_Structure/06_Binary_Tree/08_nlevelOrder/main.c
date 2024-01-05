@@ -152,7 +152,7 @@ void validate2DArray(char testNum, int **expected, int **result, int returnSize,
  * @param {int} *returnSize
  * @return {void}
  */
-void free2DArray(int **result, int returnSize) {
+void ArrayFree2D(int **result, int returnSize) {
     for (int i = 0; i < returnSize; i++) {                                  /* 遍历二维数组的每一行 */
         free(result[i]);                                                        /* free每一行数组占用的空间 */
     }
@@ -202,8 +202,8 @@ void Test1(void) {
     validate2DArray('1', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
-    free2DArray(expected, returnSize);
-    free2DArray(result, returnSize);
+    ArrayFree2D(expected, returnSize);
+    ArrayFree2D(result, returnSize);
     free(returnColumnSizes);
     freeTree(root);
 }
@@ -253,8 +253,8 @@ void Test2(void) {
     validate2DArray('2', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
-    free2DArray(expected, returnSize);
-    free2DArray(result, returnSize);
+    ArrayFree2D(expected, returnSize);
+    ArrayFree2D(result, returnSize);
     free(returnColumnSizes);
     freeTree(root);
 }
@@ -363,8 +363,8 @@ void Test3(void) {
     validate2DArray('3', expected, result, returnSize, returnColumnSizes);
 
     /* 释放内存空间 */
-    free2DArray(expected, returnSize);
-    free2DArray(result, returnSize);
+    ArrayFree2D(expected, returnSize);
+    ArrayFree2D(result, returnSize);
     free(returnColumnSizes);
     freeTree(root);
 }

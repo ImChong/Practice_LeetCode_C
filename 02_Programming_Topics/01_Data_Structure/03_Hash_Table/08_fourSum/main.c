@@ -88,7 +88,7 @@ void runTest(struct TestStruct *test) {
 
     /* 释放内存 */
     ArrayFree(actualRtnColSize);
-    free2DArray(actual2DArr, actualRtnRowSize);
+    ArrayFree2D(actual2DArr, actualRtnRowSize);
 }
 
 /**

@@ -197,7 +197,7 @@ TEST_F(TestCommonArray, TestFreeArray) {
 }
 
 /* ============================================================================== */
-/* free2DArray */
+/* ArrayFree2D */
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestFree2DArray) {
     /* 准备数据 */
@@ -207,11 +207,11 @@ TEST_F(TestCommonArray, TestFree2DArray) {
     }
 
     /* 运行结果 */
-    int result = free2DArray(&arrPtr, 2);
+    int result = ArrayFree2D(&arrPtr, 2);
 
     /* 比较结果 */
-    EXPECT_EQ(nullptr, arrPtr) << "Error occurred in free2DArray";
-    EXPECT_EQ(COMMON_OK, result) << "Error occurred in free2DArray result";
+    EXPECT_EQ(nullptr, arrPtr) << "Error occurred in ArrayFree2D";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in ArrayFree2D result";
 }
 
 /**********************************************************************************/

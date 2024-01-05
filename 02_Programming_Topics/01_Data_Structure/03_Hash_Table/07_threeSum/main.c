@@ -54,7 +54,7 @@ void Test1(void) {
 
     /* 释放内存 */
     free(actualRtnColSize);
-    free2DArray(actual2DArr, actualRtnRowSize);
+    ArrayFree2D(actual2DArr, actualRtnRowSize);
 }
 
 /**
@@ -82,7 +82,7 @@ void Test2(void) {
 
     /* 释放内存 */
     free(actualRtnColSize);
-    free2DArray(actual2DArr, actualRtnRowSize);
+    ArrayFree2D(actual2DArr, actualRtnRowSize);
 }
 
 /**
@@ -110,7 +110,7 @@ void Test3(void) {
 
     /* 释放内存 */
     free(actualRtnColSize);
-    free2DArray(actual2DArr, actualRtnRowSize);
+    ArrayFree2D(actual2DArr, actualRtnRowSize);
 }
 
 /**********************************************************************************/
