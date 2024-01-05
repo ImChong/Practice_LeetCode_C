@@ -50,7 +50,7 @@ C language local leetcode practice overall folder structure:
   - [Real_World_Problem](./03_Misc/01_Real_World_Problems/)
   - [Supplementary_Materials](./03_Misc/02_Supplementary_Materials/)
 
-## Common Function Modules
+## Common Functions
 
 > To ensure code quality, all shared common code based on different programming topics will be placed in the [Common_Functions](./01_Common_Functions/) folder following these workflows:
 >
