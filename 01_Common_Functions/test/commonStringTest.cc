@@ -124,7 +124,7 @@ TEST_F(TestCommonString, TestFreeString) {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* validateString */
+/* Validate_String */
 /* ============================================================================== */
 TEST_F(TestCommonString, TestValidateString) {
     /* 准备数据 */
@@ -137,7 +137,7 @@ TEST_F(TestCommonString, TestValidateString) {
 
     /* 运行结果 */
     printf("============================================================ Print Start.\n");
-    int result = validateString('1', expect, actual);
+    int result = Validate_String('1', expect, actual);
     printf("============================================================ Print End.\n");
 
     /* 比较结果 */

@@ -107,7 +107,7 @@ int String_Free(char **s) {
  * @param {int} actual      实际字符串
  * @return {int}
  */
-int validateString(char testNum, char *expect, char *actual) {
+int Validate_String(char testNum, char *expect, char *actual) {
     int isSuccess = COMMON_TRUE;
 
     if (expect == NULL && actual == NULL) {

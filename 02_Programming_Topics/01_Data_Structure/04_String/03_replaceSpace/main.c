@@ -68,7 +68,7 @@ void Test1(void) {
     char *expect = "a aef qerf bb";
 
     /* 比较结果 */
-    validateString('1', expect, actual);
+    Validate_String('1', expect, actual);
 
     /* 释放内存 */
     String_Free(actual);
@@ -90,7 +90,7 @@ void Test2(void) {
     char *expect = "my name is carl";
 
     /* 比较结果 */
-    validateString('2', expect, actual);
+    Validate_String('2', expect, actual);
 
     /* 释放内存 */
     String_Free(actual);
@@ -112,7 +112,7 @@ void Test3(void) {
     char *expect = "c language hello world";
 
     /* 比较结果 */
-    validateString('3', expect, actual);
+    Validate_String('3', expect, actual);
 
     /* 释放内存 */
     String_Free(actual);

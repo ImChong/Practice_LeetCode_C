@@ -90,7 +90,7 @@ void Test1(void) {
     char *expect = "blue is sky the";
 
     /* 比较结果 */
-    validateString('1', expect, actual);
+    Validate_String('1', expect, actual);
 }
 
 /**
@@ -109,7 +109,7 @@ void Test2(void) {
     char *expect = "world hello";
 
     /* 比较结果 */
-    validateString('2', expect, actual);
+    Validate_String('2', expect, actual);
 }
 
 /**
@@ -128,7 +128,7 @@ void Test3(void) {
     char *expect = "example good a";
 
     /* 比较结果 */
-    validateString('3', expect, actual);
+    Validate_String('3', expect, actual);
 }
 
 /**********************************************************************************/

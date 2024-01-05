@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-06 00:58:05
+ * @LastEditTime : 2024-01-06 00:58:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -33,7 +33,7 @@ int String_Free(char **s);                                           /* 释放�
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-int validateString(char testNum, char *expect, char *actual);       /* 验证字符串 */
+int Validate_String(char testNum, char *expect, char *actual);       /* 验证字符串 */
 
 
 #endif  /* __COMMON_STRING_H */     /* NOLINT(build/header_guard) */

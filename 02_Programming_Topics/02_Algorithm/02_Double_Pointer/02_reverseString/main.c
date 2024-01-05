@@ -67,7 +67,7 @@ void Test1(void) {
     char *expect = "olleh";
 
     /* 比较结果 */
-    validateString('1', expect, s);
+    Validate_String('1', expect, s);
 }
 
 /**
@@ -87,7 +87,7 @@ void Test2(void) {
     char *expect = "hannaH";
 
     /* 比较结果 */
-    validateString('2', expect, s);
+    Validate_String('2', expect, s);
 }
 
 /**
@@ -107,7 +107,7 @@ void Test3(void) {
     char *expect = "1";
 
     /* 比较结果 */
-    validateString('3', expect, s);
+    Validate_String('3', expect, s);
 }
 
 /**********************************************************************************/
