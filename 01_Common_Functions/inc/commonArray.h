@@ -44,13 +44,13 @@ int Array_Free2D(int ***arrPtr, int arrSize);                    /* 释放二维
 /*                                                                                */
 /**********************************************************************************/
 int Validate_Array(char testNum,
-                  int *expectArr, int expectLen,
-                  int *actualArr, int actualLen,
-                  int needSort);                              /* 验证数组 */
+                   int *expectArr, int expectLen,
+                   int *actualArr, int actualLen,
+                   int needSort);                              /* 验证数组 */
 int Validate_Array2D(char testNum,
-                    int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
-                    int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
-                    int needSort);                          /* 验证二维数组 */
+                     int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
+                     int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
+                     int needSort);                          /* 验证二维数组 */
 
 
 #endif  /* __COMMON_ARRAY_H */  /* NOLINT(build/header_guard) */
