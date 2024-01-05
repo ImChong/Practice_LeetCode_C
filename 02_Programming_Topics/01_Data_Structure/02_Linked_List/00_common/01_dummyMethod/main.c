@@ -32,7 +32,7 @@ void Test1(void) {
     /* 实际结果 */
     DummyLinkedList *actualDummy = DLinkedList_Create();
     DLinkedList_AddAtHead(actualDummy, 1);
-    dummyLinkedListAddAtTail(actualDummy, 3);
+    DLinkedList_AddAtTail(actualDummy, 3);
     dummyLinkedListAddAtIndex(actualDummy, 1, 2);
     dummyLinkedListDeleteAtIndex(actualDummy, 0);
 
@@ -77,12 +77,12 @@ void Test2(void) {
 void Test3(void) {
     /* 实际结果 */
     DummyLinkedList *actualDummy = DLinkedList_Create();
-    dummyLinkedListAddAtTail(actualDummy, 1);
-    dummyLinkedListAddAtTail(actualDummy, 2);
-    dummyLinkedListAddAtTail(actualDummy, 1);
-    dummyLinkedListAddAtTail(actualDummy, 2);
-    dummyLinkedListAddAtTail(actualDummy, 1);
-    dummyLinkedListAddAtTail(actualDummy, 2);
+    DLinkedList_AddAtTail(actualDummy, 1);
+    DLinkedList_AddAtTail(actualDummy, 2);
+    DLinkedList_AddAtTail(actualDummy, 1);
+    DLinkedList_AddAtTail(actualDummy, 2);
+    DLinkedList_AddAtTail(actualDummy, 1);
+    DLinkedList_AddAtTail(actualDummy, 2);
     dummyLinkedListDeleteElement(actualDummy, 2);
 
     /* 预期结果 */
@@ -100,12 +100,12 @@ void Test3(void) {
 void Test4(void) {
     /* 实际结果 */
     DummyLinkedList *actualDummy = DLinkedList_Create();
-    dummyLinkedListAddAtTail(actualDummy, 1);
-    dummyLinkedListAddAtTail(actualDummy, 2);
-    dummyLinkedListAddAtTail(actualDummy, 1);
-    dummyLinkedListAddAtTail(actualDummy, 2);
-    dummyLinkedListAddAtTail(actualDummy, 1);
-    dummyLinkedListAddAtTail(actualDummy, 2);
+    DLinkedList_AddAtTail(actualDummy, 1);
+    DLinkedList_AddAtTail(actualDummy, 2);
+    DLinkedList_AddAtTail(actualDummy, 1);
+    DLinkedList_AddAtTail(actualDummy, 2);
+    DLinkedList_AddAtTail(actualDummy, 1);
+    DLinkedList_AddAtTail(actualDummy, 2);
     int actualReturnSize = 0;
     int *actualIndexes = dummyLinkedListGetIndexes(actualDummy, 2, &actualReturnSize);
 

@@ -31,7 +31,7 @@ void Test1(void) {
     /* 实际结果 */
     DummyLinkedList *actualDummy = myLinkedListCreate();
     DLinkedList_AddAtHead(actualDummy, 1);
-    dummyLinkedListAddAtTail(actualDummy, 3);
+    DLinkedList_AddAtTail(actualDummy, 3);
     dummyLinkedListAddAtIndex(actualDummy, 1, 2);
     dummyLinkedListDeleteAtIndex(actualDummy, 0);
 
@@ -64,7 +64,7 @@ void Test2(void) {
     DLinkedList_AddAtHead(actualDummy, 3);                 /* addAtHead        [3] */
     DLinkedList_AddAtHead(actualDummy, 2);                 /* addAtHead        [2] */
     DLinkedList_AddAtHead(actualDummy, 5);                 /* addAtHead        [5] */
-    dummyLinkedListAddAtTail(actualDummy, 5);                 /* addAtTail        [5] */
+    DLinkedList_AddAtTail(actualDummy, 5);                 /* addAtTail        [5] */
     DLinkedList_Get(actualDummy, 5);                       /* get              [5] */
     dummyLinkedListDeleteAtIndex(actualDummy, 6);             /* deleteAtIndex    [6] */
     dummyLinkedListDeleteAtIndex(actualDummy, 4);             /* deleteAtIndex    [4] */
