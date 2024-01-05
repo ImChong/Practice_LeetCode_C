@@ -65,7 +65,7 @@ void test_levelOrderTraversal(void) {
     /* 实际结果 */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
-    struct TreeNode *root = arrayToTree(arr, arrSize);
+    struct TreeNode *root = BTree_ArrayInit(arr, arrSize);
     int actualReturnSize = 0;
     int *actualReturnColumnSizes = NULL;
     int **actualArray = levelOrder(root, &actualReturnSize, &actualReturnColumnSizes);
