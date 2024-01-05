@@ -545,7 +545,7 @@ void BTree_EnArrQueue(TreeArrQueue *queue, struct TreeNode *node) {
  * @param {TreeArrQueue} *queue        二叉树节点队列指针
  * @return {TreeNode} *node         节点指针
  */
-struct TreeNode *deTreeArrQueue(TreeArrQueue *queue) {
+struct TreeNode *BTree_DeArrQueue(TreeArrQueue *queue) {
     if (queue->head == queue->tail) {
         printf("Queue is empty.\n");
         return NULL;
@@ -805,7 +805,7 @@ int *BTree_ToArray(struct TreeNode *root, int *returnSize) {
     int index = 0;
 
     while (!isTreeArrQueueEmpty(q)) {
-        struct TreeNode *current = deTreeArrQueue(q);
+        struct TreeNode *current = BTree_DeArrQueue(q);
         if (current) {
             result[index] = current->val;
             BTree_EnArrQueue(q, current->left);
