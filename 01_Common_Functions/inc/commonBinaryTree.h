@@ -97,7 +97,7 @@ TreeListQueue *BTree_InitListQueue(void);                              /* 创建
 void BTree_EnListQueue(TreeListQueue *queue, struct TreeNode *node);  /* 将节点加入队列 */
 struct TreeNode *BTree_DeListQueue(TreeListQueue *queue);             /* 从队列中取出一个节点 */
 int BTree_ListQueueIsEmpty(TreeListQueue *queue);                     /* 判断队列是否为空 */
-int isTreeListQueueFull(TreeListQueue *queue);                      /* 判断队列是否为满 */
+int BTree_ListQueueIsFull(TreeListQueue *queue);                      /* 判断队列是否为满 */
 void printTreeListQueue(TreeListQueue *queue);                      /* 打印队列 */
 void freeTreeListQueue(TreeListQueue *queue);                       /* 释放队列 */
 

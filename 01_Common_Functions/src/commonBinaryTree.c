@@ -683,7 +683,7 @@ int BTree_ListQueueIsEmpty(TreeListQueue *queue) {
  * @param {TreeListQueue} *queue    二叉树节点链表队列指针
  * @return {int}                    如果队列为满，返回1；否则返回0
  */
-int isTreeListQueueFull(TreeListQueue *queue) {
+int BTree_ListQueueIsFull(TreeListQueue *queue) {
     /* TODO */
     (void)queue;
     return 0;
