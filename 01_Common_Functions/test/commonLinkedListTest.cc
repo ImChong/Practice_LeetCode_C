@@ -52,7 +52,7 @@ TEST_F(TestCommonLinkedList, TestLinkedListGet) {
 }
 
 /* ============================================================================== */
-/* linkedListAddAtHead */
+/* LinkedList_AddAtHead */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedList, TestLinkedListAddAtHead) {
     /* TODO */

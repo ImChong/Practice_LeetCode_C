@@ -46,7 +46,7 @@ int LinkedList_Get(struct ListNode *head, int index) {
  * @param {int} val             目标节点值
  * @return {ListNode *} head    头节点指针
  */
-struct ListNode *linkedListAddAtHead(struct ListNode *head, int val) {
+struct ListNode *LinkedList_AddAtHead(struct ListNode *head, int val) {
     struct ListNode *newNode = (struct ListNode *)malloc(sizeof(struct ListNode));
     newNode->val = val;
     newNode->next = head;
