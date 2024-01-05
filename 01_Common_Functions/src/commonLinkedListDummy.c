@@ -29,7 +29,7 @@
  * =================================================================================
  * @return {DummyLinkedList *} dummyHead    返回虚拟头节点
  */
-DummyLinkedList *DLinkedList_Create(void) {
+DummyLinkedList *DLinkedList_Init(void) {
     DummyLinkedList *dummyHead = (DummyLinkedList*)malloc(sizeof(DummyLinkedList)); /* NOLINT(readability/casting) */
     dummyHead->head = NULL;       /* 初始化链表头 */
     dummyHead->size = 0;          /* 初始化链表长度 */

@@ -30,14 +30,14 @@
  */
 void Test1(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = DLinkedList_Create();
+    DummyLinkedList *actualDummy = DLinkedList_Init();
     DLinkedList_AddAtHead(actualDummy, 1);
     DLinkedList_AddAtTail(actualDummy, 3);
     DLinkedList_AddAtIndex(actualDummy, 1, 2);
     DLinkedList_DeleteAtIndex(actualDummy, 0);
 
     /* 预期结果 */
-    DummyLinkedList *expectDummy = DLinkedList_Create();
+    DummyLinkedList *expectDummy = DLinkedList_Init();
     int nums[] = {2, 3};
     DLinkedList_FromArray(expectDummy, nums, ARR_SIZE(nums));
 
@@ -55,12 +55,12 @@ void Test1(void) {
  */
 void Test2(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = DLinkedList_Create();
+    DummyLinkedList *actualDummy = DLinkedList_Init();
     DLinkedList_AddAtHead(actualDummy, 1);
     DLinkedList_DeleteAtIndex(actualDummy, 0);
 
     /* 预期结果 */
-    DummyLinkedList *expectDummy = DLinkedList_Create();
+    DummyLinkedList *expectDummy = DLinkedList_Init();
 
     /* 比较结果 */
     Validate_DLinkedList('2', expectDummy, actualDummy);
@@ -76,7 +76,7 @@ void Test2(void) {
  */
 void Test3(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = DLinkedList_Create();
+    DummyLinkedList *actualDummy = DLinkedList_Init();
     DLinkedList_AddAtTail(actualDummy, 1);
     DLinkedList_AddAtTail(actualDummy, 2);
     DLinkedList_AddAtTail(actualDummy, 1);
@@ -86,7 +86,7 @@ void Test3(void) {
     DLinkedList_DeleteValue(actualDummy, 2);
 
     /* 预期结果 */
-    DummyLinkedList *expectDummy = DLinkedList_Create();
+    DummyLinkedList *expectDummy = DLinkedList_Init();
     int nums[] = {1, 1, 1};
     DLinkedList_FromArray(expectDummy, nums, ARR_SIZE(nums));
 
@@ -99,7 +99,7 @@ void Test3(void) {
 
 void Test4(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = DLinkedList_Create();
+    DummyLinkedList *actualDummy = DLinkedList_Init();
     DLinkedList_AddAtTail(actualDummy, 1);
     DLinkedList_AddAtTail(actualDummy, 2);
     DLinkedList_AddAtTail(actualDummy, 1);
