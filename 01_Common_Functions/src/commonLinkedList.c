@@ -31,7 +31,7 @@
  * @param {int} index           目标节点索引
  * @return {int}                目标节点值
  */
-int linkedListGet(struct ListNode *head, int index) {
+int LinkedList_Get(struct ListNode *head, int index) {
     struct ListNode *currentNode = head;
     while (index--) {
         currentNode = currentNode->next;

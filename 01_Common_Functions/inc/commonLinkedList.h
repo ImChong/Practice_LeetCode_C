@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonLinkedList.h
+ * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonLinkedList.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-07 23:23:16
+ * @LastEditTime : 2024-01-05 21:33:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,7 +28,7 @@ struct ListNode {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-int linkedListGet(struct ListNode *head, int index);        /* 获取链表中第index个节点的值 */
+int LinkedList_Get(struct ListNode *head, int index);        /* 获取链表中第index个节点的值 */
 struct ListNode *linkedListAddAtHead(struct ListNode *head, int val);       /* 在链表头部添加一个节点 */
 struct ListNode *linkedListAddAtTail(struct ListNode *head, int val);       /* 在链表尾部添加一个节点 */
 struct ListNode *linkedListAddAtIndex(struct ListNode *head,
