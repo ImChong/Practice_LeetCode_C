@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonRingBuffer.h
+ * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonRingBuffer.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:22:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-16 00:22:54
+ * @LastEditTime : 2024-01-05 21:50:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -49,6 +49,6 @@ void RingBuffer_Free(RingBufferSt *pRing);      /* 释放环形buffer */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void Test_RingBuffer(void);
+void Validate_RingBuffer(void);
 
 #endif  /* __COMMON_RING_BUFFER_H */        /* NOLINT(build/header_guard) */

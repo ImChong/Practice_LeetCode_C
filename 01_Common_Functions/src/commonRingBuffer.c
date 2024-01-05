@@ -151,7 +151,7 @@ int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen) {
  * =================================================================================
  * @return {void}
  */
-void Test_RingBuffer(void) {
+void Validate_RingBuffer(void) {
     // 初始化
     RingBuffer_Init(&g_rxRing, g_rxBuff, ARR_SIZE(g_rxBuff));
     RingBuffer_Print(&g_rxRing);
