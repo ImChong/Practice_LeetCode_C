@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonSingleValue.h
+ * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonSingleValue.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 13:42:27
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 17:58:15
+ * @LastEditTime : 2024-01-06 00:54:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
