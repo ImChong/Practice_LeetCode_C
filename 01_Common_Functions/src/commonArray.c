@@ -174,7 +174,7 @@ int Array_Print2D(int **arr, int arrSize, int *arrColSizes) {
  * @param {int} **arrPtr            返回数组
  * @return {int}                    打印结果
  */
-int ArrayFree(int **arrPtr) {
+int Array_Free(int **arrPtr) {
     if (*arrPtr != NULL) {
         free(*arrPtr);
         *arrPtr = NULL;

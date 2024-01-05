@@ -86,7 +86,7 @@ void test_levelOrderTraversal(void) {
                         SORT_FALSE);
 
     /* 释放内存 */
-    ArrayFree(&actualReturnColumnSizes);
+    Array_Free(&actualReturnColumnSizes);
     ArrayFree2D(&actualArray, actualReturnSize);
     freeTree(root);
 }
