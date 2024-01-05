@@ -98,7 +98,7 @@ int Queue_IsFull(Queue *queue) {
  * @param {Queue} *queue        队列指针
  * @return {void}
  */
-void printQueue(Queue *queue) {
+void Queue_Print(Queue *queue) {
     printf("Queue (size = %d): [", queue->size);
     for (int i = queue->head; i <= queue->tail; i++) {
         printf("%d", queue->list[i]);

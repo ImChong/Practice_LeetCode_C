@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:38:47
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-05 21:47:27
+ * @LastEditTime : 2024-01-05 21:47:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,7 +40,7 @@ int Queue_IsFull(Queue *queue);          /* 判断队列是否为满 */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void printQueue(Queue *queue);          /* 打印队列 */
+void Queue_Print(Queue *queue);          /* 打印队列 */
 void freeQueue(Queue *queue);           /* 释放队列 */
 
 
