@@ -59,7 +59,7 @@ void DLinkedList_Free(DummyLinkedList *dummyHead);     /* 释放链表 */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void validateDummyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual);        /* 验证链表 */
+void Validate_DLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual);        /* 验证链表 */
 
 
 #endif  /* __COMMON_LINKED_LIST_DUMMY_H */   /* NOLINT(build/header_guard) */

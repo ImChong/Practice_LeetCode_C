@@ -41,7 +41,7 @@ void Test1(void) {
     DLinkedList_FromArray(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateDummyLinkedList('1', expectDummy, actualDummy);
+    Validate_DLinkedList('1', expectDummy, actualDummy);
 
     /* 释放内存空间 */
     DLinkedList_Free(actualDummy);
@@ -75,7 +75,7 @@ void Test2(void) {
     DLinkedList_FromArray(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateDummyLinkedList('2', expectDummy, actualDummy);
+    Validate_DLinkedList('2', expectDummy, actualDummy);
 
     /* 释放内存空间 */
     DLinkedList_Free(actualDummy);
@@ -106,7 +106,7 @@ void Test3(void) {
     DLinkedList_FromArray(expectDummy, nums, ARR_SIZE(nums));
 
     /* 比较结果 */
-    validateDummyLinkedList('3', expectDummy, actualDummy);
+    Validate_DLinkedList('3', expectDummy, actualDummy);
 
     /* 释放内存空间 */
     DLinkedList_Free(actualDummy);

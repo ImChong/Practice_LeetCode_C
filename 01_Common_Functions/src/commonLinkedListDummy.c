@@ -272,7 +272,7 @@ void DLinkedList_Free(DummyLinkedList *dummyHead) {
  * @param {DummyLinkedList} *actual    实际
  * @return {void}
  */
-void validateDummyLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual) {
+void Validate_DLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual) {
     int isSuccess = COMMON_TRUE;                                                /* 是否通过测试 */
 
     for (int i = 0; i < expect->size; i++) {                                    /* 循环比较每个节点的数值 */

@@ -142,7 +142,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListFree) {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* validateDummyLinkedList */
+/* Validate_DLinkedList */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestValidateDummyLinkedList) {
     /* TODO */
