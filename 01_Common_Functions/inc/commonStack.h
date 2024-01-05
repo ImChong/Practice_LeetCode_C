@@ -32,7 +32,7 @@ typedef struct {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-Stack *Stack_Create(int capacity);       /* 创建栈 */
+Stack *Stack_Init(int capacity);       /* 创建栈 */
 void Stack_Push(Stack *obj, int x);      /* 入栈 */
 void Stack_Pop(Stack *obj);              /* 出栈 */
 int Stack_Top(Stack *obj);               /* 查看栈顶元素 */

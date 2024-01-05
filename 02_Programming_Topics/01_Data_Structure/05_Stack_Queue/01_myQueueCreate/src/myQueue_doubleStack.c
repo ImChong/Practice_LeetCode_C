@@ -30,8 +30,8 @@
  */
 MyQueue *myQueueCreate(void) {
     MyQueue *ret = (MyQueue *)malloc(sizeof(MyQueue));  /* 为队列结构体分配空间 */
-    ret->inStack = Stack_Create(LEN);                    /* 入队栈初始化可容纳 LEN 数据 */
-    ret->outStack = Stack_Create(LEN);                   /* 出队栈初始化可容纳 LEN 数据 */
+    ret->inStack = Stack_Init(LEN);                    /* 入队栈初始化可容纳 LEN 数据 */
+    ret->outStack = Stack_Init(LEN);                   /* 出队栈初始化可容纳 LEN 数据 */
     return ret;                                         /* 返回创建的队列结构体 */
 }
 
