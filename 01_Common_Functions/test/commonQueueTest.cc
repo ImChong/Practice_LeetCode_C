@@ -76,7 +76,7 @@ TEST_F(TestCommonQueue, TestIsQueueEmpty) {
 }
 
 /* ============================================================================== */
-/* isQueueFull */
+/* Queue_IsFull */
 /* ============================================================================== */
 TEST_F(TestCommonQueue, TestIsQueueFull) {
     /* TODO */

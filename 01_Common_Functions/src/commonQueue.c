@@ -88,7 +88,7 @@ int Queue_IsEmpty(Queue *queue) {
  * @param {Queue} *queue        队列指针
  * @return {int}                0：队列不为满，1：队列为满
  */
-int isQueueFull(Queue *queue) {
+int Queue_IsFull(Queue *queue) {
     return (queue->tail + 1) % queue->size == queue->head;    /* 判断队列是否为满，若队列尾 + 1 等于队列头则队列为满 */
 }
 

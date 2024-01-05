@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:38:47
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-05 21:47:02
+ * @LastEditTime : 2024-01-05 21:47:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -33,7 +33,7 @@ Queue *Queue_Init(int queueSize);        /* 初始化队列 */
 void Queue_En(Queue *queue, int val);    /* 入队 */
 int Queue_De(Queue *queue);              /* 出队 */
 int Queue_IsEmpty(Queue *queue);         /* 判断队列是否为空 */
-int isQueueFull(Queue *queue);          /* 判断队列是否为满 */
+int Queue_IsFull(Queue *queue);          /* 判断队列是否为满 */
 
 /**********************************************************************************/
 /*                                                                                */
