@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-06 00:33:31
+ * @LastEditTime : 2024-01-06 00:36:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -36,7 +36,7 @@ struct ListNode *LinkedList_AddAtIndex(struct ListNode *head,
                                        int val);       /* 在链表中第index个节点之前添加一个值为val的节点 */
 struct ListNode *LinkedList_DeleteAtIndex(struct ListNode *head, int index);             /* 删除链表中第index个节点 */
 struct ListNode *LinkedList_DeleteElement(struct ListNode *head, int val);       /* 从链表中删除第一个值为val的节点 */
-int *linkedListGetIndexes(struct ListNode *head, int val, int *returnSize);     /* 获取链表中值为val的所有节点的索引 */
+int *LinkedList_GetIndexes(struct ListNode *head, int val, int *returnSize);     /* 获取链表中值为val的所有节点的索引 */
 
 /**********************************************************************************/
 /*                                                                                */

@@ -154,7 +154,7 @@ struct ListNode *LinkedList_DeleteElement(struct ListNode *head, int val) {
  * @param {int *} returnSize    返回数组大小
  * @return {int *} indexes      返回索引数组
  */
-int *linkedListGetIndexes(struct ListNode *head, int val, int *returnSize) {
+int *LinkedList_GetIndexes(struct ListNode *head, int val, int *returnSize) {
     int *indexes = (int *)malloc(sizeof(int) * 1000);       /* NOLINT(readability/casting) */
     int listIndex = 0;
     int elementIndex = 0;

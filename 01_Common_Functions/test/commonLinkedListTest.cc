@@ -92,7 +92,7 @@ TEST_F(TestCommonLinkedList, TestLinkedListDeleteElement) {
 }
 
 /* ============================================================================== */
-/* linkedListGetIndexes */
+/* LinkedList_GetIndexes */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedList, TestLinkedListGetIndexes) {
     /* TODO */

@@ -102,7 +102,7 @@ void Test4(void) {
     actualList = LinkedList_AddAtTail(actualList, 1);
     actualList = LinkedList_AddAtTail(actualList, 2);
     int actualReturnSize = 0;
-    int *actualIndexes = linkedListGetIndexes(actualList, 2, &actualReturnSize);
+    int *actualIndexes = LinkedList_GetIndexes(actualList, 2, &actualReturnSize);
 
     /* 预期结果 */
     int expectIndexes[] = {1, 3, 5};
