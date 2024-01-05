@@ -86,22 +86,22 @@ TEST_F(TestCommonArray, TestCompareElements) {
 }
 
 /* ============================================================================== */
-/* sortArray */
+/* ArraySort */
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestSortArray) {
     /* 准备数据 */
     int arr[5] = {5, 4, 3, 2, 1};
 
     /* 运行结果 */
-    int result = sortArray(arr, 5);
+    int result = ArraySort(arr, 5);
 
     /* 比较结果 */
-    EXPECT_EQ(1, arr[0]) << "Error occurred in sortArray arr[0]";
-    EXPECT_EQ(2, arr[1]) << "Error occurred in sortArray arr[1]";
-    EXPECT_EQ(3, arr[2]) << "Error occurred in sortArray arr[2]";
-    EXPECT_EQ(4, arr[3]) << "Error occurred in sortArray arr[3]";
-    EXPECT_EQ(5, arr[4]) << "Error occurred in sortArray arr[4]";
-    EXPECT_EQ(COMMON_OK, result) << "Error occurred in sortArray result";
+    EXPECT_EQ(1, arr[0]) << "Error occurred in ArraySort arr[0]";
+    EXPECT_EQ(2, arr[1]) << "Error occurred in ArraySort arr[1]";
+    EXPECT_EQ(3, arr[2]) << "Error occurred in ArraySort arr[2]";
+    EXPECT_EQ(4, arr[3]) << "Error occurred in ArraySort arr[3]";
+    EXPECT_EQ(5, arr[4]) << "Error occurred in ArraySort arr[4]";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in ArraySort result";
 }
 
 /* ============================================================================== */
@@ -228,7 +228,7 @@ TEST_F(TestCommonArray, TestValidateArray) {
     int actualArr[5] = {5, 4, 3, 2, 1};
 
     /* 运行结果 */
-    sortArray(actualArr, 5);
+    ArraySort(actualArr, 5);
     printf("============================================================ Print Start.\n");
     int result = validateArray('1', expectArr, 5, actualArr, 5, 1);
     printf("============================================================ Print End.\n");

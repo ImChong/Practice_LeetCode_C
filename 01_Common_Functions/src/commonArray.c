@@ -69,7 +69,7 @@ STATIC_FUNC int compareRows(const void *a, const void *b) {
  * @param {int} arrSize         数组大小
  * @return {int}                排序结果
  */
-int sortArray(int *arr, int arrSize) {
+int ArraySort(int *arr, int arrSize) {
     if (arr == NULL || arrSize <= 0) {
         return COMMON_ERR;
     }
@@ -221,8 +221,8 @@ int free2DArray(int ***arrPtr, int arrSize) {
  */
 int validateArray(char testNum, int *expectArr, int expectLen, int *actualArr, int actualLen, int needSort) {
     if (needSort == COMMON_TRUE) {
-        sortArray(expectArr, expectLen);
-        sortArray(actualArr, actualLen);
+        ArraySort(expectArr, expectLen);
+        ArraySort(actualArr, actualLen);
     }
 
     int isSuccess = COMMON_TRUE;

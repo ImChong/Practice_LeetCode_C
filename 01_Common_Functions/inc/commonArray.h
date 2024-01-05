@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors: Chong Liu liuc12@miamioh.edu
- * @LastEditTime: 2024-01-04 16:35:39
+ * @LastEditTime: 2024-01-05 18:16:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,7 +25,7 @@
 /*                                                                                */
 /**********************************************************************************/
 int compareElements(const void *a, const void *b);              /* 比较元素 */
-int sortArray(int *arr, int arrSize);                           /* 排序数组 */
+int ArraySort(int *arr, int arrSize);                           /* 排序数组 */
 int sort2DArray(int **arr, int arrSize, int *arrColSizes);      /* 排序二维数组 */
 
 /**********************************************************************************/
