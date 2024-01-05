@@ -55,7 +55,7 @@ void Stack_Push(Stack *obj, int x) {
  * @param {Stack *} obj     栈结构体
  * @return {void}
  */
-void stackPop(Stack *obj) {
+void Stack_Pop(Stack *obj) {
     obj->stkSize--;                         /* 将【栈大小】- 1 */
 }
 

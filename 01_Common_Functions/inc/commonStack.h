@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:36:39
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-05 21:53:46
+ * @LastEditTime : 2024-01-05 21:54:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,7 +34,7 @@ typedef struct {
 /**********************************************************************************/
 Stack *Stack_Create(int capacity);       /* 创建栈 */
 void Stack_Push(Stack *obj, int x);      /* 入栈 */
-void stackPop(Stack *obj);              /* 出栈 */
+void Stack_Pop(Stack *obj);              /* 出栈 */
 int stackTop(Stack *obj);               /* 查看栈顶元素 */
 bool stackEmpty(Stack *obj);            /* 判断栈是否为空 */
 bool stackFull(Stack *obj);             /* 判断栈是否为满 */
