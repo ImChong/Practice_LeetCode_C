@@ -71,15 +71,15 @@ jobs:
             chmod +x .github/workflows/testRunner/runCppcheck.sh
             .github/workflows/testRunner/runCppcheck.sh
 
-    # GoogleStyleCheck:
-    #   runs-on: ubuntu-latest
+    GoogleStyleCheck:
+      runs-on: ubuntu-latest
 
-    #   steps:
-    #     - name: Checkout code
-    #       uses: actions/checkout@v2
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@main
 
-    #     - name: Install clang-format
-    #       run: sudo apt-get install clang-format
+        - name: Install clang-format
+          run: sudo apt-get install clang-format
 
     #     - name: Check C++ code style
     #       run: |
