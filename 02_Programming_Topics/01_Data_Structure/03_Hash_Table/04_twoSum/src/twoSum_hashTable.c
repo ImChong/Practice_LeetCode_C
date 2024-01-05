@@ -52,7 +52,7 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
             }
             currentNode = currentNode->next;
         }
-        insertHashTable(table, nums[i], i);
+        HashTable_Insert(table, nums[i], i);
     }
     // printHashTable(table);
     *returnSize = 0;

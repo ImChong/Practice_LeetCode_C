@@ -58,7 +58,7 @@ int **fourSum(int *nums, int numsSize, int target, int *returnSize, int **return
             if (j > i + 1 && nums[j] == nums[j - 1]) {                  /* 去重 */
                 continue;
             }
-            insertHashTable(table, nums[i] + nums[j], i, j);            /* 插入哈希节点 */
+            HashTable_Insert(table, nums[i] + nums[j], i, j);            /* 插入哈希节点 */
             for (int k = j + 1; k < numsSize - 1; k++) {
                 if (k > j + 1 && nums[k] == nums[k - 1]) {                  /* 去重 */
                     continue;

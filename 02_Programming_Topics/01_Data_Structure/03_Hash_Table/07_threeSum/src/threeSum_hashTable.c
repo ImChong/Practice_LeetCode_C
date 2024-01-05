@@ -59,7 +59,7 @@ int **threeSum(int *arr, int arrSize, int *returnSize, int **returnColumnSizes) 
                     j++;
                 }
             } else {
-                insertHashTable(table, arr[j], j);
+                HashTable_Insert(table, arr[j], j);
             }
         }
     }

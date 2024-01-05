@@ -61,7 +61,7 @@ int fourSumCount(int *nums1, int nums1Size, int *nums2, int nums2Size,
     struct HashTable *hashTable = HashTable_Create(2 * nums1Size * nums2Size);       /* 创建哈希表 */
     for (int i = 0; i < nums1Size; i++) {                                           /* 遍历数组1 */
         for (int j = 0; j < nums2Size; j++) {                                           /* 遍历数组2 */
-            insertHashTable(hashTable, nums1[i] + nums2[j], -1);                            /* 将数组1和数组2的和插入哈希表 */
+            HashTable_Insert(hashTable, nums1[i] + nums2[j], -1);                            /* 将数组1和数组2的和插入哈希表 */
         }
     }
 

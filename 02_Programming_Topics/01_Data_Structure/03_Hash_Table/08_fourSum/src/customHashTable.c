@@ -59,7 +59,7 @@ int getHashSlot(struct HashTable *table, int val) {
  * @param {int} index2          索引2
  * @return {void}
  */
-void insertHashTable(struct HashTable *table, int val, int index1, int index2) {
+void HashTable_Insert(struct HashTable *table, int val, int index1, int index2) {
     int slot = getHashSlot(table, val);                                                 /* 获取元素值在哈希表中的槽位 */
     struct HashNode *newNode = (struct HashNode *)malloc(sizeof(struct HashNode));      /* 为哈希节点分配空间 */
     newNode->sum = val;                                                                 /* 设置哈希节点的元素值 */

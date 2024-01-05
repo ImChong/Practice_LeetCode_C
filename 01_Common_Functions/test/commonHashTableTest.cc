@@ -52,9 +52,9 @@ TEST_F(TestCommonHashTable, TestHashTable_Create) {
 }
 
 /* ============================================================================== */
-/* insertHashTable */
+/* HashTable_Insert */
 /* ============================================================================== */
-TEST_F(TestCommonHashTable, TestInsertHashTable) {
+TEST_F(TestCommonHashTable, TestHashTable_Insert) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
