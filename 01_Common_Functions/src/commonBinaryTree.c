@@ -571,7 +571,7 @@ int BTree_ArrQueueIsEmpty(TreeArrQueue *queue) {
  * @param {TreeArrQueue} *queue        二叉树节点队列指针
  * @return {int}                    如果队列为满，返回1；否则返回0
  */
-int isTreeArrQueueFull(TreeArrQueue *queue) {
+int BTree_ArrQueueIsFull(TreeArrQueue *queue) {
     return (queue->tail + 1) % queue->size == queue->head;
 }
 
