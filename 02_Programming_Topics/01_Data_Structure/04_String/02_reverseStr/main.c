@@ -35,7 +35,7 @@
 char *reverseStr(char *s, int k){
     int sLen = strlen(s);                                               /* 字符串长度 */
     for (int i = 0; i < sLen; i += 2 * k) {                             /* 每隔 2k 个字符反转 k 个字符 */
-        reverseStringSection(s, i, i + k - 1);                              /* 反转字符串 */
+        String_ReverseSection(s, i, i + k - 1);                              /* 反转字符串 */
     }
     return s;                                                           /* 返回反转后的字符串 */
 }

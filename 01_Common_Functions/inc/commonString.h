@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:41
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-06 00:56:43
+ * @LastEditTime : 2024-01-06 00:57:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -18,7 +18,7 @@
 /*                                                                                */
 /**********************************************************************************/
 int Char_Swap(char *a, char *b);                                     /* 交换字符 */
-int reverseStringSection(char *s, int leftIndex, int rightIndex);   /* 反转字符串 */
+int String_ReverseSection(char *s, int leftIndex, int rightIndex);   /* 反转字符串 */
 
 /**********************************************************************************/
 /*                                                                                */
