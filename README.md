@@ -3,7 +3,7 @@
 - [1. Practice\_LeetCode\_C](#1-practice_leetcode_c)
   - [1.1. Workspace Structure](#11-workspace-structure)
   - [1.2. Common Function Modules](#12-common-function-modules)
-  - [1.3. Code Structure](#13-code-structure)
+  - [1.3. Code Structure of Basic Building Unit](#13-code-structure-of-basic-building-unit)
   - [1.4. Build \& Run Code](#14-build--run-code)
     - [1.4.1. Operating Systems](#141-operating-systems)
     - [1.4.2. Build Tool Versions](#142-build-tool-versions)
@@ -73,7 +73,7 @@ C language local leetcode practice overall folder structure:
 > | [![Common Function Lints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml) | Code Style Check |  [commonFuncLint.yml](.github/workflows/commonFuncLint.yml) |
 > | [![Common Function Tests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml) | Unit Test (Google Test) | [commonFuncTest.yml](.github/workflows/commonFuncTest.yml) |
 
-## 1.3. Code Structure
+## 1.3. Code Structure of Basic Building Unit
 
 > To start getting hands on the project, the fundamental code structure of each question is as follows:
 >
