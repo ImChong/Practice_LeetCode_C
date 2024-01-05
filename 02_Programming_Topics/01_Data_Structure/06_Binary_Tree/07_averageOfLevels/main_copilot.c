@@ -98,7 +98,7 @@ struct TreeNode *createTree() {
 }
 
 /* 打印数组 */
-void printArray(double *arr, int size) {
+void ArrayPrint(double *arr, int size) {
     printf("[");                                                /* 打印左括号 */
     for (int i = 0; i < size; i++) {                            /* 遍历数组 */
         printf("%.2f", arr[i]);                                     /* 打印数组元素 */
@@ -119,7 +119,7 @@ int main() {
     struct TreeNode *root = createTree();                       /* 创建二叉树 */
     int returnSize;                                             /* 定义返回的数组的大小 */
     double *averages = averageOfLevels(root, &returnSize);      /* 计算每层节点值的平均值 */
-    printArray(averages, returnSize);                           /* 打印每层节点值的平均值 */
+    ArrayPrint(averages, returnSize);                           /* 打印每层节点值的平均值 */
     free(averages);                                             /* 释放动态分配的内存 */
     return 0;                                                   /* 返回0表示程序正常结束 */
 }
