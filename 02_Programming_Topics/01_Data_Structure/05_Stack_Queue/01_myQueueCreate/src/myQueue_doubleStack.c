@@ -43,7 +43,7 @@ MyQueue *myQueueCreate(void) {
  */
 void in2out(MyQueue *obj) {
     while (!stackEmpty(obj->inStack)) {                     /* 当入队栈不为空时 */
-        stackPush(obj->outStack, stackTop(obj->inStack));       /* 将入队栈的栈顶元素放入出队栈 */
+        Stack_Push(obj->outStack, stackTop(obj->inStack));       /* 将入队栈的栈顶元素放入出队栈 */
         stackPop(obj->inStack);                                 /* 去除入队栈的栈顶元素 */
     }
 }
@@ -56,7 +56,7 @@ void in2out(MyQueue *obj) {
  * @return {void}
  */
 void myQueuePush(MyQueue *obj, int x) {
-    stackPush(obj->inStack, x);                             /* 将元素放入入队栈 */
+    Stack_Push(obj->inStack, x);                             /* 将元素放入入队栈 */
 }
 
 /**
