@@ -129,7 +129,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListPrint) {
 }
 
 /* ============================================================================== */
-/* dummyLinkedListFree */
+/* DLinkedList_Free */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListFree) {
     /* TODO */

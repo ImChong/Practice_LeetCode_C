@@ -44,7 +44,7 @@ void Test1(void) {
     validateDummyLinkedList('1', expectDummy, actualDummy);
 
     /* 释放内存空间 */
-    dummyLinkedListFree(actualDummy);
+    DLinkedList_Free(actualDummy);
 }
 
 /**
@@ -78,7 +78,7 @@ void Test2(void) {
     validateDummyLinkedList('2', expectDummy, actualDummy);
 
     /* 释放内存空间 */
-    dummyLinkedListFree(actualDummy);
+    DLinkedList_Free(actualDummy);
 }
 
 /**
@@ -109,7 +109,7 @@ void Test3(void) {
     validateDummyLinkedList('3', expectDummy, actualDummy);
 
     /* 释放内存空间 */
-    dummyLinkedListFree(actualDummy);
+    DLinkedList_Free(actualDummy);
 }
 
 /**********************************************************************************/

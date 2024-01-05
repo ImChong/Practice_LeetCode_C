@@ -249,7 +249,7 @@ void DLinkedList_Print(DummyLinkedList *list) {
  * @param {DummyLinkedList} *dummyHead
  * @return {void}
  */
-void dummyLinkedListFree(DummyLinkedList *dummyHead) {
+void DLinkedList_Free(DummyLinkedList *dummyHead) {
     struct ListNode *curr = dummyHead->head;        /* 获取当前链表头节点的指针 */
     while (curr != NULL) {                          /* 当指针所指的节点不为NULL时 */
         struct ListNode *tmp = curr;                    /* 获取当前节点的指针 */

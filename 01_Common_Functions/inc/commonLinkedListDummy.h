@@ -52,7 +52,7 @@ int *DLinkedList_GetIndexes(DummyLinkedList *dummyHead,
 /**********************************************************************************/
 void DLinkedList_FromArray(DummyLinkedList *dummyHead, int *nums, int numsSize);     /* 将数组转换为链表 */
 void DLinkedList_Print(DummyLinkedList *dummyHead);      /* 打印链表 */
-void dummyLinkedListFree(DummyLinkedList *dummyHead);     /* 释放链表 */
+void DLinkedList_Free(DummyLinkedList *dummyHead);     /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */
