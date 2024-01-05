@@ -156,7 +156,7 @@ TEST_F(TestCommonArray, TestPrintArray) {
 }
 
 /* ============================================================================== */
-/* ArrayPrint2D */
+/* Array_Print2D */
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestPrint2DArray) {
     /* 准备数据 */
@@ -174,11 +174,11 @@ TEST_F(TestCommonArray, TestPrint2DArray) {
 
     /* 运行结果 */
     printf("============================================================ Print Start.\n");
-    int result = ArrayPrint2D(arrPtr, 2, arrColSize);
+    int result = Array_Print2D(arrPtr, 2, arrColSize);
     printf("============================================================ Print End.\n");
 
     /* 检查结果 */
-    EXPECT_EQ(COMMON_OK, result) << "Error occurred in ArrayPrint2D";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in Array_Print2D";
 }
 
 /* ============================================================================== */

@@ -140,7 +140,7 @@ int Array_Print(int *arr, int arrSize) {
  * @param {int} *arrColSizes        返回数组列大小
  * @return {int}                    打印结果
  */
-int ArrayPrint2D(int **arr, int arrSize, int *arrColSizes) {
+int Array_Print2D(int **arr, int arrSize, int *arrColSizes) {
     if (printf("Ans: (row: %d, col: %d) [\n", arrSize, arrColSizes[0]) < 0) {
         return COMMON_ERR;
     }
@@ -303,8 +303,8 @@ int ValidateArray2D(char testNum,
         printf(" - ❌ Test %c failed\n", testNum);
     }
     printf("=========================\n");
-    printf("- Expect: "); ArrayPrint2D(expect2DArr, expectRtnRowSize, expectRtnColSize);
-    printf("- Actual: "); ArrayPrint2D(actual2DArr, actualRtnRowSize, actualRtnColSize);
+    printf("- Expect: "); Array_Print2D(expect2DArr, expectRtnRowSize, expectRtnColSize);
+    printf("- Actual: "); Array_Print2D(actual2DArr, actualRtnRowSize, actualRtnColSize);
     printf("\n");
     if (isSuccess) {
         return COMMON_OK;
