@@ -1,4 +1,18 @@
-# Practice_LeetCode_C
+# 1. Practice_LeetCode_C
+
+- [1. Practice\_LeetCode\_C](#1-practice_leetcode_c)
+  - [1.1. Workspace Structure](#11-workspace-structure)
+  - [1.2. Common Function Modules](#12-common-function-modules)
+  - [1.3. Code Structure](#13-code-structure)
+  - [1.4. Build \& Run Code](#14-build--run-code)
+    - [1.4.1. Operating Systems](#141-operating-systems)
+    - [1.4.2. Build Tool Versions](#142-build-tool-versions)
+    - [1.4.3. VSCode Native - Build \& Run Current File](#143-vscode-native---build--run-current-file)
+    - [1.4.4. VSCode Extension - Code Runner](#144-vscode-extension---code-runner)
+    - [1.4.5. Build Process](#145-build-process)
+  - [1.5. Debug Code](#15-debug-code)
+  - [1.6. Clean all .exe files](#16-clean-all-exe-files)
+  - [1.7. Questions](#17-questions)
 
 | Topics | Badges |
 |:-:|:-|
@@ -6,7 +20,7 @@
 | Workflows | [![Common Function Lints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml) [![Common Function Tests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml) |
 | CodeQL | [![CodeQL](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/github-code-scanning/codeql) |
 
-## Workspace Structure
+## 1.1. Workspace Structure
 
 C language local leetcode practice overall folder structure:
 
@@ -50,7 +64,7 @@ C language local leetcode practice overall folder structure:
   - [Real_World_Problem](./03_Misc/01_Real_World_Problems/)
   - [Supplementary_Materials](./03_Misc/02_Supplementary_Materials/)
 
-## Common Function Modules
+## 1.2. Common Function Modules
 
 > To ensure code quality, all shared common code based on different programming topics will be placed in the [Common_Functions](./01_Common_Functions/) folder following these workflows:
 >
@@ -59,7 +73,7 @@ C language local leetcode practice overall folder structure:
 > | [![Common Function Lints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml) | Code Style Check |  [commonFuncLint.yml](.github/workflows/commonFuncLint.yml) |
 > | [![Common Function Tests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml) | Unit Test (Google Test) | [commonFuncTest.yml](.github/workflows/commonFuncTest.yml) |
 
-## Code Structure
+## 1.3. Code Structure
 
 > To start getting hands on the project, the fundamental code structure of each question is as follows:
 >
@@ -105,21 +119,21 @@ C language local leetcode practice overall folder structure:
 >
 > Flowchart source file: [compilationStructure.drawio](./03_Misc/02_Supplementary_Materials/compilationStructure.drawio) (hediet.vscode-drawio extension required)
 
-## Build & Run Code
+## 1.4. Build & Run Code
 
-### Operating Systems
+### 1.4.1. Operating Systems
 
 > - Windows
 > - Ubuntu
 
-### Build Tool Versions
+### 1.4.2. Build Tool Versions
 
 > - Python 3.12.1
 > - gcc.exe (Rev7, Built by MSYS2 project) 13.1.0
 > - g++.exe (Rev7, Built by MSYS2 project) 13.1.0
 > - GNU gdb (GDB) 13.2
 
-### VSCode Native - Build & Run Current File
+### 1.4.3. VSCode Native - Build & Run Current File
 
 > To execute the source code in VSCode, choose the desired `main.c` file and navigate to the following tab and options in the VSCode interface:
 >
@@ -135,13 +149,13 @@ C language local leetcode practice overall folder structure:
 >
 > Source code: [tasks.json](.vscode/tasks.json) and [python build.py](.vscode/build.py).
 
-### VSCode Extension - Code Runner
+### 1.4.4. VSCode Extension - Code Runner
 
 > The **`Code Runner`** vscode extension provides a convenient way to execute the `main.c` file directly.
 >
 > Source code: [settings.json](.vscode/settings.json).
 
-### Build Process
+### 1.4.5. Build Process
 
 > The gcc compilation process is as follows:
 >
@@ -155,7 +169,7 @@ C language local leetcode practice overall folder structure:
 >
 > Source code: [python build.py](.vscode/build.py) and [settings.json](.vscode/settings.json).
 
-## Debug Code
+## 1.5. Debug Code
 
 > To facilitate source code debugging in VSCode, select the `main.c` file that you wish to run.
 > First, build and run the source code as described in the previous section.
@@ -173,7 +187,7 @@ C language local leetcode practice overall folder structure:
 >
 > Source code: [launch.json](.vscode/launch.json).
 
-## Clean all .exe files
+## 1.6. Clean all .exe files
 
 > To ensure a clean development environment, it is important to remove unnecessary executable files.
 > The following steps can be used to clean all .exe files:
@@ -193,7 +207,7 @@ C language local leetcode practice overall folder structure:
 >
 > Source code: [killExes.bat](./00_Prerequisite/01_Clean_Exe/killExes.bat) and [killExes.sh](./00_Prerequisite/01_Clean_Exe/killExes.sh).
 
-## Questions
+## 1.7. Questions
 
 > Now, please feel free to start the leetcode practice journey by selecting the desired programming topic in the [Programming_Topics](./02_Programming_Topics/) folder.
 >
