@@ -60,7 +60,7 @@ void Queue_En(Queue *queue, int val) {
  * @param {Queue} *queue        队列指针
  * @return {int} headVal        队首元素
  */
-int deQueue(Queue *queue) {
+int Queue_De(Queue *queue) {
     int headVal = queue->list[queue->head];         /* 取出队首元素并赋值给 headVal */
     if (queue->head == queue->tail) {               /* 如果队列头索引等于队列尾索引 */
         queue->head = -1;                           /* 队列头索引设置为 -1 */

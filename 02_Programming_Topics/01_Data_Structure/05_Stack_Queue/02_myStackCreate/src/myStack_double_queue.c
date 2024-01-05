@@ -61,14 +61,14 @@ void myStackPush(MyStack *obj, int x) {
 int myStackPop(MyStack *obj) {
     if (isQueueEmpty(obj->queue1)) {                        /* 如果队列 1 为空 */
         while (obj->queue2->head != obj->queue2->tail) {        /* 当队列 2 的队首元素索引不等于队列 2 队尾元素索引时 */
-            Queue_En(obj->queue1, deQueue(obj->queue2));             /* 将队列 2 的队首元素放入队列 1 的队尾 */
+            Queue_En(obj->queue1, Queue_De(obj->queue2));             /* 将队列 2 的队首元素放入队列 1 的队尾 */
         }
-        return deQueue(obj->queue2);                            /* 返回队列 2 的队首元素 */
+        return Queue_De(obj->queue2);                            /* 返回队列 2 的队首元素 */
     }
     while (obj->queue1->head != obj->queue1->tail) {        /* 如果队列 1 的队首元素索引不等于队列 1 队尾元素索引时 */
-        Queue_En(obj->queue2, deQueue(obj->queue1));             /* 将队列 1 的队首元素放入队列 2 的队尾 */
+        Queue_En(obj->queue2, Queue_De(obj->queue1));             /* 将队列 1 的队首元素放入队列 2 的队尾 */
     }
-    return deQueue(obj->queue1);                            /* 返回队列 1 的队首元素 */
+    return Queue_De(obj->queue1);                            /* 返回队列 1 的队首元素 */
 }
 
 /**
