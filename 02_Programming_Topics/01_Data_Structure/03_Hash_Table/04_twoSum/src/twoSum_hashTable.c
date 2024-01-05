@@ -37,7 +37,7 @@
  * @return {int} *result        返回数组
  */
 int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
-    struct HashTable *table = HashTable_Create(numsSize);
+    struct HashTable *table = HashTable_Init(numsSize);
     for (int i = 0; i < numsSize; i++) {
         int complement = target - nums[i];
         int slot = getHashSlot(table, complement);

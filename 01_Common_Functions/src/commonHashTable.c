@@ -30,7 +30,7 @@
  * @param {int} size                        哈希表大小
  * @return {struct HashTable} *newTable     哈希表
  */
-struct HashTable *HashTable_Create(int size) {
+struct HashTable *HashTable_Init(int size) {
     struct HashTable *newTable = (struct HashTable *)malloc(sizeof(struct HashTable));      /* 为哈希表分配空间 */
     newTable->size = size;      /* 设置哈希表大小 */
     newTable->hashSlots = (struct HashNode **)malloc(sizeof(struct HashNode *) * size);     /* 为哈希节点分配空间 */

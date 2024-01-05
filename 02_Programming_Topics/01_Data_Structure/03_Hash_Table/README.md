@@ -34,7 +34,7 @@ struct HashTable {
     struct Node **list;
 };
 
-struct HashTable *HashTable_Create(int size);
+struct HashTable *HashTable_Init(int size);
 
 ```
 

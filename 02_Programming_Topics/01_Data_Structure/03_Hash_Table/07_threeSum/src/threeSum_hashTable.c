@@ -45,7 +45,7 @@ int **threeSum(int *arr, int arrSize, int *returnSize, int **returnColumnSizes) 
         if (i > 0 && arr[i] == arr[i - 1]) {
             continue;
         }
-        struct HashTable *table = HashTable_Create(arrSize);
+        struct HashTable *table = HashTable_Init(arrSize);
         for (int j = i + 1; j < arrSize; j++) {
             int complement = -(arr[i] + arr[j]);
             if (HashTable_Search(table, complement)) {

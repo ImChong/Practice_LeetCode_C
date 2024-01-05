@@ -45,7 +45,7 @@
  * @return {int} *result        返回结果数组
  */
 int *intersection(int *numsA, int numsASize, int *numsB, int numsBSize, int *returnSize) {
-    struct HashTable *hashTable = HashTable_Create(HASH_SIZE);
+    struct HashTable *hashTable = HashTable_Init(HASH_SIZE);
     for (int i = 0; i < numsASize; i++) {
         HashTable_Insert(hashTable, numsA[i], -1);
     }

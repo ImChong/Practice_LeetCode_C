@@ -36,7 +36,7 @@ struct HashTable {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-struct HashTable *HashTable_Create(int size);                            /* 创建哈希表 */
+struct HashTable *HashTable_Init(int size);                            /* 创建哈希表 */
 void HashTable_Insert(struct HashTable *table, int val, int index);      /* 插入哈希节点 */
 int HashTable_Search(struct HashTable *table, int val);                  /* 查找哈希表（返回元素个数） */
 void HashTable_Remove(struct HashTable *table, int val);                 /* 删除哈希节点 */
