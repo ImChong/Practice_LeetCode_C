@@ -615,7 +615,7 @@ void freeTreeArrQueue(TreeArrQueue *queue) {
  * =================================================================================
  * @return {TreeListQueue} *queue   新的二叉树节点链表队列指针
  */
-TreeListQueue *newTreeListQueue(void) {
+TreeListQueue *BTree_ListQueueInit(void) {
     TreeListQueue *queue = (TreeListQueue *)malloc(sizeof(TreeListQueue));     /* NOLINT(readability/casting) */
     queue->head = NULL;
     queue->size = 0;
