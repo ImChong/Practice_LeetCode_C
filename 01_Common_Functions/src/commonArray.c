@@ -189,7 +189,7 @@ int Array_Free(int **arrPtr) {
  * @param {int} arrSize             返回数组大小
  * @return {int}                    打印结果
  */
-int ArrayFree2D(int ***arrPtr, int arrSize) {
+int Array_Free2D(int ***arrPtr, int arrSize) {
     if (*arrPtr != NULL) {
         for (int i = 0; i < arrSize; i++) {
             if ((*arrPtr)[i] != NULL) {
