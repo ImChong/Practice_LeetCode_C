@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonStack.h
+ * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonStack.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:36:39
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-27 00:05:44
+ * @LastEditTime : 2024-01-05 21:53:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -32,7 +32,7 @@ typedef struct {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-Stack *stackCreate(int capacity);       /* 创建栈 */
+Stack *Stack_Create(int capacity);       /* 创建栈 */
 void stackPush(Stack *obj, int x);      /* 入栈 */
 void stackPop(Stack *obj);              /* 出栈 */
 int stackTop(Stack *obj);               /* 查看栈顶元素 */

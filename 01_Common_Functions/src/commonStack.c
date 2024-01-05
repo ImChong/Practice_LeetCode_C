@@ -29,7 +29,7 @@
  * @param {int} capacity        栈容量
  * @return {Stack} *ret         返回创建的栈结构体
  */
-Stack *stackCreate(int capacity) {
+Stack *Stack_Create(int capacity) {
     /* NOLINT(readability/casting) */
     Stack *ret = (Stack *)malloc(sizeof(Stack));        /* NOLINT(readability/casting) */
     ret->stk = (int *)malloc(sizeof(int) * capacity);   /* NOLINT(readability/casting) */
