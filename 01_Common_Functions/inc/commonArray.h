@@ -27,6 +27,7 @@
 int Array_CmpElement(const void *a, const void *b);              /* 比较元素 */
 int Array_Sort(int *arr, int arrSize);                           /* 排序数组 */
 int Array_Sort2D(int **arr, int arrSize, int *arrColSizes);      /* 排序二维数组 */
+int Array_Reverse(int *arr, int leftIndex, int rightIndex);      /* 反转数组 */
 
 /**********************************************************************************/
 /*                                                                                */
