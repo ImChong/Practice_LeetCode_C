@@ -45,7 +45,7 @@ MyStack *myStackCreate() {
  * @return {void}
  */
 void myStackPush(MyStack *obj, int x) {
-    if (isQueueEmpty(obj->queue1)) {        /* 如果队列 1 为空 */
+    if (Queue_IsEmpty(obj->queue1)) {        /* 如果队列 1 为空 */
         Queue_En(obj->queue2, x);                /* 将元素入队队列 2 */
     } else {                                /* 如果队列 1 不为空 */
         Queue_En(obj->queue1, x);                /* 将元素入队队列 1 */
@@ -59,7 +59,7 @@ void myStackPush(MyStack *obj, int x) {
  * @return {int}            出栈元素
  */
 int myStackPop(MyStack *obj) {
-    if (isQueueEmpty(obj->queue1)) {                        /* 如果队列 1 为空 */
+    if (Queue_IsEmpty(obj->queue1)) {                        /* 如果队列 1 为空 */
         while (obj->queue2->head != obj->queue2->tail) {        /* 当队列 2 的队首元素索引不等于队列 2 队尾元素索引时 */
             Queue_En(obj->queue1, Queue_De(obj->queue2));             /* 将队列 2 的队首元素放入队列 1 的队尾 */
         }
@@ -78,7 +78,7 @@ int myStackPop(MyStack *obj) {
  * @return {int}            栈顶元素
  */
 int myStackTop(MyStack* obj) {
-    if (isQueueEmpty(obj->queue1)) {                        /* 如果队列 1 为空 */
+    if (Queue_IsEmpty(obj->queue1)) {                        /* 如果队列 1 为空 */
         return obj->queue2->data[obj->queue2->tail];            /* 返回队列 2 的队尾元素 */
     }
     return obj->queue1->data[obj->queue1->tail];            /* 否则返回队列 1 的队尾元素 */

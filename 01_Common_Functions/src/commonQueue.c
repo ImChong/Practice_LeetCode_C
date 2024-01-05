@@ -78,7 +78,7 @@ int Queue_De(Queue *queue) {
  * @param {Queue} *queue        队列指针
  * @return {int}                0：队列不为空，1：队列为空
  */
-int isQueueEmpty(Queue *queue) {
+int Queue_IsEmpty(Queue *queue) {
     return queue->head == -1;                       /* 判断队列头是否为 -1，若队列头为 -1 则队列为空 */
 }
 
