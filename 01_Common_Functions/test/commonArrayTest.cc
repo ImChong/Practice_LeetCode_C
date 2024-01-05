@@ -105,7 +105,7 @@ TEST_F(TestCommonArray, TestSortArray) {
 }
 
 /* ============================================================================== */
-/* ArraySort2D */
+/* Array_Sort2D */
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestSort2DArray) {
     /* 准备数据 */
@@ -122,16 +122,16 @@ TEST_F(TestCommonArray, TestSort2DArray) {
     int arrColSize[2] = {3, 3};
 
     /* 运行结果 */
-    int result = ArraySort2D(arrPtr, 2, arrColSize);
+    int result = Array_Sort2D(arrPtr, 2, arrColSize);
 
     /* 比较结果 */
-    EXPECT_EQ(0, arrPtr[0][0]) << "Error occurred in ArraySort2D arrPtr[0][0]";
-    EXPECT_EQ(1, arrPtr[0][1]) << "Error occurred in ArraySort2D arrPtr[0][1]";
-    EXPECT_EQ(2, arrPtr[0][2]) << "Error occurred in ArraySort2D arrPtr[0][2]";
-    EXPECT_EQ(3, arrPtr[1][0]) << "Error occurred in ArraySort2D arrPtr[1][0]";
-    EXPECT_EQ(4, arrPtr[1][1]) << "Error occurred in ArraySort2D arrPtr[1][1]";
-    EXPECT_EQ(5, arrPtr[1][2]) << "Error occurred in ArraySort2D arrPtr[1][2]";
-    EXPECT_EQ(COMMON_OK, result) << "Error occurred in ArraySort2D result";
+    EXPECT_EQ(0, arrPtr[0][0]) << "Error occurred in Array_Sort2D arrPtr[0][0]";
+    EXPECT_EQ(1, arrPtr[0][1]) << "Error occurred in Array_Sort2D arrPtr[0][1]";
+    EXPECT_EQ(2, arrPtr[0][2]) << "Error occurred in Array_Sort2D arrPtr[0][2]";
+    EXPECT_EQ(3, arrPtr[1][0]) << "Error occurred in Array_Sort2D arrPtr[1][0]";
+    EXPECT_EQ(4, arrPtr[1][1]) << "Error occurred in Array_Sort2D arrPtr[1][1]";
+    EXPECT_EQ(5, arrPtr[1][2]) << "Error occurred in Array_Sort2D arrPtr[1][2]";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in Array_Sort2D result";
 }
 
 /**********************************************************************************/
@@ -267,7 +267,7 @@ TEST_F(TestCommonArray, TestValidate2DArray) {
     int actualRtnColSize[2] = {3, 3};
 
     /* 运行结果 */
-    ArraySort2D(actual2DArr, 2, actualRtnColSize);
+    Array_Sort2D(actual2DArr, 2, actualRtnColSize);
     printf("============================================================ Print Start.\n");
     int result = ValidateArray2D('1', expect2DArr, 2, expectRtnColSize, actual2DArr, 2, actualRtnColSize, 1);
     printf("============================================================ Print End.\n");

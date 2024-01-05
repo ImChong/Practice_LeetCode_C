@@ -85,7 +85,7 @@ int Array_Sort(int *arr, int arrSize) {
  * @param {int} *arrColSizes    返回数组列大小
  * @return {int}                排序结果
  */
-int ArraySort2D(int **arr, int arrSize, int *arrColSizes) {
+int Array_Sort2D(int **arr, int arrSize, int *arrColSizes) {
     if (arr == NULL || arrSize <= 0 || arrColSizes == NULL) {
         return COMMON_ERR;
     }
@@ -273,8 +273,8 @@ int ValidateArray2D(char testNum,
                             int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
                             int needSort) {
     if (needSort == COMMON_TRUE) {
-        ArraySort2D(expect2DArr, expectRtnRowSize, expectRtnColSize);
-        ArraySort2D(actual2DArr, actualRtnRowSize, actualRtnColSize);
+        Array_Sort2D(expect2DArr, expectRtnRowSize, expectRtnColSize);
+        Array_Sort2D(actual2DArr, actualRtnRowSize, actualRtnColSize);
     }
 
     int isSuccess = COMMON_TRUE;
