@@ -68,7 +68,7 @@ int main(int argc, const char *argv[]) {
 
     /* 函数调用 */
     int** result = levelOrderBottom(root, &returnSize, &returnColumnSizes);
-    print2DArray(result, returnSize, returnColumnSizes);
+    ArrayPrint2D(result, returnSize, returnColumnSizes);
 
     return 0;
 }

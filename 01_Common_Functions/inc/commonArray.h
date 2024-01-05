@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors: Chong Liu liuc12@miamioh.edu
- * @LastEditTime: 2024-01-05 18:17:44
+ * @LastEditTime: 2024-01-05 18:18:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -34,7 +34,7 @@ int ArraySort2D(int **arr, int arrSize, int *arrColSizes);      /* 排序二维�
 /*                                                                                */
 /**********************************************************************************/
 int ArrayPrint(int *arr, int arrSize);                          /* 打印数组 */
-int print2DArray(int **arr, int arrSize, int *arrColSizes);     /* 打印二维数组 */
+int ArrayPrint2D(int **arr, int arrSize, int *arrColSizes);     /* 打印二维数组 */
 int freeArray(int **arrPtr);                                    /* 释放数组 */
 int free2DArray(int ***arrPtr, int arrSize);                    /* 释放二维数组 */
 
