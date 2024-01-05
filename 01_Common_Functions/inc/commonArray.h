@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 19:15:36
  * @LastEditors: Chong Liu liuc12@miamioh.edu
- * @LastEditTime: 2024-01-05 18:22:29
+ * @LastEditTime: 2024-01-05 18:23:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -47,7 +47,7 @@ int ValidateArray(char testNum,
                   int *expectArr, int expectLen,
                   int *actualArr, int actualLen,
                   int needSort);                              /* 验证数组 */
-int Validate2DArray(char testNum,
+int ValidateArray2D(char testNum,
                     int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
                     int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
                     int needSort);                          /* 验证二维数组 */

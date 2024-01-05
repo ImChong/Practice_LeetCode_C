@@ -80,7 +80,7 @@ void test_levelOrderTraversal(void) {
     };
 
     /* 比较结果 */
-    Validate2DArray('1',
+    ValidateArray2D('1',
                         expectedArray, expectedReturnSize, expectedReturnColumnSizes,
                         actualArray, actualReturnSize, actualReturnColumnSizes,
                         SORT_FALSE);

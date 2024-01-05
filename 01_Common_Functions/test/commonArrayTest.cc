@@ -238,7 +238,7 @@ TEST_F(TestCommonArray, TestValidateArray) {
 }
 
 /* ============================================================================== */
-/* Validate2DArray */
+/* ValidateArray2D */
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestValidate2DArray) {
     /* 准备数据 */
@@ -269,9 +269,9 @@ TEST_F(TestCommonArray, TestValidate2DArray) {
     /* 运行结果 */
     ArraySort2D(actual2DArr, 2, actualRtnColSize);
     printf("============================================================ Print Start.\n");
-    int result = Validate2DArray('1', expect2DArr, 2, expectRtnColSize, actual2DArr, 2, actualRtnColSize, 1);
+    int result = ValidateArray2D('1', expect2DArr, 2, expectRtnColSize, actual2DArr, 2, actualRtnColSize, 1);
     printf("============================================================ Print End.\n");
 
     /* 比较结果 */
-    EXPECT_EQ(COMMON_OK, result) << "Error occurred in Validate2DArray";
+    EXPECT_EQ(COMMON_OK, result) << "Error occurred in ValidateArray2D";
 }
