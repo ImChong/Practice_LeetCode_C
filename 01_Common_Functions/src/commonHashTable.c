@@ -104,7 +104,7 @@ int HashTable_Search(struct HashTable *table, int val) {
  * @param {int} val             元素值
  * @return {void}
  */
-void removeHashTable(struct HashTable *table, int val) {
+void HashTable_Remove(struct HashTable *table, int val) {
     int slot = getHashSlot(table, val);     /* 获取元素值在哈希表中的槽位 */
     struct HashNode *currentNode = table->hashSlots[slot];      /* 获取哈希表的哈希节点 */
     struct HashNode *prevNode = NULL;       /* 前一个节点 */

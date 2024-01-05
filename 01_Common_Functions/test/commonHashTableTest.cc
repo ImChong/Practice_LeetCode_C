@@ -68,9 +68,9 @@ TEST_F(TestCommonHashTable, TestHashTable_Search) {
 }
 
 /* ============================================================================== */
-/* removeHashTable */
+/* HashTable_Remove */
 /* ============================================================================== */
-TEST_F(TestCommonHashTable, TestRemoveHashTable) {
+TEST_F(TestCommonHashTable, TestHashTable_Remove) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
