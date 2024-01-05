@@ -1,5 +1,5 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonLinkedListDummy.h
+ * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonLinkedListDummy.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors: Chong Liu liuc12@miamioh.edu
@@ -32,7 +32,7 @@ typedef struct {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-DummyLinkedList *dummyLinkedListCreate(void);     /* 创建使用虚拟头节点的链表 */
+DummyLinkedList *DLinkedList_Create(void);     /* 创建使用虚拟头节点的链表 */
 int dummyLinkedListGet(DummyLinkedList *dummyHead, int index);        /* 获取链表中第index个节点的值 */
 void dummyLinkedListAddAtHead(DummyLinkedList *dummyHead, int val);       /* 在链表头部添加一个节点 */
 void dummyLinkedListAddAtTail(DummyLinkedList *dummyHead, int val);       /* 在链表尾部添加一个节点 */

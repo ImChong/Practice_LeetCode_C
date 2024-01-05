@@ -30,14 +30,14 @@
  */
 void Test1(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = dummyLinkedListCreate();
+    DummyLinkedList *actualDummy = DLinkedList_Create();
     dummyLinkedListAddAtHead(actualDummy, 1);
     dummyLinkedListAddAtTail(actualDummy, 3);
     dummyLinkedListAddAtIndex(actualDummy, 1, 2);
     dummyLinkedListDeleteAtIndex(actualDummy, 0);
 
     /* 预期结果 */
-    DummyLinkedList *expectDummy = dummyLinkedListCreate();
+    DummyLinkedList *expectDummy = DLinkedList_Create();
     int nums[] = {2, 3};
     dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
 
@@ -55,12 +55,12 @@ void Test1(void) {
  */
 void Test2(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = dummyLinkedListCreate();
+    DummyLinkedList *actualDummy = DLinkedList_Create();
     dummyLinkedListAddAtHead(actualDummy, 1);
     dummyLinkedListDeleteAtIndex(actualDummy, 0);
 
     /* 预期结果 */
-    DummyLinkedList *expectDummy = dummyLinkedListCreate();
+    DummyLinkedList *expectDummy = DLinkedList_Create();
 
     /* 比较结果 */
     validateDummyLinkedList('2', expectDummy, actualDummy);
@@ -76,7 +76,7 @@ void Test2(void) {
  */
 void Test3(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = dummyLinkedListCreate();
+    DummyLinkedList *actualDummy = DLinkedList_Create();
     dummyLinkedListAddAtTail(actualDummy, 1);
     dummyLinkedListAddAtTail(actualDummy, 2);
     dummyLinkedListAddAtTail(actualDummy, 1);
@@ -86,7 +86,7 @@ void Test3(void) {
     dummyLinkedListDeleteElement(actualDummy, 2);
 
     /* 预期结果 */
-    DummyLinkedList *expectDummy = dummyLinkedListCreate();
+    DummyLinkedList *expectDummy = DLinkedList_Create();
     int nums[] = {1, 1, 1};
     dummyLinkedListFromArray(expectDummy, nums, ARR_SIZE(nums));
 
@@ -99,7 +99,7 @@ void Test3(void) {
 
 void Test4(void) {
     /* 实际结果 */
-    DummyLinkedList *actualDummy = dummyLinkedListCreate();
+    DummyLinkedList *actualDummy = DLinkedList_Create();
     dummyLinkedListAddAtTail(actualDummy, 1);
     dummyLinkedListAddAtTail(actualDummy, 2);
     dummyLinkedListAddAtTail(actualDummy, 1);

@@ -44,7 +44,7 @@ class TestCommonLinkedListDummy : public ::testing::Test {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* dummyLinkedListCreate */
+/* DLinkedList_Create */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListCreate) {
     /* TODO */
