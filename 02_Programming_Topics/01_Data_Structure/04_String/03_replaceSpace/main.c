@@ -71,7 +71,7 @@ void Test1(void) {
     validateString('1', expect, actual);
 
     /* 释放内存 */
-    freeString(actual);
+    String_Free(actual);
 }
 
 /**
@@ -93,7 +93,7 @@ void Test2(void) {
     validateString('2', expect, actual);
 
     /* 释放内存 */
-    freeString(actual);
+    String_Free(actual);
 }
 
 /**
@@ -115,7 +115,7 @@ void Test3(void) {
     validateString('3', expect, actual);
 
     /* 释放内存 */
-    freeString(actual);
+    String_Free(actual);
 }
 
 /**********************************************************************************/

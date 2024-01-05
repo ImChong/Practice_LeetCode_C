@@ -86,7 +86,7 @@ int String_Print(char *s) {
  * @param {char} **s     字符串地址
  * @return {int}
  */
-int freeString(char **s) {
+int String_Free(char **s) {
     if (*s != NULL) {       /* 字符串不为空 */
         free(*s);               /* 释放字符串 */
         *s = NULL;              /* 字符串指针置空 */

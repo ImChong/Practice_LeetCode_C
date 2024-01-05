@@ -102,7 +102,7 @@ TEST_F(TestCommonString, TestPrintString) {
 }
 
 /* ============================================================================== */
-/* freeString */
+/* String_Free */
 /* ============================================================================== */
 TEST_F(TestCommonString, TestFreeString) {
     /* 准备数据 */
@@ -111,7 +111,7 @@ TEST_F(TestCommonString, TestFreeString) {
     snprintf(s, strSize, "%s", "Hello World!");
 
     /* 运行结果 */
-    int result = freeString(&s);
+    int result = String_Free(&s);
 
     /* 比较结果 */
     EXPECT_EQ(s, nullptr) << "Error occurred at parameter s";
