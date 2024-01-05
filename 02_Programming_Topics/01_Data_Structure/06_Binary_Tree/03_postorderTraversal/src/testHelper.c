@@ -54,9 +54,9 @@ void test_postOrderTraversal(void) {
 
     /* 比较结果 */
     printf("PostorderTraversal Recursion Method.\n");
-    ValidateArray('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
+    Validate_Array('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
     printf("PostorderTraversal Iteration Method.\n");
-    ValidateArray('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
+    Validate_Array('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
 
     /* 释放内存 */
     freeTree(root);

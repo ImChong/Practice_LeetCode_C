@@ -113,7 +113,7 @@ void Test4(void) {
     int expectIndexes[] = {1, 3, 5};
 
     /* 比较结果 */
-    ValidateArray('4', expectIndexes, ARR_SIZE(expectIndexes), actualIndexes, actualReturnSize, COMMON_FALSE);
+    Validate_Array('4', expectIndexes, ARR_SIZE(expectIndexes), actualIndexes, actualReturnSize, COMMON_FALSE);
 
     /* 释放内存空间 */
     dummyLinkedListFree(actualDummy);

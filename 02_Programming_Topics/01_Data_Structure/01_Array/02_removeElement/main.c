@@ -40,7 +40,7 @@ void Test1(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    ValidateArray('1', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
+    Validate_Array('1', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
 }
 
 /**
@@ -59,7 +59,7 @@ void Test2(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    ValidateArray('2', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
+    Validate_Array('2', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
 }
 
 /**
@@ -78,7 +78,7 @@ void Test3(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    ValidateArray('3', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
+    Validate_Array('3', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
 }
 
 /**
@@ -97,7 +97,7 @@ void Test4(void) {
     int expectLen = ARR_SIZE(expectNums);
 
     /* 比较结果 */
-    ValidateArray('4', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
+    Validate_Array('4', expectNums, expectLen, nums, resultLen, COMMON_FALSE);
 }
 
 /**********************************************************************************/

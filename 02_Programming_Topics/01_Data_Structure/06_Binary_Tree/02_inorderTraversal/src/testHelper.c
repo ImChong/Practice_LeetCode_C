@@ -54,9 +54,9 @@ void test_inOrderTraversal(void) {
 
     /* 比较结果 */
     printf("InorderTraversal Recursion Method.\n");
-    ValidateArray('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
+    Validate_Array('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
     printf("InorderTraversal Iteration Method.\n");
-    ValidateArray('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
+    Validate_Array('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
 
     /* 释放内存 */
     freeTree(root);

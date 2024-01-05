@@ -60,7 +60,7 @@ void Test1(void) {
     int expectNums[] = {2, 2};
 
     /* 比较结果 */
-    ValidateArray('1', expectNums, expectSize, nums, actualSize);
+    Validate_Array('1', expectNums, expectSize, nums, actualSize);
 }
 
 /**
@@ -82,7 +82,7 @@ void Test2(void) {
     int expectNums[] = {0, 1, 4, 0, 3};
 
     /* 比较结果 */
-    ValidateArray('2', expectNums, expectSize, nums, actualSize);
+    Validate_Array('2', expectNums, expectSize, nums, actualSize);
 }
 
 /**
@@ -104,7 +104,7 @@ void Test3(void) {
     int expectNums[] = {};
 
     /* 比较结果 */
-    ValidateArray('3', expectNums, expectSize, nums, actualSize);
+    Validate_Array('3', expectNums, expectSize, nums, actualSize);
 }
 
 /**********************************************************************************/
