@@ -65,7 +65,7 @@ void Test2(void) {
     dummyLinkedListAddAtHead(actualDummy, 2);                 /* addAtHead        [2] */
     dummyLinkedListAddAtHead(actualDummy, 5);                 /* addAtHead        [5] */
     dummyLinkedListAddAtTail(actualDummy, 5);                 /* addAtTail        [5] */
-    dummyLinkedListGet(actualDummy, 5);                       /* get              [5] */
+    DLinkedList_Get(actualDummy, 5);                       /* get              [5] */
     dummyLinkedListDeleteAtIndex(actualDummy, 6);             /* deleteAtIndex    [6] */
     dummyLinkedListDeleteAtIndex(actualDummy, 4);             /* deleteAtIndex    [4] */
 
