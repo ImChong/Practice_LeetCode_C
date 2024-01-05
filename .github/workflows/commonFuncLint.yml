@@ -71,7 +71,7 @@ jobs:
             chmod +x .github/workflows/testRunner/runCppcheck.sh
             .github/workflows/testRunner/runCppcheck.sh
 
-    # style-check:
+    # GoogleStyleCheck:
     #   runs-on: ubuntu-latest
 
     #   steps:
