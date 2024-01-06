@@ -6,7 +6,7 @@ set -e
 
 # run clang-format on all .c and .h files in the target directory
 TARGET_DIR="./01_Common_Functions"
-TARGET_FILE_TYPES=".*\.\(cpp\|hpp\|cc\|h\)"
+TARGET_FILE_TYPES=".*\.\(c\|h\|cc\)"
 
 # Initialize a counter for the number of issues found
 ISSUE_COUNT=0
