@@ -12,14 +12,14 @@
 
 /* 编译配置文件 */
 #include "compileCfg.h"
-#if COMMON_ARRAY_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
+#if COMMON_ARRAY_EN /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* 常用头文件 */
-#include "commonTypeDef.h"
-#include "commonSingleValue.h"
 #include "commonArray.h"
+#include "commonSingleValue.h"
+#include "commonTypeDef.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -40,9 +40,7 @@ STATIC int g_2DArrRowSize = 0;
  * @param {void} *b             数组元素b
  * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
  */
-int Array_CmpElement(const void *a, const void *b) {
-    return (*(int*)a - *(int*)b);       /* NOLINT(readability/casting) */
-}
+int Array_CmpElement(const void *a, const void *b) { return (*(int *)a - *(int *)b); /* NOLINT(readability/casting) */ }
 
 /**
  * @description: 比较二维数组间的行顺序
@@ -52,8 +50,8 @@ int Array_CmpElement(const void *a, const void *b) {
  * @return {int}                比较结果，大于0表示a>b，小于0表示a<b，等于0表示a=b
  */
 STATIC_FUNC int CompareRows(const void *a, const void *b) {
-    int *arrA = *(int **)a;             /* NOLINT(readability/casting) */
-    int *arrB = *(int **)b;             /* NOLINT(readability/casting) */
+    int *arrA = *(int **)a; /* NOLINT(readability/casting) */
+    int *arrB = *(int **)b; /* NOLINT(readability/casting) */
     for (int i = 0; i < g_2DArrRowSize; i++) {
         if (arrA[i] != arrB[i]) {
             return (arrA[i] - arrB[i]);
@@ -245,8 +243,10 @@ int Validate_Array(char testNum, int *expectArr, int expectLen, int *actualArr, 
         printf(" - ❌ Test %c failed\n", testNum);
     }
     printf("=========================\n");
-    printf("- Expect: "); Array_Print(expectArr, expectLen);
-    printf("- Actual: "); Array_Print(actualArr, actualLen);
+    printf("- Expect: ");
+    Array_Print(expectArr, expectLen);
+    printf("- Actual: ");
+    Array_Print(actualArr, actualLen);
     printf("\n");
     if (isSuccess) {
         return COMMON_OK;
@@ -268,10 +268,8 @@ int Validate_Array(char testNum, int *expectArr, int expectLen, int *actualArr, 
  * @param {int} needSort                是否排序
  * @return {int}                        验证结果: 0-成功，-1-失败
  */
-int Validate_Array2D(char testNum,
-                            int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize,
-                            int **actual2DArr, int actualRtnRowSize, int *actualRtnColSize,
-                            int needSort) {
+int Validate_Array2D(char testNum, int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize, int **actual2DArr,
+                     int actualRtnRowSize, int *actualRtnColSize, int needSort) {
     if (needSort == COMMON_TRUE) {
         Array_Sort2D(expect2DArr, expectRtnRowSize, expectRtnColSize);
         Array_Sort2D(actual2DArr, actualRtnRowSize, actualRtnColSize);
@@ -303,8 +301,10 @@ int Validate_Array2D(char testNum,
         printf(" - ❌ Test %c failed\n", testNum);
     }
     printf("=========================\n");
-    printf("- Expect: "); Array_Print2D(expect2DArr, expectRtnRowSize, expectRtnColSize);
-    printf("- Actual: "); Array_Print2D(actual2DArr, actualRtnRowSize, actualRtnColSize);
+    printf("- Expect: ");
+    Array_Print2D(expect2DArr, expectRtnRowSize, expectRtnColSize);
+    printf("- Actual: ");
+    Array_Print2D(actual2DArr, actualRtnRowSize, actualRtnColSize);
     printf("\n");
     if (isSuccess) {
         return COMMON_OK;
@@ -312,6 +312,5 @@ int Validate_Array2D(char testNum,
         return COMMON_ERR;
     }
 }
-
 
 #endif /* COMMON_ARRAY_EN */
