@@ -76,6 +76,10 @@ jobs:
         - name: Install clang-format
           run: sudo apt-get install clang-format
 
+        - name: Tool Versions
+          run: |
+            clang-format --version
+
         - name: Run clang-format google style check
           run: |
             chmod +x .github/workflows/testRunner/runGoogleStyleCheck.sh
