@@ -55,10 +55,10 @@
 
 /* 返回错误码 */
 #define RETURN_ERR_IF(condition) \
-  do {                           \
-    if (condition) {             \
-      return COMMON_ERR;         \
-    }                            \
-  } while (0)
+    do {                         \
+        if (condition) {         \
+            return COMMON_ERR;   \
+        }                        \
+    } while (0)
 
 #endif /* __COMMON_TYPE_DEF_H */ /* NOLINT(build/header_guard) */
