@@ -32,48 +32,43 @@ jobs:
         - name: Checkout source code
           uses: actions/checkout@main
 
-        # step to install cpplint
+        # step to install tools
         - name: Install Cpplint
           run: pip install cpplint
 
-        # Step: Tool Versions
+        # Step to check tool versions
         - name: Tool Versions
           run: |
             cpplint --version
 
         # step to run cpplint
-        - name: Check Code Style
+        - name: Run Cpplint
           run: |
             chmod +x .github/workflows/testRunner/runCpplint.sh
             .github/workflows/testRunner/runCpplint.sh
 
     # Job
     Cppcheck:
-      # environment
       runs-on: ubuntu-latest
       steps:
-        # step to checkout the source code
         - name: Checkout source code
           uses: actions/checkout@main
 
-        # step to install cppcheck
         - name: Install Cppcheck
           run: sudo apt-get install -y cppcheck
 
-        # Step: Tool Versions
         - name: Tool Versions
           run: |
             cppcheck --version
 
-        # step to run clang-format and cppcheck to check the code style
         - name: Run Cppcheck
           run: |
             chmod +x .github/workflows/testRunner/runCppcheck.sh
             .github/workflows/testRunner/runCppcheck.sh
 
+    # Job
     GoogleStyleCheck:
       runs-on: ubuntu-latest
-
       steps:
         - name: Checkout code
           uses: actions/checkout@main
@@ -81,7 +76,7 @@ jobs:
         - name: Install clang-format
           run: sudo apt-get install clang-format
 
-        - name: Check C++ code style
+        - name: Run clang-format google style check
           run: |
             chmod +x .github/workflows/testRunner/runGoogleStyleCheck.sh
             .github/workflows/testRunner/runGoogleStyleCheck.sh
