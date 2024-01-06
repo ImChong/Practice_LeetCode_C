@@ -826,7 +826,7 @@ int *BTree_ToArray(struct TreeNode *root, int *returnSize) {
  * =================================================================================
  * @return {void}
  */
-void BTree_PrintTest(void) {
+void BTree_PrintTestTree(void) {
     printf("Test Tree:\n");
     printf("      1 \n");
     printf("     / \\ \n");

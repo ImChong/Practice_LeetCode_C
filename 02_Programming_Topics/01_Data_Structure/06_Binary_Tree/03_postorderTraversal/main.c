@@ -39,7 +39,7 @@
  * @return {int}            程序运行状态
  */
 int main(int argc, const char *argv[]) {
-    BTree_PrintTest();
+    BTree_PrintTestTree();
     printf("--------------------\r\n");
     test_postOrderTraversal();
     return 0;
