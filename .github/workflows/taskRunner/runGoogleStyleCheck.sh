@@ -15,7 +15,7 @@ ISSUE_COUNT=0
 for file in $(find $TARGET_DIR -regex $TARGET_FILE_TYPES)
 do
     # Run clang-format and capture any needed replacements
-    OUTPUT=$(clang-format -style=google -output-replacements-xml $file)
+    OUTPUT=$(clang-format -style=file -output-replacements-xml $file)
     if echo "$OUTPUT" | grep -q "<replacement "; then
         # If replacements are found, print the file name and issue details
         echo "=============================="
