@@ -11,7 +11,7 @@ TARGET_FILE_TYPES=".*\.\(cpp\|hpp\|cc\|h\)"
 for file in $(find $TARGET_DIR -regex $TARGET_FILE_TYPES)
 do
     echo "=============================="
-    cpplint --linelength=120 $file            # run cpplint
+    cpplint --linelength=120 $file            # run cpplint, change line length to 120
 done
 
 # finish up message
