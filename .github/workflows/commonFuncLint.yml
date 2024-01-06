@@ -9,17 +9,17 @@ on:
       paths:
         - '01_Common_Functions/**'
         - '.github/workflows/commonFuncLint.yml'
-        - '.github/workflows/testRunner/runCpplint.sh'
-        - '.github/workflows/testRunner/runCppcheck.sh'
-        - '.github/workflows/testRunner/runGoogleStyleCheck.sh'
+        - '.github/workflows/taskRunner/runCpplint.sh'
+        - '.github/workflows/taskRunner/runCppcheck.sh'
+        - '.github/workflows/taskRunner/runGoogleStyleCheck.sh'
     # Allows you to run this workflow every time a pull request is opened or updated
     pull_request:
       paths:
         - '01_Common_Functions/**'
         - '.github/workflows/commonFuncLint.yml'
-        - '.github/workflows/testRunner/runCpplint.sh'
-        - '.github/workflows/testRunner/runCppcheck.sh'
-        - '.github/workflows/testRunner/runGoogleStyleCheck.sh'
+        - '.github/workflows/taskRunner/runCpplint.sh'
+        - '.github/workflows/taskRunner/runCppcheck.sh'
+        - '.github/workflows/taskRunner/runGoogleStyleCheck.sh'
     # Schedule a workflow to run automatically
     schedule:
       - cron:  '0 2 * * *'
@@ -46,8 +46,8 @@ jobs:
         # step to run cpplint
         - name: Run Cpplint
           run: |
-            chmod +x .github/workflows/testRunner/runCpplint.sh
-            .github/workflows/testRunner/runCpplint.sh
+            chmod +x .github/workflows/taskRunner/runCpplint.sh
+            .github/workflows/taskRunner/runCpplint.sh
 
     # Job
     Cppcheck:
@@ -65,8 +65,8 @@ jobs:
 
         - name: Run Cppcheck
           run: |
-            chmod +x .github/workflows/testRunner/runCppcheck.sh
-            .github/workflows/testRunner/runCppcheck.sh
+            chmod +x .github/workflows/taskRunner/runCppcheck.sh
+            .github/workflows/taskRunner/runCppcheck.sh
 
     # Job
     GoogleStyleCheck:
@@ -84,5 +84,5 @@ jobs:
 
         - name: Run clang-format google style check
           run: |
-            chmod +x .github/workflows/testRunner/runGoogleStyleCheck.sh
-            .github/workflows/testRunner/runGoogleStyleCheck.sh
+            chmod +x .github/workflows/taskRunner/runGoogleStyleCheck.sh
+            .github/workflows/taskRunner/runGoogleStyleCheck.sh

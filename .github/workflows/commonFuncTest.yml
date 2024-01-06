@@ -10,13 +10,13 @@ on:
       paths:
         - '01_Common_Functions/**'
         - '.github/workflows/commonFuncTest.yml'
-        - '.github/workflows/testRunner/runGTests.sh'
+        - '.github/workflows/taskRunner/runGTests.sh'
     # Allows you to run this workflow every time a pull request is opened or updated
     pull_request:
       paths:
         - '01_Common_Functions/**'
         - '.github/workflows/commonFuncTest.yml'
-        - '.github/workflows/testRunner/runGTests.sh'
+        - '.github/workflows/taskRunner/runGTests.sh'
     # Schedule a workflow to run automatically
     schedule:
       - cron:  '0 2 * * *'
@@ -52,5 +52,5 @@ jobs:
         # Step: Run all test executables in the build/bin directory
         - name: Run all GTests
           run: |
-            chmod +x .github/workflows/testRunner/runGTests.sh
-            .github/workflows/testRunner/runGTests.sh
+            chmod +x .github/workflows/taskRunner/runGTests.sh
+            .github/workflows/taskRunner/runGTests.sh
