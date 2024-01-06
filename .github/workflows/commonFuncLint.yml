@@ -82,7 +82,7 @@ jobs:
           run: |
             clang-format --version
 
-        # - name: Run clang-format google style check
-        #   run: |
-        #     chmod +x .github/workflows/testRunner/runGoogleStyleCheck.sh
-        #     .github/workflows/testRunner/runGoogleStyleCheck.sh
+        - name: Run clang-format google style check
+          run: |
+            chmod +x .github/workflows/testRunner/runGoogleStyleCheck.sh
+            .github/workflows/testRunner/runGoogleStyleCheck.sh

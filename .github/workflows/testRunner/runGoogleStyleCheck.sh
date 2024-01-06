@@ -20,7 +20,8 @@ do
         # If replacements are found, print the file name and issue details
         echo "=============================="
         echo "Code style issue in file: $file"
-        echo "$OUTPUT"
+        echo "Replacement suggestions:"
+        echo "$OUTPUT" | grep -oP '(?<=<replacement ).*(?=</replacement>)'
         # Increment the issue count
         ISSUE_COUNT=$((ISSUE_COUNT+1))
     fi
