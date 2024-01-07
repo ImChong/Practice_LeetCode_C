@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-/* 常用头文件 */
+/* common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonString.h"
 

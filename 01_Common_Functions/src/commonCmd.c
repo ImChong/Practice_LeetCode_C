@@ -12,7 +12,7 @@
 /* common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_CMD_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
-/* 常用头文件 */
+/* common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonPrintDef.h"
 #include "commonCmd.h"

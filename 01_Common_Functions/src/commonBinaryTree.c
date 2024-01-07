@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-08 02:00:28
+ * @LastEditTime : 2024-01-08 02:25:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -44,7 +44,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-/* 常用头文件 */
+/* common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonBinaryTree.h"
 
