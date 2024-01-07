@@ -20,4 +20,4 @@
 #define BTREE_ITERATION_METHOD_EN 0 /* 迭代解法使能  1: enable, 0: disable */
 #endif /* COMMON_BINARY_TREE_EN == 1 */
 
-#endif  /* __METHOD_CFG_H */
+#endif  /* __METHOD_CFG_H */ /* NOLINT(build/header_guard) */
