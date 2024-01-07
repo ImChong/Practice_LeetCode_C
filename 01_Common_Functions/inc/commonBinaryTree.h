@@ -1,13 +1,13 @@
 /*
  * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonBinaryTree.h
  * @Author       : Chong Liu
- * @CreateDate   : 2023-10-21 19:27:05
- * @LastEditors: Chong Liu liuc12@miamioh.edu
- * @LastEditTime: 2024-01-05 18:55:33
+ * @CreateDate   : 2024-01-07 23:01:08
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2024-01-08 02:36:36
  * =================================================================================
- * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用二叉树头文件
+ * @Description  :
  */
 #ifndef __COMMON_BINARY_TREE_H  /* NOLINT(build/header_guard) */
 #define __COMMON_BINARY_TREE_H  /* NOLINT(build/header_guard) */
