@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 编译配置文件
+ * @Description  : common function configuration file (通用函数配置文件)
  */
 #ifndef __COMPILE_CFG_H /* NOLINT(build/header_guard) */
 #define __COMPILE_CFG_H /* NOLINT(build/header_guard) */
