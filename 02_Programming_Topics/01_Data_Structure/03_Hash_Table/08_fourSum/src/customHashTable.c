@@ -12,7 +12,7 @@
 /* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* 编译配置文件 */
+/* common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 /* solution header file (题解头文件) */
 #include "customHashTable.h"

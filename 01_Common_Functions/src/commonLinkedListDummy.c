@@ -9,7 +9,7 @@
  * =================================================================================
  * @Description  : 通用虚拟头节点链表源文件 - 使用虚拟头节点
  */
-/* 编译配置文件 */
+/* common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_LINKED_LIST_DUMMY_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
 /* standard header file (标准头文件) */
