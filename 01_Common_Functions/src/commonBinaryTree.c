@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-08 00:52:30
+ * @LastEditTime : 2024-01-08 02:00:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -74,6 +74,7 @@
  */
 /* ============================================================================== */
 /* ============================================================================== */
+#if BTREE_ORDER_TRAVERSAL_RECURSION_METHOD_EN
 /**
  * @description: 前序遍历
  * =================================================================================
@@ -98,13 +99,15 @@ STATIC_FUNC void preOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *BTree_PreOrderTraversal_Recursion(struct TreeNode *root, int *returnSize) {
+int *BTree_PreOrderTraversal(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     preOrder(root, ans, returnSize);                    /* 前序遍历根节点 */
     return ans;                                         /* 返回结果 ans 数组 */
 }
+#endif /* BTREE_ORDER_TRAVERSAL_RECURSION_METHOD_EN */
 
+#if BTREE_ORDER_TRAVERSAL_ITERATION_METHOD_EN
 /**
  * @description: 前序遍历 - 迭代方法
  * =================================================================================
@@ -112,7 +115,7 @@ int *BTree_PreOrderTraversal_Recursion(struct TreeNode *root, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *BTree_PreOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) {
+int *BTree_PreOrderTraversal(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
@@ -133,6 +136,7 @@ int *BTree_PreOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) {
     }
     return ans;                                         /* 返回结果数组 */
 }
+#endif /* BTREE_ORDER_TRAVERSAL_ITERATION_METHOD_EN */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -152,6 +156,7 @@ int *BTree_PreOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) {
  */
 /* ============================================================================== */
 /* ============================================================================== */
+#if BTREE_ORDER_TRAVERSAL_RECURSION_METHOD_EN
 /**
  * @description: 中序遍历
  * =================================================================================
@@ -176,13 +181,15 @@ STATIC_FUNC void inOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *BTree_InOrderTraversal_Recursion(struct TreeNode *root, int *returnSize) {
+int *BTree_InOrderTraversal(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     inOrder(root, ans, returnSize);                     /* 中序遍历根节点 */
     return ans;                                         /* 返回结果 ans 数组 */
 }
+#endif /* BTREE_ORDER_TRAVERSAL_RECURSION_METHOD_EN */
 
+#if BTREE_ORDER_TRAVERSAL_ITERATION_METHOD_EN
 /**
  * @description: 中序遍历 - 迭代方法
  * =================================================================================
@@ -190,7 +197,7 @@ int *BTree_InOrderTraversal_Recursion(struct TreeNode *root, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *BTree_InOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) {
+int *BTree_InOrderTraversal(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
@@ -212,6 +219,7 @@ int *BTree_InOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) {
     }
     return ans;                                         /* 返回结果数组 */
 }
+#endif /* BTREE_ORDER_TRAVERSAL_ITERATION_METHOD_EN */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -231,6 +239,7 @@ int *BTree_InOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) {
  */
 /* ============================================================================== */
 /* ============================================================================== */
+#if BTREE_ORDER_TRAVERSAL_RECURSION_METHOD_EN
 /**
  * @description: 后序遍历
  * =================================================================================
@@ -255,13 +264,15 @@ STATIC_FUNC void postOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *BTree_PostOrderTraversal_Recursion(struct TreeNode *root, int *returnSize) {
+int *BTree_PostOrderTraversal(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT(readability/casting) */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     postOrder(root, ans, returnSize);                       /* 后序遍历根节点 */
     return ans;                                             /* 返回结果 ans 数组 */
 }
+#endif /* BTREE_ORDER_TRAVERSAL_RECURSION_METHOD_EN */
 
+#if BTREE_ORDER_TRAVERSAL_ITERATION_METHOD_EN
 /**
  * @description: 后序遍历 - 迭代方法
  * =================================================================================
@@ -269,7 +280,7 @@ int *BTree_PostOrderTraversal_Recursion(struct TreeNode *root, int *returnSize) 
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {int} *ans           用于储存遍历答案的数组
  */
-int *BTree_PostOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) {
+int *BTree_PostOrderTraversal(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT(readability/casting) */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     if (root == NULL) {                                     /* 如果当前节点为 NULL，直接返回 */
@@ -297,6 +308,7 @@ int *BTree_PostOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) 
     }
     return ans;                                             /* 返回结果数组 */
 }
+#endif /* BTREE_ORDER_TRAVERSAL_ITERATION_METHOD_EN */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -320,6 +332,7 @@ int *BTree_PostOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) 
  */
 /* ============================================================================== */
 /* ============================================================================== */
+#if BTREE_LEVEL_ORDER_ARRAY_METHOD_EN
 /**
  * @description: 层序遍历 - 数组方法
  * =================================================================================
@@ -328,7 +341,7 @@ int *BTree_PostOrderTraversal_Iteration(struct TreeNode *root, int *returnSize) 
  * @param {int} **returnColumnSizes         用于储存遍历答案的数组的每一行的大小
  * @return {int} **ans                      用于储存遍历答案的数组
  */
-int **BTree_LevelOrder_Array(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
+int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;        /* 初始化二叉树的层数为 0 */
     if (root == NULL) {     /* 如果根节点为 NULL */
         return NULL;        /* 返回 NULL */
@@ -363,7 +376,9 @@ int **BTree_LevelOrder_Array(struct TreeNode *root, int *returnSize, int **retur
     }
     return resultArray;     /* 返回结果二维数组 */
 }
+#endif /* BTREE_LEVEL_ORDER_ARRAY_METHOD_EN */
 
+#if BTREE_LEVEL_ORDER_STRUCT_METHOD_EN
 /**
  * @description: Breadth First Search - 广度优先搜索
  * =================================================================================
@@ -412,7 +427,7 @@ STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, in
  * @param {int} **returnColumnSizes         用于储存遍历答案的数组的每一行的大小
  * @return {int} **ans                      用于储存遍历答案的数组
  */
-int **BTree_LevelOrder_Struct(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
+int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;
     if (root == NULL) {
         return NULL;
@@ -430,6 +445,7 @@ int **BTree_LevelOrder_Struct(struct TreeNode *root, int *returnSize, int **retu
     BTree_ListQueueFree(queueHead);
     return ans;
 }
+#endif /* BTREE_LEVEL_ORDER_STRUCT_METHOD_EN */
 
 /**********************************************************************************/
 /*                                                                                */
