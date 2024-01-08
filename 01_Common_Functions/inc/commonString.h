@@ -9,31 +9,30 @@
  * =================================================================================
  * @Description  : Common string header file
  */
-#ifndef __COMMON_STRING_H       /* NOLINT(build/header_guard) */
-#define __COMMON_STRING_H       /* NOLINT(build/header_guard) */
+#ifndef __COMMON_STRING_H /* NOLINT(build/header_guard) */
+#define __COMMON_STRING_H /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-int Char_Swap(char *a, char *b);                                     /* 交换字符 */
-int String_Reverse(char *s, int leftIndex, int rightIndex);   /* 反转字符串 */
+int Char_Swap(char *a, char *b);                            /* 交换字符 */
+int String_Reverse(char *s, int leftIndex, int rightIndex); /* 反转字符串 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-int String_Print(char *s);                                           /* 打印字符串 */
-int String_Free(char **s);                                           /* 释放字符串 */
+int String_Print(char *s); /* 打印字符串 */
+int String_Free(char **s); /* 释放字符串 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-int Validate_String(char testNum, char *expect, char *actual);       /* 验证字符串 */
+int Validate_String(char testNum, char *expect, char *actual); /* 验证字符串 */
 
-
-#endif  /* __COMMON_STRING_H */     /* NOLINT(build/header_guard) */
+#endif /* __COMMON_STRING_H */ /* NOLINT(build/header_guard) */

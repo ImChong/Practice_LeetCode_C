@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common queue header file
  */
-#ifndef __COMMON_QUEUE_H        /* NOLINT(build/header_guard) */
-#define __COMMON_QUEUE_H        /* NOLINT(build/header_guard) */
+#ifndef __COMMON_QUEUE_H /* NOLINT(build/header_guard) */
+#define __COMMON_QUEUE_H /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -18,30 +18,29 @@
 /*                                                                                */
 /**********************************************************************************/
 typedef struct {
-    int *list;      /* 数据 */
-    int head;       /* 队列头 */
-    int tail;       /* 队列尾 */
-    int size;       /* 队列大小 */
-} Queue;            /* 队列结构体 */
+    int *list; /* 数据 */
+    int head;  /* 队列头 */
+    int tail;  /* 队列尾 */
+    int size;  /* 队列大小 */
+} Queue;       /* 队列结构体 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-Queue *Queue_Init(int queueSize);        /* 初始化队列 */
-void Queue_En(Queue *queue, int val);    /* 入队 */
-int Queue_De(Queue *queue);              /* 出队 */
-int Queue_IsEmpty(Queue *queue);         /* 判断队列是否为空 */
-int Queue_IsFull(Queue *queue);          /* 判断队列是否为满 */
+Queue *Queue_Init(int queueSize);     /* 初始化队列 */
+void Queue_En(Queue *queue, int val); /* 入队 */
+int Queue_De(Queue *queue);           /* 出队 */
+int Queue_IsEmpty(Queue *queue);      /* 判断队列是否为空 */
+int Queue_IsFull(Queue *queue);       /* 判断队列是否为满 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void Queue_Print(Queue *queue);          /* 打印队列 */
-void Queue_Free(Queue *queue);           /* 释放队列 */
+void Queue_Print(Queue *queue); /* 打印队列 */
+void Queue_Free(Queue *queue);  /* 释放队列 */
 
-
-#endif  /* __COMMON_QUEUE_H */      /* NOLINT(build/header_guard) */
+#endif /* __COMMON_QUEUE_H */ /* NOLINT(build/header_guard) */
