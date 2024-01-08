@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-08 02:25:40
+ * @LastEditTime : 2024-01-08 10:40:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -388,7 +388,7 @@ int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColum
  * @param {TreeListQueue} *queueHead        链表队列头指针
  * @return {int}
  */
-STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray,
+STATIC_FUNC void BreadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray,
                                         TreeListQueue *queueHead) {
     struct TreeListNode *currentNode = queueHead->head;
     if (currentNode->node == NULL) {
@@ -416,7 +416,7 @@ STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, in
     BTree_EnListQueue(queueHead, NULL);
     (*returnColumnSizes)[*returnSize] = count;
     *returnSize = *returnSize + 1;
-    breadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);
+    BreadthFirstSearch(returnSize, returnColumnSizes, resultArray, queueHead);
 }
 
 /**
@@ -441,7 +441,7 @@ int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColum
 
     BTree_EnListQueue(queueHead, root);
     BTree_EnListQueue(queueHead, NULL);
-    breadthFirstSearch(returnSize, returnColumnSizes, ans, queueHead);
+    BreadthFirstSearch(returnSize, returnColumnSizes, ans, queueHead);
     BTree_ListQueueFree(queueHead);
     return ans;
 }
