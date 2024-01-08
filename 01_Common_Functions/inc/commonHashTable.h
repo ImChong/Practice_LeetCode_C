@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用哈希表头文件
+ * @Description  : Common hash table header file
  */
 #ifndef __COMMON_HASH_TABLE_H       /* NOLINT(build/header_guard) */
 #define __COMMON_HASH_TABLE_H       /* NOLINT(build/header_guard) */

@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用环形缓冲区头文件
+ * @Description  : common ring buffer header file
  */
 #ifndef __COMMON_RING_BUFFER_H      /* NOLINT(build/header_guard) */
 #define __COMMON_RING_BUFFER_H      /* NOLINT(build/header_guard) */

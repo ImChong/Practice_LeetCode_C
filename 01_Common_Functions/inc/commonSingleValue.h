@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用单值函数头文件
+ * @Description  : Common single value header file
  */
 #ifndef __COMMON_SINGLE_VALUE_H   /* NOLINT(build/header_guard) */
 #define __COMMON_SINGLE_VALUE_H   /* NOLINT(build/header_guard) */

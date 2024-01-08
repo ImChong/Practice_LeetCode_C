@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用队列头文件
+ * @Description  : Common queue header file
  */
 #ifndef __COMMON_QUEUE_H        /* NOLINT(build/header_guard) */
 #define __COMMON_QUEUE_H        /* NOLINT(build/header_guard) */

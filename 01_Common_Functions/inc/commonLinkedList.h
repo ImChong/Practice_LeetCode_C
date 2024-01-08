@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用链表头文件 - 未使用虚拟头节点
+ * @Description  : Common linked list header file
  */
 #ifndef __COMMON_LINKED_LIST_H      /* NOLINT(build/header_guard) */
 #define __COMMON_LINKED_LIST_H      /* NOLINT(build/header_guard) */

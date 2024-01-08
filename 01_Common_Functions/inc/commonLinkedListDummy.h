@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用虚拟头节点链表头文件 - 使用虚拟头节点
+ * @Description  : Common dummy linked list header file
  */
 #ifndef __COMMON_LINKED_LIST_DUMMY_H    /* NOLINT(build/header_guard) */
 #define __COMMON_LINKED_LIST_DUMMY_H    /* NOLINT(build/header_guard) */

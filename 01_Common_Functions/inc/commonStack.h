@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用栈头文件
+ * @Description  : Common stack header file
  */
 #ifndef __COMMON_STACK_H        /* NOLINT(build/header_guard) */
 #define __COMMON_STACK_H        /* NOLINT(build/header_guard) */

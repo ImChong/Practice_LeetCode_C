@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用字符串头文件
+ * @Description  : Common string header file
  */
 #ifndef __COMMON_STRING_H       /* NOLINT(build/header_guard) */
 #define __COMMON_STRING_H       /* NOLINT(build/header_guard) */
