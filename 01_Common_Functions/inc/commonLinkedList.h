@@ -3,14 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-06 01:10:40
+ * @LastEditTime : 2024-01-08 21:39:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : Common linked list header file
  */
-#ifndef __COMMON_LINKED_LIST_H      /* NOLINT(build/header_guard) */
-#define __COMMON_LINKED_LIST_H      /* NOLINT(build/header_guard) */
+#ifndef __COMMON_LINKED_LIST_H /* NOLINT(build/header_guard) */
+#define __COMMON_LINKED_LIST_H /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -19,8 +19,8 @@
 /**********************************************************************************/
 /* 节点定义 */
 struct ListNode {
-    int val;                    /* 节点数值 */
-    struct ListNode *next;      /* 下一节点地址 */
+    int val;               /* 节点数值 */
+    struct ListNode *next; /* 下一节点地址 */
 };
 
 /**********************************************************************************/
@@ -28,31 +28,29 @@ struct ListNode {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-int LinkedList_GetAtIndex(struct ListNode *head, int index);        /* 获取链表中第index个节点的值 */
-struct ListNode *LinkedList_AddAtHead(struct ListNode *head, int val);       /* 在链表头部添加一个节点 */
-struct ListNode *LinkedList_AddAtTail(struct ListNode *head, int val);       /* 在链表尾部添加一个节点 */
-struct ListNode *LinkedList_AddAtIndex(struct ListNode *head,
-                                       int index,
-                                       int val);       /* 在链表中第index个节点之前添加一个值为val的节点 */
-struct ListNode *LinkedList_DeleteAtIndex(struct ListNode *head, int index);             /* 删除链表中第index个节点 */
-struct ListNode *LinkedList_DeleteValue(struct ListNode *head, int val);       /* 从链表中删除第一个值为val的节点 */
-int *LinkedList_GetIndexes(struct ListNode *head, int val, int *returnSize);     /* 获取链表中值为val的所有节点的索引 */
+int LinkedList_GetAtIndex(struct ListNode *head, int index);           /* 获取链表中第index个节点的值 */
+struct ListNode *LinkedList_AddAtHead(struct ListNode *head, int val); /* 在链表头部添加一个节点 */
+struct ListNode *LinkedList_AddAtTail(struct ListNode *head, int val); /* 在链表尾部添加一个节点 */
+struct ListNode *LinkedList_AddAtIndex(struct ListNode *head, int index,
+                                       int val); /* 在链表中第index个节点之前添加一个值为val的节点 */
+struct ListNode *LinkedList_DeleteAtIndex(struct ListNode *head, int index); /* 删除链表中第index个节点 */
+struct ListNode *LinkedList_DeleteValue(struct ListNode *head, int val); /* 从链表中删除第一个值为val的节点 */
+int *LinkedList_GetIndexes(struct ListNode *head, int val, int *returnSize); /* 获取链表中值为val的所有节点的索引 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-struct ListNode *LinkedList_ArrayInit(int *array, int size);       /* 将数组转换为链表 */
-void LinkedList_Print(struct ListNode *head);        /* 打印链表 */
-void LinkedList_Free(struct ListNode *head);         /* 释放链表 */
+struct ListNode *LinkedList_ArrayInit(int *array, int size); /* 将数组转换为链表 */
+void LinkedList_Print(struct ListNode *head);                /* 打印链表 */
+void LinkedList_Free(struct ListNode *head);                 /* 释放链表 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void Validate_LinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList);       /* 验证链表 */
+void Validate_LinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList); /* 验证链表 */
 
-
-#endif  /* __COMMON_LINKED_LIST_H */    /* NOLINT(build/header_guard) */
+#endif /* __COMMON_LINKED_LIST_H */ /* NOLINT(build/header_guard) */
