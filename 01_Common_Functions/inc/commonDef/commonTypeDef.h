@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 12:30:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-06 12:58:39
+ * @LastEditTime : 2024-01-08 21:31:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用类型定义头文件
+ * @Description  : Common type definition header file
  */
 #ifndef __COMMON_TYPE_DEF_H /* NOLINT(build/header_guard) */
 #define __COMMON_TYPE_DEF_H /* NOLINT(build/header_guard) */
