@@ -83,13 +83,13 @@
  * @param {int} *returnSize     用于储存遍历答案的数组的大小
  * @return {void}
  */
-STATIC_FUNC void preOrder(struct TreeNode *node, int *ans, int *returnSize) {
+STATIC_FUNC void PreOrder(struct TreeNode *node, int *ans, int *returnSize) {
     if (node == NULL) {     /* 如果当前节点为 NULL，直接返回 */
         return;
     }
     ans[(*returnSize)++] = node->val;       /* 把当前节点的值放入ret数组的*returnSize索引，并将*returnSize索引值+1 */
-    preOrder(node->left, ans, returnSize);      /* 前序遍历左节点 */
-    preOrder(node->right, ans, returnSize);     /* 前序遍历右节点 */
+    PreOrder(node->left, ans, returnSize);      /* 前序遍历左节点 */
+    PreOrder(node->right, ans, returnSize);     /* 前序遍历右节点 */
 }
 
 /**
@@ -102,7 +102,7 @@ STATIC_FUNC void preOrder(struct TreeNode *node, int *ans, int *returnSize) {
 int *BTree_PreOrderTraversal(struct TreeNode *root, int *returnSize) {
     int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
-    preOrder(root, ans, returnSize);                    /* 前序遍历根节点 */
+    PreOrder(root, ans, returnSize);                    /* 前序遍历根节点 */
     return ans;                                         /* 返回结果 ans 数组 */
 }
 #endif /* BTREE_ORDER_TRAVERSAL_RECURSION_METHOD_EN */
