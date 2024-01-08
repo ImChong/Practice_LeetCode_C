@@ -884,5 +884,4 @@ void BTree_Free(struct TreeNode *root) {
     free(root);                     /* 释放当前节点空间 */
 }
 
-
 #endif      /* COMMON_BINARY_TREE_EN */
