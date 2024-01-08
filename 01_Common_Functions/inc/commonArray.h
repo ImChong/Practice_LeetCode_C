@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用数组头文件
+ * @Description  : Common array header file
  */
 #ifndef __COMMON_ARRAY_H /* NOLINT(build/header_guard) */
 #define __COMMON_ARRAY_H /* NOLINT(build/header_guard) */
