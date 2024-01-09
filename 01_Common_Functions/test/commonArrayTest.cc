@@ -23,7 +23,7 @@ extern "C" {
 /*                                                                                */
 /**********************************************************************************/
 class TestCommonArray : public ::testing::Test {
-  public:
+ public:
     static void SetUpTestCase() {
         // Code here will be called once before all tests
     }
