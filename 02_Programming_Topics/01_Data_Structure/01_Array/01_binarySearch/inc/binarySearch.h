@@ -14,4 +14,4 @@
 
 int binarySearch(int *nums, int numsSize, int target);
 
-#endif  /* __BINARY_SEARCH_H */
+#endif /* __BINARY_SEARCH_H */
