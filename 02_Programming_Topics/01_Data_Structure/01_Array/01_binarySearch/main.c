@@ -13,8 +13,8 @@
 /* standard header file (标准头文件) */
 #include <stdio.h>
 /* common function header file (通用头文件) */
-#include "commonSingleValue.h"
 #include "commonArray.h"
+#include "commonSingleValue.h"
 /* solution method configuration file (解题方法配置文件) */
 /* solution header file (题解头文件) */
 #include "binarySearch.h"
@@ -33,7 +33,7 @@
  */
 void Test1(void) {
     /* 实际结果 */
-    int nums[] = {-1, 0, 3, 5, 9, 12};                  /* Sorted array */
+    int nums[] = {-1, 0, 3, 5, 9, 12}; /* Sorted array */
     int target = 9;
     int actual = binarySearch(nums, ARR_SIZE(nums), target);
 
@@ -53,7 +53,7 @@ void Test1(void) {
  */
 void Test2(void) {
     /* 实际结果 */
-    int nums[] = {-1, 0, 3, 5, 9, 12};                  /* Sorted array */
+    int nums[] = {-1, 0, 3, 5, 9, 12}; /* Sorted array */
     int target = 2;
     int actual = binarySearch(nums, ARR_SIZE(nums), target);
 
@@ -73,7 +73,7 @@ void Test2(void) {
  */
 void Test3(void) {
     /* 实际结果 */
-    int nums[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};       /* Sorted array */
+    int nums[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; /* Sorted array */
     int target = 5;
     int actual = binarySearch(nums, ARR_SIZE(nums), target);
 
