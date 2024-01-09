@@ -1,11 +1,11 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\inc\commonArray.h
+ * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonArray.h
  * @Author       : Chong Liu
- * @CreateDate   : 2023-10-21 19:15:36
- * @LastEditors: Chong Liu liuc12@miamioh.edu
- * @LastEditTime: 2024-01-05 18:50:43
+ * @CreateDate   : 2024-01-09 17:28:45
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2024-01-09 17:29:46
  * =================================================================================
- * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : Common array header file
  */
