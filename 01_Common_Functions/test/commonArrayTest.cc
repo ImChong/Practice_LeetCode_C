@@ -13,8 +13,8 @@
 #include "gtest/gtest.h"
 /* 测试目标头文件 */
 extern "C" {
-    #include "commonTypeDef.h"
     #include "commonArray.h"
+    #include "commonTypeDef.h"
 }
 
 /**********************************************************************************/
@@ -23,7 +23,7 @@ extern "C" {
 /*                                                                                */
 /**********************************************************************************/
 class TestCommonArray : public ::testing::Test {
- public:
+  public:
     static void SetUpTestCase() {
         // Code here will be called once before all tests
     }
@@ -109,9 +109,9 @@ TEST_F(TestCommonArray, TestSortArray) {
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestSort2DArray) {
     /* 准备数据 */
-    int **arrPtr = (int **)malloc(sizeof(int *) * 2);       /* NOLINT(readability/casting) */
+    int **arrPtr = (int **)malloc(sizeof(int *) * 2); /* NOLINT(readability/casting) */
     for (int i = 0; i < 2; i++) {
-        arrPtr[i] = (int *)malloc(sizeof(int) * 3);         /* NOLINT(readability/casting) */
+        arrPtr[i] = (int *)malloc(sizeof(int) * 3); /* NOLINT(readability/casting) */
     }
     arrPtr[0][0] = 5;
     arrPtr[0][1] = 4;
@@ -160,9 +160,9 @@ TEST_F(TestCommonArray, TestPrintArray) {
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestPrint2DArray) {
     /* 准备数据 */
-    int **arrPtr = (int **)malloc(sizeof(int *) * 2);       /* NOLINT(readability/casting) */
+    int **arrPtr = (int **)malloc(sizeof(int *) * 2); /* NOLINT(readability/casting) */
     for (int i = 0; i < 2; i++) {
-        arrPtr[i] = (int *)malloc(sizeof(int) * 3);         /* NOLINT(readability/casting) */
+        arrPtr[i] = (int *)malloc(sizeof(int) * 3); /* NOLINT(readability/casting) */
     }
     arrPtr[0][0] = 1;
     arrPtr[0][1] = 2;
@@ -186,7 +186,7 @@ TEST_F(TestCommonArray, TestPrint2DArray) {
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestFreeArray) {
     /* 准备数据 */
-    int *arr = (int *)malloc(sizeof(int) * 5);              /* NOLINT(readability/casting) */
+    int *arr = (int *)malloc(sizeof(int) * 5); /* NOLINT(readability/casting) */
 
     /* 运行结果 */
     int result = Array_Free(&arr);
@@ -201,9 +201,9 @@ TEST_F(TestCommonArray, TestFreeArray) {
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestFree2DArray) {
     /* 准备数据 */
-    int **arrPtr = (int **)malloc(sizeof(int *) * 2);       /* NOLINT(readability/casting) */
+    int **arrPtr = (int **)malloc(sizeof(int *) * 2); /* NOLINT(readability/casting) */
     for (int i = 0; i < 2; i++) {
-        arrPtr[i] = (int *)malloc(sizeof(int) * 3);         /* NOLINT(readability/casting) */
+        arrPtr[i] = (int *)malloc(sizeof(int) * 3); /* NOLINT(readability/casting) */
     }
 
     /* 运行结果 */
@@ -242,9 +242,9 @@ TEST_F(TestCommonArray, TestValidateArray) {
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestValidate2DArray) {
     /* 准备数据 */
-    int **expect2DArr = (int **)malloc(sizeof(int *) * 2);       /* NOLINT(readability/casting) */
+    int **expect2DArr = (int **)malloc(sizeof(int *) * 2); /* NOLINT(readability/casting) */
     for (int i = 0; i < 2; i++) {
-        expect2DArr[i] = (int *)malloc(sizeof(int) * 3);         /* NOLINT(readability/casting) */
+        expect2DArr[i] = (int *)malloc(sizeof(int) * 3); /* NOLINT(readability/casting) */
     }
     expect2DArr[0][0] = 1;
     expect2DArr[0][1] = 2;
@@ -254,9 +254,9 @@ TEST_F(TestCommonArray, TestValidate2DArray) {
     expect2DArr[1][2] = 6;
     int expectRtnColSize[2] = {3, 3};
 
-    int **actual2DArr = (int **)malloc(sizeof(int *) * 2);       /* NOLINT(readability/casting) */
+    int **actual2DArr = (int **)malloc(sizeof(int *) * 2); /* NOLINT(readability/casting) */
     for (int i = 0; i < 2; i++) {
-        actual2DArr[i] = (int *)malloc(sizeof(int) * 3);         /* NOLINT(readability/casting) */
+        actual2DArr[i] = (int *)malloc(sizeof(int) * 3); /* NOLINT(readability/casting) */
     }
     actual2DArr[0][0] = 6;
     actual2DArr[0][1] = 5;
