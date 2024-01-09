@@ -38,8 +38,6 @@
 /* common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_BINARY_TREE_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
-/* solution method configuration file (解题方法配置文件) */
-#include "methodCfg.h"
 /* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
