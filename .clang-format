@@ -1,9 +1,13 @@
 ---
 Language: Cpp
 BasedOnStyle:  Google
-AccessModifierOffset: -1
-AlignAfterOpenBracket: Align
-AlignConsecutiveMacros: false
+AccessModifierOffset: -2
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Right
+AlignConsecutiveMacros:
+  Enabled: true
+  # AcrossEmptyLines: true
+  # AcrossComments: false
 AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
 AlignEscapedNewlines: Left
