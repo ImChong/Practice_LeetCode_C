@@ -33,16 +33,15 @@
  */
 void Test1(void) {
     /* 实际结果 */
-    int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
-    int numsSize = ARR_SIZE(nums);
+    int nums[] = {-1, 0, 3, 5, 9, 12};                  /* Sorted array */
     int target = 9;
-    int ans = binarySearch(nums, numsSize, target);
+    int actual = binarySearch(nums, ARR_SIZE(nums), target);
 
     /* 预期结果 */
     int expect = 4;
 
     /* 比较结果 */
-    Validate_SingleValue('1', expect, ans);
+    Validate_SingleValue('1', expect, actual);
 }
 
 /**
@@ -54,16 +53,15 @@ void Test1(void) {
  */
 void Test2(void) {
     /* 实际结果 */
-    int nums[] = {-1, 0, 3, 5, 9, 12};                  /* 有序数组 */
-    int numsSize = ARR_SIZE(nums);
+    int nums[] = {-1, 0, 3, 5, 9, 12};                  /* Sorted array */
     int target = 2;
-    int ans = binarySearch(nums, numsSize, target);
+    int actual = binarySearch(nums, ARR_SIZE(nums), target);
 
     /* 预期结果 */
     int expect = -1;
 
     /* 比较结果 */
-    Validate_SingleValue('2', expect, ans);
+    Validate_SingleValue('2', expect, actual);
 }
 
 /**
@@ -75,16 +73,15 @@ void Test2(void) {
  */
 void Test3(void) {
     /* 实际结果 */
-    int nums[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};       /* 有序数组 */
-    int numsSize = ARR_SIZE(nums);
+    int nums[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};       /* Sorted array */
     int target = 5;
-    int ans = binarySearch(nums, numsSize, target);
+    int actual = binarySearch(nums, ARR_SIZE(nums), target);
 
     /* 预期结果 */
     int expect = 4;
 
     /* 比较结果 */
-    Validate_SingleValue('3', expect, ans);
+    Validate_SingleValue('3', expect, actual);
 }
 
 /**********************************************************************************/
