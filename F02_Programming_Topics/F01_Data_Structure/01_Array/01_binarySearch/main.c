@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\01_Data_Structure\01_Array\01_binarySearch\main.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\01_binarySearch\main.c
  * @Author       : Chong Liu
- * @CreateDate   : 2024-01-02 09:57:57
- * @LastEditors: Chong Liu liuc12@miamioh.edu
- * @LastEditTime: 2024-01-04 16:06:51
+ * @CreateDate   : 2024-01-10 11:06:55
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2024-01-10 12:02:12
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
