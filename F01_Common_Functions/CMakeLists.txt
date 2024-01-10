@@ -1,8 +1,8 @@
-# 引入ExternalProject模块
-include(ExternalProject)                                                                    # 引入ExternalProject模块
-set_directory_properties(PROPERTIES EP_PREFIX ${CMAKE_BINARY_DIR}/ThirdParty/googletest)    # 设置下载目录
+# Include the external project module
+include(ExternalProject)
+set_directory_properties(PROPERTIES EP_PREFIX ${CMAKE_BINARY_DIR}/ThirdParty/googletest)    # Set the download location
 
-# 添加Google Test的下载和编译
+# Add the googletest library
 ExternalProject_Add(
     googletest
     GIT_REPOSITORY https://github.com/google/googletest.git
@@ -10,16 +10,16 @@ ExternalProject_Add(
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR>
 )
 
-# 添加Google Test的头文件和库文件的搜索路径
+# Include the gtest library
 include_directories(${CMAKE_BINARY_DIR}/ThirdParty/googletest/include)
 link_directories(${CMAKE_BINARY_DIR}/ThirdParty/googletest/lib)
 
-# 添加头文件路径
-include_directories(cfg)                # 配置文件
-include_directories(inc)                # 头文件
-include_directories(inc/commonDef)      # 公共定义头文件
+# Add the header files
+include_directories(cfg)                # Configuration file
+include_directories(inc)                # Header files
+include_directories(inc/commonDef)      # Common definition header files
 
-# 创建一个包含所有测试目标的列表
+# Create the test targets
 set(TEST_TARGETS
     commonArray
     commonBinaryTree
@@ -34,27 +34,27 @@ set(TEST_TARGETS
     commonString
 )
 
-# 对每个测试目标执行操作
+# Loop through each test target
 foreach(TARGET ${TEST_TARGETS})
-    # 设置目标的源文件
+    # Set the target source file
     set(TARGET_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/src/${TARGET}.c)
-    # 设置目标的测试名称
+    # Set the target test name
     set(TARGET_TEST_NAME ${TARGET}Test)
-    # 设置目标的测试源文件
+    # Set the target test source file
     set(TARGET_TEST_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/test/${TARGET_TEST_NAME}.cc)
 
-    # 检查TARGET_SOURCE和TARGET_TEST_SOURCE是否都存在
+    # Check if the target source file and target test source file exist
     if(EXISTS ${TARGET_SOURCE} AND EXISTS ${TARGET_TEST_SOURCE})
-        # 将测试目标添加到构建系统
+        # Create the test target
         add_executable(${TARGET_TEST_NAME} ${TARGET_TEST_SOURCE} ${TARGET_SOURCE})
-        # 添加测试目标的依赖项
+        # Add the dependency of the test target
         add_dependencies(${TARGET_TEST_NAME} googletest)
-        # 添加测试目标的链接库
+        # Add the link library of the test target
         target_link_libraries(${TARGET_TEST_NAME} gtest gtest_main)
     else()
-        # 打印警告信息
+        # Print the error message
         message(STATUS "Either ${TARGET} or ${TARGET_TEST_NAME} does not exist.")
-        # 跳过当前循环的剩余部分
+        # Escape the current loop
         continue()
     endif()
 endforeach()
