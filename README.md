@@ -10,49 +10,49 @@
 
 C language local leetcode practice overall folder structure:
 
-- [Prerequisite](./00_Prerequisite/) - This folder contains the basic configuration files and common function modules before getting started with the local leetcode practice.
-  - [VSCode_Settings](./00_Prerequisite/00_VSCode_Settings/) - VSCode settings
-  - [Clean_Exe](./00_Prerequisite/01_Clean_Exe/) - Scripts to clean all .exe files
-- [Common_Functions](./01_Common_Functions/) - Common C functions used by different programming topics with quality check workflows deployed.
-  - [cfg](./01_Common_Functions/cfg/) - Common function configuration file template.
-  - [inc](./01_Common_Functions/inc/) - Common function header files.
-  - [src](./01_Common_Functions/src/) - Common function source files.
-  - [test](./01_Common_Functions/test/) - Common function test files.
-- [Programming_Topics](./02_Programming_Topics/) - ([Programming Carl Series](https://programmercarl.com/) / [Labuladong's Algorithm Cheat Sheet](https://labuladong.github.io/algo/home/)) - This folder contains the leetcode practice questions organized by programming topics.
-  - [Data_Structure](./02_Programming_Topics/01_Data_Structure/)
-    - [Array](./02_Programming_Topics/01_Data_Structure/01_Array/)
-    - [Linked_List](./02_Programming_Topics/01_Data_Structure/02_Linked_List/)
-    - [Hash_Table](./02_Programming_Topics/01_Data_Structure/03_Hash_Table/)
-    - [String](./02_Programming_Topics/01_Data_Structure/04_String/)
-    - [Stack_Queue](./02_Programming_Topics/01_Data_Structure/05_Stack_Queue/)
-    - [Binary_Tree](./02_Programming_Topics/01_Data_Structure/06_Binary_Tree/)
-    - [Monotone_Stack](./02_Programming_Topics/01_Data_Structure/07_Monotone_Stack/)
-    - [Graph_Theory](./02_Programming_Topics/01_Data_Structure/08_Graph_Theory/)
-  - [Algorithm](./02_Programming_Topics/02_Algorithm/)
-    - [Binary_Search](./02_Programming_Topics/02_Algorithm/01_Binary_Search/)
-    - [Double_Pointer](./02_Programming_Topics/02_Algorithm/02_Double_Pointer/)
-    - [Sliding_Windows](./02_Programming_Topics/02_Algorithm/03_Sliding_Window/)
-    - [Backtracking](./02_Programming_Topics/02_Algorithm/04_Backtracking/)
-    - [Greedy](./02_Programming_Topics/02_Algorithm/05_Greedy/)
-    - [Dynamic_Programming](./02_Programming_Topics/02_Algorithm/06_Dynamic_Programming/)
-    - [Breadth_First_Search](./02_Programming_Topics/02_Algorithm/07_Breadth_First_Search/)
-    - [Depth_First_Search](./02_Programming_Topics/02_Algorithm/08_Depth_First_Search/)
-  - [Software_Design_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/)
-    - [Creational_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/01_Creational_Pattern/)
-    - [Structural_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/02_Structural_Pattern/)
-    - [Behavioral_Pattern](./02_Programming_Topics/03_Software_Design_Pattern/03_Behavioral_Pattern/)
-  - [Classic_LeetCode_Topics](./02_Programming_Topics/04_Classic_LeetCode_Topics/)
-    - [N_sum](./02_Programming_Topics/04_Classic_LeetCode_Topics/01_N_sum/)
-    - [Buy_Sell_Stock](./02_Programming_Topics/04_Classic_LeetCode_Topics/02_Buy_Sell_Stock/)
-    - [House_Robber](./02_Programming_Topics/04_Classic_LeetCode_Topics/03_House_Robber/)
-- [Misc](./03_Misc/) - This folder contains miscellaneous topics.
-  - [Programming_Notes](./03_Misc/00_Programming_Notes/)
-  - [Real_World_Problem](./03_Misc/01_Real_World_Problems/)
-  - [Supplementary_Materials](./03_Misc/02_Supplementary_Materials/)
+- [Prerequisite](./F00_Prerequisite/) - This folder contains the basic configuration files and common function modules before getting started with the local leetcode practice.
+  - [VSCode_Settings](./F00_Prerequisite/00_VSCode_Settings/) - VSCode settings
+  - [Clean_Exe](./F00_Prerequisite/01_Clean_Exe/) - Scripts to clean all .exe files
+- [Common_Functions](./F01_Common_Functions/) - Common C functions used by different programming topics with quality check workflows deployed.
+  - [cfg](./F01_Common_Functions/cfg/) - Common function configuration file template.
+  - [inc](./F01_Common_Functions/inc/) - Common function header files.
+  - [src](./F01_Common_Functions/src/) - Common function source files.
+  - [test](./F01_Common_Functions/test/) - Common function test files.
+- [Programming_Topics](./F02_Programming_Topics/) - ([Programming Carl Series](https://programmercarl.com/) / [Labuladong's Algorithm Cheat Sheet](https://labuladong.github.io/algo/home/)) - This folder contains the leetcode practice questions organized by programming topics.
+  - [Data_Structure](./F02_Programming_Topics/01_Data_Structure/)
+    - [Array](./F02_Programming_Topics/01_Data_Structure/01_Array/)
+    - [Linked_List](./F02_Programming_Topics/01_Data_Structure/02_Linked_List/)
+    - [Hash_Table](./F02_Programming_Topics/01_Data_Structure/03_Hash_Table/)
+    - [String](./F02_Programming_Topics/01_Data_Structure/04_String/)
+    - [Stack_Queue](./F02_Programming_Topics/01_Data_Structure/05_Stack_Queue/)
+    - [Binary_Tree](./F02_Programming_Topics/01_Data_Structure/06_Binary_Tree/)
+    - [Monotone_Stack](./F02_Programming_Topics/01_Data_Structure/07_Monotone_Stack/)
+    - [Graph_Theory](./F02_Programming_Topics/01_Data_Structure/08_Graph_Theory/)
+  - [Algorithm](./F02_Programming_Topics/02_Algorithm/)
+    - [Binary_Search](./F02_Programming_Topics/02_Algorithm/01_Binary_Search/)
+    - [Double_Pointer](./F02_Programming_Topics/02_Algorithm/02_Double_Pointer/)
+    - [Sliding_Windows](./F02_Programming_Topics/02_Algorithm/03_Sliding_Window/)
+    - [Backtracking](./F02_Programming_Topics/02_Algorithm/04_Backtracking/)
+    - [Greedy](./F02_Programming_Topics/02_Algorithm/05_Greedy/)
+    - [Dynamic_Programming](./F02_Programming_Topics/02_Algorithm/06_Dynamic_Programming/)
+    - [Breadth_First_Search](./F02_Programming_Topics/02_Algorithm/07_Breadth_First_Search/)
+    - [Depth_First_Search](./F02_Programming_Topics/02_Algorithm/08_Depth_First_Search/)
+  - [Software_Design_Pattern](./F02_Programming_Topics/03_Software_Design_Pattern/)
+    - [Creational_Pattern](./F02_Programming_Topics/03_Software_Design_Pattern/01_Creational_Pattern/)
+    - [Structural_Pattern](./F02_Programming_Topics/03_Software_Design_Pattern/02_Structural_Pattern/)
+    - [Behavioral_Pattern](./F02_Programming_Topics/03_Software_Design_Pattern/03_Behavioral_Pattern/)
+  - [Classic_LeetCode_Topics](./F02_Programming_Topics/04_Classic_LeetCode_Topics/)
+    - [N_sum](./F02_Programming_Topics/04_Classic_LeetCode_Topics/01_N_sum/)
+    - [Buy_Sell_Stock](./F02_Programming_Topics/04_Classic_LeetCode_Topics/02_Buy_Sell_Stock/)
+    - [House_Robber](./F02_Programming_Topics/04_Classic_LeetCode_Topics/03_House_Robber/)
+- [Misc](./F03_Misc/) - This folder contains miscellaneous topics.
+  - [Programming_Notes](./F03_Misc/00_Programming_Notes/)
+  - [Real_World_Problem](./F03_Misc/01_Real_World_Problems/)
+  - [Supplementary_Materials](./F03_Misc/02_Supplementary_Materials/)
 
 ## Common Functions
 
-> To ensure code quality, all shared common code based on different programming topics will be placed in the [Common_Functions](./01_Common_Functions/) folder following these workflows:
+> To ensure code quality, all shared common code based on different programming topics will be placed in the [Common_Functions](./F01_Common_Functions/) folder following these workflows:
 >
 > | Workflows | Functionality | Source Code |
 > |:-:|:-:|:-:|
@@ -83,7 +83,7 @@ C language local leetcode practice overall folder structure:
 >
 > The call hierarchy between files is as follow:
 >
-> ![Call Hierarchy](./03_Misc/02_Supplementary_Materials/callHierarchy.png)
+> ![Call Hierarchy](./F03_Misc/02_Supplementary_Materials/callHierarchy.png)
 >
 > The `main.c` file is the entry point of the program, which calls the solution method in the `solutionName_methodNameXX.c` file. Meanwhile, the `main.c` file also contains the test cases for the selected solution method.
 >
@@ -103,7 +103,7 @@ C language local leetcode practice overall folder structure:
 >
 > For a complete example, please refer to the following file: `\Practice_LeetCode_C\02_Programming_Topics\01_Data_Structure\01_Array\01_binarySearch\main.c`
 >
-> Flowchart source file: [compilationStructure.drawio](./03_Misc/02_Supplementary_Materials/compilationStructure.drawio) (hediet.vscode-drawio extension required)
+> Flowchart source file: [compilationStructure.drawio](./F03_Misc/02_Supplementary_Materials/compilationStructure.drawio) (hediet.vscode-drawio extension required)
 
 ## Build & Run Code
 
@@ -187,14 +187,14 @@ C language local leetcode practice overall folder structure:
 > then run
 >
 > ```txt
-> .\00_Prerequisite\01_Clean_Exe\killExes.bat         /* windows system */
-> ./00_Prerequisite/01_Clean_Exe/killexe.sh           /* linux system */
+> .\F00_Prerequisite\01_Clean_Exe\killExes.bat         /* windows system */
+> ./F00_Prerequisite/01_Clean_Exe/killexe.sh           /* linux system */
 > ```
 >
-> Source code: [killExes.bat](./00_Prerequisite/01_Clean_Exe/killExes.bat) and [killExes.sh](./00_Prerequisite/01_Clean_Exe/killExes.sh).
+> Source code: [killExes.bat](./F00_Prerequisite/01_Clean_Exe/killExes.bat) and [killExes.sh](./F00_Prerequisite/01_Clean_Exe/killExes.sh).
 
 ## Questions
 
-> Now, please feel free to start the leetcode practice journey by selecting the desired programming topic in the [Programming_Topics](./02_Programming_Topics/) folder.
+> Now, please feel free to start the leetcode practice journey by selecting the desired programming topic in the [Programming_Topics](./F02_Programming_Topics/) folder.
 >
 > If there are any questions, please feel free to create an issue in the [Issues](https://github.com/ImChong/Practice_LeetCode_C/issues) or start a discussion in the [Discussions](https://github.com/ImChong/Practice_LeetCode_C/discussions).
