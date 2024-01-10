@@ -6,17 +6,17 @@
         "C_Cpp.default.compilerPath": "/usr/bin/gcc"                                    /* 将此处修改为本地 gcc 地址*/
     },
     "code-runner.executorMap": {
-        "c": "cd $dir && if exist src/ (gcc -I$workspaceRoot/01_Common_Functions/inc/ -I$workspaceRoot/01_Common_Functions/inc/commonDef/ -I$dirWithoutTrailingSlash/cfg/ -I$dirWithoutTrailingSlash/inc/ $workspaceRoot/01_Common_Functions/src/*.c $dirWithoutTrailingSlash/src/*.c main.c -o main.exe && $dirmain.exe) else (gcc -I$workspaceRoot/01_Common_Functions/inc/ -I$workspaceRoot/01_Common_Functions/inc/commonDef/ -I$dirWithoutTrailingSlash/cfg/ $workspaceRoot/01_Common_Functions/src/*.c main.c -o main.exe && $dirmain.exe)"
+        "c": "cd $dir && if exist src/ (gcc -I$workspaceRoot/F01_Common_Functions/inc/ -I$workspaceRoot/F01_Common_Functions/inc/commonDef/ -I$dirWithoutTrailingSlash/cfg/ -I$dirWithoutTrailingSlash/inc/ $workspaceRoot/F01_Common_Functions/src/*.c $dirWithoutTrailingSlash/src/*.c main.c -o main.exe && $dirmain.exe) else (gcc -I$workspaceRoot/F01_Common_Functions/inc/ -I$workspaceRoot/F01_Common_Functions/inc/commonDef/ -I$dirWithoutTrailingSlash/cfg/ $workspaceRoot/F01_Common_Functions/src/*.c main.c -o main.exe && $dirmain.exe)"
         /*
             cd $dir
             &&
             if exist src/
                 (gcc
-                    -I$workspaceRoot/01_Common_Functions/inc/
-                    -I$workspaceRoot/01_Common_Functions/inc/commonDef/
+                    -I$workspaceRoot/F01_Common_Functions/inc/
+                    -I$workspaceRoot/F01_Common_Functions/inc/commonDef/
                     -I$dirWithoutTrailingSlash/cfg/
                     -I$dirWithoutTrailingSlash/inc/
-                    $workspaceRoot/01_Common_Functions/src/*.c
+                    $workspaceRoot/F01_Common_Functions/src/*.c
                     $dirWithoutTrailingSlash/src/*.c
                     main.c
                     -o
@@ -26,10 +26,10 @@
                 )
             else
                 (gcc
-                    -I$workspaceRoot/01_Common_Functions/inc/
-                    -I$workspaceRoot/01_Common_Functions/inc/commonDef/
+                    -I$workspaceRoot/F01_Common_Functions/inc/
+                    -I$workspaceRoot/F01_Common_Functions/inc/commonDef/
                     -I$dirWithoutTrailingSlash/cfg/
-                    $workspaceRoot/01_Common_Functions/src/*.c
+                    $workspaceRoot/F01_Common_Functions/src/*.c
                     main.c
                     -o
                     main.exe

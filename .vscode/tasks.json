@@ -20,13 +20,13 @@
             },
             "args": [
                 "-fdiagnostics-color=always",                                       /* 使gcc输出带颜色 */
-                "-I${workspaceFolder}/01_Common_Functions/inc/",                    /* 常用头文件路径 */
-                "-I${workspaceFolder}/01_Common_Functions/inc/commonDef/",          /* 常用头文件路径 */
+                "-I${workspaceFolder}/F01_Common_Functions/inc/",                    /* 常用头文件路径 */
+                "-I${workspaceFolder}/F01_Common_Functions/inc/commonDef/",          /* 常用头文件路径 */
                 "-I${fileDirname}/cfg/",                                            /* 当前活跃文件的配置文件所在目录 */
                 "-I${fileDirname}/inc/",                                            /* 当前活跃文件的头文件所在目录 */
                 "-I${fileDirname}",                                                 /* 当前活跃文件所在目录 */
                 "-g",                                                               /* 生成调试信息 */
-                "${workspaceFolder}/01_Common_Functions/src/*.c",                   /* 将 Common_Func/src/ 目录下所有.c文件同步编译 */
+                "${workspaceFolder}/F01_Common_Functions/src/*.c",                   /* 将 Common_Func/src/ 目录下所有.c文件同步编译 */
                 "${fileDirname}/src/*.c",                                           /* 将 src/ 目录下所有.c文件同步编译，如果没有则注释掉该行 */
                 "main.c",                                                           /* 将当前 main.c 文件同步编译 */
                 "-o",                                                               /* 指定输出文件名 */
@@ -94,12 +94,12 @@
             },
             "linux": {          /* Linux下的清除指令 */
                 "command": [
-                    "${workspaceFolder}/00_Prerequisite/01_Clean_Exe/killExes.sh"
+                    "${workspaceFolder}/F00_Prerequisite/F01_Clean_Exe/killExes.sh"
                 ]
             },
             "windows": {        /* Windows下的清除指令 */
                 "command": [
-                    "${workspaceFolder}/00_Prerequisite/01_Clean_Exe/killExes.bat"
+                    "${workspaceFolder}/F00_Prerequisite/F01_Clean_Exe/killExes.bat"
                 ]
             },
             "problemMatcher": [],                                                   /* 指定错误匹配模式 */
