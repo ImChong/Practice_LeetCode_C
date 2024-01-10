@@ -3,14 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-09 17:28:45
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-09 23:55:39
+ * @LastEditTime : 2024-01-10 09:42:42
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : Common array header file
  */
-#ifndef 01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_
-#define 01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_
+#ifndef COMMON_FUNCTIONS_INC_COMMONARRAY_H_ /* NOLINT(build/header_guard) */
+#define COMMON_FUNCTIONS_INC_COMMONARRAY_H_ /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -49,4 +49,4 @@ int Validate_Array(char testNum, int *expectArr, int expectLen, int *actualArr, 
 int Validate_Array2D(char testNum, int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize, int **actual2DArr,
                      int actualRtnRowSize, int *actualRtnColSize, int needSort); /* 验证二维数组 */
 
-#endif /* 01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_ */
+#endif /* COMMON_FUNCTIONS_INC_COMMONARRAY_H_ */ /* NOLINT(build/header_guard) */

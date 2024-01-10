@@ -3,14 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-10 09:01:51
+ * @LastEditTime : 2024-01-10 09:39:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : common function configuration file (通用函数配置文件)
  */
-#ifndef 01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_
-#define 01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_
+#ifndef COMMON_FUNCTIONS_CFG_COMPILECFG_H_ /* NOLINT(build/header_guard) */
+#define COMMON_FUNCTIONS_CFG_COMPILECFG_H_ /* NOLINT(build/header_guard) */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -37,4 +37,4 @@
 #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN 0        /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
 #endif                                              /* COMMON_BINARY_TREE_EN */
 
-#endif /* 01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_ */
+#endif /* COMMON_FUNCTIONS_CFG_COMPILECFG_H_ */ /* NOLINT(build/header_guard) */
