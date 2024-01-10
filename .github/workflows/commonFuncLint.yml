@@ -6,6 +6,8 @@ on:
     workflow_dispatch:
     # Allows you to run this workflow every time a commit is pushed to the repository
     push:
+      branches:
+        - '**'
       paths:
         - 'F01_Common_Functions/**'
         - '.github/workflows/commonFuncLint.yml'
@@ -14,6 +16,8 @@ on:
         - '.github/workflows/taskRunner/runGoogleStyleCheck.sh'
     # Allows you to run this workflow every time a pull request is opened or updated
     pull_request:
+      branches:
+        - '**'
       paths:
         - 'F01_Common_Functions/**'
         - '.github/workflows/commonFuncLint.yml'

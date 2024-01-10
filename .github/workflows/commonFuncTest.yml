@@ -7,12 +7,16 @@ on:
     workflow_dispatch:
     # Allows you to run this workflow every time a commit is pushed to the repository
     push:
+      branches:
+        - '**'
       paths:
         - 'F01_Common_Functions/**'
         - '.github/workflows/commonFuncTest.yml'
         - '.github/workflows/taskRunner/runGTests.sh'
     # Allows you to run this workflow every time a pull request is opened or updated
     pull_request:
+      branches:
+        - '**'
       paths:
         - 'F01_Common_Functions/**'
         - '.github/workflows/commonFuncTest.yml'
