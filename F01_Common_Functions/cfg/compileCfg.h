@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : common function configuration file (通用函数配置文件)
  */
-#ifndef COMMON_FUNCTIONS_CFG_COMPILECFG_H_ /* NOLINT(build/header_guard) */
-#define COMMON_FUNCTIONS_CFG_COMPILECFG_H_ /* NOLINT(build/header_guard) */
+#ifndef F01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_
+#define F01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -37,4 +37,4 @@
 #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN 0        /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
 #endif                                              /* COMMON_BINARY_TREE_EN */
 
-#endif /* COMMON_FUNCTIONS_CFG_COMPILECFG_H_ */ /* NOLINT(build/header_guard) */
+#endif /* F01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_ */
