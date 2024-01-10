@@ -6,26 +6,26 @@
 # =================================================================================
 # Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 # =================================================================================
-# @Description  : 此CMakeLists用于构建所有 F01_Common_Functions/test 下的测试文件
-#                 构建生成的测试文件用于测试 F01_Common_Functions 下的所有通用函数
+# @Description  : This CMakeLists is used to build the test file for all the common function modules
+#                 common function modules are under the F01_Common_Functions directory.
 # =================================================================================
-# 设置CMake最低版本
+# Set the minimum version of CMake that can be used
 cmake_minimum_required(VERSION 3.20)
 
-# 设置项目名称
+# Set the project name
 project(LeetCodePractice)
 
-# 添加编译选项
+# Add compiler options
 add_compile_options(-Wall -Wextra)
 
-# 设置C/C++标准
+# Set the C / C++ standard
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 设置可执行文件输出目录
+# Set the output path
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-# 添加子目录
+# Add the subdirectory
 add_subdirectory(F01_Common_Functions)
