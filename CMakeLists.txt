@@ -6,8 +6,8 @@
 # =================================================================================
 # Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 # =================================================================================
-# @Description  : 此CMakeLists用于构建所有 01_Common_Func\test 下的测试文件
-#                 构建生成的测试文件用于测试 01_Common_Func 下的所有通用函数
+# @Description  : 此CMakeLists用于构建所有 F01_Common_Functions/test 下的测试文件
+#                 构建生成的测试文件用于测试 F01_Common_Functions 下的所有通用函数
 # =================================================================================
 # 设置CMake最低版本
 cmake_minimum_required(VERSION 3.20)
@@ -28,4 +28,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # 添加子目录
-add_subdirectory(01_Common_Functions)
+add_subdirectory(F01_Common_Functions)
