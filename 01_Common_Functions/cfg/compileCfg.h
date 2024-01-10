@@ -3,14 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-10 08:58:37
+ * @LastEditTime : 2024-01-10 08:59:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : common function configuration file (通用函数配置文件)
  */
 #ifndef PRACTICE_LEETCODE_C_01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_
-#define PRACTICE_LEETCODE_C_01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_ /* NOLINT(build/header_guard) */
+#define PRACTICE_LEETCODE_C_01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_
 
 /**********************************************************************************/
 /*                                                                                */
