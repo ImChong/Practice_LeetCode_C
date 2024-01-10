@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-10 08:19:30
+ * @LastEditTime : 2024-01-10 08:30:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,6 +35,6 @@
     #define BTREE_ORDER_TRAVERSAL_ITERATION_METHOD_EN 0 /* 二叉树迭代遍历方法编译使能  1: enable, 0: disable */
     #define BTREE_LEVEL_ORDER_ARRAY_METHOD_EN         1 /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
     #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN        0 /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
-#endif                                              /* COMMON_BINARY_TREE_EN */
+#endif /* COMMON_BINARY_TREE_EN */
 
 #endif /* __COMPILE_CFG_H */ /* NOLINT(build/header_guard) */
