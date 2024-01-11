@@ -18,12 +18,6 @@ on:
     pull_request:
       branches:
         - '**'
-      paths:
-        - 'F01_Common_Functions/**'
-        - '.github/workflows/commonFuncLint.yml'
-        - '.github/workflows/taskRunner/runCpplint.sh'
-        - '.github/workflows/taskRunner/runCppcheck.sh'
-        - '.github/workflows/taskRunner/runGoogleStyleCheck.sh'
     # Schedule a workflow to run automatically
     schedule:
       - cron:  '0 2 * * *'
