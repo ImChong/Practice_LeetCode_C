@@ -1,5 +1,5 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonLinkedListDummy.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonLinkedListDummy.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:41
  * @LastEditors: Chong Liu liuc12@miamioh.edu
@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common dummy linked list header file
  */
-#ifndef __COMMON_LINKED_LIST_DUMMY_H /* NOLINT(build/header_guard) */
-#define __COMMON_LINKED_LIST_DUMMY_H /* NOLINT(build/header_guard) */
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMONLINKEDLISTDUMMY_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMONLINKEDLISTDUMMY_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -59,4 +59,4 @@ void DLinkedList_Free(DummyLinkedList *dummyHead);                              
 /**********************************************************************************/
 void Validate_DLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual); /* 验证链表 */
 
-#endif /* __COMMON_LINKED_LIST_DUMMY_H */ /* NOLINT(build/header_guard) */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMONLINKEDLISTDUMMY_H_ */

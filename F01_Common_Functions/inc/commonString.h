@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common string header file
  */
-#ifndef __COMMON_STRING_H /* NOLINT(build/header_guard) */
-#define __COMMON_STRING_H /* NOLINT(build/header_guard) */
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMONSTRING_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMONSTRING_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -35,4 +35,4 @@ int String_Free(char **s); /* 释放字符串 */
 /**********************************************************************************/
 int Validate_String(char testNum, char *expect, char *actual); /* 验证字符串 */
 
-#endif /* __COMMON_STRING_H */ /* NOLINT(build/header_guard) */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMONSTRING_H_ */

@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common print definition header file
  */
-#ifndef __COMMON_PRINT_DEF_H /* NOLINT(build/header_guard) */
-#define __COMMON_PRINT_DEF_H /* NOLINT(build/header_guard) */
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONPRINTDEF_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONPRINTDEF_H_
 
 /* standard header file (标准头文件) */
 #include <stdio.h>
@@ -26,4 +26,4 @@
 /* 重命名打印函数: 打印时可省略输入\r\n */
 #define INFO(format, ...) printf(format "\r\n", ##__VA_ARGS__)
 
-#endif /* __COMMON_PRINT_DEF_H */ /* NOLINT(build/header_guard) */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONPRINTDEF_H_ */

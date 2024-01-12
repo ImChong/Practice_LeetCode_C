@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common array header file
  */
-#ifndef COMMON_FUNCTIONS_INC_COMMONARRAY_H_ /* NOLINT(build/header_guard) */
-#define COMMON_FUNCTIONS_INC_COMMONARRAY_H_ /* NOLINT(build/header_guard) */
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -49,4 +49,4 @@ int Validate_Array(char testNum, int *expectArr, int expectLen, int *actualArr, 
 int Validate_Array2D(char testNum, int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize, int **actual2DArr,
                      int actualRtnRowSize, int *actualRtnColSize, int needSort); /* 验证二维数组 */
 
-#endif /* COMMON_FUNCTIONS_INC_COMMONARRAY_H_ */ /* NOLINT(build/header_guard) */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_ */

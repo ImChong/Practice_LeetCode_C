@@ -1,16 +1,16 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonBinaryTree.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonBinaryTree.h
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-08 09:53:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-08 10:02:57
+ * @LastEditTime : 2024-01-12 10:51:49
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : Common binary tree header file
  */
-#ifndef __COMMON_BINARY_TREE_H /* NOLINT(build/header_guard) */
-#define __COMMON_BINARY_TREE_H /* NOLINT(build/header_guard) */
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMONBINARYTREE_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMONBINARYTREE_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -91,4 +91,4 @@ int *BTree_PostOrderTraversal(struct TreeNode *root, int *returnSize);          
 int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes);       /* 层序遍历 */
 int **BTree_LevelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColumnSizes); /* 自底向上层序遍历 */
 
-#endif /* __COMMON_BINARY_TREE_H */ /* NOLINT(build/header_guard) */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMONBINARYTREE_H_ */
