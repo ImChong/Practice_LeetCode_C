@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonString.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonString.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-13 22:26:08
+ * @LastEditTime : 2024-01-12 16:21:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -120,19 +120,19 @@ int Validate_String(char testNum, char *expect, char *actual) {
         isSuccess = COMMON_FALSE;
     }
 
-    printf("=========================\n");                                      /* 打印分割线 */
-    if (isSuccess) {                                                            /* 如果通过测试 */
-        printf(" - ✅ Test %c Passed\n", testNum);                                  /* 打印通过信息 */
-    } else {                                                                    /* 如果未通过测试 */
-        printf(" - ❌ Test %c Failed\n", testNum);                                  /* 打印未通过信息 */
+    printf("=========================\n");          /* 打印分割线 */
+    if (isSuccess) {                                /* 如果通过测试 */
+        printf(" - ✅ Test %c Passed\n", testNum);      /* 打印通过信息 */
+    } else {                                        /* 如果未通过测试 */
+        printf(" - ❌ Test %c Failed\n", testNum);      /* 打印未通过信息 */
     }
     printf("=========================\n");
     printf("    - Expect: %s\n", expect);
     printf("    - Actual: %s\n", actual);
-    if (isSuccess) {                                                            /* 如果通过测试 */
-        return COMMON_OK;                                                           /* 返回成功 */
-    } else {                                                                    /* 如果未通过测试 */
-        return COMMON_ERR;                                                          /* 返回失败 */
+    if (isSuccess) {                                /* 如果通过测试 */
+        return COMMON_OK;                               /* 返回成功 */
+    } else {                                        /* 如果未通过测试 */
+        return COMMON_ERR;                              /* 返回失败 */
     }
 }
 
