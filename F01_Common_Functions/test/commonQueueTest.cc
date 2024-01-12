@@ -1,21 +1,22 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\test\commonQueueTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonQueueTest.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-13 22:37:54
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-16 00:16:13
+ * @LastEditTime : 2024-01-12 23:57:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : Common Queue Unit Test (通用队列单元测试)
  */
-/* gtest 头文件 */
-#include "gtest/gtest.h"
-/* 测试目标头文件 */
 extern "C" {
-    #include "commonTypeDef.h"
+    /* Target header file (目标头文件) */
     #include "commonQueue.h"
+    /* Common function header file (通用头文件) */
+    #include "commonTypeDef.h"
 }
+/* Google test header file (谷歌测试头文件) */
+#include "gtest/gtest.h"
 
 /**********************************************************************************/
 /*                                                                                */
