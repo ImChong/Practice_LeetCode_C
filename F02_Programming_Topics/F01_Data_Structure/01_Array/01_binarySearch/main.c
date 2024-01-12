@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-10 11:06:55
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-10 12:02:12
+ * @LastEditTime : 2024-01-13 00:04:36
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,9 +12,9 @@
  */
 /* solution header file (题解头文件) */
 #include "binarySearch.h"
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonArray.h"
 #include "commonSingleValue.h"
 /* solution method configuration file (解题方法配置文件) */

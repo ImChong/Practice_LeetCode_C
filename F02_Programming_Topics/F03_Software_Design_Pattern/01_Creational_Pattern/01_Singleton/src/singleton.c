@@ -9,7 +9,7 @@
  * =================================================================================
  * @Description  : singleton source file 单例模式源文件
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* singleton header file 单例模式头文件 */

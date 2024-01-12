@@ -3,21 +3,21 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 16:57:59
+ * @LastEditTime : 2024-01-13 00:03:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用哈希表源文件
  */
-/* common function configuration file (通用函数配置文件) */
+/* Common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_HASH_TABLE_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
-/* header file (本文件头文件) */
+/* Header file (本文件头文件) */
 #include "commonHashTable.h"
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonTypeDef.h"
 
 /**********************************************************************************/

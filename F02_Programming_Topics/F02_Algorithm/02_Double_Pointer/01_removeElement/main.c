@@ -11,7 +11,7 @@
  * https://programmercarl.com/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.html
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.md
  */
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonArray.h"
 
 /**********************************************************************************/

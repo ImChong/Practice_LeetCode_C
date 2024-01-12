@@ -1,22 +1,23 @@
 
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\test\commonStringTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonStringTest.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:24:32
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-15 23:05:31
+ * @LastEditTime : 2024-01-13 00:00:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用二叉树单元测试
+ * @Description  : Common String Unit Test (通用字符串单元测试)
  */
-/* gtest 头文件 */
-#include "gtest/gtest.h"
-/* 测试目标头文件 */
 extern "C" {
-    #include "commonTypeDef.h"
+    /* Target header file (目标头文件) */
     #include "commonString.h"
+    /* Common function header file (通用头文件) */
+    #include "commonTypeDef.h"
 }
+/* Google test header file (谷歌测试头文件) */
+#include "gtest/gtest.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -26,16 +27,16 @@ extern "C" {
 class TestCommonString : public ::testing::Test {
  public:
     static void SetUpTestCase() {
-        // Code here will be called once before all tests
+        /* Code here will be called once before all tests */
     }
     void SetUp() override {
-        // Code here will be called before each test
+        /* Code here will be called before each test */
     }
     void TearDown() override {
-        // Code here will be called after each test
+        /* Code here will be called after each test */
     }
     static void TearDownTestCase() {
-        // Code here will be called once after all tests
+        /* Code here will be called once after all tests */
     }
 };
 

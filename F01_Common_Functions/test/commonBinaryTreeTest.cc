@@ -1,21 +1,22 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\test\commonBinaryTreeTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonBinaryTreeTest.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-13 00:47:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-15 23:08:15
+ * @LastEditTime : 2024-01-12 23:37:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用命令行指令单元测试
+ * @Description  : Common Binary Tree Unit Test (通用二叉树单元测试)
  */
-/* gtest 头文件 */
-#include "gtest/gtest.h"
-/* 测试目标头文件 */
 extern "C" {
-    #include "commonTypeDef.h"
+    /* Target header file (目标头文件) */
     #include "commonBinaryTree.h"
+    /* Common function header file (通用头文件) */
+    #include "commonTypeDef.h"
 }
+/* Google test header file (谷歌测试头文件) */
+#include "gtest/gtest.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -25,16 +26,16 @@ extern "C" {
 class TestCommonBinaryTree : public ::testing::Test {
  public:
     static void SetUpTestCase() {
-        // Code here will be called once before all tests
+        /* Code here will be called once before all tests */
     }
     void SetUp() override {
-        // Code here will be called before each test
+        /* Code here will be called before each test */
     }
     void TearDown() override {
-        // Code here will be called after each test
+        /* Code here will be called after each test */
     }
     static void TearDownTestCase() {
-        // Code here will be called once after all tests
+        /* Code here will be called once after all tests */
     }
 };
 

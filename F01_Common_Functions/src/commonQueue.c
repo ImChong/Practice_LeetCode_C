@@ -3,18 +3,18 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:40:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 16:59:52
+ * @LastEditTime : 2024-01-13 00:04:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用队列源文件
  */
-/* common function configuration file (通用函数配置文件) */
+/* Common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_QUEUE_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
-/* header file (本文件头文件) */
+/* Header file (本文件头文件) */
 #include "commonQueue.h"
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 

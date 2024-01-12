@@ -3,21 +3,21 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 16:59:17
+ * @LastEditTime : 2024-01-13 00:04:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用虚拟头节点链表源文件 - 使用虚拟头节点
  */
-/* common function configuration file (通用函数配置文件) */
+/* Common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_LINKED_LIST_DUMMY_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
-/* header file (本文件头文件) */
+/* Header file (本文件头文件) */
 #include "commonLinkedListDummy.h"
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonTypeDef.h"
 
 /**********************************************************************************/

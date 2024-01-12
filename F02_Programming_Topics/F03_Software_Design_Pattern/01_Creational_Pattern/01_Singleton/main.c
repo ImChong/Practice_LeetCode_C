@@ -11,7 +11,7 @@
  *      单例设计模式（Singleton Design Pattern）是一种软件设计模式，用于确保一个类只有一个实例，并提供一个全局访问点来获取这个实例。
  *      这个模式在需要严格控制如何以及何时访问某个共享资源时非常有用。
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 /* singleton header file 单例模式头文件 */
 #include "singleton.h"

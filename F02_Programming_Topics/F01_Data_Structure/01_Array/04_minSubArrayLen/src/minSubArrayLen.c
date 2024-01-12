@@ -9,7 +9,7 @@
  * =================================================================================
  * @Description  : solution source file
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <limits.h>
 /* solution header file (题解头文件) */
 #include "minSubArrayLen.h"

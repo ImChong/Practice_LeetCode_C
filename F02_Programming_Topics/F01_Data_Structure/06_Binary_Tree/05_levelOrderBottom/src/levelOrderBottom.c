@@ -9,10 +9,10 @@
  * =================================================================================
  * @Description  : 从下往上层序遍历二叉树源文件
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonBinaryTree.h"
 
 /**********************************************************************************/

@@ -14,10 +14,10 @@
  * 给两个字符串：ransomNote 和 magazine ，判断 ransomNote 能不能由 magazine 里面的字符构成。
  *
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdbool.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonSingleValue.h"
 /* 方法配置文件 */
 #include "methodCfg.h"

@@ -13,10 +13,10 @@
  * 给一个正整数 n ，生成一个包含 1 到 n^2 所有元素，且元素按顺时针顺序螺旋排列的 n x n 正方形矩阵 matrix 。
  *
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
 /* solution method configuration file (解题方法配置文件) */

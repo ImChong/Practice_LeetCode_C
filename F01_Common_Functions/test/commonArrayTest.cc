@@ -1,21 +1,22 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\test\commonArrayTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonArrayTest.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-10 09:06:27
+ * @LastEditTime : 2024-01-12 23:34:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用数组单元测试
+ * @Description  : Common Array Unit Test (通用数组单元测试)
  */
-/* gtest 头文件 */
-#include "gtest/gtest.h"
-/* 测试目标头文件 */
 extern "C" {
+    /* Target header file (目标头文件) */
     #include "commonArray.h"
+    /* Common function header file (通用头文件) */
     #include "commonTypeDef.h"
 }
+/* Google test header file (谷歌测试头文件) */
+#include "gtest/gtest.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -25,16 +26,16 @@ extern "C" {
 class TestCommonArray : public ::testing::Test {
  public:
     static void SetUpTestCase() {
-        // Code here will be called once before all tests
+        /* Code here will be called once before all tests */
     }
     void SetUp() override {
-        // Code here will be called before each test
+        /* Code here will be called before each test */
     }
     void TearDown() override {
-        // Code here will be called after each test
+        /* Code here will be called after each test */
     }
     static void TearDownTestCase() {
-        // Code here will be called once after all tests
+        /* Code here will be called once after all tests */
     }
 };
 

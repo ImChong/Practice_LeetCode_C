@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : common function configuration file (通用函数配置文件)
+ * @Description  : Common function configuration file (通用函数配置文件)
  */
 #ifndef F01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_
 #define F01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_

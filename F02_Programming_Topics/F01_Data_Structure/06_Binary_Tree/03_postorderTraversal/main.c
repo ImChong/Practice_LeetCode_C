@@ -19,9 +19,9 @@
  * 后序遍历 - 递归方法/迭代方法
  * [4, 5, 2, 6, 7, 3, 1]
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonBinaryTree.h"
 /* test helper header file (测试函数头文件) */
 #include "testHelper.h"

@@ -9,15 +9,15 @@
  * =================================================================================
  * @Description  : 通用环形缓冲区源文件
  */
-/* common function configuration file (通用函数配置文件) */
+/* Common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_RING_BUFFER_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
-/* header file (本文件头文件) */
+/* Header file (本文件头文件) */
 #include "commonRingBuffer.h"
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdint.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
 

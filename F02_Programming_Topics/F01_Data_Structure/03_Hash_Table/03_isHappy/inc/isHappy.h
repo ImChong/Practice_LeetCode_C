@@ -12,7 +12,7 @@
 #ifndef __IS_HAPPY_H
 #define __IS_HAPPY_H
 
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdbool.h>
 
 /**********************************************************************************/

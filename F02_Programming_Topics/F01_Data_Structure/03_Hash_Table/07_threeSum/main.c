@@ -13,10 +13,10 @@
  *
  * 给一个整数数组 nums ，判断是否存在三元组 [nums[i], nums[j], nums[k]] 满足 i != j、i != k 且 j != k ，同时还满足 nums[i] + nums[j] + nums[k] == 0 。
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
 /* solution method configuration file (解题方法配置文件) */

@@ -19,9 +19,9 @@
 /* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
 #if ARRAY_METHOD_EN
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonBinaryTree.h"
 /* solution header file (题解头文件) */
 #include "levelOrder.h"

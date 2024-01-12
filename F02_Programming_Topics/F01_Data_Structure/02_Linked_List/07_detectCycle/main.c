@@ -10,10 +10,10 @@
  * @Description  : 142. 环形链表 II：https://leetcode.cn/problems/linked-list-cycle-ii/
  * https://programmercarl.com/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.html
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonSingleValue.h"
 #include "commonArray.h"
 #include "commonLinkedList.h"

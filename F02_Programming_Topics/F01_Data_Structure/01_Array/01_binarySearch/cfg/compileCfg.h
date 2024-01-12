@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : common function configuration file common function configuration file (通用函数配置文件)
+ * @Description  : common function configuration file Common function configuration file (通用函数配置文件)
  *      本文件无需 #include 至题解的.c源文件内，本文件用于 commonXXX.c 等通用文件编译时的剪裁
  */
 #ifndef F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_01_BINARYSEARCH_CFG_COMPILECFG_H_

@@ -10,10 +10,10 @@
  * @Description  : 349. 两个数组的交集：https://leetcode.cn/problems/intersection-of-two-arrays/
  *      https://programmercarl.com/0349.%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86.html
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
 /* solution method configuration file (解题方法配置文件) */

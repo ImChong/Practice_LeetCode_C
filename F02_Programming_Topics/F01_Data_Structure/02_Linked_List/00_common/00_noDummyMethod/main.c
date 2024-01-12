@@ -9,9 +9,9 @@
  * =================================================================================
  * @Description  : 运行链表公共函数 - 未使用虚拟头节点
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
 #include "commonLinkedList.h"

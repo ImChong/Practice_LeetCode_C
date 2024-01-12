@@ -9,7 +9,7 @@
  * =================================================================================
  * @Description  : solution source file - 螺旋矩阵II头文件 - 按层模拟法
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdlib.h>
 /* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
