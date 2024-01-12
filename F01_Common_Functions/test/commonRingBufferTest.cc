@@ -1,21 +1,22 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\test\commonRingBufferTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonRingBufferTest.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-15 22:59:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-16 00:24:08
+ * @LastEditTime : 2024-01-12 23:57:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用环形缓冲区单元测试
+ * @Description  : Common Ring Buffer Unit Test (通用环形缓冲区单元测试)
  */
-/* gtest 头文件 */
-#include "gtest/gtest.h"
-/* 测试目标头文件 */
 extern "C" {
-    #include "commonTypeDef.h"
+    /* Target header file (目标头文件) */
     #include "commonRingBuffer.h"
+    /* Common function header file (通用头文件) */
+    #include "commonTypeDef.h"
 }
+/* Google test header file (谷歌测试头文件) */
+#include "gtest/gtest.h"
 
 /**********************************************************************************/
 /*                                                                                */
