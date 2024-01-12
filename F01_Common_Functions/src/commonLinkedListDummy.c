@@ -9,7 +9,7 @@
  * =================================================================================
  * @Description  : 通用虚拟头节点链表源文件 - 使用虚拟头节点
  */
-/* common function configuration file (通用函数配置文件) */
+/* Common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_LINKED_LIST_DUMMY_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* header file (本文件头文件) */

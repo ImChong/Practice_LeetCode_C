@@ -3,13 +3,13 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 16:52:25
+ * @LastEditTime : 2024-01-12 23:27:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用数组源文件
  */
-/* common function configuration file (通用函数配置文件) */
+/* Common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_ARRAY_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* header file (本文件头文件) */

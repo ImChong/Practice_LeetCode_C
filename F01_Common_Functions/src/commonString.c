@@ -9,7 +9,7 @@
  * =================================================================================
  * @Description  : 通用字符串源文件
  */
-/* common function configuration file (通用函数配置文件) */
+/* Common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_STRING_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* header file (本文件头文件) */
