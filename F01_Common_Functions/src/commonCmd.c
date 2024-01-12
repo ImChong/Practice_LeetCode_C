@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonCmd.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonCmd.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-04 08:56:01
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-13 01:04:41
+ * @LastEditTime : 2024-01-13 00:03:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
