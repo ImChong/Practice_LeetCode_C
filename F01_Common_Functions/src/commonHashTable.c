@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonHashTable.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonHashTable.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-15 23:25:01
+ * @LastEditTime : 2024-01-12 16:57:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,13 +11,14 @@
  */
 /* common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
-#if COMMON_HASH_TABLE_EN    /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
+#if COMMON_HASH_TABLE_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
+/* header file (本文件头文件) */
+#include "commonHashTable.h"
 /* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* common function header file (通用头文件) */
 #include "commonTypeDef.h"
-#include "commonHashTable.h"
 
 /**********************************************************************************/
 /*                                                                                */

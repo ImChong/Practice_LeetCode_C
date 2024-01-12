@@ -11,13 +11,14 @@
  */
 /* common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
-#if COMMON_LINKED_LIST_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
+#if COMMON_LINKED_LIST_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
+/* header file (本文件头文件) */
+#include "commonLinkedList.h"
 /* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* common function header file (通用头文件) */
 #include "commonTypeDef.h"
-#include "commonLinkedList.h"
 
 /**********************************************************************************/
 /*                                                                                */

@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonStack.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonStack.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:36:54
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 18:46:28
+ * @LastEditTime : 2024-01-12 16:20:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,12 +11,12 @@
  */
 /* common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
-#if COMMON_STACK_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
+#if COMMON_STACK_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
+/* header file (本文件头文件) */
+#include "commonStack.h"
 /* standard header file (标准头文件) */
 #include <stdlib.h>
 #include <stdbool.h>
-/* common function header file (通用头文件) */
-#include "commonStack.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -30,7 +30,6 @@
  * @return {Stack} *ret         返回创建的栈结构体
  */
 Stack *Stack_Init(int capacity) {
-    /* NOLINT(readability/casting) */
     Stack *ret = (Stack *)malloc(sizeof(Stack));        /* NOLINT(readability/casting) */
     ret->stk = (int *)malloc(sizeof(int) * capacity);   /* NOLINT(readability/casting) */
     ret->stkSize = 0;                                   /* 当前栈大小为0 */

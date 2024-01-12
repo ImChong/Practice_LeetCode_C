@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonRingBuffer.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonRingBuffer.c
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 19:12:50
+ * @LastEditTime : 2024-01-12 17:00:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,24 +11,24 @@
  */
 /* common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
-#if COMMON_RING_BUFFER_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
+#if COMMON_RING_BUFFER_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
+/* header file (本文件头文件) */
+#include "commonRingBuffer.h"
 /* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdint.h>
 /* common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
-#include "commonRingBuffer.h"
 
-/* TODO: 重构 */
+/* TODO: refactor needed 重构 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-/* 环形 Buffer 长度 */
-#define RING_BUFFER_SIZE        5
+#define RING_BUFFER_SIZE        5       /* 环形 Buffer 长度 */
 
 /**********************************************************************************/
 /*                                                                                */
