@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonRingBuffer.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonRingBuffer.c
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 19:12:50
+ * @LastEditTime : 2024-01-12 17:00:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,15 +21,14 @@
 #include "commonTypeDef.h"
 #include "commonArray.h"
 
-/* TODO: 重构 */
+/* TODO: refactor needed 重构 */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-/* 环形 Buffer 长度 */
-#define RING_BUFFER_SIZE        5
+#define RING_BUFFER_SIZE        5       /* 环形 Buffer 长度 */
 
 /**********************************************************************************/
 /*                                                                                */
