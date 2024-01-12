@@ -12,7 +12,7 @@
 /* Common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_CMD_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
-/* header file (本文件头文件) */
+/* Header file (本文件头文件) */
 #include "commonCmd.h"
 /* common function header file (通用头文件) */
 #include "commonTypeDef.h"
