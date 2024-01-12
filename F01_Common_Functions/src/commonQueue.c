@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonQueue.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonQueue.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:40:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-14 08:51:12
+ * @LastEditTime : 2024-01-12 16:59:52
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,12 +11,12 @@
  */
 /* common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
-#if COMMON_QUEUE_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
+#if COMMON_QUEUE_EN         /* whether compile this file, the definition of this macro can be found in compileCfg.h */
+/* header file (本文件头文件) */
+#include "commonQueue.h"
 /* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* common function header file (通用头文件) */
-#include "commonQueue.h"
 
 /**********************************************************************************/
 /*                                                                                */
