@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\src\commonBinaryTree.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonBinaryTree.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-09 23:55:07
+ * @LastEditTime : 2024-01-12 16:54:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,13 +38,14 @@
 /* common function configuration file (通用函数配置文件) */
 #include "compileCfg.h"
 #if COMMON_BINARY_TREE_EN         /* 在每一道题 cfg 文件夹下的 compileCfg.h 开启编译宏定义 */
+/* header file (本文件头文件) */
+#include "commonBinaryTree.h"
 /* standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
 /* common function header file (通用头文件) */
 #include "commonTypeDef.h"
-#include "commonBinaryTree.h"
 
 /**********************************************************************************/
 /*                                                                                */
