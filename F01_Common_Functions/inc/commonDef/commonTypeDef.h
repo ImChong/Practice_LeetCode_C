@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common type definition header file
  */
-#ifndef __COMMON_TYPE_DEF_H /* NOLINT(build/header_guard) */
-#define __COMMON_TYPE_DEF_H /* NOLINT(build/header_guard) */
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONTYPEDEF_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONTYPEDEF_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -61,4 +61,4 @@
         }                        \
     } while (0)
 
-#endif /* __COMMON_TYPE_DEF_H */ /* NOLINT(build/header_guard) */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONTYPEDEF_H_ */
