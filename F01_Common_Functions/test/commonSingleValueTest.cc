@@ -1,21 +1,22 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\test\commonSingleValueTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonSingleValueTest.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-16 00:25:02
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-16 00:28:06
+ * @LastEditTime : 2024-01-12 23:59:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用单值函数单元测试
+ * @Description  : Common Single Value Unit Test (通用单值单元测试)
  */
-/* gtest 头文件 */
-#include "gtest/gtest.h"
-/* 测试目标头文件 */
 extern "C" {
-    #include "commonTypeDef.h"
+    /* Target header file (目标头文件) */
     #include "commonSingleValue.h"
+    /* Common function header file (通用头文件) */
+    #include "commonTypeDef.h"
 }
+/* Google test header file (谷歌测试头文件) */
+#include "gtest/gtest.h"
 
 /**********************************************************************************/
 /*                                                                                */
