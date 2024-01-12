@@ -1,21 +1,22 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\test\commonHashTableTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonHashTableTest.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-13 21:58:33
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-15 23:23:22
+ * @LastEditTime : 2024-01-12 23:55:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用哈希表单元测试
+ * @Description  : Common Hash Table Unit Test (通用哈希表单元测试)
  */
-/* gtest 头文件 */
-#include "gtest/gtest.h"
-/* 测试目标头文件 */
 extern "C" {
-    #include "commonTypeDef.h"
+    /* Target header file (目标头文件) */
     #include "commonHashTable.h"
+    /* Common function header file (通用头文件) */
+    #include "commonTypeDef.h"
 }
+/* Google test header file (谷歌测试头文件) */
+#include "gtest/gtest.h"
 
 /**********************************************************************************/
 /*                                                                                */
