@@ -26,16 +26,16 @@ extern "C" {
 class TestCommonString : public ::testing::Test {
  public:
     static void SetUpTestCase() {
-        // Code here will be called once before all tests
+        /* Code here will be called once before all tests */
     }
     void SetUp() override {
-        // Code here will be called before each test
+        /* Code here will be called before each test */
     }
     void TearDown() override {
-        // Code here will be called after each test
+        /* Code here will be called after each test */
     }
     static void TearDownTestCase() {
-        // Code here will be called once after all tests
+        /* Code here will be called once after all tests */
     }
 };
 
