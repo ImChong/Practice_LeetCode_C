@@ -1,16 +1,16 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonHashTable.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonHashTable.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-06 01:11:03
+ * @LastEditTime : 2024-01-12 10:54:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : Common hash table header file
  */
-#ifndef __COMMON_HASH_TABLE_H /* NOLINT(build/header_guard) */
-#define __COMMON_HASH_TABLE_H /* NOLINT(build/header_guard) */
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMONHASHTABLE_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMONHASHTABLE_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -49,4 +49,4 @@ void HashTable_Remove(struct HashTable *table, int val);            /* 删除哈
 void HashTable_Print(struct HashTable *table); /* 打印哈希表 */
 void HashTable_Free(struct HashTable *table);  /* 释放哈希表 */
 
-#endif /* __COMMON_HASH_TABLE_H */ /* NOLINT(build/header_guard) */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMONHASHTABLE_H_ */

@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common queue header file
  */
-#ifndef __COMMON_QUEUE_H /* NOLINT(build/header_guard) */
-#define __COMMON_QUEUE_H /* NOLINT(build/header_guard) */
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMONQUEUE_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMONQUEUE_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -43,4 +43,4 @@ int Queue_IsFull(Queue *queue);       /* 判断队列是否为满 */
 void Queue_Print(Queue *queue); /* 打印队列 */
 void Queue_Free(Queue *queue);  /* 释放队列 */
 
-#endif /* __COMMON_QUEUE_H */ /* NOLINT(build/header_guard) */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMONQUEUE_H_ */

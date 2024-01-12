@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common command header file
  */
-#ifndef __COMMON_CMD_H /* NOLINT(build/header_guard) */
-#define __COMMON_CMD_H /* NOLINT(build/header_guard) */
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMONCMD_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMONCMD_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -19,4 +19,4 @@
 /**********************************************************************************/
 int CMD_PrintInput(int argc, const char *argv[]); /* 打印命令行信息 */
 
-#endif /* __COMMON_CMD_H */ /* NOLINT(build/header_guard) */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMONCMD_H_ */

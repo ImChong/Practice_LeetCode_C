@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common single value header file
  */
-#ifndef __COMMON_SINGLE_VALUE_H /* NOLINT(build/header_guard) */
-#define __COMMON_SINGLE_VALUE_H /* NOLINT(build/header_guard) */
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMONSINGLEVALUE_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMONSINGLEVALUE_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -29,4 +29,4 @@
 /**********************************************************************************/
 int Validate_SingleValue(char testNum, int expect, int actual); /* 验证单个值 */
 
-#endif /* __COMMON_SINGLE_VALUE_H */ /* NOLINT(build/header_guard) */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMONSINGLEVALUE_H_ */
