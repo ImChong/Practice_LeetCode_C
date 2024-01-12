@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonSingleValue.h"
 #include "commonString.h"
 

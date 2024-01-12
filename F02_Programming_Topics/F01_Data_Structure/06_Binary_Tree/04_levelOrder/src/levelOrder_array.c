@@ -21,7 +21,7 @@
 #if ARRAY_METHOD_EN
 /* Standard header file (标准头文件) */
 #include <stdio.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonBinaryTree.h"
 /* solution header file (题解头文件) */
 #include "levelOrder.h"

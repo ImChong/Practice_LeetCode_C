@@ -21,7 +21,7 @@
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdbool.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonSingleValue.h"
 /* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"

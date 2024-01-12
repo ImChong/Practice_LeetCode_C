@@ -15,7 +15,7 @@
 #if FAST_SLOW_POINTER_METHOD_EN
 /* Standard header file (标准头文件) */
 #include <stdbool.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonFunc.h"
 /* solution header file (题解头文件) */
 #include "isHappy.h"

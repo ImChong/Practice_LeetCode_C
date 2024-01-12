@@ -14,7 +14,7 @@
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <string.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonString.h"
 #include "commonArray.h"
 

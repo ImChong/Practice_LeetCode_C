@@ -12,7 +12,7 @@
  */
 /* Standard header file (标准头文件) */
 #include <stdio.h>
-/* common function header file (通用头文件) */
+/* Common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
 /* solution method configuration header file (解题方法配置文件) */
