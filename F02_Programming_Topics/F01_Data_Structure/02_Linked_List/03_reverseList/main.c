@@ -10,7 +10,7 @@
  * @Description  : 206. 反转链表：https://leetcode.cn/problems/reverse-linked-list/
  * https://programmercarl.com/0206.%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8.html
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* common function header file (通用头文件) */

@@ -9,7 +9,7 @@
  * =================================================================================
  * @Description  : solution source file
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <string.h>
 /* common function header file (通用头文件) */
 #include "commonTypeDef.h"

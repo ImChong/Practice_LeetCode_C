@@ -11,7 +11,7 @@
  * https://programmercarl.com/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.html
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.md
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* common function header file (通用头文件) */

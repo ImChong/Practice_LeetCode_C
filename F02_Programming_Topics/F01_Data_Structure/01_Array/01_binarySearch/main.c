@@ -12,7 +12,7 @@
  */
 /* solution header file (题解头文件) */
 #include "binarySearch.h"
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 /* common function header file (通用头文件) */
 #include "commonArray.h"

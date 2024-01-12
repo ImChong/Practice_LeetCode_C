@@ -12,7 +12,7 @@
 #ifndef __CAN_CONSTRUCT_H
 #define __CAN_CONSTRUCT_H
 
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdbool.h>
 
 bool canConstruct(char *ransomNote, char *magazine);

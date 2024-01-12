@@ -11,7 +11,7 @@
  */
 #include "methodCfg.h"
 #if DOUBLE_POINTER_METHOD_EN
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* common function header file (通用头文件) */

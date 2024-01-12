@@ -12,7 +12,7 @@
 #ifndef F01_COMMON_FUNCTIONS_INC_COMMONSTACK_H_
 #define F01_COMMON_FUNCTIONS_INC_COMMONSTACK_H_
 
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdbool.h>
 
 /**********************************************************************************/

@@ -14,7 +14,7 @@
 #if COMMON_STRING_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
 #include "commonString.h"
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

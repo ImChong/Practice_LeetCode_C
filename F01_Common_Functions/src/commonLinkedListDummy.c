@@ -14,7 +14,7 @@
 #if COMMON_LINKED_LIST_DUMMY_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
 #include "commonLinkedListDummy.h"
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* common function header file (通用头文件) */

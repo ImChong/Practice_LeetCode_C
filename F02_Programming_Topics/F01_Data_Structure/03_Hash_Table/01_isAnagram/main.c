@@ -9,7 +9,7 @@
  * =================================================================================
  * @Description  : 242. 有效的字母异位词：https://leetcode.cn/problems/valid-anagram/
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>

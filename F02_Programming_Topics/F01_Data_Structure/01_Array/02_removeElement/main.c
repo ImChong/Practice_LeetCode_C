@@ -10,7 +10,7 @@
  * @Description  : 27. 移除元素：https://leetcode.cn/problems/remove-element/
  *      https://programmercarl.com/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.html
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 /* common function header file (通用头文件) */
 #include "commonTypeDef.h"

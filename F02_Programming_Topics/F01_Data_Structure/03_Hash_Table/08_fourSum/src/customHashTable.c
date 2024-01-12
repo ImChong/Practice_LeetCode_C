@@ -9,7 +9,7 @@
  * =================================================================================
  * @Description  : 特殊哈希表源文件
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function configuration file (通用函数配置文件) */

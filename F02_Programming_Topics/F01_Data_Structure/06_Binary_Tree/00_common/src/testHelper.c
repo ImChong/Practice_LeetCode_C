@@ -9,7 +9,7 @@
  * =================================================================================
  * @Description  : test helper source file (测试函数源文件)
  */
-/* standard header file (标准头文件) */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 /* common function header file (通用头文件) */
 #include "commonTypeDef.h"
