@@ -1,6 +1,6 @@
 # This file is generated and modified based on the google style.
 ---
-Language:        Cpp
+Language: Cpp
 BasedOnStyle:  Google
 AccessModifierOffset: -3    # default: -1
 AlignAfterOpenBracket: Align
