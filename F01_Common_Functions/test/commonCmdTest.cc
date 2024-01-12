@@ -1,21 +1,22 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\test\commonCmdTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonCmdTest.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-13 00:47:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-15 23:04:57
+ * @LastEditTime : 2024-01-12 23:44:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 通用命令行指令单元测试
+ * @Description  : Common Command Unit Test (通用命令单元测试)
  */
-/* gtest 头文件 */
-#include "gtest/gtest.h"
-/* 测试目标头文件 */
 extern "C" {
-    #include "commonTypeDef.h"
+    /* Target header file (目标头文件) */
     #include "commonCmd.h"
+    /* Common function header file (通用头文件) */
+    #include "commonTypeDef.h"
 }
+/* Google test header file (谷歌测试头文件) */
+#include "gtest/gtest.h"
 
 /**********************************************************************************/
 /*                                                                                */
