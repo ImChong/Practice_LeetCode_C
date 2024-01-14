@@ -1,23 +1,24 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\02_Programming_Topics\01_Data_Structure\01_Array\02_removeElement\main.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\02_removeElement\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-05 17:24:16
+ * @LastEditTime : 2024-01-15 02:03:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 27. 移除元素：https://leetcode.cn/problems/remove-element/
  *      https://programmercarl.com/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.html
  */
+/* solution header file (题解头文件) */
+#include "removeElement.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 /* Common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
 /* solution method configuration header file (解题方法配置文件) */
-/* solution header file (题解头文件) */
-#include "removeElement.h"
+// #include "methodCfg"     /* Uncomment this line if solution has multiple methods */
 
 /**********************************************************************************/
 /*                                                                                */
