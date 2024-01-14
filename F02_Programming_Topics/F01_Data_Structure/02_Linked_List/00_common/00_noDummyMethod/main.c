@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:09:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 02:35:02
+ * @LastEditTime : 2024-01-15 02:37:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -24,7 +24,7 @@
 /**********************************************************************************/
 /**
  * @description: Test 1
- * Input: head = [1, 2, 3], index = 0
+ * Input: LinkedList = [1, 2, 3], DeleteAtIndex = 0
  * Output: [2, 3]
  * =================================================================================
  * @return {void}
@@ -51,7 +51,7 @@ void Test1(void) {
 
 /**
  * @description: Test 2
- * Input: head = [1], index = 0
+ * Input: LinkedList = [1], DeleteAtIndex = 0
  * Output: []
  * =================================================================================
  * @return {void}
@@ -76,7 +76,7 @@ void Test2(void) {
 
 /**
  * @description: Test 3
- * Input: head = [1, 2, 1, 2, 1, 2], val = 2
+ * Input: LinkedList = [1, 2, 1, 2, 1, 2], DeleteValue = 2
  * Output: [1, 1, 1]
  * =================================================================================
  * @return {void}
@@ -106,7 +106,7 @@ void Test3(void) {
 
 /**
  * @description: Test 4
- * Input: head = [1, 2, 1, 2, 1, 2], GetIndexes = 2
+ * Input: LinkedList = [1, 2, 1, 2, 1, 2], GetIndexes = 2
  * Output: [1, 3, 5]
  * =================================================================================
  * @return {void}
@@ -121,7 +121,7 @@ void Test4(void) {
     actualList = LinkedList_AddAtTail(actualList, 1);
     actualList = LinkedList_AddAtTail(actualList, 2);
     int actualReturnSize = 0;
-    int *actualIndexes = LinkedList_GetIndexes(actualList, 2, &actualReturnSize);
+    int *actualIndexes = LinkedList_GetValueIndexes(actualList, 2, &actualReturnSize);
 
     /* Expect result (期望结果) */
     int expectIndexes[] = {1, 3, 5};

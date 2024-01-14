@@ -35,7 +35,7 @@ struct ListNode *LinkedList_AddAtIndex(struct ListNode *head, int index,
                                        int val); /* 在链表中第index个节点之前添加一个值为val的节点 */
 struct ListNode *LinkedList_DeleteAtIndex(struct ListNode *head, int index); /* 删除链表中第index个节点 */
 struct ListNode *LinkedList_DeleteValue(struct ListNode *head, int val); /* 从链表中删除第一个值为val的节点 */
-int *LinkedList_GetIndexes(struct ListNode *head, int val, int *returnSize); /* 获取链表中值为val的所有节点的索引 */
+int *LinkedList_GetValueIndexes(struct ListNode *head, int val, int *returnSize); /* 获取链表中值为val的所有节点的索引 */
 
 /**********************************************************************************/
 /*                                                                                */
