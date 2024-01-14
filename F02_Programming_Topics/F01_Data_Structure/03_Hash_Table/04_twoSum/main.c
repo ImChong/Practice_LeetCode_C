@@ -35,7 +35,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {2, 7, 11, 15};
     int numsSize = ARR_SIZE(nums);
     int target = 9;
@@ -61,7 +61,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {3, 2, 4};
     int numsSize = ARR_SIZE(nums);
     int target = 6;
@@ -87,7 +87,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {3, 3};
     int numsSize = ARR_SIZE(nums);
     int target = 6;
@@ -113,7 +113,7 @@ void Test3(void) {
  * @return {void}
  */
 void Test4(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {3, 3};
     int numsSize = ARR_SIZE(nums);
     int target = 7;

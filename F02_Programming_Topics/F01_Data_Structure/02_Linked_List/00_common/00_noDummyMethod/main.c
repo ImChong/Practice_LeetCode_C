@@ -27,7 +27,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     struct ListNode *actualList = NULL;
     actualList = LinkedList_AddAtTail(actualList, 1);
     actualList = LinkedList_AddAtTail(actualList, 2);
@@ -52,7 +52,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     struct ListNode *actualList = NULL;
     actualList = LinkedList_AddAtTail(actualList, 1);
     actualList = LinkedList_DeleteAtIndex(actualList, 0);
@@ -70,7 +70,7 @@ void Test2(void) {
 }
 
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     struct ListNode *actualList = NULL;
     actualList = LinkedList_AddAtTail(actualList, 1);
     actualList = LinkedList_AddAtTail(actualList, 2);
@@ -93,7 +93,7 @@ void Test3(void) {
 }
 
 void Test4(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     struct ListNode *actualList = NULL;
     actualList = LinkedList_AddAtTail(actualList, 1);
     actualList = LinkedList_AddAtTail(actualList, 2);

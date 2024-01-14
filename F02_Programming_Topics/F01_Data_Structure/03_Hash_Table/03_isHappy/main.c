@@ -41,7 +41,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 19;
     bool actual = isHappy(n);
 
@@ -60,7 +60,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 2;
     bool actual = isHappy(n);
 
@@ -79,7 +79,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 1;
     bool actual = isHappy(n);
 

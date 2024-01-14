@@ -60,7 +60,7 @@ char *pathEncryption(char *path) {
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "a.aef.qerf.bb";
     char *actual = pathEncryption(s);
 
@@ -82,7 +82,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "my.name.is.carl";
     char *actual = pathEncryption(s);
 
@@ -104,7 +104,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "c.language.hello.world";
     char *actual = pathEncryption(s);
 

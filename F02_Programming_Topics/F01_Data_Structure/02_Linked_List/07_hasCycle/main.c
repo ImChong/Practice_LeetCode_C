@@ -23,7 +23,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
 
     /* 预期结果 */
 
@@ -37,7 +37,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
 
     /* 预期结果 */
 
@@ -51,7 +51,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
 
     /* 预期结果 */
 

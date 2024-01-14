@@ -67,7 +67,7 @@ struct TestStruct {
  * @return {void}
  */
 void runTest(struct TestStruct *test) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int *nums = test->input.arr;
     int numsSize = test->input.arrSize;
     int target = test->input.target;

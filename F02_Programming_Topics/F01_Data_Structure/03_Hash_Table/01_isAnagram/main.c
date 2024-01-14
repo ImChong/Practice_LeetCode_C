@@ -32,7 +32,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "anagram";
     char t[] = "nagaram";
     int actual = isAnagram(s, t);
@@ -52,7 +52,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "rat";
     char t[] = "car";
     int actual = isAnagram(s, t);
@@ -72,7 +72,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "";
     char t[] = "";
     int actual = isAnagram(s, t);

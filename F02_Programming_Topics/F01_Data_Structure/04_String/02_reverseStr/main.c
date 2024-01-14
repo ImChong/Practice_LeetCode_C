@@ -53,7 +53,7 @@ char *reverseStr(char *s, int k){
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "abcdefg";
     int k = 2;
     char *actual = reverseStr(s, k);
@@ -73,7 +73,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "abcd";
     int k = 2;
     char *actual = reverseStr(s, k);
@@ -93,7 +93,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "abcdefg";
     int k = 4;
     char *actual = reverseStr(s, k);

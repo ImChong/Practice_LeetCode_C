@@ -72,7 +72,7 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arrA[] = {4, 1, 8, 4, 5};
     int arrASize = ARR_SIZE(arrA);
     struct ListNode *listA = LinkedList_ArrayInit(arrA, arrASize);
@@ -108,7 +108,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arrA[] = {0, 9, 1, 2, 4};
     int arrASize = ARR_SIZE(arrA);
     struct ListNode *listA = LinkedList_ArrayInit(arrA, arrASize);
@@ -142,7 +142,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arrA[] = {2, 6, 4};
     int arrASize = ARR_SIZE(arrA);
     struct ListNode *listA = LinkedList_ArrayInit(arrA, arrASize);

@@ -59,7 +59,7 @@ char *dynamicPassword(char *password, int target) {
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "s3cur1tyC0d3";
     int target = 4;
     char *actual = dynamicPassword(s, target);
@@ -82,7 +82,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "lrloseumgh";
     int target = 6;
     char *actual = dynamicPassword(s, target);
@@ -105,7 +105,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "leetcode";
     int target = 4;
     char *actual = dynamicPassword(s, target);

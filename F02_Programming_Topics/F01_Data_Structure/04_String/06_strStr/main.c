@@ -64,7 +64,7 @@ int strStr(char *haystack, char *needle){
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char *haystack = "sadbutsad";
     char *needle = "sad";
     int actual = strStr(haystack, needle);
@@ -84,7 +84,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char *haystack = "leetcode";
     char *needle = "leeto";
     int actual = strStr(haystack, needle);
@@ -104,7 +104,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char *haystack = "a";
     char *needle = "a";
     int actual = strStr(haystack, needle);
@@ -124,7 +124,7 @@ void Test3(void) {
  * @return {void}
  */
 void Test4(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char *haystack = "leetcode";
     char *needle = "code";
     int actual = strStr(haystack, needle);

@@ -39,7 +39,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int A[] = {1, 2};
     int B[] = {-2, -1};
     int C[] = {-1, 2};
@@ -71,7 +71,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int A[] = {1,1};
     int B[] = {-1,-1};
     int C[] = {1,-1};
@@ -93,7 +93,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int A[] = {0,200,-1};
     int B[] = {-200,1,0};
     int C[] = {0,0,1};
@@ -115,7 +115,7 @@ void Test3(void) {
  * @return {void}
  */
 void Test4(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int A[] = {0};
     int B[] = {0};
     int C[] = {0};

@@ -37,7 +37,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {-1, 0, 1, 2, -1, -4};
     int numsSize = ARR_SIZE(nums);
     int actualRtnRowSize = 0;
@@ -65,7 +65,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {0, 1, 1};
     int numsSize = ARR_SIZE(nums);
     int actualRtnRowSize = 0;
@@ -93,7 +93,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {0, 0, 0};
     int numsSize = ARR_SIZE(nums);
     int actualRtnRowSize = 0;

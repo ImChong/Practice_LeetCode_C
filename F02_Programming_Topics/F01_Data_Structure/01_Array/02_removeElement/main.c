@@ -33,7 +33,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int testNums[] = {3, 2, 2, 3};
     int removeVal = 3;
     int resultLen = removeElement(testNums, ARR_SIZE(testNums), removeVal);
@@ -54,7 +54,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int testNums[] = {0, 1, 2, 2, 3, 0, 4, 2};
     int removeVal = 2;
     int resultLen = removeElement(testNums, ARR_SIZE(testNums), removeVal);
@@ -75,7 +75,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int testNums[] = {1};
     int removeVal = 2;
     int resultLen = removeElement(testNums, ARR_SIZE(testNums), removeVal);
@@ -96,7 +96,7 @@ void Test3(void) {
  * @return {void}
  */
 void Test4(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int testNums[] = {1};
     int removeVal = 1;
     int resultLen = removeElement(testNums, ARR_SIZE(testNums), removeVal);

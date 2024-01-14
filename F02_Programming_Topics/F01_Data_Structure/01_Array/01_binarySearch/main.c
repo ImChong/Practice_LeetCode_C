@@ -33,7 +33,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {-1, 0, 3, 5, 9, 12}; /* Sorted array */
     int target = 9;
     int actual = binarySearch(nums, ARR_SIZE(nums), target);
@@ -53,7 +53,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {-1, 0, 3, 5, 9, 12}; /* Sorted array */
     int target = 2;
     int actual = binarySearch(nums, ARR_SIZE(nums), target);
@@ -73,7 +73,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; /* Sorted array */
     int target = 5;
     int actual = binarySearch(nums, ARR_SIZE(nums), target);

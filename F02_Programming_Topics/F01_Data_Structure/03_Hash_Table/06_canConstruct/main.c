@@ -37,7 +37,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char ransomNote[] = "a";
     char magazine[] = "b";
     bool actual = canConstruct(ransomNote, magazine);
@@ -57,7 +57,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char ransomNote[] = "aa";
     char magazine[] = "ab";
     bool actual = canConstruct(ransomNote, magazine);
@@ -77,7 +77,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char ransomNote[] = "aa";
     char magazine[] = "aab";
     bool actual = canConstruct(ransomNote, magazine);

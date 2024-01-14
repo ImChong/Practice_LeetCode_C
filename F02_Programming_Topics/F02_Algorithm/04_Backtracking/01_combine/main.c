@@ -34,7 +34,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 4;
     int k = 2;
     int actualRtnRowSize;
@@ -74,7 +74,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 1;
     int k = 1;
     int actualRtnRowSize;
@@ -109,7 +109,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 5;
     int k = 3;
     int actualRtnRowSize;

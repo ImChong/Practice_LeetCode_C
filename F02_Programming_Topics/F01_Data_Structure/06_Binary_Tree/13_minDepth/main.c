@@ -59,7 +59,7 @@ void Test1(void) {
     root->right->left = newNode(15);
     root->right->right = newNode(7);
 
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int actual = minDepth(root);
 
     /* 比较结果 */
@@ -86,7 +86,7 @@ void Test2(void) {
     struct TreeNode *root = newNode(2);
     /* TODO */
 
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int actual = minDepth(root);
 
     /* 比较结果 */

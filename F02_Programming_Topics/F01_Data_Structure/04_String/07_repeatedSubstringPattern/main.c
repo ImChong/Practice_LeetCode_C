@@ -64,7 +64,7 @@ bool repeatedSubstringPattern(char *s){
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char *s = "abab";
     bool actual = repeatedSubstringPattern(s);
 
@@ -83,7 +83,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char *s = "aba";
     bool actual = repeatedSubstringPattern(s);
 
@@ -102,7 +102,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char *s = "abcabcabcabc";
     bool actual = repeatedSubstringPattern(s);
 

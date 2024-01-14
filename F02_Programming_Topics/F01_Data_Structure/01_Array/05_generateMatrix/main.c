@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 02:20:04
+ * @LastEditTime : 2024-01-15 02:21:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -36,7 +36,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 3;
     int actualRtnRowSize = 0;
     int *actualRtnColSize = NULL;
@@ -70,7 +70,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 1;
     int actualRtnRowSize = 0;
     int *actualRtnColSize = NULL;
@@ -102,7 +102,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 4;
     int actualRtnRowSize = 0;
     int *actualRtnColSize = NULL;

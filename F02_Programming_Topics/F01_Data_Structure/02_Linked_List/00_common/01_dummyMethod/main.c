@@ -29,7 +29,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     DummyLinkedList *actualDummy = DLinkedList_Init();
     DLinkedList_AddAtHead(actualDummy, 1);
     DLinkedList_AddAtTail(actualDummy, 3);
@@ -54,7 +54,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     DummyLinkedList *actualDummy = DLinkedList_Init();
     DLinkedList_AddAtHead(actualDummy, 1);
     DLinkedList_DeleteAtIndex(actualDummy, 0);
@@ -75,7 +75,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     DummyLinkedList *actualDummy = DLinkedList_Init();
     DLinkedList_AddAtTail(actualDummy, 1);
     DLinkedList_AddAtTail(actualDummy, 2);
@@ -98,7 +98,7 @@ void Test3(void) {
 }
 
 void Test4(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     DummyLinkedList *actualDummy = DLinkedList_Init();
     DLinkedList_AddAtTail(actualDummy, 1);
     DLinkedList_AddAtTail(actualDummy, 2);

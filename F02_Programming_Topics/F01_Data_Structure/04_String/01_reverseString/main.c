@@ -55,7 +55,7 @@ void reverseString(char *s, int sSize) {
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     // char *s = "hello";                                  /* strlen: 5, ARR_SIZE: 8, 字符串不可修改 */
     char s[] = "hello";                                 /* strlen: 5, ARR_SIZE: 6, 字符串可修改 */
     // char s[6] = {'h', 'e', 'l', 'l', 'o', '\0'};        /* strlen: 5, ARR_SIZE: 6, 字符串可修改 */
@@ -78,7 +78,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "Hannah";
     int sSize = strlen(s);
     reverseString(s, sSize);
@@ -98,7 +98,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "1";
     int sSize = strlen(s);
     reverseString(s, sSize);

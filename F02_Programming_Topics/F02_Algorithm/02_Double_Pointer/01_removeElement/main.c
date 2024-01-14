@@ -49,7 +49,7 @@ int removeElement(int *nums, int numsSize, int val){
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {3, 2, 2, 3};
     int numsSize = ARR_SIZE(nums);
     int val = 3;
@@ -71,7 +71,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {0, 1, 2, 2, 3, 0, 4, 2};
     int numsSize = ARR_SIZE(nums);
     int val = 2;
@@ -93,7 +93,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {3, 3};
     int numsSize = ARR_SIZE(nums);
     int val = 3;

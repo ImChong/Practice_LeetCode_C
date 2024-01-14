@@ -82,7 +82,7 @@ char *reverseWords(char *s) {
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "the sky is blue";
     char *actual = reverseWords(s);
 
@@ -101,7 +101,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "  hello world  ";
     char *actual = reverseWords(s);
 
@@ -120,7 +120,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "a good   example";
     char *actual = reverseWords(s);
 

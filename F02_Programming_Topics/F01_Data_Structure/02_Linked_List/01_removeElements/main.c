@@ -60,7 +60,7 @@ struct ListNode *removeElements(struct ListNode *head, int val) {
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {1, 2, 6, 3, 4, 5, 6};
     int numsSize = ARR_SIZE(nums);
     struct ListNode *head = LinkedList_ArrayInit(nums, numsSize);
@@ -86,7 +86,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {1, 1, 1, 1, 1};
     int numsSize = ARR_SIZE(nums);
     struct ListNode *head = LinkedList_ArrayInit(nums, numsSize);
@@ -112,7 +112,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {1, 2, 3, 4, 5};
     int numsSize = ARR_SIZE(nums);
     struct ListNode *head = LinkedList_ArrayInit(nums, numsSize);

@@ -31,7 +31,7 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
 
     /* 预期结果 */
 

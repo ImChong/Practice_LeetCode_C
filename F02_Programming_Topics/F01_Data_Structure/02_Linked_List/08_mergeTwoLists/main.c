@@ -75,7 +75,7 @@ struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     printf("input: \n");
     struct ListNode *l1 = NULL;
     printf("\t"); LinkedList_Print(l1);
@@ -101,7 +101,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     printf("input: \n");
     int array1[] = {1, 2, 4};
     struct ListNode *l1 = LinkedList_ArrayInit(array1, ARR_SIZE(array1));
@@ -130,7 +130,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     printf("input: \n");
     int array1[] = {};
     struct ListNode *l1 = LinkedList_ArrayInit(array1, ARR_SIZE(array1));

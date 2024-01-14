@@ -39,7 +39,7 @@
  * @return {void}
  */
 void test_preOrderTraversal(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
     struct TreeNode *root = BTree_Init(arr, arrSize);
@@ -78,7 +78,7 @@ void test_preOrderTraversal(void) {
  * @return {void}
  */
 void test_inOrderTraversal(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
     struct TreeNode *root = BTree_Init(arr, arrSize);
@@ -117,7 +117,7 @@ void test_inOrderTraversal(void) {
  * @return {void}
  */
 void test_postOrderTraversal(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
     struct TreeNode *root = BTree_Init(arr, arrSize);

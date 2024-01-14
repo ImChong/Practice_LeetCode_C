@@ -65,7 +65,7 @@ struct ListNode *swapPairs(struct ListNode* head){
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4};
     int arrSize = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
@@ -90,7 +90,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5};
     int arrSize = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
@@ -115,7 +115,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1};
     int arrSize = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
