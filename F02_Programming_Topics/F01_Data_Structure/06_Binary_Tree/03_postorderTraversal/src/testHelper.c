@@ -48,7 +48,7 @@ void test_postOrderTraversal(void) {
     int actualSize_iteration = 0;
     int *actual_iteration = BTree_PostOrderTraversal_Iteration(root, &actualSize_iteration);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expected[] = {4, 5, 2, 6, 7, 3, 1};
     int expectedSize = ARR_SIZE(expected);
 

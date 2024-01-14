@@ -151,7 +151,7 @@ int maxDepth(struct TreeNode* root) {
  * @return {void}
  */
 void Test1(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 3;
 
     /* 构建二叉树 */
@@ -181,7 +181,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 2;
 
     /* 构建二叉树 */

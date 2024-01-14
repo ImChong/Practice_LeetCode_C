@@ -38,7 +38,7 @@ void Test1(void) {
     int removeVal = 3;
     int resultLen = removeElement(testNums, ARR_SIZE(testNums), removeVal);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectNums[] = {2, 2};
     int expectLen = ARR_SIZE(expectNums);
 
@@ -59,7 +59,7 @@ void Test2(void) {
     int removeVal = 2;
     int resultLen = removeElement(testNums, ARR_SIZE(testNums), removeVal);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectNums[] = {0, 1, 3, 0, 4};
     int expectLen = ARR_SIZE(expectNums);
 
@@ -80,7 +80,7 @@ void Test3(void) {
     int removeVal = 2;
     int resultLen = removeElement(testNums, ARR_SIZE(testNums), removeVal);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectNums[] = {1};
     int expectLen = ARR_SIZE(expectNums);
 
@@ -101,7 +101,7 @@ void Test4(void) {
     int removeVal = 1;
     int resultLen = removeElement(testNums, ARR_SIZE(testNums), removeVal);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectNums[] = {};
     int expectLen = ARR_SIZE(expectNums);
 

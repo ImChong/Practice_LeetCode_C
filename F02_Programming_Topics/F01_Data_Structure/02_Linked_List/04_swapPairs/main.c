@@ -71,7 +71,7 @@ void Test1(void) {
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
     struct ListNode *ansList = swapPairs(arrList);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectArr[] = {2, 1, 4, 3};
     int expectSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectSize);
@@ -96,7 +96,7 @@ void Test2(void) {
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
     struct ListNode *ansList = swapPairs(arrList);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectArr[] = {2, 1, 4, 3, 5};
     int expectSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectSize);
@@ -121,7 +121,7 @@ void Test3(void) {
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
     struct ListNode *ansList = swapPairs(arrList);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectArr[] = {1};
     int expectSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectSize);

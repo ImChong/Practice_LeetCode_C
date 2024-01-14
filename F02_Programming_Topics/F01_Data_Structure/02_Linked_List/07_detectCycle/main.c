@@ -69,7 +69,7 @@ void Test1(void) {
     arrList->next->next->next->next = arrList->next;   /* 将尾节点指向指定节点 */
     int actual = detectCycle(arrList)->val;
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 2;
 
     /* 比较结果 */
@@ -92,7 +92,7 @@ void Test2(void) {
     arrList->next->next = arrList;   /* 将尾节点指向指定节点 */
     int actual = detectCycle(arrList)->val;
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 1;
 
     /* 比较结果 */
@@ -114,7 +114,7 @@ void Test3(void) {
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
     struct ListNode *actual = detectCycle(arrList);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     struct ListNode *expect = NULL;
 
     /* 比较结果 */

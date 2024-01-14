@@ -187,7 +187,7 @@ void BTree_Free(struct Node *root) {
  * @return {void}
  */
 void Test1(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int **expected = NULL;
 
     /* 构建 N 叉树 */
@@ -219,7 +219,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* int expected[3][3] = {{1}, {3, 2, 4}, {5, 6}}; */
     int **expected = (int **)malloc(sizeof(int *) * TEST_ARR_SIZE);
     expected[0] = (int *)malloc(sizeof(int) * TEST_ARR_SIZE);
@@ -274,7 +274,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* int expected[5][5] = {{1}, {2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13}, {14}}; */
     int **expected = (int **)malloc(sizeof(int *) * TEST_ARR_SIZE);
     expected[0] = (int *)malloc(sizeof(int) * TEST_ARR_SIZE);

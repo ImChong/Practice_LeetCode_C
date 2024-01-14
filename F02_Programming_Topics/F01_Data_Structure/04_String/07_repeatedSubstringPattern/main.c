@@ -68,7 +68,7 @@ void Test1(void) {
     char *s = "abab";
     bool actual = repeatedSubstringPattern(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     bool expect = true;
 
     /* 比较结果 */
@@ -87,7 +87,7 @@ void Test2(void) {
     char *s = "aba";
     bool actual = repeatedSubstringPattern(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     bool expect = false;
 
     /* 比较结果 */
@@ -106,7 +106,7 @@ void Test3(void) {
     char *s = "abcabcabcabc";
     bool actual = repeatedSubstringPattern(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     bool expect = true;
 
     /* 比较结果 */

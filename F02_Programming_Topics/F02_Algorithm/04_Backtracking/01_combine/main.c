@@ -41,7 +41,7 @@ void Test1(void) {
     int *actualRtnColSize;
     int **actual2DArr = combine(n, k, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 6;
     int expectRtnColSize[] = {2, 2, 2, 2, 2, 2};
     int *expect2DArr[] = {
@@ -81,7 +81,7 @@ void Test2(void) {
     int *actualRtnColSize;
     int **actual2DArr = combine(n, k, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 1;
     int expectRtnColSize[] = {1};
     int *expect2DArr[] = {
@@ -116,7 +116,7 @@ void Test3(void) {
     int *actualRtnColSize;
     int **actual2DArr = combine(n, k, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 10;
     int expectRtnColSize[] = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
     int *expect2DArr[] = {

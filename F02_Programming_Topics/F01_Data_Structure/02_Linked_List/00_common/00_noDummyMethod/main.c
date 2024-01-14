@@ -34,7 +34,7 @@ void Test1(void) {
     actualList = LinkedList_AddAtTail(actualList, 3);
     actualList = LinkedList_DeleteAtIndex(actualList, 0);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int nums[] = {2, 3};
     struct ListNode *expectList = LinkedList_ArrayInit(nums, ARR_SIZE(nums));
 
@@ -57,7 +57,7 @@ void Test2(void) {
     actualList = LinkedList_AddAtTail(actualList, 1);
     actualList = LinkedList_DeleteAtIndex(actualList, 0);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int nums[] = {};
     struct ListNode *expectList = LinkedList_ArrayInit(nums, ARR_SIZE(nums));
 
@@ -80,7 +80,7 @@ void Test3(void) {
     actualList = LinkedList_AddAtTail(actualList, 2);
     actualList = LinkedList_DeleteValue(actualList, 2);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int nums[] = {1, 1, 1};
     struct ListNode *expectList = LinkedList_ArrayInit(nums, ARR_SIZE(nums));
 
@@ -104,7 +104,7 @@ void Test4(void) {
     int actualReturnSize = 0;
     int *actualIndexes = LinkedList_GetIndexes(actualList, 2, &actualReturnSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectIndexes[] = {1, 3, 5};
 
     /* 比较结果 */

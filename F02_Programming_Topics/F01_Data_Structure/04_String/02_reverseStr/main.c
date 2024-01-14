@@ -58,7 +58,7 @@ void Test1(void) {
     int k = 2;
     char *actual = reverseStr(s, k);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "bacdfeg";
 
     /* 比较结果 */
@@ -78,7 +78,7 @@ void Test2(void) {
     int k = 2;
     char *actual = reverseStr(s, k);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "bacd";
 
     /* 比较结果 */
@@ -98,7 +98,7 @@ void Test3(void) {
     int k = 4;
     char *actual = reverseStr(s, k);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "dcbaefg";
 
     /* 比较结果 */

@@ -83,7 +83,7 @@ void Test1(void) {
     printf("\t"); LinkedList_Print(l2);
     struct ListNode *actual = mergeTwoLists(l1, l2);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     struct ListNode *expect = NULL;
 
     /* 比较结果 */
@@ -111,7 +111,7 @@ void Test2(void) {
     printf("\t"); LinkedList_Print(l2);
     struct ListNode *actual = mergeTwoLists(l1, l2);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int array3[] = {1, 1, 2, 3, 4, 4};
     struct ListNode *expect = LinkedList_ArrayInit(array3, ARR_SIZE(array3));
 
@@ -140,7 +140,7 @@ void Test3(void) {
     printf("\t"); LinkedList_Print(l2);
     struct ListNode *actual = mergeTwoLists(l1, l2);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int array3[] = {0};
     struct ListNode *expect = LinkedList_ArrayInit(array3, ARR_SIZE(array3));
 

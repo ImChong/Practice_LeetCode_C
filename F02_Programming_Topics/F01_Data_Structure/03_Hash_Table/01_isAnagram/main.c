@@ -37,7 +37,7 @@ void Test1(void) {
     char t[] = "nagaram";
     int actual = isAnagram(s, t);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = COMMON_TRUE;
 
     /* 比较结果 */
@@ -57,7 +57,7 @@ void Test2(void) {
     char t[] = "car";
     int actual = isAnagram(s, t);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = COMMON_FALSE;
 
     /* 比较结果 */
@@ -77,7 +77,7 @@ void Test3(void) {
     char t[] = "";
     int actual = isAnagram(s, t);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = COMMON_TRUE;
 
     /* 比较结果 */

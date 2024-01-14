@@ -64,7 +64,7 @@ void Test1(void) {
     int target = 4;
     char *actual = dynamicPassword(s, target);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "r1tyC0d3s3cu";
 
     /* 比较结果 */
@@ -87,7 +87,7 @@ void Test2(void) {
     int target = 6;
     char *actual = dynamicPassword(s, target);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "umghlrlose";
 
     /* 比较结果 */
@@ -110,7 +110,7 @@ void Test3(void) {
     int target = 4;
     char *actual = dynamicPassword(s, target);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "codeleet";
 
     /* 比较结果 */

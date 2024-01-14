@@ -38,7 +38,7 @@ void Test1(void) {
     int target = 9;
     int actual = binarySearch(nums, ARR_SIZE(nums), target);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 4;
 
     /* 比较结果 */
@@ -58,7 +58,7 @@ void Test2(void) {
     int target = 2;
     int actual = binarySearch(nums, ARR_SIZE(nums), target);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = -1;
 
     /* 比较结果 */
@@ -78,7 +78,7 @@ void Test3(void) {
     int target = 5;
     int actual = binarySearch(nums, ARR_SIZE(nums), target);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 4;
 
     /* 比较结果 */

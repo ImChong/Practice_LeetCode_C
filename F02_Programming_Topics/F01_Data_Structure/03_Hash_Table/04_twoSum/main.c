@@ -42,7 +42,7 @@ void Test1(void) {
     int actualSize = 0;
     int *actual = twoSum(nums, numsSize, target, &actualSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {0, 1};
     int expectSize = ARR_SIZE(expect);
 
@@ -68,7 +68,7 @@ void Test2(void) {
     int actualSize = 0;
     int *actual = twoSum(nums, numsSize, target, &actualSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {1, 2};
     int expectSize = ARR_SIZE(expect);
 
@@ -94,7 +94,7 @@ void Test3(void) {
     int actualSize = 0;
     int *actual = twoSum(nums, numsSize, target, &actualSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {0, 1};
     int expectSize = ARR_SIZE(expect);
 
@@ -120,7 +120,7 @@ void Test4(void) {
     int actualSize = 0;
     int *actual = twoSum(nums, numsSize, target, &actualSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int *expect = NULL;
     int expectSize = 0;
 

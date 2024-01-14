@@ -86,7 +86,7 @@ void Test1(void) {
     char s[] = "the sky is blue";
     char *actual = reverseWords(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "blue is sky the";
 
     /* 比较结果 */
@@ -105,7 +105,7 @@ void Test2(void) {
     char s[] = "  hello world  ";
     char *actual = reverseWords(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "world hello";
 
     /* 比较结果 */
@@ -124,7 +124,7 @@ void Test3(void) {
     char s[] = "a good   example";
     char *actual = reverseWords(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "example good a";
 
     /* 比较结果 */

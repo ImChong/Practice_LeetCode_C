@@ -39,7 +39,7 @@ void Test1(void) {
     int actualSize = 0;
     int *actualNums = sortedSquares(nums, numsSize, &actualSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectNums[] = {0, 1, 9, 16, 100};
     int expectSize = ARR_SIZE(expectNums);
 
@@ -64,7 +64,7 @@ void Test2(void) {
     int actualSize;
     int *actualNums = sortedSquares(nums, numsSize, &actualSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectNums[] = {4, 9, 9, 49, 121};
     int expectSize = ARR_SIZE(expectNums);
 
@@ -88,7 +88,7 @@ void Test3(void) {
     int actualSize;
     int *actualNums = sortedSquares(nums, numsSize, &actualSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectNums[] = {1};
     int expectSize = ARR_SIZE(expectNums);
 

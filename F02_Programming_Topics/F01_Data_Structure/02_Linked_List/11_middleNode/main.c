@@ -36,7 +36,7 @@ struct ListNode *middleNode(struct ListNode *head) {
 void Test1(void) {
     /* Function call (函数调用) */
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
 
     /* 比较结果 */
 
@@ -50,7 +50,7 @@ void Test1(void) {
 void Test2(void) {
     /* Function call (函数调用) */
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
 
     /* 比较结果 */
 
@@ -64,7 +64,7 @@ void Test2(void) {
 void Test3(void) {
     /* Function call (函数调用) */
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
 
     /* 比较结果 */
 

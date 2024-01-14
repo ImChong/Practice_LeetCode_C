@@ -70,7 +70,7 @@ void test_levelOrderTraversal(void) {
     int *actualReturnColumnSizes = NULL;
     int **actualArray = levelOrder(root, &actualReturnSize, &actualReturnColumnSizes);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectedReturnSize = 3;
     int expectedReturnColumnSizes[] = {1, 2, 4};
     int *expectedArray[4] = {

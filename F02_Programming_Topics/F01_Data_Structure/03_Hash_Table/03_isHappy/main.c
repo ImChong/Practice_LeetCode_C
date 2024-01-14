@@ -45,7 +45,7 @@ void Test1(void) {
     int n = 19;
     bool actual = isHappy(n);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     bool expect = true;
 
     /* 比较结果 */
@@ -64,7 +64,7 @@ void Test2(void) {
     int n = 2;
     bool actual = isHappy(n);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     bool expect = false;
 
     /* 比较结果 */
@@ -83,7 +83,7 @@ void Test3(void) {
     int n = 1;
     bool actual = isHappy(n);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     bool expect = true;
 
     /* 比较结果 */

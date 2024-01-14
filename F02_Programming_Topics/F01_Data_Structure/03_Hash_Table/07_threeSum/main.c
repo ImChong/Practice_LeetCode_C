@@ -44,7 +44,7 @@ void Test1(void) {
     int *actualRtnColSize;
     int **actual2DArr = threeSum(nums, numsSize, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 2;
     int expectRtnColSize[] = {3, 3};
     int *expect2DArr[] = {(int[]){-1, -1, 2}, (int[]){-1, 0, 1, 2}};    /* *expect2DArr[] 内数组可以不同长度 */
@@ -72,7 +72,7 @@ void Test2(void) {
     int *actualRtnColSize;
     int **actual2DArr = threeSum(nums, numsSize, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 0;
     int expectRtnColSize[] = {};
     int *expect2DArr[] = {};
@@ -100,7 +100,7 @@ void Test3(void) {
     int *actualRtnColSize;
     int **actual2DArr = threeSum(nums, numsSize, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 1;
     int expectRtnColSize[] = {3};
     int *expect2DArr[] = {(int[]){0, 0, 0}};

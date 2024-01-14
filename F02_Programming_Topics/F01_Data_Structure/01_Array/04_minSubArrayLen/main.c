@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 02:18:08
+ * @LastEditTime : 2024-01-15 02:23:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,7 +38,7 @@ void Test1(void) {
     int target = 7;
     int actualLen = minSubArrayLen(target, nums, numsSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectLen = 2;
 
     /* 比较结果 */
@@ -59,7 +59,7 @@ void Test2(void) {
     int target = 11;
     int actualLen = minSubArrayLen(target, nums, numsSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectLen = 0;
 
     /* 比较结果 */
@@ -80,7 +80,7 @@ void Test3(void) {
     int target = 11;
     int actualLen = minSubArrayLen(target, nums, numsSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectLen = 3;
 
     /* 比较结果 */

@@ -75,7 +75,7 @@ void runTest(struct TestStruct *test) {
     int *actualRtnColSize = NULL;
     int **actual2DArr = fourSum(nums, numsSize, target, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = test->output.rtnSize;
     int *expectRtnColSize = test->output.rtnColSize;
     int **expect2DArr = test->output.arr;

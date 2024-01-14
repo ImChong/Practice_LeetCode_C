@@ -35,7 +35,7 @@ void Test1(void) {
     DLinkedList_AddAtIndex(actualDummy, 1, 2);
     DLinkedList_DeleteAtIndex(actualDummy, 0);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {2, 3};
     DLinkedList_ArrayInit(expectDummy, nums, ARR_SIZE(nums));
@@ -69,7 +69,7 @@ void Test2(void) {
     DLinkedList_DeleteAtIndex(actualDummy, 6);             /* deleteAtIndex    [6] */
     DLinkedList_DeleteAtIndex(actualDummy, 4);             /* deleteAtIndex    [4] */
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {5, 2, 3, 7, 2};
     DLinkedList_ArrayInit(expectDummy, nums, ARR_SIZE(nums));
@@ -100,7 +100,7 @@ void Test3(void) {
     DLinkedList_AddAtHead(actualDummy, 1);             /* addAtHead        [1] */
     DLinkedList_DeleteAtIndex(actualDummy, 4);         /* deleteAtIndex    [4] */
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     DummyLinkedList *expectDummy = myLinkedListCreate();
     int nums[] = {1, 7, 2, 1};
     DLinkedList_ArrayInit(expectDummy, nums, ARR_SIZE(nums));

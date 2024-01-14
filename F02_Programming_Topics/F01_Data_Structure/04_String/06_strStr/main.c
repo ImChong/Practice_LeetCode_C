@@ -69,7 +69,7 @@ void Test1(void) {
     char *needle = "sad";
     int actual = strStr(haystack, needle);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 0;
 
     /* 比较结果 */
@@ -89,7 +89,7 @@ void Test2(void) {
     char *needle = "leeto";
     int actual = strStr(haystack, needle);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = -1;
 
     /* 比较结果 */
@@ -109,7 +109,7 @@ void Test3(void) {
     char *needle = "a";
     int actual = strStr(haystack, needle);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 0;
 
     /* 比较结果 */
@@ -129,7 +129,7 @@ void Test4(void) {
     char *needle = "code";
     int actual = strStr(haystack, needle);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 4;
 
     /* 比较结果 */

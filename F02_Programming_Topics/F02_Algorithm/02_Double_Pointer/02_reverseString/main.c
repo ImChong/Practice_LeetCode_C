@@ -63,7 +63,7 @@ void Test1(void) {
     // printf("strlen: %d, ARR_SIZE: %d\n", strlen(s), ARR_SIZE(s));
     reverseString(s, sSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "olleh";
 
     /* 比较结果 */
@@ -83,7 +83,7 @@ void Test2(void) {
     int sSize = strlen(s);
     reverseString(s, sSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "hannaH";
 
     /* 比较结果 */
@@ -103,7 +103,7 @@ void Test3(void) {
     int sSize = strlen(s);
     reverseString(s, sSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "1";
 
     /* 比较结果 */

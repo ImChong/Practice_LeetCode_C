@@ -42,7 +42,7 @@ void Test1(void) {
     char magazine[] = "b";
     bool actual = canConstruct(ransomNote, magazine);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     bool expect = false;
 
     /* 比较结果 */
@@ -62,7 +62,7 @@ void Test2(void) {
     char magazine[] = "ab";
     bool actual = canConstruct(ransomNote, magazine);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     bool expect = false;
 
     /* 比较结果 */
@@ -82,7 +82,7 @@ void Test3(void) {
     char magazine[] = "aab";
     bool actual = canConstruct(ransomNote, magazine);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     bool expect = true;
 
     /* 比较结果 */

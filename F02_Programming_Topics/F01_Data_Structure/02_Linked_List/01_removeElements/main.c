@@ -67,7 +67,7 @@ void Test1(void) {
     int removeVal = 6;
     struct ListNode *ansList = removeElements(head, removeVal);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectNums[] = {1, 2, 3, 4, 5};
     int expectLen = ARR_SIZE(expectNums);
     struct ListNode *expectList = LinkedList_ArrayInit(expectNums, expectLen);
@@ -93,7 +93,7 @@ void Test2(void) {
     int removeVal = 1;
     struct ListNode *ansList = removeElements(head, removeVal);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectNums[] = {};
     int expectLen = ARR_SIZE(expectNums);
     struct ListNode *expectList = LinkedList_ArrayInit(expectNums, expectLen);
@@ -119,7 +119,7 @@ void Test3(void) {
     int removeVal = 6;
     struct ListNode *ansList = removeElements(head, removeVal);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectNums[] = {1, 2, 3, 4, 5};
     int expectLen = ARR_SIZE(expectNums);
     struct ListNode *expectList = LinkedList_ArrayInit(expectNums, expectLen);

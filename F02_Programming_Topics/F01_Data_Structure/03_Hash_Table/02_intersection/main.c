@@ -42,7 +42,7 @@ void Test1(void) {
     int returnSize = 0;
     int *ans = intersection(nums1, nums1Size, nums2, nums2Size, &returnSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {2};
     int expectSize = ARR_SIZE(expect);
 
@@ -69,7 +69,7 @@ void Test2(void) {
     int returnSize = 0;
     int *ans = intersection(nums1, nums1Size, nums2, nums2Size, &returnSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {4, 9};
     int expectSize = ARR_SIZE(expect);
 
@@ -96,7 +96,7 @@ void Test3(void) {
     int returnSize = 0;
     int *ans = intersection(nums1, nums1Size, nums2, nums2Size, &returnSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {};
     int expectSize = ARR_SIZE(expect);
 

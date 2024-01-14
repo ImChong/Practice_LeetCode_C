@@ -46,7 +46,7 @@ void Test1(void) {
     int D[] = {0, 2};
     int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 2;
 
     /* 比较结果 */
@@ -78,7 +78,7 @@ void Test2(void) {
     int D[] = {1,-1};
     int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 8;
 
     /* 比较结果 */
@@ -100,7 +100,7 @@ void Test3(void) {
     int D[] = {-1,1,1};
     int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 9;
 
     /* 比较结果 */
@@ -122,7 +122,7 @@ void Test4(void) {
     int D[] = {0};
     int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 1;
 
     /* 比较结果 */

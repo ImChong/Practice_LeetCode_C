@@ -55,7 +55,7 @@ void Test1(void) {
     int val = 3;
     int actualSize = removeElement(nums, numsSize, val);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectSize = 2;
     int expectNums[] = {2, 2};
 
@@ -77,7 +77,7 @@ void Test2(void) {
     int val = 2;
     int actualSize = removeElement(nums, numsSize, val);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectSize = 5;
     int expectNums[] = {0, 1, 4, 0, 3};
 
@@ -99,7 +99,7 @@ void Test3(void) {
     int val = 3;
     int actualSize = removeElement(nums, numsSize, val);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectSize = 0;
     int expectNums[] = {};
 

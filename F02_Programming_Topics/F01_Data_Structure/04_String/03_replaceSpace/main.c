@@ -64,7 +64,7 @@ void Test1(void) {
     char s[] = "a.aef.qerf.bb";
     char *actual = pathEncryption(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "a aef qerf bb";
 
     /* 比较结果 */
@@ -86,7 +86,7 @@ void Test2(void) {
     char s[] = "my.name.is.carl";
     char *actual = pathEncryption(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "my name is carl";
 
     /* 比较结果 */
@@ -108,7 +108,7 @@ void Test3(void) {
     char s[] = "c.language.hello.world";
     char *actual = pathEncryption(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "c language hello world";
 
     /* 比较结果 */

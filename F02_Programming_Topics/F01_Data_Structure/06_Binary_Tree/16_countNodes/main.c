@@ -45,7 +45,7 @@ int countNodes(struct TreeNode* root){
 void Test1(void) {
     /* Function call (函数调用) */
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
 
     /* 比较结果 */
 

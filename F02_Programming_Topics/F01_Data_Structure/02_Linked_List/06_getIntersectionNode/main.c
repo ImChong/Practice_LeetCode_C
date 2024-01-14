@@ -88,7 +88,7 @@ void Test1(void) {
 
     struct ListNode *intersectNode = getIntersectionNode(listA, listB);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 8;
 
     /* 比较结果 */
@@ -124,7 +124,7 @@ void Test2(void) {
 
     struct ListNode *intersectNode = getIntersectionNode(listA, listB);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 2;
 
     /* 比较结果 */
@@ -152,7 +152,7 @@ void Test3(void) {
 
     struct ListNode *intersectNode = getIntersectionNode(listA, listB);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     struct ListNode *expect = NULL;
 
     /* 比较结果 */

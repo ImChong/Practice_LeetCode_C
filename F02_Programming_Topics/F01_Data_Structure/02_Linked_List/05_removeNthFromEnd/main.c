@@ -85,7 +85,7 @@ void Test1(void) {
     int n = 2;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* {1, 2, 3, 5} */
     int expectArr[] = {1, 2, 3, 5};
     int expectArrSize = ARR_SIZE(expectArr);
@@ -114,7 +114,7 @@ void Test2(void) {
     int n = 7;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* {1, 2, 3, 4, 5} */
     int expectArr[] = {1, 2, 3, 4, 5};
     int expectArrSize = ARR_SIZE(expectArr);
@@ -143,7 +143,7 @@ void Test3(void) {
     int n = 1;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* {} */
     int expectArr[] = {};
     int expectArrSize = ARR_SIZE(expectArr);
@@ -171,7 +171,7 @@ void Test4(void) {
     int n = 5;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* {2, 3, 4, 5} */
     int expectArr[] = {2, 3, 4, 5};
     int expectArrSize = ARR_SIZE(expectArr);
