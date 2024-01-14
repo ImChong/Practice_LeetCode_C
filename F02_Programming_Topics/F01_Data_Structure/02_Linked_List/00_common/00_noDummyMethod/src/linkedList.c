@@ -7,5 +7,5 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : This file is a place holder for the linked list implementation.
  */

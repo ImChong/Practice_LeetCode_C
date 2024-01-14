@@ -1,20 +1,21 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\00_common\00_noDummyMethod\main.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\00_common\00_noDummyMethod\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:09:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 14:31:28
+ * @LastEditTime : 2024-01-15 02:35:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 运行链表公共函数 - 未使用虚拟头节点
  */
+/* solution header file (题解头文件) */
+#include "commonLinkedList.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 /* Common function header file (通用头文件) */
 #include "commonTypeDef.h"
 #include "commonArray.h"
-#include "commonLinkedList.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -22,7 +23,9 @@
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
+ * Input: head = [1, 2, 3], index = 0
+ * Output: [2, 3]
  * =================================================================================
  * @return {void}
  */
@@ -47,7 +50,9 @@ void Test1(void) {
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
+ * Input: head = [1], index = 0
+ * Output: []
  * =================================================================================
  * @return {void}
  */
@@ -69,6 +74,13 @@ void Test2(void) {
     LinkedList_Free(expectList);
 }
 
+/**
+ * @description: Test 3
+ * Input: head = [1, 2, 1, 2, 1, 2], val = 2
+ * Output: [1, 1, 1]
+ * =================================================================================
+ * @return {void}
+ */
 void Test3(void) {
     /* Function call (函数调用) */
     struct ListNode *actualList = NULL;
@@ -92,6 +104,13 @@ void Test3(void) {
     LinkedList_Free(expectList);
 }
 
+/**
+ * @description: Test 4
+ * Input: head = [1, 2, 1, 2, 1, 2], GetIndexes = 2
+ * Output: [1, 3, 5]
+ * =================================================================================
+ * @return {void}
+ */
 void Test4(void) {
     /* Function call (函数调用) */
     struct ListNode *actualList = NULL;
