@@ -60,7 +60,7 @@ void Test1(void) {
                     SORT_FALSE
     );
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     for (int i = 0; i < actualRtnRowSize; ++i) {
         free(actual2DArr[i]);
     }
@@ -95,7 +95,7 @@ void Test2(void) {
                     SORT_FALSE
     );
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     for (int i = 0; i < actualRtnRowSize; ++i) {
         free(actual2DArr[i]);
     }
@@ -139,7 +139,7 @@ void Test3(void) {
                     SORT_FALSE
     );
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     for (int i = 0; i < actualRtnRowSize; ++i) {
         free(actual2DArr[i]);
     }

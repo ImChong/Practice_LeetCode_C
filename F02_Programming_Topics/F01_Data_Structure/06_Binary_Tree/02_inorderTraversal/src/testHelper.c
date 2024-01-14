@@ -58,6 +58,6 @@ void test_inOrderTraversal(void) {
     printf("InorderTraversal Iteration Method.\n");
     Validate_Array('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     BTree_Free(root);
 }

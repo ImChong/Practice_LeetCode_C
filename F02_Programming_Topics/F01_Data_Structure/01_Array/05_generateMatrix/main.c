@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 02:25:28
+ * @LastEditTime : 2024-01-15 02:26:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -57,7 +57,7 @@ void Test1(void) {
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     Array_Free2D(&actual2DArr, actualRtnRowSize);
     free(actualRtnColSize);
 }
@@ -89,7 +89,7 @@ void Test2(void) {
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     Array_Free2D(&actual2DArr, actualRtnRowSize);
     free(actualRtnColSize);
 }
@@ -124,7 +124,7 @@ void Test3(void) {
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     Array_Free2D(&actual2DArr, actualRtnRowSize);
     free(actualRtnColSize);
 }

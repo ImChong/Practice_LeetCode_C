@@ -158,7 +158,7 @@ void Test3(void) {
     /* Validate result (验证函数调用结果) */
     Validate_LinkedList('3', expect, intersectNode);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(listA);
     LinkedList_Free(listB);
 }

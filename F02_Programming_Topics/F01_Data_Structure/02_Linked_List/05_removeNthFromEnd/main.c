@@ -94,7 +94,7 @@ void Test1(void) {
     /* Validate result (验证函数调用结果) */
     Validate_LinkedList('1', expectList, ansList);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(newList);
     LinkedList_Free(expectList);
 }
@@ -123,7 +123,7 @@ void Test2(void) {
     /* Validate result (验证函数调用结果) */
     Validate_LinkedList('2', expectList, ansList);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(newList);
     LinkedList_Free(expectList);
 }
@@ -152,7 +152,7 @@ void Test3(void) {
     /* Validate result (验证函数调用结果) */
     Validate_LinkedList('3', expectList, ansList);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     /* 内存已清除，无需再释放内存 */
 }
 
@@ -180,7 +180,7 @@ void Test4(void) {
     /* Validate result (验证函数调用结果) */
     Validate_LinkedList('4', expectList, ansList);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(ansList);        /* newList 的链表头已被释放内存 */
     LinkedList_Free(expectList);
 }

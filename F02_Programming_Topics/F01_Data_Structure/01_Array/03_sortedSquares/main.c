@@ -46,7 +46,7 @@ void Test1(void) {
     /* Validate result (验证函数调用结果) */
     Validate_Array('1', expectNums, expectSize, actualNums, actualSize, COMMON_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actualNums);
 }
 
@@ -71,7 +71,7 @@ void Test2(void) {
     /* Validate result (验证函数调用结果) */
     Validate_Array('2', expectNums, expectSize, actualNums, actualSize, COMMON_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actualNums);
 }
 
@@ -95,7 +95,7 @@ void Test3(void) {
     /* Validate result (验证函数调用结果) */
     Validate_Array('3', expectNums, expectSize, actualNums, actualSize, COMMON_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actualNums);
 }
 

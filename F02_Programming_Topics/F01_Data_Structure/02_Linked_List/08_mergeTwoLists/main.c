@@ -89,7 +89,7 @@ void Test1(void) {
     /* Validate result (验证函数调用结果) */
     Validate_LinkedList('1', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(expect);
 }
 
@@ -118,7 +118,7 @@ void Test2(void) {
     /* Validate result (验证函数调用结果) */
     Validate_LinkedList('2', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(expect);
 }
 
@@ -147,7 +147,7 @@ void Test3(void) {
     /* Validate result (验证函数调用结果) */
     Validate_LinkedList('3', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(expect);
 }
 

@@ -85,7 +85,7 @@ void test_levelOrderTraversal(void) {
                         actualArray, actualReturnSize, actualReturnColumnSizes,
                         SORT_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     Array_Free(&actualReturnColumnSizes);
     Array_Free2D(&actualArray, actualReturnSize);
     BTree_Free(root);

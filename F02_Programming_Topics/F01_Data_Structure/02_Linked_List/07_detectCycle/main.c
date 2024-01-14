@@ -75,7 +75,7 @@ void Test1(void) {
     /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     /* 需要释放指定长度，否则会进入无限循环 */
 }
 
@@ -98,7 +98,7 @@ void Test2(void) {
     /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     /* 需要释放指定长度，否则会进入无限循环 */
 }
 
@@ -120,7 +120,7 @@ void Test3(void) {
     /* Validate result (验证函数调用结果) */
     Validate_LinkedList('3', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(arrList);
 }
 

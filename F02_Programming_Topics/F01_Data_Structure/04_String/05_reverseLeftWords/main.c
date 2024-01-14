@@ -70,7 +70,7 @@ void Test1(void) {
     /* Validate result (验证函数调用结果) */
     Validate_String('1', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     String_Free(actual);
 }
 
@@ -93,7 +93,7 @@ void Test2(void) {
     /* Validate result (验证函数调用结果) */
     Validate_String('2', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     String_Free(actual);
 }
 
@@ -116,7 +116,7 @@ void Test3(void) {
     /* Validate result (验证函数调用结果) */
     Validate_String('3', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     String_Free(actual);
 }
 

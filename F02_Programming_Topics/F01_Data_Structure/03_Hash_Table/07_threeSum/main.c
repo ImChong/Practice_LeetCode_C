@@ -52,7 +52,7 @@ void Test1(void) {
     /* Validate result (验证函数调用结果) */
     Validate_Array2D('1', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actualRtnColSize);
     Array_Free2D(actual2DArr, actualRtnRowSize);
 }
@@ -80,7 +80,7 @@ void Test2(void) {
     /* Validate result (验证函数调用结果) */
     Validate_Array2D('2', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actualRtnColSize);
     Array_Free2D(actual2DArr, actualRtnRowSize);
 }
@@ -108,7 +108,7 @@ void Test3(void) {
     /* Validate result (验证函数调用结果) */
     Validate_Array2D('3', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actualRtnColSize);
     Array_Free2D(actual2DArr, actualRtnRowSize);
 }
