@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 02:21:53
+ * @LastEditTime : 2024-01-15 02:23:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -42,7 +42,7 @@ void Test1(void) {
     int *actualRtnColSize = NULL;
     int **actual2DArr = generateMatrix(n, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 期望结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 3;
     int expectRtnColSize[] = {3, 3, 3};
     int *expect2DArr[] = {
@@ -76,7 +76,7 @@ void Test2(void) {
     int *actualRtnColSize = NULL;
     int **actual2DArr = generateMatrix(n, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 期望结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 1;
     int expectRtnColSize[] = {1};
     int *expect2DArr[] = {
@@ -108,7 +108,7 @@ void Test3(void) {
     int *actualRtnColSize = NULL;
     int **actual2DArr = generateMatrix(n, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 期望结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 4;
     int expectRtnColSize[] = {4, 4, 4, 4};
     int *expect2DArr[] = {
