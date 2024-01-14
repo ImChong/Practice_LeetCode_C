@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 02:10:46
+ * @LastEditTime : 2024-01-15 02:11:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : 27. 移除元素：https://leetcode.cn/problems/remove-element/
+ * @Description  : leetcode 27. 移除元素：https://leetcode.cn/problems/remove-element/
  *      https://programmercarl.com/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.html
  */
 /* solution header file (题解头文件) */
