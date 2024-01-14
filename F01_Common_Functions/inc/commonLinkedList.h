@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonLinkedList.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonLinkedList.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-08 21:39:34
+ * @LastEditTime : 2024-01-15 02:41:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,7 +35,9 @@ struct ListNode *LinkedList_AddAtIndex(struct ListNode *head, int index,
                                        int val); /* 在链表中第index个节点之前添加一个值为val的节点 */
 struct ListNode *LinkedList_DeleteAtIndex(struct ListNode *head, int index); /* 删除链表中第index个节点 */
 struct ListNode *LinkedList_DeleteValue(struct ListNode *head, int val); /* 从链表中删除第一个值为val的节点 */
-int *LinkedList_GetValueIndexes(struct ListNode *head, int val, int *returnSize); /* 获取链表中值为val的所有节点的索引 */
+int *LinkedList_GetValueIndexes(struct ListNode *head,
+                                int val,
+                                int *returnSize);   /* Get all indexes of the value in the linked list */
 
 /**********************************************************************************/
 /*                                                                                */
