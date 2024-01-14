@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-10 11:06:55
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-10 12:02:12
+ * @LastEditTime : 2024-01-15 02:02:38
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -18,7 +18,7 @@
 #include "commonArray.h"
 #include "commonSingleValue.h"
 /* solution method configuration file (解题方法配置文件) */
-
+// #include "methodCfg"     /* Uncomment this line if solution has multiple methods */
 
 /**********************************************************************************/
 /*                                                                                */
