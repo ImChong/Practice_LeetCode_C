@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:09:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 02:37:39
+ * @LastEditTime : 2024-01-15 02:38:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -106,7 +106,7 @@ void Test3(void) {
 
 /**
  * @description: Test 4
- * Input: LinkedList = [1, 2, 1, 2, 1, 2], GetIndexes = 2
+ * Input: LinkedList = [1, 2, 1, 2, 1, 2], GetValueIndexes = 2
  * Output: [1, 3, 5]
  * =================================================================================
  * @return {void}
