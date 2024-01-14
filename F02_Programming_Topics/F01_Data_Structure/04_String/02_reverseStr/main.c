@@ -61,7 +61,7 @@ void Test1(void) {
     /* Expect result (期望结果) */
     char *expect = "bacdfeg";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('1', expect, actual);
 }
 
@@ -81,7 +81,7 @@ void Test2(void) {
     /* Expect result (期望结果) */
     char *expect = "bacd";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('2', expect, actual);
 }
 
@@ -101,7 +101,7 @@ void Test3(void) {
     /* Expect result (期望结果) */
     char *expect = "dcbaefg";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('3', expect, actual);
 }
 

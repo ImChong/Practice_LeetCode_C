@@ -52,7 +52,7 @@ void test_preOrderTraversal(void) {
     int expected[] = {1, 2, 4, 5, 3, 6, 7};
     int expectedSize = ARR_SIZE(expected);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     printf("PreorderTraversal Recursion Method.\n");
     Validate_Array('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
     printf("PreorderTraversal Iteration Method.\n");

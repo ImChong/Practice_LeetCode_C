@@ -91,7 +91,7 @@ void Test1(void) {
     /* Expect result (期望结果) */
     int expect = 8;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, intersectNode->val);
 
     /* 释放内存 - A/B链表相互链接，不可 while 循环释放 */
@@ -127,7 +127,7 @@ void Test2(void) {
     /* Expect result (期望结果) */
     int expect = 2;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, intersectNode->val);
 
     /* 释放内存 - A/B链表相互链接，不可 while 循环释放 */
@@ -155,7 +155,7 @@ void Test3(void) {
     /* Expect result (期望结果) */
     struct ListNode *expect = NULL;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('3', expect, intersectNode);
 
     /* 释放内存 */

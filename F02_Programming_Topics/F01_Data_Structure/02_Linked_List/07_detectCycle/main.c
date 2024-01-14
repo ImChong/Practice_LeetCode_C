@@ -72,7 +72,7 @@ void Test1(void) {
     /* Expect result (期望结果) */
     int expect = 2;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, actual);
 
     /* 释放内存 */
@@ -95,7 +95,7 @@ void Test2(void) {
     /* Expect result (期望结果) */
     int expect = 1;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, actual);
 
     /* 释放内存 */
@@ -117,7 +117,7 @@ void Test3(void) {
     /* Expect result (期望结果) */
     struct ListNode *expect = NULL;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('3', expect, actual);
 
     /* 释放内存 */

@@ -53,7 +53,7 @@ void Test1(void) {
         (int[]){3, 4},
     };
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('1',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
@@ -88,7 +88,7 @@ void Test2(void) {
         (int[]){1},
     };
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('2',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
@@ -132,7 +132,7 @@ void Test3(void) {
         (int[]){3, 4, 5},
     };
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('3',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,

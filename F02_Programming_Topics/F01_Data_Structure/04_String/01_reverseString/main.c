@@ -66,7 +66,7 @@ void Test1(void) {
     /* Expect result (期望结果) */
     char *expect = "olleh";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('1', expect, s);
 }
 
@@ -86,7 +86,7 @@ void Test2(void) {
     /* Expect result (期望结果) */
     char *expect = "hannaH";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('2', expect, s);
 }
 
@@ -106,7 +106,7 @@ void Test3(void) {
     /* Expect result (期望结果) */
     char *expect = "1";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('3', expect, s);
 }
 

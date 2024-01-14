@@ -33,7 +33,7 @@ void Test1(void) {
 
     /* Expect result (期望结果) */
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
 
 }
 

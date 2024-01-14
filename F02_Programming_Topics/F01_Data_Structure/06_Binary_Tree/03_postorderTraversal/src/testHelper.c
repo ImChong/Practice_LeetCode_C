@@ -52,7 +52,7 @@ void test_postOrderTraversal(void) {
     int expected[] = {4, 5, 2, 6, 7, 3, 1};
     int expectedSize = ARR_SIZE(expected);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     printf("PostorderTraversal Recursion Method.\n");
     Validate_Array('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
     printf("PostorderTraversal Iteration Method.\n");

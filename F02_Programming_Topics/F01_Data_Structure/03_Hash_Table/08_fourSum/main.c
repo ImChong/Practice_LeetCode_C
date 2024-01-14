@@ -80,7 +80,7 @@ void runTest(struct TestStruct *test) {
     int *expectRtnColSize = test->output.rtnColSize;
     int **expect2DArr = test->output.arr;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D(test->testNum,
                         expect2DArr, expectRtnRowSize, expectRtnColSize,
                         actual2DArr, actualRtnRowSize, actualRtnColSize,

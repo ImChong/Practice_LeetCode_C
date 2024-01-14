@@ -67,7 +67,7 @@ void Test1(void) {
     /* Expect result (期望结果) */
     char *expect = "a aef qerf bb";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('1', expect, actual);
 
     /* 释放内存 */
@@ -89,7 +89,7 @@ void Test2(void) {
     /* Expect result (期望结果) */
     char *expect = "my name is carl";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('2', expect, actual);
 
     /* 释放内存 */
@@ -111,7 +111,7 @@ void Test3(void) {
     /* Expect result (期望结果) */
     char *expect = "c language hello world";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('3', expect, actual);
 
     /* 释放内存 */

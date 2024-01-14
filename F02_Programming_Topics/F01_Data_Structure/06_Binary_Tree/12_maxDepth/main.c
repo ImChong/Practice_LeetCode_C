@@ -164,7 +164,7 @@ void Test1(void) {
     /* Function call (函数调用) */
     int actual = maxDepth(root);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, actual);
 
     /* 释放内存空间 */
@@ -191,7 +191,7 @@ void Test2(void) {
     /* Function call (函数调用) */
     int actual = maxDepth(root);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, actual);
 
     /* 释放内存空间 */

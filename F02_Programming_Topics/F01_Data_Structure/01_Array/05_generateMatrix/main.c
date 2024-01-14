@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 02:23:28
+ * @LastEditTime : 2024-01-15 02:25:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -51,7 +51,7 @@ void Test1(void) {
         (int[]){7, 6, 5}
     };
 
-    /* 测试结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('1',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
@@ -83,7 +83,7 @@ void Test2(void) {
         (int[]){1}
     };
 
-    /* 测试结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('2',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
@@ -118,7 +118,7 @@ void Test3(void) {
         (int[]){10, 9,  8,  7}
     };
 
-    /* 测试结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('3',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,

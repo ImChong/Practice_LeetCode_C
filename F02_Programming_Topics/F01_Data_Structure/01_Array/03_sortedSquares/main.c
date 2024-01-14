@@ -43,7 +43,7 @@ void Test1(void) {
     int expectNums[] = {0, 1, 9, 16, 100};
     int expectSize = ARR_SIZE(expectNums);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('1', expectNums, expectSize, actualNums, actualSize, COMMON_FALSE);
 
     /* 释放内存 */
@@ -68,7 +68,7 @@ void Test2(void) {
     int expectNums[] = {4, 9, 9, 49, 121};
     int expectSize = ARR_SIZE(expectNums);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('2', expectNums, expectSize, actualNums, actualSize, COMMON_FALSE);
 
     /* 释放内存 */
@@ -92,7 +92,7 @@ void Test3(void) {
     int expectNums[] = {1};
     int expectSize = ARR_SIZE(expectNums);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('3', expectNums, expectSize, actualNums, actualSize, COMMON_FALSE);
 
     /* 释放内存 */

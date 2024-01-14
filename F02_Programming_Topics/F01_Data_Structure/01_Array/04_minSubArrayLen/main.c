@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 02:23:47
+ * @LastEditTime : 2024-01-15 02:25:49
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -41,7 +41,7 @@ void Test1(void) {
     /* Expect result (期望结果) */
     int expectLen = 2;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expectLen, actualLen);
 }
 
@@ -62,7 +62,7 @@ void Test2(void) {
     /* Expect result (期望结果) */
     int expectLen = 0;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expectLen, actualLen);
 }
 
@@ -83,7 +83,7 @@ void Test3(void) {
     /* Expect result (期望结果) */
     int expectLen = 3;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('3', expectLen, actualLen);
 }
 

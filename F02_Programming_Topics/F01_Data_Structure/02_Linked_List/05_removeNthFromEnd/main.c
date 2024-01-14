@@ -91,7 +91,7 @@ void Test1(void) {
     int expectArrSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('1', expectList, ansList);
 
     /* 释放内存 */
@@ -120,7 +120,7 @@ void Test2(void) {
     int expectArrSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('2', expectList, ansList);
 
     /* 释放内存 */
@@ -149,7 +149,7 @@ void Test3(void) {
     int expectArrSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('3', expectList, ansList);
 
     /* 释放内存 */
@@ -177,7 +177,7 @@ void Test4(void) {
     int expectArrSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('4', expectList, ansList);
 
     /* 释放内存 */

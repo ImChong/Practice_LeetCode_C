@@ -40,7 +40,7 @@ void Test1(void) {
     int nums[] = {2, 3};
     DLinkedList_ArrayInit(expectDummy, nums, ARR_SIZE(nums));
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_DLinkedList('1', expectDummy, actualDummy);
 
     /* 释放内存空间 */
@@ -74,7 +74,7 @@ void Test2(void) {
     int nums[] = {5, 2, 3, 7, 2};
     DLinkedList_ArrayInit(expectDummy, nums, ARR_SIZE(nums));
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_DLinkedList('2', expectDummy, actualDummy);
 
     /* 释放内存空间 */
@@ -105,7 +105,7 @@ void Test3(void) {
     int nums[] = {1, 7, 2, 1};
     DLinkedList_ArrayInit(expectDummy, nums, ARR_SIZE(nums));
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_DLinkedList('3', expectDummy, actualDummy);
 
     /* 释放内存空间 */

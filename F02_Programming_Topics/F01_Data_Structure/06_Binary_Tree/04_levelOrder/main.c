@@ -79,7 +79,7 @@ void test_levelOrderTraversal(void) {
         (int[]){4, 5, 6, 7}
     };
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('1',
                         expectedArray, expectedReturnSize, expectedReturnColumnSizes,
                         actualArray, actualReturnSize, actualReturnColumnSizes,

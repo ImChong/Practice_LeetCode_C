@@ -52,7 +52,7 @@ void test_inOrderTraversal(void) {
     int expected[] = {4, 2, 5, 1, 6, 3, 7};
     int expectedSize = ARR_SIZE(expected);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     printf("InorderTraversal Recursion Method.\n");
     Validate_Array('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
     printf("InorderTraversal Iteration Method.\n");

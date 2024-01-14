@@ -45,7 +45,7 @@ void Test1(void) {
     /* Expect result (期望结果) */
     bool expect = false;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, actual);
 }
 
@@ -65,7 +65,7 @@ void Test2(void) {
     /* Expect result (期望结果) */
     bool expect = false;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, actual);
 }
 
@@ -85,7 +85,7 @@ void Test3(void) {
     /* Expect result (期望结果) */
     bool expect = true;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('3', expect, actual);
 }
 

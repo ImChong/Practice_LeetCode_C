@@ -72,7 +72,7 @@ void Test1(void) {
     /* Expect result (期望结果) */
     int expect = 0;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, actual);
 }
 
@@ -92,7 +92,7 @@ void Test2(void) {
     /* Expect result (期望结果) */
     int expect = -1;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, actual);
 }
 
@@ -112,7 +112,7 @@ void Test3(void) {
     /* Expect result (期望结果) */
     int expect = 0;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('3', expect, actual);
 }
 
@@ -132,7 +132,7 @@ void Test4(void) {
     /* Expect result (期望结果) */
     int expect = 4;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('4', expect, actual);
 }
 

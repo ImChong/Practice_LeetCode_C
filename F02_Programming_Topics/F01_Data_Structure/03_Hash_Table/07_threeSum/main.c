@@ -49,7 +49,7 @@ void Test1(void) {
     int expectRtnColSize[] = {3, 3};
     int *expect2DArr[] = {(int[]){-1, -1, 2}, (int[]){-1, 0, 1, 2}};    /* *expect2DArr[] 内数组可以不同长度 */
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('1', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
     /* 释放内存 */
@@ -77,7 +77,7 @@ void Test2(void) {
     int expectRtnColSize[] = {};
     int *expect2DArr[] = {};
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('2', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
     /* 释放内存 */
@@ -105,7 +105,7 @@ void Test3(void) {
     int expectRtnColSize[] = {3};
     int *expect2DArr[] = {(int[]){0, 0, 0}};
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('3', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
     /* 释放内存 */
