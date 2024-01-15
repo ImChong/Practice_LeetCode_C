@@ -17,6 +17,6 @@
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-int CMD_PrintInput(int argc, const char *argv[]); /* 打印命令行信息 */
+int CMD_PrintInput(int argc, const char *argv[]); /* Print input command */
 
 #endif /* F01_COMMON_FUNCTIONS_INC_COMMONCMD_H_ */
