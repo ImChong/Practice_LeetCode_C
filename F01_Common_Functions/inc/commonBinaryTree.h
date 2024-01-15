@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-08 09:53:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 11:21:33
+ * @LastEditTime : 2024-01-15 11:22:08
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -69,16 +69,16 @@ struct TreeLkListNode {
 typedef struct {
     struct TreeLkListNode *head; /* Queue head */
     int size;                  /* Queue size */
-} TreeListQueue;
+} TreeLKListQueue;
 
 /* Tree linked list queue operations */
-TreeListQueue *BTree_InitListQueue(void);                            /* Initialize queue */
-void BTree_EnListQueue(TreeListQueue *queue, struct TreeNode *node); /* Enqueue a tree linked list queue node */
-struct TreeNode *BTree_DeListQueue(TreeListQueue *queue);            /* Dequeue a tree linked list queue node */
-int BTree_ListQueueIsEmpty(TreeListQueue *queue);                    /* Check if the queue is empty */
-int BTree_ListQueueIsFull(TreeListQueue *queue);                     /* Check if the queue is full */
-void BTree_ListQueuePrint(TreeListQueue *queue);                     /* Print queue */
-void BTree_ListQueueFree(TreeListQueue *queue);                      /* Free queue */
+TreeLKListQueue *BTree_InitListQueue(void);                            /* Initialize queue */
+void BTree_EnListQueue(TreeLKListQueue *queue, struct TreeNode *node); /* Enqueue a tree linked list queue node */
+struct TreeNode *BTree_DeListQueue(TreeLKListQueue *queue);            /* Dequeue a tree linked list queue node */
+int BTree_ListQueueIsEmpty(TreeLKListQueue *queue);                    /* Check if the queue is empty */
+int BTree_ListQueueIsFull(TreeLKListQueue *queue);                     /* Check if the queue is full */
+void BTree_ListQueuePrint(TreeLKListQueue *queue);                     /* Print queue */
+void BTree_ListQueueFree(TreeLKListQueue *queue);                      /* Free queue */
 
 /**********************************************************************************/
 /*                                                                                */

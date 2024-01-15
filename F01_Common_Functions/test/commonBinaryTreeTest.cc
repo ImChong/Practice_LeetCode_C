@@ -90,7 +90,7 @@ TEST_F(TestCommonBinaryTree, TestTreeArrQueue) {
 }
 
 /* ============================================================================== */
-/* TreeListQueue */
+/* TreeLKListQueue */
 /* ============================================================================== */
 TEST_F(TestCommonBinaryTree, TestTreeListQueue) {
     /* TODO */
