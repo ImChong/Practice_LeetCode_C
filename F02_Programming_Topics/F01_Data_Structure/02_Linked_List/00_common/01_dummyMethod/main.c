@@ -83,7 +83,7 @@ void Test3(void) {
     DLinkedList_AddAtTail(actualDummy, 2);
     DLinkedList_AddAtTail(actualDummy, 1);
     DLinkedList_AddAtTail(actualDummy, 2);
-    DLinkedList_DeleteValue(actualDummy, 2);
+    DLinkedList_DeleteValueOnce(actualDummy, 2);
 
     /* Expect result (期望结果) */
     DummyLinkedList *expectDummy = DLinkedList_Init();
