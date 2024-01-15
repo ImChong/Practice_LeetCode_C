@@ -17,7 +17,7 @@
 /*                               STRUCT DEFINITION                                */
 /*                                                                                */
 /**********************************************************************************/
-/* 树节点 */
+/* Tree node structure */
 struct TreeNode {
     int val;                /* 节点的值 */
     struct TreeNode *left;  /* 左节点 */
