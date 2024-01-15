@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonDef\commonTypeDef.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonDef\commonTypeDef.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 12:30:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-08 21:31:46
+ * @LastEditTime : 2024-01-15 10:50:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,23 +17,21 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-/* 程序状态宏 */
+/* Program status macro */
 #define COMMON_ERR (-1)
 #define COMMON_OK 0
-
-/* 程序判断宏 */
 #define COMMON_TRUE 1
 #define COMMON_FALSE 0
 #define SORT_TRUE COMMON_TRUE
 #define SORT_FALSE COMMON_FALSE
 
-/* 程序调试宏 */
+/* Variable type macro */
 #define STATIC static
 #define STATIC_FUNC static
 #define INLINE inline
 #define INLINE_FUNC inline
 
-/* 数据类型宏 */
+/* Data type macro */
 /*
  * typedef signed char             int8_t;
  * typedef unsigned char           uint8_t;
@@ -50,10 +48,10 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
-/* 声明了一个变量或函数,但不确定后面是否会使用它时,可以加上这个宏 */
+/* Define unused variable */
 #define MAYBE_UNUSED attribute((unused))
 
-/* 返回错误码 */
+/* Return error if condition is true */
 #define RETURN_ERR_IF(condition) \
     do {                         \
         if (condition) {         \
