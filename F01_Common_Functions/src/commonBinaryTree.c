@@ -384,11 +384,11 @@ int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColum
  * @param {int} *returnSize                 二叉树的层数
  * @param {int} **returnColumnSizes         二叉树对应层级的节点数
  * @param {int} **resultArray               结果二维数组
- * @param {TreeLKListQueue} *queueHead        链表队列头指针
+ * @param {TreeLkListQueue} *queueHead        链表队列头指针
  * @return {int}
  */
 STATIC_FUNC void BreadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray,
-                                        TreeLKListQueue *queueHead) {
+                                        TreeLkListQueue *queueHead) {
     struct TreeLkListNode *currentNode = queueHead->head;
     if (currentNode->node == NULL) {
         return;
@@ -435,7 +435,7 @@ int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColum
     int **ans = (int **)malloc(sizeof(int *) * MAX_QUEUE_SIZE);     /* NOLINT(readability/casting) */
     *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);       /* NOLINT(readability/casting) */
 
-    TreeLKListQueue *queueHead = (TreeLKListQueue *)malloc(sizeof(TreeLKListQueue));      /* NOLINT(readability/casting) */
+    TreeLkListQueue *queueHead = (TreeLkListQueue *)malloc(sizeof(TreeLkListQueue));      /* NOLINT(readability/casting) */
     queueHead->head = NULL;
 
     BTree_EnListQueue(queueHead, root);
@@ -630,10 +630,10 @@ void BTree_ArrQueueFree(TreeArrQueue *queue) {
 /**
  * @description: 创建一个新的二叉树节点链表队列
  * =================================================================================
- * @return {TreeLKListQueue} *queue   新的二叉树节点链表队列指针
+ * @return {TreeLkListQueue} *queue   新的二叉树节点链表队列指针
  */
-TreeLKListQueue *BTree_InitListQueue(void) {
-    TreeLKListQueue *queue = (TreeLKListQueue *)malloc(sizeof(TreeLKListQueue));     /* NOLINT(readability/casting) */
+TreeLkListQueue *BTree_InitListQueue(void) {
+    TreeLkListQueue *queue = (TreeLkListQueue *)malloc(sizeof(TreeLkListQueue));     /* NOLINT(readability/casting) */
     queue->head = NULL;
     queue->size = 0;
     return queue;
@@ -642,11 +642,11 @@ TreeLKListQueue *BTree_InitListQueue(void) {
 /**
  * @description: 将节点加入队列
  * =================================================================================
- * @param {TreeLKListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @param {TreeNode} *node          节点指针
  * @return {void}
  */
-void BTree_EnListQueue(TreeLKListQueue *queue, struct TreeNode *node) {
+void BTree_EnListQueue(TreeLkListQueue *queue, struct TreeNode *node) {
     if (queue->head == NULL) {
         queue->head = (struct TreeLkListNode *)malloc(sizeof(struct TreeLkListNode));
         queue->head->node = node;
@@ -668,10 +668,10 @@ void BTree_EnListQueue(TreeLKListQueue *queue, struct TreeNode *node) {
 /**
  * @description: 从队列中取出一个节点
  * =================================================================================
- * @param {TreeLKListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @return {TreeNode} *node         节点指针
  */
-struct TreeNode *BTree_DeListQueue(TreeLKListQueue *queue) {
+struct TreeNode *BTree_DeListQueue(TreeLkListQueue *queue) {
     if (queue->head == NULL) {
         printf("Queue is empty.\n");
         return NULL;
@@ -687,20 +687,20 @@ struct TreeNode *BTree_DeListQueue(TreeLKListQueue *queue) {
 /**
  * @description: 判断队列是否为空
  * =================================================================================
- * @param {TreeLKListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @return {int}                    如果队列为空，返回1；否则返回0
  */
-int BTree_ListQueueIsEmpty(TreeLKListQueue *queue) {
+int BTree_ListQueueIsEmpty(TreeLkListQueue *queue) {
     return queue->head == NULL;
 }
 
 /**
  * @description: 判断队列是否为满
  * =================================================================================
- * @param {TreeLKListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @return {int}                    如果队列为满，返回1；否则返回0
  */
-int BTree_ListQueueIsFull(TreeLKListQueue *queue) {
+int BTree_ListQueueIsFull(TreeLkListQueue *queue) {
     /* TODO */
     (void)queue;
     return 0;
@@ -709,11 +709,11 @@ int BTree_ListQueueIsFull(TreeLKListQueue *queue) {
 /**
  * @description: 打印二叉树节点链表队列
  * =================================================================================
- * @param {TreeLKListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @return {void}
  */
-void BTree_ListQueuePrint(TreeLKListQueue *queue) {
-    printf("TreeLKListQueue (size = %d): [", queue->size);
+void BTree_ListQueuePrint(TreeLkListQueue *queue) {
+    printf("TreeLkListQueue (size = %d): [", queue->size);
     struct TreeLkListNode *current = queue->head;
     while (current != NULL) {
         printf("%d", current->node->val);
@@ -728,10 +728,10 @@ void BTree_ListQueuePrint(TreeLKListQueue *queue) {
 /**
  * @description: 释放二叉树节点链表队列的空间
  * =================================================================================
- * @param {TreeLKListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @return {void}
  */
-void BTree_ListQueueFree(TreeLKListQueue *queue) {
+void BTree_ListQueueFree(TreeLkListQueue *queue) {
     struct TreeLkListNode *current = queue->head;
     while (current != NULL) {
         struct TreeLkListNode *temp = current;

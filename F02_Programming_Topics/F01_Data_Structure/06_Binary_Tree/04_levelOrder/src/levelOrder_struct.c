@@ -53,10 +53,10 @@
  * @param {int} *returnSize                 二叉树的层数
  * @param {int} **returnColumnSizes         二叉树对应层级的节点数
  * @param {int} **resultArray               结果二维数组
- * @param {TreeLKListQueue} *queueHead        链表队列头指针
+ * @param {TreeLkListQueue} *queueHead        链表队列头指针
  * @return {int}
  */
-STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray, TreeLKListQueue *queueHead) {
+STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray, TreeLkListQueue *queueHead) {
     struct TreeLkListNode *currentNode = queueHead->head;
     if (currentNode->node == NULL) {
         return;
@@ -110,7 +110,7 @@ int **levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
     int **resultArray = (int **)malloc(sizeof(int *) * MAX_QUEUE_SIZE);
     *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);
 
-    TreeLKListQueue *queueHead = (TreeLKListQueue *)malloc(sizeof(TreeLKListQueue));
+    TreeLkListQueue *queueHead = (TreeLkListQueue *)malloc(sizeof(TreeLkListQueue));
     queueHead->head = NULL;
 
     BTree_EnListQueue(queueHead, root);
