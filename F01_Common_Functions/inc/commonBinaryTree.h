@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-08 09:53:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 10:51:49
+ * @LastEditTime : 2024-01-15 11:01:01
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,25 +19,25 @@
 /**********************************************************************************/
 /* Tree node structure */
 struct TreeNode {
-    int val;                /* 节点的值 */
-    struct TreeNode *left;  /* 左节点 */
-    struct TreeNode *right; /* 右节点 */
+    int val;                /* Node value */
+    struct TreeNode *left;  /* Left node */
+    struct TreeNode *right; /* Right node */
 };
 
-/* 树操作 */
-struct TreeNode *BTree_InitNode(int value);                 /* 创建新节点 */
-struct TreeNode *BTree_Init(int *arr, int arrSize);         /* 将数组转换为树 */
-int *BTree_ToArray(struct TreeNode *root, int *returnSize); /* 将树转换为数组 */
-void BTree_PrintTestTree(void);                             /* 打印测试树 */
-void BTree_PrintValue(struct TreeNode *root);               /* 打印树 */
-void BTree_Free(struct TreeNode *root);                     /* 释放树的内存 */
+/* Tree node operations */
+struct TreeNode *BTree_InitNode(int value);                 /* Initialize a tree node */
+struct TreeNode *BTree_ArrayInit(int *arr, int arrSize);    /* Initialize a tree from array */
+int *BTree_ToArray(struct TreeNode *root, int *returnSize); /* Transform a tree to array */
+void BTree_PrintTestTree(void);                             /* Print test tree */
+void BTree_PrintValue(struct TreeNode *root);               /* Print tree value as an array */
+void BTree_Free(struct TreeNode *root);                     /* Free tree */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                               STRUCT DEFINITION                                */
 /*                                                                                */
 /**********************************************************************************/
-/* 列表树队列 */
+/* Tree Array Queue Structure */
 typedef struct {
     struct TreeNode **array; /* 树节点数组 */
     int head;                /* 队首指针 */

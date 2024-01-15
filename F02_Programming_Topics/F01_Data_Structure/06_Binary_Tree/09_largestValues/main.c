@@ -184,14 +184,14 @@ void print1DArray(int *array, int size) {
  * @param {struct TreeNode} **root      树的根节点
  * @return {void}
  */
-void BTree_Init(int *arr, int size, int index, struct TreeNode **root) {
+void BTree_ArrayInit(int *arr, int size, int index, struct TreeNode **root) {
     if (index < size) {
         if (*(arr + index) == INT_MIN) {
             return;
         }
         *root = newNode(*(arr + index));
-        BTree_Init(arr, size, 2 * index + 1, &((*root)->left));
-        BTree_Init(arr, size, 2 * index + 2, &((*root)->right));
+        BTree_ArrayInit(arr, size, 2 * index + 1, &((*root)->left));
+        BTree_ArrayInit(arr, size, 2 * index + 2, &((*root)->right));
     }
 }
 
@@ -258,7 +258,7 @@ void Test1(void) {
     int treeArr[] = {1, 3, 2, 5, 3, INT_MIN, 9};            /* 二叉树数组 */
     print1DArray(treeArr, ARR_SIZE(treeArr));
     struct TreeNode *root = NULL;                           /* 初始化二叉树根节点为 NULL */
-    BTree_Init(treeArr, ARR_SIZE(treeArr), 0, &root);      /* 二叉树数组转换为二叉树结构 */
+    BTree_ArrayInit(treeArr, ARR_SIZE(treeArr), 0, &root);      /* 二叉树数组转换为二叉树结构 */
     printf("\n");
 
     /* 运算结果 */
@@ -295,7 +295,7 @@ void Test2(void) {
     int treeArr[] = {1, 2, 3};                              /* 二叉树数组 */
     print1DArray(treeArr, ARR_SIZE(treeArr));
     struct TreeNode *root = NULL;                           /* 初始化二叉树根节点为 NULL */
-    BTree_Init(treeArr, ARR_SIZE(treeArr), 0, &root);      /* 二叉树数组转换为二叉树结构 */
+    BTree_ArrayInit(treeArr, ARR_SIZE(treeArr), 0, &root);      /* 二叉树数组转换为二叉树结构 */
     printf("\n");
 
     /* 运算结果 */

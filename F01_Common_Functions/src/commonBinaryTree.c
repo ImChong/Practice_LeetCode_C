@@ -769,7 +769,7 @@ struct TreeNode *BTree_InitNode(int value) {
  * @param {int} arrSize             数组大小
  * @return {TreeNode} *node         根节点指针
  */
-struct TreeNode *BTree_Init(int* arr, int arrSize) {
+struct TreeNode *BTree_ArrayInit(int* arr, int arrSize) {
     if (arrSize == 0) {
         return NULL;
     }
