@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-10 11:21:32
+ * @LastEditTime : 2024-01-15 10:39:06
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,24 +17,27 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define COMMON_ARRAY_EN 1             /* 通用数组编译使能  1: enable, 0: disable */
-#define COMMON_BINARY_TREE_EN 1       /* 通用二叉树编译使能  1: enable, 0: disable */
-#define COMMON_CMD_EN 1               /* 通用命令行编译使能  1: enable, 0: disable */
-#define COMMON_HASH_TABLE_EN 1        /* 通用哈希表编译使能  1: enable, 0: disable */
-#define COMMON_LINKED_LIST_EN 1       /* 通用链表编译使能  1: enable, 0: disable */
-#define COMMON_LINKED_LIST_DUMMY_EN 1 /* 通用虚拟头节点链表编译使能  1: enable, 0: disable */
-#define COMMON_QUEUE_EN 1             /* 通用队列编译使能  1: enable, 0: disable */
-#define COMMON_RING_BUFFER_EN 1       /* 通用环形缓冲区编译使能  1: enable, 0: disable */
-#define COMMON_SINGLE_VALUE_EN 1      /* 通用单值函数编译使能  1: enable, 0: disable */
-#define COMMON_STACK_EN 1             /* 通用栈编译使能  1: enable, 0: disable */
-#define COMMON_STRING_EN 1            /* 通用字符串编译使能  1: enable, 0: disable */
+/* Common module compilation enable: 1: enable, 0: disable */
+#define COMMON_ARRAY_EN 1             /* Common array compilation enable */
+#define COMMON_BINARY_TREE_EN 1       /* Common binary tree compilation enable */
+#define COMMON_CMD_EN 1               /* Common command compilation enable */
+#define COMMON_HASH_TABLE_EN 1        /* Common hash table compilation enable */
+#define COMMON_LINKED_LIST_EN 1       /* Common linked list compilation enable */
+#define COMMON_LINKED_LIST_DUMMY_EN 1 /* Common linked list with dummy head compilation enable */
+#define COMMON_QUEUE_EN 1             /* Common queue compilation enable */
+#define COMMON_RING_BUFFER_EN 1       /* Common ring buffer compilation enable */
+#define COMMON_SINGLE_VALUE_EN 1      /* Common single value compilation enable */
+#define COMMON_STACK_EN 1             /* Common stack compilation enable */
+#define COMMON_STRING_EN 1            /* Common string compilation enable */
 
 /* solution method configuration for common binary tree module (通用二叉树模块解题方法配置) */
 #if COMMON_BINARY_TREE_EN
-    #define BTREE_ORDER_TRAVERSAL_RECURSION_METHOD_EN 1 /* 二叉树递归遍历方法编译使能  1: enable, 0: disable */
-    #define BTREE_ORDER_TRAVERSAL_ITERATION_METHOD_EN 0 /* 二叉树迭代遍历方法编译使能  1: enable, 0: disable */
-    #define BTREE_LEVEL_ORDER_ARRAY_METHOD_EN 1         /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
-    #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN 0        /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
+    /* Recursion / iteration method for binary tree order traversal compilation enable */
+    #define BTREE_ORDER_TRAVERSAL_RECURSION_METHOD_EN 1
+    #define BTREE_ORDER_TRAVERSAL_ITERATION_METHOD_EN 0
+    /* Array / struct method for binary tree level order traversal compilation enable */
+    #define BTREE_LEVEL_ORDER_ARRAY_METHOD_EN 1
+    #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN 0
 #endif /* COMMON_BINARY_TREE_EN */
 
 #endif /* F01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_ */
