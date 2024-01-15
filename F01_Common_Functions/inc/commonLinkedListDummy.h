@@ -33,7 +33,7 @@ typedef struct {
 /*                                                                                */
 /**********************************************************************************/
 DummyLinkedList *DLinkedList_Init(void);                           /* 创建使用虚拟头节点的链表 */
-int DLinkedList_GetAtIndex(DummyLinkedList *dummyHead, int index); /* 获取链表中第index个节点的值 */
+int DLinkedList_GetValueAtIndex(DummyLinkedList *dummyHead, int index); /* 获取链表中第index个节点的值 */
 void DLinkedList_AddAtHead(DummyLinkedList *dummyHead, int val);   /* 在链表头部添加一个节点 */
 void DLinkedList_AddAtTail(DummyLinkedList *dummyHead, int val);   /* 在链表尾部添加一个节点 */
 void DLinkedList_AddAtIndex(DummyLinkedList *dummyHead, int index,

@@ -45,7 +45,7 @@ class TestCommonLinkedList : public ::testing::Test {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* LinkedList_GetAtIndex */
+/* LinkedList_GetValueAtIndex */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedList, TestLinkedListGet) {
     /* TODO */

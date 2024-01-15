@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 10:21:39
+ * @LastEditTime : 2024-01-15 10:29:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,10 +17,10 @@
 /*                               STRUCT DEFINITION                                */
 /*                                                                                */
 /**********************************************************************************/
-/* 节点定义 */
+/* Linked list node structure */
 struct ListNode {
-    int val;               /* 节点数值 */
-    struct ListNode *next; /* 下一节点地址 */
+    int val;               /* Node value */
+    struct ListNode *next; /* Next node */
 };
 
 /**********************************************************************************/
@@ -28,13 +28,19 @@ struct ListNode {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-int LinkedList_GetAtIndex(struct ListNode *head, int index);           /* 获取链表中第index个节点的值 */
-struct ListNode *LinkedList_AddAtHead(struct ListNode *head, int val); /* 在链表头部添加一个节点 */
-struct ListNode *LinkedList_AddAtTail(struct ListNode *head, int val); /* 在链表尾部添加一个节点 */
-struct ListNode *LinkedList_AddAtIndex(struct ListNode *head, int index,
-                                       int val); /* 在链表中第index个节点之前添加一个值为val的节点 */
-struct ListNode *LinkedList_DeleteAtIndex(struct ListNode *head, int index); /* 删除链表中第index个节点 */
-struct ListNode *LinkedList_DeleteValueOnce(struct ListNode *head, int val); /* 从链表中删除第一个值为val的节点 */
+
+/* Add a node of value val before the first element of the linked list */
+struct ListNode *LinkedList_AddAtHead(struct ListNode *head, int val);
+/* Add a node of value val to the last element of the linked list */
+struct ListNode *LinkedList_AddAtTail(struct ListNode *head, int val);
+/* Add a node of value val before the index-th node in the linked list */
+struct ListNode *LinkedList_AddAtIndex(struct ListNode *head, int index, int val);
+/* Delete the index-th node in the linked list */
+struct ListNode *LinkedList_DeleteAtIndex(struct ListNode *head, int index);
+/* Delete the first occurrence of the value */
+struct ListNode *LinkedList_DeleteValueOnce(struct ListNode *head, int val);
+/* Get the value of the index-th node in the linked list */
+int LinkedList_GetValueAtIndex(struct ListNode *head, int index);
 /* Get all indexes of the value in the linked list */
 int *LinkedList_GetValueIndexes(struct ListNode *head, int val, int *returnSize);
 
