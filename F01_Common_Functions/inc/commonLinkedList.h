@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 10:29:14
+ * @LastEditTime : 2024-01-15 10:31:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -49,15 +49,16 @@ int *LinkedList_GetValueIndexes(struct ListNode *head, int val, int *returnSize)
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-struct ListNode *LinkedList_ArrayInit(int *array, int size); /* 将数组转换为链表 */
-void LinkedList_Print(struct ListNode *head);                /* 打印链表 */
-void LinkedList_Free(struct ListNode *head);                 /* 释放链表 */
+struct ListNode *LinkedList_ArrayInit(int *array, int size); /* Initialize linked list from array */
+void LinkedList_Print(struct ListNode *head);                /* Print linked list */
+void LinkedList_Free(struct ListNode *head);                 /* Free linked list */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void Validate_LinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList); /* 验证链表 */
+/* Validate linked list */
+void Validate_LinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList);
 
 #endif /* F01_COMMON_FUNCTIONS_INC_COMMONLINKEDLIST_H_ */
