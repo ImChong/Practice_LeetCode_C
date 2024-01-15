@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-08 09:53:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 11:17:47
+ * @LastEditTime : 2024-01-15 11:21:33
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -60,14 +60,14 @@ void BTree_ArrQueueFree(TreeArrQueue *queue);                      /* Free queue
 /*                                                                                */
 /**********************************************************************************/
 /* Tree linked list queue node structure */
-struct TreeListNode {
+struct TreeLkListNode {
     struct TreeNode *node;     /* Tree node */
-    struct TreeListNode *next; /* Pointer to next tree linked list queue node */
+    struct TreeLkListNode *next; /* Pointer to next tree linked list queue node */
 };
 
 /* Tree linked list queue structure */
 typedef struct {
-    struct TreeListNode *head; /* Queue head */
+    struct TreeLkListNode *head; /* Queue head */
     int size;                  /* Queue size */
 } TreeListQueue;
 

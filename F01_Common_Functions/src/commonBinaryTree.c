@@ -389,7 +389,7 @@ int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColum
  */
 STATIC_FUNC void BreadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray,
                                         TreeListQueue *queueHead) {
-    struct TreeListNode *currentNode = queueHead->head;
+    struct TreeLkListNode *currentNode = queueHead->head;
     if (currentNode->node == NULL) {
         return;
     }
@@ -648,16 +648,16 @@ TreeListQueue *BTree_InitListQueue(void) {
  */
 void BTree_EnListQueue(TreeListQueue *queue, struct TreeNode *node) {
     if (queue->head == NULL) {
-        queue->head = (struct TreeListNode *)malloc(sizeof(struct TreeListNode));
+        queue->head = (struct TreeLkListNode *)malloc(sizeof(struct TreeLkListNode));
         queue->head->node = node;
         queue->head->next = NULL;
         queue->size++;
     } else {
-        struct TreeListNode *current = queue->head;
+        struct TreeLkListNode *current = queue->head;
         while (current->next != NULL) {
             current = current->next;
         }
-        current->next = (struct TreeListNode *)malloc(sizeof(struct TreeListNode));
+        current->next = (struct TreeLkListNode *)malloc(sizeof(struct TreeLkListNode));
         current->next->node = node;
         current->next->next = NULL;
         queue->size++;
@@ -677,7 +677,7 @@ struct TreeNode *BTree_DeListQueue(TreeListQueue *queue) {
         return NULL;
     }
     struct TreeNode *node = queue->head->node;
-    struct TreeListNode *temp = queue->head;
+    struct TreeLkListNode *temp = queue->head;
     queue->head = queue->head->next;
     free(temp);
     queue->size--;
@@ -714,7 +714,7 @@ int BTree_ListQueueIsFull(TreeListQueue *queue) {
  */
 void BTree_ListQueuePrint(TreeListQueue *queue) {
     printf("TreeListQueue (size = %d): [", queue->size);
-    struct TreeListNode *current = queue->head;
+    struct TreeLkListNode *current = queue->head;
     while (current != NULL) {
         printf("%d", current->node->val);
         if (current->next != NULL) {
@@ -732,9 +732,9 @@ void BTree_ListQueuePrint(TreeListQueue *queue) {
  * @return {void}
  */
 void BTree_ListQueueFree(TreeListQueue *queue) {
-    struct TreeListNode *current = queue->head;
+    struct TreeLkListNode *current = queue->head;
     while (current != NULL) {
-        struct TreeListNode *temp = current;
+        struct TreeLkListNode *temp = current;
         current = current->next;
         free(temp);
     }

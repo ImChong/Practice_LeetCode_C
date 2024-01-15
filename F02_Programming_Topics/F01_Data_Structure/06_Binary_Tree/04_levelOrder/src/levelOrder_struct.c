@@ -57,7 +57,7 @@
  * @return {int}
  */
 STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray, TreeListQueue *queueHead) {
-    struct TreeListNode *currentNode = queueHead->head;
+    struct TreeLkListNode *currentNode = queueHead->head;
     if (currentNode->node == NULL) {
         return;
     }
