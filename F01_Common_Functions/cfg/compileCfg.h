@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 10:39:06
+ * @LastEditTime : 2024-01-15 10:53:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,7 +35,7 @@
     /* Recursion / iteration method for binary tree order traversal compilation enable */
     #define BTREE_ORDER_TRAVERSAL_RECURSION_METHOD_EN 1
     #define BTREE_ORDER_TRAVERSAL_ITERATION_METHOD_EN 0
-    /* Array / struct method for binary tree level order traversal compilation enable */
+    /* Array / structure method for binary tree level order traversal compilation enable */
     #define BTREE_LEVEL_ORDER_ARRAY_METHOD_EN 1
     #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN 0
 #endif /* COMMON_BINARY_TREE_EN */
