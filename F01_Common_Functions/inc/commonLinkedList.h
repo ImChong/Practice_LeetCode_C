@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 10:31:37
+ * @LastEditTime : 2024-01-15 10:33:56
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,7 +28,6 @@ struct ListNode {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-
 /* Add a node of value val before the first element of the linked list */
 struct ListNode *LinkedList_AddAtHead(struct ListNode *head, int val);
 /* Add a node of value val to the last element of the linked list */
