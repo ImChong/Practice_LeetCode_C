@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonLinkedList.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonLinkedList.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-02 19:11:08
+ * @LastEditTime : 2024-01-17 10:31:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -130,7 +130,7 @@ struct ListNode *LinkedList_DeleteAtIndex(struct ListNode *head, int index) {
  * @param {int} val                     目标值
  * @return {struct ListNode} *head      返回链表虚拟头节点
  */
-struct ListNode *LinkedList_DeleteValueOnce(struct ListNode *head, int val) {
+struct ListNode *LinkedList_DeleteValue(struct ListNode *head, int val) {
     struct ListNode dummy;                          /* 创建虚拟头节点 */
     dummy.next = head;                              /* 将传入链表接在虚拟头节点后面 */
 

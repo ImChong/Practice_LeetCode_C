@@ -46,8 +46,8 @@ void DLinkedList_AddAtTail(DummyLinkedList *dummyHead, int val);
 void DLinkedList_AddAtIndex(DummyLinkedList *dummyHead, int index, int val);
 /* Delete the index-th node in the linked list */
 void DLinkedList_DeleteAtIndex(DummyLinkedList *dummyHead, int index);
-/* Delete the first occurrence of the value */
-void DLinkedList_DeleteValueAll(DummyLinkedList *dummyHead, int val);
+/* Delete all the nodes with the given value */
+void DLinkedList_DeleteValue(DummyLinkedList *dummyHead, int val);
 /* Get all the indexes of a value */
 int *DLinkedList_GetValueIndexes(DummyLinkedList *dummyHead, int val, int *returnSize);
 
