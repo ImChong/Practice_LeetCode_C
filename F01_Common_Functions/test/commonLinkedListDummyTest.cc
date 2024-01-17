@@ -93,7 +93,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListDeleteAtIndex) {
 }
 
 /* ============================================================================== */
-/* DLinkedList_DeleteValueOnce */
+/* DLinkedList_DeleteValueAll */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListDeleteElement) {
     /* TODO */

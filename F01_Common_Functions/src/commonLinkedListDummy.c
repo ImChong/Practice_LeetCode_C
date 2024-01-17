@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 16:59:17
+ * @LastEditTime : 2024-01-17 10:22:23
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -165,7 +165,7 @@ void DLinkedList_DeleteAtIndex(DummyLinkedList *dummyHead, int index) {
  * @param {int} val                         目标值
  * @return {void}
  */
-void DLinkedList_DeleteValueOnce(DummyLinkedList *dummyHead, int val) {
+void DLinkedList_DeleteValueAll(DummyLinkedList *dummyHead, int val) {
     struct ListNode dummy;                          /* 创建虚拟头节点 */
     dummy.next = dummyHead->head;                   /* 将传入链表接在虚拟头节点后面 */
 
