@@ -36,7 +36,7 @@
 /*                                                                                */
 /**********************************************************************************/
 uint8_t g_rxBuff[RING_BUFFER_SIZE];     /* 接收环形Buffer */
-RingBufferSt g_rxRing;                  /* 接收环形结构体 */
+RingBuffer g_rxRing;                  /* 接收环形结构体 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -46,11 +46,11 @@ RingBufferSt g_rxRing;                  /* 接收环形结构体 */
 /**
  * @description: 往环形 buffer 中增加一个字节
  * =================================================================================
- * @param {RingBufferSt} *pRing
+ * @param {RingBuffer} *pRing
  * @param {uint8_t} byte
  * @return {int16_t}
  */
-int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte) {
+int16_t RingBuffer_AddByte(RingBuffer *pRing, uint8_t byte) {
     /* 指针空检验 */
     RETURN_ERR_IF(pRing == NULL);
 
@@ -73,11 +73,11 @@ int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte) {
 /**
  * @description: 从环形 buffer 中取出一个字节
  * =================================================================================
- * @param {RingBufferSt} *pRing
+ * @param {RingBuffer} *pRing
  * @param {uint8_t} *pByte
  * @return {int16_t}
  */
-int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte) {
+int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte) {
     /* 指针空检验 */
     RETURN_ERR_IF(pRing == NULL);
     RETURN_ERR_IF(pByte == NULL);
@@ -103,10 +103,10 @@ int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte) {
 /**
  * @description: 打印环形 buffer
  * =================================================================================
- * @param {RingBufferSt} *pRing
+ * @param {RingBuffer} *pRing
  * @return {void}
  */
-void RingBuffer_Print(RingBufferSt *pRing) {
+void RingBuffer_Print(RingBuffer *pRing) {
     printf("Ring Buffer: ");
     for (int16_t i = 0; i < pRing->dataLen; ++i) {
         int16_t idx = (pRing->dataIdx + i) % pRing->buffLen;
@@ -124,12 +124,12 @@ void RingBuffer_Print(RingBufferSt *pRing) {
 /**
  * @description: 环形 buffer 初始化
  * =================================================================================
- * @param {RingBufferSt} *pRing
+ * @param {RingBuffer} *pRing
  * @param {uint8_t} *pBuff
  * @param {int16_t} buffLen
  * @return {int16_t}
  */
-int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen) {
+int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *pBuff, int16_t buffLen) {
     RETURN_ERR_IF(pRing == NULL);
     RETURN_ERR_IF(pBuff == NULL);
     RETURN_ERR_IF(buffLen <= 0);
