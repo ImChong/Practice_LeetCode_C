@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonSingleValue.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonSingleValue.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 13:42:27
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-09 01:27:32
+ * @LastEditTime : 2024-01-19 06:07:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,10 +17,14 @@
 /*                                MACRO FUNCTIONS                                 */
 /*                                                                                */
 /**********************************************************************************/
+/* Get the type of a pointer */
 #define type_of_ptr(x) _Generic((x), int* : "int*", float* : "float*", double* : "double*", default : "other")
+/* Get the type of a variable */
 #define type_of(x) _Generic((x), int : "int", float : "float", double : "double", default : type_of_ptr(x))
-#define MAX(a, b) ((a) > (b) ? (a) : (b)) /* Get maximum value */
-#define MIN(a, b) ((a) < (b) ? (a) : (b)) /* Get minimum value */
+/* Get maximum value */
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+/* Get minimum value */
+#define MIN(a, b) ((a) < (b) ? (a) : (b))
 
 /**********************************************************************************/
 /*                                                                                */
