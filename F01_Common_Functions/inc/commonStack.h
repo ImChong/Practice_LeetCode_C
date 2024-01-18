@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:36:39
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-18 23:15:33
+ * @LastEditTime : 2024-01-19 06:08:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -32,19 +32,19 @@ typedef struct {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-Stack *Stack_Init(int capacity);    /* 创建栈 */
-void Stack_Push(Stack *obj, int x); /* 入栈 */
-void Stack_Pop(Stack *obj);         /* 出栈 */
-int Stack_Top(Stack *obj);          /* 查看栈顶元素 */
-bool Stack_IsEmpty(Stack *obj);     /* 判断栈是否为空 */
-bool Stack_IsFull(Stack *obj);      /* 判断栈是否为满 */
+Stack *Stack_Init(int capacity);    /* Initialize stack */
+void Stack_Push(Stack *obj, int x); /* Push element x onto stack */
+void Stack_Pop(Stack *obj);         /* Pop an element from the stack */
+int Stack_Top(Stack *obj);          /* Check the top element of the stack */
+bool Stack_IsEmpty(Stack *obj);     /* Check whether the stack is empty */
+bool Stack_IsFull(Stack *obj);      /* Check whether the stack is full */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void Stack_Print(Stack *obj); /* 打印栈 */
-void Stack_Free(Stack *obj);  /* 释放栈 */
+void Stack_Print(Stack *obj); /* Print stack */
+void Stack_Free(Stack *obj);  /* Free stack */
 
 #endif /* F01_COMMON_FUNCTIONS_INC_COMMONSTACK_H_ */
