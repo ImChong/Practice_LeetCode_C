@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonStack.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonStack.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:36:39
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-06 01:03:33
+ * @LastEditTime : 2024-01-18 23:15:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -20,12 +20,12 @@
 /*                                 GLOBAL VARIABLES                               */
 /*                                                                                */
 /**********************************************************************************/
-/* 栈结构体 */
+/* Stack structure */
 typedef struct {
-    int *stk;        /* 栈数组：用于存储数据 */
-    int stkSize;     /* 栈大小：记录当前栈的大小 */
-    int stkCapacity; /* 栈容量：记录栈大小的最大值 */
-} Stack;             /* 重命名结构体为 Stack */
+    int *stk;        /* Stack array */
+    int stkSize;     /* Stack size */
+    int stkCapacity; /* Stack capacity */
+} Stack;             /* Rename struct Stack to Stack */
 
 /**********************************************************************************/
 /*                                                                                */
