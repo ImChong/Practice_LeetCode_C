@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-16 22:55:28
+ * @LastEditTime : 2024-01-18 23:07:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,6 +17,7 @@
 /*                                 GLOBAL VARIABLES                               */
 /*                                                                                */
 /**********************************************************************************/
+/* TODO: Seperate the HashNode to HashIndexNode and HashCounterNode*/
 /* Hash node structure */
 struct HashNode {
     int val;               /* Node value */
