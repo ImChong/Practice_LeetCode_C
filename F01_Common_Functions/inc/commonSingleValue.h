@@ -19,14 +19,14 @@
 /**********************************************************************************/
 #define type_of_ptr(x) _Generic((x), int* : "int*", float* : "float*", double* : "double*", default : "other")
 #define type_of(x) _Generic((x), int : "int", float : "float", double : "double", default : type_of_ptr(x))
-#define MAX(a, b) ((a) > (b) ? (a) : (b)) /* 取最大值 */
-#define MIN(a, b) ((a) < (b) ? (a) : (b)) /* 取最小值 */
+#define MAX(a, b) ((a) > (b) ? (a) : (b)) /* Get maximum value */
+#define MIN(a, b) ((a) < (b) ? (a) : (b)) /* Get minimum value */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-int Validate_SingleValue(char testNum, int expect, int actual); /* 验证单个值 */
+int Validate_SingleValue(char testNum, int expect, int actual); /* Validate single value */
 
 #endif /* F01_COMMON_FUNCTIONS_INC_COMMONSINGLEVALUE_H_ */
