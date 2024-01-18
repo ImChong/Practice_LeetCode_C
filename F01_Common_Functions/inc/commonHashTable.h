@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-18 23:09:42
+ * @LastEditTime : 2024-01-18 23:11:38
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,7 +19,7 @@
 /**********************************************************************************/
 /* TODO: Seperate the HashNode to HashIndexNode and HashCounterNode*/
 /* Hash node structure */
-struct HashNode {
+struct HashNode {   /* FIXME: remove this structure and change the related functions */
     int val;               /* Node value */
     int index;             /* Node index: set to -1 if not needed */
     int counter;           /* Node counter: set to 1 if index is set */
