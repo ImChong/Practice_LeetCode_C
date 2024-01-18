@@ -32,23 +32,23 @@ typedef struct {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *pBuff, int16_t buffLen); /* 初始化环形buffer */
-int16_t RingBuffer_AddByte(RingBuffer *pRing, uint8_t byte);   /* 向环形buffer中添加一个字节 */
-int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte); /* 从环形buffer中取出一个字节 */
+int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *pBuff, int16_t buffLen); /* Initialize a ring buffer */
+int16_t RingBuffer_AddByte(RingBuffer *pRing, uint8_t byte);   /* Add a byte to the ring buffer */
+int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte); /* Get a byte from the ring buffer */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void RingBuffer_Print(RingBuffer *pRing); /* 打印环形buffer中的数据 */
-void RingBuffer_Free(RingBuffer *pRing);  /* 释放环形buffer */
+void RingBuffer_Print(RingBuffer *pRing); /* Print ring buffer */
+void RingBuffer_Free(RingBuffer *pRing);  /* Free ring buffer */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void Validate_RingBuffer(void);
+void Validate_RingBuffer(void); /* Validate ring buffer */
 
 #endif /* F01_COMMON_FUNCTIONS_INC_COMMONRINGBUFFER_H_ */
