@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:22:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-17 10:33:28
+ * @LastEditTime : 2024-01-18 23:12:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,10 +21,10 @@
 /*                                                                                */
 /**********************************************************************************/
 typedef struct {
-    uint8_t *pBuff;  /* 环形buffer数组 */
-    int16_t buffLen; /* 环形buffer长度 */
-    int16_t dataLen; /* 环形buffer中数据总长度 */
-    int16_t dataIdx; /* 环形buffer的数据头指针 */
+    uint8_t *pBuff;  /* Ring buffer array */
+    int16_t buffLen; /* Ring buffer length */
+    int16_t dataLen; /* Ring buffer data length */
+    int16_t dataIdx; /* Ring buffer data index */
 } RingBuffer;
 
 /**********************************************************************************/
