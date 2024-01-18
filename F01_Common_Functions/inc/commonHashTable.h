@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-18 23:07:31
+ * @LastEditTime : 2024-01-18 23:09:42
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -23,6 +23,20 @@ struct HashNode {
     int val;               /* Node value */
     int index;             /* Node index: set to -1 if not needed */
     int counter;           /* Node counter: set to 1 if index is set */
+    struct HashNode *next; /* Next node */
+};
+
+/* Hash node structure with index matters */
+struct HashIndexNode {
+    int val;               /* Node value */
+    int index;             /* Node index */
+    struct HashNode *next; /* Next node */
+};
+
+/* Hash node structure with counter matters */
+struct HashCounterNode {
+    int val;               /* Node value */
+    int counter;           /* Node counter */
     struct HashNode *next; /* Next node */
 };
 
