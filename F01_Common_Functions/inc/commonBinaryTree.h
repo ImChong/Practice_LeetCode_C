@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-08 09:53:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 11:22:53
+ * @LastEditTime : 2024-01-19 08:42:30
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -85,8 +85,11 @@ void BTree_ListQueueFree(TreeLkListQueue *queue);                      /* Free q
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
+/* Pre-order traversal */
 int *BTree_PreOrderTraversal(struct TreeNode *root, int *returnSize);
+/* In-order traversal */
 int *BTree_InOrderTraversal(struct TreeNode *root, int *returnSize);
+/* Post-order traversal */
 int *BTree_PostOrderTraversal(struct TreeNode *root, int *returnSize);
 /* Level order traversal from top to bottom */
 int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
