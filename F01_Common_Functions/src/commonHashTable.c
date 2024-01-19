@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-19 09:05:47
+ * @LastEditTime : 2024-01-20 00:59:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -55,23 +55,33 @@ STATIC_FUNC int getHashSlot(struct HashTable *table, int value) {
 /**
  * @description: 插入哈希元素
  * =================================================================================
- * @param {HashTable} *table    哈希表
- * @param {int} value             元素值
- * @param {int} index           元素索引（输入-1如果不需要索引）
+ * @param {HashTable} *table        哈希表
+ * @param {int} value               元素值
+ * @param {int} index_or_counter    元素索引或者元素个数
+ * @param {int} isCounter           是否是元素个数
  * @return {void}
  */
 void HashTable_Insert(struct HashTable *table, int value, int index_or_counter, int isCounter) {
-    /* FIXME: Change this function based on leetcode questions */
-    int slot = value % table->size;
-    struct HashNode *node = (struct HashNode *)malloc(sizeof(struct HashNode));
-    node->value = value;
+    int slot = getHashSlot(table, value);
+    struct HashNode *currentNode = table->slots[slot];
     if (isCounter) {
-        node->counter = index_or_counter;
-    } else {
-        node->index = index_or_counter;
+        while (currentNode) {
+            if (currentNode->value == value) {
+                currentNode->counter += index_or_counter;
+                return;
+            }
+            currentNode = currentNode->next;
+        }
     }
-    node->next = table->slots[slot];
-    table->slots[slot] = node;
+    struct HashNode *newNode = (struct HashNode *)malloc(sizeof(struct HashNode));
+    newNode->value = value;
+    if (isCounter) {
+        newNode->counter = index_or_counter;
+    } else {
+        newNode->index = index_or_counter;
+    }
+    newNode->next = table->slots[slot];
+    table->slots[slot] = newNode;
 }
 
 /**
