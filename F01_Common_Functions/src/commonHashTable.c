@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 16:57:59
+ * @LastEditTime : 2024-01-19 08:38:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -45,33 +45,33 @@ struct HashTable *HashTable_Init(int size) {
  * @description: 获取元素值在哈希表中的槽位
  * =================================================================================
  * @param {HashTable} *table    哈希表
- * @param {int} val             元素值
+ * @param {int} value             元素值
  * @return {int} slot           槽位
  */
-STATIC_FUNC int getHashSlot(struct HashTable *table, int val) {
-    return abs(val) % table->size;      /* 获取元素值在哈希表中的槽位 */
+STATIC_FUNC int getHashSlot(struct HashTable *table, int value) {
+    return abs(value) % table->size;      /* 获取元素值在哈希表中的槽位 */
 }
 
 /**
  * @description: 插入哈希元素
  * =================================================================================
  * @param {HashTable} *table    哈希表
- * @param {int} val             元素值
+ * @param {int} value             元素值
  * @param {int} index           元素索引（输入-1如果不需要索引）
  * @return {void}
  */
-void HashTable_Insert(struct HashTable *table, int val, int index) {
-    int slot = getHashSlot(table, val);     /* 获取元素值在哈希表中的槽位 */
+void HashTable_Insert(struct HashTable *table, int value, int index) {
+    int slot = getHashSlot(table, value);     /* 获取元素值在哈希表中的槽位 */
     struct HashNode *currentNode = table->hashSlots[slot];      /* 获取哈希表的哈希节点 */
     while (currentNode) {       /* 如果存在哈希节点，则遍历哈希节点 */
-        if (currentNode->val == val && currentNode->index == index) {       /* 如果哈希节点的键等于 val */
+        if (currentNode->value == value && currentNode->index == index) {       /* 如果哈希节点的键等于 value */
             currentNode->counter++;     /* 元素个数 + 1 */
             return;     /* 返回 */
         }
         currentNode = currentNode->next;        /* 否则，将哈希节点指向下一个节点 */
     }
     struct HashNode *newNode = (struct HashNode *)malloc(sizeof(struct HashNode));  /* 为新节点分配空间 */
-    newNode->val = val;     /* 设置新节点的值 */
+    newNode->value = value;     /* 设置新节点的值 */
     newNode->counter = 1;       /* 元素个数初始化为 1 */
     newNode->index = index;     /* 设置新节点的索引 */
     newNode->next = table->hashSlots[slot];     /* 将新节点的下一个节点指向哈希表的哈希节点 */
@@ -82,15 +82,15 @@ void HashTable_Insert(struct HashTable *table, int val, int index) {
  * @description: 查找哈希元素
  * =================================================================================
  * @param {HashTable} *table    哈希表
- * @param {int} val             元素值
+ * @param {int} value             元素值
  * @return {int} counter        元素个数
  */
-int HashTable_Search(struct HashTable *table, int val) {
-    int slot = getHashSlot(table, val);     /* 获取元素值在哈希表中的槽位 */
+int HashTable_Search(struct HashTable *table, int value) {
+    int slot = getHashSlot(table, value);     /* 获取元素值在哈希表中的槽位 */
     struct HashNode *currentNode = table->hashSlots[slot];      /* 获取哈希表的哈希节点 */
     int counter = 0;        /* 元素个数 */
     while (currentNode) {       /* 如果存在哈希节点，则遍历哈希节点 */
-        if (currentNode->val == val) {      /* 如果哈希节点的键等于 val */
+        if (currentNode->value == value) {      /* 如果哈希节点的键等于 value */
             counter += currentNode->counter;        /* 计算元素个数 */
         }
         currentNode = currentNode->next;        /* 否则，将哈希节点指向下一个节点 */
@@ -102,15 +102,15 @@ int HashTable_Search(struct HashTable *table, int val) {
  * @description: 删除哈希元素
  * =================================================================================
  * @param {HashTable} *table    哈希表
- * @param {int} val             元素值
+ * @param {int} value             元素值
  * @return {void}
  */
-void HashTable_Remove(struct HashTable *table, int val) {
-    int slot = getHashSlot(table, val);     /* 获取元素值在哈希表中的槽位 */
+void HashTable_Remove(struct HashTable *table, int value) {
+    int slot = getHashSlot(table, value);     /* 获取元素值在哈希表中的槽位 */
     struct HashNode *currentNode = table->hashSlots[slot];      /* 获取哈希表的哈希节点 */
     struct HashNode *prevNode = NULL;       /* 前一个节点 */
     while (currentNode) {       /* 如果存在哈希节点，则遍历哈希节点 */
-        if (currentNode->val == val) {      /* 如果哈希节点的键等于 val */
+        if (currentNode->value == value) {      /* 如果哈希节点的键等于 value */
             if (prevNode) {     /* 如果前一个节点存在 */
                 prevNode->next = currentNode->next;     /* 将前一个节点的下一个节点指向当前节点的下一个节点 */
             } else {        /* 如果前一个节点不存在 */
@@ -142,9 +142,9 @@ void HashTable_Print(struct HashTable *table) {
         struct HashNode *currentNode = table->hashSlots[i];
         while (currentNode) {
             if (currentNode->index == -1) {
-                printf("%d (count: %d)", currentNode->val, currentNode->counter);
+                printf("%d (count: %d)", currentNode->value, currentNode->counter);
             } else {
-                printf("%d (index: %d)", currentNode->val, currentNode->index);
+                printf("%d (index: %d)", currentNode->value, currentNode->index);
             }
             printf(" -> ");
             currentNode = currentNode->next;
