@@ -22,8 +22,6 @@
 #define COMMON_OK 0
 #define COMMON_TRUE 1
 #define COMMON_FALSE 0
-#define SORT_TRUE COMMON_TRUE
-#define SORT_FALSE COMMON_FALSE
 
 /* Variable type macro */
 #define STATIC static

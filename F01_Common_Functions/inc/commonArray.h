@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-09 17:28:45
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 10:52:20
+ * @LastEditTime : 2024-01-20 00:47:35
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,6 +11,17 @@
  */
 #ifndef F01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_
 #define F01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_
+
+/* Common function header file (通用头文件) */
+#include "commonTypeDef.h"
+
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO CONSTANTS                                 */
+/*                                                                                */
+/**********************************************************************************/
+#define SORT_TRUE COMMON_TRUE
+#define SORT_FALSE COMMON_FALSE
 
 /**********************************************************************************/
 /*                                                                                */
