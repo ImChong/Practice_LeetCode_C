@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-19 09:03:11
+ * @LastEditTime : 2024-01-20 08:25:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,12 +19,12 @@
 /**********************************************************************************/
 /* Hash node structure */
 struct HashNode {
-    int value;               /* Node value */
+    int value;              /* Node value */
     union {
-        int index;           /* Node index */
-        int counter;         /* Node counter */
+        int index;          /* Node index */
+        int counter;        /* Node counter */
     };
-    struct HashNode *next; /* Next node */
+    struct HashNode *next;  /* Next node */
 };
 
 /* Hash table structure */
