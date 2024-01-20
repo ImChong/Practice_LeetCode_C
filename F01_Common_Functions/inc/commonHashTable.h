@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:35:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-20 08:25:04
+ * @LastEditTime : 2024-01-20 08:29:43
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,11 +12,18 @@
 #ifndef F01_COMMON_FUNCTIONS_INC_COMMONHASHTABLE_H_
 #define F01_COMMON_FUNCTIONS_INC_COMMONHASHTABLE_H_
 
+/* Common function header file (通用头文件) */
+#include "commonTypeDef.h"
+
 /**********************************************************************************/
 /*                                                                                */
 /*                               STRUCT DEFINITION                                */
 /*                                                                                */
 /**********************************************************************************/
+/* Whether the HashNode stores counter, if not, it stores index */
+#define COUNTER_TRUE COMMON_TRUE
+#define COUNTER_FALSE COMMON_FALSE
+
 /* Hash node structure */
 struct HashNode {
     int value;              /* Node value */
