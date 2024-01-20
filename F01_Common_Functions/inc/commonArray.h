@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-09 17:28:45
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-20 00:47:35
+ * @LastEditTime : 2024-01-20 08:30:39
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -20,6 +20,7 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
+/* Whether the array is need to be sorted before comparing */
 #define SORT_TRUE COMMON_TRUE
 #define SORT_FALSE COMMON_FALSE
 
