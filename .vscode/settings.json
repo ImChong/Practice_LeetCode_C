@@ -6,7 +6,7 @@
         "C_Cpp.default.compilerPath": "/usr/bin/gcc"                                    /* 将此处修改为本地 gcc 地址*/
     },
     "code-runner.executorMap": {
-        "c": "cd $dir && gcc -I$workspaceRoot/F01_Common_Functions/inc/ -I$workspaceRoot/F01_Common_Functions/inc/commonDef/ -I$dirWithoutTrailingSlash/cfg/ -I$dirWithoutTrailingSlash/inc/ $workspaceRoot/F01_Common_Functions/src/*.c $dirWithoutTrailingSlash/src/*.c main.c -o main.exe && $dirmain.exe)"
+        "c": "cd $dir && gcc -I$workspaceRoot/F01_Common_Functions/inc/ -I$workspaceRoot/F01_Common_Functions/inc/commonDef/ -I$dirWithoutTrailingSlash/cfg/ -I$dirWithoutTrailingSlash/inc/ $workspaceRoot/F01_Common_Functions/src/*.c $dirWithoutTrailingSlash/src/*.c main.c -o main.exe && $dirmain.exe"
         /*
             cd $dir
             &&
