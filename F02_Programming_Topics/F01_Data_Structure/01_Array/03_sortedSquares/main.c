@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 02:16:48
+ * @LastEditTime : 2024-01-21 01:43:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -15,7 +15,6 @@
 /* Standard header file (标准头文件) */
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
 #include "commonArray.h"
 /* solution method configuration header file (解题方法配置文件) */
 // #include "methodCfg"     /* Uncomment this line if solution has multiple methods */
