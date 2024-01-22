@@ -75,7 +75,7 @@ void Test1(void) {
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入: password = "lrloseumgh", target = 6
  * 输出: "umghlrlose"
  * =================================================================================

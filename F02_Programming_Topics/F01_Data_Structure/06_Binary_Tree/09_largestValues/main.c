@@ -278,7 +278,7 @@ void Test1(void) {
 }
 
 /**
- * @description: 测试 2 - [1, 2, 3]
+ * @description: Test 2 - [1, 2, 3]
  *    1
  *   / \
  *  2   3

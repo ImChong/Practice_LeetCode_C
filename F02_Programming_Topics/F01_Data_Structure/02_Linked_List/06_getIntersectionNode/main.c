@@ -100,7 +100,7 @@ void Test1(void) {
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * listA: 0 -> 9 -> 1 -> 2 -> 4
  * listB: 3 -> 2 -> 4
  * expected: 2

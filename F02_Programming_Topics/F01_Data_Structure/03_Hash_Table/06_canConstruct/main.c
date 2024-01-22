@@ -50,7 +50,7 @@ void Test1(void) {
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入：ransomNote = "aa", magazine = "ab"
  * 输出：false
  * =================================================================================

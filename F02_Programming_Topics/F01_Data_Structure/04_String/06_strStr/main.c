@@ -77,7 +77,7 @@ void Test1(void) {
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * haystack = "leetcode", needle = "leeto"
  * 输出：-1
  * =================================================================================

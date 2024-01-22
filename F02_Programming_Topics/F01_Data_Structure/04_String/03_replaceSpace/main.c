@@ -75,7 +75,7 @@ void Test1(void) {
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入：path = "my.name.is.carl"
  * 输出："my name is carl"
  * =================================================================================
