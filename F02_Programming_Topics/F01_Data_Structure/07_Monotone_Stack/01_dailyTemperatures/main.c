@@ -31,7 +31,7 @@ int* dailyTemperatures(int* temperatures, int temperaturesSize, int* returnSize)
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * =================================================================================
  * @return {void}
  */

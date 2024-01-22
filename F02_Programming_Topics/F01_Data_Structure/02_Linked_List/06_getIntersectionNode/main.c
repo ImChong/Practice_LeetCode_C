@@ -64,7 +64,7 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * listA: 4 -> 1 -> 8 -> 4 -> 5
  * listB: 5 -> 0 -> 1 -> 8 -> 4 -> 5
  * expected: 8

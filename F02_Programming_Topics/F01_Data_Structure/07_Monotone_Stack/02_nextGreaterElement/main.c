@@ -31,7 +31,7 @@ int *nextGreaterElement(int *nums1, int nums1Size, int *nums2, int nums2Size, in
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * =================================================================================
  * @return {void}
  */

@@ -49,7 +49,7 @@ struct ListNode* mergeKLists(struct ListNode** lists, int listsSize){
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * =================================================================================
  * @return {void}
  */

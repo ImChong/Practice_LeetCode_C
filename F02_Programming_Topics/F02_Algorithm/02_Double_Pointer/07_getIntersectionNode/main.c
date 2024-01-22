@@ -36,7 +36,7 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * =================================================================================
  * @return {void}
  */

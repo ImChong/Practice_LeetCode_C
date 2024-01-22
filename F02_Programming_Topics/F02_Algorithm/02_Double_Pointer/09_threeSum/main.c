@@ -38,7 +38,7 @@ int **threeSum(int *nums, int numsSize, int *returnSize, int **returnColumnSizes
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * =================================================================================
  * @return {void}
  */
