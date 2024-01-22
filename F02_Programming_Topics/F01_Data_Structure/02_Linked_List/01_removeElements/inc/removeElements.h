@@ -7,5 +7,8 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : 
  */
+
+
+struct ListNode *removeElements(struct ListNode *head, int val);
