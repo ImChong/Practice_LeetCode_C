@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 12:30:36
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 10:50:13
+ * @LastEditTime : 2024-01-23 00:05:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,18 +28,6 @@
 #define STATIC_FUNC static
 #define INLINE inline
 #define INLINE_FUNC inline
-
-/* Data type macro */
-/*
- * typedef signed char             int8_t;
- * typedef unsigned char           uint8_t;
- * typedef short                   int16_t;
- * typedef unsigned short          uint16_t;
- * typedef int                     int32_t;
- * typedef unsigned                uint32_t;
- * typedef long long               int64_t;
- * typedef unsigned long long      uint64_t;
- */
 
 /**********************************************************************************/
 /*                                                                                */
