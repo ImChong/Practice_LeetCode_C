@@ -29,5 +29,12 @@
 #define COMMON_STACK_EN                 0           /* 通用栈编译使能  1: enable, 0: disable */
 #define COMMON_STRING_EN                0           /* 通用字符串编译使能  1: enable, 0: disable */
 
+/* solution method configuration for common binary tree module (通用二叉树模块解题方法配置) */
+#if COMMON_BINARY_TREE_EN
+    #define BTREE_ORDER_TRAVERSAL_RECURSION_METHOD_EN 1 /* 二叉树递归遍历方法编译使能  1: enable, 0: disable */
+    #define BTREE_ORDER_TRAVERSAL_ITERATION_METHOD_EN 0 /* 二叉树迭代遍历方法编译使能  1: enable, 0: disable */
+    #define BTREE_LEVEL_ORDER_ARRAY_METHOD_EN 1         /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
+    #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN 0        /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
+#endif /* COMMON_BINARY_TREE_EN */
 
 #endif  /* __COMPILE_CFG_H */
