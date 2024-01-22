@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-23 00:17:26
+ * @LastEditTime : 2024-01-23 00:19:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -26,6 +26,8 @@
 /**********************************************************************************/
 /**
  * @description: Test 1
+ * Input: DummyLinkedList = [1, 2, 3], DeleteAtIndex = 0
+ * Output: [2, 3]
  * =================================================================================
  * @return {void}
  */
@@ -51,6 +53,8 @@ void Test1(void) {
 
 /**
  * @description: Test 2
+ * Input: DummyLinkedList = [1], DeleteAtIndex = 0
+ * Output: []
  * =================================================================================
  * @return {void}
  */
@@ -72,6 +76,8 @@ void Test2(void) {
 
 /**
  * @description: Test 3
+ * Input: DummyLinkedList = [1, 2, 1, 2, 1, 2], DeleteValue = 2
+ * Output: [1, 1, 1]
  * =================================================================================
  * @return {void}
  */
@@ -98,6 +104,13 @@ void Test3(void) {
     DLinkedList_Free(actualDummy);
 }
 
+/**
+ * @description: Test 4
+ * Input: DummyLinkedList = [1, 2, 1, 2, 1, 2], GetValueIndexes = 2
+ * Output: [1, 3, 5]
+ * =================================================================================
+ * @return {void}
+ */
 void Test4(void) {
     /* Function call (函数调用) */
     DummyLinkedList *actualDummy = DLinkedList_Init();
@@ -127,7 +140,7 @@ void Test4(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

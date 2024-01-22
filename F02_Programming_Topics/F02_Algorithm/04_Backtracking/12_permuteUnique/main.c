@@ -11,7 +11,7 @@ int** permuteUnique(int* nums, int numsSize, int* returnSize, int** returnColumn
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-/* NOTE：主函数 */
+/* NOTE：Main function, entry of program. */
 int main(int argc, const char* argv[]) {
 
     return 0;
