@@ -95,7 +95,7 @@ void Test2(void) {
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入: s = "abcabcabcabc"
  * 输出: true
  * =================================================================================

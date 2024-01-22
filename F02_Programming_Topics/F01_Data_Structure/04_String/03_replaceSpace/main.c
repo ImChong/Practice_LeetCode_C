@@ -97,7 +97,7 @@ void Test2(void) {
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：path = "c.language.hello.world"
  * 输出："c language hello world"
  * =================================================================================

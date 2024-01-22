@@ -70,7 +70,7 @@ void Test2(void) {
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：ransomNote = "aa", magazine = "aab"
  * 输出：true
  * =================================================================================

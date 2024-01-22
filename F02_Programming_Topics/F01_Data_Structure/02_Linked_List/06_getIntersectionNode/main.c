@@ -134,7 +134,7 @@ void Test2(void) {
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * listA: 2 -> 6 -> 4
  * listB: 1 -> 5
  * expected: NULL
