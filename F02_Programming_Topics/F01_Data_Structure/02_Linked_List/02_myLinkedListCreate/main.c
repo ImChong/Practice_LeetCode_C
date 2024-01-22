@@ -43,7 +43,7 @@ void Test1(void) {
     /* Validate result (验证函数调用结果) */
     Validate_DLinkedList('1', expectDummy, actualDummy);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     DLinkedList_Free(actualDummy);
 }
 
@@ -77,7 +77,7 @@ void Test2(void) {
     /* Validate result (验证函数调用结果) */
     Validate_DLinkedList('2', expectDummy, actualDummy);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     DLinkedList_Free(actualDummy);
 }
 
@@ -108,7 +108,7 @@ void Test3(void) {
     /* Validate result (验证函数调用结果) */
     Validate_DLinkedList('3', expectDummy, actualDummy);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     DLinkedList_Free(actualDummy);
 }
 

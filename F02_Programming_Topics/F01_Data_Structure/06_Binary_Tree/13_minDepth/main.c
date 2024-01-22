@@ -65,7 +65,7 @@ void Test1(void) {
     /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, actual);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     free(root->right->right);
     free(root->right->left);
     free(root->right);
@@ -92,7 +92,7 @@ void Test2(void) {
     /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, actual);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     free(root->right);
     free(root);
 }

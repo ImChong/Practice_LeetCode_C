@@ -201,7 +201,7 @@ void Test1(void) {
     /* 测试输出结果 */
     Validate_Array2D('1', expected, result, returnSize, returnColumnSizes);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     Array_Free2D(expected, returnSize);
     Array_Free2D(result, returnSize);
     free(returnColumnSizes);
@@ -252,7 +252,7 @@ void Test2(void) {
     /* 测试输出结果 */
     Validate_Array2D('2', expected, result, returnSize, returnColumnSizes);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     Array_Free2D(expected, returnSize);
     Array_Free2D(result, returnSize);
     free(returnColumnSizes);
@@ -362,7 +362,7 @@ void Test3(void) {
     /* 测试输出结果 */
     Validate_Array2D('3', expected, result, returnSize, returnColumnSizes);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     Array_Free2D(expected, returnSize);
     Array_Free2D(result, returnSize);
     free(returnColumnSizes);

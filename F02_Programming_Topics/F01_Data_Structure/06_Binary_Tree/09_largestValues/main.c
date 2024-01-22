@@ -272,7 +272,7 @@ void Test1(void) {
     print1DArray(result, ARR_SIZE(result));
     Validate_SingleValue('1', expected, result, returnSize);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     BTree_Free(root);
     free(result);
 }
@@ -309,7 +309,7 @@ void Test2(void) {
     print1DArray(result, ARR_SIZE(result));
     Validate_SingleValue('2', expected, result, returnSize);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     BTree_Free(root);
     free(result);
 }

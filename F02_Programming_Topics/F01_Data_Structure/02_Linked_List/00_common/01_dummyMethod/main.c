@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-23 00:13:37
+ * @LastEditTime : 2024-01-23 00:14:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -45,7 +45,7 @@ void Test1(void) {
     /* Validate result (验证函数调用结果) */
     Validate_DLinkedList('1', expectDummy, actualDummy);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     DLinkedList_Free(actualDummy);
 }
 
@@ -66,7 +66,7 @@ void Test2(void) {
     /* Validate result (验证函数调用结果) */
     Validate_DLinkedList('2', expectDummy, actualDummy);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     DLinkedList_Free(actualDummy);
 }
 
@@ -94,7 +94,7 @@ void Test3(void) {
     /* Validate result (验证函数调用结果) */
     Validate_DLinkedList('3', expectDummy, actualDummy);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     DLinkedList_Free(actualDummy);
 }
 
@@ -116,7 +116,7 @@ void Test4(void) {
     /* Validate result (验证函数调用结果) */
     Validate_Array('4', expectIndexes, ARR_SIZE(expectIndexes), actualIndexes, actualReturnSize, COMMON_FALSE);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     DLinkedList_Free(actualDummy);
     free(actualIndexes);
 }
