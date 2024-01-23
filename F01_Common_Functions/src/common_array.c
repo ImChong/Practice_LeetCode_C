@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-23 10:11:14
+ * @LastEditTime : 2024-01-24 00:35:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,13 +13,12 @@
 #include "compile_cfg.h"
 #if COMMON_ARRAY_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
-#include "commonArray.h"
+#include "F01_Common_Functions/inc/common_array.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonSingleValue.h"
-#include "common_type_def.h"
+#include "F01_Common_Functions/inc/commonSingleValue.h"
 
 /**********************************************************************************/
 /*                                                                                */

@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common array header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_ARRAY_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_ARRAY_H_
 
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_def/common_type_def.h"
@@ -63,4 +63,4 @@ int Validate_Array(char testNum, int *expectArr, int expectLen, int *actualArr, 
 int Validate_Array2D(char testNum, int **expect2DArr, int expectRtnRowSize, int *expectRtnColSize, int **actual2DArr,
                      int actualRtnRowSize, int *actualRtnColSize, int needSort);
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_ARRAY_H_ */
