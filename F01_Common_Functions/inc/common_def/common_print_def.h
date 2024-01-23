@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common print definition header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONPRINTDEF_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONPRINTDEF_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_DEF_COMMON_PRINT_DEF_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_DEF_COMMON_PRINT_DEF_H_
 
 /* Standard header file (标准头文件) */
 #include <stdio.h>
@@ -26,4 +26,4 @@
 /* Rename printf function to ignore the \r\n at the end of the string (重命名printf函数，忽略字符串末尾的\r\n) */
 #define INFO(format, ...) printf(format "\r\n", ##__VA_ARGS__)
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONPRINTDEF_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_DEF_COMMON_PRINT_DEF_H_ */
