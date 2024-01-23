@@ -7,11 +7,11 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : solution header file - binarySearch
+ * @Description  : solution header file - BinarySearch
  */
 #ifndef F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_01_BINARYSEARCH_INC_BINARY_SEARCH_H_
 #define F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_01_BINARYSEARCH_INC_BINARY_SEARCH_H_
 
-int binarySearch(int *nums, int numsSize, int target);
+int BinarySearch(int *nums, int numsSize, int target);
 
 #endif /* F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_01_BINARYSEARCH_INC_BINARY_SEARCH_H_ */

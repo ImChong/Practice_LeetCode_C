@@ -36,7 +36,7 @@ void Test1(void) {
     /* Function call (函数调用) */
     int nums[] = {-1, 0, 3, 5, 9, 12}; /* Sorted array */
     int target = 9;
-    int actual = binarySearch(nums, ARR_SIZE(nums), target);
+    int actual = BinarySearch(nums, ARR_SIZE(nums), target);
 
     /* Expect result (期望结果) */
     int expect = 4;
@@ -56,7 +56,7 @@ void Test2(void) {
     /* Function call (函数调用) */
     int nums[] = {-1, 0, 3, 5, 9, 12}; /* Sorted array */
     int target = 2;
-    int actual = binarySearch(nums, ARR_SIZE(nums), target);
+    int actual = BinarySearch(nums, ARR_SIZE(nums), target);
 
     /* Expect result (期望结果) */
     int expect = -1;
@@ -76,7 +76,7 @@ void Test3(void) {
     /* Function call (函数调用) */
     int nums[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; /* Sorted array */
     int target = 5;
-    int actual = binarySearch(nums, ARR_SIZE(nums), target);
+    int actual = BinarySearch(nums, ARR_SIZE(nums), target);
 
     /* Expect result (期望结果) */
     int expect = 4;
