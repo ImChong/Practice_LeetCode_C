@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common type definition header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONTYPEDEF_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONTYPEDEF_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_DEF_COMMON_TYPE_DEF_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_DEF_COMMON_TYPE_DEF_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -45,4 +45,4 @@
         }                        \
     } while (0)
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONDEF_COMMONTYPEDEF_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_DEF_COMMON_TYPE_DEF_H_ */
