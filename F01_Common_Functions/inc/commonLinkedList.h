@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:10:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-17 10:31:13
+ * @LastEditTime : 2024-01-23 09:28:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,6 +38,8 @@ struct ListNode *LinkedList_AddAtIndex(struct ListNode *head, int index, int val
 struct ListNode *LinkedList_DeleteAtIndex(struct ListNode *head, int index);
 /* Delete all the nodes with the given value */
 struct ListNode *LinkedList_DeleteValue(struct ListNode *head, int val);
+/* Delete the first node with the given value */
+struct ListNode *LinkedList_DeleteValueOnce(struct ListNode *head, int val);
 /* Get the value of the index-th node in the linked list */
 int LinkedList_GetValueAtIndex(struct ListNode *head, int index);
 /* Get all indexes of the value in the linked list */
