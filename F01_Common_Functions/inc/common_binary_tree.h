@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common binary tree header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONBINARYTREE_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONBINARYTREE_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_BINARY_TREE_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_BINARY_TREE_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -96,4 +96,4 @@ int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColum
 /* Level order traversal from bottom to top */
 int **BTree_LevelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColumnSizes);
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONBINARYTREE_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_BINARY_TREE_H_ */
