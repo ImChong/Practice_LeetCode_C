@@ -40,7 +40,7 @@ foreach(TARGET ${TEST_TARGETS})
     # Set the target source file
     set(TARGET_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/src/${TARGET}.c)
     # Set the target test name
-    set(TARGET_TEST_NAME ${TARGET}Test)
+    set(TARGET_TEST_NAME ${TARGET}_test)
     # Set the target test source file
     set(TARGET_TEST_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/test/${TARGET_TEST_NAME}.cc)
 
