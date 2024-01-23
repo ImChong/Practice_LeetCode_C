@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-23 09:24:58
+ * @LastEditTime : 2024-01-23 09:32:27
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,7 +25,7 @@
 /**********************************************************************************/
 /**
  * @description: Test 1
- * Input: LinkedList = [1, 2, 6, 3, 4, 5, 6], RemoveValue = 6
+ * Input: LinkedList = [1, 2, 6, 3, 4, 5, 6], Target = 6
  * Output: [1, 2, 3, 4, 5]
  * =================================================================================
  * @return {void}
@@ -33,27 +33,25 @@
 void Test1(void) {
     /* Function call (函数调用) */
     int nums[] = {1, 2, 6, 3, 4, 5, 6};
-    int numsSize = ARR_SIZE(nums);
-    struct ListNode *head = LinkedList_ArrayInit(nums, numsSize);
-    int removeValue = 6;
-    struct ListNode *ansList = removeElements(head, removeValue);
+    struct ListNode *linkedListHead = LinkedList_ArrayInit(nums, ARR_SIZE(nums));
+    int target = 6;
+    struct ListNode *ansList = removeElements(linkedListHead, target);
 
     /* Expect result (期望结果) */
     int expectNums[] = {1, 2, 3, 4, 5};
-    int expectLen = ARR_SIZE(expectNums);
-    struct ListNode *expectList = LinkedList_ArrayInit(expectNums, expectLen);
+    struct ListNode *expectList = LinkedList_ArrayInit(expectNums, ARR_SIZE(expectNums));
 
     /* Validate result (验证函数调用结果) */
     Validate_LinkedList('1', expectList, ansList);
 
     /* Free memory (释放内存) */
-    LinkedList_Free(head);
+    LinkedList_Free(linkedListHead);
     LinkedList_Free(expectList);
 }
 
 /**
  * @description: Test 2
- * Input: LinkedList = [1, 1, 1, 1, 1], RemoveValue = 1
+ * Input: LinkedList = [1, 1, 1, 1, 1], Target = 1
  * Output: []
  * =================================================================================
  * @return {void}
@@ -62,9 +60,9 @@ void Test2(void) {
     /* Function call (函数调用) */
     int nums[] = {1, 1, 1, 1, 1};
     int numsSize = ARR_SIZE(nums);
-    struct ListNode *head = LinkedList_ArrayInit(nums, numsSize);
-    int removeValue = 1;
-    struct ListNode *ansList = removeElements(head, removeValue);
+    struct ListNode *linkedListHead = LinkedList_ArrayInit(nums, numsSize);
+    int target = 1;
+    struct ListNode *ansList = removeElements(linkedListHead, target);
 
     /* Expect result (期望结果) */
     int expectNums[] = {};
@@ -75,13 +73,13 @@ void Test2(void) {
     Validate_LinkedList('2', expectList, ansList);
 
     /* Free memory (释放内存) */
-    // LinkedList_Free(head);      /* head 内存已被 removeElements 释放，故无需再释放 */
+    // LinkedList_Free(linkedListHead);      /* linkedListHead 内存已被 removeElements 释放，故无需再释放 */
     LinkedList_Free(expectList);
 }
 
 /**
  * @description: Test 3
- * Input: LinkedList = [1, 2, 3, 4, 5], RemoveValue = 6
+ * Input: LinkedList = [1, 2, 3, 4, 5], Target = 6
  * Output: [1, 2, 3, 4, 5]
  * =================================================================================
  * @return {void}
@@ -90,9 +88,9 @@ void Test3(void) {
     /* Function call (函数调用) */
     int nums[] = {1, 2, 3, 4, 5};
     int numsSize = ARR_SIZE(nums);
-    struct ListNode *head = LinkedList_ArrayInit(nums, numsSize);
-    int removeValue = 6;
-    struct ListNode *ansList = removeElements(head, removeValue);
+    struct ListNode *linkedListHead = LinkedList_ArrayInit(nums, numsSize);
+    int target = 6;
+    struct ListNode *ansList = removeElements(linkedListHead, target);
 
     /* Expect result (期望结果) */
     int expectNums[] = {1, 2, 3, 4, 5};
@@ -103,7 +101,7 @@ void Test3(void) {
     Validate_LinkedList('3', expectList, ansList);
 
     /* Free memory (释放内存) */
-    LinkedList_Free(head);
+    LinkedList_Free(linkedListHead);
     LinkedList_Free(expectList);
 }
 
