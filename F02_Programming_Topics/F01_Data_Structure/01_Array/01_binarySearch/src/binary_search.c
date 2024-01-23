@@ -11,7 +11,7 @@
  * @Description  : solution source file - binarySearch
  */
 /* solution header file (题解头文件) */
-#include "binarySearch.h"
+#include "binary_search.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
