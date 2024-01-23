@@ -7,5 +7,5 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : This file is a place holder for the dummy linked list header file
+ * @Description  : This file is a place holder for the dummy linked list header file.
  */
