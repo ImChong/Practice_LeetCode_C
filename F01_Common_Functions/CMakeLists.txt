@@ -22,17 +22,17 @@ include_directories(inc/common_def)         # Common definition header files
 
 # Create the test targets
 set(TEST_TARGETS
-    commonArray
-    commonBinaryTree
-    commonCmd
-    commonHashTable
-    commonLinkedList
-    commonLinkedListDummy
-    commonQueue
-    commonRingBuffer
-    commonSingleValue
-    commonStack
-    commonString
+    common_array
+    common_binary_tree
+    common_cmd
+    common_hash_table
+    common_linked_list
+    common_linked_list_dummy
+    common_queue
+    common_ring_buffer
+    common_single_value
+    common_stack
+    common_string
 )
 
 # Loop through each test target

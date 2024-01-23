@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonArrayTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\common_array_test.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 23:34:25
+ * @LastEditTime : 2024-01-24 00:37:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,9 +11,7 @@
  */
 extern "C" {
     /* Target header file (目标头文件) */
-    #include "commonArray.h"
-    /* Common function header file (通用头文件) */
-    #include "common_type_def.h"
+    #include "F01_Common_Functions/inc/common_array.h"
 }
 /* Google test header file (谷歌测试头文件) */
 #include "gtest/gtest.h"
