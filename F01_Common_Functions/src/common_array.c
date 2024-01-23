@@ -1,16 +1,16 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonArray.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\common_array.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-24 00:35:02
+ * @LastEditTime : 2024-01-24 00:49:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用数组源文件
  */
 /* Common function configuration file (通用函数配置文件) */
-#include "compile_cfg.h"
+#include "compile_cfg.h"    /* NOLINT */
 #if COMMON_ARRAY_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
 #include "F01_Common_Functions/inc/common_array.h"
