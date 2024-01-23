@@ -3,7 +3,7 @@ FilePath     : \Practice_LeetCode_C\.vscode\build.py
 Author       : Chong Liu
 CreateDate   : 2023-11-04 00:23:08
 LastEditors  : Chong Liu
-LastEditTime : 2024-01-10 12:00:19
+LastEditTime : 2024-01-24 00:17:57
 =================================================================================
 Copyright (c) 2023 by Chong Liu, All Rights Reserved.
 =================================================================================
@@ -38,7 +38,7 @@ if __name__ == "__main__":
         cmd = [
             gccPath,
             "-fdiagnostics-color=always",
-            "-I" + workspacePath + "/F01_Common_Functions/inc/commonDef/",
+            "-I" + workspacePath + "/F01_Common_Functions/inc/common_def/",
             "-I" + workspacePath + "/F01_Common_Functions/inc/",
             "-I" + filePath + "/cfg/",
             "-I" + filePath + "/inc/",

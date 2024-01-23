@@ -17,7 +17,7 @@ link_directories(${CMAKE_BINARY_DIR}/ThirdParty/googletest/lib)
 # Add the header files
 include_directories(cfg)                # Configuration file
 include_directories(inc)                # Header files
-include_directories(inc/commonDef)      # Common definition header files
+include_directories(inc/common_def)     # Common definition header files
 
 # Create the test targets
 set(TEST_TARGETS
