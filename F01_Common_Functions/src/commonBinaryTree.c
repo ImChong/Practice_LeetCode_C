@@ -45,7 +45,7 @@
 #include <stdlib.h>
 #include <limits.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "common_type_def.h"
 
 /**********************************************************************************/
 /*                                                                                */

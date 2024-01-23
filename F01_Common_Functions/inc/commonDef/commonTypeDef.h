@@ -1,5 +1,5 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonDef\commonTypeDef.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonDef\common_type_def.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 12:30:36
  * @LastEditors  : Chong Liu

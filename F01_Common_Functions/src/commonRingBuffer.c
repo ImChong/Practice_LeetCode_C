@@ -18,7 +18,7 @@
 #include <stdio.h>
 #include <stdint.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "common_type_def.h"
 #include "commonArray.h"
 
 /* TODO: refactor needed 重构 */

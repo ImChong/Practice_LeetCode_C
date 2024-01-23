@@ -17,7 +17,7 @@
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "common_type_def.h"
 
 /**********************************************************************************/
 /*                                                                                */

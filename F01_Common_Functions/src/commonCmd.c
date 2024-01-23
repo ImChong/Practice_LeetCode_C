@@ -15,8 +15,8 @@
 /* Header file (本文件头文件) */
 #include "commonCmd.h"
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
-#include "commonPrintDef.h"
+#include "common_type_def.h"
+#include "common_print_def.h"
 
 
 /**********************************************************************************/

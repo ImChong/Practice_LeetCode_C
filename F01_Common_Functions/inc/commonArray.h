@@ -13,7 +13,7 @@
 #define F01_COMMON_FUNCTIONS_INC_COMMONARRAY_H_
 
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "common_type_def.h"
 
 /**********************************************************************************/
 /*                                                                                */
