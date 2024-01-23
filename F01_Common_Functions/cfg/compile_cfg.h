@@ -1,11 +1,11 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\cfg\compileCfg.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\cfg\compile_cfg.h
  * @Author       : Chong Liu
- * @CreateDate   : 2023-11-23 01:23:40
+ * @CreateDate   : 2024-01-13 00:06:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 10:53:36
+ * @LastEditTime : 2024-01-24 00:11:24
  * =================================================================================
- * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
+ * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : Common function configuration file (通用函数配置文件)
  */
