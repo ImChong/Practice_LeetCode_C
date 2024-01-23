@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common function configuration file (通用函数配置文件)
  */
-#ifndef F01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_
-#define F01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_
+#ifndef F01_COMMON_FUNCTIONS_CFG_COMPILE_CFG_H_
+#define F01_COMMON_FUNCTIONS_CFG_COMPILE_CFG_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -40,4 +40,4 @@
     #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN 0
 #endif /* COMMON_BINARY_TREE_EN */
 
-#endif /* F01_COMMON_FUNCTIONS_CFG_COMPILECFG_H_ */
+#endif /* F01_COMMON_FUNCTIONS_CFG_COMPILE_CFG_H_ */
