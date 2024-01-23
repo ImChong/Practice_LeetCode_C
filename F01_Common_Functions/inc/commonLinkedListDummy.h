@@ -49,7 +49,7 @@ void DLinkedList_DeleteAtIndex(DummyLinkedList *dummyHead, int index);
 /* Delete all the nodes with the given value */
 void DLinkedList_DeleteValue(DummyLinkedList *dummyHead, int val);
 /* Delete the first node with the given value */
-void DLinkedList_DeleteValueOnce(DummyLinkedList *dummyHead, int val);
+void DLinkedList_DeleteValueOnce(DummyLinkedList *dummyHead, int val);      /* TODO */
 /* Get all the indexes of a value */
 int *DLinkedList_GetValueIndexes(DummyLinkedList *dummyHead, int val, int *returnSize);
 
