@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-13 00:47:48
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 23:44:01
+ * @LastEditTime : 2024-01-25 10:33:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,9 +11,9 @@
  */
 extern "C" {
     /* Target header file (目标头文件) */
-    #include "commonCmd.h"
+    #include "F01_Common_Functions/inc/common_cmd.h"
     /* Common function header file (通用头文件) */
-    #include "common_type_def.h"
+    #include "F01_Common_Functions/inc/common_def/common_type_def.h"
 }
 /* Google test header file (谷歌测试头文件) */
 #include "gtest/gtest.h"
