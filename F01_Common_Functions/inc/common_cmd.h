@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common command header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONCMD_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONCMD_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_CMD_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_CMD_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -19,4 +19,4 @@
 /**********************************************************************************/
 int CMD_PrintInput(int argc, const char *argv[]); /* Print input command */
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONCMD_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_CMD_H_ */

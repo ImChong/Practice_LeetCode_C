@@ -1,16 +1,16 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonCmd.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\common_cmd.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-04 08:56:01
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-25 10:34:01
+ * @LastEditTime : 2024-01-25 10:38:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用命令行指令源文件
  */
 /* Common function configuration file (通用函数配置文件) */
-#include "compile_cfg.h"
+#include "compile_cfg.h"    /* NOLINT */
 #if COMMON_CMD_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
 #include "F01_Common_Functions/inc/common_cmd.h"
