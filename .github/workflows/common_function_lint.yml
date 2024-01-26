@@ -60,8 +60,8 @@ jobs:
 
         - name: Run Cppcheck
           run: |
-            chmod +x .github/workflows/taskRunner/common_functions/runCppcheck.sh
-            .github/workflows/taskRunner/common_functions/runCppcheck.sh
+            chmod +x .github/workflows/taskRunner/common_functions/run_cppcheck.sh
+            .github/workflows/taskRunner/common_functions/run_cppcheck.sh
 
     # Job
     GoogleStyleCheck:
