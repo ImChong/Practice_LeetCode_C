@@ -11,7 +11,7 @@
  * https://programmercarl.com/0707.%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html
  */
 /* solution header file (题解头文件) */
-#include "commonLinkedListDummy.h"
+#include "F01_Common_Functions/inc/common_linked_list_dummy.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>

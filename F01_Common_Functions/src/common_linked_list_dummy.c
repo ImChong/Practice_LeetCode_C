@@ -1,19 +1,19 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonLinkedListDummy.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\common_linked_list_dummy.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-26 10:31:10
+ * @LastEditTime : 2024-01-26 10:38:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用虚拟头节点链表源文件 - 使用虚拟头节点
  */
 /* Common function configuration file (通用函数配置文件) */
-#include "compile_cfg.h"
-#if COMMON_LINKED_LIST_DUMMY_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
+#include "compile_cfg.h"        /* NOLINT */
+#if COMMON_LINKED_LIST_DUMMY_EN /* whether compile this file, this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
-#include "commonLinkedListDummy.h"
+#include "F01_Common_Functions/inc/common_linked_list_dummy.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
@@ -277,7 +277,7 @@ void Validate_DLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList
     int isSuccess = COMMON_TRUE;                                                /* 是否通过测试 */
 
     for (int i = 0; i < expect->size; i++) {                                    /* 循环比较每个节点的数值 */
-        if (DLinkedList_GetValueAtIndex(expect, i) != DLinkedList_GetValueAtIndex(actual, i)) {       /* 如果节点数值不相等 */
+        if (DLinkedList_GetValueAtIndex(expect, i) != DLinkedList_GetValueAtIndex(actual, i)) { /* 如果节点数值不相等 */
             isSuccess = COMMON_FALSE;                                                   /* 未通过测试 */
             break;                                                                      /* 跳出循环 */
         }

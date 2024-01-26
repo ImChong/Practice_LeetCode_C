@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common dummy linked list header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONLINKEDLISTDUMMY_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONLINKEDLISTDUMMY_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_LINKED_LIST_DUMMY_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_LINKED_LIST_DUMMY_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -73,4 +73,4 @@ void DLinkedList_Free(DummyLinkedList *dummyHead);
 /* Validate dummy linked list */
 void Validate_DLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual);
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONLINKEDLISTDUMMY_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_LINKED_LIST_DUMMY_H_ */
