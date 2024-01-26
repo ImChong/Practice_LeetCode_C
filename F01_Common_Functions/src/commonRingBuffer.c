@@ -3,14 +3,14 @@
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 17:00:55
+ * @LastEditTime : 2024-01-26 11:36:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用环形缓冲区源文件
  */
 /* Common function configuration file (通用函数配置文件) */
-#include "compile_cfg.h"
+#include "compile_cfg.h"        /* NOLINT */
 #if COMMON_RING_BUFFER_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
 #include "commonRingBuffer.h"

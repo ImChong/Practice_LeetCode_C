@@ -1,16 +1,16 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\00_Basics\01_Common_Func\src\commonSingleValue.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonSingleValue.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 11:55:54
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 11:14:55
+ * @LastEditTime : 2024-01-26 11:36:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用单值函数源文件
  */
 /* Common function configuration file (通用函数配置文件) */
-#include "compile_cfg.h"
+#include "compile_cfg.h"        /* NOLINT */
 #if COMMON_SINGLE_VALUE_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
 #include "commonSingleValue.h"
