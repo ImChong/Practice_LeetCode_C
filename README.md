@@ -3,10 +3,11 @@
 | Topics | Badges / URLs |
 |:-:|:-|
 | License | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
+| Code Style | [Google’s C++ style guide](https://google.github.io/styleguide/cppguide.html) ([Clang-Format Style Options](https://clang.llvm.org/docs/ClangFormatStyleOptions.html#clang-format-style-options)) |
 | Common Functions | [![CommonFunctionLints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_lint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_lint.yml) [![CommonFunctionTests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_test.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_test.yml) |
 | Programming Topics | [![ProgrammingTopicLints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/programming_topic_lint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/programming_topic_lint.yml) [![ProgrammingTopicTests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/programming_topic_test.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/programming_topic_test.yml) |
 | CodeQL | [![CodeQL](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/github-code-scanning/codeql) |
-| Code Style | [Google’s C++ style guide](https://google.github.io/styleguide/cppguide.html) ([Clang-Format Style Options](https://clang.llvm.org/docs/ClangFormatStyleOptions.html#clang-format-style-options)) |
+<!-- | Code Coverage | [![codecov](https://codecov.io/gh/ImChong/Practice_LeetCode_C/branch/master/graph/badge.svg?token=ZQZQZQZQZQ)](https://codecov.io/gh/ImChong/Practice_LeetCode_C) | -->
 
 ## Workspace Structure
 
