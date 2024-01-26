@@ -79,5 +79,5 @@ jobs:
 
         # - name: Run clang-format google style check
         #   run: |
-        #     chmod +x .github/workflows/taskRunner/common_functions/runGoogleStyleCheck.sh
-        #     .github/workflows/taskRunner/common_functions/runGoogleStyleCheck.sh
+        #     chmod +x .github/workflows/taskRunner/common_functions/run_clang_format.sh
+        #     .github/workflows/taskRunner/common_functions/run_clang_format.sh
