@@ -3,8 +3,8 @@
 | Topics | Badges / URLs |
 |:-:|:-|
 | License | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
-| Common Functions | [![CommonFunctionLints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml) [![CommonFunctionTests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml) |
-| Programming Topics | TODO |
+| Common Functions | [![CommonFunctionLints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_lint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_lint.yml) [![CommonFunctionTests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_test.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_test.yml) |
+| Programming Topics | [![ProgrammingTopicLints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/programming_topic_lint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/programming_topic_lint.yml) [![ProgrammingTopicTests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/programming_topic_test.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/programming_topic_test.yml) |
 | CodeQL | [![CodeQL](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/github-code-scanning/codeql) |
 | Code Style | [Google’s C++ style guide](https://google.github.io/styleguide/cppguide.html) ([Clang-Format Style Options](https://clang.llvm.org/docs/ClangFormatStyleOptions.html#clang-format-style-options)) |
 
@@ -58,8 +58,8 @@ C language local leetcode practice overall folder structure:
 >
 > | Workflows | Functionality | Source Code |
 > |:-:|:-:|:-:|
-> | [![Common Function Lints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncLint.yml) | Code Style Check |  [commonFuncLint.yml](.github/workflows/commonFuncLint.yml) |
-> | [![Common Function Tests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/commonFuncTest.yml) | Unit Test (Google Test) | [commonFuncTest.yml](.github/workflows/commonFuncTest.yml) |
+> | [![CommonFunctionLints](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_lint.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_lint.yml) | Code Style Check |  [commonFuncLint.yml](.github/workflows/common_functions/commonFuncLint.yml) |
+> | [![CommonFunctionTests](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_test.yml/badge.svg)](https://github.com/ImChong/Practice_LeetCode_C/actions/workflows/common_function_test.yml) | Unit Test (Google Test) | [commonFuncTest.yml](.github/workflows/common_functions/commonFuncTest.yml) |
 
 ## Code Structure of Basic Building Unit
 
