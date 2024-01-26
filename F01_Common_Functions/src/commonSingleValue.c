@@ -10,14 +10,14 @@
  * @Description  : 通用单值函数源文件
  */
 /* Common function configuration file (通用函数配置文件) */
-#include "compileCfg.h"
+#include "compile_cfg.h"
 #if COMMON_SINGLE_VALUE_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
 #include "commonSingleValue.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 
 /**********************************************************************************/
 /*                                                                                */

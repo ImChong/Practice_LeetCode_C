@@ -14,7 +14,7 @@
 #include <stdbool.h>
 #include <string.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "commonSingleValue.h"
 /* solution header file (题解头文件) */
 #include "isAnagram.h"
@@ -25,62 +25,62 @@
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入：s = "anagram", t = "nagaram"
  * 输出：true
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "anagram";
     char t[] = "nagaram";
     int actual = isAnagram(s, t);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = COMMON_TRUE;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, actual);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入：s = "rat", t = "car"
  * 输出：false
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "rat";
     char t[] = "car";
     int actual = isAnagram(s, t);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = COMMON_FALSE;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, actual);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：s = "", t = ""
  * 输出：true
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "";
     char t[] = "";
     int actual = isAnagram(s, t);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = COMMON_TRUE;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('3', expect, actual);
 }
 
@@ -90,7 +90,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

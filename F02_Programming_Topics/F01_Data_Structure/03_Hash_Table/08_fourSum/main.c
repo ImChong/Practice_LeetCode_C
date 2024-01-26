@@ -22,7 +22,7 @@
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "commonArray.h"
 /* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
@@ -67,7 +67,7 @@ struct TestStruct {
  * @return {void}
  */
 void runTest(struct TestStruct *test) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int *nums = test->input.arr;
     int numsSize = test->input.arrSize;
     int target = test->input.target;
@@ -75,24 +75,24 @@ void runTest(struct TestStruct *test) {
     int *actualRtnColSize = NULL;
     int **actual2DArr = fourSum(nums, numsSize, target, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = test->output.rtnSize;
     int *expectRtnColSize = test->output.rtnColSize;
     int **expect2DArr = test->output.arr;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D(test->testNum,
                         expect2DArr, expectRtnRowSize, expectRtnColSize,
                         actual2DArr, actualRtnRowSize, actualRtnColSize,
                         SORT_TRUE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     Array_Free(actualRtnColSize);
     Array_Free2D(actual2DArr, actualRtnRowSize);
 }
 
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入：nums = [1,0,-1,0,-2,2], target = 0
  * 输出：[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
  * =================================================================================
@@ -112,7 +112,7 @@ void Test1(void) {
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入：nums = [2,2,2,2,2], target = 8
  * 输出：[[2,2,2,2]]
  * =================================================================================
@@ -132,7 +132,7 @@ void Test2(void) {
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：nums = [1,2,3,4,5,6,7,8,9,10], target = 20
  * 输出：[[1,2,7,10],[1,3,6,10],[1,4,5,10],[1,4,6,9],[2,3,5,10],[2,3,6,9],[2,4,5,9],[3,4,5,8],[3,4,6,7]]
  * =================================================================================
@@ -172,7 +172,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

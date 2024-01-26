@@ -1,19 +1,17 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonLinkedListTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonHashTableTest.cc
  * @Author       : Chong Liu
- * @CreateDate   : 2023-12-13 22:14:22
+ * @CreateDate   : 2023-12-13 21:58:33
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 23:56:30
+ * @LastEditTime : 2024-01-26 10:21:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : Common Linked List Unit Test (通用链表单元测试)
+ * @Description  : Common Hash Table Unit Test (通用哈希表单元测试)
  */
 extern "C" {
-    /* Target header file (目标头文件) */
-    #include "commonLinkedList.h"
-    /* Common function header file (通用头文件) */
-    #include "commonTypeDef.h"
+    /* Header file (本文件头文件) */
+    #include "F01_Common_Functions/inc/common_hash_table.h"
 }
 /* Google test header file (谷歌测试头文件) */
 #include "gtest/gtest.h"
@@ -23,7 +21,7 @@ extern "C" {
 /*                                   TEST SUITE                                   */
 /*                                                                                */
 /**********************************************************************************/
-class TestCommonLinkedList : public ::testing::Test {
+class TestCommonHashTable : public ::testing::Test {
  public:
     static void SetUpTestCase() {
         /* Code here will be called once before all tests */
@@ -41,61 +39,37 @@ class TestCommonLinkedList : public ::testing::Test {
 
 /**********************************************************************************/
 /*                                                                                */
-/*                                 UTILITY FUNCTIONS                              */
+/*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* LinkedList_GetAtIndex */
+/* HashTable_Init */
 /* ============================================================================== */
-TEST_F(TestCommonLinkedList, TestLinkedListGet) {
+TEST_F(TestCommonHashTable, TestHashTable_Create) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
 /* ============================================================================== */
-/* LinkedList_AddAtHead */
+/* HashTable_Insert */
 /* ============================================================================== */
-TEST_F(TestCommonLinkedList, TestLinkedListAddAtHead) {
+TEST_F(TestCommonHashTable, TestHashTable_Insert) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
 /* ============================================================================== */
-/* LinkedList_AddAtTail */
+/* HashTable_Search */
 /* ============================================================================== */
-TEST_F(TestCommonLinkedList, TestLinkedListAddAtTail) {
+TEST_F(TestCommonHashTable, TestHashTable_Search) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
 /* ============================================================================== */
-/* LinkedList_AddAtIndex */
+/* HashTable_Remove */
 /* ============================================================================== */
-TEST_F(TestCommonLinkedList, TestLinkedListAddAtIndex) {
-    /* TODO */
-    EXPECT_EQ(0, 0);
-}
-
-/* ============================================================================== */
-/* LinkedList_DeleteAtIndex */
-/* ============================================================================== */
-TEST_F(TestCommonLinkedList, TestLinkedListDeleteAtIndex) {
-    /* TODO */
-    EXPECT_EQ(0, 0);
-}
-
-/* ============================================================================== */
-/* LinkedList_DeleteValue */
-/* ============================================================================== */
-TEST_F(TestCommonLinkedList, TestLinkedListDeleteElement) {
-    /* TODO */
-    EXPECT_EQ(0, 0);
-}
-
-/* ============================================================================== */
-/* LinkedList_GetIndexes */
-/* ============================================================================== */
-TEST_F(TestCommonLinkedList, TestLinkedListGetIndexes) {
+TEST_F(TestCommonHashTable, TestHashTable_Remove) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
@@ -106,38 +80,17 @@ TEST_F(TestCommonLinkedList, TestLinkedListGetIndexes) {
 /*                                                                                */
 /**********************************************************************************/
 /* ============================================================================== */
-/* LinkedList_ArrayInit */
+/* HashTable_Print */
 /* ============================================================================== */
-TEST_F(TestCommonLinkedList, TestLinkedListFromArray) {
+TEST_F(TestCommonHashTable, TestHashTable_Print) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }
 
 /* ============================================================================== */
-/* LinkedList_Print */
+/* HashTable_Free */
 /* ============================================================================== */
-TEST_F(TestCommonLinkedList, TestLinkedListPrint) {
-    /* TODO */
-    EXPECT_EQ(0, 0);
-}
-
-/* ============================================================================== */
-/* LinkedList_Free */
-/* ============================================================================== */
-TEST_F(TestCommonLinkedList, TestLinkedListFree) {
-    /* TODO */
-    EXPECT_EQ(0, 0);
-}
-
-/**********************************************************************************/
-/*                                                                                */
-/*                                  TEST_FUNCTION                                 */
-/*                                                                                */
-/**********************************************************************************/
-/* ============================================================================== */
-/* Validate_LinkedList */
-/* ============================================================================== */
-TEST_F(TestCommonLinkedList, TestValidateLinkedList) {
+TEST_F(TestCommonHashTable, TestHashTable_Free) {
     /* TODO */
     EXPECT_EQ(0, 0);
 }

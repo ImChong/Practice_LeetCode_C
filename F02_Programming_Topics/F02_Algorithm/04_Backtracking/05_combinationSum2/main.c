@@ -43,7 +43,7 @@ int **combinationSum2(int *candidates, int candidatesSize, int target, int *retu
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

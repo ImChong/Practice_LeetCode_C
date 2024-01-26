@@ -10,7 +10,7 @@
  * @Description  : 通用字符串源文件
  */
 /* Common function configuration file (通用函数配置文件) */
-#include "compileCfg.h"
+#include "compile_cfg.h"
 #if COMMON_STRING_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
 #include "commonString.h"
@@ -19,7 +19,7 @@
 #include <stdlib.h>
 #include <string.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 
 /**********************************************************************************/
 /*                                                                                */

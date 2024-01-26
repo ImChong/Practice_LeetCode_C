@@ -7,7 +7,7 @@
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : factory method main function 工厂方法模式主函数
+ * @Description  : factory method main function 工厂方法模式Main function, entry of program.
  */
 /* standard head file 标准头文件 */
 #include <stdlib.h>
@@ -20,7 +20,7 @@
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * =================================================================================
  * @return {void}
  */
@@ -34,7 +34,7 @@ void Test1(void) {
 }
 
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

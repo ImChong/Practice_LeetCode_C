@@ -75,59 +75,59 @@ char *reverseWords(char *s) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入：s = "the sky is blue"
  * 输出："blue is sky the"
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "the sky is blue";
     char *actual = reverseWords(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "blue is sky the";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('1', expect, actual);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入：s = "  hello world  "
  * 输出："world hello"
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "  hello world  ";
     char *actual = reverseWords(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "world hello";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('2', expect, actual);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：s = "a good   example"
  * 输出："example good a"
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "a good   example";
     char *actual = reverseWords(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "example good a";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('3', expect, actual);
 }
 
@@ -137,7 +137,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

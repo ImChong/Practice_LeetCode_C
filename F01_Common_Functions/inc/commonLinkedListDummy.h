@@ -17,14 +17,16 @@
 /*                               STRUCT DEFINITION                                */
 /*                                                                                */
 /**********************************************************************************/
+/* Linked list node structure */
 struct ListNode {
-    int val;               /* 节点数值 */
-    struct ListNode *next; /* 下一节点地址 */
+    int val;               /* Node value */
+    struct ListNode *next; /* Next node */
 };
 
+/* Dummy linked list head structure */
 typedef struct {
-    struct ListNode *head; /* 链表虚拟头节点 */
-    int size;              /* 链表长度 */
+    struct ListNode *head; /* Dummy head node */
+    int size;              /* Linked list size */
 } DummyLinkedList;
 
 /**********************************************************************************/
@@ -32,31 +34,43 @@ typedef struct {
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-DummyLinkedList *DLinkedList_Init(void);                           /* 创建使用虚拟头节点的链表 */
-int DLinkedList_GetAtIndex(DummyLinkedList *dummyHead, int index); /* 获取链表中第index个节点的值 */
-void DLinkedList_AddAtHead(DummyLinkedList *dummyHead, int val);   /* 在链表头部添加一个节点 */
-void DLinkedList_AddAtTail(DummyLinkedList *dummyHead, int val);   /* 在链表尾部添加一个节点 */
-void DLinkedList_AddAtIndex(DummyLinkedList *dummyHead, int index,
-                            int val); /* 在链表中第index个节点之前添加一个值为val的节点 */
-void DLinkedList_DeleteAtIndex(DummyLinkedList *dummyHead, int index); /* 删除链表中第index个节点 */
-void DLinkedList_DeleteValue(DummyLinkedList *dummyHead, int val);     /* 从链表中删除值为val的所有节点 */
-int *DLinkedList_GetIndexes(DummyLinkedList *dummyHead, int val,
-                            int *returnSize); /* 获取链表中值为val的所有节点的索引 */
+/* Initialize a dummy linked list */
+DummyLinkedList *DLinkedList_Init(void);
+/* Get the value of the index-th node in the linked list */
+int DLinkedList_GetValueAtIndex(DummyLinkedList *dummyHead, int index);
+/* Add a node of value val before the first element of the linked list */
+void DLinkedList_AddAtHead(DummyLinkedList *dummyHead, int val);
+/* Add a node of value val to the last element of the linked list */
+void DLinkedList_AddAtTail(DummyLinkedList *dummyHead, int val);
+/* Add a node of value val before the index-th node in the linked list */
+void DLinkedList_AddAtIndex(DummyLinkedList *dummyHead, int index, int val);
+/* Delete the index-th node in the linked list */
+void DLinkedList_DeleteAtIndex(DummyLinkedList *dummyHead, int index);
+/* Delete all the nodes with the given value */
+void DLinkedList_DeleteValue(DummyLinkedList *dummyHead, int val);
+/* Delete the first node with the given value */
+void DLinkedList_DeleteValueOnce(DummyLinkedList *dummyHead, int val);      /* TODO */
+/* Get all the indexes of a value */
+int *DLinkedList_GetValueIndexes(DummyLinkedList *dummyHead, int val, int *returnSize);
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void DLinkedList_ArrayInit(DummyLinkedList *dummyHead, int *nums, int numsSize); /* 将数组转换为链表 */
-void DLinkedList_Print(DummyLinkedList *dummyHead);                              /* 打印链表 */
-void DLinkedList_Free(DummyLinkedList *dummyHead);                               /* 释放链表 */
+/* Initialize dummy linked list from array */
+void DLinkedList_ArrayInit(DummyLinkedList *dummyHead, int *nums, int numsSize);
+/* Print dummy linked list */
+void DLinkedList_Print(DummyLinkedList *dummyHead);
+/* Free dummy linked list */
+void DLinkedList_Free(DummyLinkedList *dummyHead);
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void Validate_DLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual); /* 验证链表 */
+/* Validate dummy linked list */
+void Validate_DLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList *actual);
 
 #endif /* F01_COMMON_FUNCTIONS_INC_COMMONLINKEDLISTDUMMY_H_ */

@@ -182,12 +182,12 @@ void BTree_Free(struct Node *root) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1 - []
+ * @description: Test 1 - []
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int **expected = NULL;
 
     /* 构建 N 叉树 */
@@ -201,7 +201,7 @@ void Test1(void) {
     /* 测试输出结果 */
     Validate_Array2D('1', expected, result, returnSize, returnColumnSizes);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     Array_Free2D(expected, returnSize);
     Array_Free2D(result, returnSize);
     free(returnColumnSizes);
@@ -209,7 +209,7 @@ void Test1(void) {
 }
 
 /**
- * @description: 测试 2 - [1,null,3,2,4,null,5,6]
+ * @description: Test 2 - [1,null,3,2,4,null,5,6]
  *     1
  *    /|\
  *   3 2 4
@@ -219,7 +219,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* int expected[3][3] = {{1}, {3, 2, 4}, {5, 6}}; */
     int **expected = (int **)malloc(sizeof(int *) * TEST_ARR_SIZE);
     expected[0] = (int *)malloc(sizeof(int) * TEST_ARR_SIZE);
@@ -252,7 +252,7 @@ void Test2(void) {
     /* 测试输出结果 */
     Validate_Array2D('2', expected, result, returnSize, returnColumnSizes);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     Array_Free2D(expected, returnSize);
     Array_Free2D(result, returnSize);
     free(returnColumnSizes);
@@ -260,7 +260,7 @@ void Test2(void) {
 }
 
 /**
- * @description: 测试 3 - [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
+ * @description: Test 3 - [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
  *         1
  *    /  |    |   \
  *   2   3    4    5
@@ -274,7 +274,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* int expected[5][5] = {{1}, {2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13}, {14}}; */
     int **expected = (int **)malloc(sizeof(int *) * TEST_ARR_SIZE);
     expected[0] = (int *)malloc(sizeof(int) * TEST_ARR_SIZE);
@@ -362,7 +362,7 @@ void Test3(void) {
     /* 测试输出结果 */
     Validate_Array2D('3', expected, result, returnSize, returnColumnSizes);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     Array_Free2D(expected, returnSize);
     Array_Free2D(result, returnSize);
     free(returnColumnSizes);
@@ -375,7 +375,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

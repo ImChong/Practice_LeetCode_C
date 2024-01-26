@@ -3,14 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:33:34
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-13 00:04:05
+ * @LastEditTime : 2024-01-26 10:31:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用虚拟头节点链表源文件 - 使用虚拟头节点
  */
 /* Common function configuration file (通用函数配置文件) */
-#include "compileCfg.h"
+#include "compile_cfg.h"
 #if COMMON_LINKED_LIST_DUMMY_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
 #include "commonLinkedListDummy.h"
@@ -18,7 +18,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -44,7 +44,7 @@ DummyLinkedList *DLinkedList_Init(void) {
  * @param {int} index                       索引
  * @return {int} ans                        返回指定索引的节点数值
  */
-int DLinkedList_GetAtIndex(DummyLinkedList *dummyHead, int index) {
+int DLinkedList_GetValueAtIndex(DummyLinkedList *dummyHead, int index) {
     if (index < 0 || index >= dummyHead->size) {        /* 输入校验 */
         return -1;                                          /* 返回 -1 */
     }
@@ -191,7 +191,7 @@ void DLinkedList_DeleteValue(DummyLinkedList *dummyHead, int val) {
  * @param {int *} returnSize                返回索引数组的大小 / 值为val的节点个数
  * @return {int *} indexes                  返回索引数组
  */
-int *DLinkedList_GetIndexes(DummyLinkedList *dummyHead, int val, int *returnSize) {
+int *DLinkedList_GetValueIndexes(DummyLinkedList *dummyHead, int val, int *returnSize) {
     int *indexes = (int *)malloc(sizeof(int) * dummyHead->size);    /* NOLINT(readability/casting) */
     int listIndex = 0;                                              /* 链表索引 */
     int elementIndex = 0;                                           /* 元素索引 */
@@ -236,7 +236,7 @@ void DLinkedList_Print(DummyLinkedList *list) {
     printf("linked list (size: %d): Dummy -> ", list->size);    /* 打印链表长度 */
 
     for (int i = 0; i < list->size; i++) {                      /* 循环打印链表节点数值 */
-        printf("%d", DLinkedList_GetAtIndex(list, i));                  /* 打印链表节点数值 */
+        printf("%d", DLinkedList_GetValueAtIndex(list, i));                  /* 打印链表节点数值 */
         if (i < list->size - 1) {                                   /* 如果不是最后一个节点 */
             printf(" -> ");                                             /* 打印箭头 */
         }
@@ -277,7 +277,7 @@ void Validate_DLinkedList(char testNum, DummyLinkedList *expect, DummyLinkedList
     int isSuccess = COMMON_TRUE;                                                /* 是否通过测试 */
 
     for (int i = 0; i < expect->size; i++) {                                    /* 循环比较每个节点的数值 */
-        if (DLinkedList_GetAtIndex(expect, i) != DLinkedList_GetAtIndex(actual, i)) {       /* 如果节点数值不相等 */
+        if (DLinkedList_GetValueAtIndex(expect, i) != DLinkedList_GetValueAtIndex(actual, i)) {       /* 如果节点数值不相等 */
             isSuccess = COMMON_FALSE;                                                   /* 未通过测试 */
             break;                                                                      /* 跳出循环 */
         }

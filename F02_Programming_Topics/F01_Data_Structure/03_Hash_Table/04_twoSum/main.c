@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "commonArray.h"
 /* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
@@ -28,80 +28,80 @@
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入：nums = [2,7,11,15], target = 9
  * 输出：[0,1]
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {2, 7, 11, 15};
     int numsSize = ARR_SIZE(nums);
     int target = 9;
     int actualSize = 0;
     int *actual = twoSum(nums, numsSize, target, &actualSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {0, 1};
     int expectSize = ARR_SIZE(expect);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('1', expect, expectSize, actual, actualSize, COMMON_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actual);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入：nums = [3,2,4], target = 6
  * 输出：[1,2]
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {3, 2, 4};
     int numsSize = ARR_SIZE(nums);
     int target = 6;
     int actualSize = 0;
     int *actual = twoSum(nums, numsSize, target, &actualSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {1, 2};
     int expectSize = ARR_SIZE(expect);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('2', expect, expectSize, actual, actualSize, COMMON_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actual);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：nums = [3,3], target = 6
  * 输出：[0,1]
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {3, 3};
     int numsSize = ARR_SIZE(nums);
     int target = 6;
     int actualSize = 0;
     int *actual = twoSum(nums, numsSize, target, &actualSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {0, 1};
     int expectSize = ARR_SIZE(expect);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('3', expect, expectSize, actual, actualSize, COMMON_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actual);
 }
 
@@ -113,18 +113,18 @@ void Test3(void) {
  * @return {void}
  */
 void Test4(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {3, 3};
     int numsSize = ARR_SIZE(nums);
     int target = 7;
     int actualSize = 0;
     int *actual = twoSum(nums, numsSize, target, &actualSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int *expect = NULL;
     int expectSize = 0;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('4', expect, expectSize, actual, actualSize, COMMON_FALSE);
 }
 
@@ -134,7 +134,7 @@ void Test4(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

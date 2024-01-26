@@ -13,7 +13,7 @@ extern "C" {
     /* Target header file (目标头文件) */
     #include "commonLinkedListDummy.h"
     /* Common function header file (通用头文件) */
-    #include "commonTypeDef.h"
+    #include "F01_Common_Functions/inc/common_def/common_type_def.h"
 }
 /* Google test header file (谷歌测试头文件) */
 #include "gtest/gtest.h"
@@ -53,7 +53,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListCreate) {
 }
 
 /* ============================================================================== */
-/* DLinkedList_GetAtIndex */
+/* DLinkedList_GetValueAtIndex */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListGet) {
     /* TODO */
@@ -101,7 +101,7 @@ TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListDeleteElement) {
 }
 
 /* ============================================================================== */
-/* DLinkedList_GetIndexes */
+/* DLinkedList_GetValueIndexes */
 /* ============================================================================== */
 TEST_F(TestCommonLinkedListDummy, TestDummyLinkedListGetIndexes) {
     /* TODO */

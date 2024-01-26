@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonBinaryTree.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\common_binary_tree.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:37
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-13 00:03:35
+ * @LastEditTime : 2024-01-26 10:24:33
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -36,16 +36,16 @@
  * [4, 5, 2, 6, 7, 3, 1]
  */
 /* Common function configuration file (通用函数配置文件) */
-#include "compileCfg.h"
+#include "compile_cfg.h"    /* NOLINT */
 #if COMMON_BINARY_TREE_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
-#include "commonBinaryTree.h"
+#include "F01_Common_Functions/inc/common_binary_tree.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -99,7 +99,7 @@ STATIC_FUNC void PreOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *BTree_PreOrderTraversal(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     PreOrder(root, ans, returnSize);                    /* 前序遍历根节点 */
     return ans;                                         /* 返回结果 ans 数组 */
@@ -115,7 +115,7 @@ int *BTree_PreOrderTraversal(struct TreeNode *root, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *BTree_PreOrderTraversal(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return ans;
@@ -181,7 +181,7 @@ STATIC_FUNC void inOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *BTree_InOrderTraversal(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     inOrder(root, ans, returnSize);                     /* 中序遍历根节点 */
     return ans;                                         /* 返回结果 ans 数组 */
@@ -197,14 +197,14 @@ int *BTree_InOrderTraversal(struct TreeNode *root, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *BTree_InOrderTraversal(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT(readability/casting) */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);   /* NOLINT */
     *returnSize = 0;                                    /* 初始化数组的大小为 0 */
     if (root == NULL) {                                 /* 如果当前节点为 NULL，直接返回 */
         return ans;
     }
 
     struct TreeNode **stk =
-        (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);   /* NOLINT(readability/casting) */
+        (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);   /* NOLINT */
     int stk_top = 0;                                    /* 栈顶索引为 0 */
     struct TreeNode *node = root;                       /* 获取根节点的指针 */
     while (node != NULL || stk_top > 0) {               /* 当栈顶索引大于0 或者 节点指针不指向NULL */
@@ -264,7 +264,7 @@ STATIC_FUNC void postOrder(struct TreeNode *node, int *ans, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *BTree_PostOrderTraversal(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT(readability/casting) */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     postOrder(root, ans, returnSize);                       /* 后序遍历根节点 */
     return ans;                                             /* 返回结果 ans 数组 */
@@ -280,7 +280,7 @@ int *BTree_PostOrderTraversal(struct TreeNode *root, int *returnSize) {
  * @return {int} *ans           用于储存遍历答案的数组
  */
 int *BTree_PostOrderTraversal(struct TreeNode *root, int *returnSize) {
-    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT(readability/casting) */
+    int *ans = (int *)malloc(sizeof(int) * MAX_SIZE);       /* NOLINT */
     *returnSize = 0;                                        /* 初始化数组的大小为 0 */
     if (root == NULL) {                                     /* 如果当前节点为 NULL，直接返回 */
         return ans;
@@ -346,8 +346,8 @@ int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColum
         return NULL;        /* 返回 NULL */
     }
 
-    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);   /* NOLINT(readability/casting) */
-    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);     /* NOLINT(readability/casting) */
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);   /* NOLINT */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);     /* NOLINT */
 
     struct TreeNode *treeNodeQueue[MAX_SIZE];   /* 数组作为树节点的队列 treeNodeQueue  */
     int queueFront = 0;     /* 队首索引 */
@@ -359,7 +359,7 @@ int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColum
         int nodeNums = 0;       /* 二叉树当前层的节点数（结果二维数组当前行的列数） */
         int layerEndIndex = queueRear;      /* 记录当前层队尾索引 */
         resultArray[*returnSize] =
-            (int *)malloc(sizeof(int) * (layerEndIndex - queueFront));      /* NOLINT(readability/casting) */
+            (int *)malloc(sizeof(int) * (layerEndIndex - queueFront));      /* NOLINT */
         while (queueFront < layerEndIndex) {        /* 当队首索引小于队尾索引时 - 保持循环 */
             curNode = treeNodeQueue[queueFront++];      /* 取出当前队首树节点，并将队首索引 + 1 */
             resultArray[*returnSize][nodeNums++] = curNode->val;
@@ -384,18 +384,18 @@ int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColum
  * @param {int} *returnSize                 二叉树的层数
  * @param {int} **returnColumnSizes         二叉树对应层级的节点数
  * @param {int} **resultArray               结果二维数组
- * @param {TreeListQueue} *queueHead        链表队列头指针
+ * @param {TreeLkListQueue} *queueHead        链表队列头指针
  * @return {int}
  */
 STATIC_FUNC void BreadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray,
-                                        TreeListQueue *queueHead) {
-    struct TreeListNode *currentNode = queueHead->head;
+                                        TreeLkListQueue *queueHead) {
+    struct TreeLkListNode *currentNode = queueHead->head;
     if (currentNode->node == NULL) {
         return;
     }
 
     int count = 0;
-    resultArray[*returnSize] = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);     /* NOLINT(readability/casting) */
+    resultArray[*returnSize] = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);     /* NOLINT */
 
     while (1) {
         struct TreeNode *node = BTree_DeListQueue(queueHead);
@@ -432,10 +432,10 @@ int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColum
         return NULL;
     }
 
-    int **ans = (int **)malloc(sizeof(int *) * MAX_QUEUE_SIZE);     /* NOLINT(readability/casting) */
-    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);       /* NOLINT(readability/casting) */
+    int **ans = (int **)malloc(sizeof(int *) * MAX_QUEUE_SIZE);     /* NOLINT */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);       /* NOLINT */
 
-    TreeListQueue *queueHead = (TreeListQueue *)malloc(sizeof(TreeListQueue));      /* NOLINT(readability/casting) */
+    TreeLkListQueue *queueHead = (TreeLkListQueue *)malloc(sizeof(TreeLkListQueue));    /* NOLINT */
     queueHead->head = NULL;
 
     BTree_EnListQueue(queueHead, root);
@@ -478,20 +478,20 @@ int **BTree_LevelOrder(struct TreeNode *root, int *returnSize, int **returnColum
  */
 int **BTree_LevelOrderBottom(struct TreeNode *root, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;
-    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);       /* NOLINT(readability/casting) */
-    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);         /* NOLINT(readability/casting) */
+    int **resultArray = (int **)malloc(sizeof(int *) * MAX_SIZE);       /* NOLINT */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_SIZE);         /* NOLINT */
     if (root == NULL) {
         return resultArray;
     }
 
     struct TreeNode **treeNodeQueue =
-        (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);   /* NOLINT(readability/casting) */
+        (struct TreeNode **)malloc(sizeof(struct TreeNode *) * MAX_SIZE);   /* NOLINT */
     int queueFront = 0;
     int queueRear = 0;
     treeNodeQueue[queueRear++] = root;
     while (queueFront < queueRear) {
         int nodeNums = queueRear - queueFront;
-        int *nodeValues = (int *)malloc(sizeof(int) * nodeNums);    /* NOLINT(readability/casting) */
+        int *nodeValues = (int *)malloc(sizeof(int) * nodeNums);    /* NOLINT */
         (*returnColumnSizes)[*returnSize] = nodeNums;
         for (int i = 0; i < nodeNums; i++) {
             struct TreeNode *node = treeNodeQueue[queueFront++];
@@ -532,8 +532,8 @@ int **BTree_LevelOrderBottom(struct TreeNode *root, int *returnSize, int **retur
  * @return {TreeArrQueue} *queue   新的二叉树节点队列指针
  */
 TreeArrQueue *BTree_InitArrQueue(int queueSize) {
-    TreeArrQueue *queue = (TreeArrQueue *)malloc(sizeof(TreeArrQueue));         /* NOLINT(readability/casting) */
-    queue->array = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * queueSize); /* NOLINT(readability/casting) */
+    TreeArrQueue *queue = (TreeArrQueue *)malloc(sizeof(TreeArrQueue));         /* NOLINT */
+    queue->array = (struct TreeNode **)malloc(sizeof(struct TreeNode *) * queueSize); /* NOLINT */
     queue->head = 0;
     queue->tail = 0;
     queue->size = queueSize;
@@ -630,10 +630,10 @@ void BTree_ArrQueueFree(TreeArrQueue *queue) {
 /**
  * @description: 创建一个新的二叉树节点链表队列
  * =================================================================================
- * @return {TreeListQueue} *queue   新的二叉树节点链表队列指针
+ * @return {TreeLkListQueue} *queue   新的二叉树节点链表队列指针
  */
-TreeListQueue *BTree_InitListQueue(void) {
-    TreeListQueue *queue = (TreeListQueue *)malloc(sizeof(TreeListQueue));     /* NOLINT(readability/casting) */
+TreeLkListQueue *BTree_InitListQueue(void) {
+    TreeLkListQueue *queue = (TreeLkListQueue *)malloc(sizeof(TreeLkListQueue));     /* NOLINT */
     queue->head = NULL;
     queue->size = 0;
     return queue;
@@ -642,22 +642,22 @@ TreeListQueue *BTree_InitListQueue(void) {
 /**
  * @description: 将节点加入队列
  * =================================================================================
- * @param {TreeListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @param {TreeNode} *node          节点指针
  * @return {void}
  */
-void BTree_EnListQueue(TreeListQueue *queue, struct TreeNode *node) {
+void BTree_EnListQueue(TreeLkListQueue *queue, struct TreeNode *node) {
     if (queue->head == NULL) {
-        queue->head = (struct TreeListNode *)malloc(sizeof(struct TreeListNode));
+        queue->head = (struct TreeLkListNode *)malloc(sizeof(struct TreeLkListNode));
         queue->head->node = node;
         queue->head->next = NULL;
         queue->size++;
     } else {
-        struct TreeListNode *current = queue->head;
+        struct TreeLkListNode *current = queue->head;
         while (current->next != NULL) {
             current = current->next;
         }
-        current->next = (struct TreeListNode *)malloc(sizeof(struct TreeListNode));
+        current->next = (struct TreeLkListNode *)malloc(sizeof(struct TreeLkListNode));
         current->next->node = node;
         current->next->next = NULL;
         queue->size++;
@@ -668,16 +668,16 @@ void BTree_EnListQueue(TreeListQueue *queue, struct TreeNode *node) {
 /**
  * @description: 从队列中取出一个节点
  * =================================================================================
- * @param {TreeListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @return {TreeNode} *node         节点指针
  */
-struct TreeNode *BTree_DeListQueue(TreeListQueue *queue) {
+struct TreeNode *BTree_DeListQueue(TreeLkListQueue *queue) {
     if (queue->head == NULL) {
         printf("Queue is empty.\n");
         return NULL;
     }
     struct TreeNode *node = queue->head->node;
-    struct TreeListNode *temp = queue->head;
+    struct TreeLkListNode *temp = queue->head;
     queue->head = queue->head->next;
     free(temp);
     queue->size--;
@@ -687,20 +687,20 @@ struct TreeNode *BTree_DeListQueue(TreeListQueue *queue) {
 /**
  * @description: 判断队列是否为空
  * =================================================================================
- * @param {TreeListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @return {int}                    如果队列为空，返回1；否则返回0
  */
-int BTree_ListQueueIsEmpty(TreeListQueue *queue) {
+int BTree_ListQueueIsEmpty(TreeLkListQueue *queue) {
     return queue->head == NULL;
 }
 
 /**
  * @description: 判断队列是否为满
  * =================================================================================
- * @param {TreeListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @return {int}                    如果队列为满，返回1；否则返回0
  */
-int BTree_ListQueueIsFull(TreeListQueue *queue) {
+int BTree_ListQueueIsFull(TreeLkListQueue *queue) {
     /* TODO */
     (void)queue;
     return 0;
@@ -709,12 +709,12 @@ int BTree_ListQueueIsFull(TreeListQueue *queue) {
 /**
  * @description: 打印二叉树节点链表队列
  * =================================================================================
- * @param {TreeListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @return {void}
  */
-void BTree_ListQueuePrint(TreeListQueue *queue) {
-    printf("TreeListQueue (size = %d): [", queue->size);
-    struct TreeListNode *current = queue->head;
+void BTree_ListQueuePrint(TreeLkListQueue *queue) {
+    printf("TreeLkListQueue (size = %d): [", queue->size);
+    struct TreeLkListNode *current = queue->head;
     while (current != NULL) {
         printf("%d", current->node->val);
         if (current->next != NULL) {
@@ -728,13 +728,13 @@ void BTree_ListQueuePrint(TreeListQueue *queue) {
 /**
  * @description: 释放二叉树节点链表队列的空间
  * =================================================================================
- * @param {TreeListQueue} *queue    二叉树节点链表队列指针
+ * @param {TreeLkListQueue} *queue    二叉树节点链表队列指针
  * @return {void}
  */
-void BTree_ListQueueFree(TreeListQueue *queue) {
-    struct TreeListNode *current = queue->head;
+void BTree_ListQueueFree(TreeLkListQueue *queue) {
+    struct TreeLkListNode *current = queue->head;
     while (current != NULL) {
-        struct TreeListNode *temp = current;
+        struct TreeLkListNode *temp = current;
         current = current->next;
         free(temp);
     }
@@ -769,7 +769,7 @@ struct TreeNode *BTree_InitNode(int value) {
  * @param {int} arrSize             数组大小
  * @return {TreeNode} *node         根节点指针
  */
-struct TreeNode *BTree_Init(int* arr, int arrSize) {
+struct TreeNode *BTree_ArrayInit(int* arr, int arrSize) {
     if (arrSize == 0) {
         return NULL;
     }
@@ -816,7 +816,7 @@ int *BTree_ToArray(struct TreeNode *root, int *returnSize) {
         return NULL;
     }
 
-    int *result = (int *)malloc(MAX_SIZE * sizeof(int));    /* NOLINT(readability/casting) */
+    int *result = (int *)malloc(MAX_SIZE * sizeof(int));    /* NOLINT */
     TreeArrQueue *q = BTree_InitArrQueue(MAX_SIZE);
     BTree_EnArrQueue(q, root);
     int index = 0;

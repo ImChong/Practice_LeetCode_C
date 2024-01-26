@@ -12,7 +12,7 @@
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "commonArray.h"
 #include "commonBinaryTree.h"
 /* test helper header file (测试函数头文件) */
@@ -39,26 +39,26 @@
  * @return {void}
  */
 void test_preOrderTraversal(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
-    struct TreeNode *root = BTree_Init(arr, arrSize);
+    struct TreeNode *root = BTree_ArrayInit(arr, arrSize);
     int actualSize_recursion = 0;
     int *actual_recursion = BTree_PreOrderTraversal_Recursion(root, &actualSize_recursion);
     int actualSize_iteration = 0;
     int *actual_iteration = BTree_PreOrderTraversal_Iteration(root, &actualSize_iteration);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expected[] = {1, 2, 4, 5, 3, 6, 7};
     int expectedSize = ARR_SIZE(expected);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     printf("PreorderTraversal Recursion Method.\n");
     Validate_Array('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
     printf("PreorderTraversal Iteration Method.\n");
     Validate_Array('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     BTree_Free(root);
 }
 
@@ -78,26 +78,26 @@ void test_preOrderTraversal(void) {
  * @return {void}
  */
 void test_inOrderTraversal(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
-    struct TreeNode *root = BTree_Init(arr, arrSize);
+    struct TreeNode *root = BTree_ArrayInit(arr, arrSize);
     int actualSize_recursion = 0;
     int *actual_recursion = BTree_InOrderTraversal_Recursion(root, &actualSize_recursion);
     int actualSize_iteration = 0;
     int *actual_iteration = BTree_InOrderTraversal_Iteration(root, &actualSize_iteration);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expected[] = {4, 2, 5, 1, 6, 3, 7};
     int expectedSize = ARR_SIZE(expected);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     printf("InorderTraversal Recursion Method.\n");
     Validate_Array('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
     printf("InorderTraversal Iteration Method.\n");
     Validate_Array('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     BTree_Free(root);
 }
 
@@ -117,25 +117,25 @@ void test_inOrderTraversal(void) {
  * @return {void}
  */
 void test_postOrderTraversal(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
-    struct TreeNode *root = BTree_Init(arr, arrSize);
+    struct TreeNode *root = BTree_ArrayInit(arr, arrSize);
     int actualSize_recursion = 0;
     int *actual_recursion = BTree_PostOrderTraversal_Recursion(root, &actualSize_recursion);
     int actualSize_iteration = 0;
     int *actual_iteration = BTree_PostOrderTraversal_Iteration(root, &actualSize_iteration);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expected[] = {4, 5, 2, 6, 7, 3, 1};
     int expectedSize = ARR_SIZE(expected);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     printf("PostorderTraversal Recursion Method.\n");
     Validate_Array('1', expected, expectedSize, actual_recursion, actualSize_recursion, SORT_FALSE);
     printf("PostorderTraversal Iteration Method.\n");
     Validate_Array('2', expected, expectedSize, actual_iteration, actualSize_iteration, SORT_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     BTree_Free(root);
 }

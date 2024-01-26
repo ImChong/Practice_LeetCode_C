@@ -64,7 +64,7 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * listA: 4 -> 1 -> 8 -> 4 -> 5
  * listB: 5 -> 0 -> 1 -> 8 -> 4 -> 5
  * expected: 8
@@ -72,7 +72,7 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arrA[] = {4, 1, 8, 4, 5};
     int arrASize = ARR_SIZE(arrA);
     struct ListNode *listA = LinkedList_ArrayInit(arrA, arrASize);
@@ -88,10 +88,10 @@ void Test1(void) {
 
     struct ListNode *intersectNode = getIntersectionNode(listA, listB);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 8;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, intersectNode->val);
 
     /* 释放内存 - A/B链表相互链接，不可 while 循环释放 */
@@ -100,7 +100,7 @@ void Test1(void) {
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * listA: 0 -> 9 -> 1 -> 2 -> 4
  * listB: 3 -> 2 -> 4
  * expected: 2
@@ -108,7 +108,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arrA[] = {0, 9, 1, 2, 4};
     int arrASize = ARR_SIZE(arrA);
     struct ListNode *listA = LinkedList_ArrayInit(arrA, arrASize);
@@ -124,17 +124,17 @@ void Test2(void) {
 
     struct ListNode *intersectNode = getIntersectionNode(listA, listB);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 2;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, intersectNode->val);
 
     /* 释放内存 - A/B链表相互链接，不可 while 循环释放 */
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * listA: 2 -> 6 -> 4
  * listB: 1 -> 5
  * expected: NULL
@@ -142,7 +142,7 @@ void Test2(void) {
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arrA[] = {2, 6, 4};
     int arrASize = ARR_SIZE(arrA);
     struct ListNode *listA = LinkedList_ArrayInit(arrA, arrASize);
@@ -152,13 +152,13 @@ void Test3(void) {
 
     struct ListNode *intersectNode = getIntersectionNode(listA, listB);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     struct ListNode *expect = NULL;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('3', expect, intersectNode);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(listA);
     LinkedList_Free(listB);
 }
@@ -169,7 +169,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

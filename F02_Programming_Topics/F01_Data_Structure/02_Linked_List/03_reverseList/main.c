@@ -50,76 +50,76 @@ struct ListNode *reverseList(struct ListNode* head){
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5};
     int arrSize = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
     struct ListNode *ansList = reverseList(arrList);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {5, 4, 3, 2, 1};
     int expectSize = ARR_SIZE(expect);
     struct ListNode *expectList = LinkedList_ArrayInit(expect, expectSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('1', expectList, ansList);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(arrList);
     LinkedList_Free(expectList);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1};
     int arrSize = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
     struct ListNode *ansList = reverseList(arrList);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {1};
     int expectSize = ARR_SIZE(expect);
     struct ListNode *expectList = LinkedList_ArrayInit(expect, expectSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('2', expectList, ansList);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(arrList);
     LinkedList_Free(expectList);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int arrSize = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
     struct ListNode *ansList = reverseList(arrList);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     int expectSize = ARR_SIZE(expect);
     struct ListNode *expectList = LinkedList_ArrayInit(expect, expectSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('3', expectList, ansList);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(arrList);
     LinkedList_Free(expectList);
 }
@@ -130,7 +130,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

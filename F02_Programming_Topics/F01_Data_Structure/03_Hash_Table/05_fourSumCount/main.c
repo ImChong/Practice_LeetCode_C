@@ -28,7 +28,7 @@
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入：nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]
  * 输出：2
  *
@@ -39,22 +39,22 @@
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int A[] = {1, 2};
     int B[] = {-2, -1};
     int C[] = {-1, 2};
     int D[] = {0, 2};
     int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 2;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, actual);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入：nums1 = [1,1], nums2 = [-1,-1], nums3 = [1,-1], nums4 = [1,-1]
  * 输出：8
  *
@@ -71,39 +71,39 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int A[] = {1,1};
     int B[] = {-1,-1};
     int C[] = {1,-1};
     int D[] = {1,-1};
     int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 8;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, actual);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：nums1 = [0,200,-1], nums2 = [-200,1,0], nums3 = [0,0,1], nums4 = [-1,1,1]
  * 输出：9
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int A[] = {0,200,-1};
     int B[] = {-200,1,0};
     int C[] = {0,0,1};
     int D[] = {-1,1,1};
     int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 9;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('3', expect, actual);
 }
 
@@ -115,17 +115,17 @@ void Test3(void) {
  * @return {void}
  */
 void Test4(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int A[] = {0};
     int B[] = {0};
     int C[] = {0};
     int D[] = {0};
     int actual = fourSumCount(A, ARR_SIZE(A), B, ARR_SIZE(B), C, ARR_SIZE(C), D, ARR_SIZE(D));
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 1;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('4', expect, actual);
 }
 
@@ -135,7 +135,7 @@ void Test4(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

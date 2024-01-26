@@ -57,62 +57,62 @@ int strStr(char *haystack, char *needle){
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入：haystack = "sadbutsad", needle = "sad"
  * 输出：0
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char *haystack = "sadbutsad";
     char *needle = "sad";
     int actual = strStr(haystack, needle);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 0;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, actual);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * haystack = "leetcode", needle = "leeto"
  * 输出：-1
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char *haystack = "leetcode";
     char *needle = "leeto";
     int actual = strStr(haystack, needle);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = -1;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, actual);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * haystack = "a", needle = "a"
  * 输出：0
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char *haystack = "a";
     char *needle = "a";
     int actual = strStr(haystack, needle);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 0;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('3', expect, actual);
 }
 
@@ -124,15 +124,15 @@ void Test3(void) {
  * @return {void}
  */
 void Test4(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char *haystack = "leetcode";
     char *needle = "code";
     int actual = strStr(haystack, needle);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 4;
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('4', expect, actual);
 }
 
@@ -142,7 +142,7 @@ void Test4(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

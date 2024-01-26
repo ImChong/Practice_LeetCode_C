@@ -59,7 +59,7 @@ bool hasCycle(struct ListNode *head) {
 在有序数组中查找元素时，通常使用两个指针指向当前搜索范围的开始和结束，然后用二分法缩小搜索范围。
 
 ```c
-int binarySearch(int* arr, int size, int target) {
+int BinarySearch(int* arr, int size, int target) {
     int low = 0, high = size - 1;
     while (low <= high) {
         int mid = low + (high - low) / 2;

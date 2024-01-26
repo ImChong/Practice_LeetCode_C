@@ -48,14 +48,14 @@ void reverseString(char *s, int sSize) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入：s = ["h","e","l","l","o"]
  * 输出：["o","l","l","e","h"]
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     // char *s = "hello";                                  /* strlen: 5, ARR_SIZE: 8, 字符串不可修改 */
     char s[] = "hello";                                 /* strlen: 5, ARR_SIZE: 6, 字符串可修改 */
     // char s[6] = {'h', 'e', 'l', 'l', 'o', '\0'};        /* strlen: 5, ARR_SIZE: 6, 字符串可修改 */
@@ -63,50 +63,50 @@ void Test1(void) {
     // printf("strlen: %d, ARR_SIZE: %d\n", strlen(s), ARR_SIZE(s));
     reverseString(s, sSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "olleh";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('1', expect, s);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入: s = ["H","a","n","n","a","h"]
  * 输出：["h","a","n","n","a","H"]
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "Hannah";
     int sSize = strlen(s);
     reverseString(s, sSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "hannaH";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('2', expect, s);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：s = ["1"]
  * 输出：["1"]
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "1";
     int sSize = strlen(s);
     reverseString(s, sSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "1";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('3', expect, s);
 }
 
@@ -116,7 +116,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

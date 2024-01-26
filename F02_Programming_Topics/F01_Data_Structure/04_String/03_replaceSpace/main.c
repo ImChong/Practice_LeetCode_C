@@ -53,68 +53,68 @@ char *pathEncryption(char *path) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入：path = "a.aef.qerf.bb"
  * 输出："a aef qerf bb"
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "a.aef.qerf.bb";
     char *actual = pathEncryption(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "a aef qerf bb";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('1', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     String_Free(actual);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入：path = "my.name.is.carl"
  * 输出："my name is carl"
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "my.name.is.carl";
     char *actual = pathEncryption(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "my name is carl";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('2', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     String_Free(actual);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：path = "c.language.hello.world"
  * 输出："c language hello world"
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "c.language.hello.world";
     char *actual = pathEncryption(s);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "c language hello world";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('3', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     String_Free(actual);
 }
 
@@ -124,7 +124,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

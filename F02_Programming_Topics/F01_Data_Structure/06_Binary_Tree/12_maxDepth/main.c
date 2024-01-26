@@ -135,7 +135,7 @@ int maxDepth(struct TreeNode* root) {
         sz += tmp;                                                  /* 更新当前层节点个数 */
         ans++;                                                      /* 最大深度 + 1 */
     }
-    free(left);                                                 /* 释放内存空间 */
+    free(left);                                                 /* Free memory (释放内存空间) */
     return ans;                                                 /* 返回最大深度 */
 }
 #endif /* BFS_METHOD_EN */
@@ -151,7 +151,7 @@ int maxDepth(struct TreeNode* root) {
  * @return {void}
  */
 void Test1(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 3;
 
     /* 构建二叉树 */
@@ -161,13 +161,13 @@ void Test1(void) {
     root->right->left = newNode(15);
     root->right->right = newNode(7);
 
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int actual = maxDepth(root);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('1', expect, actual);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     free(root->right->right);
     free(root->right->left);
     free(root->right);
@@ -181,20 +181,20 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect = 2;
 
     /* 构建二叉树 */
     struct TreeNode *root = newNode(1);
     root->right = newNode(2);
 
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int actual = maxDepth(root);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_SingleValue('2', expect, actual);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     free(root->right);
     free(root);
 }
@@ -205,7 +205,7 @@ void Test2(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

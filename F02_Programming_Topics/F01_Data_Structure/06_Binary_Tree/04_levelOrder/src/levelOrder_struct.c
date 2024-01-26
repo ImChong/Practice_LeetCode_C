@@ -30,7 +30,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "commonBinaryTree.h"
 /* solution header file (题解头文件) */
 #include "levelOrder.h"
@@ -53,11 +53,11 @@
  * @param {int} *returnSize                 二叉树的层数
  * @param {int} **returnColumnSizes         二叉树对应层级的节点数
  * @param {int} **resultArray               结果二维数组
- * @param {TreeListQueue} *queueHead        链表队列头指针
+ * @param {TreeLkListQueue} *queueHead        链表队列头指针
  * @return {int}
  */
-STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray, TreeListQueue *queueHead) {
-    struct TreeListNode *currentNode = queueHead->head;
+STATIC_FUNC void breadthFirstSearch(int *returnSize, int **returnColumnSizes, int **resultArray, TreeLkListQueue *queueHead) {
+    struct TreeLkListNode *currentNode = queueHead->head;
     if (currentNode->node == NULL) {
         return;
     }
@@ -110,7 +110,7 @@ int **levelOrder(struct TreeNode *root, int *returnSize, int **returnColumnSizes
     int **resultArray = (int **)malloc(sizeof(int *) * MAX_QUEUE_SIZE);
     *returnColumnSizes = (int *)malloc(sizeof(int) * MAX_QUEUE_SIZE);
 
-    TreeListQueue *queueHead = (TreeListQueue *)malloc(sizeof(TreeListQueue));
+    TreeLkListQueue *queueHead = (TreeLkListQueue *)malloc(sizeof(TreeLkListQueue));
     queueHead->head = NULL;
 
     BTree_EnListQueue(queueHead, root);

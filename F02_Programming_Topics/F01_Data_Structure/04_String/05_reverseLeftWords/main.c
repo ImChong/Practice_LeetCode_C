@@ -52,71 +52,71 @@ char *dynamicPassword(char *password, int target) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入: password = "s3cur1tyC0d3", target = 4
  * 输出: "r1tyC0d3s3cu"
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "s3cur1tyC0d3";
     int target = 4;
     char *actual = dynamicPassword(s, target);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "r1tyC0d3s3cu";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('1', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     String_Free(actual);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入: password = "lrloseumgh", target = 6
  * 输出: "umghlrlose"
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "lrloseumgh";
     int target = 6;
     char *actual = dynamicPassword(s, target);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "umghlrlose";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('2', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     String_Free(actual);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：password = "leetcode", target = 4
  * 输出："codeleet"
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     char s[] = "leetcode";
     int target = 4;
     char *actual = dynamicPassword(s, target);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     char *expect = "codeleet";
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_String('3', expect, actual);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     String_Free(actual);
 }
 
@@ -126,7 +126,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

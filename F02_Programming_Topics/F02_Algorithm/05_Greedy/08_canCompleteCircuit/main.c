@@ -12,8 +12,8 @@ int canCompleteCircuit(int* gas, int gasSize, int* cost, int costSize){
 /* ==================================================================================================== */
 /* ==================================================================================================== */
 
-/* NOTE：主函数 */
+/* NOTE：Main function, entry of program. */
 int main(int argc, const char* argv[]) {
-    
+
     return 0;
 }

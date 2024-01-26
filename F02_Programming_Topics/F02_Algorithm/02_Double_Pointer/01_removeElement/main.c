@@ -42,68 +42,68 @@ int removeElement(int *nums, int numsSize, int val){
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入：nums = [3,2,2,3], val = 3
  * 输出：2, nums = [2,2]
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {3, 2, 2, 3};
     int numsSize = ARR_SIZE(nums);
     int val = 3;
     int actualSize = removeElement(nums, numsSize, val);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectSize = 2;
     int expectNums[] = {2, 2};
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('1', expectNums, expectSize, nums, actualSize);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入：nums = [0,1,2,2,3,0,4,2], val = 2
  * 输出：5, nums = [0,1,4,0,3]
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {0, 1, 2, 2, 3, 0, 4, 2};
     int numsSize = ARR_SIZE(nums);
     int val = 2;
     int actualSize = removeElement(nums, numsSize, val);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectSize = 5;
     int expectNums[] = {0, 1, 4, 0, 3};
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('2', expectNums, expectSize, nums, actualSize);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：nums = [3,3], val = 3
  * 输出：0, nums = []
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {3, 3};
     int numsSize = ARR_SIZE(nums);
     int val = 3;
     int actualSize = removeElement(nums, numsSize, val);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectSize = 0;
     int expectNums[] = {};
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('3', expectNums, expectSize, nums, actualSize);
 }
 
@@ -113,7 +113,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

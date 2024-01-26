@@ -12,7 +12,7 @@
 /* Standard header file (标准头文件) */
 #include <string.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 /* solution header file (题解头文件) */
 #include "isAnagram.h"
 

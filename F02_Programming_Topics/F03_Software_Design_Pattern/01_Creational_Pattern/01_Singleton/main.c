@@ -48,7 +48,7 @@ void Test1(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: main function 主函数
+ * @description: main function Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

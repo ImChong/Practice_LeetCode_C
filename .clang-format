@@ -2,7 +2,7 @@
 ---
 Language: Cpp
 BasedOnStyle:  Google
-AccessModifierOffset: -3    # default: -1
+AccessModifierOffset: -1    # default: -1
 AlignAfterOpenBracket: Align
 AlignArrayOfStructures: None
 AlignConsecutiveAssignments:
@@ -125,7 +125,7 @@ IncludeCategories:
     CaseSensitive:   false
 IncludeIsMainRegex: '([-_](test|unittest))?$'
 IncludeIsMainSourceRegex: ''
-IndentAccessModifiers: false
+IndentAccessModifiers: true   # default: false
 IndentCaseBlocks: false
 IndentCaseLabels: true
 IndentExternBlock: AfterExternBlock

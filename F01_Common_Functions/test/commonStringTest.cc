@@ -14,7 +14,7 @@ extern "C" {
     /* Target header file (目标头文件) */
     #include "commonString.h"
     /* Common function header file (通用头文件) */
-    #include "commonTypeDef.h"
+    #include "F01_Common_Functions/inc/common_def/common_type_def.h"
 }
 /* Google test header file (谷歌测试头文件) */
 #include "gtest/gtest.h"
@@ -56,7 +56,7 @@ TEST_F(TestCommonString, TestSwapChar) {
     /* 运行结果 */
     int result = Char_Swap(&a, &b);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_EQ(a, 'b') << "Error occurred at parameter a";
     EXPECT_EQ(b, 'a') << "Error occurred at parameter b";
     EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
@@ -74,7 +74,7 @@ TEST_F(TestCommonString, TestReverseStringSection) {
     /* 运行结果 */
     int result = String_Reverse(s, 2, 5);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_STREQ(s, "abfedcg") << "Error occurred at parameter s";
     EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
 }
@@ -98,7 +98,7 @@ TEST_F(TestCommonString, TestPrintString) {
     int result = String_Print(s);
     printf("============================================================ Print End.\n");
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
 }
 
@@ -114,7 +114,7 @@ TEST_F(TestCommonString, TestFreeString) {
     /* 运行结果 */
     int result = String_Free(&s);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_EQ(s, nullptr) << "Error occurred at parameter s";
     EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
 }
@@ -141,6 +141,6 @@ TEST_F(TestCommonString, TestValidateString) {
     int result = Validate_String('1', expect, actual);
     printf("============================================================ Print End.\n");
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_EQ(result, COMMON_OK) << "Error occurred at return value";
 }

@@ -4,17 +4,17 @@
 set -e
 
 # set test names
-tests=("commonArrayTest" \
-    "commonBinaryTreeTest" \
-    "commonCmdTest" \
-    "commonHashTableTest" \
-    "commonLinkedListTest" \
-    "commonLinkedListDummyTest" \
-    "commonQueueTest" \
-    "commonRingBufferTest" \
-    "commonSingleValueTest" \
-    "commonStackTest" \
-    "commonStringTest"
+tests=("common_array_test" \
+    "common_binary_tree_test" \
+    "common_cmd_test" \
+    "common_hash_table_test" \
+    "common_linked_list_test" \
+    "common_linked_list_dummy_test" \
+    "common_queue_test" \
+    "common_ring_buffer_test" \
+    "common_single_value_test" \
+    "common_stack_test" \
+    "common_string_test"
 )
 
 # run gtest executables in the build/bin directory

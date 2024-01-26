@@ -184,14 +184,14 @@ void print1DArray(int *array, int size) {
  * @param {struct TreeNode} **root      树的根节点
  * @return {void}
  */
-void BTree_Init(int *arr, int size, int index, struct TreeNode **root) {
+void BTree_ArrayInit(int *arr, int size, int index, struct TreeNode **root) {
     if (index < size) {
         if (*(arr + index) == INT_MIN) {
             return;
         }
         *root = newNode(*(arr + index));
-        BTree_Init(arr, size, 2 * index + 1, &((*root)->left));
-        BTree_Init(arr, size, 2 * index + 2, &((*root)->right));
+        BTree_ArrayInit(arr, size, 2 * index + 1, &((*root)->left));
+        BTree_ArrayInit(arr, size, 2 * index + 2, &((*root)->right));
     }
 }
 
@@ -239,7 +239,7 @@ void BTree_Free(struct TreeNode *root) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1 - [1, 3, 2, 5, 3, NULL, 9]
+ * @description: Test 1 - [1, 3, 2, 5, 3, NULL, 9]
  *      1
  *     / \
  *    3   2
@@ -250,7 +250,7 @@ void BTree_Free(struct TreeNode *root) {
  * @return {void}
  */
 void Test1(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expected[] = {1, 3, 9};
 
     /* 构建二叉树 */
@@ -258,7 +258,7 @@ void Test1(void) {
     int treeArr[] = {1, 3, 2, 5, 3, INT_MIN, 9};            /* 二叉树数组 */
     print1DArray(treeArr, ARR_SIZE(treeArr));
     struct TreeNode *root = NULL;                           /* 初始化二叉树根节点为 NULL */
-    BTree_Init(treeArr, ARR_SIZE(treeArr), 0, &root);      /* 二叉树数组转换为二叉树结构 */
+    BTree_ArrayInit(treeArr, ARR_SIZE(treeArr), 0, &root);      /* 二叉树数组转换为二叉树结构 */
     printf("\n");
 
     /* 运算结果 */
@@ -272,13 +272,13 @@ void Test1(void) {
     print1DArray(result, ARR_SIZE(result));
     Validate_SingleValue('1', expected, result, returnSize);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     BTree_Free(root);
     free(result);
 }
 
 /**
- * @description: 测试 2 - [1, 2, 3]
+ * @description: Test 2 - [1, 2, 3]
  *    1
  *   / \
  *  2   3
@@ -287,7 +287,7 @@ void Test1(void) {
  * @return {void}
  */
 void Test2(void) {
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expected[] = {1, 3};
 
     /* 构建二叉树 */
@@ -295,7 +295,7 @@ void Test2(void) {
     int treeArr[] = {1, 2, 3};                              /* 二叉树数组 */
     print1DArray(treeArr, ARR_SIZE(treeArr));
     struct TreeNode *root = NULL;                           /* 初始化二叉树根节点为 NULL */
-    BTree_Init(treeArr, ARR_SIZE(treeArr), 0, &root);      /* 二叉树数组转换为二叉树结构 */
+    BTree_ArrayInit(treeArr, ARR_SIZE(treeArr), 0, &root);      /* 二叉树数组转换为二叉树结构 */
     printf("\n");
 
     /* 运算结果 */
@@ -309,7 +309,7 @@ void Test2(void) {
     print1DArray(result, ARR_SIZE(result));
     Validate_SingleValue('2', expected, result, returnSize);
 
-    /* 释放内存空间 */
+    /* Free memory (释放内存空间) */
     BTree_Free(root);
     free(result);
 }
@@ -320,7 +320,7 @@ void Test2(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

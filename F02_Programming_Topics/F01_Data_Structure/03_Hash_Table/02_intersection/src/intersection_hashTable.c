@@ -16,7 +16,7 @@
 #include <stdlib.h>
 #include <string.h>
 /* Common function header file (通用头文件) */
-#include "commonHashTable.h"
+#include "common_hash_table.h"
 /* solution header file (题解头文件) */
 #include "intersection.h"
 

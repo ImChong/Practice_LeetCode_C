@@ -15,23 +15,24 @@ include_directories(${CMAKE_BINARY_DIR}/ThirdParty/googletest/include)
 link_directories(${CMAKE_BINARY_DIR}/ThirdParty/googletest/lib)
 
 # Add the header files
-include_directories(cfg)                # Configuration file
-include_directories(inc)                # Header files
-include_directories(inc/commonDef)      # Common definition header files
+include_directories(${CMAKE_SOURCE_DIR})    # Root directory
+include_directories(cfg)                    # Configuration file
+include_directories(inc)                    # Header files
+include_directories(inc/common_def)         # Common definition header files
 
 # Create the test targets
 set(TEST_TARGETS
-    commonArray
-    commonBinaryTree
-    commonCmd
-    commonHashTable
-    commonLinkedList
-    commonLinkedListDummy
-    commonQueue
-    commonRingBuffer
-    commonSingleValue
-    commonStack
-    commonString
+    common_array
+    common_binary_tree
+    common_cmd
+    common_hash_table
+    common_linked_list
+    common_linked_list_dummy
+    common_queue
+    common_ring_buffer
+    common_single_value
+    common_stack
+    common_string
 )
 
 # Loop through each test target
@@ -39,7 +40,7 @@ foreach(TARGET ${TEST_TARGETS})
     # Set the target source file
     set(TARGET_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/src/${TARGET}.c)
     # Set the target test name
-    set(TARGET_TEST_NAME ${TARGET}Test)
+    set(TARGET_TEST_NAME ${TARGET}_test)
     # Set the target test source file
     set(TARGET_TEST_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/test/${TARGET_TEST_NAME}.cc)
 

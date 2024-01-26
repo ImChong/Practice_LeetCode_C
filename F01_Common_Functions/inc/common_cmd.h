@@ -1,5 +1,5 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonCmd.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonCmd.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:12:03
  * @LastEditors: Chong Liu liuc12@miamioh.edu
@@ -9,14 +9,14 @@
  * =================================================================================
  * @Description  : Common command header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONCMD_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONCMD_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_CMD_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_CMD_H_
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-int CMD_PrintInput(int argc, const char *argv[]); /* 打印命令行信息 */
+int CMD_PrintInput(int argc, const char *argv[]); /* Print input command */
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONCMD_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_CMD_H_ */

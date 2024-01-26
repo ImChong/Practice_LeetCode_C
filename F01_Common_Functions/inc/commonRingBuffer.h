@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonRingBuffer.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonRingBuffer.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:22:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-05 21:50:29
+ * @LastEditTime : 2024-01-18 23:14:08
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,34 +21,34 @@
 /*                                                                                */
 /**********************************************************************************/
 typedef struct {
-    uint8_t *pBuff;  /* 环形buffer数组 */
-    int16_t buffLen; /* 环形buffer长度 */
-    int16_t dataLen; /* 环形buffer中数据总长度 */
-    int16_t dataIdx; /* 环形buffer的数据头指针 */
-} RingBufferSt;
+    uint8_t *pBuff;  /* Ring buffer array */
+    int16_t buffLen; /* Ring buffer length */
+    int16_t dataLen; /* Ring buffer data length */
+    int16_t dataIdx; /* Ring buffer data index */
+} RingBuffer;
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-int16_t RingBuffer_Init(RingBufferSt *pRing, uint8_t *pBuff, int16_t buffLen); /* 初始化环形buffer */
-int16_t RingBuffer_AddByte(RingBufferSt *pRing, uint8_t byte);   /* 向环形buffer中添加一个字节 */
-int16_t RingBuffer_GetByte(RingBufferSt *pRing, uint8_t *pByte); /* 从环形buffer中取出一个字节 */
+int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *pBuff, int16_t buffLen); /* Initialize a ring buffer */
+int16_t RingBuffer_AddByte(RingBuffer *pRing, uint8_t byte);   /* Add a byte to the ring buffer */
+int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte); /* Get a byte from the ring buffer */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void RingBuffer_Print(RingBufferSt *pRing); /* 打印环形buffer中的数据 */
-void RingBuffer_Free(RingBufferSt *pRing);  /* 释放环形buffer */
+void RingBuffer_Print(RingBuffer *pRing); /* Print ring buffer */
+void RingBuffer_Free(RingBuffer *pRing);  /* Free ring buffer */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                  TEST FUNCTION                                 */
 /*                                                                                */
 /**********************************************************************************/
-void Validate_RingBuffer(void);
+void Validate_RingBuffer(void); /* Validate ring buffer */
 
 #endif /* F01_COMMON_FUNCTIONS_INC_COMMONRINGBUFFER_H_ */

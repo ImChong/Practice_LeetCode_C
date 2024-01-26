@@ -7,8 +7,8 @@
 │   └── compileCfg.h
 ├── inc
 │   ├── commonDef
-│   │   ├── commonPrintDef.h
-│   │   └── commonTypeDef.h
+│   │   ├── common_print_def.h
+│   │   └── common_type_def.h
 │   ├── commonArray.h
 │   ├── commonBinaryTree.h
 │   ├── commonCmd.h

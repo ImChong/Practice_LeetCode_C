@@ -17,7 +17,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "commonArray.h"
 /* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
@@ -30,85 +30,85 @@
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入：nums = [-1,0,1,2,-1,-4]
  * 输出：[[-1,-1,2],[-1,0,1]]
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {-1, 0, 1, 2, -1, -4};
     int numsSize = ARR_SIZE(nums);
     int actualRtnRowSize = 0;
     int *actualRtnColSize;
     int **actual2DArr = threeSum(nums, numsSize, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 2;
     int expectRtnColSize[] = {3, 3};
     int *expect2DArr[] = {(int[]){-1, -1, 2}, (int[]){-1, 0, 1, 2}};    /* *expect2DArr[] 内数组可以不同长度 */
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('1', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actualRtnColSize);
     Array_Free2D(actual2DArr, actualRtnRowSize);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入：nums = [0,1,1]
  * 输出：[]
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {0, 1, 1};
     int numsSize = ARR_SIZE(nums);
     int actualRtnRowSize = 0;
     int *actualRtnColSize;
     int **actual2DArr = threeSum(nums, numsSize, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 0;
     int expectRtnColSize[] = {};
     int *expect2DArr[] = {};
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('2', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actualRtnColSize);
     Array_Free2D(actual2DArr, actualRtnRowSize);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：nums = [0,0,0]
  * 输出：[[0,0,0]]
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums[] = {0, 0, 0};
     int numsSize = ARR_SIZE(nums);
     int actualRtnRowSize = 0;
     int *actualRtnColSize;
     int **actual2DArr = threeSum(nums, numsSize, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 1;
     int expectRtnColSize[] = {3};
     int *expect2DArr[] = {(int[]){0, 0, 0}};
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('3', expect2DArr, expectRtnRowSize, expectRtnColSize, actual2DArr, actualRtnRowSize, actualRtnColSize, COMMON_TRUE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(actualRtnColSize);
     Array_Free2D(actual2DArr, actualRtnRowSize);
 }
@@ -119,7 +119,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

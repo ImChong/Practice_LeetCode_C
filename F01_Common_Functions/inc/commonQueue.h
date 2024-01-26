@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Common_Functions\inc\commonQueue.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonQueue.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:38:47
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-05 21:48:18
+ * @LastEditTime : 2024-01-18 23:05:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -17,30 +17,31 @@
 /*                                 GLOBAL VARIABLES                               */
 /*                                                                                */
 /**********************************************************************************/
+/* Queue structure */
 typedef struct {
-    int *list; /* 数据 */
-    int head;  /* 队列头 */
-    int tail;  /* 队列尾 */
-    int size;  /* 队列大小 */
-} Queue;       /* 队列结构体 */
+    int *list; /* Data list */
+    int head;  /* Queue head */
+    int tail;  /* Queue tail */
+    int size;  /* Queue size */
+} Queue;
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                UTILITY FUNCTIONS                               */
 /*                                                                                */
 /**********************************************************************************/
-Queue *Queue_Init(int queueSize);     /* 初始化队列 */
-void Queue_En(Queue *queue, int val); /* 入队 */
-int Queue_De(Queue *queue);           /* 出队 */
-int Queue_IsEmpty(Queue *queue);      /* 判断队列是否为空 */
-int Queue_IsFull(Queue *queue);       /* 判断队列是否为满 */
+Queue *Queue_Init(int queueSize);     /* Initialize queue */
+void Queue_En(Queue *queue, int val); /* Enqueue */
+int Queue_De(Queue *queue);           /* Dequeue */
+int Queue_IsEmpty(Queue *queue);      /* Check if queue is empty */
+int Queue_IsFull(Queue *queue);       /* Check if queue is full */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void Queue_Print(Queue *queue); /* 打印队列 */
-void Queue_Free(Queue *queue);  /* 释放队列 */
+void Queue_Print(Queue *queue); /* Print queue */
+void Queue_Free(Queue *queue);  /* Free queue */
 
 #endif /* F01_COMMON_FUNCTIONS_INC_COMMONQUEUE_H_ */

@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "commonArray.h"
 /* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
@@ -29,19 +29,19 @@
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 4;
     int k = 2;
     int actualRtnRowSize;
     int *actualRtnColSize;
     int **actual2DArr = combine(n, k, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 6;
     int expectRtnColSize[] = {2, 2, 2, 2, 2, 2};
     int *expect2DArr[] = {
@@ -53,14 +53,14 @@ void Test1(void) {
         (int[]){3, 4},
     };
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('1',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE
     );
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     for (int i = 0; i < actualRtnRowSize; ++i) {
         free(actual2DArr[i]);
     }
@@ -69,33 +69,33 @@ void Test1(void) {
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 1;
     int k = 1;
     int actualRtnRowSize;
     int *actualRtnColSize;
     int **actual2DArr = combine(n, k, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 1;
     int expectRtnColSize[] = {1};
     int *expect2DArr[] = {
         (int[]){1},
     };
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('2',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE
     );
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     for (int i = 0; i < actualRtnRowSize; ++i) {
         free(actual2DArr[i]);
     }
@@ -104,19 +104,19 @@ void Test2(void) {
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int n = 5;
     int k = 3;
     int actualRtnRowSize;
     int *actualRtnColSize;
     int **actual2DArr = combine(n, k, &actualRtnRowSize, &actualRtnColSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectRtnRowSize = 10;
     int expectRtnColSize[] = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
     int *expect2DArr[] = {
@@ -132,14 +132,14 @@ void Test3(void) {
         (int[]){3, 4, 5},
     };
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('3',
                     expect2DArr, expectRtnRowSize, expectRtnColSize,
                     actual2DArr, actualRtnRowSize, actualRtnColSize,
                     SORT_FALSE
     );
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     for (int i = 0; i < actualRtnRowSize; ++i) {
         free(actual2DArr[i]);
     }
@@ -153,7 +153,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

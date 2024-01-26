@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonArrayTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\common_array_test.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-01 02:17:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 23:34:25
+ * @LastEditTime : 2024-01-24 00:37:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,9 +11,7 @@
  */
 extern "C" {
     /* Target header file (目标头文件) */
-    #include "commonArray.h"
-    /* Common function header file (通用头文件) */
-    #include "commonTypeDef.h"
+    #include "F01_Common_Functions/inc/common_array.h"
 }
 /* Google test header file (谷歌测试头文件) */
 #include "gtest/gtest.h"
@@ -54,7 +52,7 @@ TEST_F(TestCommonArray, TestArrSize) {
     /* 运行结果 */
     int arrSize = ARR_SIZE(arr);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_EQ(arrSize, 5);
 }
 
@@ -96,7 +94,7 @@ TEST_F(TestCommonArray, TestSortArray) {
     /* 运行结果 */
     int result = Array_Sort(arr, 5);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_EQ(1, arr[0]) << "Error occurred in Array_Sort arr[0]";
     EXPECT_EQ(2, arr[1]) << "Error occurred in Array_Sort arr[1]";
     EXPECT_EQ(3, arr[2]) << "Error occurred in Array_Sort arr[2]";
@@ -125,7 +123,7 @@ TEST_F(TestCommonArray, TestSort2DArray) {
     /* 运行结果 */
     int result = Array_Sort2D(arrPtr, 2, arrColSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_EQ(0, arrPtr[0][0]) << "Error occurred in Array_Sort2D arrPtr[0][0]";
     EXPECT_EQ(1, arrPtr[0][1]) << "Error occurred in Array_Sort2D arrPtr[0][1]";
     EXPECT_EQ(2, arrPtr[0][2]) << "Error occurred in Array_Sort2D arrPtr[0][2]";
@@ -192,7 +190,7 @@ TEST_F(TestCommonArray, TestFreeArray) {
     /* 运行结果 */
     int result = Array_Free(&arr);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_EQ(nullptr, arr) << "Error occurred in Array_Free";
     EXPECT_EQ(COMMON_OK, result) << "Error occurred in Array_Free result";
 }
@@ -210,7 +208,7 @@ TEST_F(TestCommonArray, TestFree2DArray) {
     /* 运行结果 */
     int result = Array_Free2D(&arrPtr, 2);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_EQ(nullptr, arrPtr) << "Error occurred in Array_Free2D";
     EXPECT_EQ(COMMON_OK, result) << "Error occurred in Array_Free2D result";
 }
@@ -234,7 +232,7 @@ TEST_F(TestCommonArray, TestValidateArray) {
     int result = Validate_Array('1', expectArr, 5, actualArr, 5, 1);
     printf("============================================================ Print End.\n");
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_EQ(COMMON_OK, result) << "Error occurred in Validate_Array";
 }
 
@@ -273,6 +271,6 @@ TEST_F(TestCommonArray, TestValidate2DArray) {
     int result = Validate_Array2D('1', expect2DArr, 2, expectRtnColSize, actual2DArr, 2, actualRtnColSize, 1);
     printf("============================================================ Print End.\n");
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     EXPECT_EQ(COMMON_OK, result) << "Error occurred in Validate_Array2D";
 }

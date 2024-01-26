@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "commonArray.h"
 /* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
@@ -27,14 +27,14 @@
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * 输入：nums1 = [1,2,2,1], nums2 = [2,2]
  * 输出：[2]
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums1[] = {1, 2, 2, 1};
     int nums1Size = ARR_SIZE(nums1);
     int nums2[] = {2, 2};
@@ -42,26 +42,26 @@ void Test1(void) {
     int returnSize = 0;
     int *ans = intersection(nums1, nums1Size, nums2, nums2Size, &returnSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {2};
     int expectSize = ARR_SIZE(expect);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('1', expect, expectSize, ans, returnSize, COMMON_TRUE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(ans);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * 输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]
  * 输出：[9,4] 或者 [4,9]
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums1[] = {4, 9, 5};
     int nums1Size = ARR_SIZE(nums1);
     int nums2[] = {9, 4, 9, 8, 4};
@@ -69,26 +69,26 @@ void Test2(void) {
     int returnSize = 0;
     int *ans = intersection(nums1, nums1Size, nums2, nums2Size, &returnSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {4, 9};
     int expectSize = ARR_SIZE(expect);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('2', expect, expectSize, ans, returnSize, COMMON_TRUE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(ans);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * 输入：nums1 = [1,2,3,4,5], nums2 = [6,7,8,9,10]
  * 输出：[]
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int nums1[] = {1, 2, 3, 4, 5};
     int nums1Size = ARR_SIZE(nums1);
     int nums2[] = {6, 7, 8, 9, 10};
@@ -96,14 +96,14 @@ void Test3(void) {
     int returnSize = 0;
     int *ans = intersection(nums1, nums1Size, nums2, nums2Size, &returnSize);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expect[] = {};
     int expectSize = ARR_SIZE(expect);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array('3', expect, expectSize, ans, returnSize, COMMON_TRUE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     free(ans);
 }
 
@@ -113,7 +113,7 @@ void Test3(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

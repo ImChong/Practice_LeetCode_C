@@ -29,7 +29,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonTypeDef.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "commonArray.h"
 #include "commonBinaryTree.h"
 /* solution method configuration file (解题方法配置文件) */
@@ -62,15 +62,15 @@
  * @return {void}
  */
 void test_levelOrderTraversal(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
     int arrSize = ARR_SIZE(arr);
-    struct TreeNode *root = BTree_Init(arr, arrSize);
+    struct TreeNode *root = BTree_ArrayInit(arr, arrSize);
     int actualReturnSize = 0;
     int *actualReturnColumnSizes = NULL;
     int **actualArray = levelOrder(root, &actualReturnSize, &actualReturnColumnSizes);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     int expectedReturnSize = 3;
     int expectedReturnColumnSizes[] = {1, 2, 4};
     int *expectedArray[4] = {
@@ -79,13 +79,13 @@ void test_levelOrderTraversal(void) {
         (int[]){4, 5, 6, 7}
     };
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_Array2D('1',
                         expectedArray, expectedReturnSize, expectedReturnColumnSizes,
                         actualArray, actualReturnSize, actualReturnColumnSizes,
                         SORT_FALSE);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     Array_Free(&actualReturnColumnSizes);
     Array_Free2D(&actualArray, actualReturnSize);
     BTree_Free(root);
@@ -121,7 +121,7 @@ void test_levelOrderTraversal_CommonFunc(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组

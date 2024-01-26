@@ -71,88 +71,88 @@ struct ListNode *removeNthFromEnd(struct ListNode* head, int n){
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 测试 1
+ * @description: Test 1
  * {1, 2, 3, 4, 5}
  * n = 2
  * =================================================================================
  * @return {void}
  */
 void Test1(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5};
     int arrSize = ARR_SIZE(arr);
     struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
     int n = 2;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* {1, 2, 3, 5} */
     int expectArr[] = {1, 2, 3, 5};
     int expectArrSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('1', expectList, ansList);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(newList);
     LinkedList_Free(expectList);
 }
 
 /**
- * @description: 测试 2
+ * @description: Test 2
  * {1, 2, 3, 4, 5}
  * n = 7
  * =================================================================================
  * @return {void}
  */
 void Test2(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5};
     int arrSize = ARR_SIZE(arr);
     struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
     int n = 7;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* {1, 2, 3, 4, 5} */
     int expectArr[] = {1, 2, 3, 4, 5};
     int expectArrSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('2', expectList, ansList);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(newList);
     LinkedList_Free(expectList);
 }
 
 /**
- * @description: 测试 3
+ * @description: Test 3
  * {1}
  * n = 1
  * =================================================================================
  * @return {void}
  */
 void Test3(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1};
     int arrSize = ARR_SIZE(arr);
     struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
     int n = 1;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* {} */
     int expectArr[] = {};
     int expectArrSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('3', expectList, ansList);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     /* 内存已清除，无需再释放内存 */
 }
 
@@ -164,23 +164,23 @@ void Test3(void) {
  * @return {void}
  */
 void Test4(void) {
-    /* 实际结果 */
+    /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5};
     int arrSize = ARR_SIZE(arr);
     struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
     int n = 5;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
-    /* 预期结果 */
+    /* Expect result (期望结果) */
     /* {2, 3, 4, 5} */
     int expectArr[] = {2, 3, 4, 5};
     int expectArrSize = ARR_SIZE(expectArr);
     struct ListNode *expectList = LinkedList_ArrayInit(expectArr, expectArrSize);
 
-    /* 比较结果 */
+    /* Validate result (验证函数调用结果) */
     Validate_LinkedList('4', expectList, ansList);
 
-    /* 释放内存 */
+    /* Free memory (释放内存) */
     LinkedList_Free(ansList);        /* newList 的链表头已被释放内存 */
     LinkedList_Free(expectList);
 }
@@ -191,7 +191,7 @@ void Test4(void) {
 /*                                                                                */
 /**********************************************************************************/
 /**
- * @description: 主函数
+ * @description: Main function, entry of program.
  * =================================================================================
  * @param {int} argc        程序入参个数
  * @param {char} *argv[]    程序入参字符串数组
