@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common hash table header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONHASHTABLE_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONHASHTABLE_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_HASH_TABLE_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_HASH_TABLE_H_
 
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_def/common_type_def.h"
@@ -53,4 +53,4 @@ void HashTable_Print(struct HashTable *table);
 /* Free hash table */
 void HashTable_Free(struct HashTable *table);
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONHASHTABLE_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_HASH_TABLE_H_ */

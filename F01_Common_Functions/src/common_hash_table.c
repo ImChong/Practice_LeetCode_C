@@ -1,24 +1,22 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonHashTable.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\common_hash_table.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 13:36:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-24 00:23:23
+ * @LastEditTime : 2024-01-26 10:20:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 通用哈希表源文件
  */
 /* Common function configuration file (通用函数配置文件) */
-#include "compile_cfg.h"        /* NOLINT(build/include_subdir) */
+#include "compile_cfg.h"        /* NOLINT */
 #if COMMON_HASH_TABLE_EN /* whether compile this file, the definition of this macro can be found in compile_cfg.h */
 /* Header file (本文件头文件) */
-#include "commonHashTable.h"
+#include "F01_Common_Functions/inc/common_hash_table.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-/* Common function header file (通用头文件) */
-#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 
 /**********************************************************************************/
 /*                                                                                */
