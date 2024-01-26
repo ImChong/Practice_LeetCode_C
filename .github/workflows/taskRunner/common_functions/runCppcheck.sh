@@ -6,7 +6,7 @@ set -e
 
 # run cppcheck on all .c and .h files in the target directory
 TARGET_DIR="./F01_Common_Functions"
-TARGET_FILE_TYPES=".*\.\(cpp\|hpp\|cc\|c\|h\)"
+TARGET_FILE_TYPES=".*\.\(c\|h\|cc\)"
 
 for file in $(find $TARGET_DIR -regex $TARGET_FILE_TYPES)
 do
