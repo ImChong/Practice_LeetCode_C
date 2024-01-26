@@ -13,7 +13,7 @@ extern "C" {
     /* Target header file (目标头文件) */
     #include "commonLinkedListDummy.h"
     /* Common function header file (通用头文件) */
-    #include "common_type_def.h"
+    #include "F01_Common_Functions/inc/common_def/common_type_def.h"
 }
 /* Google test header file (谷歌测试头文件) */
 #include "gtest/gtest.h"

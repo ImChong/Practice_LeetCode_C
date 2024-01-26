@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonLinkedListTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\common_linked_list_test.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-13 22:14:22
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 23:56:30
+ * @LastEditTime : 2024-01-26 10:26:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,9 +11,9 @@
  */
 extern "C" {
     /* Target header file (目标头文件) */
-    #include "commonLinkedList.h"
+    #include "F01_Common_Functions/inc/common_linked_list.h"
     /* Common function header file (通用头文件) */
-    #include "common_type_def.h"
+    #include "F01_Common_Functions/inc/common_def/common_type_def.h"
 }
 /* Google test header file (谷歌测试头文件) */
 #include "gtest/gtest.h"

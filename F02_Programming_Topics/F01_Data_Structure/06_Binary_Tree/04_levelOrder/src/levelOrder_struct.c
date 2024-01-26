@@ -30,7 +30,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "common_type_def.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "commonBinaryTree.h"
 /* solution header file (题解头文件) */
 #include "levelOrder.h"

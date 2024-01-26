@@ -12,7 +12,7 @@
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 /* Common function header file (通用头文件) */
-#include "common_type_def.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "commonArray.h"
 #include "commonBinaryTree.h"
 /* test helper header file (测试函数头文件) */

@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common linked list header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONLINKEDLIST_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONLINKEDLIST_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_LINKED_LIST_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_LINKED_LIST_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -62,4 +62,4 @@ void LinkedList_Free(struct ListNode *head);                 /* Free linked list
 /* Validate linked list */
 void Validate_LinkedList(char testNum, struct ListNode *expectList, struct ListNode *actualList);
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONLINKEDLIST_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_LINKED_LIST_H_ */

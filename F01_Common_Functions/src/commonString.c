@@ -19,7 +19,7 @@
 #include <stdlib.h>
 #include <string.h>
 /* Common function header file (通用头文件) */
-#include "common_type_def.h"
+#include "F01_Common_Functions/inc/common_def/common_type_def.h"
 
 /**********************************************************************************/
 /*                                                                                */
