@@ -1,0 +1,31 @@
+# This is a workflow to get source code and run tests of common functions
+name: ProgrammingTopicLints
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI or API.
+on:
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+    # # Allows you to run this workflow every time a commit is pushed to the repository
+    # push:
+    #   branches:
+    #     - '**'
+    #   paths:
+    #     - 'F02_Programming_Topics/**'
+    #     - '.github/workflows/programming_topic_lint.yml'
+    #     - '.github/workflows/taskRunner/runGTests.sh'
+    # # Allows you to run this workflow every time a pull request is opened or updated
+    # pull_request:
+    #   branches:
+    #     - '**'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+    # Job
+    Cpplint:
+      # Runner
+      runs-on: ubuntu-latest
+
+      steps:
+        # Step: Checkout source code
+        - name: Checkout source code
+          uses: actions/checkout@main
