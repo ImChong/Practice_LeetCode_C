@@ -41,8 +41,8 @@ jobs:
         # step to run cpplint
         - name: Run Cpplint
           run: |
-            chmod +x .github/workflows/taskRunner/common_functions/runCpplint.sh
-            .github/workflows/taskRunner/common_functions/runCpplint.sh
+            chmod +x .github/workflows/taskRunner/common_functions/run_cpplint.sh
+            .github/workflows/taskRunner/common_functions/run_cpplint.sh
 
     # Job
     Cppcheck:
