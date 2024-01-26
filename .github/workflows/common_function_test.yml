@@ -49,5 +49,5 @@ jobs:
         # Step: Run all test executables in the build/bin directory
         - name: Run all GTests
           run: |
-            chmod +x .github/workflows/taskRunner/common_functions/runGTests.sh
-            .github/workflows/taskRunner/common_functions/runGTests.sh
+            chmod +x .github/workflows/taskRunner/common_functions/run_gtests.sh
+            .github/workflows/taskRunner/common_functions/run_gtests.sh
