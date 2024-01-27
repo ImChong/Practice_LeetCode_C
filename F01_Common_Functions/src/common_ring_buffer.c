@@ -60,7 +60,7 @@ int16_t RingBuffer_AddByte(RingBuffer *pRing, uint8_t byte) {
     }
 
     /* 找到第一个数据的索引号 */
-    uint16_t idx = pRing->dataIdx + pRing->data_len;
+    uint16_t idx = pRing->data_idx + pRing->data_len;
     if (idx >= pRing->buff_len) {
         idx -= pRing->buff_len;
     }
@@ -88,12 +88,12 @@ int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte) {
     }
 
     /* 取出一个字节 */
-    *pByte = pRing->pBuff[pRing->dataIdx];
-    pRing->dataIdx++;
+    *pByte = pRing->pBuff[pRing->data_idx];
+    pRing->data_idx++;
 
     /* 当idx越界时归零 */
-    if (pRing->dataIdx == pRing->buff_len) {
-        pRing->dataIdx = 0;
+    if (pRing->data_idx == pRing->buff_len) {
+        pRing->data_idx = 0;
     }
 
     pRing->data_len--;
@@ -109,7 +109,7 @@ int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte) {
 void RingBuffer_Print(RingBuffer *pRing) {
     printf("Ring Buffer: ");
     for (int16_t i = 0; i < pRing->data_len; ++i) {
-        int16_t idx = (pRing->dataIdx + i) % pRing->buff_len;
+        int16_t idx = (pRing->data_idx + i) % pRing->buff_len;
         printf("%d -> ", pRing->pBuff[idx]);
     }
     printf("NULL\n");
@@ -137,7 +137,7 @@ int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *p_buff, int16_t buff_len) {
     pRing->pBuff = pBuff;
     pRing->buff_len = buff_len;
     pRing->data_len = 0;
-    pRing->dataIdx = 0;
+    pRing->data_idx = 0;
     return COMMON_OK;
 }
 
