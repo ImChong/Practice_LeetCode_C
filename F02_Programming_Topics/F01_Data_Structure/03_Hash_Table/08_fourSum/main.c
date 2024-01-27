@@ -45,7 +45,7 @@ struct InputStruct {
 struct outputStruct {
     int rtnSize;                    /* 输出返回数组大小 */
     int *rtnColSize;                /* 输出返回数组列大小 */
-    int **arr;                      /* 输出返回数组 */
+    int **arr_2d;                      /* 输出返回数组 */
 };
 
 /* 测试数据定义 */

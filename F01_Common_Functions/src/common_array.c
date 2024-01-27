@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-22 09:31:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-27 11:25:23
+ * @LastEditTime : 2024-01-27 14:30:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -77,23 +77,23 @@ int Array_Sort(int *arr, int arr_size) {
 /**
  * @description: 二维数组排序
  * =================================================================================
- * @param {int} **arr           返回数组
+ * @param {int} **arr_2d           返回数组
  * @param {int} arr_size         返回数组大小
  * @param {int} *arr_col_sizes    返回数组列大小
  * @return {int}                排序结果
  */
-int Array_Sort2D(int **arr, int arr_size, int *arr_col_sizes) {
-    if (arr == NULL || arr_size <= 0 || arr_col_sizes == NULL) {
+int Array_Sort2D(int **arr_2d, int arr_size, int *arr_col_sizes) {
+    if (arr_2d == NULL || arr_size <= 0 || arr_col_sizes == NULL) {
         return COMMON_ERR;
     }
     for (int i = 0; i < arr_size; i++) {
-        if (arr[i] == NULL || arr_col_sizes[i] <= 0) {
+        if (arr_2d[i] == NULL || arr_col_sizes[i] <= 0) {
             return COMMON_ERR;
         }
-        qsort(arr[i], arr_col_sizes[i], sizeof(int), Array_CmpElement);
+        qsort(arr_2d[i], arr_col_sizes[i], sizeof(int), Array_CmpElement);
     }
     g_2DArrRowSize = arr_size;
-    qsort(arr, arr_size, sizeof(int *), CompareRows);
+    qsort(arr_2d, arr_size, sizeof(int *), CompareRows);
     return COMMON_OK;
 }
 
@@ -137,7 +137,7 @@ int Array_Print(int *arr, int arr_size) {
  * @param {int} *arr_col_sizes        返回数组列大小
  * @return {int}                    打印结果
  */
-int Array_Print2D(int **arr, int arr_size, int *arr_col_sizes) {
+int Array_Print2D(int **arr_2d, int arr_size, int *arr_col_sizes) {
     if (printf("Ans: (row: %d, col: %d) [\n", arr_size, arr_col_sizes[0]) < 0) {
         return COMMON_ERR;
     }
@@ -146,7 +146,7 @@ int Array_Print2D(int **arr, int arr_size, int *arr_col_sizes) {
             return COMMON_ERR;
         }
         for (int j = 0; j < arr_col_sizes[i]; j++) {
-            if (printf("%d", arr[i][j]) < 0) {
+            if (printf("%d", arr_2d[i][j]) < 0) {
                 return COMMON_ERR;
             }
             if (j < arr_col_sizes[i] - 1) {
@@ -182,20 +182,20 @@ int Array_Free(int **p_arr) {
 /**
  * @description: 释放二维数组
  * =================================================================================
- * @param {int} ***p_arr       返回数组
+ * @param {int} ***p_arr_2d       返回数组
  * @param {int} arr_size         返回数组大小
  * @return {int}                打印结果
  */
-int Array_Free2D(int ***p_arr, int arr_size) {
-    if (*p_arr != NULL) {
+int Array_Free2D(int ***p_arr_2d, int arr_size) {
+    if (*p_arr_2d != NULL) {
         for (int i = 0; i < arr_size; i++) {
-            if ((*p_arr)[i] != NULL) {
-                free((*p_arr)[i]);
-                (*p_arr)[i] = NULL;
+            if ((*p_arr_2d)[i] != NULL) {
+                free((*p_arr_2d)[i]);
+                (*p_arr_2d)[i] = NULL;
             }
         }
-        free(*p_arr);
-        *p_arr = NULL;
+        free(*p_arr_2d);
+        *p_arr_2d = NULL;
     }
     return COMMON_OK;
 }
