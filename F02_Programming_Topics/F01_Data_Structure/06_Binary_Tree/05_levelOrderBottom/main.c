@@ -32,7 +32,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonArray.h"
+#include "F01_Common_Functions/inc/common_array.h"
 #include "commonBinaryTree.h"
 /* solution header file (题解头文件) */
 #include "BTree_LevelOrderBottom.h"

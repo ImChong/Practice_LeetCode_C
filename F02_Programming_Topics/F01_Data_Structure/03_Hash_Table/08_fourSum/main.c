@@ -23,7 +23,7 @@
 #include <stdio.h>
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_def/common_type_def.h"
-#include "commonArray.h"
+#include "F01_Common_Functions/inc/common_array.h"
 /* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
 /* 当前源文件头文件 */

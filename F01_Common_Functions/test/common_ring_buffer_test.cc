@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\commonRingBufferTest.cc
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\test\common_ring_buffer_test.cc
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-15 22:59:03
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 23:57:55
+ * @LastEditTime : 2024-01-27 11:08:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,7 +11,7 @@
  */
 extern "C" {
     /* Target header file (目标头文件) */
-    #include "commonRingBuffer.h"
+    #include "F01_Common_Functions/inc/common_ring_buffer.h"
     /* Common function header file (通用头文件) */
     #include "F01_Common_Functions/inc/common_def/common_type_def.h"
 }

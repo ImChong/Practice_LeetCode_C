@@ -12,7 +12,7 @@
  * https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.md
  */
 /* Common function header file (通用头文件) */
-#include "commonArray.h"
+#include "F01_Common_Functions/inc/common_array.h"
 
 /**********************************************************************************/
 /**********************************************************************************/

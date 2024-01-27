@@ -13,7 +13,7 @@
 #include <stdio.h>
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_def/common_type_def.h"
-#include "commonArray.h"
+#include "F01_Common_Functions/inc/common_array.h"
 #include "commonBinaryTree.h"
 /* test helper header file (测试函数头文件) */
 #include "testHelper.h"

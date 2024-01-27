@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonArray.h"
+#include "F01_Common_Functions/inc/common_array.h"
 #include "commonLinkedList.h"
 
 /**********************************************************************************/

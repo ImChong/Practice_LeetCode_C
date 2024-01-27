@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonRingBuffer.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\common_ring_buffer.c
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-26 11:36:34
+ * @LastEditTime : 2024-01-27 11:15:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,13 +13,13 @@
 #include "compile_cfg.h"        /* NOLINT */
 #if COMMON_RING_BUFFER_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
-#include "commonRingBuffer.h"
+#include "F01_Common_Functions/inc/common_ring_buffer.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdint.h>
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_def/common_type_def.h"
-#include "commonArray.h"
+#include "F01_Common_Functions/inc/common_array.h"
 
 /* TODO: refactor needed 重构 */
 
