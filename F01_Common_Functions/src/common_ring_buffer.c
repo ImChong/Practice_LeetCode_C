@@ -125,11 +125,11 @@ void RingBuffer_Print(RingBuffer *pRing) {
  * @description: 环形 buffer 初始化
  * =================================================================================
  * @param {RingBuffer} *pRing
- * @param {uint8_t} *pBuff
+ * @param {uint8_t} *p_buff
  * @param {int16_t} buffLen
  * @return {int16_t}
  */
-int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *pBuff, int16_t buffLen) {
+int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *p_buff, int16_t buffLen) {
     RETURN_ERR_IF(pRing == NULL);
     RETURN_ERR_IF(pBuff == NULL);
     RETURN_ERR_IF(buffLen <= 0);
