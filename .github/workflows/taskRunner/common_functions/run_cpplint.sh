@@ -8,12 +8,18 @@ set -e
 TARGET_DIR="./F01_Common_Functions"
 TARGET_FILE_TYPES=".*\.\(c\|h\|cc\)"
 
+# Initialize file number counter
+FILE_COUNT=0
+
 for file in $(find $TARGET_DIR -regex $TARGET_FILE_TYPES)
 do
     echo "=============================="
     cpplint --linelength=120 $file            # run cpplint, change line length to 120
+
+    ((FILE_COUNT++))
 done
 
 # finish up message
 echo "=============================="
 echo "All files have been linted!"
+echo "Total number of files checked: $FILE_COUNT"

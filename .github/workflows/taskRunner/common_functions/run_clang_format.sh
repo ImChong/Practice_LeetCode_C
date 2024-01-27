@@ -10,6 +10,7 @@ TARGET_FILE_TYPES=".*\.\(c\|h\|cc\)"
 
 # Initialize a counter for the number of issues found
 ISSUE_COUNT=0
+FILE_COUNT=0
 
 # Process each file and check for style issues
 for file in $(find $TARGET_DIR -regex $TARGET_FILE_TYPES)
@@ -25,14 +26,18 @@ do
         # Increment the issue count
         ISSUE_COUNT=$((ISSUE_COUNT+1))
     fi
+
+    ((FILE_COUNT++))
 done
 
 # Check if any issues were found
 if [ $ISSUE_COUNT -ne 0 ]; then
     echo "=============================="
     echo "Code style issues found: $ISSUE_COUNT"
+    echo "Total number of files checked: $FILE_COUNT"
     exit 1
 fi
 
 echo "=============================="
 echo "No code style issues found"
+echo "Total number of files checked: $FILE_COUNT"

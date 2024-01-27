@@ -8,6 +8,9 @@ set -e
 TARGET_DIR="./F01_Common_Functions"
 TARGET_FILE_TYPES=".*\.\(c\|h\|cc\)"
 
+# Initialize file number counter
+FILE_COUNT=0
+
 for file in $(find $TARGET_DIR -regex $TARGET_FILE_TYPES)
 do
     echo "=============================="
@@ -17,8 +20,11 @@ do
     if echo "$output" | grep -q "error"; then           # check if variable contains "error"
         exit 1                                              # exit with error code
     fi
+
+    ((FILE_COUNT++))
 done
 
 # finish up message
 echo "=============================="
 echo "All files have been checked!"
+echo "Total number of files checked: $FILE_COUNT"
