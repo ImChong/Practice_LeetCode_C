@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonStack.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\common_stack.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:36:39
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-19 08:02:01
+ * @LastEditTime : 2024-01-27 11:27:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
