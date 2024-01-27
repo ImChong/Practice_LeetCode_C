@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:22:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-27 11:59:59
+ * @LastEditTime : 2024-01-27 12:00:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -23,7 +23,7 @@
 typedef struct {
     uint8_t *p_buff;  /* Ring buffer array */
     int16_t buff_len; /* Ring buffer length */
-    int16_t dataLen; /* Ring buffer data length */
+    int16_t data_len; /* Ring buffer data length */
     int16_t dataIdx; /* Ring buffer data index */
 } RingBuffer;
 
