@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common queue header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONQUEUE_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONQUEUE_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_QUEUE_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_QUEUE_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -44,4 +44,4 @@ int Queue_IsFull(Queue *queue);       /* Check if queue is full */
 void Queue_Print(Queue *queue); /* Print queue */
 void Queue_Free(Queue *queue);  /* Free queue */
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONQUEUE_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_QUEUE_H_ */
