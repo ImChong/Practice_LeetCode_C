@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : common ring buffer header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONRINGBUFFER_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONRINGBUFFER_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_RING_BUFFER_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_RING_BUFFER_H_
 
 /* Standard header file (标准头文件) */
 #include <stdint.h>
@@ -51,4 +51,4 @@ void RingBuffer_Free(RingBuffer *pRing);  /* Free ring buffer */
 /**********************************************************************************/
 void Validate_RingBuffer(void); /* Validate ring buffer */
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONRINGBUFFER_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_RING_BUFFER_H_ */
