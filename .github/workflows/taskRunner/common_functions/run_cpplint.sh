@@ -16,7 +16,7 @@ do
     echo "=============================="
     cpplint --linelength=120 $file            # run cpplint, change line length to 120
 
-    ((FILE_COUNT++))
+    FILE_COUNT=$((FILE_COUNT+1))
 done
 
 # finish up message

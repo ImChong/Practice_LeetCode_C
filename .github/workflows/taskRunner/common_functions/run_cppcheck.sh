@@ -21,7 +21,7 @@ do
         exit 1                                              # exit with error code
     fi
 
-    ((FILE_COUNT++))
+    FILE_COUNT=$((FILE_COUNT+1))
 done
 
 # finish up message
