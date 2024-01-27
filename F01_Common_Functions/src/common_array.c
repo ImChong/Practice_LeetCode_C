@@ -79,18 +79,18 @@ int Array_Sort(int *arr, int arr_size) {
  * =================================================================================
  * @param {int} **arr           返回数组
  * @param {int} arr_size         返回数组大小
- * @param {int} *arrColSizes    返回数组列大小
+ * @param {int} *arr_col_sizes    返回数组列大小
  * @return {int}                排序结果
  */
-int Array_Sort2D(int **arr, int arr_size, int *arrColSizes) {
-    if (arr == NULL || arr_size <= 0 || arrColSizes == NULL) {
+int Array_Sort2D(int **arr, int arr_size, int *arr_col_sizes) {
+    if (arr == NULL || arr_size <= 0 || arr_col_sizes == NULL) {
         return COMMON_ERR;
     }
     for (int i = 0; i < arr_size; i++) {
-        if (arr[i] == NULL || arrColSizes[i] <= 0) {
+        if (arr[i] == NULL || arr_col_sizes[i] <= 0) {
             return COMMON_ERR;
         }
-        qsort(arr[i], arrColSizes[i], sizeof(int), Array_CmpElement);
+        qsort(arr[i], arr_col_sizes[i], sizeof(int), Array_CmpElement);
     }
     g_2DArrRowSize = arr_size;
     qsort(arr, arr_size, sizeof(int *), CompareRows);
@@ -134,22 +134,22 @@ int Array_Print(int *arr, int arr_size) {
  * =================================================================================
  * @param {int} **2DArr             返回数组
  * @param {int} arr_size             返回数组大小
- * @param {int} *arrColSizes        返回数组列大小
+ * @param {int} *arr_col_sizes        返回数组列大小
  * @return {int}                    打印结果
  */
-int Array_Print2D(int **arr, int arr_size, int *arrColSizes) {
-    if (printf("Ans: (row: %d, col: %d) [\n", arr_size, arrColSizes[0]) < 0) {
+int Array_Print2D(int **arr, int arr_size, int *arr_col_sizes) {
+    if (printf("Ans: (row: %d, col: %d) [\n", arr_size, arr_col_sizes[0]) < 0) {
         return COMMON_ERR;
     }
     for (int i = 0; i < arr_size; i++) {
         if (printf("  [") < 0) {
             return COMMON_ERR;
         }
-        for (int j = 0; j < arrColSizes[i]; j++) {
+        for (int j = 0; j < arr_col_sizes[i]; j++) {
             if (printf("%d", arr[i][j]) < 0) {
                 return COMMON_ERR;
             }
-            if (j < arrColSizes[i] - 1) {
+            if (j < arr_col_sizes[i] - 1) {
                 if (printf(",\t") < 0) {
                     return COMMON_ERR;
                 }
