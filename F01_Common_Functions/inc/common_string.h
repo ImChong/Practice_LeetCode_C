@@ -18,7 +18,7 @@
 /*                                                                                */
 /**********************************************************************************/
 int Char_Swap(char *a, char *b);                            /* Swap two characters */
-int String_Reverse(char *s, int leftIndex, int rightIndex); /* Reverse string */
+int String_Reverse(char *s, int left_index, int right_index); /* Reverse string */
 
 /**********************************************************************************/
 /*                                                                                */

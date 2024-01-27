@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-09 17:28:45
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-27 14:24:48
+ * @LastEditTime : 2024-01-27 14:26:05
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,7 +40,7 @@
 int Array_CmpElement(const void *a, const void *b);         /* Compare array element */
 int Array_Sort(int *arr, int arr_size);                      /* Sort array in place */
 int Array_Sort2D(int **arr, int arr_size, int *arrColSizes); /* Sort 2D array in place */
-int Array_Reverse(int *arr, int leftIndex, int rightIndex); /* Reverse array in place */
+int Array_Reverse(int *arr, int left_index, int right_index); /* Reverse array in place */
 
 /**********************************************************************************/
 /*                                                                                */

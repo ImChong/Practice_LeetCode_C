@@ -47,18 +47,18 @@ int Char_Swap(char *a, char *b) {
  * @description: 反转字符串
  * =================================================================================
  * @param {char} *s             字符串地址
- * @param {int} leftIndex       左指针
- * @param {int} rightIndex      右指针
+ * @param {int} left_index       左指针
+ * @param {int} right_index      右指针
  * @return {int}                反转结果: 0-成功，-1-失败
  */
-int String_Reverse(char *s, int leftIndex, int rightIndex) {
-    if (s == NULL || leftIndex < 0 ||
-            rightIndex >= (int)strlen(s) ||             /* NOLINT(readability/casting) */
-            leftIndex > rightIndex) {
+int String_Reverse(char *s, int left_index, int right_index) {
+    if (s == NULL || left_index < 0 ||
+            right_index >= (int)strlen(s) ||             /* NOLINT(readability/casting) */
+            left_index > right_index) {
         return COMMON_ERR;
     }
-    while (leftIndex < rightIndex) {                    /* 左右指针未相遇 */
-        Char_Swap(&s[leftIndex++], &s[rightIndex--]);        /* 交换字符，左指针右移，右指针左移 */
+    while (left_index < right_index) {                    /* 左右指针未相遇 */
+        Char_Swap(&s[left_index++], &s[right_index--]);        /* 交换字符，左指针右移，右指针左移 */
     }
     return COMMON_OK;
 }
