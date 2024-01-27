@@ -17,6 +17,9 @@ tests=("common_array_test" \
     "common_string_test"
 )
 
+# Initialize file number counter
+FILE_COUNT=0
+
 # run gtest executables in the build/bin directory
 for test in "${tests[@]}"; do
     # find all the files that has the same name as test in the ./build/bin/ folder
@@ -31,8 +34,11 @@ for test in "${tests[@]}"; do
         echo "Executable $test not found."
         echo "=========================================================================================="
     fi
+
+    ((FILE_COUNT++))
 done
 
 # finish up message
 echo "=========================================================================================="
 echo "All executables have been run!"
+echo "Total number of test run: $FILE_COUNT"
