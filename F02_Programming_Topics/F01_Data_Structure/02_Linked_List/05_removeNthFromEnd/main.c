@@ -80,8 +80,8 @@ struct ListNode *removeNthFromEnd(struct ListNode* head, int n){
 void Test1(void) {
     /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5};
-    int arrSize = ARR_SIZE(arr);
-    struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
+    int arr_size = ARR_SIZE(arr);
+    struct ListNode *newList = LinkedList_ArrayInit(arr, arr_size);
     int n = 2;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
@@ -109,8 +109,8 @@ void Test1(void) {
 void Test2(void) {
     /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5};
-    int arrSize = ARR_SIZE(arr);
-    struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
+    int arr_size = ARR_SIZE(arr);
+    struct ListNode *newList = LinkedList_ArrayInit(arr, arr_size);
     int n = 7;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
@@ -138,8 +138,8 @@ void Test2(void) {
 void Test3(void) {
     /* Function call (函数调用) */
     int arr[] = {1};
-    int arrSize = ARR_SIZE(arr);
-    struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
+    int arr_size = ARR_SIZE(arr);
+    struct ListNode *newList = LinkedList_ArrayInit(arr, arr_size);
     int n = 1;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 
@@ -166,8 +166,8 @@ void Test3(void) {
 void Test4(void) {
     /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5};
-    int arrSize = ARR_SIZE(arr);
-    struct ListNode *newList = LinkedList_ArrayInit(arr, arrSize);
+    int arr_size = ARR_SIZE(arr);
+    struct ListNode *newList = LinkedList_ArrayInit(arr, arr_size);
     int n = 5;
     struct ListNode *ansList = removeNthFromEnd(newList, n);
 

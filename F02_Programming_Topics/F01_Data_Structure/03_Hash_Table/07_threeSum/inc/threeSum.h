@@ -12,6 +12,6 @@
 #ifndef __THREE_SUM_H
 #define __THREE_SUM_H
 
-int **threeSum(int *arr, int arrSize, int *returnSize, int **returnColumnSizes);
+int **threeSum(int *arr, int arr_size, int *returnSize, int **returnColumnSizes);
 
 #endif  /* __THREE_SUM_H */

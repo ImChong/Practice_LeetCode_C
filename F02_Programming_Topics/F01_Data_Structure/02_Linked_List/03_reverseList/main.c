@@ -57,8 +57,8 @@ struct ListNode *reverseList(struct ListNode* head){
 void Test1(void) {
     /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5};
-    int arrSize = ARR_SIZE(arr);
-    struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
+    int arr_size = ARR_SIZE(arr);
+    struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
     struct ListNode *ansList = reverseList(arrList);
 
     /* Expect result (期望结果) */
@@ -82,8 +82,8 @@ void Test1(void) {
 void Test2(void) {
     /* Function call (函数调用) */
     int arr[] = {1};
-    int arrSize = ARR_SIZE(arr);
-    struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
+    int arr_size = ARR_SIZE(arr);
+    struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
     struct ListNode *ansList = reverseList(arrList);
 
     /* Expect result (期望结果) */
@@ -107,8 +107,8 @@ void Test2(void) {
 void Test3(void) {
     /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int arrSize = ARR_SIZE(arr);
-    struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
+    int arr_size = ARR_SIZE(arr);
+    struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
     struct ListNode *ansList = reverseList(arrList);
 
     /* Expect result (期望结果) */

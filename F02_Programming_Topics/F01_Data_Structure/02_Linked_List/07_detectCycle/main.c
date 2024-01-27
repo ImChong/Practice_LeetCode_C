@@ -64,8 +64,8 @@ struct ListNode *detectCycle(struct ListNode *head) {
 void Test1(void) {
     /* Function call (函数调用) */
     int arr[] = {3, 2, 0, -4};
-    int arrSize = ARR_SIZE(arr);
-    struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
+    int arr_size = ARR_SIZE(arr);
+    struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
     arrList->next->next->next->next = arrList->next;   /* 将尾节点指向指定节点 */
     int actual = detectCycle(arrList)->val;
 
@@ -87,8 +87,8 @@ void Test1(void) {
 void Test2(void) {
     /* Function call (函数调用) */
     int arr[] = {1, 2};
-    int arrSize = ARR_SIZE(arr);
-    struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
+    int arr_size = ARR_SIZE(arr);
+    struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
     arrList->next->next = arrList;   /* 将尾节点指向指定节点 */
     int actual = detectCycle(arrList)->val;
 
@@ -110,8 +110,8 @@ void Test2(void) {
 void Test3(void) {
     /* Function call (函数调用) */
     int arr[] = {1};
-    int arrSize = ARR_SIZE(arr);
-    struct ListNode *arrList = LinkedList_ArrayInit(arr, arrSize);
+    int arr_size = ARR_SIZE(arr);
+    struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
     struct ListNode *actual = detectCycle(arrList);
 
     /* Expect result (期望结果) */

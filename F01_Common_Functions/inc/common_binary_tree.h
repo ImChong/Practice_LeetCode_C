@@ -26,7 +26,7 @@ struct TreeNode {
 
 /* Tree node operations */
 struct TreeNode *BTree_InitNode(int value);                 /* Initialize a tree node */
-struct TreeNode *BTree_ArrayInit(int *arr, int arrSize);    /* Initialize a tree from array */
+struct TreeNode *BTree_ArrayInit(int *arr, int arr_size);    /* Initialize a tree from array */
 int *BTree_ToArray(struct TreeNode *root, int *returnSize); /* Transform a tree to array */
 void BTree_PrintTestTree(void);                             /* Print test tree */
 void BTree_PrintValue(struct TreeNode *root);               /* Print tree value as an array */

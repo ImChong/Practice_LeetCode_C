@@ -31,22 +31,22 @@
  * @description: 三数之和
  * =================================================================================
  * @param {int} *arr                    数组
- * @param {int} arrSize                 数组大小
+ * @param {int} arr_size                 数组大小
  * @param {int} *returnSize             返回数组大小
  * @param {int} **returnColumnSizes     返回数组列大小
  * @return {int} **ans                  返回数组
  */
-int **threeSum(int *arr, int arrSize, int *returnSize, int **returnColumnSizes) {
-    qsort(arr, arrSize, sizeof(int), Array_CmpElement);
+int **threeSum(int *arr, int arr_size, int *returnSize, int **returnColumnSizes) {
+    qsort(arr, arr_size, sizeof(int), Array_CmpElement);
     *returnSize = 0;
-    *returnColumnSizes = (int *)malloc(sizeof(int) * arrSize * arrSize);
-    int **ans = (int **)malloc(sizeof(int *) * arrSize * arrSize);
-    for (int i = 0; i < arrSize; i++) {
+    *returnColumnSizes = (int *)malloc(sizeof(int) * arr_size * arr_size);
+    int **ans = (int **)malloc(sizeof(int *) * arr_size * arr_size);
+    for (int i = 0; i < arr_size; i++) {
         if (i > 0 && arr[i] == arr[i - 1]) {
             continue;
         }
-        struct HashTable *table = HashTable_Init(arrSize);
-        for (int j = i + 1; j < arrSize; j++) {
+        struct HashTable *table = HashTable_Init(arr_size);
+        for (int j = i + 1; j < arr_size; j++) {
             int complement = -(arr[i] + arr[j]);
             if (HashTable_Search(table, complement)) {
                 ans[*returnSize] = (int *)malloc(sizeof(int) * 3);
@@ -55,7 +55,7 @@ int **threeSum(int *arr, int arrSize, int *returnSize, int **returnColumnSizes) 
                 ans[*returnSize][2] = complement;
                 (*returnColumnSizes)[*returnSize] = 3;
                 (*returnSize)++;
-                while (j + 1 < arrSize && arr[j] == arr[j + 1]) {
+                while (j + 1 < arr_size && arr[j] == arr[j + 1]) {
                     j++;
                 }
             } else {

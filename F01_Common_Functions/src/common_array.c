@@ -63,14 +63,14 @@ STATIC_FUNC int CompareRows(const void *a, const void *b) {
  * @description: 数组排序
  * =================================================================================
  * @param {int} *arr        数组
- * @param {int} arrSize     数组大小
+ * @param {int} arr_size     数组大小
  * @return {int}            排序结果
  */
-int Array_Sort(int *arr, int arrSize) {
-    if (arr == NULL || arrSize <= 0) {
+int Array_Sort(int *arr, int arr_size) {
+    if (arr == NULL || arr_size <= 0) {
         return COMMON_ERR;
     }
-    qsort(arr, arrSize, sizeof(int), Array_CmpElement);
+    qsort(arr, arr_size, sizeof(int), Array_CmpElement);
     return COMMON_OK;
 }
 
@@ -78,22 +78,22 @@ int Array_Sort(int *arr, int arrSize) {
  * @description: 二维数组排序
  * =================================================================================
  * @param {int} **arr           返回数组
- * @param {int} arrSize         返回数组大小
+ * @param {int} arr_size         返回数组大小
  * @param {int} *arrColSizes    返回数组列大小
  * @return {int}                排序结果
  */
-int Array_Sort2D(int **arr, int arrSize, int *arrColSizes) {
-    if (arr == NULL || arrSize <= 0 || arrColSizes == NULL) {
+int Array_Sort2D(int **arr, int arr_size, int *arrColSizes) {
+    if (arr == NULL || arr_size <= 0 || arrColSizes == NULL) {
         return COMMON_ERR;
     }
-    for (int i = 0; i < arrSize; i++) {
+    for (int i = 0; i < arr_size; i++) {
         if (arr[i] == NULL || arrColSizes[i] <= 0) {
             return COMMON_ERR;
         }
         qsort(arr[i], arrColSizes[i], sizeof(int), Array_CmpElement);
     }
-    g_2DArrRowSize = arrSize;
-    qsort(arr, arrSize, sizeof(int *), CompareRows);
+    g_2DArrRowSize = arr_size;
+    qsort(arr, arr_size, sizeof(int *), CompareRows);
     return COMMON_OK;
 }
 
@@ -106,18 +106,18 @@ int Array_Sort2D(int **arr, int arrSize, int *arrColSizes) {
  * @description: 打印数组
  * =================================================================================
  * @param {int} *arr        数组
- * @param {int} arrSize     数组大小
+ * @param {int} arr_size     数组大小
  * @return {int}            打印结果
  */
-int Array_Print(int *arr, int arrSize) {
-    if (printf("Arr (len: %d): [", arrSize) < 0) {
+int Array_Print(int *arr, int arr_size) {
+    if (printf("Arr (len: %d): [", arr_size) < 0) {
         return COMMON_ERR;
     }
-    for (int i = 0; i < arrSize; i++) {
+    for (int i = 0; i < arr_size; i++) {
         if (printf("%d", arr[i]) < 0) {
             return COMMON_ERR;
         }
-        if (i < arrSize - 1) {
+        if (i < arr_size - 1) {
             if (printf(",\t") < 0) {
                 return COMMON_ERR;
             }
@@ -133,15 +133,15 @@ int Array_Print(int *arr, int arrSize) {
  * @description: 打印二维数组
  * =================================================================================
  * @param {int} **2DArr             返回数组
- * @param {int} arrSize             返回数组大小
+ * @param {int} arr_size             返回数组大小
  * @param {int} *arrColSizes        返回数组列大小
  * @return {int}                    打印结果
  */
-int Array_Print2D(int **arr, int arrSize, int *arrColSizes) {
-    if (printf("Ans: (row: %d, col: %d) [\n", arrSize, arrColSizes[0]) < 0) {
+int Array_Print2D(int **arr, int arr_size, int *arrColSizes) {
+    if (printf("Ans: (row: %d, col: %d) [\n", arr_size, arrColSizes[0]) < 0) {
         return COMMON_ERR;
     }
-    for (int i = 0; i < arrSize; i++) {
+    for (int i = 0; i < arr_size; i++) {
         if (printf("  [") < 0) {
             return COMMON_ERR;
         }
@@ -183,12 +183,12 @@ int Array_Free(int **arrPtr) {
  * @description: 释放二维数组
  * =================================================================================
  * @param {int} ***arrPtr       返回数组
- * @param {int} arrSize         返回数组大小
+ * @param {int} arr_size         返回数组大小
  * @return {int}                打印结果
  */
-int Array_Free2D(int ***arrPtr, int arrSize) {
+int Array_Free2D(int ***arrPtr, int arr_size) {
     if (*arrPtr != NULL) {
-        for (int i = 0; i < arrSize; i++) {
+        for (int i = 0; i < arr_size; i++) {
             if ((*arrPtr)[i] != NULL) {
                 free((*arrPtr)[i]);
                 (*arrPtr)[i] = NULL;

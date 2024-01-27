@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonArray.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\common_array.h
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-09 17:28:45
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-20 08:30:39
+ * @LastEditTime : 2024-01-27 14:24:48
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -38,8 +38,8 @@
 /*                                                                                */
 /**********************************************************************************/
 int Array_CmpElement(const void *a, const void *b);         /* Compare array element */
-int Array_Sort(int *arr, int arrSize);                      /* Sort array in place */
-int Array_Sort2D(int **arr, int arrSize, int *arrColSizes); /* Sort 2D array in place */
+int Array_Sort(int *arr, int arr_size);                      /* Sort array in place */
+int Array_Sort2D(int **arr, int arr_size, int *arrColSizes); /* Sort 2D array in place */
 int Array_Reverse(int *arr, int leftIndex, int rightIndex); /* Reverse array in place */
 
 /**********************************************************************************/
@@ -47,10 +47,10 @@ int Array_Reverse(int *arr, int leftIndex, int rightIndex); /* Reverse array in 
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-int Array_Print(int *arr, int arrSize);                      /* Print array */
-int Array_Print2D(int **arr, int arrSize, int *arrColSizes); /* Print 2D array */
+int Array_Print(int *arr, int arr_size);                      /* Print array */
+int Array_Print2D(int **arr, int arr_size, int *arrColSizes); /* Print 2D array */
 int Array_Free(int **arrPtr);                                /* Free array */
-int Array_Free2D(int ***arrPtr, int arrSize);                /* Free 2D array */
+int Array_Free2D(int ***arrPtr, int arr_size);                /* Free 2D array */
 
 /**********************************************************************************/
 /*                                                                                */

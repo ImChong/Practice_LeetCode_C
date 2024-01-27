@@ -766,11 +766,11 @@ struct TreeNode *BTree_InitNode(int value) {
  * @description: 将数组转换为二叉树
  * =================================================================================
  * @param {int*} arr                数组指针
- * @param {int} arrSize             数组大小
+ * @param {int} arr_size             数组大小
  * @return {TreeNode} *node         根节点指针
  */
-struct TreeNode *BTree_ArrayInit(int* arr, int arrSize) {
-    if (arrSize == 0) {
+struct TreeNode *BTree_ArrayInit(int* arr, int arr_size) {
+    if (arr_size == 0) {
         return NULL;
     }
 
@@ -779,19 +779,19 @@ struct TreeNode *BTree_ArrayInit(int* arr, int arrSize) {
     root->left = NULL;
     root->right = NULL;
 
-    TreeArrQueue *queue = BTree_InitArrQueue(arrSize);
+    TreeArrQueue *queue = BTree_InitArrQueue(arr_size);
     queue->array[queue->tail++] = root;
 
-    for (int i = 1; i < arrSize; i++) {
+    for (int i = 1; i < arr_size; i++) {
         struct TreeNode *node = queue->array[queue->head++];
-        if (i < arrSize) {
+        if (i < arr_size) {
             node->left = (struct TreeNode *)malloc(sizeof(struct TreeNode));
             node->left->val = arr[i];
             node->left->left = NULL;
             node->left->right = NULL;
             queue->array[queue->tail++] = node->left;
         }
-        if (++i < arrSize) {
+        if (++i < arr_size) {
             node->right = (struct TreeNode *)malloc(sizeof(struct TreeNode));
             node->right->val = arr[i];
             node->right->left = NULL;

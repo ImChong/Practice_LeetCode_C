@@ -41,8 +41,8 @@
 void test_preOrderTraversal(void) {
     /* Function call (函数调用) */
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
-    int arrSize = ARR_SIZE(arr);
-    struct TreeNode *root = BTree_ArrayInit(arr, arrSize);
+    int arr_size = ARR_SIZE(arr);
+    struct TreeNode *root = BTree_ArrayInit(arr, arr_size);
     int actualSize_recursion = 0;
     int *actual_recursion = BTree_PreOrderTraversal_Recursion(root, &actualSize_recursion);
     int actualSize_iteration = 0;

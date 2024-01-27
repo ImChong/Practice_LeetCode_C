@@ -30,26 +30,26 @@
  * @description: 三数之和
  * =================================================================================
  * @param {int} *arr                    数组
- * @param {int} arrSize                 数组大小
+ * @param {int} arr_size                 数组大小
  * @param {int} *returnSize             返回数组大小
  * @param {int} **returnColumnSizes     返回数组列大小
  * @return {int} **ans                  返回数组
  */
-int **threeSum(int *arr, int arrSize, int *returnSize, int **returnColumnSizes) {
+int **threeSum(int *arr, int arr_size, int *returnSize, int **returnColumnSizes) {
     *returnSize = 0;
-    if (arrSize < 3) {
+    if (arr_size < 3) {
         return NULL;
     }
-    qsort(arr, arrSize, sizeof(int), Array_CmpElement);
-    int **ans = (int **)malloc(sizeof(int *) * arrSize * arrSize);
-    *returnColumnSizes = (int *)malloc(sizeof(int) * arrSize * arrSize);
+    qsort(arr, arr_size, sizeof(int), Array_CmpElement);
+    int **ans = (int **)malloc(sizeof(int *) * arr_size * arr_size);
+    *returnColumnSizes = (int *)malloc(sizeof(int) * arr_size * arr_size);
     int i, j, k, sum;
 
     int indexLeft = 0;
     int indexMiddle = 0;
     int indexRight = 0;
 
-    for (indexLeft = 0; indexLeft < arrSize - 2; indexLeft++) {
+    for (indexLeft = 0; indexLeft < arr_size - 2; indexLeft++) {
         if (arr[indexLeft] > 0) {
             return ans;
         }
@@ -58,7 +58,7 @@ int **threeSum(int *arr, int arrSize, int *returnSize, int **returnColumnSizes) 
             continue;
         }
         indexMiddle = indexLeft + 1;
-        indexRight = arrSize - 1;
+        indexRight = arr_size - 1;
 
         while (indexMiddle < indexRight) {
             sum = arr[indexLeft] + arr[indexMiddle] + arr[indexRight];

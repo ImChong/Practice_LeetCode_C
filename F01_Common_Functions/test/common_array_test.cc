@@ -50,10 +50,10 @@ TEST_F(TestCommonArray, TestArrSize) {
     int arr[5] = {1, 2, 3, 4, 5};
 
     /* 运行结果 */
-    int arrSize = ARR_SIZE(arr);
+    int arr_size = ARR_SIZE(arr);
 
     /* Validate result (验证函数调用结果) */
-    EXPECT_EQ(arrSize, 5);
+    EXPECT_EQ(arr_size, 5);
 }
 
 /**********************************************************************************/

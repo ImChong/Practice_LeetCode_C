@@ -37,7 +37,7 @@
 /* 测试数据结构定义 */
 struct InputStruct {
     int *arr;                       /* 输入数组 */
-    int arrSize;                    /* 输入数组大小 */
+    int arr_size;                    /* 输入数组大小 */
     int target;                     /* 输入目标值 */
 };
 
@@ -69,7 +69,7 @@ struct TestStruct {
 void runTest(struct TestStruct *test) {
     /* Function call (函数调用) */
     int *nums = test->input.arr;
-    int numsSize = test->input.arrSize;
+    int numsSize = test->input.arr_size;
     int target = test->input.target;
     int actualRtnRowSize = 0;
     int *actualRtnColSize = NULL;
@@ -103,7 +103,7 @@ void Test1(void) {
     test.testNum = '1';
     int inputArr[] = {1, 0, -1, 0, -2, 2};
     test.input.arr = inputArr;
-    test.input.arrSize = ARR_SIZE(inputArr);
+    test.input.arr_size = ARR_SIZE(inputArr);
     test.input.target = 0;
     test.output.rtnSize = 3;
     test.output.rtnColSize = (int[]){4, 4, 4};
@@ -123,7 +123,7 @@ void Test2(void) {
     test.testNum = '2';
     int inputArr[] = {2, 2, 2, 2, 2};
     test.input.arr = inputArr;
-    test.input.arrSize = ARR_SIZE(inputArr);
+    test.input.arr_size = ARR_SIZE(inputArr);
     test.input.target = 8;
     test.output.rtnSize = 1;
     test.output.rtnColSize = (int[]){4};
@@ -143,7 +143,7 @@ void Test3(void) {
     test.testNum = '3';
     int inputArr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     test.input.arr = inputArr;
-    test.input.arrSize = ARR_SIZE(inputArr);
+    test.input.arr_size = ARR_SIZE(inputArr);
     test.input.target = 20;
     test.output.rtnSize = 16;
     test.output.rtnColSize = (int[]){4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
