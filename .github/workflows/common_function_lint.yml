@@ -11,9 +11,9 @@ on:
       paths:
         - 'F01_Common_Functions/**'
         - '.github/workflows/common_function_lint.yml'
-        - '.github/workflows/taskRunner/common_functions/runCpplint.sh'
-        - '.github/workflows/taskRunner/common_functions/runCppcheck.sh'
-        - '.github/workflows/taskRunner/common_functions/runGoogleStyleCheck.sh'
+        - '.github/workflows/taskRunner/common_functions/run_cpplint.sh'
+        - '.github/workflows/taskRunner/common_functions/run_cppcheck.sh'
+        - '.github/workflows/taskRunner/common_functions/run_clang_format.sh'
     # Allows you to run this workflow every time a pull request is opened or updated
     pull_request:
       branches:

@@ -12,7 +12,7 @@ on:
       paths:
         - 'F01_Common_Functions/**'
         - '.github/workflows/common_function_test.yml'
-        - '.github/workflows/taskRunner/common_functions/runGTests.sh'
+        - '.github/workflows/taskRunner/common_functions/run_gtests.sh'
     # Allows you to run this workflow every time a pull request is opened or updated
     pull_request:
       branches:
