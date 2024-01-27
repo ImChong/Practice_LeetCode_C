@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2024-01-09 17:28:45
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-27 14:26:50
+ * @LastEditTime : 2024-01-27 14:27:13
  * =================================================================================
  * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -49,8 +49,8 @@ int Array_Reverse(int *arr, int left_index, int right_index); /* Reverse array i
 /**********************************************************************************/
 int Array_Print(int *arr, int arr_size);                      /* Print array */
 int Array_Print2D(int **arr, int arr_size, int *arr_col_sizes); /* Print 2D array */
-int Array_Free(int **arrPtr);                                /* Free array */
-int Array_Free2D(int ***arrPtr, int arr_size);                /* Free 2D array */
+int Array_Free(int **p_arr);                                /* Free array */
+int Array_Free2D(int ***p_arr, int arr_size);                /* Free 2D array */
 
 /**********************************************************************************/
 /*                                                                                */

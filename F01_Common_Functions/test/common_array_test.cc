@@ -108,28 +108,28 @@ TEST_F(TestCommonArray, TestSortArray) {
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestSort2DArray) {
     /* 准备数据 */
-    int **arrPtr = (int **)malloc(sizeof(int *) * 2); /* NOLINT(readability/casting) */
+    int **p_arr = (int **)malloc(sizeof(int *) * 2); /* NOLINT(readability/casting) */
     for (int i = 0; i < 2; i++) {
-        arrPtr[i] = (int *)malloc(sizeof(int) * 3); /* NOLINT(readability/casting) */
+        p_arr[i] = (int *)malloc(sizeof(int) * 3); /* NOLINT(readability/casting) */
     }
-    arrPtr[0][0] = 5;
-    arrPtr[0][1] = 4;
-    arrPtr[0][2] = 3;
-    arrPtr[1][0] = 2;
-    arrPtr[1][1] = 1;
-    arrPtr[1][2] = 0;
+    p_arr[0][0] = 5;
+    p_arr[0][1] = 4;
+    p_arr[0][2] = 3;
+    p_arr[1][0] = 2;
+    p_arr[1][1] = 1;
+    p_arr[1][2] = 0;
     int arrColSize[2] = {3, 3};
 
     /* 运行结果 */
-    int result = Array_Sort2D(arrPtr, 2, arrColSize);
+    int result = Array_Sort2D(p_arr, 2, arrColSize);
 
     /* Validate result (验证函数调用结果) */
-    EXPECT_EQ(0, arrPtr[0][0]) << "Error occurred in Array_Sort2D arrPtr[0][0]";
-    EXPECT_EQ(1, arrPtr[0][1]) << "Error occurred in Array_Sort2D arrPtr[0][1]";
-    EXPECT_EQ(2, arrPtr[0][2]) << "Error occurred in Array_Sort2D arrPtr[0][2]";
-    EXPECT_EQ(3, arrPtr[1][0]) << "Error occurred in Array_Sort2D arrPtr[1][0]";
-    EXPECT_EQ(4, arrPtr[1][1]) << "Error occurred in Array_Sort2D arrPtr[1][1]";
-    EXPECT_EQ(5, arrPtr[1][2]) << "Error occurred in Array_Sort2D arrPtr[1][2]";
+    EXPECT_EQ(0, p_arr[0][0]) << "Error occurred in Array_Sort2D p_arr[0][0]";
+    EXPECT_EQ(1, p_arr[0][1]) << "Error occurred in Array_Sort2D p_arr[0][1]";
+    EXPECT_EQ(2, p_arr[0][2]) << "Error occurred in Array_Sort2D p_arr[0][2]";
+    EXPECT_EQ(3, p_arr[1][0]) << "Error occurred in Array_Sort2D p_arr[1][0]";
+    EXPECT_EQ(4, p_arr[1][1]) << "Error occurred in Array_Sort2D p_arr[1][1]";
+    EXPECT_EQ(5, p_arr[1][2]) << "Error occurred in Array_Sort2D p_arr[1][2]";
     EXPECT_EQ(COMMON_OK, result) << "Error occurred in Array_Sort2D result";
 }
 
@@ -159,21 +159,21 @@ TEST_F(TestCommonArray, TestPrintArray) {
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestPrint2DArray) {
     /* 准备数据 */
-    int **arrPtr = (int **)malloc(sizeof(int *) * 2); /* NOLINT(readability/casting) */
+    int **p_arr = (int **)malloc(sizeof(int *) * 2); /* NOLINT(readability/casting) */
     for (int i = 0; i < 2; i++) {
-        arrPtr[i] = (int *)malloc(sizeof(int) * 3); /* NOLINT(readability/casting) */
+        p_arr[i] = (int *)malloc(sizeof(int) * 3); /* NOLINT(readability/casting) */
     }
-    arrPtr[0][0] = 1;
-    arrPtr[0][1] = 2;
-    arrPtr[0][2] = 3;
-    arrPtr[1][0] = 4;
-    arrPtr[1][1] = 5;
-    arrPtr[1][2] = 6;
+    p_arr[0][0] = 1;
+    p_arr[0][1] = 2;
+    p_arr[0][2] = 3;
+    p_arr[1][0] = 4;
+    p_arr[1][1] = 5;
+    p_arr[1][2] = 6;
     int arrColSize[2] = {3, 3};
 
     /* 运行结果 */
     printf("============================================================ Print Start.\n");
-    int result = Array_Print2D(arrPtr, 2, arrColSize);
+    int result = Array_Print2D(p_arr, 2, arrColSize);
     printf("============================================================ Print End.\n");
 
     /* 检查结果 */
@@ -200,16 +200,16 @@ TEST_F(TestCommonArray, TestFreeArray) {
 /* ============================================================================== */
 TEST_F(TestCommonArray, TestFree2DArray) {
     /* 准备数据 */
-    int **arrPtr = (int **)malloc(sizeof(int *) * 2); /* NOLINT(readability/casting) */
+    int **p_arr = (int **)malloc(sizeof(int *) * 2); /* NOLINT(readability/casting) */
     for (int i = 0; i < 2; i++) {
-        arrPtr[i] = (int *)malloc(sizeof(int) * 3); /* NOLINT(readability/casting) */
+        p_arr[i] = (int *)malloc(sizeof(int) * 3); /* NOLINT(readability/casting) */
     }
 
     /* 运行结果 */
-    int result = Array_Free2D(&arrPtr, 2);
+    int result = Array_Free2D(&p_arr, 2);
 
     /* Validate result (验证函数调用结果) */
-    EXPECT_EQ(nullptr, arrPtr) << "Error occurred in Array_Free2D";
+    EXPECT_EQ(nullptr, p_arr) << "Error occurred in Array_Free2D";
     EXPECT_EQ(COMMON_OK, result) << "Error occurred in Array_Free2D result";
 }
 

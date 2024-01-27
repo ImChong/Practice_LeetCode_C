@@ -168,13 +168,13 @@ int Array_Print2D(int **arr, int arr_size, int *arr_col_sizes) {
 /**
  * @description: 释放数组
  * =================================================================================
- * @param {int} **arrPtr        返回数组
+ * @param {int} **p_arr        返回数组
  * @return {int}                打印结果
  */
-int Array_Free(int **arrPtr) {
-    if (*arrPtr != NULL) {
-        free(*arrPtr);
-        *arrPtr = NULL;
+int Array_Free(int **p_arr) {
+    if (*p_arr != NULL) {
+        free(*p_arr);
+        *p_arr = NULL;
     }
     return COMMON_OK;
 }
@@ -182,20 +182,20 @@ int Array_Free(int **arrPtr) {
 /**
  * @description: 释放二维数组
  * =================================================================================
- * @param {int} ***arrPtr       返回数组
+ * @param {int} ***p_arr       返回数组
  * @param {int} arr_size         返回数组大小
  * @return {int}                打印结果
  */
-int Array_Free2D(int ***arrPtr, int arr_size) {
-    if (*arrPtr != NULL) {
+int Array_Free2D(int ***p_arr, int arr_size) {
+    if (*p_arr != NULL) {
         for (int i = 0; i < arr_size; i++) {
-            if ((*arrPtr)[i] != NULL) {
-                free((*arrPtr)[i]);
-                (*arrPtr)[i] = NULL;
+            if ((*p_arr)[i] != NULL) {
+                free((*p_arr)[i]);
+                (*p_arr)[i] = NULL;
             }
         }
-        free(*arrPtr);
-        *arrPtr = NULL;
+        free(*p_arr);
+        *p_arr = NULL;
     }
     return COMMON_OK;
 }
