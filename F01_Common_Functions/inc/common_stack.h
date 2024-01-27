@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-26 13:36:39
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-27 11:27:31
+ * @LastEditTime : 2024-01-27 12:03:06
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -23,8 +23,8 @@
 /* Stack structure */
 typedef struct {
     int *stk;        /* Stack array */
-    int stkSize;     /* Stack size */
-    int stkCapacity; /* Stack capacity */
+    int stk_size;     /* Stack size */
+    int stk_capacity; /* Stack capacity */
 } Stack;             /* Rename struct Stack to Stack */
 
 /**********************************************************************************/

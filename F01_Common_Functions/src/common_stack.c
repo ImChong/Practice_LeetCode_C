@@ -32,8 +32,8 @@
 Stack *Stack_Init(int capacity) {
     Stack *ret = (Stack *)malloc(sizeof(Stack));        /* NOLINT(readability/casting) */
     ret->stk = (int *)malloc(sizeof(int) * capacity);   /* NOLINT(readability/casting) */
-    ret->stkSize = 0;                                   /* 当前栈大小为0 */
-    ret->stkCapacity = capacity;                        /* 记录栈容量 */
+    ret->stk_size = 0;                                   /* 当前栈大小为0 */
+    ret->stk_capacity = capacity;                        /* 记录栈容量 */
     return ret;                                         /* 返回创建的栈结构体 */
 }
 
@@ -45,7 +45,7 @@ Stack *Stack_Init(int capacity) {
  * @return {void}
  */
 void Stack_Push(Stack *obj, int x) {
-    obj->stk[obj->stkSize++] = x;           /* 将数据存入栈结构体内数组的【栈大小】索引位置，存入后将【栈大小】+ 1 */
+    obj->stk[obj->stk_size++] = x;           /* 将数据存入栈结构体内数组的【栈大小】索引位置，存入后将【栈大小】+ 1 */
 }
 
 /**
@@ -55,7 +55,7 @@ void Stack_Push(Stack *obj, int x) {
  * @return {void}
  */
 void Stack_Pop(Stack *obj) {
-    obj->stkSize--;                         /* 将【栈大小】- 1 */
+    obj->stk_size--;                         /* 将【栈大小】- 1 */
 }
 
 /**
@@ -65,7 +65,7 @@ void Stack_Pop(Stack *obj) {
  * @return {int} x          栈顶元素
  */
 int Stack_Top(Stack *obj) {
-    return obj->stk[obj->stkSize - 1];      /* 返回栈结构体内【栈大小 - 1】索引位置处的数据 */
+    return obj->stk[obj->stk_size - 1];      /* 返回栈结构体内【栈大小 - 1】索引位置处的数据 */
 }
 
 /**
@@ -75,7 +75,7 @@ int Stack_Top(Stack *obj) {
  * @return {bool}           栈是否为空
  */
 bool Stack_IsEmpty(Stack *obj) {
-    return obj->stkSize == 0;               /* 返回确认 stkSize 栈大小是否为0 */
+    return obj->stk_size == 0;               /* 返回确认 stk_size 栈大小是否为0 */
 }
 
 /**
