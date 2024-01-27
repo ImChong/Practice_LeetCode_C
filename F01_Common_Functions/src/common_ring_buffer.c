@@ -3,7 +3,7 @@
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-27 11:15:30
+ * @LastEditTime : 2024-01-27 14:19:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,8 +35,8 @@
 /*                                 GLOBAL VARIABLES                               */
 /*                                                                                */
 /**********************************************************************************/
-uint8_t g_rxBuff[RING_BUFFER_SIZE];     /* 接收环形Buffer */
-RingBuffer g_rxRing;                  /* 接收环形结构体 */
+uint8_t g_rx_buffer[RING_BUFFER_SIZE];     /* 接收环形Buffer */
+RingBuffer g_rx_ring_buffer;                  /* 接收环形结构体 */
 
 /**********************************************************************************/
 /*                                                                                */
@@ -52,21 +52,21 @@ RingBuffer g_rxRing;                  /* 接收环形结构体 */
  */
 int16_t RingBuffer_AddByte(RingBuffer *p_ring, uint8_t byte) {
     /* 指针空检验 */
-    RETURN_ERR_IF(pRing == NULL);
+    RETURN_ERR_IF(p_ring == NULL);
 
     /* 环形buffer数据已满 */
-    if (pRing->data_len == pRing->buff_len) {
+    if (p_ring->data_len == p_ring->buff_len) {
         return COMMON_ERR;
     }
 
     /* 找到第一个数据的索引号 */
-    uint16_t idx = pRing->data_idx + pRing->data_len;
-    if (idx >= pRing->buff_len) {
-        idx -= pRing->buff_len;
+    uint16_t idx = p_ring->data_idx + p_ring->data_len;
+    if (idx >= p_ring->buff_len) {
+        idx -= p_ring->buff_len;
     }
 
-    pRing->pBuff[idx] = byte;
-    pRing->data_len++;
+    p_ring->p_buff[idx] = byte;
+    p_ring->data_len++;
     return COMMON_OK;
 }
 
@@ -79,24 +79,24 @@ int16_t RingBuffer_AddByte(RingBuffer *p_ring, uint8_t byte) {
  */
 int16_t RingBuffer_GetByte(RingBuffer *p_ring, uint8_t *p_byte) {
     /* 指针空检验 */
-    RETURN_ERR_IF(pRing == NULL);
-    RETURN_ERR_IF(pByte == NULL);
+    RETURN_ERR_IF(p_ring == NULL);
+    RETURN_ERR_IF(p_byte == NULL);
 
     /* 环形buffer数据为空 */
-    if (pRing->data_len <= 0) {
+    if (p_ring->data_len <= 0) {
         return COMMON_ERR;
     }
 
     /* 取出一个字节 */
-    *p_byte = pRing->pBuff[pRing->data_idx];
-    pRing->data_idx++;
+    *p_byte = p_ring->p_buff[p_ring->data_idx];
+    p_ring->data_idx++;
 
     /* 当idx越界时归零 */
-    if (pRing->data_idx == pRing->buff_len) {
-        pRing->data_idx = 0;
+    if (p_ring->data_idx == p_ring->buff_len) {
+        p_ring->data_idx = 0;
     }
 
-    pRing->data_len--;
+    p_ring->data_len--;
     return COMMON_OK;
 }
 
@@ -108,15 +108,15 @@ int16_t RingBuffer_GetByte(RingBuffer *p_ring, uint8_t *p_byte) {
  */
 void RingBuffer_Print(RingBuffer *p_ring) {
     printf("Ring Buffer: ");
-    for (int16_t i = 0; i < pRing->data_len; ++i) {
-        int16_t idx = (pRing->data_idx + i) % pRing->buff_len;
-        printf("%d -> ", pRing->pBuff[idx]);
+    for (int16_t i = 0; i < p_ring->data_len; ++i) {
+        int16_t idx = (p_ring->data_idx + i) % p_ring->buff_len;
+        printf("%d -> ", p_ring->p_buff[idx]);
     }
     printf("NULL\n");
 
 //    printf("环形Buffer: ");
-//    for (int16_t i = 0; i < pRing->buff_len; ++i) {
-//        printf("%d -> ", pRing->pBuff[i]);
+//    for (int16_t i = 0; i < p_ring->buff_len; ++i) {
+//        printf("%d -> ", p_ring->p_buff[i]);
 //    }
 //    printf("NULL\n");
 }
@@ -130,14 +130,14 @@ void RingBuffer_Print(RingBuffer *p_ring) {
  * @return {int16_t}
  */
 int16_t RingBuffer_Init(RingBuffer *p_ring, uint8_t *p_buff, int16_t buff_len) {
-    RETURN_ERR_IF(pRing == NULL);
-    RETURN_ERR_IF(pBuff == NULL);
+    RETURN_ERR_IF(p_ring == NULL);
+    RETURN_ERR_IF(p_buff == NULL);
     RETURN_ERR_IF(buff_len <= 0);
 
-    pRing->pBuff = pBuff;
-    pRing->buff_len = buff_len;
-    pRing->data_len = 0;
-    pRing->data_idx = 0;
+    p_ring->p_buff = p_buff;
+    p_ring->buff_len = buff_len;
+    p_ring->data_len = 0;
+    p_ring->data_idx = 0;
     return COMMON_OK;
 }
 
@@ -153,35 +153,35 @@ int16_t RingBuffer_Init(RingBuffer *p_ring, uint8_t *p_buff, int16_t buff_len) {
  */
 void Validate_RingBuffer(void) {
     // 初始化
-    RingBuffer_Init(&g_rxRing, g_rxBuff, ARR_SIZE(g_rxBuff));
-    RingBuffer_Print(&g_rxRing);
+    RingBuffer_Init(&g_rx_ring_buffer, g_rx_buffer, ARR_SIZE(g_rx_buffer));
+    RingBuffer_Print(&g_rx_ring_buffer);
 
     // 入队
-    RingBuffer_AddByte(&g_rxRing, 1);
-    RingBuffer_AddByte(&g_rxRing, 2);
-    RingBuffer_AddByte(&g_rxRing, 3);
-    RingBuffer_AddByte(&g_rxRing, 4);
-    RingBuffer_AddByte(&g_rxRing, 5);
-    RingBuffer_AddByte(&g_rxRing, 6);       // 只能存放5个数据
-    RingBuffer_Print(&g_rxRing);
+    RingBuffer_AddByte(&g_rx_ring_buffer, 1);
+    RingBuffer_AddByte(&g_rx_ring_buffer, 2);
+    RingBuffer_AddByte(&g_rx_ring_buffer, 3);
+    RingBuffer_AddByte(&g_rx_ring_buffer, 4);
+    RingBuffer_AddByte(&g_rx_ring_buffer, 5);
+    RingBuffer_AddByte(&g_rx_ring_buffer, 6);       // 只能存放5个数据
+    RingBuffer_Print(&g_rx_ring_buffer);
 
     // 出队
     uint8_t data;
-    RingBuffer_GetByte(&g_rxRing, &data);
-    RingBuffer_GetByte(&g_rxRing, &data);
-    RingBuffer_GetByte(&g_rxRing, &data);
-    RingBuffer_Print(&g_rxRing);
+    RingBuffer_GetByte(&g_rx_ring_buffer, &data);
+    RingBuffer_GetByte(&g_rx_ring_buffer, &data);
+    RingBuffer_GetByte(&g_rx_ring_buffer, &data);
+    RingBuffer_Print(&g_rx_ring_buffer);
 
     // 再入队
-    RingBuffer_AddByte(&g_rxRing, 7);
-    RingBuffer_AddByte(&g_rxRing, 8);
-    RingBuffer_AddByte(&g_rxRing, 9);
-    RingBuffer_Print(&g_rxRing);
+    RingBuffer_AddByte(&g_rx_ring_buffer, 7);
+    RingBuffer_AddByte(&g_rx_ring_buffer, 8);
+    RingBuffer_AddByte(&g_rx_ring_buffer, 9);
+    RingBuffer_Print(&g_rx_ring_buffer);
 
     // 再出队
-    RingBuffer_GetByte(&g_rxRing, &data);
-    RingBuffer_GetByte(&g_rxRing, &data);
-    RingBuffer_Print(&g_rxRing);
+    RingBuffer_GetByte(&g_rx_ring_buffer, &data);
+    RingBuffer_GetByte(&g_rx_ring_buffer, &data);
+    RingBuffer_Print(&g_rx_ring_buffer);
 }
 
 
