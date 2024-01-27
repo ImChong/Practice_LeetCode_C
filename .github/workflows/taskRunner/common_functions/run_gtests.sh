@@ -40,5 +40,5 @@ done
 
 # finish up message
 echo "=========================================================================================="
-echo "Total number of test run: $FILE_COUNT"
+echo "Total number of test file run: $FILE_COUNT"
 echo "All executables have been run!"
