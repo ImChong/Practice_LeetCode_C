@@ -55,14 +55,14 @@ int16_t RingBuffer_AddByte(RingBuffer *pRing, uint8_t byte) {
     RETURN_ERR_IF(pRing == NULL);
 
     /* 环形buffer数据已满 */
-    if (pRing->dataLen == pRing->buffLen) {
+    if (pRing->dataLen == pRing->buff_len) {
         return COMMON_ERR;
     }
 
     /* 找到第一个数据的索引号 */
     uint16_t idx = pRing->dataIdx + pRing->dataLen;
-    if (idx >= pRing->buffLen) {
-        idx -= pRing->buffLen;
+    if (idx >= pRing->buff_len) {
+        idx -= pRing->buff_len;
     }
 
     pRing->pBuff[idx] = byte;
@@ -92,7 +92,7 @@ int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte) {
     pRing->dataIdx++;
 
     /* 当idx越界时归零 */
-    if (pRing->dataIdx == pRing->buffLen) {
+    if (pRing->dataIdx == pRing->buff_len) {
         pRing->dataIdx = 0;
     }
 
@@ -109,13 +109,13 @@ int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte) {
 void RingBuffer_Print(RingBuffer *pRing) {
     printf("Ring Buffer: ");
     for (int16_t i = 0; i < pRing->dataLen; ++i) {
-        int16_t idx = (pRing->dataIdx + i) % pRing->buffLen;
+        int16_t idx = (pRing->dataIdx + i) % pRing->buff_len;
         printf("%d -> ", pRing->pBuff[idx]);
     }
     printf("NULL\n");
 
 //    printf("环形Buffer: ");
-//    for (int16_t i = 0; i < pRing->buffLen; ++i) {
+//    for (int16_t i = 0; i < pRing->buff_len; ++i) {
 //        printf("%d -> ", pRing->pBuff[i]);
 //    }
 //    printf("NULL\n");
@@ -126,16 +126,16 @@ void RingBuffer_Print(RingBuffer *pRing) {
  * =================================================================================
  * @param {RingBuffer} *pRing
  * @param {uint8_t} *p_buff
- * @param {int16_t} buffLen
+ * @param {int16_t} buff_len
  * @return {int16_t}
  */
-int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *p_buff, int16_t buffLen) {
+int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *p_buff, int16_t buff_len) {
     RETURN_ERR_IF(pRing == NULL);
     RETURN_ERR_IF(pBuff == NULL);
-    RETURN_ERR_IF(buffLen <= 0);
+    RETURN_ERR_IF(buff_len <= 0);
 
     pRing->pBuff = pBuff;
-    pRing->buffLen = buffLen;
+    pRing->buff_len = buff_len;
     pRing->dataLen = 0;
     pRing->dataIdx = 0;
     return COMMON_OK;

@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:22:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-27 11:59:33
+ * @LastEditTime : 2024-01-27 11:59:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,7 +22,7 @@
 /**********************************************************************************/
 typedef struct {
     uint8_t *p_buff;  /* Ring buffer array */
-    int16_t buffLen; /* Ring buffer length */
+    int16_t buff_len; /* Ring buffer length */
     int16_t dataLen; /* Ring buffer data length */
     int16_t dataIdx; /* Ring buffer data index */
 } RingBuffer;
@@ -32,7 +32,7 @@ typedef struct {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *p_buff, int16_t buffLen); /* Initialize a ring buffer */
+int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *p_buff, int16_t buff_len); /* Initialize a ring buffer */
 int16_t RingBuffer_AddByte(RingBuffer *pRing, uint8_t byte);   /* Add a byte to the ring buffer */
 int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte); /* Get a byte from the ring buffer */
 
