@@ -21,5 +21,5 @@ done
 
 # finish up message
 echo "=============================="
-echo "All files have been linted!"
 echo "Total number of files checked: $FILE_COUNT"
+echo "All files have been linted!"
