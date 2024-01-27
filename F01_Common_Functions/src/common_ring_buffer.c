@@ -46,11 +46,11 @@ RingBuffer g_rxRing;                  /* 接收环形结构体 */
 /**
  * @description: 往环形 buffer 中增加一个字节
  * =================================================================================
- * @param {RingBuffer} *pRing
+ * @param {RingBuffer} *p_ring
  * @param {uint8_t} byte
  * @return {int16_t}
  */
-int16_t RingBuffer_AddByte(RingBuffer *pRing, uint8_t byte) {
+int16_t RingBuffer_AddByte(RingBuffer *p_ring, uint8_t byte) {
     /* 指针空检验 */
     RETURN_ERR_IF(pRing == NULL);
 
@@ -73,11 +73,11 @@ int16_t RingBuffer_AddByte(RingBuffer *pRing, uint8_t byte) {
 /**
  * @description: 从环形 buffer 中取出一个字节
  * =================================================================================
- * @param {RingBuffer} *pRing
+ * @param {RingBuffer} *p_ring
  * @param {uint8_t} *pByte
  * @return {int16_t}
  */
-int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte) {
+int16_t RingBuffer_GetByte(RingBuffer *p_ring, uint8_t *pByte) {
     /* 指针空检验 */
     RETURN_ERR_IF(pRing == NULL);
     RETURN_ERR_IF(pByte == NULL);
@@ -103,10 +103,10 @@ int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte) {
 /**
  * @description: 打印环形 buffer
  * =================================================================================
- * @param {RingBuffer} *pRing
+ * @param {RingBuffer} *p_ring
  * @return {void}
  */
-void RingBuffer_Print(RingBuffer *pRing) {
+void RingBuffer_Print(RingBuffer *p_ring) {
     printf("Ring Buffer: ");
     for (int16_t i = 0; i < pRing->data_len; ++i) {
         int16_t idx = (pRing->data_idx + i) % pRing->buff_len;
@@ -124,12 +124,12 @@ void RingBuffer_Print(RingBuffer *pRing) {
 /**
  * @description: 环形 buffer 初始化
  * =================================================================================
- * @param {RingBuffer} *pRing
+ * @param {RingBuffer} *p_ring
  * @param {uint8_t} *p_buff
  * @param {int16_t} buff_len
  * @return {int16_t}
  */
-int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *p_buff, int16_t buff_len) {
+int16_t RingBuffer_Init(RingBuffer *p_ring, uint8_t *p_buff, int16_t buff_len) {
     RETURN_ERR_IF(pRing == NULL);
     RETURN_ERR_IF(pBuff == NULL);
     RETURN_ERR_IF(buff_len <= 0);

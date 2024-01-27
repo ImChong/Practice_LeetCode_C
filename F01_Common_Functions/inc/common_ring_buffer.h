@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 14:22:20
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-27 12:00:40
+ * @LastEditTime : 2024-01-27 12:01:17
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -32,17 +32,17 @@ typedef struct {
 /*                                 UTILITY FUNCTIONS                              */
 /*                                                                                */
 /**********************************************************************************/
-int16_t RingBuffer_Init(RingBuffer *pRing, uint8_t *p_buff, int16_t buff_len); /* Initialize a ring buffer */
-int16_t RingBuffer_AddByte(RingBuffer *pRing, uint8_t byte);   /* Add a byte to the ring buffer */
-int16_t RingBuffer_GetByte(RingBuffer *pRing, uint8_t *pByte); /* Get a byte from the ring buffer */
+int16_t RingBuffer_Init(RingBuffer *p_ring, uint8_t *p_buff, int16_t buff_len); /* Initialize a ring buffer */
+int16_t RingBuffer_AddByte(RingBuffer *p_ring, uint8_t byte);   /* Add a byte to the ring buffer */
+int16_t RingBuffer_GetByte(RingBuffer *p_ring, uint8_t *pByte); /* Get a byte from the ring buffer */
 
 /**********************************************************************************/
 /*                                                                                */
 /*                                HELPER FUNCTIONS                                */
 /*                                                                                */
 /**********************************************************************************/
-void RingBuffer_Print(RingBuffer *pRing); /* Print ring buffer */
-void RingBuffer_Free(RingBuffer *pRing);  /* Free ring buffer */
+void RingBuffer_Print(RingBuffer *p_ring); /* Print ring buffer */
+void RingBuffer_Free(RingBuffer *p_ring);  /* Free ring buffer */
 
 /**********************************************************************************/
 /*                                                                                */
