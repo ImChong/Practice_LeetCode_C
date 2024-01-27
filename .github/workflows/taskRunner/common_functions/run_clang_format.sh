@@ -27,7 +27,7 @@ do
         ISSUE_COUNT=$((ISSUE_COUNT+1))
     fi
 
-    ((FILE_COUNT++))
+    FILE_COUNT=$((FILE_COUNT+1))
 done
 
 # Check if any issues were found
