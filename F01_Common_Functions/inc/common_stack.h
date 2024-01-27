@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common stack header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONSTACK_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONSTACK_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_STACK_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_STACK_H_
 
 /* Standard header file (标准头文件) */
 #include <stdbool.h>
@@ -47,4 +47,4 @@ bool Stack_IsFull(Stack *obj);      /* Check whether the stack is full */
 void Stack_Print(Stack *obj); /* Print stack */
 void Stack_Free(Stack *obj);  /* Free stack */
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONSTACK_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_STACK_H_ */

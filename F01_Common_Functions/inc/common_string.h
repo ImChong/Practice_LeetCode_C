@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common string header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONSTRING_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONSTRING_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_STRING_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_STRING_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -35,4 +35,4 @@ int String_Free(char **s); /* Release string */
 /**********************************************************************************/
 int Validate_String(char testNum, char *expect, char *actual); /* Validate string */
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONSTRING_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_STRING_H_ */

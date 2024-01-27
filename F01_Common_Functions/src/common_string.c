@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\commonString.c
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\src\common_string.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-24 00:56:52
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-12 16:21:10
+ * @LastEditTime : 2024-01-27 11:28:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,7 +13,7 @@
 #include "compile_cfg.h"        /* NOLINT */
 #if COMMON_STRING_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
-#include "commonString.h"
+#include "F01_Common_Functions/inc/common_string.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
