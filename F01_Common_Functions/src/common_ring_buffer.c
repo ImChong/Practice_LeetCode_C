@@ -74,10 +74,10 @@ int16_t RingBuffer_AddByte(RingBuffer *p_ring, uint8_t byte) {
  * @description: 从环形 buffer 中取出一个字节
  * =================================================================================
  * @param {RingBuffer} *p_ring
- * @param {uint8_t} *pByte
+ * @param {uint8_t} *p_byte
  * @return {int16_t}
  */
-int16_t RingBuffer_GetByte(RingBuffer *p_ring, uint8_t *pByte) {
+int16_t RingBuffer_GetByte(RingBuffer *p_ring, uint8_t *p_byte) {
     /* 指针空检验 */
     RETURN_ERR_IF(pRing == NULL);
     RETURN_ERR_IF(pByte == NULL);
@@ -88,7 +88,7 @@ int16_t RingBuffer_GetByte(RingBuffer *p_ring, uint8_t *pByte) {
     }
 
     /* 取出一个字节 */
-    *pByte = pRing->pBuff[pRing->data_idx];
+    *p_byte = pRing->pBuff[pRing->data_idx];
     pRing->data_idx++;
 
     /* 当idx越界时归零 */
