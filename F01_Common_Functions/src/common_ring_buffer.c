@@ -3,7 +3,7 @@
  * @Author       : Chong Liu | truegrit rainaftermath@qq.com
  * @CreateDate   : 2023-09-18 22:40:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-27 14:19:19
+ * @LastEditTime : 2024-01-27 14:21:18
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -113,12 +113,6 @@ void RingBuffer_Print(RingBuffer *p_ring) {
         printf("%d -> ", p_ring->p_buff[idx]);
     }
     printf("NULL\n");
-
-//    printf("环形Buffer: ");
-//    for (int16_t i = 0; i < p_ring->buff_len; ++i) {
-//        printf("%d -> ", p_ring->p_buff[i]);
-//    }
-//    printf("NULL\n");
 }
 
 /**
