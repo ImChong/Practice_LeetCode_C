@@ -14,7 +14,7 @@
 #include "minSubArrayLen.h"
 /* Standard header file (标准头文件) */
 /* Common function header file (通用头文件) */
-#include "commonSingleValue.h"
+#include "F01_Common_Functions/inc/common_single_value.h"
 #include "F01_Common_Functions/inc/common_array.h"
 /* solution method configuration header file (解题方法配置文件) */
 // #include "methodCfg"     /* Uncomment this line if solution has multiple methods */

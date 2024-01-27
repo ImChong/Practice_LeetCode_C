@@ -1,16 +1,16 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\commonSingleValue.h
+ * @FilePath     : \Practice_LeetCode_C\F01_Common_Functions\inc\common_single_value.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 13:42:27
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-19 06:07:11
+ * @LastEditTime : 2024-01-27 11:24:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : Common single value header file
  */
-#ifndef F01_COMMON_FUNCTIONS_INC_COMMONSINGLEVALUE_H_
-#define F01_COMMON_FUNCTIONS_INC_COMMONSINGLEVALUE_H_
+#ifndef F01_COMMON_FUNCTIONS_INC_COMMON_SINGLE_VALUE_H_
+#define F01_COMMON_FUNCTIONS_INC_COMMON_SINGLE_VALUE_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -33,4 +33,4 @@
 /**********************************************************************************/
 int Validate_SingleValue(char testNum, int expect, int actual); /* Validate single value */
 
-#endif /* F01_COMMON_FUNCTIONS_INC_COMMONSINGLEVALUE_H_ */
+#endif /* F01_COMMON_FUNCTIONS_INC_COMMON_SINGLE_VALUE_H_ */

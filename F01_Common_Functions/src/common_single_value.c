@@ -13,7 +13,7 @@
 #include "compile_cfg.h"        /* NOLINT */
 #if COMMON_SINGLE_VALUE_EN /* whether compile this file, the definition of this macro can be found in compileCfg.h */
 /* Header file (本文件头文件) */
-#include "commonSingleValue.h"
+#include "F01_Common_Functions/inc/common_single_value.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 /* Common function header file (通用头文件) */

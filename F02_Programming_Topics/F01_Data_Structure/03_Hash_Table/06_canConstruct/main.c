@@ -18,7 +18,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 /* Common function header file (通用头文件) */
-#include "commonSingleValue.h"
+#include "F01_Common_Functions/inc/common_single_value.h"
 /* 方法配置文件 */
 #include "methodCfg.h"
 /* 本题头文件 */

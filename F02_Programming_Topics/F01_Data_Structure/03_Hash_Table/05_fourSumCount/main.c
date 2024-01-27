@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
-#include "commonSingleValue.h"
+#include "F01_Common_Functions/inc/common_single_value.h"
 #include "F01_Common_Functions/inc/common_array.h"
 /* solution method configuration file (解题方法配置文件) */
 #include "methodCfg.h"
