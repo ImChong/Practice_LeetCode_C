@@ -35,7 +35,7 @@ for test in "${tests[@]}"; do
         echo "=========================================================================================="
     fi
 
-    ((FILE_COUNT++))
+    FILE_COUNT=$((FILE_COUNT+1))
 done
 
 # finish up message
