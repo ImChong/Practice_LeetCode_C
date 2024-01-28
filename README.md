@@ -86,7 +86,7 @@ C language local leetcode practice overall folder structure:
 >
 > The call hierarchy between files is as follow:
 >
-> ![Call Hierarchy](./F03_Misc/F02_Supplementary_Materials/callHierarchy.png)
+> ![Call Hierarchy](./F03_Misc/F02_Supplementary_Materials/call_hierarchy.png)
 >
 > The `main.c` file is the entry point of the program, which calls the solution method in the `solution_name__method_name_xx.c` file. Meanwhile, the `main.c` file also contains the test cases for the selected solution method.
 >
