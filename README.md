@@ -106,7 +106,7 @@ C language local leetcode practice overall folder structure:
 >
 > For a complete example, please refer to the following file: `F02_Programming_Topics\F01_Data_Structure\01_Array\01_binarySearch\main.c`
 >
-> Flowchart source file: [compilationStructure.drawio](./F03_Misc/02_Supplementary_Materials/compilationStructure.drawio) (hediet.vscode-drawio extension required)
+> Flowchart source file: [compilation_structure.drawio](./F03_Misc/F02_Supplementary_Materials/compilation_structure.drawio) (hediet.vscode-drawio extension required)
 
 ## Build & Run Code
 
