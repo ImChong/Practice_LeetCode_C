@@ -69,18 +69,18 @@ C language local leetcode practice overall folder structure:
 > ```txt
 > .
 > ├── cfg
-> │   ├── compileCfg.h                      /* common function configuration file */
-> │   └── methodCfg.h                       /* solution method configuration file */
+> │   ├── compile_cfg.h                     /* common function configuration file */
+> │   └── method_cfg.h                      /* solution method configuration file */
 > ├── doc
 > │   ├── sketch.drawio                     /* drawing sketch file */
 > │   └── sketch.excalidraw                 /* drawing sketch file */
 > ├── inc
-> │   └── solutionName.h                    /* solution header file */
+> │   └── solution_name.h                   /* solution header file */
 > ├── src
-> │   ├── solutionName_methodName01.c       /* solution method 01 source file */
-> │   ├── solutionName_methodName02.c       /* solution method 02 source file */
+> │   ├── solution_name__method_name_01.c   /* solution method 01 source file */
+> │   ├── solution_name__method_name_02.c   /* solution method 02 source file */
 > │   ├── ...
-> │   └── solutionName_methodNameXX.c       /* solution method XX source file */
+> │   └── solution_name__method_name_xx.c   /* solution method XX source file */
 > └── main.c                                /* entry point */
 > ```
 >
@@ -88,13 +88,13 @@ C language local leetcode practice overall folder structure:
 >
 > ![Call Hierarchy](./F03_Misc/F02_Supplementary_Materials/callHierarchy.png)
 >
-> The `main.c` file is the entry point of the program, which calls the solution method in the `solutionName_methodNameXX.c` file. Meanwhile, the `main.c` file also contains the test cases for the selected solution method.
+> The `main.c` file is the entry point of the program, which calls the solution method in the `solution_name__method_name_xx.c` file. Meanwhile, the `main.c` file also contains the test cases for the selected solution method.
 >
 > The `cfg` folder contains the configuration files for the common functions and solution methods.
 >
-> - The `compileCfg.h` file is the configuration file for common functions. By toggling the `#define` macro, the corresponding common function can be enabled or disabled during compilation.
+> - The `compile_cfg.h` file is the configuration file for common functions. By toggling the `#define` macro, the corresponding common function can be enabled or disabled during compilation.
 >
-> - The `methodCfg.h` file is the configuration file for solution methods. By toggling the `#define` macro, the corresponding solution method can be enabled or disabled during compilation.
+> - The `method_cfg.h` file is the configuration file for solution methods. By toggling the `#define` macro, the corresponding solution method can be enabled or disabled during compilation.
 >
 > The `doc` folder contains the documentation files and drawing sketches for the question.
 >
@@ -102,9 +102,9 @@ C language local leetcode practice overall folder structure:
 >
 > The `src` folder contains the source files for the solution methods.
 >
-> - The `solutionName_methodNameXX.c` file is the source file for a specific solution method. By toggling the `#define` macro in the `methodCfg.h` file, the corresponding solution method can be enabled or disabled during compilation.
+> - The `solution_name__method_name_xx.c` file is the source file for a specific solution method. By toggling the `#define` macro in the `method_cfg.h` file, the corresponding solution method can be enabled or disabled during compilation.
 >
-> For a complete example, please refer to the following file: `\Practice_LeetCode_C\02_Programming_Topics\01_Data_Structure\01_Array\01_binarySearch\main.c`
+> For a complete example, please refer to the following file: `F02_Programming_Topics\F01_Data_Structure\01_Array\01_binarySearch\main.c`
 >
 > Flowchart source file: [compilationStructure.drawio](./F03_Misc/02_Supplementary_Materials/compilationStructure.drawio) (hediet.vscode-drawio extension required)
 
