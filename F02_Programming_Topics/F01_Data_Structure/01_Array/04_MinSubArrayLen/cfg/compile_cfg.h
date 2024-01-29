@@ -1,16 +1,16 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\04_minSubArrayLen\cfg\compileCfg.h
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\04_MinSubArrayLen\cfg\compile_cfg.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-21 01:45:18
+ * @LastEditTime : 2024-01-29 13:59:32
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : common function configuration file Common function configuration file (通用函数配置文件)
  */
-#ifndef __COMPILE_CFG_H
-#define __COMPILE_CFG_H
+#ifndef F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_04_MINSUBARRAYLEN_CFG_COMPILE_CFG_H_
+#define F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_04_MINSUBARRAYLEN_CFG_COMPILE_CFG_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -37,4 +37,4 @@
     #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN 0        /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
 #endif /* COMMON_BINARY_TREE_EN */
 
-#endif  /* __COMPILE_CFG_H */
+#endif  /* F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_04_MINSUBARRAYLEN_CFG_COMPILE_CFG_H_ */

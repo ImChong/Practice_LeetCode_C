@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\04_minSubArrayLen\main.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\04_MinSubArrayLen\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-15 02:28:56
+ * @LastEditTime : 2024-01-29 14:00:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,7 +11,7 @@
  *      https://programmercarl.com/0209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.html
  */
 /* solution header file (题解头文件) */
-#include "minSubArrayLen.h"
+#include "min_sub_array_len.h"      /* NOLINT */
 /* Standard header file (标准头文件) */
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_single_value.h"
@@ -36,7 +36,7 @@ void Test1(void) {
     int nums[] = {2, 3, 1, 2, 4, 3};
     int numsSize = ARR_SIZE(nums);
     int target = 7;
-    int actualLen = minSubArrayLen(target, nums, numsSize);
+    int actualLen = MinSubArrayLen(target, nums, numsSize);
 
     /* Expect result (期望结果) */
     int expectLen = 2;
@@ -57,7 +57,7 @@ void Test2(void) {
     int nums[] = {1, 1, 1, 1, 1, 1, 1, 1};
     int numsSize = ARR_SIZE(nums);
     int target = 11;
-    int actualLen = minSubArrayLen(target, nums, numsSize);
+    int actualLen = MinSubArrayLen(target, nums, numsSize);
 
     /* Expect result (期望结果) */
     int expectLen = 0;
@@ -78,7 +78,7 @@ void Test3(void) {
     int nums[] = {1, 2, 3, 4, 5};
     int numsSize = ARR_SIZE(nums);
     int target = 11;
-    int actualLen = minSubArrayLen(target, nums, numsSize);
+    int actualLen = MinSubArrayLen(target, nums, numsSize);
 
     /* Expect result (期望结果) */
     int expectLen = 3;

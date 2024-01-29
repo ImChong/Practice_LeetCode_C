@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\04_minSubArrayLen\src\minSubArrayLen.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\04_MinSubArrayLen\src\min_sub_array_len.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-28 17:28:08
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 14:53:24
+ * @LastEditTime : 2024-01-29 14:00:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,7 +12,7 @@
 /* Standard header file (标准头文件) */
 #include <limits.h>
 /* solution header file (题解头文件) */
-#include "minSubArrayLen.h"
+#include "min_sub_array_len.h"      /* NOLINT */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -29,7 +29,7 @@
  * @param {int} numsSize    数组大小
  * @return {int} minLen     最小长度
  */
-int minSubArrayLen(int target, int *nums, int numsSize) {
+int MinSubArrayLen(int target, int *nums, int numsSize) {
     int minLen = INT_MAX;                                   /* 记录最小长度 */
     int sum = 0;                                            /* 记录子数组的合 */
 
