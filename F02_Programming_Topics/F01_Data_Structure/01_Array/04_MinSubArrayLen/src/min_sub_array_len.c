@@ -12,7 +12,7 @@
 /* Standard header file (标准头文件) */
 #include <limits.h>
 /* solution header file (题解头文件) */
-#include "min_sub_array_len.h"      /* NOLINT */
+#include "F02_Programming_Topics/F01_Data_Structure/01_Array/04_MinSubArrayLen/inc/min_sub_array_len.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
