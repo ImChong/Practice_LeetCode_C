@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-29 12:55:04
+ * @LastEditTime : 2024-01-29 14:17:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,7 +13,7 @@
 /* Standard header file (标准头文件) */
 #include <stdlib.h>
 /* solution header file (题解头文件) */
-#include "sorted_squares.h"     /* NOLINT */
+#include "F02_Programming_Topics/F01_Data_Structure/01_Array/03_SortedSquares/inc/sorted_squares.h"
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_array.h"
 /* solution method configuration header file (解题方法配置文件) */

@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\03_sortedSquares\src\sortedSquares.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\03_SortedSquares\src\sorted_squares.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-28 17:25:06
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 10:22:56
+ * @LastEditTime : 2024-01-29 14:17:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,7 +12,7 @@
 /* Standard header file (标准头文件) */
 #include <stdlib.h>
 /* solution header file (题解头文件) */
-#include "sorted_squares.h"     /* NOLINT */
+#include "F02_Programming_Topics/F01_Data_Structure/01_Array/03_SortedSquares/inc/sorted_squares.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
