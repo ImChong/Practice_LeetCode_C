@@ -6,7 +6,8 @@
                 "${workspaceFolder}",
                 "${workspaceFolder}/**",
                 "F01_Common_Functions/inc/common_def",
-                "F01_Common_Functions/inc"
+                "F01_Common_Functions/inc",
+                "${fileDirname}/**"
             ],
             "defines": [
                 "_DEBUG",
