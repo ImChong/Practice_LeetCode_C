@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\05_generateMatrix\src\generateMatrix_layerSimulation.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\05_GenerateMatrix\src\generate_matrix__layer_simulation.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:24
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 15:13:24
+ * @LastEditTime : 2024-01-29 14:14:16
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,9 +12,9 @@
 /* Standard header file (标准头文件) */
 #include <stdlib.h>
 /* solution method configuration file (解题方法配置文件) */
-#include "methodCfg.h"
+#include "F02_Programming_Topics/F01_Data_Structure/01_Array/05_GenerateMatrix/cfg/method_cfg.h"
 /* solution header file (题解头文件) */
-#include "generateMatrix.h"
+#include "F02_Programming_Topics/F01_Data_Structure/01_Array/05_GenerateMatrix/inc/generate_matrix.h"
 
 #if LAYER_SIMULATION_METHOD_EN
 /**********************************************************************************/
@@ -37,11 +37,11 @@ int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
     int num = 1;                                                            /* 当前值 */
 
     /* 初始化矩阵，矩阵内数值均为 0 */
-    int **matrix = (int **)malloc(sizeof(int *) * n);
+    int **matrix = (int **)malloc(sizeof(int *) * n);       /* NOLINT */
     *returnSize = n;
-    *returnColumnSizes = (int *)malloc(sizeof(int) * n);
+    *returnColumnSizes = (int *)malloc(sizeof(int) * n);        /* NOLINT */
     for (int i = 0; i < n; i++) {
-        matrix[i] = (int *)calloc(n, sizeof(int));
+        matrix[i] = (int *)calloc(n, sizeof(int));      /* NOLINT */
         (*returnColumnSizes)[i] = n;
     }
 

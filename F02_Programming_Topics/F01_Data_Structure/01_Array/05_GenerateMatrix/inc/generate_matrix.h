@@ -9,9 +9,9 @@
  * =================================================================================
  * @Description  : solution header file - 螺旋矩阵II头文件
  */
-#ifndef __GENERATE_MATRIX_H
-#define __GENERATE_MATRIX_H
+#ifndef F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_05_GENERATEMATRIX_INC_GENERATE_MATRIX_H_
+#define F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_05_GENERATEMATRIX_INC_GENERATE_MATRIX_H_
 
 int **generateMatrix(int n, int *returnSize, int **returnColumnSizes);
 
-#endif  /* __GENERATE_MATRIX_H */
+#endif  /* F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_05_GENERATEMATRIX_INC_GENERATE_MATRIX_H_ */

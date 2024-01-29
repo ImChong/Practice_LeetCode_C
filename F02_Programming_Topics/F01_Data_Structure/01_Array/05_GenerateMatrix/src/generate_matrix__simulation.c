@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\05_generateMatrix\src\generateMatrix_simulation.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\05_GenerateMatrix\src\generate_matrix__simulation.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-05 13:16:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 15:09:08
+ * @LastEditTime : 2024-01-29 14:14:10
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -12,9 +12,9 @@
 /* Standard header file (标准头文件) */
 #include <stdlib.h>
 /* solution method configuration file (解题方法配置文件) */
-#include "methodCfg.h"
+#include "F02_Programming_Topics/F01_Data_Structure/01_Array/05_GenerateMatrix/cfg/method_cfg.h"
 /* solution header file (题解头文件) */
-#include "generateMatrix.h"
+#include "F02_Programming_Topics/F01_Data_Structure/01_Array/05_GenerateMatrix/inc/generate_matrix.h"
 
 #if SIMULATION_METHOD_EN
 /**********************************************************************************/
@@ -40,12 +40,12 @@ int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
     int curNum = 1;                                                                     /* 当前值 */
 
     /* 初始化二维数组 */
-    int **matrix = (int **)malloc(sizeof(int *) * n);                                   /* 二维数组 */
+    int **matrix = (int **)malloc(sizeof(int *) * n);       /* NOLINT */
     *returnSize = n;                                                                    /* 返回数组大小 */
-    *returnColumnSizes = (int *)malloc(sizeof(int) * n);                                /* 返回数组列大小 */
+    *returnColumnSizes = (int *)malloc(sizeof(int) * n);        /* NOLINT */
     for (int i = 0; i < n; i++) {                                                       /* 二维数组初始化 */
-        matrix[i] = (int *)calloc(n, sizeof(int));                                          /* 将每一行都初始化为0 */
-        (*returnColumnSizes)[i] = n;                                                        /* 将每一行的列大小都初始化为n */
+        matrix[i] = (int *)calloc(n, sizeof(int));      /* NOLINT */
+        (*returnColumnSizes)[i] = n;        /* 将每一行的列大小都初始化为n */
     }
 
     int row = 0, column = 0;                                                            /* 行、列 */
@@ -56,7 +56,7 @@ int **generateMatrix(int n, int *returnSize, int **returnColumnSizes) {
         curNum++;                                                                           /* 当前值自增 */
         int nextRow = row + directions[directionIndex][0];                                  /* 下一行 */
         int nextColumn = column + directions[directionIndex][1];                            /* 下一列 */
-        if (nextRow < 0 || nextRow >= n || nextColumn < 0 || nextColumn >= n || matrix[nextRow][nextColumn] != 0) {     /* 越界或者已经赋值 */
+        if (nextRow < 0 || nextRow >= n || nextColumn < 0 || nextColumn >= n || matrix[nextRow][nextColumn] != 0) {
             directionIndex = (directionIndex + 1) % 4;                                          /* 方向索引自增 */
         }
         row = row + directions[directionIndex][0];                                          /* 行自增 */

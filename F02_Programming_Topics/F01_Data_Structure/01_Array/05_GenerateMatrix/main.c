@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\05_generateMatrix\main.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\05_GenerateMatrix\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-21 01:44:05
+ * @LastEditTime : 2024-01-29 14:13:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -11,7 +11,7 @@
  *      https://programmercarl.com/0059.%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5II.html
  */
 /* solution header file (题解头文件) */
-#include "generateMatrix.h"
+#include "F02_Programming_Topics/F01_Data_Structure/01_Array/05_GenerateMatrix/inc/generate_matrix.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
