@@ -1,16 +1,16 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\02_removeElement\src\RemoveElement.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\02_RemoveElement\src\remove_element.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-28 11:28:50
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-29 10:17:33
+ * @LastEditTime : 2024-01-29 14:18:54
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : solution source file - RemoveElement
  */
 /* solution header file (题解头文件) */
-#include "remove_element.h"
+#include "F02_Programming_Topics/F01_Data_Structure/01_Array/02_removeElement/inc/remove_element.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
