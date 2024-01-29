@@ -3,11 +3,10 @@
         {
             "name": "Windows",
             "includePath": [
+                "${workspaceFolder}",
                 "${workspaceFolder}/**",
-                "01_Common_Functions/inc/commonDef",
-                "01_Common_Functions/inc",
-                "${fileDirname}/cfg",
-                "${fileDirname}/inc"
+                "F01_Common_Functions/inc/common_def",
+                "F01_Common_Functions/inc"
             ],
             "defines": [
                 "_DEBUG",
@@ -22,11 +21,10 @@
         {
             "name": "Linux",
             "includePath": [
+                "${workspaceFolder}",
                 "${workspaceFolder}/**",
-                "01_Common_Functions/inc/commonDef",
-                "01_Common_Functions/inc",
-                "${fileDirname}/cfg",
-                "${fileDirname}/inc"
+                "F01_Common_Functions/inc/common_def",
+                "F01_Common_Functions/inc"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
