@@ -1,5 +1,5 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\02_removeElement\src\removeElement.c
+ * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\02_removeElement\src\RemoveElement.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-28 11:28:50
  * @LastEditors  : Chong Liu
@@ -7,10 +7,10 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : solution source file - removeElement
+ * @Description  : solution source file - RemoveElement
  */
 /* solution header file (题解头文件) */
-#include "removeElement.h"
+#include "RemoveElement.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -27,7 +27,7 @@
  * @param {int} val         目标值
  * @return {int} slow       慢指针
  */
-int removeElement(int *nums, int numsSize, int val) {
+int RemoveElement(int *nums, int numsSize, int val) {
     int quick, slow;                                        /* 初始化快慢指针 */
     for (quick = 0, slow = 0; quick < numsSize; quick++) {  /* 快指针遍历数组 */
         if (nums[quick] != val) {                               /* 当快指针所指向的值不等于val时*/

@@ -1,17 +1,17 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\02_removeElement\cfg\compileCfg.h
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\02_removeElement\cfg\compile_cfg.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-21 01:44:38
+ * @LastEditTime : 2024-01-29 12:06:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : common function configuration file Common function configuration file (通用函数配置文件)
  *      本文件无需 #include 至题解的.c源文件内，本文件用于 commonXXX.c 等通用文件编译时的剪裁
  */
-#ifndef __COMPILE_CFG_H
-#define __COMPILE_CFG_H
+#ifndef F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_02_REMOVEELEMENT_CFG_COMPILE_CFG_H_
+#define F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_02_REMOVEELEMENT_CFG_COMPILE_CFG_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -38,4 +38,4 @@
     #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN 0        /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
 #endif /* COMMON_BINARY_TREE_EN */
 
-#endif  /* __COMPILE_CFG_H */
+#endif  /* F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_02_REMOVEELEMENT_CFG_COMPILE_CFG_H_ */

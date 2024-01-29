@@ -29,7 +29,7 @@
  * @param {int} val             移除的元素
  * @return {int} returnSize     移除元素后的数组大小
  */
-int removeElement(int *nums, int numsSize, int val){
+int RemoveElement(int *nums, int numsSize, int val){
 
     /* TODO */
 
@@ -53,7 +53,7 @@ void Test1(void) {
     int nums[] = {3, 2, 2, 3};
     int numsSize = ARR_SIZE(nums);
     int val = 3;
-    int actualSize = removeElement(nums, numsSize, val);
+    int actualSize = RemoveElement(nums, numsSize, val);
 
     /* Expect result (期望结果) */
     int expectSize = 2;
@@ -75,7 +75,7 @@ void Test2(void) {
     int nums[] = {0, 1, 2, 2, 3, 0, 4, 2};
     int numsSize = ARR_SIZE(nums);
     int val = 2;
-    int actualSize = removeElement(nums, numsSize, val);
+    int actualSize = RemoveElement(nums, numsSize, val);
 
     /* Expect result (期望结果) */
     int expectSize = 5;
@@ -97,7 +97,7 @@ void Test3(void) {
     int nums[] = {3, 3};
     int numsSize = ARR_SIZE(nums);
     int val = 3;
-    int actualSize = removeElement(nums, numsSize, val);
+    int actualSize = RemoveElement(nums, numsSize, val);
 
     /* Expect result (期望结果) */
     int expectSize = 0;

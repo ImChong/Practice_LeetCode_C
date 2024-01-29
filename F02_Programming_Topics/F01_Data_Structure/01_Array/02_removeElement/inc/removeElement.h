@@ -1,17 +1,17 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programming_Topics\01_Array\02_removeElement\inc\removeElement.h
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\01_Array\02_removeElement\inc\removeElement.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-28 11:28:45
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-12-28 12:22:51
+ * @LastEditTime : 2024-01-29 12:08:01
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  : solution header file - removeElement
+ * @Description  : solution header file - RemoveElement
  */
-#ifndef __REMOVE_ELEMENT_H
-#define __REMOVE_ELEMENT_H
+#ifndef F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_02_REMOVEELEMENT_INC_REMOVEELEMENT_H_
+#define F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_02_REMOVEELEMENT_INC_REMOVEELEMENT_H_
 
-int removeElement(int *nums, int numsSize, int val);
+int RemoveElement(int *nums, int numsSize, int val);
 
-#endif  /* __REMOVE_ELEMENT_H */
+#endif  /* F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_01_ARRAY_02_REMOVEELEMENT_INC_REMOVEELEMENT_H_ */
