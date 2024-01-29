@@ -10,7 +10,7 @@
  * @Description  : solution source file - RemoveElement
  */
 /* solution header file (题解头文件) */
-#include "RemoveElement.h"
+#include "remove_element.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
