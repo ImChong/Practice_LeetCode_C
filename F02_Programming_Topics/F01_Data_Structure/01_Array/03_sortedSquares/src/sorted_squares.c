@@ -12,7 +12,7 @@
 /* Standard header file (标准头文件) */
 #include <stdlib.h>
 /* solution header file (题解头文件) */
-#include "sortedSquares.h"
+#include "sorted_squares.h"     /* NOLINT */
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -30,7 +30,7 @@
  * @return {int} *result        返回数组
  */
 int *sortedSquares(int *nums, int numsSize, int *returnSize) {
-    int *result = (int *)malloc(numsSize * sizeof(int));        /* 分配内存 */
+    int *result = (int *)malloc(numsSize * sizeof(int));        /* NOLINT */
     *returnSize = numsSize;                                     /* 返回数组大小 */
 
     int left = 0;                                               /* 左指针 */
