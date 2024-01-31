@@ -12,6 +12,7 @@
             &&
             if exist src/
                 (gcc
+                    -I$workspaceRoot/
                     -I$workspaceRoot/F01_Common_Functions/inc/
                     -I$workspaceRoot/F01_Common_Functions/inc/commonDef/
                     -I$dirWithoutTrailingSlash/cfg/
