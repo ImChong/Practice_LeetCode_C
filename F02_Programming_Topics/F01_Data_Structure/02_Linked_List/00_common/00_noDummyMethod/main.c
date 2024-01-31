@@ -3,16 +3,16 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-21 10:09:09
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-31 16:44:10
+ * @LastEditTime : 2024-01-31 16:45:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 运行链表公共函数 - 未使用虚拟头节点
  */
-/* solution header file (题解头文件) */
-#include "F01_Common_Functions/inc/common_linked_list.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
+/* solution header file (题解头文件) */
+#include "F01_Common_Functions/inc/common_linked_list.h"
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_array.h"
 
