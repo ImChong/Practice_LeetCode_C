@@ -1,20 +1,20 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\01_removeElements\src\removeElements.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\01_removeElements\src\remove_elements.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-29 00:19:21
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-23 00:27:53
+ * @LastEditTime : 2024-02-02 19:25:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : Solution source file for remove elements
  */
-/* solution header file (题解头文件) */
-#include "removeElements.h"
 /* Standard header file (标准头文件) */
 #include <stdlib.h>
+/* solution header file (题解头文件) */
+#include "F02_Programming_Topics/F01_Data_Structure/02_Linked_List/01_removeElements/inc/remove_elements.h"
 /* Common function header file (通用头文件) */
-#include "commonLinkedList.h"
+#include "F01_Common_Functions/inc/common_linked_list.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
@@ -31,7 +31,7 @@
  * @param {int} val                     目标值
  * @return {struct ListNode} *head      返回链表虚拟头节点
  */
-struct ListNode *removeElements(struct ListNode *head, int val) {
+struct ListNode *RemoveElements(struct ListNode *head, int val) {
     struct ListNode dummy;                          /* 创建虚拟头节点 */
     dummy.next = head;                              /* 将传入链表接在虚拟头节点后面 */
 

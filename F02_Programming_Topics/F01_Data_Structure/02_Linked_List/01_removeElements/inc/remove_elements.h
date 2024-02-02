@@ -1,5 +1,5 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\01_removeElements\inc\removeElements.h
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\01_removeElements\inc\RemoveElements.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-29 00:19:25
  * @LastEditors  : Chong Liu
@@ -12,6 +12,6 @@
 #ifndef __REMOVE_ELEMENTS_H
 #define __REMOVE_ELEMENTS_H
 
-struct ListNode *removeElements(struct ListNode *head, int val);
+struct ListNode *RemoveElements(struct ListNode *head, int val);
 
 #endif  /* __REMOVE_ELEMENTS_H */
