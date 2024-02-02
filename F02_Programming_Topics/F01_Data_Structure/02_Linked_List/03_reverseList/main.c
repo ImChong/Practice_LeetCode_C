@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\03_reverseList\main.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\03_reverseList\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 14:39:02
+ * @LastEditTime : 2024-02-02 19:36:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,36 +13,11 @@
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
+/* solution header file (题解头文件) */
+#include "F02_Programming_Topics/F01_Data_Structure/02_Linked_List/03_reverseList/inc/reverse_list.h"
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_array.h"
-#include "commonLinkedList.h"
-
-/**********************************************************************************/
-/**********************************************************************************/
-/***                                                                            ***/
-/***                               TARGET FUNCTION                              ***/
-/***                                                                            ***/
-/**********************************************************************************/
-/**********************************************************************************/
-/**
- * @description: 反转链表
- * =================================================================================
- * @param {ListNode*} head
- * @return {struct ListNode} *prev
- */
-struct ListNode *reverseList(struct ListNode* head){
-    struct ListNode *prev = NULL;   /* 初始化前一节点指针为NULL */
-    struct ListNode *curr = head;   /* 初始化现节点指针头结点 */
-    struct ListNode *next = NULL;   /* 初始化下一节点指针为NULL */
-
-    while (curr != NULL) {          /* 如果当前指针指向的节点不为 NULL */
-        next = curr->next;              /* 位移指针：配置下一节点*/
-        curr->next = prev;              /* 改变链表指向：将现节点的下一节点指针指向前一节点 */
-        prev = curr;                    /* 位移指针：将现节点指针设置为前节点指针*/
-        curr = next;                    /* 位移指针：将下一节点指针设置为现节点指针 */
-    }
-    return prev;                    /* 返回前一节点指针 */
-}
+#include "F01_Common_Functions/inc/common_linked_list.h"
 
 /**********************************************************************************/
 /*                                                                                */
@@ -59,7 +34,7 @@ void Test1(void) {
     int arr[] = {1, 2, 3, 4, 5};
     int arr_size = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
-    struct ListNode *ansList = reverseList(arrList);
+    struct ListNode *ansList = ReverseList(arrList);
 
     /* Expect result (期望结果) */
     int expect[] = {5, 4, 3, 2, 1};
@@ -84,7 +59,7 @@ void Test2(void) {
     int arr[] = {1};
     int arr_size = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
-    struct ListNode *ansList = reverseList(arrList);
+    struct ListNode *ansList = ReverseList(arrList);
 
     /* Expect result (期望结果) */
     int expect[] = {1};
@@ -109,7 +84,7 @@ void Test3(void) {
     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int arr_size = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
-    struct ListNode *ansList = reverseList(arrList);
+    struct ListNode *ansList = ReverseList(arrList);
 
     /* Expect result (期望结果) */
     int expect[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};

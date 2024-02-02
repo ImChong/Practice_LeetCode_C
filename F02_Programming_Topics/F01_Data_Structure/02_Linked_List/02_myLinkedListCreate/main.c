@@ -13,9 +13,10 @@
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
+/* solution header file (题解头文件) */
+#include "F01_Common_Functions/inc/common_linked_list_dummy.h"
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_array.h"
-#include "F01_Common_Functions/inc/common_linked_list_dummy.h"
 
 /**********************************************************************************/
 /*                                                                                */
