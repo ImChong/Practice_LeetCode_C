@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\02_myLinkedListCreate\main.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\02_myLinkedListCreate\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 14:38:02
+ * @LastEditTime : 2024-02-02 19:31:00
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,14 +29,14 @@
  */
 void Test1(void) {
     /* Function call (函数调用) */
-    DummyLinkedList *actualDummy = myLinkedListCreate();
+    DummyLinkedList *actualDummy = DLinkedList_Init();
     DLinkedList_AddAtHead(actualDummy, 1);
     DLinkedList_AddAtTail(actualDummy, 3);
     DLinkedList_AddAtIndex(actualDummy, 1, 2);
     DLinkedList_DeleteAtIndex(actualDummy, 0);
 
     /* Expect result (期望结果) */
-    DummyLinkedList *expectDummy = myLinkedListCreate();
+    DummyLinkedList *expectDummy = DLinkedList_Init();
     int nums[] = {2, 3};
     DLinkedList_ArrayInit(expectDummy, nums, ARR_SIZE(nums));
 
@@ -56,7 +56,7 @@ void Test2(void) {
     /* Function call (函数调用) */
     /* ["DummyLinkedList","addAtHead","deleteAtIndex","addAtHead","addAtHead","addAtHead","addAtHead","addAtHead","addAtTail","get","deleteAtIndex","deleteAtIndex"] */
     /* [[],[2],[1],[2],[7],[3],[2],[5],[5],[5],[6],[4]] */
-    DummyLinkedList *actualDummy = myLinkedListCreate();      /* DummyLinkedList     [] */
+    DummyLinkedList *actualDummy = DLinkedList_Init();      /* DummyLinkedList     [] */
     DLinkedList_AddAtHead(actualDummy, 2);                 /* addAtHead        [2] */
     DLinkedList_DeleteAtIndex(actualDummy, 1);             /* deleteAtIndex    [1] */
     DLinkedList_AddAtHead(actualDummy, 2);                 /* addAtHead        [2] */
@@ -70,7 +70,7 @@ void Test2(void) {
     DLinkedList_DeleteAtIndex(actualDummy, 4);             /* deleteAtIndex    [4] */
 
     /* Expect result (期望结果) */
-    DummyLinkedList *expectDummy = myLinkedListCreate();
+    DummyLinkedList *expectDummy = DLinkedList_Init();
     int nums[] = {5, 2, 3, 7, 2};
     DLinkedList_ArrayInit(expectDummy, nums, ARR_SIZE(nums));
 
@@ -91,7 +91,7 @@ void Test3(void) {
     /* ["DummyLinkedList","addAtHead","get","addAtHead","addAtHead","deleteAtIndex","addAtHead","get","get","get","addAtHead","deleteAtIndex"] */
     /* [[],[4],[1],[1],[5],[3],[7],[3],[3],[3],[1],[4]] */
     /* [null,null,-1,null,null,null,null,4,4,4,null,null] */
-    DummyLinkedList *actualDummy = myLinkedListCreate();  /* DummyLinkedList     [ ] */
+    DummyLinkedList *actualDummy = DLinkedList_Init();  /* DummyLinkedList     [ ] */
     DLinkedList_AddAtHead(actualDummy, 4);             /* addAtHead        [4] */
     DLinkedList_AddAtHead(actualDummy, 1);             /* addAtHead        [1] */
     DLinkedList_AddAtHead(actualDummy, 2);             /* addAtHead        [2] */
@@ -101,7 +101,7 @@ void Test3(void) {
     DLinkedList_DeleteAtIndex(actualDummy, 4);         /* deleteAtIndex    [4] */
 
     /* Expect result (期望结果) */
-    DummyLinkedList *expectDummy = myLinkedListCreate();
+    DummyLinkedList *expectDummy = DLinkedList_Init();
     int nums[] = {1, 7, 2, 1};
     DLinkedList_ArrayInit(expectDummy, nums, ARR_SIZE(nums));
 
