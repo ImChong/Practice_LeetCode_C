@@ -9,9 +9,9 @@
  * =================================================================================
  * @Description  : Solution header file for remove elements
  */
-#ifndef __REMOVE_ELEMENTS_H
-#define __REMOVE_ELEMENTS_H
+#ifndef F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_01_REMOVEELEMENTS_INC_REMOVE_ELEMENTS_H_
+#define F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_01_REMOVEELEMENTS_INC_REMOVE_ELEMENTS_H_
 
 struct ListNode *RemoveElements(struct ListNode *head, int val);
 
-#endif  /* __REMOVE_ELEMENTS_H */
+#endif  /* F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_01_REMOVEELEMENTS_INC_REMOVE_ELEMENTS_H_ */
