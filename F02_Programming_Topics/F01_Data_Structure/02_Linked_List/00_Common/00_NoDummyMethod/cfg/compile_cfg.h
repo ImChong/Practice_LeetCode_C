@@ -1,16 +1,16 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\01_Array\01_binarySearch\cfg\compileCfg.h
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\00_Common\00_NoDummyMethod\cfg\compile_cfg.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-11-23 01:23:40
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-23 01:59:25
+ * @LastEditTime : 2024-02-04 21:20:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : Common function configuration file (通用函数配置文件)
  */
-#ifndef __COMPILE_CFG_H
-#define __COMPILE_CFG_H
+#ifndef F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_00_COMMON_00_NODUMMYMETHOD_CFG_COMPILE_CFG_H_
+#define F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_00_COMMON_00_NODUMMYMETHOD_CFG_COMPILE_CFG_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -37,4 +37,4 @@
     #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN 0        /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
 #endif /* COMMON_BINARY_TREE_EN */
 
-#endif  /* __COMPILE_CFG_H */
+#endif  /* F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_00_COMMON_00_NODUMMYMETHOD_CFG_COMPILE_CFG_H_ */
