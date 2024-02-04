@@ -1,20 +1,20 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\00_common\01_dummyMethod\main.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\00_Common\01_DummyMethod\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-01-23 00:19:21
+ * @LastEditTime : 2024-02-04 21:21:57
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 707. 设计链表：https://leetcode.cn/problems/design-linked-list/
  * https://programmercarl.com/0707.%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html
  */
-/* solution header file (题解头文件) */
-#include "F01_Common_Functions/inc/common_linked_list_dummy.h"
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
+/* solution header file (题解头文件) */
+#include "F01_Common_Functions/inc/common_linked_list_dummy.h"
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_def/common_type_def.h"
 #include "F01_Common_Functions/inc/common_array.h"
