@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common function configuration file (通用函数配置文件)
  */
-#ifndef __COMPILE_CFG_H
-#define __COMPILE_CFG_H
+#ifndef F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_00_COMMON_01_DUMMYMETHOD_CFG_COMPILE_CFG_H_
+#define F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_00_COMMON_01_DUMMYMETHOD_CFG_COMPILE_CFG_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -37,4 +37,4 @@
     #define BTREE_LEVEL_ORDER_STRUCT_METHOD_EN 0        /* 二叉树层序遍历方法编译使能  1: enable, 0: disable */
 #endif /* COMMON_BINARY_TREE_EN */
 
-#endif  /* __COMPILE_CFG_H */
+#endif  /* F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_00_COMMON_01_DUMMYMETHOD_CFG_COMPILE_CFG_H_ */
