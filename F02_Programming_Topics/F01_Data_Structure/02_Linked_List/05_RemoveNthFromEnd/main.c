@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\05_removeNthFromEnd\main.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\05_RemoveNthFromEnd\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 14:40:37
+ * @LastEditTime : 2024-02-05 11:12:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_array.h"
-#include "commonLinkedList.h"
+#include "F01_Common_Functions/inc/common_linked_list.h"
 
 /**********************************************************************************/
 /**********************************************************************************/
