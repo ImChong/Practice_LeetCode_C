@@ -26,7 +26,7 @@
  * @param {int} n
  * @return {struct ListNode} *ans
  */
-struct ListNode *removeNthFromEnd(struct ListNode *head, int n) {
+struct ListNode *RemoveNthFromEnd(struct ListNode *head, int n) {
 
 }
 
