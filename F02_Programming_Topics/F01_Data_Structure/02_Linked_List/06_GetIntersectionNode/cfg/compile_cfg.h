@@ -9,8 +9,8 @@
  * =================================================================================
  * @Description  : Common function configuration file (通用函数配置文件)
  */
-#ifndef __COMPILE_CFG_H
-#define __COMPILE_CFG_H
+#ifndef F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_06_GETINTERSECTIONNODE_CFG_COMPILE_CFG_H_
+#define F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_06_GETINTERSECTIONNODE_CFG_COMPILE_CFG_H_
 
 /**********************************************************************************/
 /*                                                                                */
@@ -29,5 +29,4 @@
 #define COMMON_STACK_EN                 0           /* 通用栈编译使能  1: enable, 0: disable */
 #define COMMON_STRING_EN                0           /* 通用字符串编译使能  1: enable, 0: disable */
 
-
-#endif  /* __COMPILE_CFG_H */
+#endif  /* F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_06_GETINTERSECTIONNODE_CFG_COMPILE_CFG_H_ */
