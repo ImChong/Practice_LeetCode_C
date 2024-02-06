@@ -25,7 +25,7 @@
  * @param {struct ListNode} *head
  * @return {struct ListNode} *ans
  */
-struct ListNode *detectCycle(struct ListNode *head) {
+struct ListNode *DetectCycle(struct ListNode *head) {
 
 }
 

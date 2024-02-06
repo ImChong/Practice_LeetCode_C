@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \Practice_LeetCode_C\01_Programmercarl_Series\02_Linked_List\07_detectCycle\main.c
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\07_DetectCycle\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-16 08:57:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-11-18 14:45:17
+ * @LastEditTime : 2024-02-06 11:24:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,43 +13,12 @@
 /* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
+/* solution header file (题解头文件) */
+#include "F02_Programming_Topics/F01_Data_Structure/02_Linked_List/07_DetectCycle/inc/detect_cycle.h"
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_single_value.h"
 #include "F01_Common_Functions/inc/common_array.h"
 #include "F01_Common_Functions/inc/common_linked_list.h"
-
-/**********************************************************************************/
-/**********************************************************************************/
-/***                                                                            ***/
-/***                               TARGET FUNCTION                              ***/
-/***                                                                            ***/
-/**********************************************************************************/
-/**********************************************************************************/
-/**
- * @description: 环形链表 II
- * TODO: 固定的套路能找到环，但是为什么会找到开始入环的第一个节点需要探索一下。
- * =================================================================================
- * @param {ListNode} *head
- * @return {*}
- */
-struct ListNode *detectCycle(struct ListNode *head) {
-    struct ListNode *fast = head;   /* 创建快指针，将指针指向头节点 */
-    struct ListNode *slow = head;   /* 创建慢指针，将指针指向头节点 */
-
-    while (fast && fast->next) {    /* 当快指针节点和快指针节点的下一位节点存在时 */
-        slow = slow->next;              /* 慢指针向后移动一位 */
-        fast = fast->next->next;        /* 快指针向后移动两位 */
-        if (slow == fast) {             /* 如果快指针和慢指针相遇 */
-            slow = head;                    /* 慢指针指向头节点 */  /* FIXME: 为什么慢指针回到头节点再遍历后相遇的值是环的起始点？ */
-            while (slow != fast) {          /* 如果慢指针不等于快指针 */
-                slow = slow->next;              /* 慢指针向后移动一位 */
-                fast = fast->next;              /* 快指针向后移动一位 */
-            }
-            return slow;                    /* 返回慢指针 */
-        }
-    }
-    return NULL;                    /* 如果无环则返回NULL */
-}
 
 /**********************************************************************************/
 /*                                                                                */
@@ -67,7 +36,7 @@ void Test1(void) {
     int arr_size = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
     arrList->next->next->next->next = arrList->next;   /* 将尾节点指向指定节点 */
-    int actual = detectCycle(arrList)->val;
+    int actual = DetectCycle(arrList)->val;
 
     /* Expect result (期望结果) */
     int expect = 2;
@@ -90,7 +59,7 @@ void Test2(void) {
     int arr_size = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
     arrList->next->next = arrList;   /* 将尾节点指向指定节点 */
-    int actual = detectCycle(arrList)->val;
+    int actual = DetectCycle(arrList)->val;
 
     /* Expect result (期望结果) */
     int expect = 1;
@@ -112,7 +81,7 @@ void Test3(void) {
     int arr[] = {1};
     int arr_size = ARR_SIZE(arr);
     struct ListNode *arrList = LinkedList_ArrayInit(arr, arr_size);
-    struct ListNode *actual = detectCycle(arrList);
+    struct ListNode *actual = DetectCycle(arrList);
 
     /* Expect result (期望结果) */
     struct ListNode *expect = NULL;
