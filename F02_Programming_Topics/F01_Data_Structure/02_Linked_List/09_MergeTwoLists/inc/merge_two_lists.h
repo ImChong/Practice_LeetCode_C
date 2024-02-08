@@ -16,6 +16,6 @@
 /* Common function header file (通用头文件) */
 #include "F01_Common_Functions/inc/common_linked_list.h"
 
-struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2);
+struct ListNode *MergeTwoLists(struct ListNode *list1, struct ListNode *list2);
 
 #endif  /* F02_PROGRAMMING_TOPICS_F01_DATA_STRUCTURE_02_LINKED_LIST_09_MERGETWOLISTS_INC_MERGE_TWO_LISTS_H_ */

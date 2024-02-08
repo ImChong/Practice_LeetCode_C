@@ -12,7 +12,7 @@ struct ListNode {
     struct ListNode *next;
 };
 
-struct ListNode* mergeTwoLists(struct ListNode *l1, struct ListNode *l2) {
+struct ListNode* MergeTwoLists(struct ListNode *l1, struct ListNode *l2) {
     struct ListNode *head = malloc(sizeof(struct ListNode));
     struct ListNode *tail = head;
     head->next = NULL;
@@ -38,7 +38,7 @@ struct ListNode* mergeKLists(struct ListNode** lists, int listsSize){
     l1 = lists[0];
     for (int i = 1; i < listsSize; i++) {
         l2 = lists[i];
-        l1 = mergeTwoLists(l1, l2);
+        l1 = MergeTwoLists(l1, l2);
     }
     return l1;
 }

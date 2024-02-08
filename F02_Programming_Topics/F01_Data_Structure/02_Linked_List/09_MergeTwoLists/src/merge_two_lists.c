@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-29 00:53:17
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-02-08 21:55:41
+ * @LastEditTime : 2024-02-08 22:06:14
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -28,7 +28,7 @@
  * @param {ListNode} *list2     链表2
  * @return {ListNode} *head     合并后的链表头节点
  */
-struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
+struct ListNode *MergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
     if (!list1) {
         return list2;
     }
