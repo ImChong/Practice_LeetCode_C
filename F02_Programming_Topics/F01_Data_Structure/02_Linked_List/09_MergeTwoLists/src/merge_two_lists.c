@@ -3,12 +3,14 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-12-29 00:53:17
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2024-02-08 22:06:14
+ * @LastEditTime : 2024-02-08 22:06:41
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  :
  */
+/* Standard header file (标准头文件) */
+#include <stdlib.h>
 /* solution header file (题解头文件) */
 #include "F02_Programming_Topics/F01_Data_Structure/02_Linked_List/09_MergeTwoLists/inc/merge_two_lists.h"
 /* Common function header file (通用头文件) */
