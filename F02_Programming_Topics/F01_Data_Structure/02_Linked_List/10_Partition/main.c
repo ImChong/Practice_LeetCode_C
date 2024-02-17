@@ -1,16 +1,22 @@
-/* 86. 分隔链表：https://leetcode.cn/problems/partition-list/ */
-/* https://leetcode.cn/problems/partition-list/ */
-/* https://labuladong.github.io/algo/di-ling-zh-bfe1b/shuang-zhi-0f7cc/ */
-
-/* TODO: 重构 */
-
+/*
+ * @FilePath     : \Practice_LeetCode_C\F02_Programming_Topics\F01_Data_Structure\02_Linked_List\10_Partition\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2024-02-04 21:18:23
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2024-02-17 11:21:12
+ * =================================================================================
+ * Copyright (c) 2024 by Chong Liu, All Rights Reserved.
+ * =================================================================================
+ * @Description  : 86. 分隔链表：https://leetcode.cn/problems/partition-list/
+ * https://labuladong.github.io/algo/di-ling-zh-bfe1b/shuang-zhi-0f7cc/
+ */
+/* Standard header file (标准头文件) */
 #include <stdio.h>
 #include <stdlib.h>
-
-struct ListNode {
-    int val;
-    struct ListNode *next;
-};
+/* solution header file (题解头文件) */
+#include "F02_Programming_Topics/F01_Data_Structure/02_Linked_List/10_Partition/inc/partition.h"
+/* Common function header file (通用头文件) */
+#include "F01_Common_Functions/inc/common_linked_list.h"
 
 struct ListNode *partition(struct ListNode *head, int x) {
     struct ListNode *dummy1 = malloc(sizeof(struct ListNode));

@@ -9,3 +9,9 @@
  * =================================================================================
  * @Description  :
  */
+#ifndef label
+#define label
+
+struct ListNode *partition(struct ListNode *head, int x);
+
+#endif  /* label */
